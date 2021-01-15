@@ -52,9 +52,9 @@ nav_order: 1
 
 ### Current
 
-[V0 Assembly Manual](./manuals/V0_Assembly_Manual.pdf)
+[V0 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON-0/Manuals/V0_Assembly_Manual.pdf)
 
-[V0 Pocketwatch Manual](./manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
+[V0 Pocketwatch Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON_Pocketwatch/Manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
 
 [V0 Dozuki Guides](https://voron.dozuki.com/c/Voron_0)
 
@@ -62,23 +62,25 @@ nav_order: 1
 
 ### Current
 
-[V1.8 Assembly Manual](./manuals/Assembly_Manual_1.8.pdf)
+[V1.8 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.8/Docs/Assembly_Manual_1.8.pdf)
 
 ### Historical
 
-[Previous Versions](./manuals/historical)
-
-[V1.6 Dozuki Guides](https://voron.dozuki.com/c/Voron_1.6)
+* [V1.6 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.6/Manuals/VORON1.6_Manual.pdf)
+* [V1.6 Dozuki Guides](https://voron.dozuki.com/c/Voron_1.6)
+* [V1.5 Documentation](https://github.com/VoronDesign/Voron-1/tree/Voron1.5/Documentation)
+* [V1.0 Documentation](https://github.com/VoronDesign/Voron-1/tree/Voron1.0/Documentation)
 
 ## V2
 
 ### Current
 
-[V2.4 Assembly Manual](./manuals/V2.4_Assembly_Manual.pdf)
+[V2.4 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/Voron2.4/Docs/2.4_Assembly_Manual.pdf)
 
 ### Historical
 
-[Previous Versions](./manuals/historical)
+* [V2.2 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/Voron2.2/manuals/VORON2.2_Manual.pdf)
+* [V2.1 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/Voron2.1/manuals/VORON2.1_Manual.pdf)
 
 ## Switchwire
 
