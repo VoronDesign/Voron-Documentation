@@ -9,4 +9,5 @@ nav_order: 2
 
 | Guide Name / Link | Author |
 |---|---|
+| [Blob of Death](./120decibell/blob_of_death.md) | 120decibell |
 
