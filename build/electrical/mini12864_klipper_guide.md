@@ -19,6 +19,7 @@ nav_exclude: true
 
 ## Klipper
 *Note: Most stock voron configuration files already have appropriate configurations for this display built in, which simply needing to be un-commented.  As they are specific to the individual builds, they should be used in preference to the more generic configuration shown below.*
+
 For SKR boards, add the following `[board_pins]` section to the configuration:
 
 ```
