@@ -18,6 +18,7 @@ nav_exclude: true
 3. Connect EXP1 and EXP2 cables to the display and to your MCU board, being sure to match port numbers (EXP1 <> EXP1).
 
 ## Klipper
+*Note: Most stock voron configuration files already have appropriate configurations for this display built in, which simply needing to be un-commented.  As they are specific to the individual builds, they should be used in preference to the more generic configuration shown below.*
 
 For SKR boards, add the following `[board_pins]` section to the configuration:
 
