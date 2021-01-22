@@ -7,7 +7,7 @@ nav_order: 6
 
 # Slicer Setup
 
-All modern mainstream slicers are able to produce high quality prints when properly configured for your printer. The Voron community maintenances a set of slicer profiles that you can use as a known good starting point for further tuning.
+All modern mainstream slicers are able to produce high quality prints when properly configured for your printer. The Voron community maintains a set of slicer profiles that you can use as a known good starting point for further tuning.
 
 Proper understanding of slicer settings will have a tremendous impact on print results. Try to learn more about your favorite slicer and tweak the settings to meet your needs.
 
