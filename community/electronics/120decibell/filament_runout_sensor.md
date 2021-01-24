@@ -21,7 +21,7 @@ Common MCU ports
 * V0 - SKR mini E3: E0-STOP (PC15)
 * V1 / V2 - SKR 1.3: Z+ STOP (P1.24)
 * V1 / V2 - SKR 1.4: E0DET (P1.26)
-* V2 - FLY FLY407ZG: Z3 (PC14)
+* V2 - FLY FLYF407ZG: Z3 (PC14)
 
 ## Klipper Configuration
 
