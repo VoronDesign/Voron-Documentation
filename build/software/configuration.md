@@ -145,6 +145,11 @@ This section only applies to printers with more than one controller.
 [include client_macros.cfg]
 ```
 
+> ### Community References
+>
+> [Calculating Driver Current Settings](../../community/howto/120decibell/calculating_driver_current.html)
+>
+
 ### Restart to take effect
 
 Under Mainsail or fluidd's console, or Octoprint's terminal tab type `FIRMWARE_RESTART` and press enter to send the command to restart Klipper.

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Blob of Death
+nav_exclude: true
+---
+
 # Blob of Death
 
 Wake up from running an overnight print of ABS and find this?

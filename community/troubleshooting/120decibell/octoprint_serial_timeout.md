@@ -1,3 +1,9 @@
+---
+layout: default
+title: Octoprint Serial Timeout
+nav_exclude: true
+---
+
 # OctoPrint Serial Timeout
 
 OctoPrint has built-in timeout for the internal serial connection to Klipper.  Some of the macros such as `PRINT_START` can take a long time to execute and cause Octoprint to disconnect.  Instead of increasing the timeouts, add one or more of the macro names to the list of long-running commands.

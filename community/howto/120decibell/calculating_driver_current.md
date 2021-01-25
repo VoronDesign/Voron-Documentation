@@ -1,3 +1,9 @@
+---
+layout: default
+title: Calculating Driver Current Settings
+nav_exclude: true
+---
+
 # Calculating Driver Current Settings
 
 When using the 2208 / 2209 drivers, the voltage & current are set in software.  In Klipper, the motor currents have two settings: run and hold.  Klipper current settings are based on RMS and not on peak.  Most motors are specified based on the peak current capacity.
