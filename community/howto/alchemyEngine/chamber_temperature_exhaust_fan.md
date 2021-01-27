@@ -107,8 +107,6 @@ and replace with
 * Restart Klipper with a `FIRMWARE_RESTART`
 * If the display does not come on or only partially displays, check the `/tmp/klippy.log` for more information.
 
-**NOTE:** As of June 8, 2020, Klipper changed formatting for the display code.  If looking for the old version, that is in [lcd\_tweaks\_old.cfg](./lcd_tweaks_old.cfg)
-
 ## Exhaust Fan Temperature Control (if chosen)
 
 In the slicer or with other commands, run the `M141` command anytime to change the set point of the exhaust fan.
