@@ -1,3 +1,9 @@
+---
+layout: default
+title: Hall Effect Endstop Setup
+nav_exclude: true
+---
+
 # Hall Effect Endstop Setup
 
 **The hall effect endstop is only designed for a V2.4.  It will not work on any other models!**

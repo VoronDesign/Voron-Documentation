@@ -12,12 +12,15 @@ nav_exclude: true
 2. The EXP1/EXP2 ports must be available and not connected to another expansion module
 
 ## Hardware
-*NOTE: only the Fysetc mini12864 requires the connector housings to be reversed.  If you have a BigTree Tech mini12864, skip steps 1 & 2*
+*NOTE: The connector housing only need to be reversed if the MCU and display are different brands.  If you have both a BigTree Tech mini12864 and a BigTree Tech MCU (Or both a FYSETC mini12864 and an FYSETC F6/S6), skip steps 1 & 2*
 1. Pry off the two black connector housings from the back of the display
 2. Rotate connector housings 180 degrees and insert back onto pins
 3. Connect EXP1 and EXP2 cables to the display and to your MCU board, being sure to match port numbers (EXP1 <> EXP1).
 
+![](./images/mini12864_header_flip.jpg)
+
 ## Klipper
+*Note: Most stock voron configuration files already have appropriate configurations for this display built in, which simply needing to be un-commented.  As they are specific to the individual builds, they should be used in preference to the more generic configuration shown below.*
 
 For SKR boards, add the following `[board_pins]` section to the configuration:
 

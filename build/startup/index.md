@@ -316,6 +316,11 @@ Update your `position_endstop` in your config file:
 
 New Position = Old Position - Tune Adjustment *(e.g. New Position = Old Position - (-0.050) = Old Position + 0.050)*
 
+> ### Community References
+>
+> [Z Endstop Configuration](../../community/howto/120decibell/z_endstop_configuration.html)
+>
+
 ## Extruder Calibration (e-steps)
 
 Before the first print,make sure that the extruder extrudes the correct amount of material.

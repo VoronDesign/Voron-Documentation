@@ -12,6 +12,8 @@ Community-generated documentation for the many items that the official guide may
 | Guide Name / Link | Author |
 |---|---|
 | [Calculating Driver Current Settings](./120decibell/calculating_driver_current.md) | 120decibell |
+| [Chamber Temperature Exhaust Fan](./alchemyEngine/chamber_temperature_exhaust_fan.md) | alchemyEngine |
+| [Installing BetterBootLoader on a SKR](./kage-chan/installing_better_bootloader.md) | kage-chan |
 | [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
 
 
@@ -23,4 +25,3 @@ Community-generated documentation for the many items that the official guide may
 * [Drill and Counterbore Voron Bed](https://www.youtube.com/watch?v=N6EgYW_W3Js)
 * [Printed 80t pulley assembly](https://www.youtube.com/watch?v=W-mwJ2gfe9c)
 * [RAMPS 24V Conversion](https://www.youtube.com/watch?v=3eRuHNw-Uz)
-

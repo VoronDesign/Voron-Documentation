@@ -135,7 +135,7 @@ This section only applies to printers with more than one controller.
 ```ini
 [include mainsail.cfg]
 ```
-2.  Add the macros to your printer.cfg described in the [wiki](https://docs.mainsail.app/necessary-configuration#macros)
+2.  Add the macros to your printer.cfg described in the [wiki](https://docs.mainsail.xyz/necessary-configuration#macros)
 
 ### Additional Changes: FluiddOS only
 
@@ -144,6 +144,11 @@ This section only applies to printers with more than one controller.
 [include client.cfg]
 [include client_macros.cfg]
 ```
+
+> ### Community References
+>
+> [Calculating Driver Current Settings](../../community/howto/120decibell/calculating_driver_current.html)
+>
 
 ### Restart to take effect
 

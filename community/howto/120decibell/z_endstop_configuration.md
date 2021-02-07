@@ -1,3 +1,9 @@
+---
+layout: default
+title: Z Endstop Configuration
+nav_exclude: true
+---
+
 Setting the Z offset is a a key step in the process of configuring and tuning any FDM printer.  Because of how the V2 is designed, this process may be slightly different than most other printers.  The Z endstop sensor is a mechanical switch that is located at the back / top edge of the base plate.  The switch activation is extended to an approximate level of the bed by an extension made of 5mm rod.  This physical switch is used instead of the inductive probe for consistency regardless of temperature or variances in nozzle length.
 
 ![](./images/v2_z_endstop_location.png)

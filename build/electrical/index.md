@@ -38,7 +38,7 @@ When assembling Microfit connectors, the male pins are inserted into the female 
 
 Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
 
-PTFE wires are a premium option as they have a thinner insulation and a lower friction coefficient, which increases bending capabilities and decreases wear. But these advantages are most useful in printers that use cable chains. For printers with an umbilical cord cabling setup (V0 Toolhead, Legacy), they might be overkill.
+PTFE wires are a premium option as they have a thinner insulation and a lower friction coefficient, which increases bending capabilities and decreases wear. But these advantages are most useful in printers that use cable chains. For printers with an umbilical cord cabling setup (V0 Toolhead, Legacy), they might be overkill. Automation cable such as IGUS can be used, but the minimum bend radius of the cable needs to be verified as the typical bend radius for Voron cable chains is very small.
 
 See the cable lengths and count section for specific counts. Do not downsize the hot end heater wires, they are oversized for safety reasons. 
 
