@@ -13,7 +13,7 @@ Community-generated documentation for alternate (non-spec) electronics and relat
 |---|---|
 | [Filament Runout Sensor](./120decibell/filament_runout_sensor.md) | 120decibell |
 | [Hall Effect Endstop Setup](./120decibell/hall_effect_endstop_setup.md) | 120decibell |
-
+| [PT100 MAX31865 Setup](./xbst_/PT100.md) | xbst_ |
 
 ### External Links
 
