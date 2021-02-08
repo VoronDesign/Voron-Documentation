@@ -147,7 +147,7 @@ This section only applies to printers with more than one controller.
 
 > ### Community References
 >
-> [Calculating Driver Current Settings](../../community/howto/120decibell/calculating_driver_current.html)
+> [Calculating Driver Current Settings](../../community/howto/120decibell/calculating_driver_current.md)
 >
 
 ### Restart to take effect
