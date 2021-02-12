@@ -17,4 +17,4 @@ Community-generated documentation for alternate (non-spec) electronics and relat
 
 ### External Links
 
-* [Klipper Expander](https://github.com/VoronDesign/Voron-Hardware/blob/master/Klipper_Expander/Documentation/index.md#setup)
+* [Klipper Expander](https://github.com/VoronDesign/Voron-Hardware/blob/master/Klipper_Expander/Documentation/README.md#setup)
