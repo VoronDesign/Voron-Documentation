@@ -8,15 +8,15 @@ nav_exclude: true
 
 ![](./images/PhysicalDevice.jpg)
 
-BigTreeTech have an expansion module that adds three Stepper motor interfaces, to the SKRv1.3 and SKR v1.4 boards.
+BigTreeTech has an expansion module that adds three Stepper motor interfaces, to the SKRv1.3 and SKR v1.4 boards.
 
-This expansion board requires the use the Expansion Headers from the SKR boards. If those slots are occupied by a display, you must use an [alternate system](https://github.com/jordanruthe/KlipperScreen) and display type if you use to use the Expansion headers for this module
+This expansion board requires the use the Expansion Headers from the SKR boards. If those slots are occupied by a display, you must use an [alternate system](https://github.com/jordanruthe/KlipperScreen) and display type if you wish to use the Expansion headers for this module.
 
 These boards might be handy of you would like to expand the capabilities of your V1 to use additional Z motors or add PT100 sensors through the stepper SPI interfaces.
 
-Since the Expansion board utilizes the Expansion slots of the SKR, the PIN numbers you would use in your Klipper config correspond to those same ones.
+Since the Expansion board utilizes the Expansion slots of the SKR, the PIN numbers you would use in your Klipper config correspond to those same pins as they interface with the motor controllers.
 
-#UART Mode / Motor Controllers
+# UART Mode / Motor Controllers
 In order to utilize the expansion module to control stepper motors utilizing the TMC2209 type Step Sticks, we follow a similar configuration as if we were connecting them on the SKR.
 
 ![](./images/UARTmode.jpg)
@@ -40,7 +40,7 @@ uart_pin: P1.21
 
 The following table shows the mappings for SKR 1.3 and 1.4 boards (The pin designations are the same for both boards)
 
- Expansion M1
+ ### Expansion M1
  Designation | Pin
  ----------- | ---
  step_pin    | P3.25
@@ -48,7 +48,7 @@ The following table shows the mappings for SKR 1.3 and 1.4 boards (The pin desig
  enable_pin  | P1.31
  uart_pin    | P1.21
 
- Expansion M2
+ ### Expansion M2
  Designation | Pin
  ----------- | ---
  step_pin    | P3.26
@@ -56,7 +56,7 @@ The following table shows the mappings for SKR 1.3 and 1.4 boards (The pin desig
  enable_pin  | P1.23
  uart_pin    | P1.19
 
- Expansion M3
+ ### Expansion M3
  Designation | Pin
  ----------- | ---
  step_pin    | P0.15
