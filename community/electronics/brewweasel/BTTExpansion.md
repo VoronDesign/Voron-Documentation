@@ -66,4 +66,4 @@ The following table shows the mappings for SKR 1.3 and 1.4 boards (The pin desig
  enable_pin  | P1.22
  uart_pin    | P0.28
 
-Note that the stallguard pin still has to be removed for proper functionality, as you would for the SKR 1.4, but aslo for the 1.3 as there is no jumper to disable it.
+Note that the stallguard pin still has to be removed for proper functionality, as you would for the SKR 1.4, but also for the 1.3 as there is no jumper to disable it.
