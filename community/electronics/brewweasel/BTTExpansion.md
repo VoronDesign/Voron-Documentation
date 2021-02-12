@@ -23,6 +23,8 @@ In order to utilize the expansion module to control stepper motors utilizing the
 
 Both EXP1 & EXP2 slots must be connected the SKR to utilize any of the 3 controller slots.  The voltage jumper must have 3.3v selected, and the Jumper pins for each step stick should be configured as in the image above.
 
+The Expansion board must also be supplied with +24v in via the DCIN header.
+
 Below is an example truncated configuration to use Expansion M1 as a stepper would use the following Pins an SKR 1.4:
 
 ```
