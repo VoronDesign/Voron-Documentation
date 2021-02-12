@@ -14,14 +14,17 @@ These are common questions for builders looking to gather all of the components 
 
 Assuming no failed or reprinted parts and following the recommendations for accent parts, the following guidelines apply:
 
-- V0:
-- V1:
-- V2: 1.6kg of primary color, 0.3kg of accent color.
-- Switchwire:
+| Model | Primary Color | Accent Color |
+|---|---|---|
+| V0 | 0.5 kg | 0.2 kg |
+| V1 | 1.2 kg | 0.3 kg |
+| V2 | 1.6 kg | 0.3 kg |
+| Switchwire | 0.7 kg | 0.2 kg |
+| Legacy | 0.8 kg | 0.2 kg |
 
 ### Can I print with a 0.6mm nozzle?
 
-It is not recommended.
+While possible, it is not recommended. Some parts have thinner walls not suitable for the larger nozzles.
 
 ### Why does the BOM not match the Sourcing Guide?
 
@@ -41,11 +44,11 @@ No, you can substitute ball spring post-assembly nuts from Ali just as easily in
 
 - We are not imparting cutting forces onto the carriages on the rails (ie: side loads), so the low preload and ok tolerances are good for this application
 - A set of 7 V2 rails is the cost of one genuine mid-grade THK rail.
-- Clean all of your rails, then grease them (there are numerous videos on youtube on how to do this). Pick your best rail for the X axis, then the Y, use the worst on the Z.
+- Clean all of your rails, then grease them (there are numerous videos on YouTube on how to do this). Pick your best rail for the X axis, then the Y, use the worst on the Z (if applicable).
 
 ### Can I substitute MGN(insert rail size here) for MGN9H rails?
 
-No, the Voron V1/V2 are not designed for anything but a MGN9H.
+No, the Voron V1/V2 are not designed for anything but a MGN9H.  The MGN12 rail carriages are wider than the 2020 extrusions and will cause interference issues.
 
 ### Why does VORON-Design not use IGUS products?
 
@@ -80,7 +83,7 @@ The currently recommended lube for the linear rails is Mobilux EP1 or EP2, or th
 
 ### What are the hammer nuts used for?
 
-The hammer nuts are intended to be used with the panel clips to allow easier removal and reinstallation. It is possible to apply some locktite and create quarter-turn fasteners.
+The hammer nuts are intended to be used with the panel clips to allow easier removal and reinstallation. It is possible to apply some locktite and create quarter-turn fasteners for easy removal and installation.
 
 ## Wiring
 
@@ -90,7 +93,7 @@ Engineer PA-09, PA-20, or PA-21. Yes, it's worth the cost.
 
 ### What gauge wire should I use where?
 
-The gantry wiring should be all 24 gauge wire except for the hot end heater, which should be wired with 20 gauge.  This will permit all of the wires to fit within the drag chains.  The power wiring (AC and DC) should be at least 20 gauge, preferably larger (18 or 16 gauge).
+The gantry wiring should be all 24 gauge wire except for the hot end heater, which should be wired with 20 gauge for safety.  This will permit all of the wires to fit within the drag chains.  The power wiring (AC and DC) should be at least 20 gauge, preferably larger (18 or 16 gauge).
 
 In metric units:
 - Power Wiring/Mains Wiring: at least 1 mm², better 1.5 mm²
@@ -100,7 +103,7 @@ In metric units:
 
 ### PTFE or Silicone wire?
 
-The BOM currently specifies silicone wire for bend and heat tolerance.  For an increased cost, PTFE wire is a option.  PTFE insulation is thinner and slicker, making it more effective in the drag chains and granting the cables a longer lifetime.
+The BOM currently specifies silicone wire for bend and heat tolerance.  For an increased cost, PTFE (or Heluflon) wire is a option.  PTFE (Heluflon) insulation is thinner and slicker, making it more effective in the drag chains and granting the cables a longer lifetime.
 
 ## Electronics
 
@@ -110,12 +113,16 @@ The BTT SKR controller is inexpensive and extremely capable for the purpose. Eit
 
 The Turbo version is certainly usable, but the additional speed is not required since most of the computing is handled by the Raspberry Pi.
 
+### Why not a Duet?
+
+The Duet board(s) will certainly work.  However when using Klipper, all of the extra features are not used so the cost is hard to justify.
+
 ### Can I use 0.9 degree stepper motors rather than the spec'ed 1.8 degree motors?
 
-- They would not be recommended for the Z and E motors. These are already geared or screw driven which give them better resolution. Going to 0.9 degree motors would mean they would then need twice as many steps to go the same distance as a 1.8 degree motor. This combined with microstepping results in more cpu load on your boards and would then start to limit how fast you can drive these.
-- They may have some beneficial affect on the XY axis (AB motors) which don't have the gearing that the Z and E assemblies have. Don't expect miracles though, filament variance is another factor that starts to be an issue as well when attempting small detail.
-    - While 0.9 motor can be a bit quieter, from all accounts in an enclosed Voron the fans are likely to make most of the noise. So any noise benefit would be negligible.
-    - Using the BOM spec MCU and klipper with 0.9deg steppers will limit your theoretical travel speeds greatly, just running 1/16 microstepping with 0.9deg XY motors and pressure advance with a 1.8deg stepper on the extruder is enough to easily overwhelm the board.
+- They would not be recommended for the Z and E motors (Just E for the Switchwire). Those axis are already geared or screw driven which give them better resolution. Going to 0.9 degree motors means they would then need twice as many steps to go the same distance as a 1.8 degree motor. This combined with microstepping results in more cpu load on your boards and would then start to limit how fast you can drive these.
+- They may have some beneficial affect on the XY axis (AB motors) (XZ for Switchwire) which don't have the gearing that the Z and E assemblies have. Don't expect miracles though, filament variance is another factor that starts to be an issue as well when attempting small detail.
+- While 0.9 motor can be a bit quieter, from all accounts in an enclosed Voron the fans are likely to make most of the noise. So any noise benefit would be negligible.
+- Using the BOM spec MCU and Klipper with 0.9deg steppers will limit your theoretical travel speeds greatly.  Just running 1/16 microstepping with 0.9deg XY motors and pressure advance with a 1.8deg stepper on the extruder is enough to easily overwhelm the board.
 
 ## Hot Parts
 
@@ -123,7 +130,7 @@ The Turbo version is certainly usable, but the additional speed is not required 
 
 The Dragon standard flow is capable of supporting nozzles up to 0.6mm. If planning on using 0.8mm nozzles or larger, the high flow is recommended.
 
-### Does the Voron Support the Super Volcano
+### Does the Voron support the Super Volcano
 
 No, its a case of [shit design and metal fatigue waiting to happen](https://www.reddit.com/r/3Dprinting/comments/blqw6s/i_believe_there_was_some_initial_concern_about/).
 

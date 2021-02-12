@@ -85,7 +85,7 @@ The maximum velocity (in mm/s) that the toolhead may travel a 90 degree corner a
 
 ### Update Controller Path
 
-Locate the section starting with [mcu].  The V2 will have an additional section starting with [mcu z] as it has two controllers.  These sections are where the controllers are defined and identifying them so that Klipper which which components are connected (and to which controller if there is more than one).
+Locate the section starting with **[mcu]**.  The V2 will have an additional section starting with **[mcu z]** as it has two controllers.  These sections are where the controllers are defined and identifying them so that Klipper which which components are connected (and to which controller if there is more than one).
 
 * Begin with all controllers disconnected from the Raspberry Pi.
 * For printers with just one controller, connect that controller to the Raspberry Pi.  For printers with two controllers, connect the X/Y/E controller.
@@ -152,7 +152,7 @@ This section only applies to printers with more than one controller.
 
 ### Restart to take effect
 
-Under Mainsail or fluidd's console, or Octoprint's terminal tab type `FIRMWARE_RESTART` and press enter to send the command to restart Klipper.
+Under Mainsail or Fluidd's console, or Octoprint's terminal tab type `FIRMWARE_RESTART` and press enter to send the command to restart Klipper.
 
 The console window should show the following:
 

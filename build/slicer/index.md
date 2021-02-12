@@ -43,6 +43,8 @@ Profile generation for V0 and Switchwire is ongoing.
 
 For maximum quality and accuracy, preheating the printer is recommended.  This can be part of a scripted process or separate.  A preheat of at least 10 minutes is highly recommended in order to bring all components to thermal expansion equilibrium.  This time may vary depending on many factors including the size of the printer and bed heater.
 
+_ In testing, a 350^3 V2 grew 0.2mm in height after heating up for an hour._
+
 Every printer is going to have a start sequence that typically involves homing and/or leveling to prepare the printer.  This is in addition to heating the nozzle and bed and doing other tasks.  Look at the PRINT_START macro in the printer.cfg for the standard process.  For additional information or ideas, check the [macros page](./additional/macros.md).
 
 ---
