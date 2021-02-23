@@ -113,5 +113,5 @@ In the slicer or with other commands, run the `M141` command anytime to change t
 
 For example:
 
-* Place a `M141 70` in the start g-code to hold the chamber at a high temperature for the duration of the print
-* Place a `M141 35` in the ending g-code to cooldown the chamber after a print is completed.
+* Place a `M141 S70` in the start g-code to hold the chamber at a high temperature for the duration of the print
+* Place a `M141 S35` in the ending g-code to cooldown the chamber after a print is completed.
