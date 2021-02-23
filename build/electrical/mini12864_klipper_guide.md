@@ -20,7 +20,7 @@ nav_exclude: true
 ![](./images/mini12864_header_flip.jpg)
 
 ## Klipper
-*Note: Most stock voron configuration files already have appropriate configurations for this display built in, which simply needing to be un-commented.  As they are specific to the individual builds, they should be used in preference to the more generic configuration shown below.*
+*Note: Most stock Voron configuration files already have appropriate configurations for this display built in, which simply needing to be un-commented.  As they are specific to the individual builds, they should be used in preference to the more generic configuration shown below.*
 
 For SKR boards, add the following `[board_pins]` section to the configuration:
 
@@ -92,6 +92,7 @@ gcode:
 The "delayed gcode" sets the display and two knob neopixels on boot up - index 1 is the display, and index 2 and 3 are the knob LEDs.   Copy the SET_LED command and run it any time through the terminal window in Octoprint to test out different Red/Green/Blue combinations.
 
 ## Mini12864 Troubleshooting Checklist
+
 The Mini12864 display can be a little tricky to get running correctly.  Here is a short checklist to help double check some of the common issues.
 
 * Have you Rotated the headers on the back of the display?  See [Hardware](#hardware) above

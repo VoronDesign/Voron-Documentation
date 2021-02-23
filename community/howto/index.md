@@ -13,6 +13,8 @@ Community-generated documentation for the many items that the official guide may
 |---|---|
 | [Calculating Driver Current Settings](./120decibell/calculating_driver_current.md) | 120decibell |
 | [Chamber Temperature Exhaust Fan](./alchemyEngine/chamber_temperature_exhaust_fan.md) | alchemyEngine |
+| [IGUS Chain Ordering Guide](./amonkeybutler/igus_chain_ordering_guide.md) | AMonkeyButler |
+| [Installing a Bed Heater with RTV](./fulg/installing_heater_with_rtv.md) | Fulg |
 | [Installing BetterBootLoader on a SKR](./kage-chan/installing_better_bootloader.md) | kage-chan |
 | [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
 

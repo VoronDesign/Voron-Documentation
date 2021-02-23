@@ -50,7 +50,7 @@ These are the recommended settings.
 
 ## Ordering Parts
 
-For every printer on the main webpage, there is a method to generate a bill of materials (BOM).  That is the definitive guide for what parts are required for that printer.  The BOM also references the sourcing guide.  The sourcing guide is a list of recommended vendors for the various components that are required to build a printer.  While there may be quantities listed on the sourcing guide, those numbers are not guaranteed to be accurate and we strongly recommend that people reference the BOM for specific quantities.
+When purchasing, the sourcing guide and the boll of materials (BOM) are not the same.  Be sure to refer to the BOM for all quantities.  If unclear please see the [explanation of differences](#bill-of-materials-and-source-guide).
 
 *When purchasing small items, it is recommended to buy extras (round up). Having a few extra screws or connectors around may actually help you later.*
 
@@ -60,7 +60,7 @@ There are a growing number of suppliers that are assembling kits to build Voron 
 
 ### Parts Selection / Alternates
 
-When choosing extrusions, V-slot extrusions are discouraged.  This is due to the use of the MGN9 linear rail as the V-slot and width of the rail are very close and cause misalignment.  Vendors of extrusions other than Misumi are generally fine but verification of the extrusion profile is highly recommended.
+When choosing extrusions, V-slot extrusions are discouraged.  This is due to the use of the MGN9 linear rail as the V-slot and width of the rail are very close and cause misalignment.  Vendors of extrusions other than Misumi are generally fine but verification of the extrusion profile is highly recommended to ensure they will fit with the rails.
 
 If trying to keep costs down, the display / screen on any printer is entirely optional. Many builders solely use the web interface.
 
@@ -96,6 +96,7 @@ _These make Voron life a little nicer._
 * Machinist scale / ruler, either 6"/150mm or 12"/300mm
 * Machinist square, 4"/100mm or larger (Sometimes called "locksmith angles", see DIN 875)
 * Deburring tool
+* Small files
 * Small flashlight
 * Precision screwdriver set
 * Heat shrink labeler

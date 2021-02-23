@@ -9,17 +9,21 @@ nav_order: 5
 
 _This guide is written as OctoPrint specific and will be updated over time to also acommodate Mainsail._
 
-Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint web UI, in the box for entering commands directly.
+Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
 
 ![](./images/octoprint_terminal_tab.png)
 
-Any time movements need to be made, those will happen in the 'Control' tab of the Octoprint web UI. The numbers underneath X/Y and Z will change the step-size accordingly.
+![](./images/mainsail_terminal.png)
+
+Any time movements need to be made, those will happen in the 'Control' tab / section of the Octoprint, Mainsail, or Fluidd web UI. The numbers underneath X, Y, and Z control the movement distance.
 
 ![](./images/Octoprint_Controls.png)
 
+![](./images/mainsail_controls.png)
+
 ## Stepper Motor Check
 
-To verify that each stepper motor is operating correctly, send the following command:
+To verify that each stepper motor is operating correctly, send the following command in the terminal:
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
@@ -49,7 +53,7 @@ Run this command for each of the motors:
 
 This command will move each motor UP first and then DOWN 3 times, one second apart.  If the steppers do not move or make strange noises, check the wiring.  Be sure to watch the Z motion to ensure the direction is correct.  If the Z motor(s) do not move in the correct directions, invert the DIR pin on the printer configuration.
 
-#### V2 motor positions
+#### V2 motor positions (Others may vary)
 
 ![](./images/V2-motor-positions.png)
 
@@ -111,7 +115,7 @@ The print bed location of the V2 is much more adjustable than on any of the othe
 
 The Z endstop should be located at max Y position.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
 
-Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.  The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame.  If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose.
+Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.  The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame.  If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose (best done hot).
 
 ## Bed locating (V1, Legacy)
 
