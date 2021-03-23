@@ -23,15 +23,15 @@ nav_order: 1
 
 ### Idler / drive unit assembly
 
-* M5 standard washer thickness is 1±0.2mm, so washer counts in the manual are meant as guidance. As an option, you may purchase 1mm thick shims which have tighter tolerances. It may be useful to have 0.5mm washers at hand to align pulleys and bearings optimally in your build or to swap in and out to ensure proper fitment
+* M5 standard washer thickness is 1mm ±0.2mm, so washer counts in the manual are meant as guidance. As an option, you may purchase 1mm thick shims which have tighter tolerances. It may be useful to have 0.5mm washers at hand to align pulleys and bearings optimally in your build or to swap in and out to ensure proper fitment
 * Make sure your toothed pulleys are GT2/2GT!
 * Make sure your pulleys do not wobble. Rotate them on a shaft and look for eccentric movement of the teeth. The flanges are not critical
-* Use Gates GT2/2GT belts for the open loop belts--off brand/generic GT2/2GT belt is commonly wider than 6mm which will cause it to ride up on the flanges of the idler bearings
+* Use genuine Gates GT2/2GT belts for the open loop belts--off brand/generic GT2/2GT belt is commonly wider than 6mm which will cause it to ride up on the flanges of the idler bearings
 
 ### Belts
 
-* Make sure that both A/B or X/Z (Switchwire) belts are of equal length!
-* If using a belted Z (V2), make sure all Z belts are the same lenth.
+* Make sure that both A/B or X/Z (Switchwire) belts are of equal length!  This helps validate belt paths and tension during assembly.
+* If using a belted Z (V2), make sure all Z belts are the same lenth. This helps with tensioning.
 * Do not cut belts flush once assembled, leave an inch or two for adjustments or reassembly
 
 ### Gantry Assembly
@@ -41,7 +41,7 @@ nav_order: 1
 	* Fix something stiff like a cable tie or some wire to the end of the belt to help with routing
 	* Use dental picks to guide the belt
 * For V2, Z joint screws should not be too tight to allow movement when doing quad gantry adjustments
-* For V1 & V2, gantry should be squared with equal belt tension. See the guide for setting gantry belt tension.
+* For V1, V2, and Legacy, gantry should be squared with equal belt tension. See the guide for setting gantry belt tension.
 * Measure both diagonals to ensure squareness
 
 ---
@@ -86,7 +86,7 @@ nav_order: 1
 
 ### Current
 
-(coming soon)
+* [Switchwire Assembly Manual](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Manuals/Assembly_Manual_SW.pdf)
 
 ## Legacy
 

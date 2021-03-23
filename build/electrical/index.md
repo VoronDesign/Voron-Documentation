@@ -26,7 +26,7 @@ When wiring your printer electronics, you will be working with line voltage wiri
 
 ## Connectors
 
-The recommended MicroFit 3.0 connectors are spec'ed up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). Adding molex connectors to all stepper motors is useful. Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin microfit connector.
+The recommended MicroFit 3.0 connectors are specified for up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). JST connnectors are not available as mid-wire connectors so they must be mixed.  Adding Molex connectors to all stepper motors is useful. Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin Microfit connector.
 
 ### Microfit Pins
 
@@ -38,7 +38,7 @@ When assembling Microfit connectors, the male pins are inserted into the female 
 
 Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
 
-PTFE wires are a premium option as they have a thinner insulation and a lower friction coefficient, which increases bending capabilities and decreases wear. But these advantages are most useful in printers that use cable chains. For printers with an umbilical cord cabling setup (V0 Toolhead, Legacy), they might be overkill. Automation cable such as IGUS can be used, but the minimum bend radius of the cable needs to be verified as the typical bend radius for Voron cable chains is very small.
+PTFE or Heluflon wires are a premium option as they have a thinner insulation and a lower friction coefficient, which increases bending capabilities and decreases wear. But these advantages are most useful in printers that use cable chains. For printers with an umbilical cord cabling setup (V0 Toolhead, Legacy), they might be overkill. Automation cable such as IGUS can be used, but the minimum bend radius of the cable needs to be verified as the typical bend radius for Voron cable chains is very small.
 
 See the cable lengths and count section for specific counts. Do not downsize the hot end heater wires, they are oversized for safety reasons. 
 
@@ -51,7 +51,7 @@ Many of the latest generation of Voron printers spec the use of two or more inde
 
 **Important!**  Connect the DC 0V (typically labelled V-) on all of your DC power supplies together to ensure they all have the same voltage reference.  If this is not done then it may be difficult to diagnose issues (devices may not turn on or may be damaged due to exceeding voltage limits).
 
-### Smaller Printers (V0)
+### Smaller Printers (V0, Legacy)
 
 Instead of multiple power supplies, the V0 uses a DC-DC converter to generate a 5V bus instead of a dedicated 5V power supply.
 
@@ -68,10 +68,8 @@ Please see the associated assembly guides for power supply configurations.
 
 The following are guides for each printer model for planning of wire counts and lengths.  As always, these are recommendations and adding allowances is always a good idea.
 
-- [V0 Gantry Wires](./V0_gantry_wires.md)
 - [V1 Gantry Wires](./V1_gantry_wires.md)
 - [V2 Gantry Wires](./V2_gantry_wires.md)
-- [SW Gantry Wires](./SW_gantry_wires.md)
 
 ### Gantry Routing
 
@@ -89,13 +87,13 @@ If the purchased steppers do not match the color order in the documentation, the
 
 ### Inductive Probe Wiring (V1, V2, Switchwire)
 
-The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
+The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1/Legacy) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
 
 If not closely following the BOM spec, ensure that the inductive probe purchased is a normally closed (NC) version rather than normally open (NO).  The configuration cannot be changed as that is built specifically from the factory.  A normally open (NO) probe may cause crashes if a wire breaks.
 
 ### BAT85 Diode
 
-Due to this voltage the output signal from the sensor is approximately the same voltage as the sensor is powered with.  If the sensor is powered with the common 24V, it will send 24V to an input on the MCU that is never intended to see more than 5V.  The BAT85 diode is used to alleviate this issue.  It is oriented so that when the probe signal wire is high (12-24V), not current will flow into the MCU input pin.  As a result the MCU will read HIGH voltage due to the internal pull-up resistor.  If the probe signal is LOW (0V), current will flow from the MCU input pin through the diode, through the probe, and to ground (V-).  This will pull the MCU pin low and trigger appropriately.
+Due to the switching used by the sensor the output voltage is approximately the same voltage as the sensor is powered with.  If the sensor is powered with the common 24V, it will send 24V to an input on the MCU that is never intended to see more than 5V.  The BAT85 diode is used to alleviate this issue.  It is oriented so that when the probe signal wire is high (12-24V), not current will flow into the MCU input pin.  As a result the MCU will read HIGH voltage due to the internal pull-up resistor.  If the probe signal is LOW (0V), current will flow from the MCU input pin through the diode, through the probe, and to ground (V-).  This will pull the MCU pin low and trigger appropriately.
 
 **Important:** The BAT85 diode should always be wired with the black band toward the probe, not toward the MCU.
 

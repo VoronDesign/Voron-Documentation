@@ -1,20 +1,20 @@
 ---
 layout: default
-title: V2 Gantry Wires
+title: V1 Gantry Wires
 nav_exclude: true
 ---
 
-# V2 Gantry Wires
+# V1 Gantry Wires
 
 This chart only includes what goes into the cable chains to the gantry.  It does NOT include exhaust fan, filament runout sensor, or wiring of anything at or below the bed.
 
 ### Lengths
 
-| Chain | 250^3 | 300^3 | 350^3 |
-|---|---|---|---|
-| X | 270cm | 285cm | 300cm|
-| Y | 205cm | 215cm | 225cm |
-| Z | 150cm | 155cm | 160cm |
+| Chain | 250^3 | 300^3 |
+|---|---|---|
+| X | | |
+| Y | | |
+| Z | | |
 
 ### Wire Counts
 
@@ -28,5 +28,3 @@ This chart only includes what goes into the cable chains to the gantry.  It does
 | X | Part Fan | 2 | |
 | Y | X Endstop | 2 | |
 | Y | Y Endstop | 2 | |
-| Z | A Motor | 4 | |
-| Z | B Motor | 4 | |
