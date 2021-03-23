@@ -26,9 +26,9 @@ make menuconfig
 
 In the menu structure there are a number of items to be selected.
 
-* Ensure that the micro-controller architecture is selected to be 'LPC176x'
-* If the SKR is a Turbo model, be sure to select 120MHz.
-* If the SKR is a non-Turbo model, be sure to select 100MHz.
+* Set the micro-controller architecture to 'LPC176x'
+* If the SKR is a Turbo model, set the processor model to 'lpc1769 (120 Mhz)'
+* If the SKR is a non-Turbo model, set the processor model to 'lpc1768 (100 Mhz)'
 
 ![](./images/klipper_turbo_selection.png)
 
