@@ -24,10 +24,13 @@ make menuconfig
 
 In the menu structure there are a number of items to be selected.
 
-* Ensure that the micro-controller architecture is selected to be 'STM32' and the processor model is set to 'STM32F103' with a 28KiB bootloader.
-* Select "Enable extra low-level configuration options"
-* Enable "Use USB for communication (instead of serial)"
-* Configure "GPIO pins to set at micro-controller startup" to '!PA14'.
+* Ensure that the micro-controller architecture is set to 'STM32' 
+* Ensure that the processor model is set to 'STM32F103' 
+* Ensure that the Bootloader offset is set to '28KiB'
+* Ensure that the Clock Reference is set to '8 Mhz'
+* Ensure that "Enable extra low-level configuration options" is selected.
+* Ensure that "Use USB for communication (instead of serial)" is selected.
+* Ensure that "GPIO pins to set at micro-controller startup" includes '!PA14'.
 
 ![](./images/miniE3_v20_klipper_menuconfig.png)
 
