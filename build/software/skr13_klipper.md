@@ -26,14 +26,14 @@ make menuconfig
 
 In the menu structure there are a number of items to be selected.
 
-* Ensure that the micro-controller architecture is selected to be 'LPC176x'
-* If the SKR is a Turbo model, be sure to select 120MHz.
-* If the SKR is a non-Turbo model, be sure to select 100MHz.
+* Ensure that the  micro-controller architecture is set to 'LPC176x'
+* If the SKR is a Turbo model, ensure the processor model is set to 'lpc1769 (120 Mhz)'
+* If the SKR is a non-Turbo model, ensure the processor model is set to 'lpc1768 (100 Mhz)'
 
 ![](./images/klipper_turbo_selection.png)
 
-* Enable "Target board uses Smoothieware bootloader"
-* Enable "Use USB for communication (instead of serial)"
+* Ensure that "Target board uses Smoothieware bootloader" is enabled
+* Ensure that "Use USB for communication (instead of serial)" is enabled
 
 ![](./images/klipper_menuconfig.png)
 
