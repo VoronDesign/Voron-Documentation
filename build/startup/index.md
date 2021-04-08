@@ -158,7 +158,7 @@ If anything is updated in the printer configuration file, save the file and rest
 * Update the homing routing in the printer configuration file under *[homing_override]* or *[safe\_z\_home]* with those values.
 * Restart Klipper with `FIRMWARE_RESTART`. 
 * Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  
-* Once the the homing process is completed, if the toolhead is not over the center of the bed, check the printer configuration file and uncomment the section in *[homing_override]* appropriate for the bed size.
+* Once the the homing process is completed, if the toolhead is not over the center of the bed, check the printer configuration file and uncomment the section in *[homing_override]* or *[gcode_macro G32]* appropriate for the bed size.
 
 ## Inductive Probe Check (V1, V2, Switchwire, Legacy)
 
@@ -219,7 +219,7 @@ It will perform a PID calibration routine that will last about 5 minutes. Once i
 Depending on the printer type and capability, the following command(s) are used:
 
 * V0: `BED_SCREWS_ADJUST`
-* V1, SW, Legacy: `Z_TILT`, `SCREWS_TILT_CALCULATE`
+* V1, SW, Legacy: `Z_TILT_ADJUST`, `SCREWS_TILT_CALCULATE`
 * V2: `QUAD_GANTRY_LEVEL`
 
 ### Bed Screws (V0)
@@ -255,7 +255,7 @@ Run a `G28` command to home the printer since a `SAVE_CONFIG` restarts the print
 
 This will be the first time that a Quad Gantry Level has been run at a high chamber temperature.  To ensure that the probe has stabilized with the heated bed at 100C and the hot end at 240C, run `PROBE_ACCURACY` with the nozzle at the center of the bed.  If the values are trending (increasing or decreasing) throughout the 10 probes or the standard deviation is greater than 0.003mm, wait another 5 minutes and try again.
 
-Once the readings are stable, run `Z_TILT` or `QUAD_GANTRY_LEVEL`.  Make a note of how long the probe readings took to stabilize for when starting prints - typically a cold printer takes 10-20 minutes to stabilize at temperature.
+Once the readings are stable, run `Z_TILT_ADJUST` or `QUAD_GANTRY_LEVEL`.  Make a note of how long the probe readings took to stabilize for when starting prints - typically a cold printer takes 10-20 minutes to stabilize at temperature.
 
 #### Common QGL Problems
 
@@ -274,6 +274,7 @@ If you did not run PID tuning, set your extruder to 245C and heated bed to 100C 
 
 Preparation
 
+* **V1:** Run a `G28`, and then a `Z_TILT_ADJUST`, and then another `G28`.
 * **V2:** Run a `G28`, and then a `QUAD_GANTRY_LEVEL`, and then another `G28`.
 * **All others:**  Run a `G28`.
 * Move the nozzle to the center of the bed if it is not already.

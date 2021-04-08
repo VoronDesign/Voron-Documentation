@@ -11,6 +11,7 @@ You just updated klipper, and now your printer won't start?  Don't worry.  The v
 
 Change Date | Printer | changes required
 --- | --- | ---
+2021-03-04 | All | Moonraker now requires `[octoprint_compat]` in moonraker.conf, in order to accept octoprint style slicer uploads
 2020-12-22 | All  | Klipper is depreciating `step_distance:` in favour of `rotation_distance:`  Please see the [rotation_distance](rotation_distance.md) document. Although it's currently in a soft transition period, this change will eventually break *all* existing printer.cfg
 2020-11-20 | Voron-2 |  If you are using aliases, aka, a `[board_pins]` section: add the line `mcu: mcu, z`
 2020-10-29 | All | If you are using a Fystec Mini12864, or other display with neopixels: in the `[neopixel]` section, replace `color_order_GRB: False` with `color_order: RGB`
