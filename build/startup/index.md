@@ -158,7 +158,7 @@ If anything is updated in the printer configuration file, save the file and rest
 * Update the homing routing in the printer configuration file under *[homing_override]* or *[safe\_z\_home]* with those values.
 * Restart Klipper with `FIRMWARE_RESTART`. 
 * Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  
-* Once the the homing process is completed, if the toolhead is not over the center of the bed, check the printer configuration file and uncomment the section in *[homing_override]* appropriate for the bed size.
+* Once the the homing process is completed, if the toolhead is not over the center of the bed, check the printer configuration file and uncomment the section in *[homing_override]* or *[gcode_macro G32]* appropriate for the bed size.
 
 ## Inductive Probe Check (V1, V2, Switchwire, Legacy)
 
