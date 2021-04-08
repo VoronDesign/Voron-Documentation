@@ -24,7 +24,7 @@ nav_exclude: true
 * Plug Probe Signal (with BAT85 diode) in to SERVO0, pin 1 (toward USB)
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your FLYF407ZG, but do not connect it yet to your Raspberry Pi
-* 
+
 ![](./images/voron2_flyf407zg_mcu_1.png)
 
 ## MCU Part 2
