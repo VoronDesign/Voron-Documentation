@@ -135,7 +135,6 @@ This section only applies to printers with more than one controller.
 ```ini
 [include mainsail.cfg]
 ```
-2.  Add the macros to your printer.cfg described in the [wiki](https://docs.mainsail.xyz/necessary-configuration#macros)
 
 ### Additional Changes: FluiddOS only
 
