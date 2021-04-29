@@ -158,7 +158,6 @@ If anything is updated in the printer configuration file, save the file and rest
 * Update the homing routing in the printer configuration file under *[homing_override]* or *[safe\_z\_home]* with those values.
 * Restart Klipper with `FIRMWARE_RESTART`. 
 * Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  
-* Once the the homing process is completed, if the toolhead is not over the center of the bed, check the printer configuration file and uncomment the section in *[homing_override]* or *[gcode_macro G32]* appropriate for the bed size.
 
 ## Inductive Probe Check (V1, V2, Switchwire, Legacy)
 
@@ -341,7 +340,7 @@ Before the first print,make sure that the extruder extrudes the correct amount o
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
 
-Typical e-step values should be around 0.00240 for Afterburner or 0.00180 for Mobius.
+Typical rotation_distance values should be around 22.6789511 for Afterburner and Mobius (update gear_ratio to 80:20 for Mobius).
 
 ---
 ### Next: [Slicer Setup](../slicer/index.md)
