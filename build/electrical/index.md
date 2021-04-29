@@ -46,6 +46,25 @@ You may add additional wires to your cable chains as a replacement in case of wi
 
 Buy some cable holders (e.g. with adhesive) to organize your cables in the electronics compartment. Keep in mind that the adhesive fails over time due to exposure to above room temperature. Cables can be hidden in the rails. Optionally print cable covers for the rails.
 
+## Stepper Motor Wiring
+There is no standard either for the color of wire on stepper motors, nor for the order of wires in the connector. As a result, it is often necessary to re-order stepper motor wires _even on motors sold specifically for use in Vorons_.  If you are using the exact BOM motors, the colors shown in the wiring guides should work, however in any other case, you should verify your motor wiring. All control boards currently used with voron expect one winding to be connected on pins 1&2, and the other on pins 3&4.  Note that other details, such as identifying winding A vs winding B is not critical.  At worst, your motor will run backwards, which you can easily fix later, in software.
+
+### Identifying Windings
+
+There are 3 basic options for identifying windings:
+1) Check the documentation.  Many motors come with a card which tells you what wire colors are on the same winding.  If there's no card, the manufacturer's website may have something.
+2) Use a multimeter: put your meter in "continuity" mode.  Pick one wire, and then find any other wire that shows continuity with it.  Those two wires are on the same winding. By process of elimination, it should be safe to assume the other two represent the other winding.
+3) If you don't have a meter available, you can twist 2 wires together, and then try to spin the shaft of the motor.  If the wires are on the same winding, it will become noticably harder to spin the shaft.
+
+### Symptoms of miswired motors
+
+Traditionally, trying to move a stepper that's miswired, has either resulted in nothing happening, or a nasty buzzing sound.  However, recent versions of klipper will generally detect the miswiring, and simply shutdown.  If, during your motor checks, klipper immediately shuts down: check your logs.  If there is a wiring issue with your stepper, it will report something like
+
+` TMC 'stepper_y' reports DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) olb=1(OpenLoad_B!) CS_ACTUAL=25
+Transition to shutdown state: TMC 'stepper_y' reports error: DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) 
+`
+
+
 ## DC Power Supply Wiring
 Many of the latest generation of Voron printers spec the use of two or more independent power supplies.  That can include 24V, 5V, and 12V power supplies depending on configuration.
 
