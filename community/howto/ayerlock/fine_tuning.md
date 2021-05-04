@@ -89,29 +89,29 @@ rapid adjustment of the offset. It should look similar to this:
 
 Print the `GCODE` file you made in SuperSlicer using your default settings.
 
-If your Z height is tuned close to correct you will get a print similar to this:
+If your Z height is tuned close to correct you will get a print similar to this:  
 ![Box Print: Close to tuned.](images/image019.jpg)
 
 It should look relatively flat with no noticeable artifacts in it.
 
-If your Z `position_endstop` is set too close to the bed it will look something like this:
+If your Z `position_endstop` is set too close to the bed it will look something like this:  
 ![Box Print: Too close to buildplate.](images/image021.jpg)
 Notice all the lines moving from the lower right to the upper left of the buildplate. You may have more or fewer. These are caused by pushing
 too much plastic into a hard defined geographic area. This can cause your print to push off the bed due to thermal expansion later in the print.
 Its bad, you DO NOT want this. You will need to raise your Z Offset in FluidD, Mainsail, or Octoprint in small increments and reprint the box until
 the lines are all gone. The first setting where you have no lines appearing in the print is where you want to permanently set your Z axis.
 
-If your Z `position_endstop` is set too far off the buildplate your print will look like this when you lift it off.
+If your Z `position_endstop` is set too far off the buildplate your print will look like this when you lift it off.  
 ![Box Print: Too far, sorta stringy](images/image023.jpg)![Box Print: Too far, really stringy](images/image025.jpg)
 
 You will need to lower your Z Offset in FluidD, Mainsail, or Octoprint in small increments until you get a print with lines in it like above. Then
 you will raise your Z axis back up to the first setting where you do not have any lines in the print.
 
 It is a good idea to mark the Z Offset on each print so you have a relative reference of where you started as to where you are in your
-calibration. It usually takes ~3 prints to get honed in. The first few times you do this will likely take more as you figure it out.
+calibration. It usually takes ~3 prints to get honed in. The first few times you do this will likely take more as you figure it out.  
 ![Box Prints: Quad Box](images/image027.jpg)
 
-Once you have really dialed in the Z height you should notice that the square looks almost glued to the plate. This is a good example.
+Once you have really dialed in the Z height you should notice that the square looks almost glued to the plate. This is a good example.  
 ![Box Print: Dead On!](images/image028.jpg)
 
 Using the final value of your Z Offset, you might want to permanently update your printer.cfg file with and adjust the position_endstop value by whatever final Z Offset value you settled on.
