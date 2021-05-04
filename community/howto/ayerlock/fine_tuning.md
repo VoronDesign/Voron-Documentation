@@ -64,8 +64,8 @@ use one just to make sure that the hotend is primed with plastic the second it s
 - Under `Speed` make sure that it is printing relatively slow for the first layer. I use the following settings:
 ![SS-Speed Settings](images/image011.png)
 
-- Under `Width & Flow` use something like the following settings keeping in mind that we want the top solid infill settings to take precedence.
-More thinner lines will help here.
+- Under `Width & Flow` use something like the following settings keeping in mind that we want the top solid infill settings to take
+precedence. More thinner lines will help here.
 ![SS-Width & Flow Settings](images/image012.png)
 
 Once that is finished head to the **`Plater`** tab.
