@@ -65,7 +65,7 @@ use one just to make sure that the hotend is primed with plastic the second it s
 ![SS-Speed Settings](images/image011.png)
 
 - Under `Width & Flow` use something like the following settings keeping in mind that we want the top solid infill settings to take
-precedence. More thinner lines will help here.
+precedence. More thinner lines will help here.  
 ![SS-Width & Flow Settings](images/image012.png)
 
 Once that is finished head to the **`Plater`** tab.
