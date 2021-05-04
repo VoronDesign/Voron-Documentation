@@ -45,16 +45,20 @@ Under `Perimeters & Shell -> Quality` make sure that `Only one perimeter on Top 
 make the Vertical/Horizontal shells settings (and pretty much all the other settings on this tab) obsolete.
 ![SS-Perimeters & Shell Settings](images/image006.jpg)
 
-Under `Slicing` set your layer height to 0.2mm
-![SS-Slicing Settings](images/image007.jpg)
+
+Under `Slicing` set your layer height to 0.2mm.
+![SS-Slicing Settings](images/image007.png)
 
 Under `Infill` set:
 - Solid: Monotonic -> Connected
 - Top: Monotonic (filled) -> Connected
 - Bottom: Monotonic (filled) -> Connected
-![SS-Infill Settings](images/image009.jpg)
 
-Under Skirt & Brim make sure you have no brim set. If you have a good purge line set up you may not need a skirt but it might be advisable to
+![SS-Infill Settings](images/image009.png)
+
+Under `Skirt & Brim` make sure you have no brim set. If you have a good purge line set up you may not need a skirt but it might be advisable to
 use one just to make sure that the hotend is primed with plastic the second it starts the box.
 
-Under Speed make sure that it is printing relatively slow for the first layer. I use the following settings:
+Under `Speed` make sure that it is printing relatively slow for the first layer. I use the following settings:
+![SS-Speed Settings](images/image011.png)
+
