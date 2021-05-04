@@ -71,7 +71,7 @@ More thinner lines will help here.
 Once that is finished head to the **`Plater`** tab.
 
 Right click in the `Parts/Modifiers` box on the right and `Add Shape -> Box`.
-![SS-Plater -> Add Shape Box](images/image013/png)
+![SS-Plater -> Add Shape Box](images/image013.png)
 
 Make sure the Scale factors: & Size padlock (lower right) is UNLOCKED (just click the padlock if it is set to locked). Set the X, Y, Z settings under
 size to 75/75/0.2. It should look like this:
