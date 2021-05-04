@@ -41,24 +41,26 @@ print and can help you rapidly hone your Z setting.
 You might want to save a Print Settings profile for this in the event you need to repeat this in the future (you WILL repeat this in the future (new
 PEI sheet, new spring steel, new buildplate, etc.)).
 
-Under `Perimeters & Shell -> Quality` make sure that `Only one perimeter on Top surfaces` is checked. Since this is a one layer print this will
+- Under `Perimeters & Shell -> Quality` make sure that `Only one perimeter on Top surfaces` is checked. Since this is a one layer print this will
 make the Vertical/Horizontal shells settings (and pretty much all the other settings on this tab) obsolete.
 ![SS-Perimeters & Shell Settings](images/image006.jpg)
 
 
-Under `Slicing` set your layer height to 0.2mm.
+- Under `Slicing` set your layer height to 0.2mm.  
 ![SS-Slicing Settings](images/image007.png)
 
-Under `Infill` set:
-- Solid: Monotonic -> Connected
-- Top: Monotonic (filled) -> Connected
-- Bottom: Monotonic (filled) -> Connected
+- Under `Infill` set:
+```
+  - Solid: Monotonic -> Connected
+  - Top: Monotonic (filled) -> Connected
+  - Bottom: Monotonic (filled) -> Connected
+```
 
 ![SS-Infill Settings](images/image009.png)
 
-Under `Skirt & Brim` make sure you have no brim set. If you have a good purge line set up you may not need a skirt but it might be advisable to
+- Under `Skirt & Brim` make sure you have no brim set. If you have a good purge line set up you may not need a skirt but it might be advisable to
 use one just to make sure that the hotend is primed with plastic the second it starts the box.
 
-Under `Speed` make sure that it is printing relatively slow for the first layer. I use the following settings:
+- Under `Speed` make sure that it is printing relatively slow for the first layer. I use the following settings:
 ![SS-Speed Settings](images/image011.png)
 
