@@ -95,7 +95,7 @@ If your Z height is tuned close to correct you will get a print similar to this:
 It should look relatively flat with no noticeable artifacts in it.
 
 If your Z `position_endstop` is set too close to the bed it will look something like this:  
-![Box Print: Too close to buildplate.](images/image021.jpg)
+![Box Print: Too close to buildplate.](images/image021.jpg)  
 Notice all the lines moving from the lower right to the upper left of the buildplate. You may have more or fewer. These are caused by pushing
 too much plastic into a hard defined geographic area. This can cause your print to push off the bed due to thermal expansion later in the print.
 Its bad, you DO NOT want this. You will need to raise your Z Offset in FluidD, Mainsail, or Octoprint in small increments and reprint the box until
