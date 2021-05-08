@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mini12864 Klipper Guide
-nav_exclude: true
+nav_order: 1
 ---
 
 # Mini12864 Klipper Guide
