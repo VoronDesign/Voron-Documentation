@@ -93,13 +93,11 @@ Engineer PA-09, PA-20, or PA-21. Yes, it's worth the cost.
 
 ### What gauge wire should I use where?
 
-The gantry wiring should be all 24 gauge wire except for the hot end heater, which should be wired with 20 gauge for safety.  This will permit all of the wires to fit within the drag chains.  The power wiring (AC and DC) should be at least 20 gauge, preferably larger (18 or 16 gauge).
+The gantry wiring should be all sized as recommended.  This will permit all of the wires to fit within the drag chains.  The power wiring needs to be larger due to the load from the AC heater (if applicable).
 
-In metric units:
-- Power Wiring/Mains Wiring: at least 1 mm², better 1.5 mm²
-- Hotend Heater: 0.5 mm²
-- Stepper Motors: 0.25 mm²
-- everything else (endstops, thermistors, fans (if wired separately!), ...): 0.14 mm²; can also be done in 0.25 mm² for easier sourcing
+- Power Wiring/Mains Wiring: at least 18 awg (1 mm²), better 16 awg (1.5 mm²)
+- Hotend Heater: 20 awg (0.5 mm²)
+- Stepper Motors, all other wiring: 24 awg (0.25 mm²)
 
 ### PTFE or Silicone wire?
 
@@ -107,11 +105,14 @@ The BOM currently specifies silicone wire for bend and heat tolerance.  For an i
 
 ## Electronics
 
-### Why an SKR 1.4? What about Turbo?
+### Why an SKR 1.4? What about turbo / faster speeds? What about FYSETC?
 
-The BTT SKR controller is inexpensive and extremely capable for the purpose. Either an SKR 1.3 or 1.4 is recommended and can be used. While both controllers have different pin configurations, they use the same controller chip. BTT is no longer producing the 1.3 and it will eventually be unavailable.
+The BTT SKR controller is inexpensive and extremely capable for the purpose. Either an SKR 1.3 or 1.4 is historically recommended and can be used. While both controllers have different pin configurations, they use the same controller chip. BTT is no longer producing both the 1.3 and 1.4 and they will eventually be unavailable. Current alteranives include:
 
-The Turbo version is certainly usable, but the additional speed is not required since most of the computing is handled by the Raspberry Pi.
+- FYSETC Spider
+- FYSETC S6
+
+The turbo (or higher speed) versions are certainly usable, but the additional speed is not required since most of the computing is handled by the Raspberry Pi.
 
 ### Why not a Duet?
 

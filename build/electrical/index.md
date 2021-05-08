@@ -19,7 +19,7 @@ When wiring your printer electronics, you will be working with line voltage wiri
 
 * Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on and sometimes hard to identify!
 
-* AC wiring should be properly dimensioned. Use at least 20 AWG (1 mm²) for mains AC wiring, even better would be 18 AWG (1.5 mm²)
+* AC wiring should be properly dimensioned. Use at least 18 AWG (1 mm²) for mains AC wiring, even better would be 16 AWG (1.5 mm²)
 * Buy a quality SSR (see the official sourcing guide), cheap clones may overheat and fail closed causing a heater thermal runaway. Add a 115-125°C thermal fuse to your bed heater as an additional safety measure
 * Dont run your bed above 110°C, this reduces the lifespan of the adhesive holding it onto the build plate
 * Connect AC ground to your bed and frame
@@ -60,9 +60,10 @@ There are 3 basic options for identifying windings:
 
 Traditionally, trying to move a stepper that's miswired, has either resulted in nothing happening, or a nasty buzzing sound.  However, recent versions of klipper will generally detect the miswiring, and simply shutdown.  If, during your motor checks, klipper immediately shuts down: check your logs.  If there is a wiring issue with your stepper, it will report something like
 
-` TMC 'stepper_y' reports DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) olb=1(OpenLoad_B!) CS_ACTUAL=25
+```
+TMC 'stepper_y' reports DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) olb=1(OpenLoad_B!) CS_ACTUAL=25
 Transition to shutdown state: TMC 'stepper_y' reports error: DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) 
-`
+```
 
 
 ## DC Power Supply Wiring
