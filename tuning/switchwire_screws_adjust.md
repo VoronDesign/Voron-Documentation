@@ -54,7 +54,7 @@ screw9: 233,215
 screw9_name: rear_right
 horizontal_move_z: 10.
 speed: 50.
-screw_thread: CW-M3
+screw_thread: CCW-M3
 ```
 
 This sections tells Klipper the location of your screws. This measurements were taken from a Switchwire build using the LDO Y Carriage and Heated bed.
