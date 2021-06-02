@@ -1,9 +1,7 @@
 ---
 layout: default
 title: Switchwire Screws Adjust
-parent: Tuning Guides
-grand_parent: Voron Official Documentation
-nav_order: 3
+nav_exclude: true
 ---
 
 # Voron Switchwire - Screws Adjust method
