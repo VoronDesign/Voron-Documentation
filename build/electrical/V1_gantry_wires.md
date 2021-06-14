@@ -12,9 +12,9 @@ This chart only includes what goes into the cable chains to the gantry.  It does
 
 | Chain | 250^3 | 300^3 |
 |---|---|---|
-| X | | |
+| X | 155cm | 165cm |
 | Y | | |
-| Z | | |
+| Z | 60cm | 60cm |
 
 ### Wire Counts
 
@@ -26,5 +26,5 @@ This chart only includes what goes into the cable chains to the gantry.  It does
 | X | Inductive Probe | 3 | |
 | X | Hot End Fan | 2 | |
 | X | Part Fan | 2 | |
-| Y | X Endstop | 2 | |
-| Y | Y Endstop | 2 | |
+| X | X Endstop | 2 | |
+| - | Y Endstop | 2 | |
