@@ -31,7 +31,7 @@ nav_order: 1
 ### Belts
 
 * Make sure that both A/B or X/Z (Switchwire) belts are of equal length!  This helps validate belt paths and tension during assembly.
-* If using a belted Z (V2), make sure all Z belts are the same lenth. This helps with tensioning.
+* If using a belted Z (V2), make sure all Z belts are the same length. This helps with tensioning.
 * Do not cut belts flush once assembled, leave an inch or two for adjustments or reassembly
 
 ### Gantry Assembly
@@ -52,11 +52,13 @@ nav_order: 1
 
 ### Current
 
-[V0 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON-0/Manuals/V0_Assembly_Manual.pdf)
+[V0.1 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.1/Manuals/Assembly_Manual_0.1.pdf)
 
-[V0 Pocketwatch Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON_Pocketwatch/Manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
+### Historical
 
-[V0 Dozuki Guides](https://voron.dozuki.com/c/Voron_0)
+* [V0 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON-0/Manuals/V0_Assembly_Manual.pdf)
+* [V0 Pocketwatch Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON_Pocketwatch/Manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
+* [V0 Dozuki Guides](https://voron.dozuki.com/c/Voron_0)
 
 ## V1
 
