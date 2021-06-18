@@ -34,7 +34,7 @@ The [bed_mesh] configuration options can be found [on the Klipper website](https
 ```python
 [bed_mesh]
 speed: 300
-horizontal_move_z: 2
+horizontal_move_z: 10
 ##--------------------------------------------------------------------
 ##	Uncomment below for 250mm build
 #mesh_min: 40, 40
