@@ -45,7 +45,7 @@ For maximum quality and accuracy, preheating the printer is recommended.  This c
 
 _ In testing, a 350^3 V2 grew 0.2mm in height after heating up for an hour._
 
-Every printer is going to have a start sequence that typically involves homing and/or leveling to prepare the printer.  This is in addition to heating the nozzle and bed and doing other tasks.  Look at the PRINT_START macro in the printer.cfg for the standard process.  For additional information or ideas, check the [macros page](./additional/macros.md).
+Every printer is going to have a start sequence that typically involves homing and/or leveling to prepare the printer.  This is in addition to heating the nozzle and bed and doing other tasks.  Look at the PRINT_START macro in the printer.cfg for the standard process.  For additional information or ideas, check the [macros page](../../community/macros/index.md).
 
 ---
 ### Next: [First Print](./first_print.md)
