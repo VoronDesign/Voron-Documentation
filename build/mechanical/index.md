@@ -44,6 +44,11 @@ nav_order: 1
 * For V1, V2, and Legacy, gantry should be squared with equal belt tension. See the guide for setting gantry belt tension.
 * Measure both diagonals to ensure squareness
 
+### Bed
+
+* For V2, bed screws should not be too tight during initial installation. Allow the frame to expand and stabilize after a ~1hr heat soak before tigthening 3 of the 4 bed screws.
+* [Unsure if this applies to v0/v1/SW/etc as well]
+
 ---
 
 # Build Manuals
