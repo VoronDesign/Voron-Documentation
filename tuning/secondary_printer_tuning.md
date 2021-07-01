@@ -29,6 +29,15 @@ This value equals ~2lb of tension on XY, which is on the lower end of the range 
 
 Generally when your Voron is first built, Bed Mesh is not necessary. However, it can still be used as an analysis tool to check assembly and see if there's anything obviously incorrect--just don't run SAVE_CONFIG at the end of your BED_MESH_CALIBRATE, and run BED_MESH_CLEAR after running bed mesh.
 
+First, open octoprint and install the Bed Visualizer plugin. Once you are done open the Bed Visualizer settings and click on the general tab. You will see GCODE Commands for Mesh Update Process you will then add the following.
+
+```
+@BEDLEVELVISUALIZER	; instruct plugin to start recording responses from printer.
+BED_MESH_OUTPUT		; report the bed leveling mesh points.
+```
+
+Hit Save.
+
 The [bed_mesh] configuration options can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/b6a25393d354d5f5085b496ea040c751cfafa030/config/example-extras.cfg#L11) described in detail. A sample configuration for your Voron printer can be found [here](https://github.com/VoronDesign/Voron-1/blob/328113babcdb4934c461beb82b7f3b4dbeeb7eb5/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg#L464).
 
 ```python
@@ -70,3 +79,5 @@ relative_reference_index = ()(x points * y points) - 1) / 2
 ## Input Shaper
 
 Imput Shaper is a Klipper-specific software technique for reducing ringing (also known as echoing, ghosting or rippling) in prints.  See the Klipper guide on [configuring Input Shaper](https://github.com/KevinOConnor/klipper/blob/master/docs/Resonance_Compensation.md) for more details and the complete process.
+
+If you have an accelerometer you can also use that and this method is better if you do not want to do through all that filament. This is a sure way to get the ringing effectively. See the Klipper guide on [configuring Input Shaper] (https://github.com/KevinOConnor/klipper/blob/master/docs/Measuring_Resonances.md) for more details and complete process.
