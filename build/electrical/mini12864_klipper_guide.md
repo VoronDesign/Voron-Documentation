@@ -46,5 +46,5 @@ The Mini12864 display can be a little tricky to get running correctly.  Here is 
 
 * Have you Rotated the headers on the back of the display?  See [Hardware](#hardware) above
 * Is EXP1 connected to EXP1, and EXP2 to EXP2?
-* Have you enabled all the config sections?  you must have `[display]`,  `[output_pin beeper]`, `[neopixel fysetc_mini12864]`, AND `[delayed_gcode setdisplayneopixel]` to fully enable your display
+* Have you enabled all the config sections?  you must have `[display]`,  `[output_pin beeper]`, `[neopixel fysetc_mini12864]`, AND `[delayed_gcode setdisplayneopixel]` to fully enable all features of your display.  (many users may not feel the need to enable `[output_pin beeper]`)
 * Voron 2 dual MCU configurations: Is your firmware configuration in agreement with your physical wiring about which MCU board the display is connected to?  ( As provided in the stock printer.cfg, the display should be connected to MCU-Z )
