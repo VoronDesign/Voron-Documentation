@@ -12,13 +12,31 @@ Set jumpers as shown:
 
 ![](./images/v2_spider_jumpering.png)
 
-## Step Sticks
-* If using Fysetc step sticks, inspect for left over rosin, and clean with IPA if need
-* Install step sticks in all slots except E4
+## Stepper Drivers
+* If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
+* Install step drivers in all slots except E4
+* Install heat sinks on all step drivers
 
 ## Wiring
-* Connect wiring as shown
-* if using a mini12864 display, do not connect this until reviewing the notes below
+
+* Connect 24V Power from the PSU to PWR IN AND BED IN 
+* Connect the B Motor (gantry left) to X-mot
+* Connect the A Motor (gantry right) to Y-Mot
+* Connect the Z, Z1, Z2, and Z3 Motors to Z-MOT, E1-MOT, E2-MOT and E3-MOT
+* Connect the extruder motor to E0-MOT
+* Connect the hot end jeater to E0 OUT
+* Connect the chamber exhaust fan to  E2 OUT
+* Connect the bed SSR (DC Control Side) to BED OUT
+* Connect the hot end fan to FAN0
+* Connect the part cooling fan to FAN1
+* Connect the controller fans to FAN2
+* Connect the hot end thermistor to TE0
+* Connect the bed thermistor to TB
+* Connect the X endstop to X+
+* Connect the Y endstop to Y+
+* Connect the probe to Z+
+* Connect the Z endstop to Z-
+* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
 ![](./images/v2_spider_wiring.png)
 
