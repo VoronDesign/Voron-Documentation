@@ -24,7 +24,7 @@ Set jumpers as shown:
 * Connect the A Motor (gantry right) to Y-Mot
 * Connect the Z, Z1, Z2, and Z3 Motors to Z-MOT, E1-MOT, E2-MOT and E3-MOT
 * Connect the extruder motor to E0-MOT
-* Connect the hot end jeater to E0 OUT
+* Connect the hot end heater to E0 OUT
 * Connect the chamber exhaust fan to  E2 OUT
 * Connect the bed SSR (DC Control Side) to BED OUT
 * Connect the hot end fan to FAN0
@@ -57,7 +57,6 @@ Set jumpers as shown:
 * *Fysetc mini12864 only*:  components R1 and R4 must be removed from the board before connecting to the Spider.  Note: new displays are shipping with this step already complete, but this should be verified before connecting
 * *BTT mini12864 only* remove components R1, and R6, and rotate the connectors 180 degrees
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
-
 
 
 
