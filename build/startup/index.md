@@ -333,7 +333,7 @@ Before the first print,make sure that the extruder extrudes the correct amount o
 * In Octoprint / Mailsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
 * Measure from the entrance of your extruder to the mark you made previously. 
 	* *In a perfect world, assuming the mark is at 120mm, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
-* Take the value in the configuration file and update it using the following:
+* Update rotation_distance in the extruder section of the configuration file using this formula:
 	* New Config Value = Old Config Value * (Actual Extruded Amount/Target Extruded Amount)
 
 *Note: a higher configuration value means that less filament is being extruded.*
