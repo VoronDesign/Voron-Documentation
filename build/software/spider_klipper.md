@@ -14,6 +14,7 @@ The firmware installation process for the Fysetc Spider MCU.
 * It is desirable, though not strictly necessary to have a small sdcard available
 * Even if you intend to power your Pi with the Spider, during this flashing process, you will find it far more convenient 
 to power your pi from some other source, such as a regular USB power supply
+* Voron Design recommends using USB to control the Spider, which simply requires connecting a USB-A to USB-C cable between the Spider and Pi.  If you prefer a UART connection, please consult the fysetc documentation for the necessary configuration adjustments
 
 ### Build Firmware Image
 
