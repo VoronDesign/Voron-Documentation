@@ -55,7 +55,7 @@ Set jumpers as shown:
 
 * *spider Rev 1.0 only*: the EXP1 & EXP2 header labels are swapped. Connect  EXP1 (display) to EXP2(spider), and EXP2 (display) to EXP1 (spider).  On the Spider 1.1 or later: connect EXP1->EXP1, and EXP2->EXP2
 * *Fysetc mini12864 only*:  components R1 and R4 must be removed from the board before connecting to the Spider.  Note: new displays are shipping with this step already complete, but this should be verified before connecting
-* *BTT mini12864 only* remove components R1, and R6, and rotate the connectors 180 degrees
+* *BTT mini12864 only* remove components R1, and C6, and rotate the connectors 180 degrees
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
 
