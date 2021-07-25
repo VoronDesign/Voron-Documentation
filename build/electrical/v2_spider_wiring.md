@@ -58,5 +58,6 @@ Set jumpers as shown:
 * *BTT mini12864 only* remove components R1, and C6, and rotate the connectors 180 degrees
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
-
+## Other
+* full pinout, and other fysetc documentation is located at https://github.com/FYSETC/FYSETC-SPIDER
 
