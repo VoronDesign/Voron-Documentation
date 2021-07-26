@@ -50,7 +50,7 @@ These are the recommended settings.
 
 ## Ordering Parts
 
-When purchasing, the sourcing guide and the boll of materials (BOM) are not the same.  Be sure to refer to the BOM for all quantities.  If unclear please see the [explanation of differences](#bill-of-materials-and-source-guide).
+When purchasing, the sourcing guide and the bill of materials (BOM) are not the same.  Be sure to refer to the BOM for all quantities.  If unclear please see the [explanation of differences](#bill-of-materials-and-source-guide).
 
 *When purchasing small items, it is recommended to buy extras (round up). Having a few extra screws or connectors around may actually help you later.*
 
