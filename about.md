@@ -22,7 +22,7 @@ All V1, V2, and Legacy frames are constructed with 2020 aluminum extrusions with
 
 ### Motion Control - Klipper
 
-All Voron printers use [Klipper](https://www.klipper3d.org/Overview.html) firmware. Klipper uses a Raspberry Pi for all the computation-heavy tasks and sends a list of preprocessed orders to the controller board. This gives a considerable amount of flexibility as a variety of control boards (or combination of boards) can be easily configured. As well, more complex features such as input shaping (to reduce ringing) can be added no matter what control board is used. Finally, configuring firmware is fast and easy. Change your the desired parameter in an easy to read printer configuration file, save, and restart Klipper--a few seconds later the printer is ready to go!
+All Voron printers use [Klipper](https://www.klipper3d.org/Overview.html) firmware. Klipper uses a Raspberry Pi for all the computation-heavy tasks and sends a list of preprocessed orders to the controller board. This gives a considerable amount of flexibility as a variety of control boards (or combination of boards) can be easily configured. As well, more complex features such as input shaping (to reduce ringing) can be added no matter what control board is used. Finally, configuring firmware is fast and easy. Change to your desired parameter in an easy to read printer configuration file, save, and restart Klipper--a few seconds later the printer is ready to go!
 
 ### Serial Numbers
 
