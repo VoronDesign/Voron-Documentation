@@ -142,8 +142,7 @@ This section only applies to printers with more than one controller.
 
 1.  Add the following entries to your printer.cfg:
 ```ini
-[include client.cfg]
-[include client_macros.cfg]
+[include fluidd.cfg]
 ```
 
 > ### Community References
