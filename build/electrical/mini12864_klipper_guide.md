@@ -21,10 +21,7 @@ nav_order: 1
 4. Connect EXP1 and EXP2 cables to the display and to your MCU board, being sure to match port numbers (EXP1 <> EXP1).  <br> *Note: The Fysetc Spider V1.0 has a silk screen error.  __for V1.0 only__, Connect EXP1 to EXP2, and EXP2 to EXP1*
 
 
-
 ![](./images/mini12864_header_flip.jpg)
-
-
 
 ## Klipper Configuration
 Most stock Voron configuration files already have appropriate configurations for this display built in, which simply needs to be un-commented.  These  configs are customized for the specific builds, and should be what you use.  *_Note: There are multiple config sections required to make the mini12864 fully operational: `[display]`, `[neopixel fysetc_mini12864]` and `[delayed_gcode setdisplayneopixel]`_*
@@ -37,8 +34,6 @@ you would change it to
 ```
 encoder_pins: ^PC6,^PC7
 ```
-
-
 
 ## Mini12864 Troubleshooting Checklist
 
