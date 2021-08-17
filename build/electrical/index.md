@@ -154,6 +154,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)
 * [V2 - SKR 1.4](./v2_skr14_wiring.md)
 * [V2 - FLYboard FLYF407ZG](./v2_flyf407zg_wiring.md)
+* [V2 - Fysetc Spider](./v2_spider_wiring.md)
 
 ### Voron Switchwire
 * [SW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
