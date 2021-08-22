@@ -57,7 +57,7 @@ There are multiple options for getting this firmware file installed onto your Sp
 3. Connect Spider & Pi via USB
 4. Power on Spider
 5. from your ssh session, run `lsusb`. and find the ID of the dfu device.
-6. run `make flash DEVICE=1234:5678` replace 1234:5678 with the ID from the previous step
+6. run `make flash FLASH_DEVICE=1234:5678` replace 1234:5678 with the ID from the previous step
 7. power off the Spider
 8. remove the jumper from BT0/3.3V
 9. Power up the Spider
