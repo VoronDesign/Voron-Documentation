@@ -95,7 +95,7 @@ Engineer PA-09, PA-20, or PA-21. Yes, it's worth the cost.
 
 The gantry wiring should be all sized as recommended.  This will permit all of the wires to fit within the drag chains.  The power wiring needs to be larger due to the load from the AC heater (if applicable).
 
-- Power Wiring/Mains Wiring: at least 18 awg (1 mm²), better 16 awg (1.5 mm²)
+- Power Wiring/Mains Wiring: at least 18 awg (0.75 mm²), better 16 awg (1.25 mm²)
 - Hotend Heater: 20 awg (0.5 mm²)
 - Stepper Motors, all other wiring: 24 awg (0.25 mm²)
 

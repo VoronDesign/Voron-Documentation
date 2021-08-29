@@ -62,16 +62,18 @@ nav_order: 1
 
 ## V1
 
-### Current
-
-[V1.8 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.8/Docs/Assembly_Manual_1.8.pdf)
-
 ### Historical
 
+* [V1.8 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.8/Docs/Assembly_Manual_1.8.pdf)
 * [V1.6 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.6/Manuals/VORON1.6_Manual.pdf)
 * [V1.6 Dozuki Guides](https://voron.dozuki.com/c/Voron_1.6)
 * [V1.5 Documentation](https://github.com/VoronDesign/Voron-1/tree/Voron1.5/Documentation)
 * [V1.0 Documentation](https://github.com/VoronDesign/Voron-1/tree/Voron1.0/Documentation)
+
+## Trident (Replaces V1)
+
+[Trident Assembly Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Assembly_Manual_Trident.pdf)
+[V1 Upgrade Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Frame_Upgrade_Trident.pdf)
 
 ## V2
 

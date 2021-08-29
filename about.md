@@ -32,35 +32,6 @@ All it takes to receive a serial number after you have completed your build is t
 
 *Note: the serial submission process has become more automated now. In order to have the bot pick up your serial request video, be sure to use the "Serial Request" flair and add your full Discord name, including the unique 4 digit number (for example, #1234) after your username. Mods will review the requests periodically!* 
 
-## Unsupported Configurations
-
-### Large Format Printers
-
-As print volumes for CoreXY printers grow, they become increasingly difficult to build, tune, operate, and maintain. Vorons are no exception to these fundamentals.
-
-Please be mindful of the size specifications listed for each Voron printer -- these have been chosen based on limitations of the components and structure unique to each model. We do not recommend exceeding the largest size.
-
-### Chamber Heating
-
-There are a few reasons Voron does not and will not support active chamber heating:
-
-* It is not necessary to use a chamber heater to achieve sufficient chamber temperatures for ABS or other common 3D printing materials.
-* Chamber heating is easy to screw up for someone that doesn't have direct experience with properly designing, controlling, and mounting heaters in high temperature environments.
-* If we spec something and people cheap out, there will be fires involved.
-* If we spec something and people don't cheap out but don't install it correctly, there will be fires involved.
-* Fire is bad.
-
-### Exotic Materials (PEEK, PEI, etc.)
-
-While Vorons are designed to be enclosed, chamber temperatures generally do not exceed 50-60C. This is perfect for printing ABS and most Nylon and PC blends, but it is insufficient for exotic materials such as PEEK and PEI which require 100-130C chamber temperatures. While the jump from 60C to 100C may not sound like a lot, most of the parts in your Voron printer will fail before 100C including: all of the 3D printed components, stepper motors, Gates belt, linear bearings, linear rail end caps, inductive probe, acrylic, and ABS panels, fans...
-
-Voron printers are currently not designed for exotic materials and there are no plans to modify the design to support this in the future. We recommend purchasing an industrial printer designed for this purpose if you intend to print with these materials.
-
-### Multimaterial
-
-Voron does not currently support dual extrusion, dual hot ends, tool changers, or other multimaterial solutions. The only exception to this is the bowden Y splitter attachment which is available for the Afterburner tool head. --please note that this attachment is still considered "beta" level, and as with all Y-splitter solutions, tuning the filament switch routine can be difficult.
-
-
 
 ---
 
