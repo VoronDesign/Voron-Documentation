@@ -18,6 +18,7 @@ Assuming no failed or reprinted parts and following the recommendations for acce
 |---|---|---|
 | V0 | 0.5 kg | 0.2 kg |
 | V1 | 1.2 kg | 0.3 kg |
+| Trident | 1.4 kg | 0.3 kg |
 | V2 | 1.6 kg | 0.3 kg |
 | Switchwire | 0.7 kg | 0.2 kg |
 | Legacy | 0.8 kg | 0.2 kg |
