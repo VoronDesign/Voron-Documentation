@@ -252,7 +252,7 @@ After both processes have been completed rerun the `Z_ENDSTOP_CALIBRATE` command
 
 ### Z Tilt (Trident)
 
-The Trident uses automated bed leveling using 3 motors.  There is a macro `Z_TILE_ADJUST` built into Klipper for that function. It is very similar to the QUAD_GANTRY_LEVEL used by V2, but supports 3 or more motors. Run the `Z_TILT_ADJUST` and it will probe each of the 3 points 3 times, average the readins, then make adjustments until the grantry is level.
+The Trident uses automated bed leveling using 3 motors.  There is a macro `Z_TILT_ADJUST` built into Klipper for that function. It is very similar to the QUAD_GANTRY_LEVEL used by V2, but supports 3 or more motors. Run the `Z_TILT_ADJUST` and it will probe each of the 3 points 3 times, average the readins, then make adjustments until the grantry is level.
 
 After that process has been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
 

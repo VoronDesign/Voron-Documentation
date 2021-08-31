@@ -10,11 +10,11 @@ This chart only includes what goes into the cable chains to the gantry.  It does
 
 ### Lengths
 
-| Chain | 250^3 | 300^3 | 350^3 |
+| Chain | 250x250x250 | 300x300x250 | 350x350x250 |
 |---|---|---|---|
 | X (Toolhead) | 190cm | 200cm | 210cm |
 | Y (Endstop Pod) | 160cm | 165cm | 170cm |
-| Z (Bed) | | | |
+| Z (Bed) | 100cm | 100cm | 100cm |
 
 ### Wire Counts
 
@@ -28,3 +28,7 @@ This chart only includes what goes into the cable chains to the gantry.  It does
 | X | Part Fan | 2 | |
 | Y | X Endstop | 2 | |
 | Y | Y Endstop | 2 | |
+| Z | Ground | | 1 |
+| Z | Bed Heater | | 2 |
+| Z | Bed Thermistor | 2 | |
+| Z | Z Endstop | 2 | |
