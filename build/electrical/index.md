@@ -23,7 +23,8 @@ When wiring your printer electronics, you will be working with line voltage wiri
 * AC wiring should be properly dimensioned. Use at least 18 AWG (0.75 mm²) for mains AC wiring, even better would be 16 AWG (1.25 mm²)
 * Buy a quality SSR (see the official sourcing guide), cheap clones may overheat and fail closed causing a heater thermal runaway. Add a 115-125°C thermal fuse to your bed heater as an additional safety measure
 * Dont run your bed above 110°C, this reduces the lifespan of the adhesive holding it onto the build plate
-* Connect AC ground to your bed and frame
+* If using an AC powered bed, be sure to ground the bed regardless of if the assembly manual specifies it or not.
+* Grounding the frame is recommended.
 
 ## Connectors
 
