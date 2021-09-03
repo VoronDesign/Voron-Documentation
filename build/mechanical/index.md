@@ -47,7 +47,7 @@ nav_order: 1
 ### Bed
 * Bed screws should always be left slightly loose during initial assembly and finished tightening while bed is heated after a few heating cycles.
 	* Trident and V2 should firmly tighten one screw, then slightly tighten 2 others. (V2 can leave one screw alone)
-	* V0 and Switchwire are leveled using the bed screws and have a different process.
+	* V0 is leveled using the bed screws and has a different process.
 
 ---
 
