@@ -12,9 +12,9 @@ This chart only includes what goes into the cable chains to the gantry.  It does
 
 | Chain | 250^3 | 300^3 | 350^3 |
 |---|---|---|---|
-| X | 270cm | 285cm | 300cm|
-| Y | 205cm | 215cm | 225cm |
-| Z | 150cm | 155cm | 160cm |
+| X (Toolhead) | 270cm | 285cm | 300cm|
+| Y (Endstop pod) | 205cm | 215cm | 225cm |
+| Z (AB Motors) | 150cm | 155cm | 160cm |
 
 ### Wire Counts
 

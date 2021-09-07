@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Mini12864 Klipper Guide
+parent: Electrical Wiring
 nav_order: 1
 ---
 
@@ -12,7 +13,7 @@ nav_order: 1
 2. The EXP1/EXP2 ports must be available and not connected to another expansion module
 
 ## Hardware
-*NOTE: The connector housing only need to be reversed if the MCU and display are different brands.  If you have both a BigTree Tech mini12864 and a BigTree Tech MCU (Or both a FYSETC mini12864 and an FYSETC F6/S6), skip steps 1 & 2*
+*NOTE: The two connector housings only need to be reversed if the MCU and display are different brands.  If you have both a BigTree Tech mini12864 and a BigTree Tech MCU (Or both a FYSETC mini12864 and an FYSETC F6/S6), skip steps 1 & 2*
 1. Pry off the two black connector housings from the back of the display
 2. Rotate connector housings 180 degrees and insert back onto pins
 3. *Fysetc Spider Only*: The Fysetc Spider requires certain components to be removed from the mini12864 display.  

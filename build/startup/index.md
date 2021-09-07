@@ -42,6 +42,14 @@ Run this command for each of the motors:
 * stepper_z1 
 * extruder
 
+### Trident
+* stepper_x
+* stepper_y
+* stepper_z
+* stepper_z1 
+* stepper_z2 
+* extruder
+
 ### V2
 * stepper_x
 * stepper_y
@@ -82,7 +90,7 @@ At this point everything is ready to home X and Y.
 2. Have a computer right next to the printer with the `RESTART` or `M112` command already in the terminal command line in OctoPrint.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
 3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and to recover would require reinstalling everything from scratch.
 
-Once there is a _tested_ process for stopping the printer in case of something going wrong, send a `G28 X` command.  This will home only the X axis.  The tool head should move to the right until it hits the X endstop.  If it moves to the left, reset before it hits the end.  Next, send a `G28 Y` command.  The tool head should move to the back of the printer until it hits the Y endstop.  As before, reset if it moves to the front.  In a CoreXY configuration, both motors have to move in order to get the toolhead to go in only and X or Y direction (think Etch A Sketch).
+Once there is a _tested_ process for stopping the printer in case of something going wrong, send a G28 X Y command. This will only home X and Y but not Z. The tool head should *move up slightly and then move to the right until it hits the X endstop, then move to the back of the printer until it hits the Y endstop. In a CoreXY configuration, both motors have to move in order to get the toolhead to go in only and X or Y direction (think Etch A Sketch). If the gantry moves downward first before moving to the right, you must reverse your z stepper directions in the config.
 
 If the toolhead does not move in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition (put a ! before the pin indentifier).  If the motors are going in directions that match the lower row, swap your X and Y (A and B) motor connectors on the MCU.
 
@@ -117,7 +125,7 @@ The Z endstop should be located at max Y position.  Home X and Y with `G28 X Y` 
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.  The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame.  If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose (best done hot).
 
-## Bed locating (V1, Legacy)
+## Bed locating (V1, Trident, Legacy)
 
 Before the 0,0 point and Z endstop locations are set, the physical locations of the Z endstop and print bed need to be finalized.
 
@@ -125,7 +133,7 @@ The Z endstop should be located at close to max X position.  Home X and Y with `
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
 
-## Define 0,0 Point (V0, V1, V2, Legacy)
+## Define 0,0 Point (V0, V1, Trident, V2, Legacy)
 
 The homing position is not at the typical location of 0,0 but at the maximum travel location.  The actual numbers vary by printer build size.
 
@@ -141,7 +149,7 @@ Depending on bed location, the positional parameters may need to be adjusted to 
 
 If X and Y offsets are less than 1mm and 0,0 is over the bed, nothing needs to be changed.
 
-If X and Y offsets are within 5mm or 0,0 is past the bed, the *postition_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* for both *[stepper_x]* and *[stepper_y]* as follows:
+If X and Y offsets are within 5mm or 0,0 is past the bed, the *postition_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* and *endstop_position* for both *[stepper_x]* and *[stepper_y]* as follows:
 
 * For X: New = Current - Get Position X (M114) Result
 * For Y: New = Current - Get Position Y (M114) Result
@@ -150,7 +158,7 @@ If X and Y offsets are within 5mm or 0,0 is past the bed, the *postition_max* va
 
 If anything is updated in the printer configuration file, save the file and restart Klipper using `FIRMWARE_RESTART`.
 
-## Z Endstop Pin Location (V1, V2, Legacy)
+## Z Endstop Pin Location (V1, Trident, V2, Legacy)
 
 * Start by re-running `G28 X Y` to home X and Y.
 * Using the software controls, move the nozzle until it is directly over the Z endstop switch.
@@ -159,7 +167,7 @@ If anything is updated in the printer configuration file, save the file and rest
 * Restart Klipper with `FIRMWARE_RESTART`. 
 * Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  
 
-## Inductive Probe Check (V1, V2, Switchwire, Legacy)
+## Inductive Probe Check (V1, Trident, V2, Switchwire, Legacy)
 
 ### Probe Testing
 
@@ -232,7 +240,7 @@ Once the screw is adjusted so that a small amount of friction is felt, run eithe
 
 After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
 
-### Tilt (V1, Legacy)
+### Bed Tilt (V1, Legacy)
 
 The V1 and Legacy use a combination of automated and manual bed leveling.  There are two macros built into Klipper to assist with the function.
 
@@ -242,13 +250,19 @@ Second run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions def
 
 After both processes have been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
 
+### Z Tilt (Trident)
+
+The Trident uses automated bed leveling using 3 motors.  There is a macro `Z_TILT_ADJUST` built into Klipper for that function. It is very similar to the QUAD_GANTRY_LEVEL used by V2, but supports 3 or more motors. Run the `Z_TILT_ADJUST` and it will probe each of the 3 points 3 times, average the readins, then make adjustments until the grantry is level.
+
+After that process has been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
+
 ### Quad Gantry Level (V2)
 
 Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL` (sometimes referred to in conversation as 'QGL').  It will probe each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
 
 If the process fails due to an “_out of bounds_” error, disable your stepper motors and slowly move your gantry or bed by hand until it is approximately flat. Re-home your printer (`G28`) and then rerun the sequence. You may have to run it more than once.  Make sure that the adjustment value for each stepper motor converges to 0. If it diverges, check to make sure you have your stepper motors wired to the correct stepper driver (check documentation).
 
-### Tilt / QGL With Heated Bed and Chamber (V1, V2)
+### Tilt / QGL With Heated Bed and Chamber (V1, Trident, V2)
 
 Run a `G28` command to home the printer since a `SAVE_CONFIG` restarts the printer.
 

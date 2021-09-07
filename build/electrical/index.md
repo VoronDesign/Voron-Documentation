@@ -20,10 +20,11 @@ When wiring your printer electronics, you will be working with line voltage wiri
 
 * Depending on your level of expertise it may be useful to practice crimping and soldering before wiring everything up. Bad crimps are a major source of problems later on and sometimes hard to identify!
 
-* AC wiring should be properly dimensioned. Use at least 18 AWG (1 mm²) for mains AC wiring, even better would be 16 AWG (1.5 mm²)
+* AC wiring should be properly dimensioned. Use at least 18 AWG (0.75 mm²) for mains AC wiring, even better would be 16 AWG (1.25 mm²)
 * Buy a quality SSR (see the official sourcing guide), cheap clones may overheat and fail closed causing a heater thermal runaway. Add a 115-125°C thermal fuse to your bed heater as an additional safety measure
 * Dont run your bed above 110°C, this reduces the lifespan of the adhesive holding it onto the build plate
-* Connect AC ground to your bed and frame
+* If using an AC powered bed, be sure to ground the bed regardless of if the assembly manual specifies it or not.
+* Grounding the frame is recommended.
 
 ## Connectors
 
@@ -78,7 +79,7 @@ Instead of multiple power supplies, the V0 uses a DC-DC converter to generate a 
 
 ![](./images/dcdc-converter-wiring.png)
 
-### Larger Printers (V1, V2, Switchwire)
+### Larger Printers (V1, Trident, V2, Switchwire)
 
 Please see the associated assembly guides for power supply configurations.
 
@@ -90,6 +91,7 @@ Please see the associated assembly guides for power supply configurations.
 The following are guides for each printer model for planning of wire counts and lengths.  As always, these are recommendations and adding allowances is always a good idea.
 
 - [V1 Gantry Wires](./V1_gantry_wires.md)
+- [Trident Gantry Wires](./Trident_gantry_wires.md)
 - [V2 Gantry Wires](./V2_gantry_wires.md)
 
 ### Gantry Routing
@@ -106,7 +108,7 @@ If the purchased steppers do not match the color order in the documentation, the
 
 **Important:** If the motors are found later on to be going the wrong direction, repinning the connectors is _not_ required.  The direction can be inverted in the software configuration later.
 
-### Inductive Probe Wiring (V1, V2, Switchwire)
+### Inductive Probe Wiring (V1, Trident, V2, Switchwire)
 
 The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1/Legacy) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
 
@@ -133,7 +135,7 @@ Wiring mechanical endstop switches for NC operation is easy as the BOM spec swit
 ![](./images/endstop_switch_wiring.png)
 
 
-### X/Y Endstop Wiring (V2)
+### X/Y Endstop Wiring (Trident, V2)
 
 The X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops.
 
@@ -150,6 +152,9 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V1 - SKR 1.3](./v1_skr13_wiring.md)
 * [V1 - SKR 1.4](./v1_skr14_wiring.md)
 
+### Trident
+* Coming Soon
+
 ### Voron 2
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)
 * [V2 - SKR 1.4](./v2_skr14_wiring.md)
@@ -162,7 +167,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 
 ## Additional Items
 
-### Mini12864 Display (V1, V2, Switchwire)
+### Mini12864 Display (V1, Trident, V2, Switchwire)
 
 If installing a Mini12864 display, please follow the [Mini12864 Klipper Guide](./mini12864_klipper_guide.md).
 
