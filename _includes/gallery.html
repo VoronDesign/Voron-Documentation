@@ -1,0 +1,12 @@
+
+{% assign parts = site.static_files %}
+{% for part in parts %}
+  {% if part.path contains include.folder %}
+<div style="width: 45%; display: inline-block">
+  <img src="{{ part.path | relative_url }}"/>
+  {% assign title = part.path | remove: include.folder | split: '/' | join: ' > ' | trim '.png' %}
+  {% assign size = title | size | minus: 4 %}
+  {{ title | slice: 0, size }}
+</div>
+  {% endif %}
+{% endfor %}
