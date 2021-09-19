@@ -25,11 +25,11 @@ This value equals ~2lb of tension on XY, which is on the lower end of the range 
 
 ![](./images/sound-spectrum-belt.jpg)
 
-## Bed Mesh
+## Bed Mesh (Legacy, Trident, 2.4)
 
 Generally when your Voron is first built, Bed Mesh is not necessary. However, it can still be used as an analysis tool to check assembly and see if there's anything obviously incorrect--just don't run SAVE_CONFIG at the end of your BED_MESH_CALIBRATE, and run BED_MESH_CLEAR after running bed mesh.
 
-The [bed_mesh] configuration options can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/b6a25393d354d5f5085b496ea040c751cfafa030/config/example-extras.cfg#L11) described in detail. A sample configuration for your Voron printer can be found [here](https://github.com/VoronDesign/Voron-1/blob/328113babcdb4934c461beb82b7f3b4dbeeb7eb5/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg#L464).
+The [bed_mesh] configuration options can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md) described in detail. A sample configuration for your Voron printer can be found [here](https://github.com/VoronDesign/Voron-1/blob/328113babcdb4934c461beb82b7f3b4dbeeb7eb5/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg#L464).
 
 ```python
 [bed_mesh]
@@ -70,6 +70,11 @@ relative_reference_index = ()(x points * y points) - 1) / 2
 You should check your mesh before printing to make sure it sits around 0 on the z axis:
 
 ![](./images/heightmap.png)
+
+## Bed Mesh (Switchwire)
+Due to the the use of a thinner prusa-style bed on the switchwire, it will generally require the use of a bed mesh. It should not generally be necessary to make any major adjustments to the mesh configuration included in the stock configuration files, however, if you do wish to fine tune it, detailed information can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md). Note that unlike other Voron models, the Switchwire uses the probe as a virtual endstop, and thus should NOT use `relative_reference_index`.
+
+To calibrate the mesh on your printer, it is important to check that your probe is correctly calibrated, using `PROBE_CALIBRATE`, and that your printer is homed (`G28`).  Next, run `BED_MESH_CALIBRATE` which will actually execute the probing process. Once this completes, you may wish to pause, and inspect the mesh using the visualizer functions built into fluidd/mainsail or the Bed Mesh Visualizer plugin for Octoprint.  Assuming the mesh looks plausible, you may now run `SAVE_CONFIG` to store the mesh permanently, and restart your printer.
 
 ## Input Shaper
 
