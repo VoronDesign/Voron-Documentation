@@ -293,7 +293,7 @@ Preparation
 * Move the nozzle to the center of the bed if it is not already.
 * Clear any stored bed meshes with `BED_MESH_CLEAR`
 
-Run `Z_ENDSTOP_CALIBRATE`
+Run `Z_ENDSTOP_CALIBRATE` (V0, Trident, V2) or `PROBE_CALIBRATE` (Switchwire)
 
 Slowly move the nozzle toward the bed by using `TESTZ Z=-1`
 Until the nozzle is relatively close to the bed, and then stepping down with `TESTZ Z=-0.1`
@@ -310,6 +310,9 @@ If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE`, `ACCEPT`, and th
 
 #### With LCD Screen
 The Z offset can be adjusted during a print using the Tune menu on the display, and the printer configuration can be updated with this new value. Remember that higher values for the position_endstop means that the nozzle will be closer to the bed.
+
+#### Mainsail and Fluidd
+The "babystepping" controls may be used to fine tune the z offset.
 
 #### Without LCD Screen
 If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mailsail and Fluidd, but requires some additional work for Octoprint.
@@ -329,10 +332,14 @@ gcode:
 2) Run ZUP or ZDOWN (or the associated `SET_GCODE_OFFSET` command) as needed in the terminal window until you have perfected your squish.
 3) Run `GET_POSITION` and look for "gcode base". *Note the Z value*.
 
-#### Saving your results
-Update your `position_endstop` in your config file:
+#### Saving your results  (V0,Trident, V2)
+All of the above methods are "transient".  The changes are lost as soon as your printer restarts.  Once you find an adjustment you are happy with, you may make it permanent, by applying it to the `position_endstop` in your config file:
+run the command `Z_OFFSET_APPLY_ENDSTOP` followed by `SAVE_CONFIG`.  This will restart your printer, with the adjustment permanently applied to the endstop position.
 
-New Position = Old Position - Tune Adjustment *(e.g. New Position = Old Position - (-0.050) = Old Position + 0.050)*
+#### Saving your results  (Switchwire)
+All of the above methods are "transient".  The changes are lost as soon as your printer restarts.  Once you find an adjustment you are happy with, you may make it permanent, by applying it to the probe's `z_offset` in your config file:
+run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will restart your printer, with the adjustment permanently applied to the probe offset.
+
 
 > ### Community References
 >
