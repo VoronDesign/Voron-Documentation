@@ -33,8 +33,8 @@ Set jumpers as shown:
 * Connect the controller fans to FAN2
 * Connect the hot end thermistor to TE0
 * Connect the bed thermistor to TB
-* Connect the X endstop to X+
-* Connect the Y endstop to Y+
+* Connect the X endstop to X-
+* Connect the Y endstop to Y-
 * Connect the probe to Z+
 * Connect the Z endstop to Z-
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
