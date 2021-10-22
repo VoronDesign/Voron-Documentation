@@ -18,6 +18,7 @@ Community-generated documentation for the many items that the official guide may
 | [Installing BetterBootLoader on a SKR](./kage-chan/installing_better_bootloader.md) | kage-chan |
 | [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
 | [I wish I had known](./simonthecat/I_wish_I_had_known.md) | simonthecat |
+| [Automating Klipper MCU Updates](./drachenkatze/automating_klipper_mcu_updates.md) | Drachenkatze |
 
 
 ### External Links
