@@ -12,8 +12,8 @@ boards.
 ## Terminology
 
 - `Host System`: The system where you run the host part of Klipper on, usually on a Raspberry Pi.
-- `MCU`: The board(s) where your microcontroller unit (`MCU`) runs on, usually your boards like SKR, Octopus or Spider,
-  but also the RPI itself if you are using SPI on your RPi, for example, for using the ADXL345 accelerometer.
+- `MCU`: The board(s) where your microcontroller unit (`MCU`) runs on, like the SKR, Octopus or Spider,
+  but also the RPI itself if you are using SPI for the ADXL345 accelerometer.
 
 ## Prerequisites
 
