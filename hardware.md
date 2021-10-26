@@ -20,7 +20,7 @@ The [Voron V0](https://vorondesign.com/voron0) is a traditional CoreXY design wi
 
 [V0 Preview](https://www.youtube.com/watch?v=KR9YlTzWzQQ)
 
-![](./images/Voron0.jpg)
+![V0.582 built by mrnatethegreat](./images/Voron0.jpg)
 
 ## Voron Trident
 
