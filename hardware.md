@@ -78,13 +78,17 @@ Afterburner is not specifically an extruder, but the collective name for the Vor
 
 ![](./images/afterburner.jpg)
 
+## Mini Afterburner
+
+Mini Afterburner refers to the V0.1 toolhead with a built-in direct-drive extruder based on the Pocketwatch from the original V0.
+
 ## Clockwork
 
 Clockwork is the name given to the original extruder system for Afterburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA17 motor.  The Afterburner term is commonly used to refer to this extruder.
 
 ## Pocketwatch
 
-Pocketwatch is the Afterburner Clockwork repackaged for the smaller size needed by the V0 printer. It has been integrated into the default mini-Afterburner toolhead on the V0.1, but is also available as a [standalone extruder](https://github.com/VoronDesign/Pocket-Watch/) for Bowden setups.
+Pocketwatch is the Afterburner Clockwork repackaged for the smaller size needed by the V0 printer. Pocketwatch is available as a [standalone extruder](https://github.com/VoronDesign/Pocket-Watch/) for Bowden setups.
 
 ## Galileo
 
