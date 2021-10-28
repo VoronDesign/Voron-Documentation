@@ -19,19 +19,18 @@ I used RTV106 because I found that it was specifically called out for by an indu
 If you use spring steel, don't forget that the magnet over the bed also has special adhesive, and that the usual China sources generally don't use adhesive that is rated for more than 70C. I know SubtleDesign uses 300SLE (which is rated for 148C) for their StayMag sheets so they are a known good source, there may be others depending on where you live.
 
 Tools Needed:
-- Paper towels
+- Lots of paper towels
 - Masking tape
-- Trash bag
-- Spatula
-- Mask (if available)
-- Fresh air
+- Nitrile/Latex gloves
+- Trash bag (to keep those used towels & gloves in!)
+- Spatula (I used a plastic spatula meants for wall plaster)
+- Face mask (the smell is surprisingly strong!)
 
 Process:
-- Outline the edges where the RTV shouldn't go with masking tape
-- Spread the RTV all over the plate like a cake
-- Go quickly but don't rush.
-- Lay down heater
-- Spread some extra RTV over the edges of the heater pad
-- Put somewhere with fresh air (you're going to need it)
-- Cover with a trash bag, add weight
-- Let cure for the time specified by the RTV
+- Outline the edges of the plate where the RTV shouldn't go with masking tape. Assume that anything not covered will get RTV on it.
+- Spread the RTV all over the plate like a cake with the spatula.
+- Go quickly but don't rush. You have about 5 minutes to complete the whole process.
+- Lay down heater, start on one edge and keep going slowly so you don't trap air bubbles. The RTV will squish out onto the masking tape.
+- Once you are happy with your application, remove the masking tape.
+- Add weight (use a cardboard cutout so you don't crush the silicone bulges in the heater).
+- Let cure for the time specified by the RTV (between 24-72 hours).

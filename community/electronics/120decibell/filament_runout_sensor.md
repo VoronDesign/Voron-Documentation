@@ -41,4 +41,4 @@ pause_delay: 0.5
 switch_pin: P1.26
 ```
 
-There is no current standard for the process for how to handle parking / changing filament / resuming printing, so that is not documented here.  Check in the [macros](./macros.md) page to see if anything has been contributed.
+There is no current standard for the process for how to handle parking / changing filament / resuming printing, so that is not documented here.  Check in the [macros](../../macros/index.md) page to see if anything has been contributed.

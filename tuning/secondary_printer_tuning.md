@@ -34,7 +34,7 @@ The [bed_mesh] configuration options can be found [on the Klipper website](https
 ```python
 [bed_mesh]
 speed: 300
-horizontal_move_z: 2
+horizontal_move_z: 10
 ##--------------------------------------------------------------------
 ##	Uncomment below for 250mm build
 #mesh_min: 40, 40
@@ -57,7 +57,7 @@ relative_reference_index: 12
 
 Generally a 5x5 grid is acceptable for even the largest Voron printer, but you can adjust the points to be greater or less than that. It is recommended to use an odd value for numbers of points in X and Y, such as 3x3, 5x5, or 7x7, so that there is always a probe point in the center of your bed. 
 
-As we use the probe as a relative and not absolute measurement device, it is critical that you have the relative_reference_index parameter. This value will change as you adjust your mesh size:
+As we use the probe as a relative and not absolute measurement device, **it is critical that you have the `relative_reference_index` parameter**. This value will change as you adjust your mesh size:
 
 relative_reference_index = ()(x points * y points) - 1) / 2
 
@@ -66,6 +66,10 @@ relative_reference_index = ()(x points * y points) - 1) / 2
 5x5 mesh = 12
 
 7x7 mesh = 24, etc
+
+You should check your mesh before printing to make sure it sits around 0 on the z axis:
+
+![](./images/heightmap.png)
 
 ## Input Shaper
 

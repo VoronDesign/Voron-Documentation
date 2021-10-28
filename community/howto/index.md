@@ -19,6 +19,7 @@ Community-generated documentation for the many items that the official guide may
 | [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
 | [I wish I had known](./simonthecat/I_wish_I_had_known.md) | simonthecat |
 | [Automating Klipper MCU Updates](./drachenkatze/automating_klipper_mcu_updates.md) | Drachenkatze |
+| [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md) | DoubleT |
 
 
 ### External Links

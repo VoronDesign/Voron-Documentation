@@ -31,7 +31,7 @@ nav_order: 1
 ### Belts
 
 * Make sure that both A/B or X/Z (Switchwire) belts are of equal length!  This helps validate belt paths and tension during assembly.
-* If using a belted Z (V2), make sure all Z belts are the same lenth. This helps with tensioning.
+* If using a belted Z (V2), make sure all Z belts are the same length. This helps with tensioning.
 * Do not cut belts flush once assembled, leave an inch or two for adjustments or reassembly
 
 ### Gantry Assembly
@@ -44,6 +44,11 @@ nav_order: 1
 * For V1, V2, and Legacy, gantry should be squared with equal belt tension. See the guide for setting gantry belt tension.
 * Measure both diagonals to ensure squareness
 
+### Bed
+* Bed screws should always be left slightly loose during initial assembly and finished tightening while bed is heated after a few heating cycles.
+	* Trident and V2 should firmly tighten one screw, then slightly tighten 2 others. (V2 can leave one screw alone)
+	* V0 is leveled using the bed screws and has a different process.
+
 ---
 
 # Build Manuals
@@ -52,24 +57,28 @@ nav_order: 1
 
 ### Current
 
-[V0 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON-0/Manuals/V0_Assembly_Manual.pdf)
-
-[V0 Pocketwatch Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON_Pocketwatch/Manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
-
-[V0 Dozuki Guides](https://voron.dozuki.com/c/Voron_0)
-
-## V1
-
-### Current
-
-[V1.8 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.8/Docs/Assembly_Manual_1.8.pdf)
+[V0.1 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.1/Manuals/Assembly_Manual_0.1.pdf)
 
 ### Historical
 
+* [V0 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON-0/Manuals/V0_Assembly_Manual.pdf)
+* [V0 Pocketwatch Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON_Pocketwatch/Manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
+* [V0 Dozuki Guides](https://voron.dozuki.com/c/Voron_0)
+
+## V1
+
+### Historical
+
+* [V1.8 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.8/Docs/Assembly_Manual_1.8.pdf)
 * [V1.6 Assembly Manual](https://github.com/VoronDesign/Voron-1/raw/Voron1.6/Manuals/VORON1.6_Manual.pdf)
 * [V1.6 Dozuki Guides](https://voron.dozuki.com/c/Voron_1.6)
 * [V1.5 Documentation](https://github.com/VoronDesign/Voron-1/tree/Voron1.5/Documentation)
 * [V1.0 Documentation](https://github.com/VoronDesign/Voron-1/tree/Voron1.0/Documentation)
+
+## Trident (Replaces V1)
+
+[Trident Assembly Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Assembly_Manual_Trident.pdf)
+[V1 Upgrade Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Frame_Upgrade_Trident.pdf)
 
 ## V2
 
