@@ -63,7 +63,7 @@ There are multiple options for getting this firmware file installed onto your Sp
 9. Power up the Spider
 10. you can confirm that the flash was successful, by running `ls /dev/serial/by-id`.  if the flash was successful, this should now show a klipper device, similar to:
  
-   ![](./images/spider_by-id.png)
+   ![](./images/stm32f446_id.png)
 
    (note: this test is not appicable if the firmware was compiled for UART, rather than USB)
    
@@ -88,11 +88,11 @@ There are multiple options for getting this firmware file installed onto your Sp
 8. after a few seconds, the Spider should be flashed
 9. you can confirm that the flash was successful, by running `ls /dev/serial/by-id`.  if the flash was successful, this should now show a klipper device, similar to:
  
-   ![](./images/spider_by-id.png)
+   ![](./images/stm32f446_id.png)
 
 (note: this test is not appicable if the firmware was compiled for UART, rather than USB)
 
 
-**Important:** If the Spider is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the SKR will automatically shut down.
+**Important:** If the Spider is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Spider will automatically shut down.
 
 ### Back to [Software Installation](./index.md#klipper-octoprint-configuration)
