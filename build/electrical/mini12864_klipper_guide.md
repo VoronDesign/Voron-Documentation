@@ -18,7 +18,7 @@ nav_order: 1
 2. Rotate connector housings 180 degrees and insert back onto pins
 3. *Fysetc Spider Only*: The Fysetc Spider requires certain components to be removed from the mini12864 display.  
    * From a Fysetc display, remove R1 & R4
-   * From a BTT display, remove R1 & R6
+   * From a BTT display, remove R1 & C6
 4. Connect EXP1 and EXP2 cables to the display and to your MCU board, being sure to match port numbers (EXP1 <> EXP1).  <br> *Note: The Fysetc Spider V1.0 has a silk screen error.  __for V1.0 only__, Connect EXP1 to EXP2, and EXP2 to EXP1*
 
 
