@@ -7,7 +7,6 @@ nav_order: 5
 
 # Initial Startup Checks
 
-_This guide is written as OctoPrint specific and will be updated over time to also acommodate Mainsail._
 
 Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
 
