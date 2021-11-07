@@ -4,7 +4,7 @@ title: "Voron V0 - SKR mini E3 V1.2 Wiring"
 nav_exclude: true
 ---
 
-# Voron V0 - SKR mini E3 V1.2 Wiring
+# Voron V0.0 - SKR mini E3 V1.2 Wiring
 
 ## MCU
 

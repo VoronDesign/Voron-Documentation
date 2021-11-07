@@ -47,7 +47,7 @@ _The hall effect sensors are sensitive to polarity so the magnets must be instal
 
 ## Verification
 
-* Mamually move the gantry away from the endstops and run `QUERY_ENDSTOPS`.  Both X and Y endstops should read as `open`.
+* Manually move the gantry away from the endstops and run `QUERY_ENDSTOPS`.  Both X and Y endstops should read as `open`.
 * If any of them say "triggered" instead of "open", double-check to make sure the gantry is away from the homeing corner and that both LEDs are off.
 * Manually move the gantry to close the X endstop and run `QUERY_ENDSTOPS`.  The X endstop should read `triggered` and the Y endstop should read `open`.
 * Manually move the gantry into the endstop corner and run `QUERY_ENDSTOPS`. Both X and Y endstops should read `triggered`.
