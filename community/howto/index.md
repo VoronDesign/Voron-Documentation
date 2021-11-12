@@ -20,6 +20,7 @@ Community-generated documentation for the many items that the official guide may
 | [I wish I had known](./simonthecat/I_wish_I_had_known.md) | simonthecat |
 | [Automating Klipper MCU Updates](./drachenkatze/automating_klipper_mcu_updates.md) | Drachenkatze |
 | [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md) | DoubleT |
+| [Multi-Colour Prints with a Single Nozzle](./mikhail/multi-colour-prints-with-a-single-nozzle.md) | mikhail |
 
 
 ### External Links
