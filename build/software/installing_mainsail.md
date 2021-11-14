@@ -13,7 +13,7 @@ The recommended way to install Mainsail on a Raspberry Pi is to use [MainsailOS]
 ## MainsailOS
 
 To install Mainsail on a Raspberry Pi:
-1. Download the latest mainsailOS  [Release](https://github.com/raymondh2/MainsailOS/releases)
+1. Download the latest mainsailOS  [Release](https://github.com/mainsail-crew/MainsailOS/releases)
 2. Unzip the .img file from your download.
 3. Use [BalenaEtcher](https://www.balena.io/etcher/) to write the .img on to an 8GB, or larger SDcard.  *THIS WILL DESTROY ALL DATA ON YOUR CARD*.
 
@@ -27,11 +27,13 @@ _note: It is a good idea to use a premium SDcard from a reputable manufacturer s
     * If your network automatically assigns DNS hostnames, it may simply show up as `mainsailos`
     * Failing these two options, you may need to check your router's DHCP server, and find out what IP address as been assigned to the device.
 
+ You can also use 	Raspberry Pi Imager  information for both  can be found [Mainsail docs](https://docs.mainsail.xyz/setup/mainsail-os)
+
 ### Next: [Firmware Flashing](./index.md#firmware-flashing)
 
 ## Mainsail Manual Installation
 
-The Mainsail manual installation process is documented on the [Mainsail wiki](https://meteyou.github.io/mainsail/setup/)
+The Mainsail manual installation process is documented on the [Mainsail docs](https://docs.mainsail.xyz/setup/manual-setup)
 
 ---
 ### Back: [Software Installation](./index.md)
