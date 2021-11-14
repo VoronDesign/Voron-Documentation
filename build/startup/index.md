@@ -7,7 +7,6 @@ nav_order: 5
 
 # Initial Startup Checks
 
-_This guide is written as OctoPrint specific and will be updated over time to also acommodate Mainsail._
 
 Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
 
@@ -90,9 +89,9 @@ At this point everything is ready to home X and Y.
 2. Have a computer right next to the printer with the `RESTART` or `M112` command already in the terminal command line in OctoPrint.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
 3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and to recover would require reinstalling everything from scratch.
 
-Once there is a _tested_ process for stopping the printer in case of something going wrong, send a G28 X Y command. This will only home X and Y but not Z. The tool head should *move up slightly and then move to the right until it hits the X endstop, then move to the back of the printer until it hits the Y endstop. In a CoreXY configuration, both motors have to move in order to get the toolhead to go in only and X or Y direction (think Etch A Sketch). If the gantry moves downward first before moving to the right, you must reverse your z stepper directions in the config.
+Once there is a _tested_ process for stopping the printer in case of something going wrong,  you can test X and Y movement.  *note: you will need to test X AND Y before you can correctly determine what adjustments are needed.*  First, send a `G28 X` command. This will only home X: The tool head should *move up slightly and then move to the right until it hits the X endstop*. If it moves any other direction, abort, take note, but still move on to testing Y. Next, test Y: run `G28 Y`.  The toolhead should move to the back of the printer until it hits the Y endstop. In a CoreXY configuration, both motors have to move in order to get the toolhead to go in only and X or Y direction (think Etch A Sketch). If the gantry moves downward first before moving to the right, you must reverse your z stepper directions in the config.
 
-If the toolhead does not move in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition (put a ! before the pin indentifier).  If the motors are going in directions that match the lower row, swap your X and Y (A and B) motor connectors on the MCU.
+If either axis does not move the toolhead in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition by adding a `!` to the pin name. For example, `dir_pin: PB2` would become `dir_pin: !PB2`.  (if the entry already has a `!`, remove it instead).   If the motors are going in directions that match the lower row of the chart, physically swap your X and Y (A and B) motor connectors on the MCU.
 
 * [stepper x] = Motor B
 * [stepper y] = Motor A
@@ -121,7 +120,7 @@ If the toolhead does not move in the expected or correct direction, refer to the
 
 The print bed location of the V2 is much more adjustable than on any of the other models.  Before the 0,0 point and Z endstop locations are set, the physical locations of the Z endstop and print bed need to be finalized.
 
-The Z endstop should be located at max Y position.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
+The Z endstop should be located to be in line with the nozzle, when the toolhead is at max Y position.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.  The base plate should be measured on each side to ensure it is centered and level / even with the front edge of the frame.  If in that process the extrusions the base is mounted on have to be moved, double-check the Z endstop to confirm it can still be reached. When tightening the mounting screws for the bed, a good practice is to have one screw tight, 2 firm, and the last one loose (best done hot).
 
@@ -293,7 +292,7 @@ Preparation
 * Move the nozzle to the center of the bed if it is not already.
 * Clear any stored bed meshes with `BED_MESH_CLEAR`
 
-Run `Z_ENDSTOP_CALIBRATE`
+Run `Z_ENDSTOP_CALIBRATE` (V0, Trident, V2) or `PROBE_CALIBRATE` (Switchwire)
 
 Slowly move the nozzle toward the bed by using `TESTZ Z=-1`
 Until the nozzle is relatively close to the bed, and then stepping down with `TESTZ Z=-0.1`
@@ -310,6 +309,9 @@ If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE`, `ACCEPT`, and th
 
 #### With LCD Screen
 The Z offset can be adjusted during a print using the Tune menu on the display, and the printer configuration can be updated with this new value. Remember that higher values for the position_endstop means that the nozzle will be closer to the bed.
+
+#### Mainsail and Fluidd
+The "babystepping" controls may be used to fine tune the z offset.
 
 #### Without LCD Screen
 If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mailsail and Fluidd, but requires some additional work for Octoprint.
@@ -329,10 +331,14 @@ gcode:
 2) Run ZUP or ZDOWN (or the associated `SET_GCODE_OFFSET` command) as needed in the terminal window until you have perfected your squish.
 3) Run `GET_POSITION` and look for "gcode base". *Note the Z value*.
 
-#### Saving your results
-Update your `position_endstop` in your config file:
+#### Saving your results  (V0,Trident, V2)
+All of the above methods are "transient".  The changes are lost as soon as your printer restarts.  Once you find an adjustment you are happy with, you may make it permanent, by applying it to the `position_endstop` in your config file:
+run the command `Z_OFFSET_APPLY_ENDSTOP` followed by `SAVE_CONFIG`.  This will restart your printer, with the adjustment permanently applied to the endstop position.
 
-New Position = Old Position - Tune Adjustment *(e.g. New Position = Old Position - (-0.050) = Old Position + 0.050)*
+#### Saving your results  (Switchwire)
+All of the above methods are "transient".  The changes are lost as soon as your printer restarts.  Once you find an adjustment you are happy with, you may make it permanent, by applying it to the probe's `z_offset` in your config file:
+run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will restart your printer, with the adjustment permanently applied to the probe offset.
+
 
 > ### Community References
 >
