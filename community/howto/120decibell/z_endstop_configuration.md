@@ -72,4 +72,6 @@ If desired, the position\_endstop can be manually changed in the Klipper printer
 
 The initial Z offset can also be set using gcode or be adjusted using the front panel, typically during the skirt passes, to fine tune the first layer.
 
-**_Making either the position\_endstop value or Z offset value larger / more positive will move the nozzle closer to the print surface._**
+**_Making the position\_endstop value larger / more positive will move the nozzle closer to the print surface._**
+
+**_Making the Z offset value larger / more positive will move the nozzle further from the print surface._**

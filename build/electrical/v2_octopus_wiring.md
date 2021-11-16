@@ -44,8 +44,6 @@ Set jumpers as shown:
 ![](./images/v2_octopus_wiring.jpg)
  
 ## mini 12864 Display
-
-* *BTT mini12864 only* remove components R1, and C6
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
 ## Other
