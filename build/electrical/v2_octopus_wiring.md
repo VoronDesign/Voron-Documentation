@@ -10,7 +10,7 @@ nav_exclude: true
 
 Set jumpers as shown:
 
-![](./images/v2-octopus-initial-preparation.jpg)
+![](./images/v2-octopus-initial-preparation.png)
 
 * Green – Add Jumper
 * Red – Remove Jumper 
@@ -22,29 +22,32 @@ Set jumpers as shown:
 
 ## Wiring
 
-* Connect 24V Power from the PSU to PWR, BED_POWER and MOTOR_POWER 
+* Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER 
 * Connect the A Motor (gantry left) to MOTOR0
 * Connect the B Motor (gantry right) to MOTOR1
 * Connect the Z, Z1, Z2, and Z3 Motors to MOTOR2_1, MOTOR3, MOTOR4 and MOTOR5
 * Connect the extruder motor to MOTOR6
-* Connect the hot end heater to HE0 OUT
-* Connect the bed SSR (DC Control Side) to BED_OUT
-* Connect the part cooling fan to CNC_FAN0
-* Connect the hot end fan to CNC_FAN1
-* Connect the controller fans to CNC_FAN2
-* Connect the chamber exhaust fan to  CNC_FAN3
+* Connect the hot end heater to HE0
+* Connect the bed SSR (DC Control Side) to HE1
+* Connect the part cooling fan to FAN0
+* Connect the hot end fan to FAN1
+* Connect the controller fans to FAN2
+* Connect the chamber exhaust fan to  FAN3
 * Connect the hot end thermistor to TE0
 * Connect the bed thermistor to TB
-* Connect the X endstop to X Endstop
-* Connect the Y endstop to Y Endstop
-* Connect the Z endstop to Z Endstop
-* Connect the probe to Probe
+* Connect the X endstop to STOP_0
+* Connect the Y endstop to STOP_1
+* Connect the Z endstop to STOP_2
+* Connect the signal wire on the probe to STOP_7
+* Connect the V+ and 0V wires on the probe to PROBE
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
-![](./images/v2_octopus_wiring.jpg)
+![](./images/v2_octopus_wiring.png)
  
 ## mini 12864 Display
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
 ## Other
-* full pinout, and other BigTreeTech documentation is located at [here](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-V1.0/tree/master/Octopus%20works%20on%20Voron%20v2.4/Firmware/Klipper) 
+* full pinout, and other BigTreeTech documentation is located at [here](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-V1.0) 
+* Octopus v1.1 pinout is located [here](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-V1.0/blob/master/Hardware/BIGTREETECH%20Octopus%20-%20PIN.pdf)
+* Octopus Pro v1.0 pinout is located [here](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro/blob/master/Hardware/BIGTREETECH%20Octopus%20Pro%20-%20PIN.pdf)
