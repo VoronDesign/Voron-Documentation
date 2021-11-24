@@ -153,7 +153,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V1 - SKR 1.4](./v1_skr14_wiring.md)
 
 ### Trident
-* Coming Soon
+* [Trident - BigTreeTech Octopus](./v2_octopus_wiring.md)
 
 ### Voron 2
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)

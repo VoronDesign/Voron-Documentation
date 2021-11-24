@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Voron V2 - Octopus (Pro) Wiring"
+title: "Voron V2 / Trident - Octopus (Pro) Wiring"
 nav_exclude: true
 ---
 
-# Voron V2 - BigTreeTech Octopus Wiring
+# Voron V2 / Trident - BigTreeTech Octopus Wiring
 
 ## Initial Preparation 
 
@@ -25,7 +25,10 @@ Set jumpers as shown:
 * Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER 
 * Connect the A Motor (gantry left) to MOTOR0
 * Connect the B Motor (gantry right) to MOTOR1
-* Connect the Z, Z1, Z2, and Z3 Motors to MOTOR2_1, MOTOR3, MOTOR4 and MOTOR5
+* Connect the Z motor to MOTOR2_1 
+* Connect the Z1 motor to MOTOR3
+* Connect the Z2 motor to MOTOR4
+* Connect the Z3 motor to MOTOR5 (v2 only)
 * Connect the extruder motor to MOTOR6
 * Connect the hot end heater to HE0
 * Connect the bed SSR (DC Control Side) to HE1
