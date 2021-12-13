@@ -77,6 +77,6 @@ Input Shaper is a Klipper-specific software technique for reducing ringing (also
 
 ## Print Tuning
 
-Here is Ellis' print tuning guide, covering print/printer tuning and troubleshooting, slicer tricks, macro tricks, and more:
+Andrew Ellis' [Print Tuning Guide](https://github.com/AndrewEllis93/Print-Tuning-Guide), covering print/printer tuning and troubleshooting, slicer tricks, macro tricks, and more.
 
-https://github.com/AndrewEllis93/Print-Tuning-Guide
+
