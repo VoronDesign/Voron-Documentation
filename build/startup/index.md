@@ -58,7 +58,7 @@ Run this command for each of the motors:
 * stepper_z3   
 * extruder
 
-This command will move each motor UP first and then DOWN 3 times, one second apart.  If the steppers do not move or make strange noises, check the wiring.  Be sure to watch the Z motion to ensure the direction is correct.  If the Z motor(s) do not move in the correct directions, invert the DIR pin on the printer configuration.
+This command will move each motor in the *POSITIVE* direction first and then in the *NEGATIVE* direction 3 times, one second apart.  If the steppers do not move or make strange noises, check the wiring.  Be sure to watch the Z motion to ensure the direction is correct.  If the Z motor(s) do not move in the correct directions, invert the DIR pin on the printer configuration.
 
 #### V2 motor positions (Others may vary)
 
