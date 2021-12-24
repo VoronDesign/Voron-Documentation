@@ -10,7 +10,7 @@ nav_exclude: true
 
 Set jumpers as shown:
 
-![](./images/v2-monster8-initial-preparation.png)
+![](./images/v2-monster8-initial-preparation.jpg)
 
 * Green – Add Jumper
 * Red – Remove Jumper
