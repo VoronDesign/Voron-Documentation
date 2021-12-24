@@ -54,3 +54,5 @@ Set jumpers as shown:
 ## Other
 * full pinout, and other MKS Makerbase documentation is located [here](https://github.com/makerbase-mks/MKS-Monster8/)
 * Monster8 v1.0_003 pinout is located [here](https://github.com/makerbase-mks/MKS-Monster8/blob/main/hardware/MKS%20Monster8%20V1.0_003/MKS%20Monster8%20V1.0_003%20PIN.pdf)
+* DIN rail mount for Monster8 is located [here](https://github.com/makerbase-mks/MKS-Monster8/tree/main/STL/MKS%20Monster8%20fixed%20bracket)
+* Display bracket for MKS mini12864 V3.0 is located [here](https://github.com/makerbase-mks/MKS-Monster8/tree/main/STL/MKS%20Mini12864%20V3.0%20STL)
