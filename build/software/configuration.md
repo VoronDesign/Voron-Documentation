@@ -22,23 +22,20 @@ Download the respective Voron base configuration file from the following links:
 * [SW Einsy Rambo](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg)
 * [Legacy SKR 1.3](https://raw.githubusercontent.com/VoronDesign/Voron-Legacy/main/Firmware/skr_v1.3_config.cfg)
 
-Using a secure file transfer program (WinSCP, Cyberduck, Notepad++, NppFT, BBEdit, scp), transfer the downloaded file to your Raspberry Pi into the folder `~/klipper/config`.
+Rename the downloaded file to `printer.cfg`
 
-**Mainsail & Fluidd**: Copy the downloaded file into place with
-```
-cp ~/klipper/config/FILENAME_OF_VORON_CONFIG.cfg ~/klipper_config/printer.cfg
-```
+**Mainsail**: Upload the file via Mainsail's interface.  Go to the "Machine" tab, and under "Config Files", press the "Upload File" button
 
-**Octoprint**: Copy the downloaded file into place with
-```
-cp ~/klipper/config/FILENAME_OF_VORON_CONFIG.cfg ~/printer.cfg
-```
+**Fluidd**: Upload the file via Fluidd's interface.  Go to the "Configuration" Tab, and under "Configuration Files", press "+"->"Upload"
+
+**Octoprint**: Use a secure file transfer program (WinSCP, Cyberduck, Notepad++, NppFT, BBEdit, scp), to transfer the file to your Raspberry Pi, placing it in the folder `/home/pi`.
+
 
 ## Editing printer.cfg
 **Note:** There are many ways of editing the config file that vary by personal preference.  Mainsail & Fluidd both offer built in printer.cfg editors. Using Nano editor through SSH is simple but not always user friendly.  Notepad++ with the NppFTP plugin (Windows) or bbEdit (macOS) are user friendlier alternatives.  
 
 * Mainsail:  Click "Settings", "Machine", then on the "printer.cfg"
-* Fluidd: Click "Printer", then "printer.cfg", and choose "edit" from the menu that appears
+* Fluidd: Click "Configuration", then "printer.cfg", and choose "edit" from the menu that appears
 
 * [Notepad++ Information](./notepadplusplus.md)
 * [bbEdit Information](./bbedit.md)
