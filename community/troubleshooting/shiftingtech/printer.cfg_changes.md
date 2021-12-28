@@ -27,4 +27,4 @@ Recv: // version of the firmware on the micro-controller (fix by
 Recv: // recompiling and flashing the firmware).
 ```
 
-Remember, klipper is split into two halves.  the main software, which runs on your Pi, and the MCU firmware, which runs on the SKR or other printer control board.  These sorts of errors typically mean that you have updated the main software, but not the MCU Firmware.  You should follow the flashing process for your specific MCU board, found in the [build docs](../../../official/build/software)
+Remember, klipper is split into two halves.  the main software, which runs on your Pi, and the MCU firmware, which runs on the SKR or other printer control board.  These sorts of errors typically mean that you have updated the main software, but not the MCU Firmware.  You should follow the flashing process for your specific MCU board, found in the [build docs](../../../build/software/#firmware-flashing)
