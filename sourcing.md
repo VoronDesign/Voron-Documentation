@@ -106,7 +106,7 @@ _It might be possible to build, troubleshoot, and tune a Voron without this list
 
 * Set of metric hex wrenches ("keys") from at least 1.5mm - 5mm. (Wiha, Wera, or Bondhus are preferred)
 * Standard screwdrivers
-* Wire strippers from 16 gauge (1.25mm) to 26 gauge (0.14mm)
+* Wire strippers from 16 gauge (1.25mm) to 26 gauge (0.405mm)
 * Diagonal wire cutters, small
 * Soldering iron (solder helpful)
 * Multimeter
