@@ -23,8 +23,8 @@ Set jumpers as shown:
 ## Wiring
 
 * Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER 
-* Connect the A Motor (gantry left) to MOTOR0
-* Connect the B Motor (gantry right) to MOTOR1
+* Connect the B Motor (gantry left) to MOTOR0
+* Connect the A Motor (gantry right) to MOTOR1
 * Connect the Z motor to MOTOR2_1 
 * Connect the Z1 motor to MOTOR3
 * Connect the Z2 motor to MOTOR4
