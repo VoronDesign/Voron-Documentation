@@ -17,9 +17,7 @@ The Sourcing Guide is made available at the same time as the customized BOM.  It
 
 ### Material
 
-Voron printers are designed to print ABS and other filaments that require an enclosure. Depending on the model, size of printer, and materials used for the enclosure, chamber temperatures may exceed 60°C. As a result, Voron recommends printing the structural components for your printer out of a material that has a heat deflection temperature of at least 90°C. While there are more exotic materials that meet this criteria, ABS and ABS+ are the most common and cost effective options. PC-ABS is not recommended for anything outside of the toolhead due to the overly-high stiffness.
-
-Using a resin printer for components is not recommended. Most hobby-grade resins have issues with long-term dimensional stability as they [creep](https://en.wikipedia.org/wiki/Creep_(deformation)) over time. There are commercial resins that may work but there is no definitive list at this time.
+Please see the [materials guide](./materials.md) for more detailed information.
 
 ### Print It Forward (PIF)
 
