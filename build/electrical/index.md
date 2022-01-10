@@ -36,6 +36,10 @@ When assembling Microfit connectors, the male pins are inserted into the female 
 
 ![](./images/microfit-housings-pins.jpg)
 
+For larger wires, such as heater cartridge wiring, heatshrink tubing is helpful.
+
+![](./images/microfit-heatshrink-ends.jpg)
+
 ## Cables
 
 Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
