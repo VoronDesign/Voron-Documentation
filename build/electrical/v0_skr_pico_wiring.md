@@ -11,7 +11,7 @@ nav_exclude: true
 * Plug in stepper motors for X, Y, Z, and E in positions X, Y, Z1, and E
 * Plug Hot End thermistor to thermistor TH0
 * Plug Hot End heater in to HE
-* Plug Hot End Fan in to FAN0
+* Plug Hot End Fan in to FAN2
 * Plug Part Cooling Fan in to FAN1
 * Plug Bed Thermistor in to THB
 * Connect The DC bed to HB
