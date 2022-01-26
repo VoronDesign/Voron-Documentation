@@ -21,7 +21,7 @@ nav_exclude: true
 * Wire 24V and -V from DC power supply to POWER
 * Connect USB Cable to your SKR Pico, but do not connect it yet to your Raspberry Pi
 
-TODO wiring picture
+![](.images/../images/v0_pico_wiring.png)
 
 
 ## SKR Pico Pinout
