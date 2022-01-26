@@ -31,14 +31,14 @@ _note: It is a good idea to use a premium SDcard from a reputable manufacturer s
  
 ### Software Update
  
-As Soon as you have MainsailOS loaded, it is highly recommended that you make sure all the software is up to date.  (at times, the downloaded image file
+As soon as you have MainsailOS loaded, it is highly recommended that you make sure all the software is up to date.  (at times, the downloaded image file
 contains fairly out of date software)
 
-1)Access Mainsail through a webbrowser, using whatever IP or hostname you found above.  
+1. Access Mainsail through a webbrowser, using whatever IP or hostname you found above.  
 (Note, you will see some errors regarding the non-configured state of your printer.  these can be ignored for now)
-2)Click the "Machine" button on the left side of the screen
-3)in the "Update Manager" panel, click the refresh button
-4)Click the "Update" button for each component that needs updating.
+2. Click the "Machine" button on the left side of the screen
+3. In the "Update Manager" panel, click the refresh button
+4. Click the "Update" button for each component that needs updating.
 
 ### Next: [Firmware Flashing](./index.md#firmware-flashing)
 
