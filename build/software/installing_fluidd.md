@@ -31,15 +31,15 @@ _note: It is a good idea to use a premium SDcard from a reputable manufacturer s
 
 ### Software Update
  
-As Soon as you have Fluiddpi loaded, it is highly recommended that you make sure all the software is up to date.  (at times, the downloaded image file
+As soon as you have Fluiddpi loaded, it is highly recommended that you make sure all the software is up to date.  (at times, the downloaded image file
 contains fairly out of date software)
 
-1)Access Fluidd through a webbrowser, using whatever IP or hostname you found above.  
+1. Access Fluidd through a webbrowser, using whatever IP or hostname you found above.  
 (Note, you will see some errors regarding the non-configured state of your printer.  these can be ignored for now)
-2)Click the "Settings" button on the left side of the screen
-3)Scroll down to the  "Software Updates" section
-4)Click the "check for updates" button
-5)click "update" for each component that needs it.
+2. Click the "Settings" button on the left side of the screen
+3. Scroll down to the  "Software Updates" section
+4. Click the "check for updates" button
+5. Click "update" for each component that needs it.
 
 ### Next: [Firmware Flashing](./index.md#firmware-flashing)
 
