@@ -45,6 +45,9 @@ Set jumpers as shown:
 * Connect the V+ and 0V wires on the probe to PROBE
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
+### Stepper Driver Note
+Although MOTOR2_2 is skipped when connecting the motors, the TMC2209 stepper drivers must be connected side-by-side. Leave the end stepper driver slot open nearest the USB C if using only seven (7) stepper drivers. Check stepper driver placement against the Octopus Wiring figure below.
+
 ![](./images/v2_octopus_wiring.png)
  
 ## mini 12864 Display
