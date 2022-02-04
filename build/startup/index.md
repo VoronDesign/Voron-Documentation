@@ -7,6 +7,9 @@ nav_order: 5
 
 # Initial Startup Checks
 
+This section provides a list of steps to help confirm the pin settings in the Klipper printer.cfg file. 
+During this guide, it may be necessary to make changes to the Klipper config file. Be sure to issue a `RESTART` command after every change to the config file to ensure that the change takes effect (type "restart" in the Octoprint or Mainsail terminal and then click "Send"). It's also a good idea to issue a `STATUS` command after every `RESTART` to verify that the config file is successfully loaded.
+
 
 Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
 
@@ -19,6 +22,22 @@ Any time movements need to be made, those will happen in the 'Control' tab / sec
 ![](./images/Octoprint_Controls.png)
 
 ![](./images/mainsail_controls.png)
+
+## Verify Temperature 
+
+Start by verifying that temperatures are being properly reported. Navigate to the Octoprint/Mainsail temperature graph.
+
+![](./images/mainsail_Temp_graph.png)
+
+![](./images/octoprint_Temp_graph.png)
+
+Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the "sensor_type" and "sensor_pin" settings for the nozzle and/or bed.
+
+## Verify heaters
+
+Navigate to the OctoprintMainsail temperature graph and type in 50 followed by enter in the "Tool" temperature target feild. The extruder temperature in the graph should start to increase (within about 30 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. If the temperature does not increase then verify the "heater_pin" setting in the config.
+
+perform the above test again with the bed.
 
 ## Stepper Motor Check
 
