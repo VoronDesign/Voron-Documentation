@@ -27,9 +27,9 @@ Any time movements need to be made, those will happen in the 'Control' tab / sec
 
 Start by verifying that temperatures are being properly reported. Navigate to the Octoprint/Mainsail temperature graph.
 
-![](./images/mainsail_Temp_graph.png)
+![](./images/mainsail_temp_graph.png)
 
-![](./images/octoprint_Temp_graph.png)
+![](./images/octoprint_temp_graph.png)
 
 Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the "sensor_type" and "sensor_pin" settings for the nozzle and/or bed.
 
