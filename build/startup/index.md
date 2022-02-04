@@ -31,7 +31,7 @@ Start by verifying that temperatures are being properly reported. Navigate to th
 
 ![](./images/octoprint_temp_graph.png)
 
-Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the "sensor_type" and "sensor_pin" settings for the nozzle and/or bed.
+Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the "sensor_type" and "sensor_pin" settings for the extruder and/or bed.
 
 ## Verify heaters
 
