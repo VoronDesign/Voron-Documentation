@@ -45,8 +45,44 @@ to power your pi from some other source, such as a regular USB power supply
 * The `make` command, when completed, creates a firmware file **klipper.bin** that is store in the folder `/home/pi/klipper/out`.
 
 There are multiple options for getting this firmware file installed onto your Octopus.
+
 ### Firmware Installation
-#### Option 1: DFU Firmware Install
+
+**Important**: Please write down these steps or bookmark this page - you might need to repeat the following steps if you update Klipper.
+
+#### Option 1: SDcard Firmware Install
+
+* Works regardless of USB vs UART
+* Requires a microSD card
+
+1. Execute these commands via SSH to rename the firmware file to `firmware.bin`:
+   ```
+   cd ~/klipper
+   mv out/klipper.bin out/firmware.bin
+   ```
+
+   **Important:** If the file is not renamed, the bootloader will not be updated properly. The bootloader looks for a file named `firmware.bin`.
+
+2. Use a tool such as cyberduck or winscp to copy the firmware.bin file off your pi, onto your computer.
+
+   ![](./images/cyberduck_example.png)
+
+3. Ensure that your sdcard is formatted FAT32  (NOT EXFAT!) 
+4. copy **firmware.bin** onto the microSD card
+5. power off the Octopus
+6. insert the microSD card
+7. power on the Octopus
+8. after a few seconds, the Octopus should be flashed.
+9. you can confirm that the flash was successful, by running `ls /dev/serial/by-id`.  if the flash was successful, this should now show a klipper device, similar to:
+ 
+   ![](./images/stm32f446_id.png)
+
+(note: this test is not appicable if the firmware was compiled for UART, rather than USB)
+
+
+**Important:** If the Octopus is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Octopus will automatically shut down.
+
+#### Option 2: DFU Firmware Install
 
 * Requires a USB connection
 * Requires the installation of an extra jumper on the Octopus
@@ -56,43 +92,17 @@ There are multiple options for getting this firmware file installed onto your Oc
 2. Install a jumper between BOOT0 and 3.3V
 3. Connect Octopus & Pi via USB-C
 4. Power on Octopus
-5. from your ssh session, run `lsusb`. and find the ID of the dfu device.
-6. run `make flash FLASH_DEVICE=1234:5678` replace 1234:5678 with the ID from the previous step
-7. power off the Octopus
-8. remove the jumper from BOOT0 and 3.3V
-9. Power on the Octopus
-10. You can confirm that the flash was successful, by running `ls /dev/serial/by-id`.  if the flash was successful, this should now show a klipper device, similar to:
+5. from your ssh session, run `lsusb`. and find the ID of the dfu device. The device is typically named `STM Device in DFU mode`.
+6. If you do not see a DFU device in the list, press the reset button next to the USB connector and run `lsusb` again.
+7. run `make flash FLASH_DEVICE=1234:5678` replace 1234:5678 with the ID from the previous step. Note that the ID is in hexadecimal, it only contains the numbers `0-9` and letters `A-F`.
+8. power off the Octopus
+9. remove the jumper from BOOT0 and 3.3V
+10. Power on the Octopus
+11. You can confirm that the flash was successful, by running `ls /dev/serial/by-id`.  if the flash was successful, this should now show a klipper device, similar to:
  
    ![](./images/stm32f446_id.png)
 
    (note: this test is not appicable if the firmware was compiled for UART, rather than USB)
    
-#### Option 2: SDcard Firmware Install
-
-* Works regardless of USB vs UART
-* Requires a microSD card
-
-1. Use a tool such as cyberduck or winscp to copy the klipper.bin file off your pi, onto your computer.
-
-   ![](./images/cyberduck_example.png)
-
-2. Rename **klipper.bin** to **firmware.bin**
-
-**Important:** If the file is not renamed, the bootloader will not be updated properly.
-
-3. Ensure that your sdcard is formatted FAT32  (NOT EXFAT!) 
-4. copy **firmware.bin** onto the microSD card
-5. power off the Octopus
-6. insert the microSD card
-7. power on the Octopus
-8. after a few seconds, the Octopus should be flashed
-9. you can confirm that the flash was successful, by running `ls /dev/serial/by-id`.  if the flash was successful, this should now show a klipper device, similar to:
- 
-   ![](./images/stm32f446_id.png)
-
-(note: this test is not appicable if the firmware was compiled for UART, rather than USB)
-
-
-**Important:** If the Octopus is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Octopus will automatically shut down.
 
 ### Back to [Software Installation](./index.md#klipper-octoprint-configuration)
