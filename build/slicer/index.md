@@ -30,7 +30,7 @@ Some slicers (e.g. PrusaSlicer) do not recognize the Klipper PRINT\_START macro 
 
 ## Slicer Profile Creation
 
-Both Cura and SuperSlicer (in current versions) have built-in profiles for V2 printers which can be setup usin each software's normal processes.  The V1 is similar enough to V2 that the profile can be re-used.
+Both Cura and SuperSlicer (in current versions) have built-in profiles for V2 printers which can be setup using each software's normal processes.  The V1 is similar enough to V2 that the profile can be re-used.
 
 Some pre-built slicer profiles are available from Voron.
 
