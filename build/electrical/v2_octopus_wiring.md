@@ -49,7 +49,7 @@ Set jumpers as shown:
 
 ## SSR Wiring
 
-* Wire colors will vary depening on your location
+* Wire colors will vary depending on your location.
 
 
 ![](./images/btt-octopus-ssr-wiring.png)
