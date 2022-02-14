@@ -53,8 +53,7 @@ Set jumpers as shown:
 
 
 ![](./images/btt-octopus-ssr-wiring.png)
-
-
+<br>
 
 ## mini 12864 Display
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
