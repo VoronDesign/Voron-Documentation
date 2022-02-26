@@ -35,9 +35,12 @@ to power your pi from some other source, such as a regular USB power supply
   * Set the Bootloader offset to `32KiB bootloader` 
   * Set the Clock Reference to `12 MHz crystal`(for `STM32F446`) or `8 MHz crystal`(for `STM32F429`)
   * Set the Communication interface to `USB (on PA11/PA12)`  (note: see [BigTreeTech documentation](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-V1.0/tree/master/Octopus%20works%20on%20Voron%20v2.4/Firmware/Klipper) if you intend to use UART rather than USB)
+  * Set "PE5" in "GPIO pins to set at microcontroller-startup" (this turns on the hotend fan at power-up, turns off again once the pi has started and checked the temperature)
 
    ![](./images/octopus_f446_klipper_menuconfig.png)
    ![](./images/octopus_f429_klipper_menuconfig.png)
+   ![](./images/octopus_f4xx_klipper_pin_config.png)
+
 
 * Once the configuration is selected, press `q` to exit,  and "Yes" when  asked to save the configuration.
 
