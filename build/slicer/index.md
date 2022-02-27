@@ -7,7 +7,7 @@ nav_order: 6
 
 # Slicer Setup
 
-All modern mainstream slicers are able to produce high quality prints when properly configured for your printer. The Voron community maintains a set of slicer profiles that you can use as a known good starting point for further tuning.
+All modern mainstream slicers are able to produce high-quality prints when properly configured for your printer. The Voron community maintains a set of slicer profiles that you can use as a known good starting point for further tuning.
 
 Proper understanding of slicer settings will have a tremendous impact on print results. Try to learn more about your favorite slicer and tweak the settings to meet your needs.
 
@@ -15,12 +15,12 @@ While using different slicers for different kinds of prints can be beneficial av
 
 ## Slicer Selection
 
-There are two slicers that come with built in profiles for most Voron printers:
+There are two slicers that come with built-in profiles for most Voron printers:
 
 * Cura
 * Super Slicer
 
-Other slicers that can be configured to support Voron printers but do not have built in support:
+Other slicers that can be configured to support Voron printers but do not have built-in support:
 
 * Prusa Slicer
 * Simplify3D
@@ -30,7 +30,7 @@ Some slicers (e.g. PrusaSlicer) do not recognize the Klipper PRINT\_START macro 
 
 ## Slicer Profile Creation
 
-Both Cura and SuperSlicer (in current versions) have built-in profiles for V2 printers which can be setup usin each software's normal processes.  The V1 is similar enough to V2 that the profile can be re-used.
+Both Cura and SuperSlicer (in current versions) have built-in profiles for V2 printers which can be setup using each software's normal processes.  The V1 is similar enough to V2 that the profile can be re-used.
 
 Some pre-built slicer profiles are available from Voron.
 
