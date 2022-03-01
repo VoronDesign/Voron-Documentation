@@ -64,4 +64,5 @@ Always test your freshly-set-up Z-offset on the outer edges of your print surfac
 
 If you decide to swap nozzles, unless your new nozzle is exactly the same height as the old one, **you need to recalibrate your Z-offset.**
 <br>
+<br>
 If you install a nozzle that is longer than your old one, you need to decrease your [probe] z_offset. If your new nozzle is shorter than the old one, you need to increase the z_offset.
