@@ -7,6 +7,9 @@ nav_order: 5
 
 # Initial Startup Checks
 
+This section provides a list of steps to help confirm the pin settings in the Klipper printer.cfg file. 
+During this guide, it may be necessary to make changes to the Klipper config file. Be sure to issue a `RESTART` command after every change to the config file to ensure that the change takes effect (type "restart" in the Octoprint or Mainsail terminal and then click "Send"). It's also a good idea to issue a `STATUS` command after every `RESTART` to verify that the config file is successfully loaded.
+
 
 Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
 
@@ -19,6 +22,22 @@ Any time movements need to be made, those will happen in the 'Control' tab / sec
 ![](./images/Octoprint_Controls.png)
 
 ![](./images/mainsail_controls.png)
+
+## Verify Temperature 
+
+Start by verifying that temperatures are being properly reported. Navigate to the Octoprint/Mainsail temperature graph.
+
+![](./images/mainsail_temp_graph.png)
+
+![](./images/octoprint_temp_graph.png)
+
+Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the "sensor_type" and "sensor_pin" settings for the extruder and/or bed.
+
+## Verify heaters
+
+Navigate to the OctoprintMainsail temperature graph and type in 50 followed by enter in the "Tool" temperature target feild. The extruder temperature in the graph should start to increase (within about 30 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. If the temperature does not increase then verify the "heater_pin" setting in the config.
+
+perform the above test again with the bed.
 
 ## Stepper Motor Check
 
@@ -167,6 +186,10 @@ If anything is updated in the printer configuration file, save the file and rest
 * Update the homing routing in the printer configuration file under *[homing_override]* or *[safe\_z\_home]* with those values.
 * Restart Klipper with `FIRMWARE_RESTART`. 
 * Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  
+
+## Z Endstop Location (V0)
+
+The V0 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
 
 ## Inductive Probe Check (V1, Trident, V2, Switchwire, Legacy)
 
