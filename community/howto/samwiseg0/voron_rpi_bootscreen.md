@@ -66,6 +66,8 @@ DefaultDependencies=no
 After=local-fs.target
 
 [Service]
+#ExecStartPre is to workaround a race condition with bullseye. It can be removed in most cases. If an error apears on the screen that says it "cannot open /dev/fb0" then make sure ExecStartPre is used.
+ExecStartPre=/usr/bin/sleep 1
 ExecStart=/usr/bin/fbi -d /dev/fb0 --noverbose -a /home/pi/boot-image.png
 StandardInput=tty
 StandardOutput=tty
