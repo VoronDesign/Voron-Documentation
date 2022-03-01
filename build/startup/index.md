@@ -127,6 +127,10 @@ If either axis does not move the toolhead in the expected or correct direction, 
 
 ![](./images/V1-motor-configuration-guide.png)
 
+### Trident:
+
+![](./images/VT-motor-configuration-guide.png)
+
 ### V2:
 
 ![](./images/V2-motor-configuration-guide.png)
