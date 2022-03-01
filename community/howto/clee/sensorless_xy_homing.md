@@ -116,6 +116,7 @@ If you have a `[safe_z_home]` section, you need to comment out the entire block 
 
 Now you need to create a `[homing_override]` section. The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. Here's a setup that has been working well for several Voron owners (you will probably want to tweak the `HOME_CUR` values for your own setup):
 
+<!-- {% raw %} -->
 ```ini
 [gcode_macro _SENSORLESS_HOME_X]
 gcode:
@@ -164,5 +165,6 @@ gcode:
     G1 Z10
   {% endif %}
 ```
+<!-- {% endraw %} -->
 
 Restart Klipper, and now the "Home X"/"Home Y"/"Home Z" buttons in Mainsail and Fluidd will work properly (and so will commands like "G28 X"), using your new sensorless homing setup.
