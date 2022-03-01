@@ -28,8 +28,8 @@ nav_exclude: true
   ```python
   variable_z_endstop_x: 0
   variable_z_endstop_y: 0
-  ```  
-  ### Why change variable_z_endstop_ to 0 on both axis?  
+  ``` 
+  #### Why change variable_z_endstop_ to 0 on both axis?  
   ```bash
   # if a separate Z endstop switch is in use, 
   # specify the coordinates of the switch here (Voron). 
