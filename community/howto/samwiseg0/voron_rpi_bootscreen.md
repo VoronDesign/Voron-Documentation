@@ -3,7 +3,8 @@
 
 Source PSD and images can be found in my [GitHub repo](https://github.com/samwiseg0/misc_3dprinting/tree/main/guides/voron_rpi_bootscreen)! Feel free to reach out to me on discord [Samwiseg0#4034](https://discord.com/users/210122378317922308). I will be happy to customize the serial number on any of the splash screens.
 
- ## How to remove the text and logo on raspbian buster
+## NOTE:
+**This guide will only work on Raspberry Pi OS LITE images. If you are using fluidpi or mainsailos those images will work. The following procedure has been verified on buster and bullseye.**
 
  Start by removing all the default screens and also the Raspberry images. Also, disable all the bootup lines.
 
