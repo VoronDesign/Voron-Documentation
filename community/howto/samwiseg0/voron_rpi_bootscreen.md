@@ -1,3 +1,9 @@
+---
+layout: default
+title: Voron RaspberryPi Bootscreens
+nav_exclude: true
+---
+
 # Voron RaspberryPi Bootscreens
 ![](./Images/boot_tile.png)
 
