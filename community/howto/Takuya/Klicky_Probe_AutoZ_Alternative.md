@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Alternative Klicky Auto Z
+title: Klicky Probe as Endstop with constant Z-Offset
 nav_exclude: true
 ---
 
