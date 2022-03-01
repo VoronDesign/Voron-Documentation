@@ -22,7 +22,7 @@ Community-generated documentation for the many items that the official guide may
 | [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md) | DoubleT |
 | [Print Tuning Guide](./ellis/print-tuning-guide.md) | Ellis |
 | [Multi-Colour Prints with a Single Nozzle](./mikhail/multi-colour-prints-with-a-single-nozzle.md) | mikhail |
-| [Custom Raspberry Pi Boot screens ](./samwiseg0/voron_rpi_bootscreen.md) | samwiseg0 |
+| [Custom Raspberry Pi Bootscreens ](./samwiseg0/voron_rpi_bootscreen.md) | samwiseg0 |
 
 
 ### External Links
