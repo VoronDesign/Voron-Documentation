@@ -1,3 +1,9 @@
+---
+layout: default
+title: Voron V2 / Trident - MKS Makerbase Monster8 Wiring
+nav_exclude: true
+---
+
 # Voron V2 / Trident - MKS Makerbase Monster8 Wiring
 
 ## Initial Preparation 

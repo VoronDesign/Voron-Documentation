@@ -1,3 +1,9 @@
+---
+layout: default
+title: Setting Up and Calibrating Sensorless XY Homing
+nav_exclude: true
+---
+
 # Setting Up and Calibrating Sensorless XY Homing
 
 When using the TMC2130 / TMC2209 / TMC2660 / TMC5160 drivers, the StallGuard feature makes it possible to set up sensorless homing on the X and Y axes for CoreXY machines. The Klipper project [has a page with documentation and recommendations on getting it working][KlipperTMCDrivers]. 
