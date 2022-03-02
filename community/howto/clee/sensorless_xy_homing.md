@@ -100,18 +100,18 @@ driver_SGT: -64  # -64 is most sensitive value, 63 is least sensitive
 The calibration process is:
 - For TMC2209, start with `SET_TMC_FIELD FIELD=SGTHRS STEPPER=stepper_x VALUE=255` in the console. For TMC2130/TMC2660/TMC5160, use `SET_TMC_FIELD FIELD=SGT STEPPER=stepper_x VALUE=-64` instead. Start with the most sensitive value for the StallGuard threshold based on which kind of TMC driver you're using (`255` for TMC2209, or `-64` for TMC2130/TMC2660/TMC5160).
 - Try running `G28 X0` to see if the toolhead moves along the X axis.
-- If your toolhead moves all the way to the end of the rail, **IMMEDIATELY HIT THE EMERGENCY STOP BUTTON**.
+- If your toolhead moves all the way to the end of the rail, **IMMEDIATELY HIT THE EMERGENCY STOP BUTTON**. Go back and double-check that you have configured your hardware and the Klipper sections above correctly. Ask on Discord if you need help.
 - The Klipper documentation is good here, with one exception. This information is not correct:  
   > Then issue a G28 X0 command and verify the axis does not move at all.  
   
   When running the `G28 X0` or `G28 Y0` command, the toolhead *WILL* move a millimeter or so before it triggers the virtual endstop. This is normal.
-- Assuming that the toolhead moved a millimeter or so and then stopped, change the `VALUE` to decrease the sensitivity by 5-10, try again, and keep going until you find the first value that successfully homes your printer. 
+- Assuming that the toolhead moved a millimeter or so and then stopped, change the `VALUE` to decrease the sensitivity by 5-10, try again, and keep going until you find the first value that successfully homes your printer. The toolhead should gently tap the edge of travel and then stop.
 - Follow the Klipper instructions on fine-tuning the value once your toolhead is homing successfully on this axis. Make sure you run  
   ```gcode
   G91
   G1 X-10
   ```  
-  to back the toolhead off after hitting the end of the rail (assuming you're homing to the maximum X value) or else Y homing will not work properly.
+  to back the toolhead off after hitting the end of the rail (assuming you're homing to the maximum X value) or else homing the other axis will not work properly.
 - Update the `driver_SGTHRS` or `driver_SGT` value with your new StallGuard threshold.
 
 **Do not forget, you need to repeat this same process for the Y axis.**

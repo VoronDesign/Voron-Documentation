@@ -1,14 +1,14 @@
 ---
 layout: default
-title: IGUS Chan Length Ordering Guide
+title: IGUS Chain Length Ordering Guide
 nav_exclude: true
 ---
 
-# IGUS Chan Length Ordering Guide
+# IGUS Chain Length Ordering Guide
 
 PLEASE NOTE THAT THE BOM VARIES FROM THE SOURCING GUIDE ON THIS. FOR THE X&Y CHAINS YOU WANT TO USE E2i CHAINS AND NOT THE E2 CHAINS. E2i CHAINS OPEN TO THE INSIDE OF THE CURVE RADIUS AND WILL BE ACCESSIBLE WHERE AS THE E2 CHAINS THE OPENING SIDE WILL LAY AGAINST THE EXTRUSIONS.
 
-When ordering IGUS chains you need to cross reference your BOM with the Sourcing Guide. The BOM will give you the length of chain whereas the Sourcing Guide will give you a count of links. IGUS's site isn't exactly intuitive as to what number you should enter. The BOM and Sourcing Guide give you the resultant CALCULATED values on the IGUS website and NOT the numbers you enter in the IGUS Configurator.
+When ordering IGUS chains, you need to cross reference your BOM with the Sourcing Guide. The BOM will give you the length of chain whereas the Sourcing Guide will give you a count of links. IGUS's site isn't exactly intuitive as to what number you should enter. The BOM and Sourcing Guide give you the resultant CALCULATED values on the IGUS website and NOT the numbers you enter in the IGUS Configurator.
 
 My examples will show what to spec (as of 9/9/2020) for a Voron 2.4 but the general principles apply across all models.
 
