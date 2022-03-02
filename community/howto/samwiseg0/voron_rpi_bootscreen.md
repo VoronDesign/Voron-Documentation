@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Voron RaspberryPi Bootscreens
+title: Voron Raspberry Pi Boot screens
 nav_exclude: true
 ---
 
-# Voron RaspberryPi Bootscreens
+# Voron Raspberry Pi Boot screens
 ![](./Images/boot_tile.png)
 
 Source PSD and images can be found in my [GitHub repo](https://github.com/samwiseg0/misc_3dprinting/tree/main/guides/voron_rpi_bootscreen)! Feel free to [reach out to me on Discord (Samwiseg0#4034)](https://discord.com/users/210122378317922308). I will be happy to customize the serial number on any of the splash screens.
