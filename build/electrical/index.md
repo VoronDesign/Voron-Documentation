@@ -60,7 +60,7 @@ There is no standard either for the color of wire on stepper motors, nor for the
 There are 3 basic options for identifying windings:
 1) Check the documentation.  Many motors come with a card which tells you what wire colors are on the same winding.  If there's no card, the manufacturer's website may have something.
 2) Use a multimeter: put your meter in "continuity" mode.  Pick one wire, and then find any other wire that shows continuity with it.  Those two wires are on the same winding. By process of elimination, it should be safe to assume the other two represent the other winding.
-3) If you don't have a meter available, you can twist 2 wires together, and then try to spin the shaft of the motor.  If the wires are on the same winding, it will become noticably harder to spin the shaft.
+3) If you don't have a meter available, you can twist 2 wires together, and then try to spin the shaft of the motor.  If the wires are on the same winding, it will become noticeably harder to spin the shaft.
 
 ### Symptoms of miswired motors
 
@@ -108,13 +108,13 @@ Different controller boards use different terminal types.  The RAMPS boards use 
 
 For wiring the stepper motors, keep the same wire color sequence that your stepper motors came with and use that same sequence for all stepper motors in the printer.  If the BOM spec motors from StepperOnline are used, the wires should be in the color order as shown in the wiring diagrams.
 
-If the purchased steppers do not match the color order in the documentation, there is no need to rewire just to change colors.  There is not a "standard" wire color order for these parts. If the builder decides to reterminate to change connector types or whatever, be sure to use the same order as before. The spec motors also come with a datasheet or card so you can double check the work. One can also use a multimeter to find wire pairs in the motor by measuring continuity between leads. Each lead should have continuity to the other lead in its pair.
+If the purchased steppers do not match the color order in the documentation, there is no need to rewire just to change colors.  There is not a "standard" wire color order for these parts. If the builder decides to re-terminate to change connector types or whatever, be sure to use the same order as before. The spec motors also come with a datasheet or card so you can double-check the work. One can also use a multimeter to find wire pairs in the motor by measuring continuity between leads. Each lead should have continuity to the other lead in its pair.
 
-**Important:** If the motors are found later on to be going the wrong direction, repinning the connectors is _not_ required.  The direction can be inverted in the software configuration later.
+**Important:** If the motors are found later on to be going the wrong direction, re-pinning the connectors is _not_ required.  The direction can be inverted in the software configuration later.
 
 ### Inductive Probe Wiring (V1, Trident, V2, Switchwire)
 
-The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1/Legacy) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
+The BOM spec PL-08N inductive probe (and the alternate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1/Legacy) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
 
 If not closely following the BOM spec, ensure that the inductive probe purchased is a normally closed (NC) version rather than normally open (NO).  The configuration cannot be changed as that is built specifically from the factory.  A normally open (NO) probe may cause crashes if a wire breaks.
 
@@ -130,11 +130,11 @@ Below is a circuit diagram with more details.
 
 ### Endstop Wiring
 
-Endstops can be wired one of two ways: normally closed (NC) or normally open (NO).  For normally closed configurations, the endstop switch allows current to flow through when not triggered.  For normally open configurations, the endstop switch only allows current to flow through whe triggered.
+Endstops can be wired one of two ways: normally closed (NC) or normally open (NO).  For normally closed configurations, the endstop switch allows current to flow through when not triggered.  For normally open configurations, the endstop switch only allows current to flow through when triggered.
 
 While both of these configurations will work fine in an ideal world, normally closed (NC) configurations are more robust.  If a wire breaks or a terminal becomes disconnected, the printer will think the endstop has triggered and will stop movement before the toolhead crashes into the bed or frame. Note that you should always still observe the homing routine - an intermittent break in an X or Y wire can still result in a crash as the nozzle will drop to where it thinks the Z endstop is and instead hit the bed (not applicable to V0 or Switchwire).
 
-Wiring mechanical endstop switches for NC operation is easy as the BOM spec switches have 3 pins exposed.  With a multimeter, probe each combination of the three pins until a pair is found that has continuity (<10 ohms resistance) when the switch is not triggered (normal state), but does not have continuity (>10M ohms resistance) when the switch is triggered (depressed).  Typically the outer two pins are the NC pins, but should be verified prior to installation.
+Wiring mechanical endstop switches for NC operation is easy as the BOM spec switches have 3 pins exposed.  With a multimeter, probe each combination of the three pins until a pair is found that has continuity (<10 ohms resistance) when the switch is not triggered (normal state), but does not have continuity (>10M ohms resistance) when the switch is triggered (depressed).  Typically, the outer two pins are the NC pins, but should be verified prior to installation.
 
 ![](./images/endstop_switch_wiring.png)
 
@@ -171,6 +171,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 
 ### Voron Switchwire
 * [SW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
+* [SW - mini e3 V3.0](./sw_miniE3_v30_wiring.md)
 * [SW - Einsy Rambo](./sw_einsy_rambo_wiring.md)
 
 ## Additional Items

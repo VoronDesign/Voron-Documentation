@@ -1,0 +1,4 @@
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QTrident\nTrident - BigTreeTech Octopus\nTrident - MKS Makerbase Monster8\\E$"}
+{"rule":"ALL_OF_THE","sentence":"^\\QAs mentioned above, this will only work if the DC 0V of all of the power supplies is tied together.\\E$"}
+{"rule":"COMMA_COMPOUND_SENTENCE_2","sentence":"^\\QThere are other controllers on the market that may work (such as Duet), but those are not commonly used so standard configurations have not been developed.\\E$"}
+{"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QThe spec motors also come with a datasheet or card so you can double-check the work.\\E$"}
