@@ -21,5 +21,14 @@ nav_exclude: true
 * Wire +V and -V from DC power supply to both Power Input and Bed Power Input.
 * Connect USB Cable, but do not connect it yet to your Raspberry Pi
 
-![](./images/EinsyRambo1.1a-connections.jpg)
+![](./images/SW_EinsyRambo1.1B_Wiring_Diagram_150.jpg)
 
+## Please Ensure the Heat Sinks are Installed Before Use
+
+![](./images/EinsyRambo1.1b_PREP-WiringDiagram-heatsinks_150.jpg)
+
+## Einsy Rambo Pinout
+
+For reference, here is the pinout of the Einsy Rambo
+
+![](./images/EinsyRambo1.1a-connections.jpg)
