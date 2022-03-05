@@ -24,8 +24,8 @@ nav_exclude: true
 * Connect X end stop to X-STOP connector
 * Connect Y end stop to Y-STOP connector
 * Plug Probe GND and Signal (with BAT85 diode) in to Z-STOP
-* Connect Probe +V to VIN in terminal next to HB
-* Wire 24V and -V from DC power supply to VIN and GND terminals in corner (DCOUT)
+* Connect Probe +V (Probe Voltage) to VIN in terminal on the "DCOUT" connector next to HB
+* Wire 24V and -V from DC power supply to VIN and GND terminals in corner on the "DCIN (Power In)" connector
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
 ![](./images/SW_Wiring_Diagram_SKR_mini_E3_V2.0_150.jpg)
