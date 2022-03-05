@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QHere is the URL for the Klipper Configuration file from VoronDesign/Voron-Documentation for Voron 0.1\\E$"}
