@@ -45,4 +45,4 @@ For reference, here is the original pinout of the SKR mini E3 V2.0
 
 ![](./images/miniE3-v20-pinout.png)
 
-## Here is the URL for the [GitHub repository of BTT SKR mini E3 V2.0](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V2.0)
+## Here is the URL for the [GitHub repository of BTT SKR mini E3 V2.0](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V2.0/Hardware)
