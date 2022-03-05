@@ -5,3 +5,6 @@ Ym
 ZAm
 HB
 DCOUT
+Klipper
+VoronDesign
+Voron-Switchwire

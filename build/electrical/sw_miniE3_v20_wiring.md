@@ -34,6 +34,8 @@ nav_exclude: true
 
 ![](./images/SKR_mini_E3_V2.0_heatsinks_150.jpg)
 
+### Here is the URL for the [Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/skr_mini_e3_v2_config.cfg)
+
 ## Color PIN Diagram for SKR Mini E3 V2.0
 For reference, here is the Color PIN diagram for the SKR mini E3 V2.0
 
