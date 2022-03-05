@@ -6,6 +6,12 @@ nav_exclude: true
 
 # Voron Switchwire - SKR mini E3 V2.0 Wiring
 
+## Initial Preparation
+
+* Reconfigure the on-board jumper(s) as shown {See the lime green jumper(s)}
+
+![](./images/PREP_SKR_mini_E3_V2.0_150.jpg)
+
 ## MCU
 
 * Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, ZAm, and Em
@@ -19,14 +25,24 @@ nav_exclude: true
 * Connect Y end stop to Y-STOP connector
 * Plug Probe GND and Signal (with BAT85 diode) in to Z-STOP
 * Connect Probe +V to VIN in terminal next to HB
-* Wire 24V and -V from DC power supply to VIN and GND terminals in corner
+* Wire 24V and -V from DC power supply to VIN and GND terminals in corner (DCOUT)
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
-![](./images/v0-miniE3-v20-mcu.png)
+![](./images/SW_Wiring_Diagram_SKR_mini_E3_V2.0_150.jpg)
 
+## Please Ensure the Heat Sinks are Installed Before Use
 
-## Mini E3 V2.0 Pinout
+![](./images/SKR_mini_E3_V2.0_heatsinks_150.jpg)
 
-For reference, here is the pinout of the SKR mini E3 V2.0
+## Color PIN Diagram for SKR Mini E3 V2.0
+For reference, here is the Color PIN diagram for the SKR mini E3 V2.0
+
+![](./images/SKR_mini_E3_V2.0_Color_PIN_diagram_300.jpg)
+
+## Original SKR Mini E3 V2.0 Pinout
+
+For reference, here is the original pinout of the SKR mini E3 V2.0
 
 ![](./images/miniE3-v20-pinout.png)
+
+## Here is the URL for the [GitHub repository of BTT SKR mini E3 V2.0](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V2.0)
