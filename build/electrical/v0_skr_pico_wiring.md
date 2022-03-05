@@ -27,7 +27,7 @@ nav_exclude: true
 
 For reference, here is the pinout of the SKR Pico
 
-###![](./images/Voron0.1_SKR_PICO_V1.0_Color_PIN_diagram.jpg)
+### ![](./images/Voron0.1_SKR_PICO_V1.0_Color_PIN_diagram.jpg)
 
 ## Original SKR Pico Pinout
 
