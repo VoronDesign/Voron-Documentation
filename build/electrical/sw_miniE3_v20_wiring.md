@@ -37,7 +37,7 @@ nav_exclude: true
 ## Color PIN Diagram for SKR Mini E3 V2.0
 For reference, here is the Color PIN diagram for the SKR mini E3 V2.0
 
-![](./images//SKR_mini_E3_V2.0_heatsinks_150.jpg)
+![](./images/SKR_mini_E3_V2.0_Color_PIN_diagram_300.jpg)
 
 ## Original SKR Mini E3 V2.0 Pinout
 
