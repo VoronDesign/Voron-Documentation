@@ -25,7 +25,7 @@ nav_exclude: true
 
 ## Color PIN Diagram for SKR Pico
 
-For reference, here is the pinout of the SKR Pico
+For reference, here is the Color PIN diagram for the SKR Pico
 
 ### ![](./images/Voron0.1_SKR_PICO_V1.0_Color_PIN_diagram.jpg)
 
@@ -34,3 +34,5 @@ For reference, here is the pinout of the SKR Pico
 For reference, here is the original pinout of the SKR Pico
 
 ![](./images/skr-pico-pinout.png)
+
+### Here is the URL for the [GitHub repository of BTT SKR Pico](https://github.com/bigtreetech/SKR-Pico/tree/master/Hardware) 
