@@ -27,6 +27,8 @@ nav_exclude: true
 
 ![](./images/EinsyRambo1.1b_PREP-WiringDiagram-heatsinks_150.jpg)
 
+### Here is the URL for [the Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/einsy_config.cfg)
+
 ## Einsy Rambo Pinout
 
 For reference, here is the pinout of the Einsy Rambo

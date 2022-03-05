@@ -4,3 +4,6 @@ HB
 Switchwire
 Einsy
 Endstop
+Klipper
+VoronDesign
+Voron-Switchwire
