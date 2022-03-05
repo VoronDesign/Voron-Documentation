@@ -23,7 +23,7 @@ nav_exclude: true
 
 ### ![](.images/../images/Voron0.1_Wiring_Diagram_SKR_PICO_V1.0.jpg)
 
-## Here is the URL for [the Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 branch for SKR Pico board](https://github.com/VoronDesign/Voron-0/blob/Voron0.1/Firmware/skr-pico-v1.0.cfg)
+### Here is the URL for [the Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 branch for SKR Pico board](https://github.com/VoronDesign/Voron-0/blob/Voron0.1/Firmware/skr-pico-v1.0.cfg)
 
 ## Color PIN Diagram for SKR Pico
 
