@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-Remove all the YELLOW on-board jumpers as shown.
+Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 
 ![](./images/SKR_V1.3_PREP-Removal_150.jpg)
 
