@@ -10,13 +10,13 @@ nav_exclude: true
 
 Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 
-![](./images/SKR_V1.3_PREP-Removal_150.jpg)
+![](./images/SKR_V1.3_PREP-Removal_150.png)
 
 ## Initial Preparation - Set Jumpers
 
 * Set the on-board jumpers at the positions shown by the GREEN jumpers as shown in the below diagram.
 
-![](./images/SKR_V1.3_in_UART_mode_PREP_150.jpg)
+![](./images/SKR_V1.3_in_UART_mode_PREP_150.png)
 
 ## MCU X/Y/E, Hot End in UART Mode
 
@@ -53,12 +53,14 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 ### MCU X/Y/E, Hot End with Heat Sinks Installed
-![](./images/SKR_V1.3_in_UART_mode_Heatsinks1_150.jpg)
+![](./images/SKR_V1.3_in_UART_mode_Heatsinks1_150.png)
 
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
-![](./images/SKR_V1.3_in_UART_Mode_Heatsinks2_150.jpg)
+![](./images/SKR_V1.3_in_UART_Mode_Heatsinks2_150.png)
 
-### Here is the URL for [the Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
+### The URL for the Klipper Configuration file for SKR V1.3 board 
+
+The URL for the Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
 
 ## Color PIN Diagram for SKR V1.3
 For reference, here is the Color PIN diagram for the SKR V1.3
@@ -71,4 +73,6 @@ For reference, here is the original pinout of the SKR V1.3
 
 ![](./images/original-SKR-V1.3-PIN_150.jpg)
 
-### Here is the URL for [the GitHub repository of BTT SKR V1.3](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3)
+### The GitHub repository of BTT SKR V1.3 board
+
+The URL for the GitHub repository of BTT SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3)
