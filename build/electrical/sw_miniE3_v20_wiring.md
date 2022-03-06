@@ -10,7 +10,7 @@ nav_exclude: true
 
 * Reconfigure the on-board jumper(s) as shown {See the lime green jumper(s)}
 
-![](./images/PREP_SKR_mini_E3_V2.0_150.jpg)
+![](./images/PREP_SKR_mini_E3_V2.0_150.png)
 
 ## MCU
 
@@ -28,13 +28,17 @@ nav_exclude: true
 * Wire 24V and -V from DC power supply to VIN and GND terminals in corner on the "DCIN (Power In)" connector
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
+### MCU Diagram
+
 ![](./images/SW_Wiring_Diagram_SKR_mini_E3_V2.0_150.jpg)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
-![](./images/SKR_mini_E3_V2.0_heatsinks_150.jpg)
+![](./images/SKR_mini_E3_V2.0_heatsinks_150.png)
 
-### Here is the URL for the [Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/skr_mini_e3_v2_config.cfg)
+### The Klipper Configuration file for SKR mini E3 V2.0 board
+
+The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for SKR mini E3 V2.0 board is [located here](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/skr_mini_e3_v2_config.cfg)
 
 ## Color PIN Diagram for SKR Mini E3 V2.0
 For reference, here is the Color PIN diagram for the SKR mini E3 V2.0
@@ -47,4 +51,6 @@ For reference, here is the original pinout of the SKR mini E3 V2.0
 
 ![](./images/miniE3-v20-pinout.png)
 
-## Here is the URL for the [GitHub repository of BTT SKR mini E3 V2.0](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V2.0/Hardware)
+### The BTT's GitHub Repo for the SKR mini E3 V2.0
+
+The GitHub repository for BTT SKR mini E3 V2.0 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V2.0)
