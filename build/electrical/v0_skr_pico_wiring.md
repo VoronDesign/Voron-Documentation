@@ -24,7 +24,9 @@ nav_exclude: true
 
 ### ![](.images/../images/Voron0.1_Wiring_Diagram_SKR_PICO_V1.0.jpg)
 
-### Here is the URL for [the Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 branch for SKR Pico board](https://github.com/VoronDesign/Voron-0/blob/Voron0.1/Firmware/skr-pico-v1.0.cfg)
+### The Klipper Configuration file for SKR Pico board
+
+The URL to the Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 branch for SKR Pico board is [located here](https://github.com/VoronDesign/Voron-0/blob/Voron0.1/Firmware/skr-pico-v1.0.cfg)
 
 ## Color PIN Diagram for SKR Pico
 
@@ -38,4 +40,6 @@ For reference, here is the original pinout of the SKR Pico
 
 ![](./images/skr-pico-pinout.png)
 
-### Here is the URL for the [GitHub repository of BTT SKR Pico](https://github.com/bigtreetech/SKR-Pico/tree/master/Hardware) 
+### The URL for BTT SKR Pico Board
+
+The URL to the GitHub repository for BTT SKR Pico board is [located here](https://github.com/bigtreetech/SKR-Pico)
