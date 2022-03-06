@@ -1,3 +1,0 @@
-SKR
-Klipper
-VoronDesign
