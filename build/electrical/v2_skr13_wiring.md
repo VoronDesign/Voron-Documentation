@@ -14,7 +14,7 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 
 ## Initial Preparation - Set Jumpers
 
-* Set the on-board jumpers as shown in the below diagram by the LIME GREEN jumpers.
+* Set the on-board jumpers at the positions shown by the GREEN jumpers as shown in the below diagram.
 
 ![](./images/SKR_V1.3_in_UART_mode_PREP_150.jpg)
 
