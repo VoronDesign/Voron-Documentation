@@ -14,7 +14,7 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 
 ## Initial Preparation - Set Jumpers
 
-* Set the on-board jumpers at the positions shown by the GREEN jumpers as shown in the below diagram.
+* Set the on-board jumpers, located at the positions as shown by the GREEN jumpers in the below diagram:
 
 ![](./images/SKR_V1.3_in_SPI_mode_PREP_150.png)
 
@@ -30,6 +30,8 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 * Connect Y end stop to +Y connector (P1.26)
 * Wire 24V and 0V from DC power supply to Power/DCIN
 * Connect USB Cable to your SKR V1.3, but do not connect it yet to your Raspberry Pi
+
+### MCU X/Y/E, Hot End in SPI Mode Diagram
 
 ![](./images/Voron2.4r2_Wiring_Diagram_BTT_SKRV1.3_XYE_in_SPI_mode_150.jpg)
 
@@ -48,6 +50,8 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 * Wire 24V and 0V from DC power supply to Power/DCIN
 * Connect USB Cable to your SKR 1.3, but do not connect it yet to your Raspberry Pi
 
+### MCU Z, Bed, Exhaust Fan in SPI Mode Diagram
+
 ![](./images/Voron2.4r2_Wiring_Diagram_BTT_SKRV1.3_Z_in_SPI_mode_150.jpg)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
@@ -58,9 +62,9 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 ![](./images/SKR_V1.3_in_SPI_mode_Heatsinks2_150.png)
 
-### The URL for the Klipper Configuration file for SKR V1.3 board 
+### The Klipper Configuration file for SKR V1.3 board 
 
-The URL for the Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
+The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
 
 ## Color PIN Diagram for SKR V1.3
 For reference, here is the Color PIN diagram for the SKR V1.3
@@ -73,6 +77,6 @@ For reference, here is the original pinout of the SKR V1.3
 
 ![](./images/original-SKR-V1.3-PIN_150.jpg)
 
-### The GitHub repository of BTT SKR V1.3 board
+### The BTT's GitHub Repo for the SKR V1.3 board
 
-The URL for the GitHub repository of BTT SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3)
+The GitHub repository for BTT SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3)
