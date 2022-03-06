@@ -21,13 +21,17 @@ nav_exclude: true
 * Wire +V and -V from DC power supply to both Power Input and Bed Power Input.
 * Connect USB Cable, but do not connect it yet to your Raspberry Pi
 
+### MCU Diagram
+
 ![](./images/SW_EinsyRambo1.1B_Wiring_Diagram_150.jpg)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
-![](./images/EinsyRambo1.1b_PREP-WiringDiagram-heatsinks_150.jpg)
+![](./images/EinsyRambo1.1b_PREP-WiringDiagram-heatsinks_150.png)
 
-### Here is the URL for [the Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/einsy_config.cfg)
+### The Klipper Configuration file for Einsy Rambo Board
+
+The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for Einsy Rambo is [located here](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/einsy_config.cfg)
 
 ## Einsy Rambo Pinout
 
