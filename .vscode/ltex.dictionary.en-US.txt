@@ -1,8 +1,0 @@
-Voron
-Xm
-Ym
-ZAm
-HB
-DCIN
-Klipper
-VoronDesign
