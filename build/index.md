@@ -7,7 +7,7 @@ nav_order: 5
 
 # The Build
 
-This guide contains all the the steps to go from a pile of parts to a functioning printer with a known working configuration.
+This guide contains all the steps to go from a pile of parts to a functioning printer with a known working configuration.
 
 Please read the guide carefully, there are many details that seem trivial but are included because one or more people got stuck at these points. We as a community want to make sure that everyone has the best experience possible. If you find something confusing and would like clarification, that likely means someone else in the past or future will also find it difficult. Please reach out and we will gladly update the document!
 
