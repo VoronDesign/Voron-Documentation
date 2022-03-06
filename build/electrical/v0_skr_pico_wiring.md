@@ -8,17 +8,18 @@ nav_exclude: true
 
 ## MCU
 
-* Plug in stepper motors for X, Y, Z, and E in positions X, Y, Z1, and E
+* Plug in stepper motors for X, Y, Z, and E in positions X(Xm), Y(Ym), Z1(ZAm), and E(Em)
 * Plug Hot End thermistor to thermistor TH0
 * Plug Hot End heater in to HE
-* Plug Hot End Fan in to FAN2
+* Plug Hot End Fan Signal in to FAN2
+* Plug Hot End Fan V+ (5VDC) to "LASER" connector's 5V PIN
 * Plug Part Cooling Fan in to FAN1
 * Plug Bed Thermistor in to THB
 * Connect The DC bed to HB
 * Connect X end stop to X-STOP connector
 * Connect Y end stop to Y-STOP connector
 * Connect Z end stop to Z-STOP connector
-* Wire 24V and -V from DC power supply to POWER
+* Wire 24V and -V from DC power supply to DCIN/POWER
 * Connect USB Cable to your SKR Pico, but do not connect it yet to your Raspberry Pi
 
 ### ![](.images/../images/Voron0.1_Wiring_Diagram_SKR_PICO_V1.0.jpg)
