@@ -1,9 +1,0 @@
-HB
-Pico
-Voron
-Klipper
-VoronDesign
-DCIN
-Xm
-Ym
-ZAm
