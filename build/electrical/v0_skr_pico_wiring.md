@@ -12,7 +12,7 @@ nav_exclude: true
 * Plug Hot End thermistor to thermistor TH0
 * Plug Hot End heater in to HE
 * Plug Hot End Fan Signal in to FAN2
-* Plug Hot End Fan V+ (5VDC) to "LASER" connector's 5V PIN
+* Plug Hot End Fan V+ (+5VDC) to "LASER" connector's 5V PIN
 * Plug Part Cooling Fan in to FAN1
 * Plug Bed Thermistor in to THB
 * Connect The DC bed to HB
