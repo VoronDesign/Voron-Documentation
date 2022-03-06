@@ -154,8 +154,8 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V0.1 - SKR Pico](./v0_skr_pico_wiring.md)
 
 ### Voron 1
-* [V1 - SKR 1.3](./v1_skr13_wiring.md)
-* [V1 - SKR 1.4](./v1_skr14_wiring.md)
+* [V1 - SKR V1.3](./v1_skr13_wiring.md)
+* [V1 - SKR V1.4](./v1_skr14_wiring.md)
 
 ### Trident
 * [Trident - BigTreeTech Octopus](./v2_octopus_wiring.md)
@@ -164,7 +164,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 ### Voron 2
 * [V2 - SKR V1.3 in UART mode](./v2_skr13_wiring.md)
 * [V2 - SKR V1.3 in SPI mode](./v2_skr13_wiring_inSPImode.md)
-* [V2 - SKR 1.4](./v2_skr14_wiring.md)
+* [V2 - SKR V1.4](./v2_skr14_wiring.md)
 * [V2 - FLYboard FLYF407ZG](./v2_flyf407zg_wiring.md)
 * [V2 - Fysetc Spider](./v2_spider_wiring.md)
 * [V2 - BigTreeTech Octopus](./v2_octopus_wiring.md)
