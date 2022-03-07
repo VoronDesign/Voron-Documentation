@@ -26,12 +26,12 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 * Plug Hot End heater in to HE0 (P2.7)
 * Plug Hot End Fan in to HE1 (P2.4)
 * Plug Part Cooling Fan in to Fan (P2.3)
-* Connect X end stop to +X connector (P1.28)
-* Connect Y end stop to +Y connector (P1.26)
+* Connect X end stop to X+ connector (P1.28)
+* Connect Y end stop to Y+ connector (P1.26)
 * Wire 24V and 0V from DC power supply to Power/DCIN
 * Connect USB Cable to your SKR V1.3, but do not connect it yet to your Raspberry Pi
 
-### MCU X/Y/E, Hot End in SPI Mode Diagram
+### MCU X/Y/E, Hot End in SPI Mode Wiring Diagram
 
 ![](./images/Voron2.4r2_Wiring_Diagram_BTT_SKRV1.3_XYE_in_SPI_mode_150.jpg)
 
@@ -50,7 +50,7 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 * Wire 24V and 0V from DC power supply to Power/DCIN
 * Connect USB Cable to your SKR 1.3, but do not connect it yet to your Raspberry Pi
 
-### MCU Z, Bed, Exhaust Fan in SPI Mode Diagram
+### MCU Z, Bed, Exhaust Fan in SPI Mode Wiring Diagram
 
 ![](./images/Voron2.4r2_Wiring_Diagram_BTT_SKRV1.3_Z_in_SPI_mode_150.jpg)
 
@@ -61,6 +61,15 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 ![](./images/SKR_V1.3_in_SPI_mode_Heatsinks2_150.png)
+## SSR Wiring
+
+* Wire colors will vary depending on your location.
+
+![](./images/btt-SKRV1.3inSPI-ssr-wiring.png)
+<br>
+<br>
+## mini 12864 Display
+* See [the mini12864 guide](./mini12864_klipper_guide.md)
 
 ### The Klipper Configuration file for SKR V1.3 board 
 
@@ -79,4 +88,5 @@ For reference, here is the original pinout of the SKR V1.3
 
 ### The BTT's GitHub Repo for the SKR V1.3 board
 
-The GitHub repository for BTT SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3)
+* BigTreeTech documentation for SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3) 
+* BTT's SKR V1.3 pinout is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.3/hardware/SKR-V1.3-PIN.pdf)
