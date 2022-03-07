@@ -158,6 +158,8 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V1 - SKR 1.4](./v1_skr14_wiring.md)
 
 ### Trident
+* [Trident - SKR V1.3 in UART mode](./Trident_SKR_V13_UART_wiring.md)
+* [Trident - SKR V1.3 in SPI mode](./Trident_SKR_V13_SPI_wiring.md)
 * [Trident - BigTreeTech Octopus](./v2_octopus_wiring.md)
 * [Trident - MKS Makerbase Monster8](./v2_monster8_wiring.md)
 
