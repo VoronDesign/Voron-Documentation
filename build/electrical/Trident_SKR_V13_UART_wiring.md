@@ -57,11 +57,11 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 ### MCU X/Y/E, Hot End with Heat Sinks Installed
-<br>
+<br  />  
 ![](../electrical/images/SKR_V1.3_in_UART_mode_Heatsinks1_150.png)
 
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
-<br>
+<br>  
 ![](../electrical/images/Trident_SKR_V1.3_in_UART_Mode_Heatsinks2_150.png)
 
 ## SSR Wiring
