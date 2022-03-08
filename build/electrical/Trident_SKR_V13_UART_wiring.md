@@ -35,6 +35,8 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 ![](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_XYE_in_UART_mode_150.jpg)
 
+* <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">Downloadable BTT SKR 1.3's "MCU X/Y/E, Hot End" Wiring Diagram in .jpg format is [located here](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_XYE_in_UART_mode_150.jpg)</span>
+
 ## MCU Z, Bed, Exhaust Fan in UART Mode
 
 * Place stepper drivers for Z2, Z1, and Z0 into positions X, Z, and E1
@@ -53,6 +55,8 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 ### MCU Z, Bed, Exhaust Fan in UART Mode Wiring Diagram
 
 ![](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_Z_in_UART_mode_150.jpg)
+
+* <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">Downloadable BTT SKR 1.3's "Z, Bed, Exhaust Fan" Wiring Diagram in .jpg format is [located here](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_Z_in_UART_mode_150.jpg)</span>
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
@@ -73,6 +77,7 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 * Downloadable SSR Wiring Diagram for the BTT SKR V1.3 board in UART mode (.jpg format) is [located here](./images/btt-SKRV1.3inUART-ssr-wiring.png)
 <span> <br> </span>
 ## mini 12864 Display
+
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
 <div> 
@@ -102,7 +107,7 @@ For reference, here is the Color PIN diagram for the SKR V1.3
     "public URLs" for .pdf files as an input parameter.
 
     Only call the Jupyter Notebook's nbviewer process when you are not running this web page locally.
-    
+
 {% endcomment %}
 
 {% assign colorfilename = "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" %}
@@ -132,4 +137,4 @@ For reference, here is the original pinout of the SKR V1.3
 
 * BigTreeTech documentation for SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3) 
 
-* BTT's SKR V1.3 pinout is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.3/hardware/SKR-V1.3-PIN.pdf)
+* Downloadable and ZOOM capable web display for BTT's SKR V1.3 original pinout is [located here](http://nbviewer.jupyter.org/github/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.3/hardware/SKR-V1.3-PIN.pdf)
