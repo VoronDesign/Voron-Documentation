@@ -67,7 +67,7 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 <span> <br> </span>
 
-![](./images/Trident_SKR_V1.3_in_SPI_Mode_Heatsinks2_150.png)
+![](./images/SKR_V1.3_In_SPI_mode_Heatsinks1_150.png))
 
 ## SSR Wiring
 
