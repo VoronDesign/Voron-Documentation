@@ -76,6 +76,7 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 * Downloadable SSR Wiring Diagram for the BTT SKR V1.3 board in UART mode (.jpg format) is [located here](./images/btt-SKRV1.3inUART-ssr-wiring.png)
 <span> <br> </span>
+
 ## mini 12864 Display
 
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
@@ -100,6 +101,7 @@ For reference, here is the Color PIN diagram for the SKR V1.3
 * Downloadable BTT SKR V1.3 Color PIN diagram in .jpg format is [located here](./images/SKRV1.3_Colored_PIN_Diagram_300.jpg)
 
 {% comment %} 
+
     The .PDF file will not receive a public URL until web page is deployed.
 
     The public Jupyter Notebook's "nbviewer" process only accepts 
