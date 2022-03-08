@@ -81,7 +81,6 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
 --> 
-
 </div>
 
 ## Color PIN Diagram for SKR V1.3
