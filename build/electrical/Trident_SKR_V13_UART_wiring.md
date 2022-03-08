@@ -58,11 +58,11 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 ### MCU X/Y/E, Hot End with Heat Sinks Installed
 <span> <br> </span>
-![](../electrical/images/SKR_V1.3_in_UART_mode_Heatsinks1_150.png)
+![](./images/SKR_V1.3_in_UART_mode_Heatsinks1_150.png)
 
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 <span> <br> </span>
-![](../electrical/images/Trident_SKR_V1.3_in_UART_Mode_Heatsinks2_150.png)
+![](./images/Trident_SKR_V1.3_in_UART_Mode_Heatsinks2_150.png)
 
 ## SSR Wiring
 
@@ -84,16 +84,37 @@ The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3
 </div>
 
 ## Color PIN Diagram for SKR V1.3
+<span> <br> </span>
 For reference, here is the Color PIN diagram for the SKR V1.3
+<span> <br> </span>
 
 ![](./images/SKRV1.3_Colored_PIN_Diagram_300.jpg)
 
-## Original SKR V1.3 Pinout
+* Downloadable BTT SKR V1.3 Color PIN diagram in .pdf format is [located here](./images/SKRV1.3_Colored_PIN_Diagram.pdf)
 
+* Downloadable BTT SKR V1.3 Color PIN diagram in .jpg format is [located here](./images/SKRV1.3_Colored_PIN_Diagram_300.jpg)
+
+{% assign colorfilename = "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" %}
+
+{% assign nbviewer_url = "https://nbviewer.org/github/VoronDesign/Voron-Documentation/" %}
+
+{% if site.url == "http://localhost:4000" %}
+* Downloadable and LOCAL ZOOM capable web display for BTT SKR V1.3 Color PIN diagram is [located here]({{ "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" | prepend:site.url }})
+{% else %}
+* Downloadable and ZOOM capable web display for BTT SKR V1.3 Color PIN diagram is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }})
+{% endif %}
+
+## Original SKR V1.3 Pinout
+<span> <br> </span>
 For reference, here is the original pinout of the SKR V1.3
+
+* Note: If you see a conflict between the original pinout and any other source, please refer back to the [BigTreeTech SKR V1.3 schematic diagram](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.3/hardware/SKR-V1.3-SCH.pdf)
+<span> <br> </span>
 
 ![](./images/original-SKR-V1.3-PIN_150.jpg)
 
 ### The BTT's GitHub Repo for the SKR V1.3 board
+
 * BigTreeTech documentation for SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3) 
+
 * BTT's SKR V1.3 pinout is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.3/hardware/SKR-V1.3-PIN.pdf)
