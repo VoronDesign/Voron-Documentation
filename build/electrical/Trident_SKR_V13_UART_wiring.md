@@ -20,16 +20,16 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 ## MCU X/Y/E, Hot End in UART Mode
 
-* Place stepper drivers for X, Y, and E in positions X, Y, and E0
-* Plug in stepper motors for X, Y, and E in positions X, Y, and E0
-* Plug Hot End thermistor to thermistor TH0 (P0.24)
-* Plug Hot End heater in to HE0 (P2.7)
-* Plug Hot End Fan in to HE1 (P2.4)
-* Plug Part Cooling Fan in to Fan (P2.3)
-* Connect X end stop to X+ connector (P1.28)
-* Connect Y end stop to Y+ connector (P1.26)
-* Wire 24V and 0V from DC power supply to Power/DCIN
-* Connect USB Cable to your SKR V1.3, but do not connect it yet to your Raspberry Pi
+* Place stepper drivers for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E0</span>
+* Plug in stepper motors for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E0</span>
+* Plug <span style="text-shadow: 2px 2px 5px #dcc623; font-size: 125%;">Hot End thermistor</span> to <span style="text-shadow: 2px 2px 5px #00ff00; font-size: 125%;">thermistor TH0 (P0.24)</span>
+* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End heater</span> in to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">HE0 (P2.7)</span>
+* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End Fan</span> in to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">HE1 (P2.4)</span>
+* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Part Cooling Fan</span> in to <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">Fan (P2.3)</span>
+* Connect <span style="text-shadow: 2px 2px 5px #58b946; font-size: 125%;">X end stop</span> to <span style="text-shadow: 2px 2px 5px #58b946; font-size: 125%;">X+ connector (P1.28)</span>
+* Connect <span style="text-shadow: 2px 2px 5px #e45223; font-size: 125%;">Y end stop</span> to <span style="text-shadow: 2px 2px 5px #71b05f; font-size: 125%;">Y+ connector (P1.26)</span>
+* Wire <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">24V and 0V</span> from DC power supply to <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">Power/DCIN</span>
+* Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">USB Cable</span> to your SKR V1.3, <span style="text-shadow: 0 0 3px #FF0000; font-size: 125%;">but do not connect it yet to your Raspberry Pi</span>
 
 ### MCU X/Y/E, Hot End in UART Mode Wiring Diagram
 
@@ -39,18 +39,18 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 ## MCU Z, Bed, Exhaust Fan in UART Mode
 
-* Place stepper drivers for Z2, Z1, and Z0 into positions X, Z, and E1
-* Plug in stepper motors for Z2, Z1, and Z0 into positions X, Z, and E1
-* Plug Bed Thermistor in to TB (P0.23)
-* Plug in Exhaust Fan in to H-BED (P2.5)
-* Plug in Controller Fans in to FAN (P2.3)
-* Plug SSR Control for Heated Bed in to HE1 (P2.4)
-* Plug Z Endstop Switch into Z- (P1.25)
-* Plug Probe Signal (with BAT85 diode) in to Z+ (P1.24)
-* Plug Probe GND and Probe Voltage in to "DC OUT" connector next to X motor connector
-* Plug display wires in to EXP1 and EXP2
-* Wire 24V and 0V from DC power supply to Power/DCIN
-* Connect USB Cable to your SKR 1.3, but do not connect it yet to your Raspberry Pi
+* Place stepper drivers for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Z2, Z1, and Z0</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">X, Z, and E1</span>
+* Plug in stepper motors for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Z2, Z1, and Z0</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">X, Z, and E1</span>
+* Plug <span style="text-shadow: 2px 2px 5px #a286c0; font-size: 125%;">Bed Thermistor</span> in to <span style="text-shadow: 2px 2px 5px #0c7b84; font-size: 125%;">TB (P0.23)</span>
+* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Exhaust Fan</span> in to <span style="text-shadow: 2px 2px 5px #0e7a86; font-size: 125%;">H-BED (P2.5)</span>
+* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Controller Fans</span> in to <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">FAN (P2.3)</span>
+* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">SSR Control for Heated Bed</span> in to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">HE1 (P2.4)</span>
+* Plug <span style="text-shadow: 2px 2px 5px #d38aa8; font-size: 125%;">Z Endstop Switch</span> into <span style="text-shadow: 2px 2px 5px #710aef; font-size: 125%;">Z- (P1.25)</span>
+* Plug <span style="text-shadow: 2px 2px 5px #6c6b69; font-size: 125%;">Probe Signal (with BAT85 diode)</span> in to <span style="text-shadow: 2px 2px 5px #710aef; font-size: 125%;">Z+ (P1.24)</span>
+* Plug <span style="text-shadow: 2px 2px 5px #6c6b69; font-size: 125%;">Probe GND</span> and <span style="text-shadow: 2px 2px 5px #6c6b69; font-size: 125%;">Probe Voltage</span> in to <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">"DC OUT" connector</span> next to X motor connector
+* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">display wires</span> in to <span style="text-shadow: 2px 2px 5px #2bb5e3; font-size: 125%;">EXP1 and EXP2</span>
+* Wire <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">24V and 0V</span> from DC power supply to <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">Power/DCIN</span>
+* Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">USB Cable</span> to your SKR 1.3, <span style="text-shadow: 0 0 3px #FF0000; font-size: 125%;">but do not connect it yet to your Raspberry Pi</span>
 
 ### MCU Z, Bed, Exhaust Fan in UART Mode Wiring Diagram
 
