@@ -34,15 +34,15 @@ Assuming everything went well, congrats! That's all there is to it.
 
 ## Something went wrong, Moonraker isn't coming back up!
 
-If moonraker is failing to load, that most likely means it's not recognizing **OLD.local**'s database as a database. There is a "working" fix for this.
+If Moonraker is failing to load, that most likely means it's not recognizing **OLD.local**'s database as a database. There is a "working" fix for this.
 
 You'll need to stop the Moonraker service on both machines (see above) and install a tool called `lmdb-utils` with `sudo apt install lmdb-utils` on both machines.
 
-Once you've got that, on **OLD.local** use the command `mdb_dump -f backup.txt -a .moonraker_database` to backup the database as a text file named `backup.txt`
+Once you've got that, on **OLD.local** use the command `mdb_dump -f backup.txt -a .moonraker_database` to backup the database as a text file named `backup.txt`.
 
 Still using **OLD.local** use SCP again to transfer `backup.txt` to **NEW.local** with `scp backup.txt USER@NEW.local:~` The file will now be in **NEW.local**'s home directory (`~`).
 
-SSH into **NEW.local** and remove the files inside `.moonraker_database` by using `cd .moonraker_database` to move into the folder and use `rm -rf data.mdb` and `rm -rf lock.mdb` to delete the files. Now, use `cd ~' to move back into the home directory and run the command `mdb_load -f backup.txt -s -T ~/.moonraker_database` to forcefully load the database file into Moonraker. After that's done, use `sudo service moonraker restart` and check everything is working in Mainsail/Fluidd.
+SSH into **NEW.local** and remove the files inside `.moonraker_database` by using `cd .moonraker_database` to move into the folder and use `rm -rf data.mdb` and `rm -rf lock.mdb` to delete the files. Now, use `cd ~` to move back into the home directory and run the command `mdb_load -f backup.txt -s -T ~/.moonraker_database` to forcefully load the database file into Moonraker. After that's done, use `sudo service moonraker restart` and check everything is working in Mainsail/Fluidd.
 
 This is a fix that worked for me, I'm not responsible for any lost data that may occur while following this guide.
 
