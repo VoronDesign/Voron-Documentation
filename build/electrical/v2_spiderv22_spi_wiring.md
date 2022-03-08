@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, located at the positions as shown below.
+Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, located at the positions as shown below.
 
 ![](./images/FYSETC_Spider_V2.2_PREP-Removal_150.png)
 
@@ -33,7 +33,6 @@ Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, loc
 * <span style="text-decoration: red double underline; color: red;">IMPORTANT:</span> **Double check all the** <span style="color: #61d745;">GREEN</span> **jumpers and the WIRE jumper, before the power supply is connected, to ensure these jumpers and wire jumper are set appropriately.**
 
 ### FAN Voltage Selection Diagram
-<br>
 <br>
 ![](./images/FYSETC_Spider_V2.2_inSPIMode_VoltageSelect_150.png)
 
@@ -72,7 +71,9 @@ Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, loc
 ## MCU Wiring Diagram for SPI Mode
 <br>
 ![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_SPI_mode_150.jpg)
+## Download MCU Wiring Diagram for SPI Mode
 
+* Downloadable Fysetc Spider V2.2 Wiring Diagram diagram in .jpg format is [located here](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_SPI_mode_150.jpg)
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 ### MCU in SPI Mode with Heat Sinks Installed
@@ -95,6 +96,8 @@ Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, loc
 * Wire colors will vary depending on your location.
 
 ![](./images/fysetc-spiderv2.2inSPI-ssr-wiring_150.png)
+
+* Downloadable SSR Wiring Diagram for the Fysetc Spider V2.2 board in SPI mode (.jpg format) is [located here](./images/fysetc-spiderv2.2inSPI-ssr-wiring_150.png)
 <br>
 ## mini 12864 Display
 
@@ -129,7 +132,9 @@ For reference, here is the Color PIN diagram for the Fysetc Spider V2.2
 
 ## Original Fysetc Spider V2.2 Pinout
 
-For reference, here is the original pinout of the Fysetc Spider V1.0-V2.2
+For reference, here is the original pinout of the Fysetc Spider V2.2
+
+* Note: the original Fysetc Spider V2.2 Pinout is known to have errors. If you see a conflict between the original pinout and any other source, please refer back to the [Fysetc Spider V2.2 schematic diagram](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/hardware/Spider%20V2.2%20SCH.pdf)
 
 ![](./images/Spider_V2.2_Pinout_150.jpg)
 
