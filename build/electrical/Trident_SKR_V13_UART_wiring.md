@@ -94,17 +94,23 @@ For reference, here is the Color PIN diagram for the SKR V1.3
 
 * Downloadable BTT SKR V1.3 Color PIN diagram in .jpg format is [located here](./images/SKRV1.3_Colored_PIN_Diagram_300.jpg)
 
-{% assign colorfilename = "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" %}
+{% comment %} 
+    The .PDF file will not receive a public URL until web page is deployed.
+    The public Jupyter Notebook's "nbviewer" process only accepts 
+    "public URLs" for .pdf files as an input parameter.
+    Only call the Jupyter Notebook's nbviewer process when you are not running this web page locally.
+{% endcomment %}
 
+{% assign colorfilename = "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" %}
 {% assign nbviewer_url = "https://nbviewer.org/github/VoronDesign/Voron-Documentation/" %}
 
 {% if site.url == "http://localhost:4000" %}
 
-* Downloadable and LOCAL ZOOM capable web display for BTT SKR V1.3 Color PIN diagram is [located here]({{ "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" | prepend:site.url }})
+* Downloadable and LOCAL ZOOM capable web display for BTT SKR V1.3 Color PIN diagram is [located here]({{ "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" | prepend:site.url }}) 
 
 {% else %}
 
-* Downloadable and ZOOM capable web display for BTT SKR V1.3 Color PIN diagram is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }})
+* Downloadable and ZOOM capable web display for BTT SKR V1.3 Color PIN diagram is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }}) 
 
 {% endif %}
 
