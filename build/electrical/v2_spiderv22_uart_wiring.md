@@ -71,9 +71,8 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 ## MCU Wiring Diagram for UART Mode
 <span> <br> </span>
 ![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_UART_mode_150.jpg)
-## Download MCU Wiring Diagram for UART Mode
 
-* Downloadable Fysetc Spider V2.2 Wiring Diagram diagram in .jpg format is [located here](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_UART_mode_150.jpg)
+* <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">Downloadable Fysetc Spider V2.2 Wiring Diagram diagram in .jpg format is [located here](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_UART_mode_150.jpg)</span>
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
@@ -122,25 +121,42 @@ For reference, here is the Color PIN diagram for the Fysetc Spider V2.2
 
 * Downloadable Fysetc Spider V2.2 Color PIN diagram in .jpg format is [located here](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.jpg)
 
+{% comment %} 
+    The .PDF file will not receive a public URL until web page is deployed.
+
+    The public Jupyter Notebook's "nbviewer" process only accepts 
+
+    "public URLs" for .pdf files as an input parameter.
+
+    Only call the Jupyter Notebook's nbviewer process when you are not running this web page locally.
+
+{% endcomment %}
+
 {% assign colorfilename = "/build/electrical/images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.pdf" %}
 
 {% assign nbviewer_url = "https://nbviewer.org/github/VoronDesign/Voron-Documentation/" %}
 
 {% if site.url == "http://localhost:4000" %}
+
 * Downloadable and LOCAL ZOOM capable web display for Fysetc Spider V2.2 Color PIN diagram is [located here]({{ "/build/electrical/images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.pdf" | prepend:site.url }})
+
 {% else %}
+
 * Downloadable and ZOOM capable web display for Fysetc Spider V2.2 Color PIN diagram is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }})
+
 {% endif %}
 
 ## Original Fysetc Spider V2.2 Pinout
-
+<span> <br> </span>
 For reference, here is the original pinout of the Fysetc Spider V2.2
 
 * Note: the original Fysetc Spider V2.2 Pinout is known to have errors. If you see a conflict between the original pinout and any other source, please refer back to the [Fysetc Spider V2.2 schematic diagram](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/hardware/Spider%20V2.2%20SCH.pdf)
+<span> <br> </span>
 
 ![](./images/Spider_V2.2_Pinout_150.jpg)
 
 ### The Fysetc's GitHub Repo for the Spider V2.2 board
 
 * Fysetc's documentation for Spider V1.0-V2.2 board is [located here](https://github.com/FYSETC/FYSETC-SPIDER)
+
 * Downloadable and ZOOM capable web display for Fysetc's Spider V2.2 original pinout diagram is [located here](http://nbviewer.jupyter.org/github/FYSETC/FYSETC-SPIDER/blob/main/Spider_V2.2_Pinout.pdf)
