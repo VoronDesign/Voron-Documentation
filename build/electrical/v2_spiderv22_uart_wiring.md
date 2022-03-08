@@ -122,6 +122,7 @@ For reference, here is the Color PIN diagram for the Fysetc Spider V2.2
 * Downloadable Fysetc Spider V2.2 Color PIN diagram in .jpg format is [located here](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.jpg)
 
 {% comment %} 
+
     The .PDF file will not receive a public URL until web page is deployed.
 
     The public Jupyter Notebook's "nbviewer" process only accepts 
