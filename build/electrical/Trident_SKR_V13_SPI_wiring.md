@@ -69,8 +69,6 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 ![](./images/Trident_SKR_V13_in_SPI_mode_Heatsinks2_150.png)
 
-{{ "hello" }}
-
 ## SSR Wiring
 
 * Wire colors will vary depending on your location.
