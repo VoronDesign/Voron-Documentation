@@ -8,13 +8,13 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-Remove all the YELLOW on-board jumpers, located at the positions as shown below.
+Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers, located at the positions as shown below.
 
 ![](./images/SKR_V1.3_PREP-Removal_150.png)
 
 ## Initial Preparation - Set Jumpers
 
-* Set the on-board jumpers, located at the positions as shown by the GREEN jumpers in the below diagram:
+* Set the on-board jumpers, located at the positions as shown by the <span style="color: #5ce75a;">GREEN</span> jumpers in the below diagram:
 
 ![](./images/SKR_V1.3_in_UART_mode_PREP_150.png)
 
@@ -57,9 +57,11 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 ### MCU X/Y/E, Hot End with Heat Sinks Installed
+<br>
 ![](./images/SKR_V1.3_in_UART_mode_Heatsinks1_150.png)
 
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
+<br>
 ![](./images/Trident_SKR_V1.3_in_UART_Mode_Heatsinks2_150.png)
 
 ## SSR Wiring
@@ -67,15 +69,18 @@ Remove all the YELLOW on-board jumpers, located at the positions as shown below.
 * Wire colors will vary depending on your location.
 
 ![](./images/btt-SKRV1.3inUART-ssr-wiring.png)
-<br>
+
+* Downloadable SSR Wiring Diagram for the BTT SKR V1.3 board in UART mode (.jpg format) is [located here](./images/btt-SKRV1.3inUART-ssr-wiring.png)
 <br>
 ## mini 12864 Display
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
-<!--### The Klipper Configuration file for SKR V1.3 board 
+{% comment %}
+    ### The Klipper Configuration file for SKR V1.3 board 
 
-The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)-->
+    The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
 
+{% endcomment %}
 ## Color PIN Diagram for SKR V1.3
 For reference, here is the Color PIN diagram for the SKR V1.3
 
