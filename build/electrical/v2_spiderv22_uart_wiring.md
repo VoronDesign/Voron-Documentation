@@ -33,7 +33,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 * <span style="text-decoration: red double underline; color: red;">IMPORTANT:</span> **Double check all the** <span style="color: #61d745;">GREEN</span> **jumpers and the WIRE jumper, before the power supply is connected, to ensure these jumpers and wire jumper are set appropriately.**
 
 ### FAN Voltage Selection Diagram
-<br>
+<span> <br> </span>
 ![](./images/FYSETC_Spider_V2.2_inUARTMode_VoltageSelect_150.png)
 
 ## Stepper Drivers
@@ -69,15 +69,16 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 * if using a <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">mini12864 display</span>, connect to <span style="text-shadow: 2px 2px 5px #2bb5e3; font-size: 125%;">EXP1 & EXP2</span>, only after completing the steps <span style="text-shadow: 2px 2px 5px #d38aa8; font-size: 125%;">shown [below](#mini-12864-display)</span>
 
 ## MCU Wiring Diagram for UART Mode
-<br>
+<span> <br> </span>
 ![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_UART_mode_150.jpg)
 ## Download MCU Wiring Diagram for UART Mode
 
 * Downloadable Fysetc Spider V2.2 Wiring Diagram diagram in .jpg format is [located here](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_UART_mode_150.jpg)
+
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 ### MCU in UART Mode with Heat Sinks Installed
-<br>
+<span> <br> </span>
 ![](./images/FYSETC_Spider_v2.2_UARTmodeHeatsinks_150.png)
 
 ## Raspberry Pi
@@ -98,7 +99,8 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 ![](./images/fysetc-spiderv2.2inUART-ssr-wiring_150.png)
 
 * Downloadable SSR Wiring Diagram for the Fysetc Spider V2.2 board in UART mode (.jpg format) is [located here](./images/fysetc-spiderv2.2inUART-ssr-wiring_150.png)
-<br>
+<span> <br> </span>
+
 ## mini 12864 Display
 
 * *spider Rev 1.0 only*: the EXP1 & EXP2 header labels are swapped. Connect  EXP1 (display) to EXP2(spider), and EXP2 (display) to EXP1 (spider).  On the Spider 1.1 or later: connect EXP1->EXP1, and EXP2->EXP2
@@ -107,7 +109,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
 ### The Klipper Configuration file for Fysetc Spider V2.2 Board 
-<br>
+<span> <br> </span>
 The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc Spider V2.2 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/Spider/Voron2_Spider_Config.cfg)
 
 ## Color PIN Diagram for Fysetc Spider V2.2
