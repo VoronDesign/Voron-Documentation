@@ -1,22 +1,40 @@
 ---
 layout: default
-title: "Voron V2 - Fysetc Spider V2.2 Wiring in SPI Mode"
+title: "Voron V2 - Fysetc Spider V1.0-V2.0 Wiring in SPI Mode"
 nav_exclude: true
 ---
 
-# Voron V2 - Fysetc Spider V2.2 Wiring in SPI Mode
+# Voron V2 - Fysetc Spider V1.0-V2.0 Wiring in SPI Mode
 
 ## Initial Removal of Jumpers
 
-Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, located at the positions as shown below.
+* Remove **all** the <span style="color: #fac052;">YELLOW</span> on-board jumpers, located at the positions as shown below.
 
-![](./images/FYSETC_Spider_V2.2_PREP-Removal_150.png)
+* Note: The Fysetc Spider V1.0 board has jumpers located inside the endstop connectors, remove them.
+
+![](./images/FYSETC_Spider_V1.0_PREP-Removal_150.png)
 
 ## Initial Preparation - Set Jumpers
 
 * Set the on-board jumpers, located at the positions as shown by the <span style="color: #61d745;">GREEN</span> jumpers in the below diagram:
 
-![](./images/FYSTEC_Spider_V2.2_in_SPI_mode_PREP_150.png)
+![](./images/FYSETC_Spider_V1.0_in_SPI_mode_PREP_150.jpg)
+
+### FAN Voltage Selection
+
+* In the diagram below, the <span style="color: #00aeef;">BLUE boxes</span> indicate the headers with <span style="color: #61d745;">GREEN</span> jumpers which are set for 24VDC.
+
+* In the diagram below, the <span style="color: #cc333f;">RED box</span> indicates the RGB Block header's Jumper is not present, but this header can be used to run fans. Other headers that can be used with fans (as shown by a <span style="color: #00aeef;">BLUE box</span>) have their Fan Voltage Selections headers which are located below the FAN0, FAN1 and FAN2 connectors.
+
+* In the diagram below, the <span style="color: #00aeef;">BLUE box</span> to the right of Z- connector, is the header for setting the PROBE voltage. The jumper sets the PROBE voltage for 24VDC.  If a PROBE voltage of 5V is desired, this jumper needs to be changed.
+
+* <span style="text-decoration: red double underline; color: red;">IMPORTANT:</span> **If fans that use 5VDC or 12VDC are used, please take** <span style="color: red;">NOTE</span> **of these fan voltage selection headers and set the fan voltage selection header's jumpers to the appropriate position so that the correct fan voltage will be produced to run the 5VDC or 12VC fan.  If the fan voltage selection jumper is set for 24VDC and a 5VDC/12VDC fan is connected to it, the Fysetc Spider board will be damaged.** 
+
+* <span style="text-decoration: red double underline; color: red;">IMPORTANT:</span> **Double check all the** <span style="color: #61d745;">GREEN</span> **jumpers, before the power supply is connected, to ensure these jumpers are set appropriately.**
+
+#### FAN Voltage Selection Diagram
+<br>
+![](./images/FYSETC_Spider_V1.0_inSPIMode_VoltageSelect_150.png)
 
 ## Stepper Drivers
 * If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
@@ -51,12 +69,18 @@ Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, loc
 * if using a <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">mini12864 display</span>, connect to <span style="text-shadow: 2px 2px 5px #2bb5e3; font-size: 125%;">EXP1 & EXP2</span>, only after completing the steps <span style="text-shadow: 2px 2px 5px #d38aa8; font-size: 125%;">shown [below](#mini-12864-display)</span>
 
 ## MCU Wiring Diagram for SPI Mode
-![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V2.2_in_SPI_mode_150.jpg)
+<br>
+![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_SPI_mode_150.jpg)
+
+## Download MCU Wiring Diagram for SPI Mode
+
+* Downloadable Fysetc Spider V1.0 Wiring Diagram diagram in .jpg format is [located here](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_SPI_mode_150.jpg)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 ### MCU in SPI Mode with Heat Sinks Installed
-![](./images/FYSETC_Spider_v2.2_SPImodeHeatsinks_150.png)
+<br>
+![](./images/FYSETC_Spider_V1.0_in_SPI_mode_Heatsinks_150.png)
 
 ## Raspberry Pi
 
@@ -73,10 +97,10 @@ Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, loc
 
 * Wire colors will vary depending on your location.
 
-![](./images/fysetc-spiderv2.2inSPI-ssr-wiring_150.png)
-<br>
-<br>
+![](./images/fysetc-spiderv1.0inSPI-ssr-wiring_150.png)
 
+* Downloadable SSR Wiring Diagram for the Fysetc Spider V1.0 board in SPI mode (.jpg format) is [located here](./images/fysetc-spiderv1.0inSPI-ssr-wiring_150.png)
+<br>
 ## mini 12864 Display
 
 * *spider Rev 1.0 only*: the EXP1 & EXP2 header labels are swapped. Connect  EXP1 (display) to EXP2(spider), and EXP2 (display) to EXP1 (spider).  On the Spider 1.1 or later: connect EXP1->EXP1, and EXP2->EXP2
@@ -84,36 +108,39 @@ Remove all the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, loc
 * *BTT mini12864 only* remove components R1, and C6, and rotate the connectors 180 degrees
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
-### The Klipper Configuration file for Fysetc Spider V2.2 Board 
+### The Klipper Configuration file for Fysetc Spider V1.0 Board 
+<br>
+The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc Spider V1.0 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/Spider/Voron2_Spider_Config.cfg)
 
-The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc Spider V2.2 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/Spider/Voron2_Spider_Config.cfg)
+## Color PIN Diagram for Fysetc Spider V1.0
 
-## Color PIN Diagram for Fysetc Spider V2.2
-For reference, here is the Color PIN diagram for the Fysetc Spider V2.2
+For reference, here is the Color PIN diagram for the Fysetc Spider V1.0
 
-![](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.jpg)
+![](./images/FYSETC_Spider_V1.0_V1.1_V2.0_Color_PIN_diagram_300.jpg)
 
-* Downloadable Fysetc Spider V2.2 Color PIN diagram in .pdf format is [located here](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.pdf)
+* Downloadable Fysetc Spider V1.0 Color PIN diagram in .pdf format is [located here](./images/FYSETC_Spider_V1.0_V1.1_V2.0_Color_PIN_diagram_300.pdf)
 
-* Downloadable Fysetc Spider V2.2 Color PIN diagram in .jpg format is [located here](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.jpg)
+* Downloadable Fysetc Spider V1.0 Color PIN diagram in .jpg format is [located here](./images/FYSETC_Spider_V1.0_V1.1_V2.0_Color_PIN_diagram_300.jpg)
 
-{% assign colorfilename = "/build/electrical/images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.pdf" %}
+{% assign colorfilename = "/build/electrical/images/FYSETC_Spider_V1.0_V1.1_V2.0_Color_PIN_diagram_300.pdf" %}
 
 {% assign nbviewer_url = "https://nbviewer.org/github/VoronDesign/Voron-Documentation/" %}
 
 {% if site.url == "http://localhost:4000" %}
-* Fysetc Spider V2.2 Color PIN diagram with Local ZOOM capability is [located here]({{ "/build/electrical/images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.pdf" | prepend:site.url }})
+* Downloadable and LOCAL ZOOM capable web display for Fysetc Spider V1.0 Color PIN diagram is [located here]({{ "/build/electrical/images/FYSETC_Spider_V1.0_V1.1_V2.0_Color_PIN_diagram_300.pdf" | prepend:site.url }})
 {% else %}
-* Fysetc Spider V2.2 Color PIN diagram with ZOOM capability is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }})
+* Downloadable and ZOOM capable web display for Fysetc Spider V1.0 Color PIN diagram is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }})
 {% endif %}
 
-## Original Fysetc Spider V2.2 Pinout
+## Original Fysetc Spider V1.0 Pinout
 
-For reference, here is the original pinout of the Fysetc Spider V1.0-V2.2
+For reference, here is the original pinout of the Fysetc Spider V1.0
 
-![](./images/Spider_V2.2_Pinout_150.jpg)
+* Note: the original Fysetc Spider V1.0 Pinout is known to have errors. If you see a conflict between the original pinout and any other source, please refer back to the [Fysetc Spider V1.0 schematic diagram](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/hardware/Spider%20V1.0C%20SCH.pdf)
 
-### The Fysetc's GitHub Repo for the Spider V2.2 board
+![](./images/fysetcSpider_V1.0_Pinout_150.png)
+
+### The Fysetc's GitHub Repo for the Spider V1.0-V2.2 board
 
 * Fysetc's documentation for Spider V1.0-V2.2 board is [located here](https://github.com/FYSETC/FYSETC-SPIDER)
-* Fysetc's Spider V2.2 original pinout with ZOOM capability is [located here](http://nbviewer.jupyter.org/github/FYSETC/FYSETC-SPIDER/blob/main/Spider_V2.2_Pinout.pdf)
+* Downloadable and ZOOM capable web display for Fysetc's Spider V1.0 original pinout diagram is [located here](http://nbviewer.jupyter.org/github/FYSETC/FYSETC-SPIDER/blob/main/images/Spider_V1.0_Pinout.jpg)
