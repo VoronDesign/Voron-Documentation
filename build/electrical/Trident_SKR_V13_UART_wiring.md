@@ -71,16 +71,19 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 ![](./images/btt-SKRV1.3inUART-ssr-wiring.png)
 
 * Downloadable SSR Wiring Diagram for the BTT SKR V1.3 board in UART mode (.jpg format) is [located here](./images/btt-SKRV1.3inUART-ssr-wiring.png)
-<br>
+<span> <br> </span>
 ## mini 12864 Display
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
-{% comment %}
-    ### The Klipper Configuration file for SKR V1.3 board 
+<div> 
 
-    The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
+<!--### The Klipper Configuration file for SKR V1.3 board 
 
-{% endcomment %}
+The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
+--> 
+
+</div>
+
 ## Color PIN Diagram for SKR V1.3
 For reference, here is the Color PIN diagram for the SKR V1.3
 
