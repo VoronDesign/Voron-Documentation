@@ -96,12 +96,17 @@ For reference, here is the Color PIN diagram for the SKR V1.3
 
 {% comment %} 
     The .PDF file will not receive a public URL until web page is deployed.
+
     The public Jupyter Notebook's "nbviewer" process only accepts 
+
     "public URLs" for .pdf files as an input parameter.
+
     Only call the Jupyter Notebook's nbviewer process when you are not running this web page locally.
+    
 {% endcomment %}
 
 {% assign colorfilename = "/build/electrical/images/SKRV1.3_Colored_PIN_Diagram.pdf" %}
+
 {% assign nbviewer_url = "https://nbviewer.org/github/VoronDesign/Voron-Documentation/" %}
 
 {% if site.url == "http://localhost:4000" %}
