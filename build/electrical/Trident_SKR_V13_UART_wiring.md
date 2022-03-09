@@ -20,8 +20,8 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 ## MCU X/Y/E, Hot End in UART Mode
 
-* Place stepper drivers for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E0</span>
-* Plug in stepper motors for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E0</span>
+* Place <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper drivers</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E0</span>
+* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motors</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, and E0</span>
 * Plug <span style="text-shadow: 2px 2px 5px #dcc623; font-size: 125%;">Hot End thermistor</span> to <span style="text-shadow: 2px 2px 5px #00ff00; font-size: 125%;">thermistor TH0 (P0.24)</span>
 * Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End heater</span> in to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">HE0 (P2.7)</span>
 * Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End Fan</span> in to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">HE1 (P2.4)</span>
@@ -39,8 +39,8 @@ Remove **all** the <span style="color: #e6e114;">YELLOW</span> on-board jumpers,
 
 ## MCU Z, Bed, Exhaust Fan in UART Mode
 
-* Place stepper drivers for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Z2, Z1, and Z0</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">X, Z, and E1</span>
-* Plug in stepper motors for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Z2, Z1, and Z0</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">X, Z, and E1</span>
+* Place <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper drivers</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Z2, Z1, and Z0</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">X, Z, and E1</span>
+* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motors</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Z2, Z1, and Z0</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">X, Z, and E1</span>
 * Plug <span style="text-shadow: 2px 2px 5px #a286c0; font-size: 125%;">Bed Thermistor</span> in to <span style="text-shadow: 2px 2px 5px #0c7b84; font-size: 125%;">TB (P0.23)</span>
 * Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Exhaust Fan</span> in to <span style="text-shadow: 2px 2px 5px #0e7a86; font-size: 125%;">H-BED (P2.5)</span>
 * Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Controller Fans</span> in to <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">FAN (P2.3)</span>
