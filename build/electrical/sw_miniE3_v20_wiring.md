@@ -29,7 +29,7 @@ nav_exclude: true
 * Connect <span style="text-shadow: 2px 2px 5px #e45223; font-size: 125%;">Y end stop</span> to <span style="text-shadow: 2px 2px 5px #71b05f; font-size: 125%;">Y-STOP connector</span>
 * Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Probe GND and Signal (with BAT85 diode)</span> in to <span style="text-shadow: 2px 2px 5px #710aef; font-size: 125%;">Z-STOP</span>
 * Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Probe +V (Probe Voltage)</span> to <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">VIN in terminal on the "DCOUT" connector</span> next to HB
-* Wire <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">24V and -V</span> from DC power supply to VIN and GND terminals in corner on the "DCIN (Power In)" connector</span>
+* Wire <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">24V and -V</span> from DC power supply to <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">VIN and GND terminals in corner on the "DCIN (Power In)" connector</span>
 * Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">USB Cable</span> to your SKR mini E3, <span style="text-shadow: 0 0 3px #FF0000; font-size: 125%;">but do not connect it yet to your Raspberry Pi</span>
 
 ### MCU Diagram
