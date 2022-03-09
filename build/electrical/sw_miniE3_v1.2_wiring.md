@@ -21,7 +21,7 @@ nav_exclude: true
 
 ## MCU
 
-* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motors</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, Z, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Xm, Ym, ZAm, and Em</span>
+* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motors</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, Z, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Xm, Ym, Zm, and Em</span>
 * Plug <span style="text-shadow: 2px 2px 5px #dcc623; font-size: 125%;">Hot End thermistor</span> to <span style="text-shadow: 2px 2px 5px #00ff00; font-size: 125%;">thermistor TH0</span>
 * Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End heater</span> in to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">E0</span>
 * Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End Fan Signal</span> into <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">PT-DET's Signal PIN</span>
