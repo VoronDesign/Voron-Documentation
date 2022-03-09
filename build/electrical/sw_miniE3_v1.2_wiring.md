@@ -54,6 +54,7 @@ The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for
 -->
 
 </div>
+
 ## Color PIN Diagram for SKR Mini E3 V1.2
 
 For reference, here is the Color PIN diagram for the SKR mini E3 V1.2
