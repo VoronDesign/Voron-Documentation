@@ -83,7 +83,7 @@ For reference, here is the Color PIN diagram for the SKR mini E3 V1.2
 
 {% if site.url == "http://localhost:4000" %}
 
-* Downloadable and LOCAL ZOOM capable web display for BTT SKR Mini E3 V1.2 Color PIN diagram is [located here]({{ "/build/electrical/images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.pdf" | prepend:site.url }}) 
+* Downloadable and LOCAL ZOOM capable web display for BTT SKR Mini E3 V1.2 Color PIN diagram is [located here]({{ colorfilename | prepend:site.url }}) 
 
 {% else %}
 
