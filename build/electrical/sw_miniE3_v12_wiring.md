@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-* There is only one jumper on the SKR mini E3 V1.2 board.  This jumper is will be set in the next step.
+* There is only one jumper on the SKR mini E3 V1.2 board.  This jumper will be set in the next step.
 
 ## Initial Preparation
 
