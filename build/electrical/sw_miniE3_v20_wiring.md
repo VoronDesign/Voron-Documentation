@@ -12,7 +12,7 @@ nav_exclude: true
 
 ## Initial Preparation
 
-* Set the on-board jumpers, located at the positions as shown by the <span style="color: #5ce75a;">GREEN</span> jumpers in the below diagram:
+* Set the on-board jumper, located at the position as shown by the <span style="color: #5ce75a;">GREEN</span> jumper in the below diagram:
 
 ![](./images/PREP_SKR_mini_E3_V2.0_150.png)
 
