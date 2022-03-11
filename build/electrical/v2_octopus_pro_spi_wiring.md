@@ -10,7 +10,28 @@ nav_exclude: true
 
 Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, located at the positions shown below.
 
-[![](./images/Octopus_Pro_PREP-Removal_150.png)](./images/Octopus_Pro_PREP-Removal_150.png)
+<div>
+
+<!--
+To be able to supply the Voron user and Voron Helper staff with an easy access LINK for all diagrams, I tested
+a couple of different methods.  I found one method that allowed the user to left-click on the diagram
+and it would open the diagram up in the web browser. I choose to not use this method because ther would be
+a lot of Voron users who probably would activate this by accident and then not beable to get themselves back.
+
+The method I choose was one that will display the LINK symbol to the left of the diagram and without adding
+any title text. I ended up using header 6 with a blank title and then I use a Kramdown Syntax for specifying
+a Header ID.
+
+If I use the GFM Parser for creating a header anchor with an empty title the static web page produced
+DOES NOT show the LINK symbol to the left of the diagram. The Link is setup but only I can use it in the 
+web page code. An outside Voron Helper could not access the Link Address.  The GFM Parser syntax for "header anchors" forces you to use a text in the title.  If you use a title text then the LINK symbol will be generated.
+
+But with further reading I found that Kramdown Parser does allow a "title text of empty" which produces the LINK symbol to the left of the diagram and generates the LINK address that Voron Users and Voron Helpers can access by right-clicking on the LINK symbol. The documentation for this can be found at https://kramdown.gettalong.org/syntax.html#headers ; look for "Specifying a Header ID"
+-->
+
+</div>
+
+###### ![](./images/Octopus_Pro_PREP-Removal_150.png) {#Octopus_Pro_PREP-Removal_SPI}
 
 ## Initial Preparation - Set Jumpers
 
@@ -20,7 +41,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 
 * Ensure the removal of the USB 5V power supply jumper ("Power Selection Jumper") which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
-[![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png)](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png)
+###### ![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png) {#Octopus_Pro_F446_SPI_Mode_for_Prep}
 <span> <br> </span>
 <span> <br> </span>
 
@@ -47,7 +68,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
 <span> <br> </span>
 
-[![](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png)](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png)
+###### ![](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png) {#Octopus_Pro_F446_SPI_VoltageSelect}
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
@@ -88,7 +109,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 ## MCU Wiring Diagram for SPI Mode
 <span> <br> </span>
 
-[![](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg)](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg)
+###### ![](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg) {#Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI}
 
 * <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">Downloadable BTT Octopus Pro V1.0 Wiring Diagram in .jpg format is [located here](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg)</span>
 
@@ -97,7 +118,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 ### MCU in SPI Mode with Heat Sinks Installed
 <span> <br> </span>
 
-[![](./images/Octopus_Pro_SPI_Heatsinks_150.png)](./images/Octopus_Pro_SPI_Heatsinks_150.png)
+###### ![](./images/Octopus_Pro_SPI_Heatsinks_150.png) {#Octopus_Pro_SPI_Heatsinks}
 
 ## Raspberry Pi
 
@@ -106,26 +127,26 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 * Use at least 24awg wire for this connection.  It may be tempting to use the common "Dupont" jumpers found in many electronics kits, however these jumpers typically use very small gauge wire, and will not carry enough current to run the Pi.
 * Tie all the DC 0V (typically labelled V-) lines for all the DC power supplies together to ensure that all power supplies have the same voltage reference.
 
-[![](./images/v2_octopus_pro_pi_onlyPWR.png)](./images/v2_octopus_pro_pi_onlyPWR.png)
+###### ![](./images/v2_octopus_pro_pi_onlyPWR.png) {#v2_octopus_pro_pi_onlyPWR_2}
 
 ### Connection Using Separate Power Supply
 * To reduce the current load on the 5V rail of the Octopus Pro board, the Raspberry Pi can be powered by an independent power supply.
 * Use at least 24awg wire for V+ and GND connections to the Pi's power supply
 * Tie all the DC 0V (typically labelled V-) lines for all the DC power supplies together to ensure that all power supplies have the same voltage reference.
 
-[![](./images/v2_octopus_Pro_to_PI_UART.png)](./images/v2_octopus_Pro_to_PI_UART.png)
+###### ![](./images/v2_octopus_Pro_to_PI_UART.png) {#v2_octopus_Pro_to_PI_UART_2}
 
 ### Control
 * Voron Design recommends using USB to control the Octopus Pro, which simply requires connecting a USB-A to USB-C cable between the Octopus Pro and Pi. 
 * The option also exists to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the wiring diagram located above in [Connection Using Separate Power Supply](#connection-using-separate-power-supply) and use the instructions below on the Raspberry Pi.  You will want to perform the instructions below **after Mailsail/Fluidd is installed on the Raspberry Pi.**
 
-[![](./images/ConnectPitoMCU-Instructions.png)](./images/ConnectPitoMCU-Instructions.png))
+###### ![](./images/ConnectPitoMCU-Instructions.png)] {#ConnectPitoMCU-Instructions_2}
 
 ## SSR Wiring
 
 * Wire colors will vary depending on your locale.
 
-[![](./images/BTTOctopus_Pro-ssr-SPI-wiring.png)](./images/BTTOctopus_Pro-ssr-SPI-wiring.png)
+###### ![](./images/BTTOctopus_Pro-ssr-SPI-wiring.png) {#BTTOctopus_Pro-ssr-SPI-wiring}
 
 * Downloadable SSR Wiring Diagram for the BTT Octopus Pro V1.0 board in SPI mode (.jpg format) is [located here](./images/BTTOctopus_Pro-ssr-SPI-wiring.png)
 
@@ -141,7 +162,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 
 For reference, here is the Color PIN diagram for the BTT Octopus Pro V1.0
 
-[![](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg)](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg)
+###### ![](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg) {#BTT-Octopus-Pro-V1.0-color-PIN_2}
 
 * Downloadable BTT Octopus Pro V1.0 Color PIN diagram in .pdf format is [located here](./images/BTT-Octopus-Pro-V1.0-Color-PIN-V3.0.pdf)
 
@@ -167,7 +188,7 @@ For reference, here is the original pinout of the BTT Octopus Pro V1.0
 
 * Note: If you see a conflict between the original pinout and any other source, please refer back to the [BTT Octopus Pro V1.0 schematic diagram](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro/blob/master/Hardware/BIGTREETECH%20Octopus%20Pro_SCH.pdf)
 
-[![](./images/BIGTREETECH_Octopus_Pro-PIN-original.jpg)](./images/BIGTREETECH_Octopus_Pro-PIN-original.jpg)
+###### ![](./images/BIGTREETECH_Octopus_Pro-PIN-original.jpg) {#BIGTREETECH_Octopus_Pro-PIN-original_2}
 
 ### The BTT's GitHub Repo for the Octopus Pro V1.0 board
 
