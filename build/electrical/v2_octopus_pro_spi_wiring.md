@@ -8,19 +8,19 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, located at the positions as shown below.
+Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers, located at the positions shown below.
 
-![](./images/Octopus_Pro_PREP-Removal_150.png)
+[![](./images/Octopus_Pro_PREP-Removal_150.png)](./images/Octopus_Pro_PREP-Removal_150.png)
 
 ## Initial Preparation - Set Jumpers
 
-* Set the on-board jumpers, located at the positions as shown by the <span style="color: #61d745;">GREEN</span> jumpers in the below diagram:
+* Set the on-board jumpers, located at the positions as shown by the <span style="color: #61d745;">GREEN</span> jumpers in the diagram below:
 
 * Ensure the jumpers of "DIAG Jumper Block" are all removed to avoid the influence of TMC2209 DIAG on the endstop.
 
-* Ensure the removal of the USB 5V power supply jumper ("Power Selection Jumper") to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+* Ensure the removal of the USB 5V power supply jumper ("Power Selection Jumper") which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
-![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png)
+[![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png)](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png)
 <span> <br> </span>
 <span> <br> </span>
 
@@ -32,7 +32,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 
     * <span style="text-decoration: red double underline; color: red;">IMPORTANT:</span> **If fans that use 5VDC or 12VDC are used, please take <span style="color: red;">NOTE</span> of these "fan voltage selection headers" and set the jumpers to the appropriate jumper position so that the correct fan voltage will be produced to run the 5VDC or 12VC fan.  If the fan voltage selection jumper is set for 24VDC and a 5VDC/12VDC fan is connected to it, the Octopus Pro board will be damaged.** 
 
-* In the diagram below, the <span style="color: #ff7a00;">ORANGE box</span> indicates the "probe voltage selection header" with a <span style="color: #61d745;">GREEN</span> jumper which is set for 24VDC. If a PROBE voltage of 5VDC or 12VDC is desired, this jumper needs to be changed. If the voltage required by the PROBE device does not match the voltage selected by the "probe voltage selection Jumper" than the Octopus Pro board could be damaged.
+* In the diagram below, the <span style="color: #ff7a00;">ORANGE box</span> indicates the "probe voltage selection header" with a <span style="color: #61d745;">GREEN</span> jumper which is set for 24VDC. If a PROBE voltage of 5VDC or 12VDC is desired, this jumper needs to be changed. If the voltage required by the PROBE device does not match the voltage selected by the "probe voltage selection Jumper" then the Octopus Pro board could be damaged.
 
 * In the diagram below, the <span style="color: #ff7a00;">ORANGE box made with a dash line</span> indicates the PT100/PT1000 DIP switches. The default setting of all the DIP switches is set to OFF. This default setting is undefined.  Therefore, **before you install the Octopus Pro board, a valid setting must be chosen.  Choose between a 2-wire or 4-wire arrangement: ([2-wire: 7, 11] or [4-wire: 4, 8])**
 
@@ -46,7 +46,8 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
 <span> <br> </span>
-![](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png)
+
+[![](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png)](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png)
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
@@ -86,7 +87,8 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 
 ## MCU Wiring Diagram for SPI Mode
 <span> <br> </span>
-![](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg)
+
+[![](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg)](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg)
 
 * <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">Downloadable BTT Octopus Pro V1.0 Wiring Diagram in .jpg format is [located here](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg)</span>
 
@@ -94,35 +96,36 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 
 ### MCU in SPI Mode with Heat Sinks Installed
 <span> <br> </span>
-![](./images/Octopus_Pro_SPI_Heatsinks_150.png)
+
+[![](./images/Octopus_Pro_SPI_Heatsinks_150.png)](./images/Octopus_Pro_SPI_Heatsinks_150.png)
 
 ## Raspberry Pi
 
 ### Power 
-* The Octopus Pro is capable of providing 5V power to run your Raspberry Pi.  To take advantage of this feature, connect the wires shown below, from the pi header of the Octopus Pro, to the GPIO header of the pi.
-* Use at least 24awg wire for this connection.  It may be tempting to use the common "Dupont" jumpers found in many electronics kits, however these jumpers typically use very small gauge wire, and will not carry enough current to run the pi.
+* The Octopus Pro is capable of providing 5V power to run your Raspberry Pi.  To take advantage of this feature, connect the wires as shown below, from the pi header of the Octopus Pro, to the GPIO header of the Pi.
+* Use at least 24awg wire for this connection.  It may be tempting to use the common "Dupont" jumpers found in many electronics kits, however these jumpers typically use very small gauge wire, and will not carry enough current to run the Pi.
 * Tie all the DC 0V (typically labelled V-) lines for all the DC power supplies together to ensure that all power supplies have the same voltage reference.
 
-![](./images/v2_octopus_pro_pi_onlyPWR.png)
+[![](./images/v2_octopus_pro_pi_onlyPWR.png)](./images/v2_octopus_pro_pi_onlyPWR.png)
 
 ### Connection Using Separate Power Supply
 * To reduce the current load on the 5V rail of the Octopus Pro board, the Raspberry Pi can be powered by an independent power supply.
 * Use at least 24awg wire for V+ and GND connections to the Pi's power supply
 * Tie all the DC 0V (typically labelled V-) lines for all the DC power supplies together to ensure that all power supplies have the same voltage reference.
 
-![](./images/v2_octopus_Pro_to_PI_UART.png)
+[![](./images/v2_octopus_Pro_to_PI_UART.png)](./images/v2_octopus_Pro_to_PI_UART.png)
 
 ### Control
 * Voron Design recommends using USB to control the Octopus Pro, which simply requires connecting a USB-A to USB-C cable between the Octopus Pro and Pi. 
-* The option does also exist to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the wiring diagram located above in [Connection Using Separate Power Supply](#connection-using-separate-power-supply) and use the below instruction on the Raspberry Pi.  You will want to perform the below instructions **after Mailsail/Fluidd is installed on the Raspberry Pi.**
+* The option also exists to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the wiring diagram located above in [Connection Using Separate Power Supply](#connection-using-separate-power-supply) and use the instructions below on the Raspberry Pi.  You will want to perform the instructions below **after Mailsail/Fluidd is installed on the Raspberry Pi.**
 
-![](./images/ConnectPitoMCU-Instructions.png)
+[![](./images/ConnectPitoMCU-Instructions.png)](./images/ConnectPitoMCU-Instructions.png))
 
 ## SSR Wiring
 
-* Wire colors will vary depending on your location.
+* Wire colors will vary depending on your locale.
 
-![](./images/BTTOctopus_Pro-ssr-SPI-wiring.png)
+[![](./images/BTTOctopus_Pro-ssr-SPI-wiring.png)](./images/BTTOctopus_Pro-ssr-SPI-wiring.png)
 
 * Downloadable SSR Wiring Diagram for the BTT Octopus Pro V1.0 board in SPI mode (.jpg format) is [located here](./images/BTTOctopus_Pro-ssr-SPI-wiring.png)
 
@@ -138,7 +141,7 @@ Remove **all** the <span style="color: #f4ed68;">YELLOW</span> on-board jumpers,
 
 For reference, here is the Color PIN diagram for the BTT Octopus Pro V1.0
 
-![](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg)
+[![](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg)](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg)
 
 * Downloadable BTT Octopus Pro V1.0 Color PIN diagram in .pdf format is [located here](./images/BTT-Octopus-Pro-V1.0-Color-PIN-V3.0.pdf)
 
@@ -164,7 +167,7 @@ For reference, here is the original pinout of the BTT Octopus Pro V1.0
 
 * Note: If you see a conflict between the original pinout and any other source, please refer back to the [BTT Octopus Pro V1.0 schematic diagram](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro/blob/master/Hardware/BIGTREETECH%20Octopus%20Pro_SCH.pdf)
 
-![](./images/BIGTREETECH_Octopus_Pro-PIN-original.jpg)
+[![](./images/BIGTREETECH_Octopus_Pro-PIN-original.jpg)](./images/BIGTREETECH_Octopus_Pro-PIN-original.jpg)
 
 ### The BTT's GitHub Repo for the Octopus Pro V1.0 board
 
@@ -174,6 +177,7 @@ For reference, here is the original pinout of the BTT Octopus Pro V1.0
 
 ## After I have Wired up the MCU Board, What Comes Next?<span> <br> </span>
 <span> <br> </span>
+
 ![](./images/VoronHex_Number_1_small.png)   Once the MCU board is wired up and wire management has been performed, the next step is to compile and install the Klipper Firmware, please see [The Build ═► Software Installation](../../build/software/#software-installation)
 
 ![](./images/VoronHex_Number_2_small.png)   Once the MCU board has the Klipper Firmware Installed, the next step is to edit the Klipper Config file (Voron2_Octopus_Config.cfg) to ensure your Voron build matches your Klipper Config file, please see [The Build ═► Software Configuration](../../build/software/configuration.html#software-configuration).  Please use the Color PIN Diagrams, [displayed above](#color-pin-diagram-for-btt-octopus-pro-v10), as a source of information. 
