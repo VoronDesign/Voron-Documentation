@@ -76,6 +76,20 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 ## MCU Wiring for UART Mode
 
+{% comment %}
+
+    For Admin of Voron DOCs site:
+
+    In this page the Boolean variable "UseColorText_forOctopusProV10_1" if set to 1 then the static web page will use the colorized text for the MCU descirption.
+
+    If you set "UseColorText_forOctopusProV10_1" to anything other than 1, like 0 then the static web page will use regular text for the MCU descirption
+
+{% endcomment %}
+
+{% assign UseColorText_forOctopusProV10_1 = 1 %}
+
+{% if UseColorText_forOctopusProV10_1 == 1 %}
+
 * Connect <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">24V and GND (V+ and V-)</span> from the PSU to <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">PWR</span> and <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">MOTOR_POWER</span>
 * Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper driver</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the B Motor (gantry left)</span> into position <span style="text-shadow: 2px 2px 5px #e35223; font-size: 125%;">DRIVER0</span>
 * Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motor</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the B Motor (gantry left)</span> into position <span style="text-shadow: 2px 2px 5px #e35223; font-size: 125%;">MOTOR0</span>
@@ -88,7 +102,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper driver</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the Z2</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">DRIVER4</span>
 * Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motor</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the Z2</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">MOTOR4</span>
 * Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper driver</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the Z3</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">DRIVER5</span>
-* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motor</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Z3</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">MOTOR5</span>
+* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motor</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the Z3</span> into positions <span style="text-shadow: 2px 2px 5px #700aea; font-size: 125%;">MOTOR5</span>
 * Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper driver</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the extruder motor</span> into position <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">DRIVER6</span>
 * Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motor</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the extruder motor</span> into position <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">MOTOR6</span>
 * Connect the <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">hot end heater</span> to <span style="text-shadow: 2px 2px 5px #e216d1; font-size: 125%;">HE0 (PA2)</span>
@@ -105,6 +119,40 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Connect the <span style="text-shadow: 2px 2px 5px #6c6b69; font-size: 125%;">signal wire on the PROBE</span> to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">STOP_7 (PG15)</span>
 * Connect the <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">V+ an 0V wires on the probe</span> to <span style="text-shadow: 2px 2px 5px #d38aa8; font-size: 125%;">PROBE</span>
 * if using a <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">mini12864 display</span>, connect to <span style="text-shadow: 2px 2px 5px #2bb5e3; font-size: 125%;">EXP1 & EXP2</span>, only after completing the steps <span style="text-shadow: 2px 2px 5px #d38aa8; font-size: 125%;">shown [below](#mini-12864-display)</span>
+
+{% else %}
+
+* Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER
+* Connect stepper driver for the B Motor (gantry left) into position DRIVER0
+* Plug in stepper motor for the B Motor (gantry left) into position MOTOR0
+* Connect stepper driver for the A Motor (gantry right) into position DRIVER1
+* Plug in stepper motor for the A Motor (gantry right) into position MOTOR1
+* Connect stepper driver for the Z into positions DRIVER2
+* Plug in stepper motor for the Z into positions MOTOR2_1
+* Connect stepper driver for the Z1 into positions DRIVER3
+* Plug in stepper motor for the Z1 into positions MOTOR3
+* Connect stepper driver for the Z2 into positions DRIVER4
+* Plug in stepper motor for the Z2 into positions MOTOR4
+* Connect stepper driver for the Z3 into positions DRIVER5
+* Plug in stepper motor for the Z3 into positions MOTOR5
+* Connect stepper driver for the extruder motor into position DRIVER6
+* Plug in stepper motor for the extruder motor into position MOTOR6
+* Connect the hot end heater to HE0 (PA2)
+* Connect the bed SSR (DC Control Side) to HE1 (PA3)
+* Connect the part cooling fan to FAN0 (PA8)
+* Connect the hot end fan to FAN1 (PE5)
+* Connect the controller fans to FAN2 (PD12)
+* Connect the chamber exhaust fan to FAN3 (PD13)
+* Connect the hot end thermistor to T0 (PF4)
+* Connect the bed thermistor to TB (PF3)
+* Connect the X endstop to STOP_0 (PG6)
+* Connect the Y endstop to STOP_1 (PG9)
+* Connect the Z endstop to STOP_2 (PG10)
+* Connect the signal wire on the PROBE to STOP_7 (PG15)
+* Connect the V+ an 0V wires on the probe to PROBE
+* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
+
+{% endif %}
 
 ## MCU Wiring Diagram for UART Mode
 <span> <br> </span>
@@ -157,6 +205,22 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 ## The Klipper Configuration file for BTT Octopus Pro V1.0 Board 
 
 * The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus Pro 1.0 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/Octopus/Voron2_Octopus_Config.cfg)
+
+## Testing
+
+* Downloadable and ZOOM capable web display for BTT's Octopus Pro V1.0 original pinout diagram:
+
+<div id="adobe-dc-view" style="width: 800px;"></div>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script type="text/javascript">
+	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+		var adobeDCView = new AdobeDC.View({clientId: "93f58236df344a629d139d565e526e15", divId: "adobe-dc-view"});
+		adobeDCView.previewFile({
+			content:{location: {url: "https://github.com/bigtreetech/github/bigtreetech/BIGTREETECH-OCTOPUS-Pro/blob/master/Hardware/BIGTREETECH%20Octopus%20Pro%20-%20PIN.pdf"}},
+			metaData:{fileName: "BIGTREETECH Octopus Pro - PIN.pdf"}
+		}, {embedMode: "IN_LINE"});
+	});
+</script>
 
 ## Color PIN Diagram for BTT Octopus Pro V1.0
 
