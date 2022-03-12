@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Voron V1.1 - Fysetc Spider Wiring"
+title: "Voron V2 - Fysetc Spider Wiring"
 nav_exclude: true
 ---
 
-# Voron V1.1 - Fysetc Spider Wiring
+# Voron V2 - Fysetc Spider V1.1 Wiring
 
 ## Initial Preparation
 
