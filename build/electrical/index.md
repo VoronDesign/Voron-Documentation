@@ -156,6 +156,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 ### Voron 1
 * [V1 - SKR 1.3](./v1_skr13_wiring.md)
 * [V1 - SKR 1.4](./v1_skr14_wiring.md)
+* [V1.1 - Fysetc Spider](./v2_spider_wiring.md)
 
 ### Trident
 * [Trident - BigTreeTech Octopus](./v2_octopus_wiring.md)
@@ -165,7 +166,6 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)
 * [V2 - SKR 1.4](./v2_skr14_wiring.md)
 * [V2 - FLYboard FLYF407ZG](./v2_flyf407zg_wiring.md)
-* [V2 - Fysetc Spider](./v2_spider_wiring.md)
 * [V2 - BigTreeTech Octopus](./v2_octopus_wiring.md)
 * [V2 - MKS Makerbase Monster8](./v2_monster8_wiring.md)
 
