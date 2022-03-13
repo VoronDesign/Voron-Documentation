@@ -121,7 +121,7 @@ For reference, here is the pinout of the Einsy Rambo
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/EinsyRambo11_Pinout.pdf>){:target="_blank" rel="noopener"}
 
-### RepRap Wiki page for Einsy Rambo
+## RepRap Wiki page for Einsy Rambo
 
 * RepRap's documentation for the Einsy Rambo board is [located here](https://reprap.org/wiki/EinsyRambo){:target="_blank" rel="noopener"}
 
