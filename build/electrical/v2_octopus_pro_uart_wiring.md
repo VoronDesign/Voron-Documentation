@@ -3,7 +3,6 @@ layout: default
 title: "Voron V2 - BTT Octopus Pro V1.0 (in UART Mode) Wiring"
 nav_exclude: true
 ---
-
 # Voron V2 - BTT Octopus Pro V1.0 (in UART Mode) Wiring
 
 ## Initial Removal of Jumpers
@@ -42,8 +41,6 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Ensure the removal of the USB 5V power supply jumper ("Power Selection Jumper") which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
 ###### ![](./images/Octopus_Pro_F446_UART_Mode_for_Prep_150.png) {#Octopus_Pro_F446_UART_Mode_for_Prep_150}
-<span> <br> </span>
-<span> <br> </span>
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
 
@@ -62,11 +59,8 @@ But with further reading I found that Kramdown Parser does allow a "title text o
     * <span style="text-decoration: red double underline; color: red;">IMPORTANT:</span> **If the motor power selection headers DO NOT match the voltage being supplied to the stepper driver, the Octopus Pro board will be damaged along with the stepper motor driver.  Set each of the motor power selection jumpers to the appropriate position so that the stepper driver _voltage needed, matches the PSU voltage selected_ by the motor power selection jumper. For example, If the stepper motor driver voltage is set for 48VDC and the actual stepper motor driver runs at 12VDC, the Octopus Pro board and the stepper motor driver will be damaged.**
 
 * <span style="text-decoration: red double underline; color: red;">IMPORTANT:</span> **Double check all the** <span style="color: #61d745;">GREEN</span> **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
-<span> <br> </span>
-<span> <br> </span>
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
-<span> <br> </span>
 
 ###### ![](./images/Octopus_Pro_F446_UART_VoltageSelect_150.png) {#Octopus_Pro_F446_UART_VoltageSelect}
 
@@ -86,7 +80,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 {% endcomment %}
 
-{% assign UseColorText_forOctopusProV10_1 = 1 %}
+{% assign UseColorText_forOctopusProV10_1 = 0 %}
 
 {% if UseColorText_forOctopusProV10_1 == 1 %}
 
@@ -159,7 +153,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 ###### ![](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_UART_150.jpg) {#Voron2_Wiring_Diagram_Octopus_ProF446_V1_UART}
 
-* <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">Downloadable BTT Octopus Pro V1.0 Wiring Diagram in .jpg format is [located here](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_UART_150.jpg)</span>
+* <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;"> If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_UART_150.jpg){:target="_blank" rel="noopener"}</span>
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
@@ -196,7 +190,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 ###### ![](./images/BTTOctopus_Pro-ssr-UART-wiring.png) {#BTTOctopus_Pro-ssr-UART-wiring}
 
-* Downloadable SSR Wiring Diagram for the BTT Octopus Pro V1.0 board in UART mode (.jpg format) is [located here](./images/BTTOctopus_Pro-ssr-UART-wiring.png)
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/BTTOctopus_Pro-ssr-UART-wiring.png){:target="_blank" rel="noopener"}
 
 ## mini 12864 Display
 
@@ -204,23 +198,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 ## The Klipper Configuration file for BTT Octopus Pro V1.0 Board 
 
-* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus Pro 1.0 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/Octopus/Voron2_Octopus_Config.cfg)
-
-## Testing
-
-* Downloadable and ZOOM capable web display for BTT's Octopus Pro V1.0 original pinout diagram:
-
-<div id="adobe-dc-view" style="width: 800px;"></div>
-<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-<script type="text/javascript">
-	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-		var adobeDCView = new AdobeDC.View({clientId: "93f58236df344a629d139d565e526e15", divId: "adobe-dc-view"});
-		adobeDCView.previewFile({
-			content:{location: {url: "https://github.com/bigtreetech/github/bigtreetech/BIGTREETECH-OCTOPUS-Pro/blob/master/Hardware/BIGTREETECH%20Octopus%20Pro%20-%20PIN.pdf"}},
-			metaData:{fileName: "BIGTREETECH Octopus Pro - PIN.pdf"}
-		}, {embedMode: "IN_LINE"});
-	});
-</script>
+* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus Pro 1.0 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/Octopus/Voron2_Octopus_Config.cfg){:target="_blank" rel="noopener"}
 
 ## Color PIN Diagram for BTT Octopus Pro V1.0
 
@@ -228,37 +206,23 @@ For reference, here is the Color PIN diagram for the BTT Octopus Pro V1.0
 
 ###### ![](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg) {#BTT-Octopus-Pro-V1.0-color-PIN_1}
 
-* Downloadable BTT Octopus Pro V1.0 Color PIN diagram in .pdf format is [located here](./images/BTT-Octopus-Pro-V1.0-Color-PIN-V3.0.pdf)
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/BTT-Octopus-Pro-V1.0-Color-PIN-V3.0.pdf){:target="_blank" rel="noopener"}
 
-* Downloadable BTT Octopus Pro V1.0 Color PIN diagram in .jpg format is [located here](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg)
-
-{% assign colorfilename = "/build/electrical/images/BTT-Octopus-Pro-V1.0-Color-PIN-V3.0.pdf" %}
-
-{% assign nbviewer_url = "https://nbviewer.org/github/VoronDesign/Voron-Documentation/" %}
-
-{% if site.url == "http://localhost:4000" %}
-
-* Downloadable and LOCAL ZOOM capable web display for BTT Octopus Pro V1.0 Color PIN diagram is [located here]({{ colorfilename | prepend:site.url }})
-
-{% else %}
-
-* Downloadable and ZOOM capable web display for BTT Octopus Pro V1.0 Color PIN diagram is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }})
-
-{% endif %}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/BTT-Octopus-Pro-V1.0-color-PIN-V3.0.jpg){:target="_blank" rel="noopener"}
 
 ## Original BTT Octopus Pro V1.0 Pinout
 
 For reference, here is the original pinout of the BTT Octopus Pro V1.0
 
-* Note: If you see a conflict between the original pinout and any other source, please refer back to the [BTT Octopus Pro V1.0 schematic diagram](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro/blob/master/Hardware/BIGTREETECH%20Octopus%20Pro_SCH.pdf)
+* Note: If you see a conflict between the original pinout and any other source, please refer back to the [BTT Octopus Pro V1.0 schematic diagram](<./images/BIGTREETECH Octopus Pro_SCH.pdf>){:target="_blank" rel="noopener"}
 
 ###### ![](./images/BIGTREETECH_Octopus_Pro-PIN-original.jpg) {#BIGTREETECH_Octopus_Pro-PIN-original_1}
 
 ### The BTT's GitHub Repo for the Octopus Pro V1.0 board
 
-* BTT's documentation for Octopus Pro V1.0 board is [located here](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro)
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/BIGTREETECH Octopus Pro - PIN.pdf>){:target="_blank" rel="noopener"}
 
-* Downloadable and ZOOM capable web display for BTT's Octopus Pro V1.0 original pinout diagram is [located here](http://nbviewer.jupyter.org/github/bigtreetech/BIGTREETECH-OCTOPUS-Pro/blob/master/Hardware/BIGTREETECH%20Octopus%20Pro%20-%20PIN.pdf)
+* BTT's documentation for Octopus Pro V1.0 board is [located here](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro){:target="_blank" rel="noopener"}
 
 ## After I have Wired up the MCU Board, What Comes Next?<span> <br> </span>
 <span> <br> </span>
