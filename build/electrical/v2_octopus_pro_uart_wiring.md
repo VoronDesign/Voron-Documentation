@@ -82,7 +82,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 {% assign UseColorText_forOctopusProV10_1 = 0 %}
 
-{% if UseColorText_forOctopusProV10_1 == 1 %}
+{% capture Color_MCU_Text_forOctopus_Pro_1 %}
 
 * Connect <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">24V and GND (V+ and V-)</span> from the PSU to <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">PWR</span> and <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">MOTOR_POWER</span>
 * Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper driver</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">the B Motor (gantry left)</span> into position <span style="text-shadow: 2px 2px 5px #e35223; font-size: 125%;">DRIVER0</span>
@@ -114,7 +114,9 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Connect the <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">V+ an 0V wires on the probe</span> to <span style="text-shadow: 2px 2px 5px #d38aa8; font-size: 125%;">PROBE</span>
 * if using a <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">mini12864 display</span>, connect to <span style="text-shadow: 2px 2px 5px #2bb5e3; font-size: 125%;">EXP1 & EXP2</span>, only after completing the steps <span style="text-shadow: 2px 2px 5px #d38aa8; font-size: 125%;">shown [below](#mini-12864-display)</span>
 
-{% else %}
+{% endcapture %}
+
+{% capture Plain_MCU_Text_forOctopus_Pro_1 %}
 
 * Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER
 * Connect stepper driver for the B Motor (gantry left) into position DRIVER0
@@ -146,7 +148,18 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Connect the V+ an 0V wires on the probe to PROBE
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
 
+{% endcapture %}
+
+{% if UseColorText_forOctopusProV10_1 == 1 %}
+
+{{ Color_MCU_Text_forOctopus_Pro_1 }}
+
+{% else %}
+
+{{ Plain_MCU_Text_forOctopus_Pro_1 }}
+
 {% endif %}
+
 
 ## MCU Wiring Diagram for UART Mode
 <span> <br> </span>
@@ -182,7 +195,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Voron Design recommends using USB to control the Octopus Pro, which simply requires connecting a USB-A to USB-C cable between the Octopus Pro and Pi. 
 * The option also exists to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the wiring diagram located above in [Connection Using Separate Power Supply](#connection-using-separate-power-supply) and use the instructions below on the Raspberry Pi.  You will want to perform the instructions below **after Mailsail/Fluidd is installed on the Raspberry Pi.**
 
-###### ![](./images/ConnectPitoMCU-Instructions.png) {#ConnectPitoMCU-Instructions_1}
+###### ![](./images/ConnectPitoMCU-Instructions.png) {#ConnectPitoOctopusPro-Instructions_1}
 
 ## SSR Wiring
 
