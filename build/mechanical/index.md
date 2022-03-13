@@ -84,10 +84,11 @@ nav_order: 1
 
 ### Current
 
-[V2.4 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/Voron2.4/Docs/2.4_Assembly_Manual.pdf)
+[V2.4r2 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/Voron2.4/Manual/Assembly_Manual_2.4r2.pdf)
 
 ### Historical
 
+* [V2.4 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/3b4c0e4a4e88086b04474fec28a54ab82917fc8a/Docs/2.4_Assembly_Manual.pdf)
 * [V2.2 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/Voron2.2/manuals/VORON2.2_Manual.pdf)
 * [V2.1 Assembly Manual](https://github.com/VoronDesign/Voron-2/raw/Voron2.1/manuals/VORON2.1_Manual.pdf)
 

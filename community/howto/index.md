@@ -22,6 +22,9 @@ Community-generated documentation for the many items that the official guide may
 | [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md) | DoubleT |
 | [Print Tuning Guide](./ellis/print-tuning-guide.md) | Ellis |
 | [Multi-Colour Prints with a Single Nozzle](./mikhail/multi-colour-prints-with-a-single-nozzle.md) | mikhail |
+| [Custom Raspberry Pi Boot screens ](./samwiseg0/voron_rpi_bootscreen.md) | samwiseg0 |
+| [Klicky Probe as Endstop with constant Z Offset ](./Takuya/Klicky_Probe_AutoZ_Alternative.md) | Takuya & Clee |
+| [Setting Up and Calibrating Sensorless XY Homing](./clee/sensorless_xy_homing.md) | clee |
 
 
 ### External Links
