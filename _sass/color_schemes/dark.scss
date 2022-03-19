@@ -1,0 +1,123 @@
+//
+// Voron Customizations
+//
+
+//
+// Color Definitions
+//
+$grey-dk-400: #2c2f33;
+$grey-dk-500: #23272a;
+$red-400: #bd0f0f;
+$red-500: #760a0a;
+$voron-red-30: #f7a6ad;
+$voron-red-40: #ff3341;
+$voron-red-50: #ff0213;
+$voron-red-60: #cc000e;
+$voron-red-ga: #dd2e2e;
+$voron-red-70: #99000a;
+$voron-red-80: #dd0007;
+$voron-link-purple: #661aff;
+$grey-lt-400: #b5b3b6;
+$orange-600: #ff7a00;
+
+
+$white: #fff !default;
+$black: #000;
+
+$grey-dk-000: #959396 !default;
+$grey-dk-100: #5c5962 !default;
+$grey-dk-200: #44434d !default;
+$grey-dk-250: #302d36 !default;
+$grey-dk-300: #27262b !default;
+
+$grey-lt-000: #f5f6fa !default;
+$grey-lt-100: #eeebee !default;
+$grey-lt-200: #ecebed !default;
+$grey-lt-300: #e6e1e8 !default;
+
+$purple-000: #7253ed !default;
+$purple-100: #5e41d0 !default;
+$purple-200: #4e26af !default;
+$purple-300: #381885 !default;
+
+$blue-000: #2c84fa !default;
+$blue-100: #2869e6 !default;
+$blue-200: #264caf !default;
+$blue-300: #183385 !default;
+
+$green-000: #41d693 !default;
+$green-100: #11b584 !default;
+$green-200: #009c7b !default;
+$green-300: #026e57 !default;
+
+$yellow-000: #ffeb82 !default;
+$yellow-100: #fadf50 !default;
+$yellow-200: #f7d12e !default;
+$yellow-300: #e7af06 !default;
+
+$red-000: #f77e7e !default;
+$red-100: #f96e65 !default;
+$red-200: #e94c4c !default;
+$red-300: #dd2e2e !default;
+
+//GAcolors
+$red-red: red;
+$bluish-green-600: #4c959c;
+$gold-600:#cc9900;
+$burnt-orange-600: #e35223;
+$blue-600: #32a3e5;
+$purple-600: #700aea;
+$neon-green-600: #00ff01;
+$pink-600: #e216d1;
+$brown-600: #b8754b;
+$light-green-600: #04dc93;
+$light-purple-600: #a286c0;
+
+
+//
+// Body Elements
+//
+$body-background-color: $grey-dk-400;
+$body-heading-color: $voron-red-60;
+$btn-primary-color: $grey-lt-300;
+$link-color: $voron-red-40;
+
+// Copied from JTD dark theme
+$sidebar-color: $grey-dk-500;
+$border-color: $grey-dk-200;
+
+$body-text-color: $grey-lt-300;
+$nav-child-link-color: $grey-dk-000;
+$search-result-preview-color: $grey-dk-000;
+$base-button-color: $grey-dk-100;
+
+$code-background-color: $grey-dk-250;
+$search-background-color: $grey-dk-250;
+$table-background-color: $grey-dk-250;
+$feedback-color: darken($sidebar-color, 5%);
+
+//https://github.com/just-the-docs/just-the-docs/blob/main/_sass/support/_variables.scss
+//https://frank.af/voron/colors.html
+
+.color-blind-red { color: $red-300; }
+.color-blind-green { color: $neon-green-600; }
+.color-blind-yellow { color: $yellow-200; }
+.color-blind-blue {color: $blue-600; }
+.color-blind-orange {color: $orange-600; }
+.color-blind-red-red {color: $red-red; }
+.color-blind-grey-dk-100 { color: $grey-dk-000; }
+
+// for double underlines
+.underline-double-trouble {
+    background-image: linear-gradient(to bottom, red 33%, transparent 33%, transparent 66%, red 66%, red);
+    background-position: 0 1.03em;
+    background-repeat: repeat-x;
+    background-size: 2px 6px;
+  }
+
+//font sizes
+.fs_percent_110 { font-size: 110%; }
+
+a:link {
+    font-weight: 700;
+}

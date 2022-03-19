@@ -1,15 +1,67 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
 layout: default
 name: Voron Documentation
 description: Voron Official and Community Documentation
+
+# Set a path/url to a logo that will be displayed instead of the title
+# set the logo to use during dark mode - set logo:
 logo: "/images/voron_design_logo.png"
+logo_dark: "/images/voron_design_logo.png"
+# set the logo to use during light mode - set logo-light:
+logo_light: "/images/voron_design_logo_light.png"
+
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
-color_scheme: voron-dark
+
+# Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
+# if you use toggle_color_scheme set color_scheme: dark and set toggle_color_scheme: light
+color_scheme: dark
+# To allow a toggle color scheme (also it adds a button to switch all pages) - set toggle_color_scheme: light
+# To add a button to switch all pages to a different color scheme use toggle_color_scheme
+toggle_color_scheme: light
+# To display the toggle button only on one page - set toggle_page_url: "/"
+# To display the toggle button on all pages - set toggle_page_url: nil
+toggle_page_url: nil
+# To toggle automatically when the system mode preference changes - set toggle_auto_mode: true, 
+#    this will allow the user to use thier own "dark" and "light" color system color scheme
+# To toggle the pages manually - set toggle_auto_mode: nil 
+toggle_auto_mode: true 
+# To set the button text for toggling and reverting - set toggle_text_1 and toggle_text_2
+# toggle_text_1 is for light mode
+toggle_text_1: "-> Return to the Dark Side"
+# toggle_text_2 is for dark mode
+toggle_text_2: "-> Color-Blind-Friendly Light Mode"
+
+# Enable or disable the site search
+# Supports true (default) or false
 search_enabled: true
-search.button: true
+search:
+  button: true
+
+# Aux links for the upper right navigation
 aux_links:
   "Voron Documentation on GitHub":
     - "https://github.com/VoronDesign/Voron-Documentation"
   "VoronDesign Home":
     - "https://vorondesign.com"
 
+
+# Footer content
+# appears at the bottom of every page's main content
+#footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a>"
+footer_content: "Open Source Project by Voron Design Team. Distributed by an <a href=\"https://github.com/VoronDesign/Voron-Documentation/tree/main/LICENSE.txt\">GNU GENERAL PUBLIC LICENSE.</a>"

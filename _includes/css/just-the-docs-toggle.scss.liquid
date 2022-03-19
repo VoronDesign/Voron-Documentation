@@ -1,0 +1,42 @@
+{% comment %}
+  Parameters:
+    color_scheme
+    toggle_color_scheme
+{% endcomment %}
+
+html, html[data-theme="light"] {
+{% if site.logo and include.toggle_color_scheme == "dark" %}
+  $logo: "{{ site.logo | absolute_url }}";
+{% elsif site.logo and include.toggle_color_scheme == "light"%}
+  $logo: "{{ site.logo_light | absolute_url }}";
+{% else %}
+  $logo: "{{ site.logo | absolute_url }}";
+{% endif %}
+  @import "./support/support";
+  @import "./color_schemes/{{ include.toggle_color_scheme }}";
+  @import "./modules";
+  {% include css/custom.scss.liquid color_scheme = include.toggle_color_scheme %}
+}
+
+html[data-theme="dark"] {
+{% if site.logo and include.color_scheme == "dark" %}
+  $logo: "{{ site.logo | absolute_url }}";
+{% elsif site.logo and include.color_scheme == "light"%}
+  $logo: "{{ site.logo_light | absolute_url }}";
+{% else %}
+  $logo: "{{ site.logo_light | absolute_url }}";
+{% endif %}
+  @import "./support/support";
+  @import "./color_schemes/{{ include.color_scheme }}";
+  @import "./modules";
+  {% include css/custom.scss.liquid color_scheme = include.color_scheme %}
+}
+
+@media (prefers-color-scheme: dark) {
+  html, html[data-theme="dark"] {
+    content: "dark";
+  }
+  html[data-theme="light"]{
+    content: "light";
+  }
+}
