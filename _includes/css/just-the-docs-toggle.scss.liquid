@@ -2,6 +2,9 @@
   Parameters:
     color_scheme
     toggle_color_scheme
+    logo
+    logo_light
+    logo_dark
 {% endcomment %}
 
 html, html[data-theme="light"] {
@@ -10,7 +13,7 @@ html, html[data-theme="light"] {
 {% elsif site.logo and include.toggle_color_scheme == "light"%}
   $logo: "{{ site.logo_light | absolute_url }}";
 {% else %}
-  $logo: "{{ site.logo | absolute_url }}";
+  $logo: "{{ site.logo_light | absolute_url }}";
 {% endif %}
   @import "./support/support";
   @import "./color_schemes/{{ include.toggle_color_scheme }}";
@@ -24,7 +27,7 @@ html[data-theme="dark"] {
 {% elsif site.logo and include.color_scheme == "light"%}
   $logo: "{{ site.logo_light | absolute_url }}";
 {% else %}
-  $logo: "{{ site.logo_light | absolute_url }}";
+  $logo: "{{ site.logo_dark | absolute_url }}";
 {% endif %}
   @import "./support/support";
   @import "./color_schemes/{{ include.color_scheme }}";
