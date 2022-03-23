@@ -4,9 +4,11 @@ layout: table_wrappers
 
 <!DOCTYPE html>
 
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ site.lang | default: 'en-US' }}" data-theme="{{ site.color_scheme }}">
 {% include head.html %}
 <body>
+    <!-- for toggle dark mode and light mode-->
+  <script type="text/javascript" src="{{ '/assets/js/global-vars.js' | absolute_url }}"></script>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="svg-link" viewBox="0 0 24 24">
       <title>Link</title>
@@ -40,9 +42,9 @@ layout: table_wrappers
     </symbol>
   </svg>
 
-  <!-- for toggle dark mode and light mode-->
-  <script type="text/javascript" src="{{ '/assets/js/toggle_init.js' | absolute_url }}"></script>
-  
+  <script type="text/javascript" src="{{ '/assets/js/test-local-storage.js' | absolute_url }}"></script>
+  <!--Ensure that the windows's localStorage of data-theme is still equal to the html attribute data-theme-->
+  <script type="text/javascript" src="{{ '/assets/js/test-color-scheme.js' | absolute_url }}"></script>
 
   <div class="side-bar">
     <div class="site-header">
@@ -78,7 +80,7 @@ layout: table_wrappers
     {% capture nav_footer_custom %}
         {%- include nav_footer_custom.html -%}
     {% endcapture %}
-    
+
     {% if nav_footer_custom != "" %}
         {{ nav_footer_custom }}
     {% else %}
@@ -87,7 +89,7 @@ layout: table_wrappers
     </footer>
     {% endif %}
   </div>
-  
+
   <div class="main" id="top">
     <div id="main-header" class="main-header">
       {% if site.search_enabled != false %}
@@ -217,9 +219,13 @@ layout: table_wrappers
       <div class="search-overlay"></div>
     {% endif %}
   </div>
-  
-  <!-- for toggle dark mode and light mode-->
+
+  <!--Ensure that the windows's localStorage of data-theme is still equal to the html attribute data-theme-->
+  <script type="text/javascript" src="{{ '/assets/js/test-color-scheme.js' | absolute_url }}"></script>
+
+  {% if site.toggle_color_scheme and site.toggle_color_scheme != "nil" %}
     <script type="text/javascript" src="{{ '/assets/js/toggle_mode.js' | absolute_url }}"></script>
-  
+  {% endif %}
+
 </body>
 </html>

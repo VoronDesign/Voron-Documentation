@@ -74,7 +74,7 @@ function initSearch() {
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
       var docs = JSON.parse(request.responseText);
-      
+
       lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
 
       var index = lunr(function(){
@@ -120,12 +120,15 @@ function searchLoaded(index, docs) {
   var currentInput;
   var currentSearchIndex = 0;
 
+  // for toggle dark mode and light mode
+  var body = document.querySelector('body');
+
   function showSearch() {
-    document.documentElement.classList.add('search-active');
+    body.classList.add('search-active');
   }
 
   function hideSearch() {
-    document.documentElement.classList.remove('search-active');
+    body.classList.remove('search-active');
   }
 
   function update() {
@@ -452,9 +455,21 @@ jtd.getTheme = function() {
   return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
 }
 
-jtd.setTheme = function(theme) {
+jtd.setTheme = function(css_theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
-  cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | absolute_url }}' + theme + '.css');
+  cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | absolute_url }}' + css_theme + '.css');
+}
+
+// Scroll site-nav to ensure the link to the current page is visible
+// for toggle dark mode and light mode
+function scrollNav() {
+  const href = document.location.pathname.replace(/(\/.*)\/+$/, "$1");
+  const siteNav = document.getElementById('site-nav');
+  const targetLink = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+  if(targetLink){
+    const rect = targetLink.getBoundingClientRect();
+    siteNav.scrollBy(0, rect.top - 3*rect.height);
+  }
 }
 
 // Document ready
@@ -464,6 +479,7 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
+  scrollNav();
 });
 
 })(window.jtd = window.jtd || {});
