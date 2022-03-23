@@ -17,13 +17,13 @@ nav_order: 1
 
 ### Frame
 
-* A granite countertop or other similarly flat surface will assist with extrusion alignment to ensure a square frame
+* A granite countertop or other similarly flat surface will assist with extrusion alignment to ensure a square frame.
 * Measure diagonals to check squareness - measurements should be < 2mm different.
-* Extrusions that are attached using blind joints may rotate. This will be prevented by the panel corners and skirts later in the build
+* Extrusions that are attached using blind joints may rotate. This will be prevented by the panel corners and skirts later in the build.
 
 ### Idler / drive unit assembly
 
-* M5 standard washer thickness is 1mm ±0.2mm, so washer counts in the manual are meant as guidance. As an option, you may purchase 1mm thick shims which have tighter tolerances. It may be useful to have 0.5mm washers at hand to align pulleys and bearings optimally in your build or to swap in and out to ensure proper fitment
+* M5 standard washer thickness is 1mm ±0.2mm, so washer counts in the manual are meant as guidance. As an option, you may purchase 1mm thick shims which have tighter tolerances. It may be useful to have 0.5mm washers at hand to align pulleys and bearings optimally in your build or to swap in and out to ensure proper fitment.
 * Make sure your toothed pulleys are GT2/2GT!
 * Make sure your pulleys do not wobble. Rotate them on a shaft and look for eccentric movement of the teeth. The flanges are not critical
 * Use genuine Gates GT2/2GT belts for the open loop belts--off brand/generic GT2/2GT belt is commonly wider than 6mm which will cause it to ride up on the flanges of the idler bearings
