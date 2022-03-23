@@ -123,3 +123,7 @@ $feedback-color: darken($sidebar-color, 5%);
 a:link {
     font-weight: 700;
 }
+
+input[type=text] {
+  color: $grey-lt-300;
+}
