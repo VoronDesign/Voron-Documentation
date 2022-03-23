@@ -17,6 +17,8 @@
 layout: default
 name: Voron Documentation
 description: Voron Official and Community Documentation
+# url: # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: # the subpath of your site, e.g. /blog
 
 # Set a path/url to a logo that will be displayed instead of the title
 # set the logo to use during dark mode - set logo:
@@ -28,41 +30,43 @@ logo_light: "/images/voron_design_logo_light.png"
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
 
-# Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-# if you use toggle_color_scheme set color_scheme: dark and set toggle_color_scheme: light
-# For the Voron DOCs site, the color_scheme should be set to dark
-color_scheme: dark
-# To allow a toggle color scheme (also it adds a button to switch all pages) - set toggle_color_scheme: light
-# To add a button to switch all pages to a different color scheme use toggle_color_scheme
-# For the Voron DOCs site, the toggle_color_scheme should be set to light
-toggle_color_scheme: light
-# To display the toggle button only on one page - set toggle_page_url: "/"
-# To display the toggle button on all pages - set toggle_page_url: nil
-# For the Voron DOCs site, the toggle_page_url should be set to nil
-toggle_page_url: nil
-# To toggle automatically when the system mode preference changes - set toggle_auto_mode: true, 
+# Color scheme supports "dark", "light", and your custom schemes:
+# color_scheme will be the color_scheme that will be the initial color scheme if toggle_auto_mode is nil
+# If toggle_auto_mode is true, then the initial color scheme will be set by a window.matchMedia() and the
+# users OS prference will be the initial color scheme.
+
+# Color scheme supports "dark", "light", and your custom schemes:
+# color_scheme: nil                # default: light
+color_scheme: dark                 # default: light
+# To add a button to switch all pages to switch color modes between color_scheme and toggle_color_scheme modes:
+toggle_color_scheme: light         # default: nil (no toggle button)
+# To display the toggle button only on one page:
+toggle_page_url: nil               # default: nil (display on all pages)
+
+# To toggle automatically when the system mode preference changes - set toggle_auto_mode: true,
 #    this will allow the user to force the default color mode for the site (i.e. the inital mode will be automatically
 #    switched to which ever mode the user has set in OS preferences).  For toggle_auto_mode to work
 #    as it should (meaning that the OS preference of light and dark mode has prescendance over the manual mode), so if you have
-#    a manual mode switch button present you can temporaially change the mode to the opposite but once you 
+#    a manual mode switch button present you can temporaially change the mode to the opposite but once you
 #    go to another page on the site or refresh you browser window the mode will switch to the OS preference you
-#    set for your system. If you want to switch modes you need to do it on you OS preferences or your system.
+#    set for your OS. If you want to switch modes you need to do it on you OS preferences or your system.
 #    So the manual button is a temporary switch of mode. Once you are taken to a link off the site the mode will
 #    depend on that exteranl web site's setup.
-# To toggle the pages manually - set toggle_auto_mode: nil 
-#     With toggle_auto_mode set to nil then the OS preference is IGNORED and only the manual selection will 
-#     change the mode from dark to light.  the Voron Docs site will always be initially displayed in DARK mode.
-#     The User will have to manully switch to the color-blind friendly light mode.  Once the mode is switched it 
-#     will persist across web site pages and browser refreshs of the page until you change the mode back. 
-#     So the manual button is a persistanct switch of mode. Again, Once you are taken to a link off the site the
+# To toggle the pages manually - set toggle_auto_mode: nil
+#     With toggle_auto_mode set to nil then the OS preference is IGNORED and only the manual selection will
+#     change the mode from dark to light.  This web site will always be initially displayed in the mode set by color_scheme.
+#     The User will have to manully switch to the toggle_color_scheme mode.  Once the mode is switched it
+#     will persist across web site pages and browser refreshs of the page until you change the mode back.
+#     So the manual button is a persistanct switch of mode. Again, Once you are taken to a link off site the
 #     mode will depend on that external web site's setup.
-# For the Voron DOCs site, toggle_auto_mode should be set to nil
-toggle_auto_mode: nil
-# To set the button text for toggling and reverting - set toggle_text_1 and toggle_text_2
-# toggle_text_1 is for light mode
+toggle_auto_mode: nil               # default: nil (manual toggle)
+
+# To set the button text for toggling and reverting:
+# toggle_text_1 is for light color scheme
 toggle_text_1: "-> Return to the Dark Side"
-# toggle_text_2 is for dark mode
+# toggle_text_2 is for dark color scheme
 toggle_text_2: "-> Color-Blind-Friendly Light Mode"
+
 # Enable or disable the site search
 # Supports true (default) or false
 search_enabled: true
