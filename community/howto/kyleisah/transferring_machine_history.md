@@ -1,3 +1,9 @@
+---
+layout: default
+title: Transferring machine history to a new Pi
+nav_exclude: true
+---
+
 # Transferring machine history to a new Pi? 
 
 This quick guide will help you through the process.
