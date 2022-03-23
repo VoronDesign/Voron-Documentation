@@ -4,7 +4,7 @@ nav_exclude: true
 
 ## The Klipper Configuration file for BTT Octopus Pro V1.0 Board
 
-* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus Pro 1.0 board is [located here](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/firmware/klipper_configurations/Octopus/Voron2_Octopus_Config.cfg){:target="_blank" rel="noopener"}
+* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus Pro 1.0 board is [located here; "V2 Octopus"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
 
 [Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
 
