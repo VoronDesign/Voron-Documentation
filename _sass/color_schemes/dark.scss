@@ -9,17 +9,13 @@ $grey-dk-400: #2c2f33;
 $grey-dk-500: #23272a;
 $red-400: #bd0f0f;
 $red-500: #760a0a;
-$voron-red-30: #f7a6ad;
+$voron-red-30: #dd6670;
 $voron-red-40: #ff3341;
 $voron-red-50: #ff0213;
 $voron-red-60: #cc000e;
-$voron-red-ga: #dd2e2e;
 $voron-red-70: #99000a;
 $voron-red-80: #dd0007;
 $voron-link-purple: #661aff;
-$grey-lt-400: #b5b3b6;
-$orange-600: #ff7a00;
-
 
 $white: #fff !default;
 $black: #000;
@@ -72,13 +68,17 @@ $pink-600: #e216d1;
 $brown-600: #b8754b;
 $light-green-600: #04dc93;
 $light-purple-600: #a286c0;
-
+$Myvoron-red-30: #f7a6ad;
+$voron-red-ga: #dd2e2e;
+$grey-lt-400: #b5b3b6;
+$orange-600: #ff7a00;
 
 //
 // Body Elements
 //
 $body-background-color: $grey-dk-400;
 $body-heading-color: $voron-red-60;
+//$btn-primary-color: $voron-red-40;
 $btn-primary-color: $grey-lt-300;
 $link-color: $voron-red-40;
 
@@ -89,11 +89,13 @@ $border-color: $grey-dk-200;
 $body-text-color: $grey-lt-300;
 $nav-child-link-color: $grey-dk-000;
 $search-result-preview-color: $grey-dk-000;
+//$base-button-color: $grey-dk-250;
 $base-button-color: $grey-dk-100;
 
 $code-background-color: $grey-dk-250;
 $search-background-color: $grey-dk-250;
 $table-background-color: $grey-dk-250;
+//$feedback-color: darken($sidebar-color, 3%);
 $feedback-color: darken($sidebar-color, 5%);
 
 //https://github.com/just-the-docs/just-the-docs/blob/main/_sass/support/_variables.scss
