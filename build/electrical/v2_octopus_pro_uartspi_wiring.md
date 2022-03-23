@@ -37,4 +37,4 @@ has_children: true
 ### SPI Mode TMC Drivers That Use 48 VDC or Higher:
 
 1. TMC5160HV
-2. TMC5160 PRO
+2. TMC5160_PRO
