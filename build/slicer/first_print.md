@@ -7,9 +7,9 @@ nav_order: 7
 
 # First Print
 
-Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/STLs/TEST_PRINTS), and open the file in the chosen slicer. Use the default slicer settings, but make sure the hotend temperature and bed temperature is correct for the filament you are using. A good starting point is 240C hotend temperature, 100C heated bed temperature, and 92% flow for ABS.
+Download the “voron\_design\_cube\_v7.stl” from the [Voron Github page](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/STLs/TEST_PRINTS), and open the file in your chosen slicer. Use the default slicer settings, but make sure the hotend temperature and bed temperature are correct for the filament you are using. A good starting point is 240C hotend temperature, 100C heated bed temperature, and 92% flow for ABS.
 
-Slice the file and save the .gcode file to your desktop (if you haven’t set up the Octoprint Plugin or your slicer, Mainsail and Fluidd do not need plugins). Navigate to Octoprint, Mainsail, or Fluidd in your web browser, and upload the file. Press “Print” and closely watch the beginning of the print. If your nozzle is too far or close to the bed, on your printer display press the knob, navigate to “Tune”, and adjust the Z offset distance (+ is further from the bed, - is closer).
+Slice the file and save the .gcode file to your desktop (if you haven’t set up the Octoprint Plugin for your slicer, Mainsail and Fluidd do not need plugins). Navigate to Octoprint, Mainsail, or Fluidd in your web browser, and upload the file. Press “Print” and closely watch the beginning of the print. If your nozzle is too far or close to the bed, on your printer display press the knob, navigate to “Tune”, and adjust the Z offset distance (+ is further from the bed, - is closer).
 
 Once you are printing (with your printer fully assembled), take a quick video, upload it to the Voron subreddit and eat a well deserved bowl of cereal!
 
