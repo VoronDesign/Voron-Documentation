@@ -42,7 +42,7 @@ make clean
 make
 ```
 
-The `make` command, when completed, creates a firmware file **klipper.bin** that is store in the folder `/home/pi/klipper/out`.  This file need to be copied to the Mini E3 board.  The easiest way to do this is to use a GUI like [WinSCP](https://winscp.net/eng/download.php) on Windows or either [Cyberduck](https://cyberduck.io) or scp (from terminal) on Mac to copy the file to your computer.
+The `make` command, when completed, creates a firmware file **klipper.bin** which is stored in the folder `/home/pi/klipper/out`.  This file need to be copied to the Mini E3 board.  The easiest way to do this is to use a GUI like [WinSCP](https://winscp.net/eng/download.php) on Windows or either [Cyberduck](https://cyberduck.io) or scp (from terminal) on Mac to copy the file to your computer.
 
 ![](./images/cyberduck_example.png)
 
@@ -50,11 +50,11 @@ The `make` command, when completed, creates a firmware file **klipper.bin** that
 
 Copy the **klipper.bin** to the desktop, then rename it to **firmware.bin**
 
-**Important:** If the file is not renamed, the bootloader will not be updated properly.
+**Important:** If the file is not renamed, the firmware will not be updated properly.
 
 Ensure that the Mini E3 board is not powered, then remove the microSD card that is installed.
 
-Connect the microSD card to the computer with the **firmware.bin** file.  Open the microSC card in the file browser.  There will be a file named 'firmware.cur', that file can be deleted or left alone, it will be overwritten later.
+Connect the microSD card to the computer with the **firmware.bin** file.  Open the microSD card in the file browser.  There may be a file named 'firmware.cur'; that file can be deleted or left alone. It does not matter because it will be overwritten later.
 
 Copy the **firmware.bin** from the desktop onto the microSD card.  If problems are encountered transferring the file(s) to the microSD card, reformat the microSD card with a FAT32 filesystem and try again.
 
