@@ -1,0 +1,11 @@
+{% if site.logo and include.color_scheme == "dark" %}
+  $logo: "{{ site.logo | absolute_url }}";
+{% elsif site.logo and include.color_scheme == "light"%}
+  $logo: "{{ site.logo_light | absolute_url }}";
+{% else %}
+  $logo: "{{ site.logo | absolute_url }}";
+{% endif %}
+@import "./support/support";
+@import "./color_schemes/{{ include.color_scheme }}";
+@import "./modules";
+{% include css/custom.scss.liquid %}
