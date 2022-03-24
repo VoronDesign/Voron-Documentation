@@ -9,7 +9,8 @@ nav_order: 3
 # Software Installation
 
 All stock Voron printers run on the [Klipper](https://klipper3d.com) firmware. However, there are a few different web interfaces available for managing your printer.
-The Voron Project recommends using Mainsail or Fluidd, although it is also possible to use Octoprint.   Mainsail and Fluidd are both developed specifically for Klipper based printers, whereas Octoprint is a more general-use platform. 
+
+The Voron Project recommends using Mainsail or Fluidd, although it is also possible to use Octoprint.   Mainsail and Fluidd are both developed specifically for Klipper-based printers, whereas Octoprint is a more general-use platform. 
 
 _Note: If you are using a Pi Zero, such as in the Voron Legacy, you must use Mainsail or Fluidd_
 
