@@ -165,9 +165,9 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)
 * [V2 - SKR 1.4](./v2_skr14_wiring.md)
 * [V2 - FLYboard FLYF407ZG](./v2_flyf407zg_wiring.md)
-* [V2 - Fysetc Spider](./v2_spider_wiring.md)
 * [V2 - Fysetc Spider V1.0-V2.0 in UART Mode](./v2_spiderv10_uart_wiring.md)
 * [V2 - Fysetc Spider V1.0-V2.0 in SPI Mode](./v2_spiderv10_spi_wiring.md)
+* [V2 - Fysetc Spider v1.1](./v2_spider_wiring.md)
 * [V2 - BigTreeTech Octopus](./v2_octopus_wiring.md)
 * [V2 - MKS Makerbase Monster8](./v2_monster8_wiring.md)
 

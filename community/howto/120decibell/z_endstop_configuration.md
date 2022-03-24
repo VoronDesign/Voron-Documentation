@@ -74,4 +74,4 @@ The initial Z offset can also be set using gcode or be adjusted using the front 
 
 **_Making the position\_endstop value larger / more positive will move the nozzle closer to the print surface._**
 
-**_Making the Z offset value larger / more positive will move the nozzle further from the print surface._**
+**_Making the position\_endstop value smaller / more negative will move the nozzle further from the print surface._**
