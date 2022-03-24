@@ -17,7 +17,7 @@ For reference, here is the Color PIN diagram for the BTT Octopus Pro V1.0
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/BTT-Octopus-Pro-V1.0-Color-PIN-V4.0.pdf){:target="_blank" rel="noopener"}
 
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/BTT-Octopus-Pro-V1.0-color-PIN.jpg){:target="_blank" rel="noopener"}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/BTT-Octopus-Pro-V1.0-color-PIN.jpg){:target="_blank" rel="noopener"}
 
 [Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
 
