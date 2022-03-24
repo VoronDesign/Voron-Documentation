@@ -72,6 +72,8 @@ $Myvoron-red-30: #f7a6ad;
 $voron-red-ga: #dd2e2e;
 $grey-lt-400: #b5b3b6;
 $orange-600: #ff7a00;
+$mytogglebtnbg: #5c5962;
+$mytogglebtncolor: #edeaee;
 
 //
 // Body Elements
@@ -126,4 +128,9 @@ a:link {
 
 input[type=text] {
   color: $grey-lt-300;
+}
+
+button.btn.theme-toggle[id=theme-toggle]{
+  background-color: $mytogglebtnbg;
+  color: $mytogglebtncolor;
 }
