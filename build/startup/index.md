@@ -10,8 +10,7 @@ nav_order: 5
 This section provides a list of steps to help confirm the pin settings in the Klipper printer.cfg file. 
 During this guide, it may be necessary to make changes to the Klipper config file. Be sure to issue a `RESTART` command after every change to the config file to ensure that the change takes effect (type "restart" in the Octoprint or Mainsail terminal and then click "Send"). It's also a good idea to issue a `STATUS` command after every `RESTART` to verify that the config file is successfully loaded.
 
-
-Any time commands are requested to be issued, those will happen in the 'Terminal' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
+Any time commands are requested to be issued, those will happen in the 'Terminal' or 'Console' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
 
 ![](./images/octoprint_terminal_tab.png)
 
@@ -31,13 +30,13 @@ Start by verifying that temperatures are being properly reported. Navigate to th
 
 ![](./images/octoprint_temp_graph.png)
 
-Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the "sensor_type" and "sensor_pin" settings for the extruder and/or bed.
+Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the `sensor_type` and `sensor_pin` settings for the extruder and/or bed.
 
 ## Verify heaters
 
-Navigate to the OctoprintMainsail temperature graph and type in 50 followed by enter in the "Tool" temperature target feild. The extruder temperature in the graph should start to increase (within about 30 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. If the temperature does not increase then verify the "heater_pin" setting in the config.
+Navigate to the temperature graph and type in 50 followed by enter in the "Tool" temperature target feild. The extruder temperature in the graph should start to increase (within about 10 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. If the temperature does not increase, then verify the `heater_pin` setting in the config.
 
-perform the above test again with the bed.
+Perform the above steps again with the bed.
 
 ## Stepper Motor Check
 
@@ -79,7 +78,7 @@ Run this command for each of the motors:
 
 The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.
 
-If the stepper does not move at all, then verify the "enable_pin" and "step_pin" settings for the stepper. If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting. If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. This is done by adding a '!' to the "dir_pin" in the printer config file (or removing it if one is already there). If the motor moves significantly more or significantly less than one millimeter then verify the "rotation_distance" setting.
+If the stepper does not move at all, then verify the "enable_pin" and "step_pin" settings for the stepper. If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting. If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. This is done by adding a '!' to the "dir_pin" in the printer config file (or removing it if one is already there). If the motor moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
 
 #### V2 motor positions (Others may vary)
 
@@ -165,8 +164,8 @@ Depending on bed location, the positional parameters may need to be adjusted to 
 
 1. Start by re-running `G28 X Y` to home X and Y.  After this, the nozzle will be at the maximum X,Y as defined by *position_max* under *[stepper_x]* and *[stepper_y]*. 
 2. Using the OctoPrint or Mainsail controls, move the nozzle to the front left corner of the bed.
-3. If the from left corner of the bed cannot be reached within 3-5mm, the bed location needs to be physically adjusted (if possible). Move the bed on the extrusions or move the extrusions to get the bed location within range.
-	* For V2, Make sure whatever bed position results still allows the nozzle to reach the Z endstop switch (See 'Bed Locating').
+3. If the left corner of the bed cannot be reached within 3-5mm, the bed location needs to be physically adjusted (if possible). Move the bed on the extrusions or move the extrusions to get the bed location within range.
+	* For V2, make sure whatever bed position results still allows the nozzle to reach the Z endstop switch (See 'Bed Locating').
 	* If questionable, turn off motors and attempt to move the gantry by hand to see if the front left corner can physically be reached by the nozzle.
 4. Once the nozzle is close to the front left corner of the bed but still on the bed, send an `M114` command to retrieve the current location.
 	* *Note: Due to other tolerances, it is usually not recommended to have the 0,0 exactly on the corner of the bed or build surface. Spec bed sizes are always slightly larger than the defined print volume so print volume loss will be minimal.*
@@ -259,10 +258,9 @@ Depending on the printer type and capability, the following command(s) are used:
 
 ### Bed Screws (V0)
 
-The V0 uses manual bed leveling, the bed is small enough and thick enough that a mesh or other types of per print leveling are not needed. there is a Macro in Klipper to help with the manual bed leveling process
-`BED_SCREWS_ADJUST`
+The V0 uses manual bed leveling. The bed is small enough and thick enough that a mesh or other types of per print leveling should not be needed. There is a macro in Klipper to help with the manual bed leveling process: `BED_SCREWS_ADJUST`
 
-This tool will move the printer's nozzle to each screw XY location and then move the nozzle to a Z=0.3 height. At this point one can use the "paper test" to adjust the bed screw directly under the nozzle. See the information described in "the paper test", but adjust the bed screw instead of commanding the nozzle to different heights. Adjust the bed screw until there is a small amount of friction when pushing the paper back and forth. this process will move all three mounting points of your bed closer to the nozzle so it is critical that you re-run the Z offset adjust after completing this section.
+This tool will move the printer's nozzle to each screw XY location and then move the nozzle to a Z=0.3 height. At this point one can use the "paper test" to adjust the bed screw directly under the nozzle. See the information described in "the paper test", but adjust the bed screw instead of commanding the nozzle to different heights. Adjust the bed screw until there is a small amount of friction when pushing the paper back and forth. This process will move all three mounting points of your bed closer to the nozzle so it is critical that you re-run the Z offset adjust after completing this section.
 
 Once the screw is adjusted so that a small amount of friction is felt, run either the `ACCEPT` or `ADJUSTED` command. Use the `ADJUSTED` command if the bed screw needed an adjustment (typically anything more than about 1/8th of a turn of the screw). Use the `ACCEPT` command if no significant adjustment is necessary. Both commands will cause the tool to proceed to the next screw. (When an `ADJUSTED` command is used, the tool will schedule an additional cycle of bed screw adjustments; the tool completes successfully when all bed screws are verified to not require any significant adjustments.) One can use the `ABORT` command to exit the tool early.
 
@@ -272,17 +270,17 @@ After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CA
 
 The V1 and Legacy use a combination of automated and manual bed leveling.  There are two macros built into Klipper to assist with the function.
 
-First run the `BED_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
+First, run the `BED_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
 
-Second run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions defined in the _[screws\_tilt\_adjust section]_ of printer.cfg for level, then return how much to adjust the front thumbscrew by.  Re-run the process at least one more time to verify the adjustment.
+Second, run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions defined in the _[screws\_tilt\_adjust section]_ of printer.cfg for level, then return how much to adjust the front thumbscrew by.  Re-run the process at least one more time to verify the adjustment.
 
 After both processes have been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
 
 ### Z Tilt (Trident)
 
-The Trident uses automated bed leveling using 3 motors.  There is a macro `Z_TILT_ADJUST` built into Klipper for that function. It is very similar to the QUAD_GANTRY_LEVEL used by V2, but supports 3 or more motors. Run the `Z_TILT_ADJUST` and it will probe each of the 3 points 3 times, average the readins, then make adjustments until the grantry is level.
+The Trident uses automated bed leveling using 3 motors.  There is a macro `Z_TILT_ADJUST` built into Klipper for that function. It is very similar to the `QUAD_GANTRY_LEVEL` used by V2, but supports 3 or more motors. Run the `Z_TILT_ADJUST` and it will probe each of the 3 points 3 times, average the readings, then make adjustments until the gantry is level.
 
-After that process has been completed, rehome z by running `G28 Z`, and then rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
+After that process has been completed, re-home z by running `G28 Z`, and then rerun the `Z_ENDSTOP_CALIBRATE` command to bring your nozzle to the correct Z=0 position.
 
 ### Quad Gantry Level (V2)
 
@@ -315,7 +313,7 @@ If you did not run PID tuning, set your extruder to 245C and heated bed to 100C 
 
 Preparation
 
-* **V1:** Run a `G28`, and then a `Z_TILT_ADJUST`, and then another `G28`.
+* **V1/Trident:** Run a `G28`, and then a `Z_TILT_ADJUST`, and then another `G28`.
 * **V2:** Run a `G28`, and then a `QUAD_GANTRY_LEVEL`, and then another `G28`.
 * **All others:**  Run a `G28`.
 * Move the nozzle to the center of the bed if it is not already.
@@ -323,10 +321,7 @@ Preparation
 
 Run `Z_ENDSTOP_CALIBRATE` (V0, Trident, V2) or `PROBE_CALIBRATE` (Switchwire)
 
-Slowly move the nozzle toward the bed by using `TESTZ Z=-1`
-Until the nozzle is relatively close to the bed, and then stepping down with `TESTZ Z=-0.1`
-Until the nozzle touches a piece of paper on top of the build plate. If you go far down, you can move the nozzle back up with: `TESTZ Z=0.1`
-Once you are satisfied with the nozzle height, run `ACCEPT` and then `SAVE_CONFIG`.
+Slowly move the nozzle toward the bed by using `TESTZ Z=-1` until the nozzle is relatively close to the bed, and then stepping down with `TESTZ Z=-0.1` until the nozzle touches a piece of paper on top of the build plate. If you go too far down, you can move the nozzle back up with: `TESTZ Z=0.1`. Once you are satisfied with the nozzle height, run `ACCEPT` and then `SAVE_CONFIG`.
 
 **Important:** Klipper assumes that this process is being done cold.  If being performed hot, do an additional `TESTZ Z=-0.1` before accepting.
 
@@ -357,10 +352,10 @@ gcode:
     SET_GCODE_OFFSET Z_ADJUST=-0.01 MOVE=1
 ```
 
-2) Run ZUP or ZDOWN (or the associated `SET_GCODE_OFFSET` command) as needed in the terminal window until you have perfected your squish.
+2) Run `ZUP` or `ZDOWN` (or the associated `SET_GCODE_OFFSET` command) as needed in the terminal window until you have perfected your squish.
 3) Run `GET_POSITION` and look for "gcode base". *Note the Z value*.
 
-#### Saving your results  (V0,Trident, V2)
+#### Saving your results  (V0, Trident, V2)
 All of the above methods are "transient".  The changes are lost as soon as your printer restarts.  Once you find an adjustment you are happy with, you may make it permanent, by applying it to the `position_endstop` in your config file:
 run the command `Z_OFFSET_APPLY_ENDSTOP` followed by `SAVE_CONFIG`.  This will restart your printer, with the adjustment permanently applied to the endstop position.
 
@@ -376,20 +371,20 @@ run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will res
 
 ## Extruder Calibration (e-steps)
 
-Before the first print,make sure that the extruder extrudes the correct amount of material.
+Before the first print, make sure that the extruder extrudes the correct amount of material.
 
-* With the hotend at temperature, make a mark between your roll of filament and your extruder, between 120mm and 150mm away from the entrance to the extruder.  Measure the distance from the extrance of the extruder to that mark.
+* With the hotend at temperature, make a mark on the filament between the roll of filament and your extruder, between 120mm and 150mm away from the entrance to the extruder.  Measure the distance from the entrance of the extruder to that mark.
 * In Octoprint / Mailsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
 * Measure from the entrance of your extruder to the mark you made previously. 
-	* *In a perfect world, assuming the mark is at 120mm, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
-* Update rotation_distance in the extruder section of the configuration file using this formula:
+	* *In a perfect world, assuming the mark was at 120mm, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
+* Update `rotation_distance` in the extruder section of the configuration file using this formula:
 	* New Config Value = Old Config Value * (Actual Extruded Amount/Target Extruded Amount)
 
 *Note: a higher configuration value means that less filament is being extruded.*
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
 
-Typical rotation_distance values should be around 22.6789511 for Afterburner and Mobius (update gear_ratio to 80:20 for Mobius).
+Typical `rotation_distance` values should be around 22.6789511 for Afterburner and Mobius (update gear_ratio to 80:20 for Mobius).
 
 ---
 ### Next: [Slicer Setup](../slicer/index.md)

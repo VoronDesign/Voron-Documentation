@@ -22,4 +22,4 @@ nav_exclude: true
 14.  Navigate to /home/pi and open printer.cfg
 15.  Make any applicable edits and then save the file
 
-Remember to restart klipper from the Octoprint terminal to see your changes take affect!
+Remember to restart klipper from the Octoprint terminal to see your changes take effect!
