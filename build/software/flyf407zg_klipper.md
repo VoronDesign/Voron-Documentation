@@ -54,7 +54,7 @@ Copy the **klipper.bin** to the desktop, then rename it to **firmware.bin**
 
 Ensure that the FLY board is not powered, then remove the microSD card that is installed.
 
-Connect the microSD card to the computer with the **firmware.bin** file.  Open the microSC card in the file browser.  There may be a file named 'fly.cur', that file can be deleted or left alone, it will be overwritten later.
+Connect the microSD card to the computer with the **firmware.bin** file.  Open the microSD card in the file browser.  There may be a file named 'fly.cur'; that file can be deleted or left alone, it will be overwritten later.
 
 Copy the **firmware.bin** from the desktop onto the microSD card.  If problems are encountered transferring the file(s) to the microSD card, reformat the microSD card with a FAT32 filesystem and try again.
 

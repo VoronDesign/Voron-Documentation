@@ -22,7 +22,7 @@ Once at the command line of the Raspberry Pi, run the following commands to down
 
 ```
 cd
-git clone https://github.com/KevinOConnor/klipper
+git clone https://github.com/Klipper3D/klipper
 ./klipper/scripts/install-octopi.sh
 ```
 
