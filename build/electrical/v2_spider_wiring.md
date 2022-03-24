@@ -4,7 +4,7 @@ title: "Voron V2 - Fysetc Spider Wiring"
 nav_exclude: true
 ---
 
-# Voron V2 - Fysetc Spider Wiring
+# Voron V2 - Fysetc Spider v1.1 Wiring
 
 ## Initial Preparation
 
