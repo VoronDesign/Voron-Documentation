@@ -12,32 +12,32 @@ nav_order: 4
 Download the respective Voron base configuration file from the following links:
 
 * [V0 SKR mini e3 1.2](https://raw.githubusercontent.com/VoronDesign/Voron-0/master/VORON-0/Firmware/SKR_E3_Mini_1.2/printer.cfg) *note:  Not compatible with V0.1*
-* [V0 SKR mini e3 2.0](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/printer.cfg)
+* [V0 SKR mini e3 2.0](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-mini-E3-v2.0.cfg)
+* [V0 SKR mini e3 3.0](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-mini-E3-v3.0.cfg)
 * [V1 SKR 1.4](https://raw.githubusercontent.com/VoronDesign/Voron-1/Voron1.8/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg)
 * [V2 SKR 1.3](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
 * [V2 SKR 1.4](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.4/Voron2_SKR_14_Config.cfg)
 * [V2 Spider](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/Spider/Voron2_Spider_Config.cfg)
+* [V2 Octopus](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/Octopus/Voron2_Octopus_Config.cfg)
 * [SW SKR mini e3 V2.0](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/skr_mini_e3_v2_config.cfg)
 * [SW Einsy Rambo](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg)
 * [Legacy SKR 1.3](https://raw.githubusercontent.com/VoronDesign/Voron-Legacy/main/Firmware/skr_v1.3_config.cfg)
+* [Trident Octopus](https://raw.githubusercontent.com/VoronDesign/Voron-Trident/main/Firmware/Octopus/Trident_Octopus_Config.cfg)
 
-Using a secure file transfer program (WinSCP, Cyberduck, Notepad++, NppFT, BBEdit, scp), transfer the downloaded file to your Raspberry Pi into the folder `~/klipper/config`.
+Rename the downloaded file to `printer.cfg`
 
-**Mainsail & Fluidd**: Copy the downloaded file into place with
-```
-cp ~/klipper/config/FILENAME_OF_VORON_CONFIG.cfg ~/klipper_config/printer.cfg
-```
+**Mainsail**: Upload the file via Mainsail's interface.  Go to the "Machine" tab, and under "Config Files", press the "Upload File" button
 
-**Octoprint**: Copy the downloaded file into place with
-```
-cp ~/klipper/config/FILENAME_OF_VORON_CONFIG.cfg ~/printer.cfg
-```
+**Fluidd**: Upload the file via Fluidd's interface.  Go to the "Configuration" Tab, and under "Configuration Files", press "+"->"Upload"
+
+**Octoprint**: Use a secure file transfer program (WinSCP, Cyberduck, Notepad++, NppFT, BBEdit, scp), to transfer the file to your Raspberry Pi, placing it in the folder `/home/pi`.
+
 
 ## Editing printer.cfg
-**Note:** There are many ways of editing the config file that vary by personal preference.  Mainsail & Fluidd both offer built in printer.cfg editors. Using Nano editor through SSH is simple but not always user friendly.  Notepad++ with the NppFTP plugin (Windows) or bbEdit (macOS) are user friendlier alternatives.  
+**Note:** There are many ways of editing the config file that vary by personal preference.  Mainsail & Fluidd both offer built-in printer.cfg editors. Using Nano editor through SSH is simple but not always user friendly.  Notepad++ with the NppFTP plugin (Windows) or bbEdit (macOS) are user-friendlier alternatives.  
 
 * Mainsail:  Click "Settings", "Machine", then on the "printer.cfg"
-* Fluidd: Click "Printer", then "printer.cfg", and choose "edit" from the menu that appears
+* Fluidd: Click "Configuration", then "printer.cfg", and choose "edit" from the menu that appears
 
 * [Notepad++ Information](./notepadplusplus.md)
 * [bbEdit Information](./bbedit.md)
@@ -69,7 +69,7 @@ The following items _must_ be updated before the printer can function.
 
 ### Printer Definitions
 
-In this section you set your maximum accelerations and velocity. The stock config is confgiured fast - so if you are facing issues - you can tweak these values lower and then increase them as you finish tuning your printer. These are the highest values that klipper will allow regardless of what you may have configured in your slicer. 
+In this section you set your maximum accelerations and velocity. The stock config is configured fast - so if you are facing issues - you can tweak these values lower and then increase them as you finish tuning your printer. These are the highest values that klipper will allow regardless of what you may have configured in your slicer. 
 
 ```ini
 [printer]
@@ -87,7 +87,7 @@ The maximum velocity (in mm/s) that the toolhead may travel a 90 degree corner a
 
 ### Update Controller Path
 
-Locate the section starting with **[mcu]**.  The V2 will have an additional section starting with **[mcu z]** as it has two controllers.  These sections are where the controllers are defined and identifying them so that Klipper which which components are connected (and to which controller if there is more than one).
+Locate the section starting with **[mcu]**.  The V2 may have an additional section starting with **[mcu z]**, if it has two controllers.  These sections are where the controllers are defined and identified so that Klipper knows which components are connected (and to which controller if there is more than one).
 
 * Begin with all controllers disconnected from the Raspberry Pi.
 * For printers with just one controller, connect that controller to the Raspberry Pi.  For printers with two controllers, connect the X/Y/E controller.
@@ -99,7 +99,7 @@ Locate the section starting with **[mcu]**.  The V2 will have an additional sect
 **Note:** If the device identifier has the word 'marlin' in it, the Klipper firmware is not loaded properly.  Go back and [re-load the Klipper firmware](./#firmware-flashing) before continuing.
 
 * Copy the device ID (e.g. _usb-Klipper\_lpc1768\_1FB0000802094AAF07825E5DC52000F5-if00_) from the terminal window and paste into a temporary text file.
-*  [Open](#editing-printercfg) the configuration file and navigate to the **[mcu]** section.  Modiffy the "serial: /dev/serial" line and paste in the controller path so that is looks like the following: `serial: /dev/serial/by-id/usb-Klipper_lpc1768_1FB0000802094AAF07825E5DC52000F5-if00`
+*  [Open](#editing-printercfg) the configuration file and navigate to the **[mcu]** section.  Modify the `serial: /dev/serial` line and paste in the controller path so that it looks like the following: `serial: /dev/serial/by-id/usb-Klipper_lpc1768_1FB0000802094AAF07825E5DC52000F5-if00`
 *  Exit the text editor, and save when prompted.
 
 ### Update Second Controller Path (V2)
@@ -115,7 +115,7 @@ This section only applies to printers with more than one controller.
 **Note:** If the device identifier has the word 'marlin' in it, the Klipper firmware is not loaded properly.  Go back and re-load the Klipper firmware before continuing.
 
 * Identify the new device ID (e.g. _usb-Klipper\_lpc1768\_0650000AA39C48AFABD4395DC22000F5-if00_) and copy from the terminal window and paste into a temporary text file.
-*  [Open](#editing-printercfg) the configuration file and navigate to the **[mcu z]** section.  Modiffy the "serial: /dev/serial" line and paste in the controller path so that is looks like the following: `serial: /dev/serial/by-id/usb-Klipper_lpc1768_0650000AA39C48AFABD4395DC22000F5-if00`
+*  [Open](#editing-printercfg) the configuration file and navigate to the **[mcu z]** section.  Modify the `serial: /dev/serial` line and paste in the controller path so that it looks like the following: `serial: /dev/serial/by-id/usb-Klipper_lpc1768_0650000AA39C48AFABD4395DC22000F5-if00`
 *  Exit the text editor with CTRL-X  and save when prompted.
 
 ### Updating Printer Specific Settings
