@@ -8,47 +8,46 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-* There is only one jumper on the SKR mini E3 V1.2 board.  This jumper will be set in the next step.
+* There is only **one jumper** on the SKR mini E3 V1.2 board.  This jumper will be set in the next step.
 
 ## Initial Preparation
 
-* Set the on-board jumper, located at the position as shown by the <span style="color: #5ce75a;">GREEN</span> jumper in the below diagram:
+* Set the on-board jumper, located at the position as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below:
 
-* Please take <span style="text-decoration: red double underline; color: red;">NOTE</span> of the <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">RED jumper</span> ("Stepper Mode" Jumper).  Please set this <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">RED Jumper</span> to the Stealthchop Mode or SpreadCycle Mode.
-<span> <br> </span>
+* Please take **<span class="underline-double-trouble color-blind-red-red">NOTE</span>** of the **<span class="color-blind-red-red">RED jumper ("Stepper Mode" Jumper)</span>**.  Please set this **<span class="color-blind-red-red">RED Jumper</span>** to the Stealthchop Mode or SpreadCycle Mode.
 
-![](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png)
+###### ![](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png) {#PREP_SKR_mini_E3_V1.2}
 
 ## MCU
 
-* Plug in <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">stepper motors</span> for <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">X, Y, Z, and E</span> in positions <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Xm, Ym, Zm, and Em</span>
-* Plug <span style="text-shadow: 2px 2px 5px #dcc623; font-size: 125%;">Hot End thermistor</span> to <span style="text-shadow: 2px 2px 5px #00ff00; font-size: 125%;">thermistor TH0</span>
-* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End heater</span> in to <span style="text-shadow: 2px 2px 5px #00ff01; font-size: 125%;">E0</span>
-* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End Fan Signal</span> into <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">PT-DET's Signal PIN</span>
-* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Hot End Fan V+ and GND</span> into <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">FAN1</span>
-* Plug <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Part Cooling Fan</span> in to <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">FAN0</span>
-* Plug <span style="text-shadow: 2px 2px 5px #a286c0; font-size: 125%;">Bed Thermistor</span> in to <span style="text-shadow: 2px 2px 5px #0c7b84; font-size: 125%;">THB</span>
-* Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">Bed Heater</span> to <span style="text-shadow: 2px 2px 5px #0e7a86; font-size: 125%;">HB connector</span>
-* Connect <span style="text-shadow: 2px 2px 5px #58b946; font-size: 125%;">X end stop</span> to <span style="text-shadow: 2px 2px 5px #58b946; font-size: 125%;">X-STOP connector</span>
-* Connect <span style="text-shadow: 2px 2px 5px #e45223; font-size: 125%;">Y end stop</span> to <span style="text-shadow: 2px 2px 5px #71b05f; font-size: 125%;">Y-STOP connector</span>
-* Plug <span style="text-shadow: 2px 2px 5px #710aef; font-size: 125%;">Probe GND and Signal (with BAT85 diode)</span> in to <span style="text-shadow: 2px 2px 5px #710aef; font-size: 125%;">Z-STOP</span>
-* Connect <span style="text-shadow: 2px 2px 5px #710aef; font-size: 125%;">Probe +V (Probe Voltage)</span> to <span style="text-shadow: 2px 2px 5px #b8754b; font-size: 125%;">VIN in terminal on the "Power DCOUT" connector</span> next to HB
-* Wire <span style="text-shadow: 2px 2px 5px red; font-size: 125%;">24V and -V</span> from DC power supply to <span style="text-shadow: 2px 2px 5px #4c959c; font-size: 125%;">VIN and GND terminals in corner on the "Power DCIN (Power In)" connector</span>
-* Connect <span style="text-shadow: 2px 2px 5px #cc9900; font-size: 125%;">USB Cable</span> to your SKR mini E3, <span style="text-shadow: 0 0 3px #FF0000; font-size: 125%;">but do not connect it yet to your Raspberry Pi</span>
+* Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, Zm, and Em
+* Plug Hot End thermistor to thermistor TH0 (PA0)
+* Plug Hot End heater in to E0 (PC8)
+* Plug Hot End Fan Signal into PT-DET's Signal PIN (PC12)
+* Plug Hot End Fan V+ and GND into FAN1
+* Plug Part Cooling Fan in to FAN0 (PA8)
+* Plug Bed Thermistor in to THB (PC3)
+* Connect Bed Heater to HB connector (PC9)
+* Connect X end stop to X-STOP connector (PC0)
+* Connect Y end stop to Y-STOP connector (PC1)
+* Plug Probe GND and Signal (with BAT85 diode) in to Z-STOP (PC2)
+* Connect Probe +V (Probe Voltage) to VIN in terminal on the "Power DCOUT" connector next to HB
+* Wire 24V and -V from DC power supply to VIN and GND terminals in corner on the "Power DCIN" connector
+* Connect USB Cable to your SKR mini E3, **but do not connect it yet to your Raspberry Pi**
 
 ### MCU Diagram
 
-![](./images/SW_Wiring_Diagram_SKR_mini_E3_V1.2_150.jpg)
+###### ![](./images/SW_Wiring_Diagram_SKR_mini_E3_V1.2_150.jpg) {#SW_Wiring_Diagram_SKR_mini_E3_V1.2}
 
-* <span style="text-shadow: 0 0 3px #FF0000; font-size: 110%;">Downloadable BTT SKR mini E3 V1.2 Wiring Diagram in .jpg format is [located here](./images/SW_Wiring_Diagram_SKR_mini_E3_V1.2_150.jpg)</span>
+* <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/SW_Wiring_Diagram_SKR_mini_E3_V1.2_150.jpg){:target="_blank" rel="noopener"}</span>
 
 ## Please Ensure the Heat Sinks are Installed Before Use
-<span> <br> </span>
-![](./images/SKR_E3_Mini_V1.2_heatsinks_150.png)
 
-<div> 
+###### ![](./images/SKR_E3_Mini_V1.2_heatsinks_150.png) {#SKR_E3_Mini_V1.2_heatsinks}
 
-<!--### The Klipper Configuration file for SKR V1.3 board
+<div>
+
+<!--### The Klipper Configuration file for SKR Mini E3 V1.2 board
 
 The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for SKR Mini E3 V1.2 board is [located here](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/xxxxxxxxxxxxxxxsw_skr_mini_e3_v12_config.cfg)
 -->
@@ -59,50 +58,36 @@ The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for
 
 For reference, here is the Color PIN diagram for the SKR mini E3 V1.2
 
-![](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.jpg)
+###### ![](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.jpg) {#SKR_mini_E3_V1.2_Color_PIN_diagram}
 
-* Downloadable BTT SKR Mini E3 V1.2 Color PIN diagram in .pdf format is [located here](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.pdf)
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.pdf){:target="_blank" rel="noopener"}
 
-* Downloadable BTT SKR Mini E3 V1.2 Color PIN diagram in .jpg format is [located here](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.jpg)
-
-{% comment %} 
-
-    The .PDF file will not receive a public URL until web page is deployed.
-
-    The public Jupyter Notebook's "nbviewer" process only accepts 
-
-    "public URLs" for .pdf files as an input parameter.
-
-    Only call the Jupyter Notebook's nbviewer process when you are not running this web page locally.
-
-{% endcomment %}
-
-{% assign colorfilename = "/build/electrical/images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.pdf" %}
-
-{% assign nbviewer_url = "https://nbviewer.org/github/VoronDesign/Voron-Documentation/" %}
-
-{% if site.url == "http://localhost:4000" %}
-
-* Downloadable and LOCAL ZOOM capable web display for BTT SKR Mini E3 V1.2 Color PIN diagram is [located here]({{ colorfilename | prepend:site.url }}) 
-
-{% else %}
-
-* Downloadable and ZOOM capable web display for BTT SKR Mini E3 V1.2 Color PIN diagram is [located here]({{ nbviewer_url | append: "blob/main" | append: colorfilename }}) 
-
-{% endif %}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.jpg){:target="_blank" rel="noopener"}
 
 ## Original SKR Mini E3 V1.2 Pinout
 
 For reference, here is the original pinout of the SKR mini E3 V1.2
 
-* Note: If you see a conflict between the original pinout and any other source, please refer back to the [BigTreeTech SKR mini E3 V1.2 schematic diagram](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/blob/master/hardware/BTT%20SKR%20MINI%20E3%20V1.2/BTT%20SKR%20mini%20E3%20V1.2sch.pdf)
-<span> <br> </span>
+* Note: If you see a conflict between the original pinout and any other source, please refer back to the [BigTreeTech SKR mini E3 V1.2 schematic diagram](<./images/BTT SKR mini E3 V1.2sch.pdf>){:target="_blank" rel="noopener"}
 
-![](./images/miniE3-V12-pinout.png)
+###### ![](./images/miniE3-V12-pinout.png) {#miniE3-V12-pinout}
+
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/BTT SKR MINI E3 V1.2PIN.pdf>){:target="_blank" rel="noopener"}
 
 ### The BTT's GitHub Repo for the BTT SKR mini E3 V1.2 Board
 
-* BigTreeTech documentation for BTT SKR mini E3 V1.2 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V1.2)
+*  BTT's documentation for BTT SKR mini E3 V1.2 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V1.2){:target="_blank" rel="noopener"}
 
-* Downloadable and ZOOM capable web display for BTT's SKR mini E3 V1.2 original pinout is [located here](http://nbviewer.jupyter.org/github/bigtreetech/BIGTREETECH-SKR-mini-E3/blob/master/hardware/BTT%20SKR%20MINI%20E3%20V1.2/BTT%20SKR%20MINI%20E3%20V1.2PIN.pdf)
+## After I have Wired up the MCU Board, What Comes Next?
 
+1. Once the MCU board is wired up and wire management has been performed, the next step is to install Mainsail/Fluidd or Octoprint, please see [The Build ═► Software Installation](../../build/software/index#software-installation){:target="_blank" rel="noopener"}
+
+2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> SKR mini e3 V1.2](../../build/software/miniE3_v12_klipper#skr-mini-e3-v12-klipper-firmware){:target="_blank" rel="noopener"}
+
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create** the Klipper Config file (printer.cfg), **please see the config file** for SKR mini e3 V2 [located here; Select "SW SKR mini e3 V2.0"](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} **as a starting point**;
+
+    * Please use the Color PIN Diagrams, [displayed above](#SKR_mini_E3_V1.2_Color_PIN_diagram), as a source of information;
+
+    * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
+
+4. After creating/editing the Klipper Config file (printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
