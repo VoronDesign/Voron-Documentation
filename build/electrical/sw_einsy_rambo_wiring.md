@@ -16,7 +16,7 @@ any title text. I ended up using header 6 with a blank title and then I use a Kr
 a Header ID.
 
 If I use the GFM Parser for creating a header anchor with an empty title the static web page produced
-DOES NOT show the LINK symbol to the left of the diagram. The Link is setup but only I can use it in the 
+DOES NOT show the LINK symbol to the left of the diagram. The Link is setup but only I can use it in the
 web page code. An outside Voron Helper could not access the Link Address.  The GFM Parser syntax for "header anchors" forces you to use a text in the title.  If you use a title text then the LINK symbol will be generated.
 
 But with further reading I found that Kramdown Parser does allow a "title text of empty" which produces the LINK symbol to the left of the diagram and generates the LINK address that Voron Users and Voron Helpers can access by right-clicking on the LINK symbol. The documentation for this can be found at https://kramdown.gettalong.org/syntax.html#headers ; look for "Specifying a Header ID"
@@ -89,11 +89,11 @@ For reference, here is the pinout of the Einsy Rambo
 
     * For Einsy Rambo boards sold Prusa, please see [the following article](https://nikolak.com/klipper-on-prusa-mk3s/){:target="_blank" rel="noopener"}
 
-3.  Once the MCU board has the Klipper Firmware Installed, the next step is to edit the Klipper Config file (skr-pico-v1.0.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg){:target="_blank" rel="noopener"};
+3.  Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (skr-pico-v1.0.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here; Select "SW Einsy Rambo"](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"};
 
     *   Please use the Color PIN Diagrams, [displayed above](#einsy-rambo-pinout), as a source of information.
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
-4.  After editing the Klipper Config file (einsy_config.cfg), the next step is to check all the motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
+4.  After **creating/editing** the Klipper Config file (einsy_config.cfg renamed to printer.cfg), the next step is to check all the motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
