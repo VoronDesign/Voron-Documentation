@@ -19,15 +19,15 @@ nav_exclude: true
 ## MCU
 
 * Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, ZAm, and Em
-* Plug Hot End thermistor to thermistor TH0
-* Plug Hot End heater in to E0
-* Plug Hot End Fan in to FAN1
-* Plug Part Cooling Fan in to FAN0
-* Plug Bed Thermistor in to THB
-* Connect Bed Heater to HB connector
-* Connect X end stop to X-STOP connector
-* Connect Y end stop to Y-STOP connector
-* Plug Probe GND and Signal (with BAT85 diode) in to Z-STOP
+* Plug Hot End thermistor to thermistor TH0 (PA0)
+* Plug Hot End heater in to E0 (PC8)
+* Plug Hot End Fan in to FAN1 (PC7)
+* Plug Part Cooling Fan in to FAN0 (PC6)
+* Plug Bed Thermistor in to THB (PC4)
+* Connect Bed Heater to HB connector (PC9)
+* Connect X end stop to X-STOP connector (PC0)
+* Connect Y end stop to Y-STOP connector (PC1)
+* Plug Probe GND and Signal (with BAT85 diode) in to Z-STOP (PC2)
 * Connect Probe +V (Probe Voltage) to VIN in terminal on "DCIN (Power)" connector
 * Wire 24V and -V from DC power supply to VIN and GND terminals of the "DCIN (Power)" connector
 * Connect USB Cable to your SKR mini E3, **but do not connect it yet to your Raspberry Pi**
@@ -38,12 +38,12 @@ nav_exclude: true
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/SW_Wiring_Diagram_SKR_mini_E3_V3.0_150.jpg){:target="_blank" rel="noopener"}</span>
 
-<div> 
+<div>
 
 <!--### The Klipper Configuration file for SKR Mini E3 V3.0
 
 The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for SKR Mini E3 V3.0 board is [located here](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/xxxxxxxskr_mini_e3_v3_config.cfg)
---> 
+-->
 
 </div>
 
