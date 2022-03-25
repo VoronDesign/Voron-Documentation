@@ -23,8 +23,8 @@ Set jumpers as shown:
 ## Wiring
 
 * Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER 
-* Connect the A Motor (gantry left) to MOTOR0
-* Connect the B Motor (gantry right) to MOTOR1
+* Connect the B Motor (gantry left) to MOTOR0
+* Connect the A Motor (gantry right) to MOTOR1
 * Connect the Z motor to MOTOR2_1 
 * Connect the Z1 motor to MOTOR3
 * Connect the Z2 motor to MOTOR4
@@ -46,7 +46,15 @@ Set jumpers as shown:
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
 ![](./images/v2_octopus_wiring.png)
- 
+
+## SSR Wiring
+
+* Wire colors will vary depending on your location.
+
+
+![](./images/btt-octopus-ssr-wiring.png)
+<br>
+<br>
 ## mini 12864 Display
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
