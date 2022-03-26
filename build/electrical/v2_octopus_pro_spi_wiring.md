@@ -148,7 +148,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 * see [the Raspberry Pi Section](OctopusPro_RaspberryPi.html#raspberry-pi)
 
-## SSR Wiring for SPI Mode
+## SSR Wiring (Board Shown is in SPI mode)
 
 * Wire colors will vary depending on your locale.
 
