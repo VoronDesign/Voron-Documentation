@@ -1,0 +1,112 @@
+//
+// Voron Customizations
+//
+
+//
+// Color Definitions
+//
+$red-400: #bd0f0f;
+$red-500: #760a0a;
+$voron-red-30: #dd6670;
+$voron-red-40: #ff3341;
+$voron-red-50: #ff0213;
+$voron-red-60: #cc000e;
+$voron-red-70: #99000a;
+$voron-red-80: #dd0007;
+$voron-link-purple: #661aff;
+$black: #27262b;
+$grey-dk-400: #2c2f33;
+$black: #23272a;
+$purple-100: #5e41d0;
+
+$grey-lt-000: #f5f6fa;
+$grey-lt-200: #ecebed;
+$grey-lt-300: #e6e1e8;
+$grey-lt-400: #b5b3b6;
+$grey-lt-550: #636363;
+$grey-lt-600: #b7b7b7;
+$grey-lt-700: #cccccc;
+$white: #fff;
+$black: #000;
+
+$grey-dk-000: #959396 !default;
+$grey-dk-100: #5c5962 !default;
+$grey-dk-200: #44434d !default;
+$grey-dk-250: #302d36 !default;
+
+$purple-000: #7253ed !default;
+
+$purple-200: #4e26af !default;
+$purple-300: #381885 !default;
+
+$blue-000: #2c84fa !default;
+$blue-100: #2869e6 !default;
+$blue-200: #264caf !default;
+$blue-300: #0d1b44 !default;
+
+$green-000: #41d693 !default;
+$green-100: #11b584 !default;
+$green-200: #009c7b !default;
+$green-300: #026e57 !default;
+
+$yellow-000: #ffeb82 !default;
+$yellow-100: #fadf50 !default;
+$yellow-200: #f7d12e !default;
+$yellow-300: #e7af06 !default;
+$gold-400: #ab7125;
+
+$red-000: #f77e7e !default;
+$red-100: #f96e65 !default;
+$red-200: #e94c4c !default;
+$red-300: #dd2e2e !default;
+
+// GA colors
+$orange-500: #ff7a00;
+$red-red: red;
+$burnt-orange-600: #e35223;
+
+//
+// Body Elements
+//
+$body-background-color: $grey-lt-200;
+$sidebar-color: $grey-dk-000;
+$search-background-color: $grey-lt-200;
+$table-background-color: $grey-lt-200;
+$code-background-color: $grey-lt-700;
+$feedback-color: darken($sidebar-color, 5%);
+
+$body-text-color: $black;
+$body-heading-color: $black;
+$search-result-preview-color: $purple-300;
+$nav-child-link-color: $blue-300;
+$link-color: $blue-300;
+$btn-primary-color: $yellow-300;
+$base-button-color: $grey-lt-300;
+
+$border-color: $grey-lt-400;
+
+//https://github.com/just-the-docs/just-the-docs/blob/main/_sass/support/_variables.scss
+//https://frank.af/voron/colors.html
+
+.color-blind-red { color: $black; }
+.color-blind-green { color: $black; }
+.color-blind-yellow { color: $black; }
+.color-blind-blue {color: $black; }
+.color-bline-orange {color: $black; }
+.color-blind-red-red {color: $black; }
+.color-blind-grey-dk-100 { color: $black; }
+
+// for double underlines
+.underline-double-trouble {
+  background-image: linear-gradient(to bottom, red 33%, transparent 33%, transparent 66%, red 66%, red);
+  background-position: 0 1.03em;
+  background-repeat: repeat-x;
+  background-size: 2px 6px;
+}
+
+  // font sizes
+  .fs_percent_110 { font-size: 110%; }
+
+a:link {
+  font-weight: 700;
+}
