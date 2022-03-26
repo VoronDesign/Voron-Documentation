@@ -1,9 +1,6 @@
 ---
 nav_exclude: true
 ---
-
-<button class="btn js-toggle-light-mode">Use voron-light color scheme</button>
-
 ## Raspberry Pi
 
 ### Power
@@ -14,12 +11,6 @@ nav_exclude: true
 ###### ![](./images/v2_octopus_pro_pi_onlyPWR.png) {#v2_octopus_pro_pi_onlyPWR_1}
 {:.no_toc}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
-
-[Go Back to the UART Section](v2_octopus_pro_uart_wiring.html#ssr-wiring-for-uart-mode)
-
-[Go Back to the SPI Section](v2_octopus_pro_spi_wiring.html#ssr-wiring-for-spi-mode)
-
 ### Connection Using Separate Power Supply
 * To reduce the current load on the 5V rail of the Octopus Pro board, the Raspberry Pi can be powered by an independent power supply.
 * Use at least 24awg wire for V+ and GND connections to the Pi's power supply
@@ -28,11 +19,11 @@ nav_exclude: true
 ###### ![](./images/v2_octopus_Pro_to_PI_UART.png) {#v2_octopus_Pro_to_PI_UART_1}
 {:.no_toc}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
-[Go Back to the UART Section](v2_octopus_pro_uart_wiring.html#ssr-wiring-for-uart-mode)
+[Go Back to the UART Section](./v2_octopus_pro_uart_wiring#ssr-wiring-board-shown-is-in-uart-mode)
 
-[Go Back to the SPI Section](v2_octopus_pro_spi_wiring.html#ssr-wiring-for-spi-mode)
+[Go Back to the SPI Section](./v2_octopus_pro_spi_wiring#ssr-wiring-board-shown-is-in-spi-mode)
 
 ### Control
 {:.no_toc}
@@ -42,8 +33,8 @@ nav_exclude: true
 ###### ![](./images/ConnectPitoMCU-Instructions.png) {#ConnectPitoOctopusPro-Instructions_1}
 {:.no_toc}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
-[Go Back to the UART Section](v2_octopus_pro_uart_wiring.html#ssr-wiring-for-uart-mode)
+[Go Back to the UART Section](./v2_octopus_pro_uart_wiring#ssr-wiring-board-shown-is-in-uart-mode)
 
-[Go Back to the SPI Section](v2_octopus_pro_spi_wiring.html#ssr-wiring-for-spi-mode)
+[Go Back to the SPI Section](./v2_octopus_pro_spi_wiring#ssr-wiring-board-shown-is-in-spi-mode)

@@ -10,7 +10,7 @@ nav_order: 2
 
 ## Initial Removal of Jumpers for SPI Mode
 
-We have no idea what state your board is in when you start this process.  Someone could have moved jumpers around already.  But since we are here, on the SPI end of the site, then I assume that you might want to look at the next section **before** removing **all the jumpers** because if all the jumpers are already set for SPI mode then removing them and placing them right back in would be a waste of your valuable time.  
+We have no idea what state your board is in when you start this process.  Someone could have moved jumpers around already.  But since we are here, on the SPI end of the site, then I assume that you might want to look at the next section **before** removing **all the jumpers** because if all the jumpers are already set for SPI mode then removing them and placing them right back in would be a waste of your valuable time.
 
 **If one does not understand what I mean by "if the jumpers are set for SPI" then I would recommend that removing all the jumpers would be the place to start.**
 
@@ -29,7 +29,7 @@ any title text. I ended up using header 6 with a blank title and then I use a Kr
 a Header ID.
 
 If I use the GFM Parser for creating a header anchor with an empty title the static web page produced
-DOES NOT show the LINK symbol to the left of the diagram. The Link is setup but only I can use it in the 
+DOES NOT show the LINK symbol to the left of the diagram. The Link is setup but only I can use it in the
 web page code. An outside Voron Helper could not access the Link Address.  The GFM Parser syntax for "header anchors" forces you to use a text in the title.  If you use a title text then the LINK symbol will be generated.
 
 But with further reading I found that Kramdown Parser does allow a "title text of empty" which produces the LINK symbol to the left of the diagram and generates the LINK address that Voron Users and Voron Helpers can access by right-clicking on the LINK symbol. The documentation for this can be found at https://kramdown.gettalong.org/syntax.html#headers ; look for "Specifying a Header ID"
@@ -40,11 +40,9 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 ###### ![](./images/Octopus_Pro_PREP-Removal_150.png) {#Octopus_Pro_PREP-Removal_SPI}
 {:.no_toc}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
-
 ## Initial Preparation for SPI Mode - Set Jumpers
 
-* Ensure the jumpers of "DIAG Jumper Block" are all removed to avoid the influence of TMC2209 DIAG on the endstop.
+* Ensure the jumpers of "DIAG Jumper Block" are all removed, since the Voron printer does not use sensorless homing.
 
 * Ensure the removal of the USB 5V power supply jumper ("Power Selection Jumper") which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
@@ -52,8 +50,6 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 ###### ![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep.png) {#Octopus_Pro_F446_SPI_Mode_for_Prep}
 {:.no_toc}
-
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
 {:.no_toc}
@@ -64,25 +60,23 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
     * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **If fans that use 5VDC or 12VDC are used, please take <span class="color-blind-red">NOTE</span> of these "fan voltage selection headers" and set the jumpers to the appropriate jumper position so that the correct fan voltage will be produced to run the 5VDC or 12VC fan.  If the fan voltage selection jumper is set for 24VDC and a 5VDC/12VDC fan is connected to it, the Octopus Pro board will be damaged.**
 
-* In the diagram below, the **<span class="color-blind-orange">ORANGE box</span>** indicates the "probe voltage selection header" with a **<span class="color-blind-green">GREEN</span>** jumper which is set for 24VDC. If a PROBE voltage of 5VDC or 12VDC is desired, this jumper needs to be changed. If the voltage required by the PROBE device does not match the voltage selected by the "probe voltage selection Jumper" then the Octopus Pro board could be damaged.
+* In the diagram below, the **<span class="color-blind-orange">ORANGE box</span>** indicates the "probe voltage selection header" with a **<span class="color-blind-green">GREEN</span>** jumper which is set for 24VDC. If a PROBE voltage of 5VDC or 12VDC is desired, this jumper needs to be changed.
+
+    * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **If the voltage required by the PROBE device does not match the voltage selected by the "probe voltage selection Jumper" then the Octopus Pro board could be damaged.**
 
 * In the diagram below, the **<span class="color-blind-orange">ORANGE box made with a dash line</span>** indicates the PT100/PT1000 DIP switches. The default setting of all the DIP switches is set to OFF. This default setting is undefined.  Therefore, **before you install the Octopus Pro board, a valid setting must be chosen.  Choose between a 2-wire or 4-wire arrangement: ([2-wire: 7, 11] or [4-wire: 4, 8])**
 
 * In the diagram below, the **<span class="color-blind-yellow">YELLOW box</span>** indicates the motor power selection headers with **<span class="color-blind-green">GREEN</span>** jumpers which are set for 24VDC.  Each stepper motor driver has this header so that each individual socket can be set to either 24VDC (V<sub>in</sub>) or MOTOR_POWER voltage.
 
-    * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **If the motor power selection headers DO NOT match the voltage being supplied to the stepper driver, the Octopus Pro board will be damaged along with the stepper motor driver.  Set each of the motor power selection jumpers to the appropriate position so that the stepper driver _voltage needed, matches the PSU voltage selected_ by the motor power selection jumper. For example, If the stepper motor driver voltage is set for 48VDC and the actual stepper motor driver runs at 12VDC, the Octopus Pro board and the stepper motor driver will be damaged.**
+    * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **If the motor power selection headers DO NOT match the voltage being supplied to the stepper driver, the Octopus Pro board will be damaged along with the stepper motor driver.  Set each of the motor power selection jumpers to the appropriate position so that the stepper driver _voltage needed, matches the PSU voltage selected_ by the motor power selection jumper. For example, If the stepper motor driver voltage is set for 48VDC and the actual stepper motor driver runs at 24VDC, the Octopus Pro board and the stepper motor driver will be damaged.**
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
-
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
 {:.no_toc}
 
 ###### ![](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png) {#Octopus_Pro_F446_SPI_VoltageSelect}
 {:.no_toc}
-
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
 
 ## Stepper Motor Drivers
 {:.no_toc}
@@ -121,8 +115,6 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Connect the V+ an 0V wires on the probe to PROBE
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
-
 ## MCU Wiring Diagram for SPI Mode
 <span> <br> </span>
 
@@ -131,7 +123,7 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 {:.no_toc}
@@ -142,11 +134,9 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 ###### ![](./images/Octopus_Pro_SPI_Heatsinks_150.png) {#Octopus_Pro_SPI_Heatsinks}
 {:.no_toc}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
-
 ## Powering the Raspberry Pi & Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](OctopusPro_RaspberryPi.html#raspberry-pi)
+* see [the Raspberry Pi Section](./OctopusPro_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
@@ -157,12 +147,12 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/BTTOctopus_Pro-ssr-SPI-wiring.png){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
 ## mini 12864 Display
 {:.no_toc}
-* See [the mini12864 guide](./mini12864_klipper_guide.md)
+* See [the mini12864 guide](./mini12864_klipper_guide.md){:target="_blank" rel="noopener"}
 
 ## URL Resources Links for the Octopus Pro (Klipper Configuration file, PIN Diagrams and Repo)
 {:.no_toc}
-* see [The Octopus Pro Resource Section](OctopusPro_Resources.html#raspberry-pi)
+* see [The Octopus Pro Resource Section](./OctopusPro_Resources#the-klipper-configuration-file-for-btt-octopus-pro-v10-board)

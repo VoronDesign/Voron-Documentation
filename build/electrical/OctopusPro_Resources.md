@@ -6,7 +6,7 @@ nav_exclude: true
 
 * The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus Pro 1.0 board is [located here; Select "V2 Octopus"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
 ## Color PIN Diagram for BTT Octopus Pro V1.0
 
@@ -19,7 +19,7 @@ For reference, here is the Color PIN diagram for the BTT Octopus Pro V1.0
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/BTT-Octopus-Pro-V1.0-color-PIN.jpg){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
 ## Original BTT Octopus Pro V1.0 Pinout
 
@@ -32,13 +32,11 @@ For reference, here is the original pinout of the BTT Octopus Pro V1.0
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/BIGTREETECH Octopus Pro - PIN.pdf>){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
-
 ## The BTT's GitHub Repo for the Octopus Pro V1.0 board
 
 * BTT's documentation for Octopus Pro V1.0 board is [located here](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-Pro){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
 ## After I have Wired up the MCU Board, What Comes Next?
 
@@ -55,4 +53,4 @@ For reference, here is the original pinout of the BTT Octopus Pro V1.0
 
 4. After **creating/editing** the Klipper Config file (Voron2_Octopus_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_octopus_pro_uartspi_wiring.html#table-of-contents)
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
