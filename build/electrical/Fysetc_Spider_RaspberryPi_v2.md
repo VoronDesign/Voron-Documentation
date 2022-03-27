@@ -10,18 +10,18 @@ nav_exclude: true
 
 ###### ![](./images/v2_spider_pi.png) {#v2_spider_pi}
 
-[Go Back to the Table of Contents](v2_spiderv22_wiring#table-of-contents)
+[Go Back to the Table of Contents for Fysetc Spider V2.2 board](./v2_spiderv22_wiring#table-of-contents)
 
-[Go Back to the UART Section](./v2_spiderv22_uart_wiring#ssr-wiring-board-shown-is-in-uart-mode)
+[Go Back to the UART Section for Fysetc Spider V2.2 board](./v2_spiderv22_uart_wiring#ssr-wiring-board-shown-is-in-uart-mode)
 
-[Go Back to the SPI Section](./v2_spiderv22_spi_wiring#ssr-wiring-board-shown-is-in-spi-mode)
+[Go Back to the SPI Section for Fysetc Spider V2.2 board](./v2_spiderv22_spi_wiring#ssr-wiring-board-shown-is-in-spi-mode)
 
 ### Control
  * Voron Design recommends using USB to control the Spider, which simply requires connecting a USB-A to USB-C cable between the Spider and Pi. 
  * The option does also exist to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the [Fysetc](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Connect%20RPI%20uart.md){:target="_blank" rel="noopener"} documentation
 
-[Go Back to the Table of Contents](v2_spiderv22_wiring#table-of-contents)
+[Go Back to the Table of Contents for Fysetc Spider V2.2 board](./v2_spiderv22_wiring#table-of-contents)
 
-[Go Back to the UART Section](./v2_spiderv22_uart_wiring#ssr-wiring-board-shown-is-in-uart-mode)
+[Go Back to the UART Section for Fysetc Spider V2.2 board](./v2_spiderv22_uart_wiring#ssr-wiring-board-shown-is-in-uart-mode)
 
-[Go Back to the SPI Section](./v2_spiderv22_spi_wiring#ssr-wiring-board-shown-is-in-spi-mode)
+[Go Back to the SPI Section for Fysetc Spider V2.2 board](./v2_spiderv22_spi_wiring#ssr-wiring-board-shown-is-in-spi-mode)

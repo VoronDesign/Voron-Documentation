@@ -93,7 +93,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## Powering the Raspberry Pi & Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](Fysetc_Spider_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the Raspberry Pi Section](./Fysetc_Spider_RaspberryPi_v2#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
@@ -115,4 +115,4 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## URL Resources Links for the Fystec Spider (Klipper Configuration file, PIN Diagrams and Repo)
 
-* See [The Fysetc Spider Resource Section](./Fysetc_Spider_Resources#the-klipper-configuration-file-for-fysetc-spider-v22-board)
+* See [The Fysetc Spider Resource Section](./Fysetc_Spider_Resources_v2#the-klipper-configuration-file-for-fysetc-spider-v22-board)

@@ -5,7 +5,7 @@ nav_exclude: true
 
 The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc Spider V2.2 board is [located here; Select "V2 Spider"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_spiderv22_wiring#table-of-contents)
+[Go Back to the Table of Contents](./v2_spiderv22_wiring#table-of-contents)
 
 ## Color PIN Diagram for Fysetc Spider V2.2
 
@@ -17,7 +17,7 @@ For reference, here is the Color PIN diagram for the Fysetc Spider V2.2
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.jpg){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_spiderv22_wiring#table-of-contents)
+[Go Back to the Table of Contents](./v2_spiderv22_wiring#table-of-contents)
 
 ## Original Fysetc Spider V2.2 Pinout
 
@@ -33,7 +33,7 @@ For reference, here is the original pinout of the Fysetc Spider V2.2
 
 * Fysetc's documentation for Spider V1.0-V2.2 board is [located here](https://github.com/FYSETC/FYSETC-SPIDER){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_spiderv22_wiring#table-of-contents)
+[Go Back to the Table of Contents](./v2_spiderv22_wiring#table-of-contents)
 
 ## After I have Wired up the MCU Board, What Comes Next?
 
@@ -50,4 +50,4 @@ For reference, here is the original pinout of the Fysetc Spider V2.2
 
 4. After **creating/editing** the Klipper Config file (Voron2_Spider_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_spiderv22_wiring#table-of-contents)
+[Go Back to the Table of Contents](./v2_spiderv22_wiring#table-of-contents)
