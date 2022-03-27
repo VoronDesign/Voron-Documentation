@@ -10,7 +10,7 @@ nav_order: 1
 
 ## Initial Removal of Jumpers
 
-Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, located at the positions shown below:
+* Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, located at the positions shown below:
 
 ###### ![](./images/FYSETC_Spider_V2.2_PREP-Removal_150.png) {#FYSETC_Spider_V22_PREP-Removal}
 
