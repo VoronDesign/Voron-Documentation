@@ -14,6 +14,33 @@ has_children: true
 * This stuff refers to the way the hardware communicates. SPI is significantly faster than UART. In some cases, an SPI solution can be three times faster than a UART solution. 
 
 * So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the Octopus Pro board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.
+<span> <br> </span>
+<span> <br> </span>
+
+{% if site.url == "http://localhost:4000" %}
+
+<iframe
+    id="uartspipdf"
+    src="{{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1" type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;">
+</iframe>
+
+{% else %}
+
+{% capture myurlpdf %} https://drive.google.com/viewerng/viewer?embedded=true&url={{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1 {% endcapture %}
+
+<iframe
+    id="uartspipdf"
+    src="{{ myurlpdf }}"
+    type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;"
+></iframe>
+
+{% endif %}
 
 ## UART Mode TMC Driver List
 
