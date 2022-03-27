@@ -1,64 +1,65 @@
 ---
 layout: default
-title: "Voron V2 - Fysetc Spider Wiring"
+title: "Voron V2 - Fysetc Spider V1.1 Wiring"
 nav_exclude: true
+has_children: true
 ---
 
-# Voron V2 - Fysetc Spider v1.1 Wiring
+# Voron V2 - Fysetc Spider V1.1 Wiring
 
-## Initial Preparation
+## What is the difference between UART mode and SPI mode?
 
-Set jumpers as shown:
+* This stuff refers to the way the hardware communicates. SPI is significantly faster than UART. In some cases, an SPI solution can be three times faster than a UART solution.
 
-![](./images/v2_spider_jumpering.png)
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the Fysetc Spider V1.1 board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.
+<span> <br> </span>
+<span> <br> </span>
 
-## Stepper Drivers
-* If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
-* Install step drivers in all slots except E4
-* Install heat sinks on all step drivers
-* _**NOTE: if the board has been powered, ensure that motor power caps are fully drained before inserting stepper drivers: Temporarily connect a 100K resistor between VMOT+ and VMOT- to safely drain the capacitors**_ See [Fysetc Spider 3.3v issue](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/Spider%203.3v%20issue.md)
+{% if site.url == "http://localhost:4000" %}
 
-## Wiring
+<iframe
+    id="uartspipdf"
+    src="{{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1" type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;">
+</iframe>
 
-* Connect 24V Power from the PSU to PWR IN AND BED IN 
-* Connect the B Motor (gantry left) to X-mot
-* Connect the A Motor (gantry right) to Y-Mot
-* Connect the Z, Z1, Z2, and Z3 Motors to Z-MOT, E1-MOT, E2-MOT and E3-MOT
-* Connect the extruder motor to E0-MOT
-* Connect the hot end heater to E0 OUT
-* Connect the chamber exhaust fan to  E2 OUT
-* Connect the bed SSR (DC Control Side) to BED OUT
-* Connect the hot end fan to FAN0
-* Connect the part cooling fan to FAN1
-* Connect the controller fans to FAN2
-* Connect the hot end thermistor to TE0
-* Connect the bed thermistor to TB
-* Connect the X endstop to X+
-* Connect the Y endstop to Y+
-* Connect the probe to Z+
-* Connect the Z endstop to Z-
-* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
+{% else %}
 
-![](./images/v2_spider_wiring.png)
+{% capture myurlpdf %} https://drive.google.com/viewerng/viewer?embedded=true&url={{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1 {% endcapture %}
 
-## Raspberry Pi
+<iframe
+    id="uartspipdf"
+    src="{{ myurlpdf }}"
+    type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;"
+></iframe>
 
-### Power 
- * The spider is capable of providing 5V power to run your Raspberry pi.  To take advantage of this feature, connect the wires shown below, from the pi header of the spider, to the GPIO header of the pi.
- * Use at least 24awg wire for this connection.  It may be tempting to use the common "dupont" jumpers found in many electronics kits, however these jumpers typically use very small gauge wire, and will not carry enough current to run the pi.
-![](./images/v2_spider_pi.png)
+{% endif %}
 
-### Control
- * Voron Design recommends using USB to control the Spider, which simply requires connecting a USB-A to USB-C cable between the Spider and Pi. 
- * The option does also exist to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the [fysetc](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Connect%20RPI%20uart.md) documentation
+## UART Mode TMC Driver List
 
-## mini 12864 Display
+### UART Mode TMC Drivers That Use 24 VDC:
 
-* *spider Rev 1.0 only*: the EXP1 & EXP2 header labels are swapped. Connect  EXP1 (display) to EXP2(spider), and EXP2 (display) to EXP1 (spider).  On the Spider 1.1 or later: connect EXP1->EXP1, and EXP2->EXP2
-* *Fysetc mini12864 only*:  components R1 and R4 must be removed from the board before connecting to the Spider.  Note: new displays are shipping with this step already complete, but this should be verified before connecting
-* *BTT mini12864 only* remove components R1, and C6, and rotate the connectors 180 degrees
-* See [the mini12864 guide](./mini12864_klipper_guide.md)
+1.  TMC2208
+2.  TMC2209
+3.  TMC2225
+4.  TMC2226
 
-## Other
-* full pinout, and other fysetc documentation is located at https://github.com/FYSETC/FYSETC-SPIDER
 
+## SPI Mode TMC Driver List
+
+### SPI Mode TMC Drivers That Use 24 VDC:
+
+1.  TMC2100
+2.  TMC2130
+3.  TMC5160
+4.  TMC5161
+
+### SPI Mode TMC Drivers That Use 48 VDC or Higher:
+
+1. TMC5160HV
+2. TMC5160_PRO
