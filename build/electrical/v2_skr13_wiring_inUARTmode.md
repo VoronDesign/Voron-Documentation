@@ -16,6 +16,10 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## Initial Preparation for UART Mode - Set Jumpers
 
+* Ensure **all of "DIAG Jumpers" or "ST Jumper Block" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
+
+* Ensure the "Power Selection Jumper" (shown in the **<span class="color-blind-red">RED box</span>**) is in the LEFT position (as shown in the diagram below) on the "Power Selection" header. This setting prevents the USB 5V power supply from being used.
+
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
 ###### ![](./images/SKR_V1.3_in_UART_mode_PREP_150.png) {#SKR_V13_in_UART_mode_for_Prep_150}
@@ -26,8 +30,8 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## MCU X/Y/E, Hot End in UART Mode
 
-* Place stepper drivers for X, Y, and E0 in positions X, Y, and E0
-* Plug in stepper motors for X, Y, and E0 in positions X, Y, and E0
+* Place stepper drivers for X, Y, and E in positions X, Y, and E0
+* Plug in stepper motors for X, Y, and E in positions X, Y, and E0
 * Plug Hot End thermistor to thermistor TH0 (P0.24)
 * Plug Hot End heater in to HE0 (P2.7)
 * Plug Hot End Fan in to HE1 (P2.4)
@@ -64,7 +68,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron2.4r2_Wiring_Diagram_BTT_SKRV1.3_Z_in_UART_mode_150.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](v2_skr13_wiring#table-of-contents)
+[Go Back to the Table of Contents](./v2_skr13_wiring#table-of-contents)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
@@ -82,14 +86,33 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/btt-SKRV1.3inUART-ssr-wiring.png) {#btt-SKRV13inUART-ssr-wiring}
 
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/btt-SKRV1.3inUART-ssr-wiring.png){:target="_blank" rel="noopener"}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/btt-SKRV1.3inUART-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](v2_skr13_wiring#table-of-contents)
+[Go Back to the Table of Contents](./v2_skr13_wiring#table-of-contents)
 
 ## mini 12864 Display
 
 * See [the mini12864 guide](./mini12864_klipper_guide#mini12864-klipper-guide){:target="_blank" rel="noopener"}
 
-## URL Resources Links for the SKR V1.3 (Klipper Configuration file, PIN Diagrams and Repo)
+### The Klipper Configuration file for SKR V1.3 board
 
-* see [The SKR V1.3 Resource Section](skr_v13_Resources#the-klipper-configuration-file-for-skr-V13-board)
+The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3 board is [located here; Select "V2 SKR 1.3"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
+
+## URL Resources Links for the SKR V1.3 (PIN Diagrams and Repo)
+
+* see [The SKR V1.3 Resource Section](./skr_v13_Resources#color-pin-diagram-for-skr-v13){:target="_blank" rel="noopener"}
+
+## After I have Wired up the MCU Board, What Comes Next?
+
+1. Once the MCU board is wired up and wire management has been performed, the next step is to install Mainsail/Fluidd or Octoprint, please see [The Build ═► Software Installation](../../build/software/index#software-installation){:target="_blank" rel="noopener"}
+
+2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> SKR 1.3](../../build/software/skr13_klipper#skr-1314-klipper-firmware){:target="_blank" rel="noopener"}
+
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_SKR_13_Config.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here; Select "V2 SKR 1.3"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"};
+
+    * Please use the Color PIN Diagrams, [displayed above](./skr_v13_Resources#SKRV13_Colored_PIN_Diagram){:target="_blank" rel="noopener"}, as a source of information;
+
+    * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
+
+
+4. After **creating/editing** the Klipper Config file (Voron2_SKR_13_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
