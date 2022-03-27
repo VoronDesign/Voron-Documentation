@@ -38,21 +38,18 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 </div>
 
 ###### ![](./images/Octopus_Pro_PREP-Removal_150.png) {#Octopus_Pro_PREP-Removal_SPI}
-{:.no_toc}
 
 ## Initial Preparation for SPI Mode - Set Jumpers
 
-* Ensure the jumpers of "DIAG Jumper Block" are all removed, since the Voron printer does not use sensorless homing.
+* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** because the Voron printer does not use sensorless homing.
 
-* Ensure the removal of the USB 5V power supply jumper ("Power Selection Jumper") which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+* Ensure the **removal of the USB 5V power supply jumper ("Power Selection Jumper, shown in the <span class="color-blind-red">RED box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
 ###### ![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep.png) {#Octopus_Pro_F446_SPI_Mode_for_Prep}
-{:.no_toc}
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
-{:.no_toc}
 
 * In the diagram below, the **COLORED BOXES** indicate the headers with **<span class="color-blind-green">GREEN</span>** jumpers which are set for 24VDC.
 
@@ -73,13 +70,10 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
-{:.no_toc}
 
 ###### ![](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png) {#Octopus_Pro_F446_SPI_VoltageSelect}
-{:.no_toc}
 
 ## Stepper Motor Drivers
-{:.no_toc}
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
 * Install heat sinks on all stepper motor drivers
 
@@ -119,20 +113,18 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 <span> <br> </span>
 
 ###### ![](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg) {#Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI}
-{:.no_toc}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron2_Wiring_Diagram_Octopus_ProF446_V1_SPI_150.jpg){:target="_blank" rel="noopener"}</span>
 
 [Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
-{:.no_toc}
+
 ### MCU in SPI Mode with Heat Sinks Installed
-{:.no_toc}
+
 <span> <br> </span>
 
 ###### ![](./images/Octopus_Pro_SPI_Heatsinks_150.png) {#Octopus_Pro_SPI_Heatsinks}
-{:.no_toc}
 
 ## Powering the Raspberry Pi & Setting up UART Communications with the Raspberry Pi
 
@@ -143,16 +135,38 @@ But with further reading I found that Kramdown Parser does allow a "title text o
 * Wire colors will vary depending on your locale.
 
 ###### ![](./images/BTTOctopus_Pro-ssr-SPI-wiring.png) {#BTTOctopus_Pro-ssr-SPI-wiring}
-{:.no_toc}
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/BTTOctopus_Pro-ssr-SPI-wiring.png){:target="_blank" rel="noopener"}
 
 [Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
 
 ## mini 12864 Display
-{:.no_toc}
+
 * See [the mini12864 guide](./mini12864_klipper_guide.md){:target="_blank" rel="noopener"}
 
-## URL Resources Links for the Octopus Pro (Klipper Configuration file, PIN Diagrams and Repo)
-{:.no_toc}
-* see [The Octopus Pro Resource Section](./OctopusPro_Resources#the-klipper-configuration-file-for-btt-octopus-pro-v10-board)
+## The Klipper Configuration file for BTT Octopus Pro V1.0 Board
+
+* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus Pro 1.0 board is [located here; Select "V2 Octopus"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
+
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
+
+## URL Resources Links for the Octopus Pro (PIN Diagrams and Repo)
+
+* see [The Octopus Pro Resource Section](./OctopusPro_Resources#color-pin-diagram-for-btt-octopus-pro-v10){:target="_blank" rel="noopener"}
+
+## After I have Wired up the MCU Board, What Comes Next?
+
+1. Once the MCU board is wired up and wire management has been performed, the next step is to install Mainsail/Fluidd or Octoprint, please see [The Build ═► Software Installation](../../build/software/index#software-installation){:target="_blank" rel="noopener"}
+
+2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> BTT Octopus](../../build/software/octopus_klipper#octopuspro-klipper-firmware){:target="_blank" rel="noopener"}
+
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Octopus_Config.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here; Select "V2 Octopus"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"};
+
+    * Please use the Color PIN Diagrams, [displayed above](./OctopusPro_Resources#color-pin-diagram-for-btt-octopus-pro-v10){:target="_blank" rel="noopener"}, as a source of information;
+
+    * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
+
+
+4. After **creating/editing** the Klipper Config file (Voron2_Octopus_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
+
+[Go Back to the Table of Contents](./v2_octopus_pro_uartspi_wiring#table-of-contents)
