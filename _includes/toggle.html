@@ -1,0 +1,40 @@
+{% if site.toggle_color_scheme and site.toggle_color_scheme != "nil"  %}
+
+  {% if site.toggle_page_url and site.toggle_page_url != "nil"
+      and site.toggle_page_url != page.url %}
+    {% assign toggle_display = "style='display: none'" %}
+  {% else %}
+    {% assign toggle_display = "style='cursor: pointer'" %}
+  {% endif %}
+
+  {% if site.toggle_text_1 %}
+    {% assign toggle_text_1 = site.toggle_text_1 %}
+  {% else %}
+    {% assign toggle_text_1 = "-> Dark Mode" %}
+  {% endif %}
+
+  {% if site.toggle_text_2 %}
+    {% assign toggle_text_2 = site.toggle_text_2 %}
+  {% else %}
+    {% assign toggle_text_2 = "-> Light Mode" %}
+  {% endif %}
+
+  <button id="theme-toggle" onclick="modeSwitcher()"
+  type="button" name="button" class="btn theme-toggle" {{ toggle_display }}></button>
+
+  <script>
+    function modeSwitcher() {
+      let currentMode = document.documentElement.getAttribute('data-theme');
+      if (currentMode === "dark") {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (testLocalStorage()) {window.localStorage.setItem('theme', 'light');last_Savedmode = "light";}
+        document.getElementById("theme-toggle").innerHTML = "{{ toggle_text_1 }}";
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (testLocalStorage()) {window.localStorage.setItem('theme', 'dark');last_Savedmode = "dark";}
+        document.getElementById("theme-toggle").innerHTML = "{{ toggle_text_2 }}";
+      }
+    }
+  </script>
+
+{% endif %}
