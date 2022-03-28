@@ -48,7 +48,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## Stepper Drivers
 * If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
-* Install step drivers in all slots except E4
+* Install step drivers in all slots except E3-MOT and E4-MOT
 * Install heat sinks on all step drivers
 * _**NOTE: if the board has been powered, ensure that motor power caps are fully drained before inserting stepper drivers: Temporarily connect a 100K resistor between VMOT+ and VMOT- to safely drain the capacitors**_ See [Fysetc Spider 3.3v issue](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/Spider%203.3v%20issue.md){:target="_blank" rel="noopener"}
 
@@ -59,8 +59,8 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * Plug in stepper motor for the B Motor (gantry left) into position M1
 * Connect stepper driver for the A Motor (gantry right) into position Y-MOT
 * Plug in stepper motor for the A Motor (gantry right) into position M2
-* Connect stepper drivers for the Z, Z1, Z2, and Z3 into positions Z-MOT, E1-MOT, E2-MOT and E3-MOT
-* Plug in stepper motors for the Z, Z1, Z2, and Z3 into positions M3, M5, M6 and M7
+* Connect stepper drivers for the Z, Z1, and Z2 into positions Z-MOT, E1-MOT, and E2-MOT
+* Plug in stepper motors for the Z, Z1, and Z2 into positions M3, M5, and M6
 * Connect stepper driver for the extruder motor into position E0-MOT
 * Plug in stepper motor for the extruder motor into position M4
 * Connect the hot end heater to E0 OUT (PB15)
@@ -83,7 +83,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Trident_Wiring_Diagram_FYSETC_Spider_V2.2_in_SPI_mode_150.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](tri_spiderv22_wiring#table-of-contents)
+[Go Back to the Table of Contents](./tri_spiderv22_wiring#table-of-contents)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
