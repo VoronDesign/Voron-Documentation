@@ -6,10 +6,8 @@ has_children: true
 ---
 
 # Voron V2 - BTT Octopus Pro V1.0 Wiring
-{:.no_toc}
 
 ## What is the difference between UART mode and SPI mode?
-{:.no_toc}
 
 * This stuff refers to the way the hardware communicates. SPI is significantly faster than UART. In some cases, an SPI solution can be three times faster than a UART solution. 
 
@@ -17,7 +15,9 @@ has_children: true
 <span> <br> </span>
 <span> <br> </span>
 
-{% if site.url == "http://localhost:4000" %}
+{% if site.uartspi_article == true %}
+
+ {% if site.url == "http://localhost:4000" %}
 
 <iframe
     id="uartspipdf"
@@ -27,9 +27,9 @@ has_children: true
     style="border:5px outset #dd2e2e;">
 </iframe>
 
-{% else %}
+ {% else %}
 
-{% capture myurlpdf %} https://drive.google.com/viewerng/viewer?embedded=true&url={{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1 {% endcapture %}
+ {% capture myurlpdf %} https://drive.google.com/viewerng/viewer?embedded=true&url={{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1 {% endcapture %}
 
 <iframe
     id="uartspipdf"
@@ -39,6 +39,8 @@ has_children: true
     height="550"
     style="border:5px outset #dd2e2e;"
 ></iframe>
+
+ {% endif %}
 
 {% endif %}
 

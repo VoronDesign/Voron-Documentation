@@ -26,6 +26,10 @@ logo: "/images/voron_design_logo.png"
 logo_dark: "/images/voron_design_logo.png"
 # set the logo to use during light mode - set logo-light:
 logo_light: "/images/voron_design_logo_light.png"
+# to disable the embedded article for "Difference between UART and SPI modes" set
+# usartspi_article to false, to allow the embedded aritcle to be seen set
+# usartspi_article to true.
+uartspi_article: true
 
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
