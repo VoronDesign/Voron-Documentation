@@ -48,7 +48,7 @@ nav_order: 1
 
 ## Stepper Drivers
 * If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
-* Install step drivers in all slots except E4
+* Install step drivers in all slots except E4-MOT
 * Install heat sinks on all step drivers
 * _**NOTE: if the board has been powered, ensure that motor power caps are fully drained before inserting stepper drivers: Temporarily connect a 100K resistor between VMOT+ and VMOT- to safely drain the capacitors**_ See [Fysetc Spider 3.3v issue](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/Spider%203.3v%20issue.md){:target="_blank" rel="noopener"}
 
