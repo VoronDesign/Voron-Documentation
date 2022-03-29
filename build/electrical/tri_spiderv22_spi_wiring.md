@@ -113,17 +113,11 @@ nav_order: 2
 * *BTT mini12864 only* remove components R1, and C6, and rotate the connectors 180 degrees
 * See [the mini12864 guide](./mini12864_klipper_guide#mini12864-klipper-guide){:target="_blank" rel="noopener"}
 
-<div>
-
-<!--
 ### The Klipper Configuration file for Fysetc Spider V2.2 Board
 
-The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for Fysetc Spider V2.2 board is [located here; Select "V2 Spider"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
+The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for Fysetc Spider V2.2 board is [located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/redelman/Spider_2.2_Voron_Trident/Trident_Spider_2_2.cfg){:target="_blank" rel="noopener"}
 
 [Go Back to the Table of Contents](./tri_spiderv22_wiring#table-of-contents)
--->
-
-</div>
 
 ## URL Resources Links for the Fystec Spider (PIN Diagrams and Repo)
 
@@ -135,13 +129,13 @@ The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for Fy
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> Fysetc Spider](../../build/software/spider_klipper#spider-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create** the Klipper Config file (printer.cfg);
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Trident_Spider_2_2.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/redelman/Spider_2.2_Voron_Trident/Trident_Spider_2_2.cfg){:target="_blank" rel="noopener"};
 
     * Please use the Color PIN Diagrams, [displayed above](./Fysetc_Spider_Resources_v2#FYSETC_Spider_V22-color-PIN_1){:target="_blank" rel="noopener"}, as a source of information;
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
 
-4. After **creating** the Klipper Config file (printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
+4. After **creating/editing** the Klipper Config file (Trident_Spider_2_2.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 [Go Back to the Table of Contents](./tri_spiderv22_wiring#table-of-contents)
