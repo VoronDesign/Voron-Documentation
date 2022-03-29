@@ -74,6 +74,7 @@ $grey-lt-400: #b5b3b6;
 $orange-600: #ff7a00;
 $mytogglebtnbg: #5c5962;
 $mytogglebtncolor: #edeaee;
+$purple-650: #b888e8;
 
 //
 // Body Elements
@@ -110,6 +111,7 @@ $feedback-color: darken($sidebar-color, 5%);
 .color-blind-orange {color: $orange-600; }
 .color-blind-red-red {color: $red-red; }
 .color-blind-grey-dk-100 { color: $grey-dk-000; }
+.color-blind-purple { color: $purple-650; }
 
 // for double underlines
 .underline-double-trouble {
