@@ -10,13 +10,13 @@ nav_order: 2
 
 ## Initial Removal of Jumpers
 
-Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, located at the positions shown below:
+* Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, located at the positions shown below:
 
 ###### ![](./images/FYSETC_Spider_V2.2_PREP-Removal_150.png) {#FYSETC_Spider_V22_PREP-Removal_SPI_5}
 
 ## Initial Preparation for SPI Mode - Set Jumpers
 
-* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
+* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** because the Voron printer does not use sensorless homing.
 
 * Ensure the "Power Selection Jumper" (shown in the **<span class="color-blind-red">RED box</span>**) is in the bottom position (as shown in the diagram below) on the "Power Selection" header. This setting prevents the USB 5V power supply from being used.
 
