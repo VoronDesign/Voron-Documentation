@@ -46,7 +46,7 @@ nav_order: 1
 
 ## Stepper Drivers
 * If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
-* Install step drivers in all slots except E4
+* Install step drivers in all slots except E4-MOT
 * Install heat sinks on all step drivers
 * _**NOTE: if the board has been powered, ensure that motor power caps are fully drained before inserting stepper drivers: Temporarily connect a 100K resistor between VMOT+ and VMOT- to safely drain the capacitors**_ See [Fysetc Spider 3.3v issue](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/Spider%203.3v%20issue.md){:target="_blank" rel="noopener"}
 
@@ -92,7 +92,7 @@ nav_order: 1
 
 ## Powering the Raspberry Pi & Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](./Fysetc_Spider_RaspberryPi_v1#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the Raspberry Pi Section](./Fysetc_Spider_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in UART mode)
 
@@ -112,6 +112,29 @@ nav_order: 1
 * *BTT mini12864 only* remove components R1, and C6, and rotate the connectors 180 degrees
 * See [the mini12864 guide](./mini12864_klipper_guide#mini12864-klipper-guide){:target="_blank" rel="noopener"}
 
-## URL Resources Links for the Fystec Spider (Klipper Configuration file, PIN Diagrams and Repo)
+### The Klipper Configuration file for Fysetc Spider V1.0 Board
 
-* See [The Fysetc Spider Resource Section](./Fysetc_Spider_Resources_v1#the-klipper-configuration-file-for-fysetc-spider-v10-board)
+The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc Spider V1.0 board is [located here; Select "V2 Spider"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
+
+[Go Back to the Table of Contents](./v2_spider_wiring#table-of-contents)
+
+## URL Resources Links for the Fystec Spider (PIN Diagrams and Repo)
+
+* See [The Fysetc Spider V1.1 Resource Section](./Fysetc_Spider_Resources_v1#color-pin-diagram-for-fysetc-spider-v10){:target="_blank" rel="noopener"}
+
+## After I have Wired up the MCU Board, What Comes Next?
+
+1. Once the MCU board is wired up and wire management has been performed, the next step is to install Mainsail/Fluidd or Octoprint, please see [The Build ═► Software Installation](../../build/software/index#software-installation){:target="_blank" rel="noopener"}
+
+2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> Fysetc Spider](../../build/software/spider_klipper#spider-klipper-firmware){:target="_blank" rel="noopener"}
+
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Spider_Config.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here; Select "V2 Spider"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"};
+
+    * Please use the Color PIN Diagrams, [displayed above](./Fysetc_Spider_Resources_v1#FYSETC_Spider_V10-color-PIN_1){:target="_blank" rel="noopener"}, as a source of information;
+
+    * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
+
+
+4. After **creating/editing** the Klipper Config file (Voron2_Spider_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
+
+[Go Back to the Table of Contents](./v2_spider_wiring#table-of-contents)
