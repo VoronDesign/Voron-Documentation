@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "BTT Octopus V1.0/V1.1 in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)"
+title: "Voron V2 - BTT Octopus V1.0/V1.1 in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)"
 parent: "Voron V2 - BTT Octopus V1.0/V1.1 Wiring"
 nav_exclude: true
 nav_order: 2
 ---
 
-# BTT Octopus V1.0/V1.1 in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)
+# Voron V2 - BTT Octopus V1.0/V1.1 in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)
 
 ## Initial Removal of Jumpers for SPI Mode
 

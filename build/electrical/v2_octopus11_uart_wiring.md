@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "BTT Octopus V1.0/V1.1 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)"
+title: "Voron V2 - BTT Octopus V1.0/V1.1 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)"
 parent: "Voron V2 - BTT Octopus V1.0/V1.1 Wiring"
 nav_exclude: true
 nav_order: 1
 ---
 
-# BTT Octopus V1.0/V1.1 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)
+# Voron V2 - BTT Octopus V1.0/V1.1 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)
 
 ## Initial Removal of Jumpers for UART Mode
 
