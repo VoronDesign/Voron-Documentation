@@ -1,15 +1,120 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
 layout: default
 name: Voron Documentation
 description: Voron Official and Community Documentation
+# url: # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: # the subpath of your site, e.g. /blog
+
+# Set a path/url to a logo that will be displayed instead of the title
+# set the logo to use during dark mode - set logo:
 logo: "/images/voron_design_logo.png"
+logo_dark: "/images/voron_design_logo.png"
+# set the logo to use during light mode - set logo-light:
+logo_light: "/images/voron_design_logo_light.png"
+# to disable the embedded article for "Difference between UART and SPI modes" set
+# usartspi_article to false, to allow the embedded aritcle to be seen set
+# usartspi_article to true.
+uartspi_article: true
+
 markdown: kramdown
 remote_theme: pmarsceill/just-the-docs
-color_scheme: voron-dark
+
+# Color scheme supports "dark", "light", and your custom schemes:
+# color_scheme will be the color_scheme that will be the initial color scheme if toggle_auto_mode is nil
+# If toggle_auto_mode is true, then the initial color scheme will be set by a window.matchMedia() and the
+# users OS prference will be the initial color scheme.
+
+# Color scheme supports "dark", "light", and your custom schemes:
+# color_scheme: nil                # default: light
+color_scheme: dark                 # default: light
+# To add a button to switch all pages to switch color modes between color_scheme and toggle_color_scheme modes:
+toggle_color_scheme: light         # default: nil (no toggle button)
+# To display the toggle button only on one page:
+toggle_page_url: nil               # default: nil (display on all pages)
+
+# To toggle automatically when the system mode preference changes - set toggle_auto_mode: true,
+#    this will allow the user to force the default color mode for the site (i.e. the inital mode will be automatically
+#    switched to which ever mode the user has set in OS preferences).  For toggle_auto_mode to work
+#    as it should (meaning that the OS preference of light and dark mode has prescendance over the manual mode), so if you have
+#    a manual mode switch button present you can temporaially change the mode to the opposite but once you
+#    go to another page on the site or refresh you browser window the mode will switch to the OS preference you
+#    set for your OS. If you want to switch modes you need to do it on you OS preferences or your system.
+#    So the manual button is a temporary switch of mode. Once you are taken to a link off the site the mode will
+#    depend on that exteranl web site's setup.
+# To toggle the pages manually - set toggle_auto_mode: nil
+#     With toggle_auto_mode set to nil then the OS preference is IGNORED and only the manual selection will
+#     change the mode from dark to light.  This web site will always be initially displayed in the mode set by color_scheme.
+#     The User will have to manully switch to the toggle_color_scheme mode.  Once the mode is switched it
+#     will persist across web site pages and browser refreshs of the page until you change the mode back.
+#     So the manual button is a persistanct switch of mode. Again, Once you are taken to a link off site the
+#     mode will depend on that external web site's setup.
+toggle_auto_mode: nil               # default: nil (manual toggle)
+
+# To set the button text for toggling and reverting:
+# toggle_text_1 is for light color scheme
+toggle_text_1: "-> Return to the Dark Side"             # default: "-> Dark Mode"
+# toggle_text_2 is for dark color scheme
+toggle_text_2: "-> Color-Blind-Friendly Light Mode"     # default: "-> Light Mode"
+
+# Enable or disable the site search
+# Supports true (default) or false
 search_enabled: true
-search.button: true
+search:
+  # Split pages into sections that can be searched individually
+  # Supports 1 - 6, default: 2
+  #heading_level: 2
+  # Maximum amount of previews per search result
+  # Default: 3
+  #previews: 3
+  # Maximum amount of words to display before a matched word in the preview
+  # Default: 5
+  #preview_words_before: 5
+  # Maximum amount of words to display after a matched word in the preview
+  # Default: 10
+  #preview_words_after: 10
+  # Set the search token separator
+  # Default: /[\s\-/]+/
+  # Example: enable support for hyphenated search words
+  #tokenizer_separator: /[\s/]+/
+  # Display the relative url in search results
+  # Supports true (default) or false
+  #rel_url: true
+  # Enable or disable the search button that appears in the bottom right corner of every page
+  # Supports true or false (default)
+  button: true
+
+# Enable or disable heading anchors
+#heading_anchors: true
+
+# Aux links for the upper right navigation
 aux_links:
   "Voron Documentation on GitHub":
     - "https://github.com/VoronDesign/Voron-Documentation"
   "VoronDesign Home":
     - "https://vorondesign.com"
 
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Footer content
+# appears at the bottom of every page's main content
+footer_content: "Open Source Project by Voron Design Team. Distributed by an <a href=\"https://github.com/VoronDesign/Voron-Documentation/tree/main/LICENSE.txt\">GNU GENERAL PUBLIC LICENSE.</a>"
