@@ -51,7 +51,7 @@ We have no idea what state your board is in when you start this process.  Someon
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
 * Install heat sinks on all stepper motor drivers
 
-## MCU Wiring for UART Mode
+## MCU Wiring for SPI Mode
 
 * Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER
 * Connect stepper driver for the B Motor (gantry left) into position DRIVER0
