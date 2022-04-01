@@ -1,50 +1,69 @@
 ---
 layout: default
-title: "Voron V2 - FLY FLYF407ZG Wiring"
+title: "Voron V2 - Mellow FLYF407ZG Wiring"
 nav_exclude: true
+has_children: true
 ---
 
-# Voron V2 - FLY FLYF407ZG Wiring
+# Voron V2 - Mellow FLYF407ZG Wiring
 
-## Initial Preparation
+## What is the difference between UART mode and SPI mode?
 
-* Remove all jumpers from the board.  Install just the jumpers as shown.
+* This stuff refers to the way the hardware communicates. SPI is significantly faster than UART. In some cases, an SPI solution can be three times faster than a UART solution.
 
-![](./images/voron2_flyf407zg_uart_jumpers.png)
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the FLYboard (FLYF407ZG) board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.
+<span> <br> </span>
+<span> <br> </span>
 
-## MCU Part 1
+{% if site.uartspi_article == true %}
 
-* Place stepper drivers for X, Y, E, Z, Z1, Z2, and Z3 in positions X, Y, E0, E2, E3, E4, E5
-* Plug in stepper motors for X, Y, E, Z, Z1, Z2, and Z3 in positions X, Y, E0, E2, E3, E4, E5
-* Plug Hot End thermistor to thermistor T0
-* Plug Hot End heater in to HEATER T0
-* Plug Bed Heater thermistor in to T1
-* Plug SSR Control for Heated Bed in to BED
-* Plug Probe PWR and GND into VCC
-* Plug Probe Signal (with BAT85 diode) in to SERVO0, pin 1 (toward USB)
-* Wire 24V and 0V from DC power supply to Power In
-* Connect USB Cable to your FLYF407ZG, but do not connect it yet to your Raspberry Pi
+ {% if site.url == "http://localhost:4000" %}
 
-![](./images/voron2_flyf407zg_mcu_1.png)
+<iframe
+    id="uartspipdf"
+    src="{{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1" type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;">
+</iframe>
 
-## MCU Part 2
+ {% else %}
 
-* Plug Hot End Fan in to FAN0
-* Plug Part Cooling Fan in to FAN1
-* Connect X end stop to X-MAX connector
-* Connect Y end stop to Y-MAX connector
-* Plug in Exhaust Fan in to FAN3
-* Plug in Controller Fan 1 in to FAN4
-* Plug in Controller Fan 2 in to FAN5
-* Plug Z Endstop Switch into Z-MAX
-* Plug display wires in to EXP1 and EXP2
+ {% capture myurlpdf %} https://drive.google.com/viewerng/viewer?embedded=true&url={{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1 {% endcapture %}
+
+<iframe
+    id="uartspipdf"
+    src="{{ myurlpdf }}"
+    type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;"
+></iframe>
+
+ {% endif %}
+
+{% endif %}
+
+## UART Mode TMC Driver List
+
+### UART Mode TMC Drivers That Use 24 VDC:
+
+1.  TMC2208
+2.  TMC2209
+3.  TMC2225
+4.  TMC2226
 
 
-![](./images/voron2_flyf407zg_mcu_2.png)
+## SPI Mode TMC Driver List
 
-## Pinout
+### SPI Mode TMC Drivers That Use 24 VDC:
 
-For reference, here is the pinout of the FLYF407ZG
+1.  TMC2100
+2.  TMC2130
+3.  TMC5160
+4.  TMC5161
 
-![](./images/flyf407zg_pinout.png)
-![](./images/flyf407zg_port_illustration.png)
+### SPI Mode TMC Drivers That Use 48 VDC or Higher:
+
+1. TMC5160HV
+2. TMC5160_PRO
