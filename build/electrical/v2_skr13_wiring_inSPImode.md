@@ -22,7 +22,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * Ensure **all of "DIAG Jumpers" or "ST Jumper Block" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed**, since the Voron printer does not use sensorless homing.
 
-* Ensure the "Power Selection Jumper" (shown in the **<span class="color-blind-red">RED box</span>**) is in the LEFT position (as shown in the diagram below) on the "Power Selection" header. This setting prevents the USB 5V power supply from being used.
+* **Set the USB-PWR jumper to the INT position (as shown in the <span class="color-blind-red">RED box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
@@ -83,6 +83,14 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 
 ###### ![](./images/SKR_V1.3_in_SPI_mode_Heatsinks2_150.png) {#SKR_V13_SPI_Heatsinks2}
+## Raspberry Pi
+
+### Power
+* The BTT SKR V1.3 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
+
+## Setting up UART Communications with the Raspberry Pi
+
+* see [the Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
