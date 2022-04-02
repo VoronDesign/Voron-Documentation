@@ -1,58 +1,69 @@
 ---
 layout: default
-title: "Voron V2 / Trident - Monster8 Wiring"
+title: "Voron V2 - MKS Monster 8 V1.0 Wiring"
 nav_exclude: true
+has_children: true
 ---
 
-# Voron V2 / Trident - MKS Makerbase Monster8 Wiring
+# Voron V2 - MKS Monster 8 V1.0 Wiring
 
-## Initial Preparation 
+## What is the difference between UART mode and SPI mode?
 
-Set jumpers as shown:
+* This stuff refers to the way the hardware communicates. SPI is significantly faster than UART. In some cases, an SPI solution can be three times faster than a UART solution. 
 
-![](./images/v2-monster8-initial-preparation.jpg)
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the Monster 8 board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.
+<span> <br> </span>
+<span> <br> </span>
 
-* Green – Add Jumper
-* Red – Remove Jumper
-1. Insert only the jumper in the Green and remove all other jumpers in the Red in order to use TMC2209 UART mode.
-2. Remove all the jumpers of DIAG to avoid the influence of TMC2209 DIAG on the endstop.
-3. Set the USB-PWR jumper to off to avoid the interaction between the USB 5V of raspberry pi and the DC-DC 5V of the motherboard.
-4. Set the six jumpers to VIN to set the fan voltage to the system supply voltage.
-5. Set the jumper to VIN to set the probe voltage to the system supply voltage.
-6. Set the two jumpers into I2C to enable the I2C output pins.
-7. Set the jumper to 5V to set the driver power.
+{% if site.uartspi_article == true %}
 
-## Wiring
+ {% if site.url == "http://localhost:4000" %}
 
-* Connect 24V and GND (V+ and V-) from the PSU to POWER (marking on rear of board)
-* Connect the B Motor (gantry left) to Driver0
-* Connect the A Motor (gantry right) to Driver1
-* Connect the Z motor (front-left) to Driver2-2 (leaving an empty connector between A and Z)
-* Connect the Z1 motor to Driver3
-* Connect the Z2 motor to Driver4
-* Connect the Z3 motor to Driver5 (v2 only)
-* Connect the extruder motor to Driver7 (leaving an empty connector between Z3 and E)
-* Connect the hot end heater to HE0
-* Connect the bed SSR (DC Control Side) to H-BED (marking on rear of board)
-* Connect the hot end fan to FAN0
-* Connect the part cooling fan to FAN1
-* Connect the chamber exhaust fan to FAN2
-* Connect the controller fans to HE1
-* Connect the hot end thermistor to TH0
-* Connect the bed thermistor to TB
-* Connect the X endstop to X+
-* Connect the Y endstop to Y+
-* Connect the Z endstop to Z-
-* Connect the probe with BAT85 to Z+
-* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
+<iframe
+    id="uartspipdf"
+    src="{{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1" type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;">
+</iframe>
 
-![](./images/v2_monster8_wiring.png)
+ {% else %}
 
-## mini 12864 Display
-* See [the mini12864 guide](./mini12864_klipper_guide.md)
+ {% capture myurlpdf %} https://drive.google.com/viewerng/viewer?embedded=true&url={{ site.url }}/build/electrical/images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1 {% endcapture %}
 
-## Other
-* full pinout, and other MKS Makerbase documentation is located [here](https://github.com/makerbase-mks/MKS-Monster8/)
-* Monster8 v1.0_003 pinout is located [here](https://github.com/makerbase-mks/MKS-Monster8/blob/main/hardware/MKS%20Monster8%20V1.0_003/MKS%20Monster8%20V1.0_003%20PIN.pdf)
-* DIN rail mount for Monster8 is located [here](https://github.com/makerbase-mks/MKS-Monster8/tree/main/STL/MKS%20Monster8%20fixed%20bracket)
-* Display bracket for MKS mini12864 V3.0 is located [here](https://github.com/makerbase-mks/MKS-Monster8/tree/main/STL/MKS%20Mini12864%20V3.0%20STL)
+<iframe
+    id="uartspipdf"
+    src="{{ myurlpdf }}"
+    type="application/pdf"
+    width="100%"
+    height="550"
+    style="border:5px outset #dd2e2e;"
+></iframe>
+
+ {% endif %}
+
+{% endif %}
+
+## UART Mode TMC Driver List
+
+### UART Mode TMC Drivers That Use 24 VDC:
+
+1.  TMC2208
+2.  TMC2209
+3.  TMC2225
+4.  TMC2226
+
+
+## SPI Mode TMC Driver List
+
+### SPI Mode TMC Drivers That Use 24 VDC:
+
+1.  TMC2100
+2.  TMC2130
+3.  TMC5160
+4.  TMC5161
+
+### SPI Mode TMC Drivers That Use 48 VDC or Higher:
+
+1. TMC5160HV
+2. TMC5160_PRO
