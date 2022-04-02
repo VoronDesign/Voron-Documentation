@@ -22,7 +22,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * Ensure **all of "DIAG Jumpers" or "ST Jumper Block" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed**, since the Voron printer does not use sensorless homing.
 
-* Ensure the "Power Selection Jumper" (shown in the **<span class="color-blind-red">RED box</span>**) is in the LEFT position (as shown in the diagram below) on the "Power Selection" header. This setting prevents the USB 5V power supply from being used.
+* **Set the USB-PWR jumper to the INT position (as shown in the <span class="color-blind-red">RED box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
@@ -63,6 +63,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * Plug Probe Signal (with BAT85 diode) in to Z+ (P1.24)
 * Plug Probe GND and Probe Voltage in to "DC OUT" connector next to X motor connector
 * Plug display wires in to EXP1 and EXP2
+* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
 * Wire 24V and 0V from DC power supply to Power/DCIN
 * Connect USB Cable to your SKR 1.3, **but do not connect it yet to your Raspberry Pi**
 
@@ -72,7 +73,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_Z_in_SPI_mode_150.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](./tri_skr_V13#table-of-contents)
+[Go Back to the Table of Contents](./tri_skr_v13#table-of-contents)
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
@@ -83,6 +84,14 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 ### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 
 ###### ![](./images/Trident_SKR_V13_in_SPI_mode_Heatsinks2_150.png) {#Trident_SKR_V13_SPI_Heatsinks2}
+## Raspberry Pi
+
+### Power
+* The BTT SKR V1.3 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
+
+## Setting up UART Communications with the Raspberry Pi
+
+* see [the Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
@@ -92,7 +101,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/btt-SKRV1.3inSPI-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](./tri_skr_V13#table-of-contents)
+[Go Back to the Table of Contents](./tri_skr_v13#table-of-contents)
 
 ## mini 12864 Display
 
