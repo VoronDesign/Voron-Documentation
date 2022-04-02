@@ -13,7 +13,7 @@ The recommended way to install Mainsail on a Raspberry Pi is to use [MainsailOS]
 ## MainsailOS
 
 To install Mainsail on a Raspberry Pi:
-1. Download and install pi-imager [pi-imager](https://www.raspberrypi.com/software/)
+1. Download and install [pi-imager](https://www.raspberrypi.com/software/)
 2. Click "Choose OS" and scroll down to "Other specific-purpose OS".
 3. Select "3D Printing" and choose "Mainsail OS". 
 4. Choose your SD Card. 
