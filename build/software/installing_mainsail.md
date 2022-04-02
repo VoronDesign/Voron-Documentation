@@ -21,8 +21,8 @@ _note: It is a good idea to use a premium microSD card from a reputable manufact
 
 4. If you will be using wifi, edit the file `mainsailos-wpa-supplicant.txt` with your Wifi information. If you are having trouble seeing this file on the microSD card, try removing it and re-inserting it into your card reader.
 5. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
-5. Insert the microSD card into your Pi, and power on the Pi.    
-6. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)  
+6. Insert the microSD card into your Pi, and power on the Pi.    
+7. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)  
    
    The default username is `pi` and the password is `raspberry`.
     * If your network supports bonjour, the pi should show up as `mainsailos.local`
