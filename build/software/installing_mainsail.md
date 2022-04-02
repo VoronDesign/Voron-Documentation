@@ -17,7 +17,7 @@ To install Mainsail on a Raspberry Pi:
 2. Click "Choose OS" and scroll down to "Other specific-purpose OS".
 3. Select "3D Printing" and choose "Mainsail OS". 
 4. Choose your SD Card. 
-5. 5. If you will be using wifi, click on the GEAR icon in the bottom right corner and enter your Wifi information. DO NOT EDIT THE USERNAME. 
+5. If you will be using wifi, click on the GEAR icon in the bottom right corner and enter your Wifi information. DO NOT EDIT THE USERNAME. 
 6. Click on "SAVE" and on "WRITE". *THIS WILL DESTROY ALL DATA ON YOUR CARD*.<br><br>
 _note: It is a good idea to use a premium microSD card from a reputable manufacturer such as Sandisk, Kingston or Samsung. Low end cards will often fail quickly when used in this application_
 
