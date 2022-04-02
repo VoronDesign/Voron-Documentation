@@ -58,8 +58,8 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * Plug Z Endstop Switch into Z- (P1.25)
 * Plug Probe Signal (with BAT85 diode) in to Z+ (P1.24)
 * Plug Probe GND and Probe Voltage in to "DC OUT" connector next to X motor connector
-* Plug display wires in to EXP1 and EXP2
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
+* Plug display wires in to EXP1 and EXP2
 * Wire 24V and 0V from DC power supply to Power/DCIN
 * Connect USB Cable to your SKR 1.3, **but do not connect it yet to your Raspberry Pi**
 
