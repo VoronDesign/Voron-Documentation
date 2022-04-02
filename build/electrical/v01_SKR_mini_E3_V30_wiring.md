@@ -10,11 +10,17 @@ nav_exclude: true
 
 * There is only **one jumper** on the SKR mini E3 V3.0 board.  This jumper will be set in the next step.
 
-## Initial Preparation
+## Initial Preparation - Set Jumper
 
 * Set the on-board jumper, located at the position as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below:
 
 ###### ![](./images/SKR_mini_E3_V3.0_for_Prep_and_Wiring_Diagram_150.png) {#PREP_v01_SKR_mini_E3_V30}
+
+### USB Voltage Selection Header
+
+* Ensure the **removal of the SW_USB 5V power supply jumper ("SW_USB header, shown in the <span class="color-blind-red">RED box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+
+###### ![](./images/SKR_MINI_E3_V3.0_voltageselect.png) {#SSKR_MINI_E3_V3.0_voltageselect}
 
 ## MCU
 
@@ -37,6 +43,15 @@ nav_exclude: true
 ###### ![](./images/Voron0.1_Wiring_Diagram_SKR_mini_E3_V3.0_150.jpg) {#Voron01_Wiring_Diagram_SKR_mini_E3_V30}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron0.1_Wiring_Diagram_SKR_mini_E3_V3.0_150.jpg){:target="_blank" rel="noopener"}</span>
+
+## Raspberry Pi
+
+### Power
+* The BTT SKR mini E3 V3.0 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
+
+### Setting up UART Communications with the Raspberry Pi
+
+* see [the SKR mini E3 V3.0 Raspberry Pi Section](./skr_miniE3v30_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ### The Klipper Configuration file for SKR mini E3 V3.0 Board
 <span> <br> </span>
