@@ -31,7 +31,7 @@ _note: It is a good idea to use a premium microSD card from a reputable manufact
     * If your network automatically assigns DNS hostnames, it may simply show up as `mainsailos`
     * Failing these two options, you may need to check your router's DHCP server, and find out what IP address as been assigned to the device.
 
-You can also use Raspberry Pi Imager; more information can be found in [the Mainsail docs](https://docs.mainsail.xyz/setup/mainsail-os).
+
  
 ### Software Update
  
