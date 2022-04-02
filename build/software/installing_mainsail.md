@@ -41,6 +41,7 @@ As soon as you have MainsailOS loaded, it is highly recommended that you make su
 3. In the "Update Manager" panel, click the refresh button
 4. Click the "Update" button for each component that needs updating.
 
+
 ### Next: [Firmware Flashing](./index.md#firmware-flashing)
 
 ## Mainsail Manual Installation
