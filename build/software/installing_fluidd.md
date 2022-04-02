@@ -16,7 +16,9 @@ To install Fluidd on a Raspberry Pi:
 1. Download the latest fluiddPi  [Release](https://github.com/cadriel/FluiddPI/releases)
 2. Unzip the .img file from your download.
 3. Use [BalenaEtcher](https://www.balena.io/etcher/) to write the .img to an 8GB (or larger) microSD card.  *THIS WILL DESTROY ALL DATA ON YOUR CARD*.
+
 _note: It is a good idea to use a premium microSD card from a reputable manufacturer such as Sandisk, Kingston or Samsung. Low end cards will often fail quickly when used in this application_
+
 4. If you will be using wifi, edit the file `fluiddpi-wpa-supplicant.txt` with your Wifi information. If you are having trouble seeing this file on the microSD card, try removing it and re-inserting it into your card reader.
 5. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
 6. Insert the microSD card into your Pi, and power on the Pi.    
