@@ -16,7 +16,7 @@ The recommended way to install Mainsail on a Raspberry Pi is to use [MainsailOS]
 To install Mainsail on a Raspberry Pi:
 1. Download the latest mainsailOS  [Release](https://github.com/mainsail-crew/MainsailOS/releases)
 2. Unzip the .img file from your download.
-3. Use [BalenaEtcher](https://www.balena.io/etcher/) to write the .img to an 8GB (or larger) microSD card.  *THIS WILL DESTROY ALL DATA ON YOUR CARD*.<br>
+3. Use [BalenaEtcher](https://www.balena.io/etcher/) to write the .img to an 8GB (or larger) microSD card.  *THIS WILL DESTROY ALL DATA ON YOUR CARD*.<br><br>
 _note: It is a good idea to use a premium microSD card from a reputable manufacturer such as Sandisk, Kingston or Samsung. Low end cards will often fail quickly when used in this application_
 
 5. If you will be using wifi, edit the file `mainsailos-wpa-supplicant.txt` with your Wifi information. If you are having trouble seeing this file on the microSD card, try removing it and re-inserting it into your card reader.
