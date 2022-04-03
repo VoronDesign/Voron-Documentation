@@ -12,7 +12,7 @@ nav_order: 2
 
 * Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, located at the positions shown below:
 
-* __<span class="underline-double-trouble color-blind-red">NOTE:</span>__ The Fysetc Spider V1.0 board has jumpers located inside the endstop connectors, **remove them**.
+* __<span class="underline-double-trouble color-blind-red">NOTE:</span>__ The Fysetc Spider V1.0 board has jumpers located inside the endstop connectors when the board is first unpacked, **remove them**.
 
 ###### ![](./images/FYSETC_Spider_V1.0_PREP-Removal_150.png) {#FYSETC_Spider_V10_PREP-Removal_7}
 
