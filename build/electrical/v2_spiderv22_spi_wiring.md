@@ -18,7 +18,7 @@ nav_order: 2
 
 * Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** because the Voron printer does not use sensorless homing.
 
-* Ensure the "Power Selection Jumper" (shown in the **<span class="color-blind-red">RED box</span>**) is in the bottom position (as shown in the diagram below) on the "Power Selection" header. This setting prevents the USB 5V power supply from being used.
+* **Set the USB-PWR jumper to the +5V position (as shown in the <span class="color-blind-red">RED box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard. The top pin on this header is labeled "U5V", and the middle and bottom pins do not have labels but the schematic labels the bottom pin as "+5V".  Ensure the USB-PWR jumper is set as shown in the diagram below.
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
@@ -131,7 +131,7 @@ The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc S
 
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Spider_Config.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here; Select "V2 Spider"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"};
 
-    * Please use the Color PIN Diagrams, [displayed above](./Fysetc_Spider_Resources_v2#FYSETC_Spider_V22-color-PIN_1){:target="_blank" rel="noopener"}, as a source of information;
+    * Please use the Color PIN Diagrams, [displayed here](./Fysetc_Spider_Resources_v2#FYSETC_Spider_V22-color-PIN_1){:target="_blank" rel="noopener"}, as a source of information;
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
