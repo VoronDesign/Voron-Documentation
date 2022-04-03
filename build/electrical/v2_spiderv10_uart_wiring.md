@@ -12,7 +12,7 @@ nav_order: 1
 
 * Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, located at the positions shown below:
 
-* __<span class="underline-double-trouble color-blind-red">NOTE:</span>__ The Fysetc Spider V1.0 board has jumpers located inside the endstop connectors, **remove them**.
+* __<span class="underline-double-trouble color-blind-red">NOTE:</span>__ The Fysetc Spider V1.0 board has jumpers located inside the endstop connectors when the board is first unpacked, **remove them**.
 
 ###### ![](./images/FYSETC_Spider_V1.0_PREP-Removal_150.png) {#FYSETC_Spider_V10_PREP-Removal}
 
@@ -20,7 +20,7 @@ nav_order: 1
 
 * Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
 
-* Ensure the "Power Selection Jumper" (shown in the **<span class="color-blind-red">RED box</span>**) is in the bottom position (as shown in the diagram below) on the "Power Selection" header. This setting prevents the USB 5V power supply from being used.
+* **Set the USB-PWR jumper to the +5V position (as shown in the <span class="color-blind-red">RED box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard. The top pin on this header is labeled "U5V", and the middle and bottom pins do not have labels but the schematic labels the bottom pin as "+5V".  Ensure the USB-PWR jumper is set as shown in the diagram below
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
