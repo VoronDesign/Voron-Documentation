@@ -8,9 +8,11 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-* There is only **one jumper** on the SKR mini E3 V1.2 board.  This jumper will be set in the next step.
+* There are only **two jumpers** on the SKR mini E3 V1.2 board.  The <span class="color-blind-red">SPREAD jumper</span> sets the board for Stealtchop or Spreadcycle mode, but this can also be set in the firmware.  The other jumper is called "NeoPWR" jumper.  See the next section about this jumper.
 
 ## Initial Preparation
+
+* The NeoPWR jumper setting will decide the source of the SKR's 5V rail. The board's 5V rail can be sourced from the board itself or from an external DCDC bridge module.  One can purchase an external DCDC bridge module (sold separately) to power 5V NeoPixel LEDs.  This bridge module is called the "DCDC Mode V1.0" board. Since the Voron printer does not require the extra DCDC bridge module, set the NeoPWR jumper so that the board's 5V rail will be powered by the MCU.
 
 * Set the on-board jumper, located at the position as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below:
 
