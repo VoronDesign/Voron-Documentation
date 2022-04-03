@@ -115,7 +115,7 @@ nav_order: 2
 
 ### The Klipper Configuration file for Fysetc Spider V2.2 Board
 
-The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for Fysetc Spider V2.2 board is [located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/redelman/Spider_2.2_Voron_Trident/Trident_Spider_2_2.cfg){:target="_blank" rel="noopener"}
+The Klipper Configuration file from /VoronDesign/VoronUsers/firmware_configurations/klipper/redelman GitHub Repo for Fysetc Spider V2.2 board is [located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/redelman/Spider_2.2_Voron_Trident/Trident_Spider_2_2.cfg){:target="_blank" rel="noopener"}
 
 [Go Back to the Table of Contents](./tri_spiderv22_wiring#table-of-contents)
 
@@ -129,7 +129,7 @@ The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for Fy
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> Fysetc Spider](../../build/software/spider_klipper#spider-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Trident_Spider_2_2.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/redelman/Spider_2.2_Voron_Trident/Trident_Spider_2_2.cfg){:target="_blank" rel="noopener"};
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Trident_Spider_2_2.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file by Redelman located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/redelman/Spider_2.2_Voron_Trident/Trident_Spider_2_2.cfg){:target="_blank" rel="noopener"};
 
     * Please use the Color PIN Diagrams, [displayed here](./Fysetc_Spider_Resources_v2#FYSETC_Spider_V22-color-PIN_1){:target="_blank" rel="noopener"}, as a source of information;
 
