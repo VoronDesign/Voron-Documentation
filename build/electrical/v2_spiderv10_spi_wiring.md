@@ -130,7 +130,7 @@ The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc S
 
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Spider_Config.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here; Select "V2 Spider"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"};
 
-    * Please use the Color PIN Diagrams, [displayed above](./Fysetc_Spider_Resources_v1#FYSETC_Spider_V10-color-PIN_1){:target="_blank" rel="noopener"}, as a source of information;
+    * Please use the Color PIN Diagrams, [displayed here](./Fysetc_Spider_Resources_v1#FYSETC_Spider_V10-color-PIN_1){:target="_blank" rel="noopener"}, as a source of information;
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
