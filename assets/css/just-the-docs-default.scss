@@ -1,0 +1,30 @@
+---
+---
+{% if site.color_scheme and site.color_scheme != "nil" %}
+  {% assign color_scheme = site.color_scheme %}
+{% else %}
+  {% assign color_scheme = "light" %}
+{% endif %}
+
+{% if site.toggle_color_scheme == "nil" or site.toggle_color_scheme == nil %}
+
+  {% assign toggle_color_scheme = nil %}
+
+  {% include css/just-the-docs.scss.liquid color_scheme = color_scheme %}
+
+{% else %}
+
+  {% assign toggle_color_scheme = site.toggle_color_scheme %}
+
+  {% if  color_scheme == "dark" and toggle_color_scheme == "light" %}
+
+    {% include css/just-the-docs-toggle.scss.liquid color_scheme = toggle_color_scheme
+                                    toggle_color_scheme = color_scheme %}
+
+  {% else %}
+
+    {% include css/just-the-docs-toggle.scss.liquid color_scheme = color_scheme
+                                      toggle_color_scheme = toggle_color_scheme %}
+
+  {% endif %}
+{% endif %}
