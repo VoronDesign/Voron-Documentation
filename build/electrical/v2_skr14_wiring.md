@@ -1,55 +1,46 @@
 ---
 layout: default
-title: "Voron V2 - SKR 1.4 Wiring"
+title: "Voron V2 - BTT SKR V1.4/V1.4Turbo Wiring"
 nav_exclude: true
+has_children: true
 ---
 
-# Voron V2 - SKR 1.4 Wiring
+# Voron V2 - BTT SKR V1.4/V1.4Turbo Wiring
 
-## Initial Preparation
+## What is the difference between UART mode and SPI mode?
 
-* If using the TMC2209 stepper drivers, use a small pair of wire cutters and remove the pin marked in purple.  This is to disable sensorless homing which is not needed for the V2.
+* This stuff refers to the way the hardware communicates. SPI is significantly faster than UART. In some cases, an SPI solution can be three times faster than a UART solution.
 
-![](./images/tmc2209-pin-removal.png)
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.4 board or SKR V1.4 Turbo board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.
+<span> <br> </span>
 
-* Reconfigure the on-board jumpers as shown.
+### For Further Information
 
-![](./images/skr14-preparation.png)
+* Read this article ["Understanding the Difference Between UART vs SPI" ](./images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1){:target="_blank" rel="noopener"}
 
-## MCU X/Y/E, Hot End
+* A nice [comparison chart of the different TMC stepper motor drivers](https://learn.watterott.com/silentstepstick/comparison/){:target="_blank" rel="noopener"}
 
-* Place stepper drivers for X, Y, and E in positions X, Y, and E0
-* Plug in stepper motors for X, Y, and E in positions X, Y, and E0
-* Plug Hot End thermistor to thermistor TH0 (P0.24)
-* Plug Hot End heater in to HE0 (P2.7)
-* Plug Hot End Fan in to HE1 (P2.4)
-* Plug Part Cooling Fan in to Fan (P2.3)
-* Connect X end stop to +X connector (P1.28)
-* Connect Y end stop to +Y connector (P1.26)
-* Wire 24V and 0V from DC power supply to Power In
-* Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
 
-![](./images/v2-skr14-mcu-xye.png)
+## UART Mode TMC Driver List
 
-## MCU Z, Bed, Exhaust Fan
+### UART Mode TMC Drivers That Use 24 VDC:
 
-* Place stepper drivers for Z0, Z1, Z2, and Z3 into positions X, Y, Z, and E0
-* Plug in stepper motors for Z0, Z1, Z2, and Z3 into positions X, Y, Z, and E0
-* Plug Bed Heater thermistor in to TB (P0.23)
-* Plug in Exhaust Fan in to HE0 (P2.7)
-* Plug in Controller Fan in to HE1 (P2.4)
-* Plug SSR Control for Heated Bed in to Fan (P2.3)
-* Plug Z Endstop Switch into -Z (P1.25)
-* Plug Probe PWR and GND into FAN2
-* Plug Probe Signal (with BAT85 diode) in to Probe (P0.10)
-* Plug display wires in to EXP1 and EXP2
-* Wire 24V and 0V from DC power supply to Power In
-* Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
+1.  TMC2208
+2.  TMC2209
+3.  TMC2225
+4.  TMC2226
 
-![](./images/v2-skr14-mcu-z.png)
 
-## SKR 1.4 Pinout
+## SPI Mode TMC Driver List
 
-For reference, here is the pinout of the SKR 1.4
+### SPI Mode TMC Drivers That Use 24 VDC:
 
-![](./images/SKR-V1.4-pinout.jpg)
+1.  TMC2100
+2.  TMC2130
+3.  TMC5160
+4.  TMC5161
+
+### SPI Mode TMC Drivers That Use 48 VDC or Higher:
+
+1. TMC5160HV
+2. TMC5160_PRO
