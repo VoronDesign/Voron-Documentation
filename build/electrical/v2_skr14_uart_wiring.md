@@ -18,7 +18,7 @@ nav_order: 1
 
 ### Disable Sensorless Homing - Method #1 - Cut Off the DIAG pin:
 
-* **Use a small pair of wire cutters and remove the pin marked in <span class="color-blind-purple">purple</span> (DIAG PIN) from the TMC2209 or TMC2226 stepper motor driver step stick**
+* **Use a small pair of wire cutters and remove the pin marked in <span class="color-blind-purple">PURPLE</span> (DIAG PIN) from the TMC2209 or TMC2226 stepper motor driver step stick**
 
 ###### ![](./images/tmc2209-pin-removal.png) {#tmc2209-pin-removal_uart_2skr}
 
@@ -91,7 +91,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect the hot end thermistor to TH0 (P0.24)
 * - [ ] Connect the X endstop to X-STOP (P1.29)
 * - [ ] Connect the Y endstop to Y-STOP (P1.28)
-* - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo, **but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
 ### MCU X/Y/E, Hot End in UART Mode Wiring Diagram
 
@@ -115,10 +115,10 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect the chamber exhaust fan to HE0 (P2.7)
 * - [ ] Connect the heated bed thermistor to TB (P0.25)
 * - [ ] Connect the Z endstop to Z-STOP (P1.27)
-* - [ ] Connect the Probe Signal (with **BAT85** diode) to PROBE connector (P0.10)
+* - [ ] Connect the Probe Signal (with&nbsp;**BAT85 diode**) to PROBE connector (P0.10)
 * - [ ] Connect the Probe PWR and GND to FAN2
 * - [ ] Plug display wires in to EXP1 and EXP2
-* - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo, **but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](https://docs.vorondesign.com/build/electrical/#bat85-diode){:target="_blank" rel="noopener"}
@@ -134,7 +134,7 @@ BAT85
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
-: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the flow of air from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
+: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
 ### MCU X/Y/E, Hot End with Heat Sinks Installed
 
