@@ -1,41 +1,47 @@
 ---
 layout: default
-title: "Voron V1 - SKR 1.3 Wiring"
+title: "Voron V1 - BTT SKR V1.3 Wiring"
 nav_exclude: true
+has_children: true
+has_toc: false
 ---
 
-# Voron V1 - SKR 1.3 Wiring
+# Voron V1 - BTT SKR V1.3 Wiring
 
-## Initial Preparation
+## What is the difference between UART mode and SPI mode?
 
-* Reconfigure the on-board jumpers as shown.
+* This stuff refers to the way the hardware communicates.
 
-![](./images/skr13-preparation.png)
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.3 board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.  In the list below, locate the name of the stepper motor drivers that were purchased with the boards and left-click on the name.
+<span> <br> </span>
 
-## MCU
+### Information
 
-* Place stepper drivers for X, Y, Z, Z1, and E in positions X, Y, Z, E0, and E1
-* Plug in stepper motors for X, Y, Z, Z1, and E in positions X, Y, Z, E0, and E1 (one of the Z connectors will be empty)
-* Plug Hot End thermistor to thermistor TH0 (P0.24)
-* Plug Hot End heater in to HE0 (P2.7)
-* Plug Hot End Fan + Controller Fan in to HE1 (P2.4)
-* Plug Bed Heater thermistor in to TB (P0.23)
-* Plug SSR Control for Heated Bed in to Servos (P2.0)
-* Plug Part Cooling Fan in to Fan (P2.3)
-* Connect X end stop to X-STOP connector (P1.28)
-* Connect Y end stop to Y-STOP connector (P1.26)
-* Connect Z end stop to Z-STOP connector (P1.25)
-* Plug Probe PWR and GND into FAN2
-* Plug Probe Signal (with BAT85 diode) in to Probe (P0.10)
-* Plug in Exhaust Fan in to HB (P2.5)
-* Plug display wires in to EXP1 and EXP2
-* Wire 24V and 0V from DC power supply to Power In
-* Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
+* Read this article ["Understanding the Difference Between UART vs SPI" ](./images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1){:target="_blank" rel="noopener"} for further information.
 
-![](./images/v1-skr13-mcu.png)
+* Here is a [comparison chart of the different TMC stepper motor drivers](https://learn.watterott.com/silentstepstick/comparison/){:target="_blank" rel="noopener"}
 
-## SKR 1.3 Pinout
 
-For reference, here is the pinout of the SKR 1.3
+## UART Mode TMC Driver List
 
-![](./images/SKR-V1.3-pinout.jpg)
+### UART Mode TMC Drivers That Use 24 VDC:
+
+1.  [TMC2208](./v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+2.  [TMC2209](./v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+3.  [TMC2225](./v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+4.  [TMC2226](./v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+
+
+## SPI Mode TMC Driver List
+
+### SPI Mode TMC Drivers That Use 24 VDC:
+
+1.  [TMC2100](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+2.  [TMC2130](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+3.  [TMC5160](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+4.  [TMC5161](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+
+### SPI Mode TMC Drivers That Use 48 VDC or Higher:
+
+1. [TMC5160HV](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+2. [TMC5160_PRO](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
