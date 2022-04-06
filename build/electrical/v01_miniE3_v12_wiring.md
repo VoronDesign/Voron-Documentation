@@ -8,33 +8,29 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-* There are only **two jumpers** on the SKR mini E3 V1.2 board.  The <span class="color-blind-red">SPREAD jumper</span> sets the board for Stealtchop or Spreadcycle mode, but this can also be set in the firmware.  The other jumper is called "NeoPWR" jumper.  See the next section about this jumper.
+* There are only **two jumpers** on the SKR mini E3 V1.2 board.  The **<span class="color-blind-red">SPREAD jumper</span>** sets the board for Stealtchop or Spreadcycle mode, but this can also be set in the firmware.  The other jumper is called "NeoPWR" jumper.  See the next section about this jumper.
 
 ## Initial Preparation
 
-* The NeoPWR jumper setting will decide the source of the SKR's 5V rail. The board's 5V rail can be sourced from the board itself or from an external DCDC bridge module.  One can purchase an external DCDC bridge module (sold separately) to power 5V NeoPixel LEDs.  This bridge module is called the "DCDC Mode V1.0" board. Since the Voron printer does not require the extra DCDC bridge module, set the NeoPWR jumper so that the board's 5V rail will be powered by the MCU.
-
-* Set the on-board jumper, located at the position as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below:
-
-* Please take **<span class="underline-double-trouble color-blind-red-red">NOTE</span>** of the **<span class="color-blind-red-red">RED jumper ("Stepper Mode" Jumper)</span>**.  Please set this **<span class="color-blind-red-red">RED Jumper</span>** to the Stealthchop Mode or SpreadCycle Mode.
+* The NeoPWR jumper setting will decide the source of the SKR's 5V rail. The board's 5V rail can be sourced from the board itself or from an external DCDC bridge module.  One can purchase an external DCDC bridge module (sold separately) to power 5V NeoPixel LEDs.  This bridge module is called the "DCDC Mode V1.0" board. Since the Voron printer does not require the extra DCDC bridge module, **set the NeoPWR jumper** so that the board's 5V rail will be powered by the MCU (as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below).
 
 ###### ![](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png) {#PREP_v01_SKR_mini_E3_V12}
 
 ## MCU
 
-* Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, Zm, and Em
-* Plug Hot End thermistor to thermistor TH0 (PA0)
-* Plug Hot End heater in to E0 (PC8)
-* Plug Hot End Fan Signal into PT-DET's Signal PIN (PC12)
-* Plug Hot End Fan V+ (+5VDC) into SERVOS connector's 5V PIN
-* Plug Part Cooling Fan in to FAN0 (PA8)
-* Plug Bed Thermistor in to THB (PC3)
-* Connect The DC bed to HB (PC9)
-* Connect X end stop to X-STOP connector (PC0)
-* Connect Y end stop to Y-STOP connector (PC1)
-* Connect Z end stop to Z-STOP connector (PC2)
-* Wire 24V and -V from DC power supply to VIN and GND on "POWER/DCIN" connector
-* Connect USB Cable to your SKR mini E3, **but do not connect it yet to your Raspberry Pi**
+* - [ ] Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, Zm, and Em
+* - [ ] Plug Hot End thermistor to thermistor TH0 (PA0)
+* - [ ] Plug Hot End heater in to E0 (PC8)
+* - [ ] Plug Hot End Fan Signal into PT-DET's Signal PIN (PC12)
+* - [ ] Plug Hot End Fan V+ (+5VDC) into SERVOS connector's 5V PIN
+* - [ ] Plug Part Cooling Fan in to FAN0 (PA8)
+* - [ ] Plug Bed Thermistor in to THB (PC3)
+* - [ ] Connect The DC bed to HB (PC9)
+* - [ ] Connect X end stop to X-STOP connector (PC0)
+* - [ ] Connect Y end stop to Y-STOP connector (PC1)
+* - [ ] Connect Z end stop to Z-STOP connector (PC2)
+* - [ ] Wire 24V and -V from DC power supply to VIN and GND on "POWER/DCIN" connector
+* - [ ] Connect USB Cable to your SKR mini E3,&nbsp;  **but do not connect it yet to your Raspberry Pi**
 
 ### MCU Diagram
 
@@ -44,9 +40,21 @@ nav_exclude: true
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
+<span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
+: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
+
 ###### ![](./images/SKR_E3_Mini_V1.2_heatsinks_150.png) {#v01_SKR_E3_Mini_V12_heatsinks}
 
-<div> 
+## Raspberry Pi
+
+### Power
+* The BTT SKR mini E3 V1.2 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
+
+## Setting up UART Communications with the Raspberry Pi
+
+* see [the SKR mini E3 V1.2 Raspberry Pi Section](./mini_e3_v12_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+
+<div>
 
 <!--### The Klipper Configuration file forSKR Mini E3 V1.2 board
 
@@ -55,29 +63,9 @@ The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 br
 
 </div>
 
-## Color PIN Diagram for SKR Mini E3 V1.2
+## URL Resources Links for the SKR mini E3 V1.2 (PIN Diagrams and Repo)
 
-For reference, here is the Color PIN diagram for the SKR mini E3 V1.2
-
-###### ![](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.jpg) {#v01_SKR_mini_E3_V12_Color_PIN_diagram}
-
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.pdf){:target="_blank" rel="noopener"}
-
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/SKR_mini_E3_V1.2_Color_PIN_diagram_300.jpg){:target="_blank" rel="noopener"}
-
-## Original SKR Mini E3 V1.2 Pinout
-
-For reference, here is the original pinout of the SKR mini E3 V1.2
-
-* Note: If you see a conflict between the original pinout and any other source, please refer back to the [BigTreeTech SKR mini E3 V1.2 schematic diagram](<./images/BTT SKR mini E3 V1.2sch.pdf>){:target="_blank" rel="noopener"}
-
-###### ![](./images/miniE3-V12-pinout.png) {#v01_miniE3-V12-pinout}
-
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/BTT SKR MINI E3 V1.2PIN.pdf>){:target="_blank" rel="noopener"}
-
-### The BTT's GitHub Repo for the BTT SKR mini E3 V1.2 Board
-
-*  BTT's documentation for BTT SKR mini E3 V1.2 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V1.2){:target="_blank" rel="noopener"}
+* see [The SKR mini E3 V1.2 Resource Section](./mini_e3_v12_Resources#color-pin-diagram-for-skr-mini-e3-v12){:target="_blank" rel="noopener"}
 
 ## After I have Wired up the MCU Board, What Comes Next?
 
@@ -85,11 +73,10 @@ For reference, here is the original pinout of the SKR mini E3 V1.2
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> SKR mini e3 V1.2](../../build/software/miniE3_v12_klipper#skr-mini-e3-v12-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create** the Klipper Config file (printer.cfg);
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create** the Klipper Config file (create printer.cfg);
 
-    * Please use the Color PIN Diagrams, [displayed above](#v01_SKR_mini_E3_V12_Color_PIN_diagram), as a source of information;
+    * Please use the Color PIN Diagrams, [displayed here](./mini_e3_v12_Resources#color-pin-diagram-for-skr-mini-e3-v12){:target="_blank" rel="noopener"}, as a source of information;
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
-
 
 4. After **creating** the Klipper Config file (printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
