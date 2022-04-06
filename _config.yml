@@ -113,5 +113,4 @@ back_to_top_text: "Back to top"
 
 # Footer content
 # appears at the bottom of every page's main content
-#footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a>"
 footer_content: "Open Source Project by Voron Design Team. Distributed by an <a href=\"https://github.com/VoronDesign/Voron-Documentation/tree/main/LICENSE.txt\">GNU GENERAL PUBLIC LICENSE.</a>"
