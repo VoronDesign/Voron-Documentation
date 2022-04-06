@@ -46,7 +46,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect Y end stop to Y+ connector (P1.26)
 * - [ ] Connect Z end stop to Z- connector (P1.25)
 * - [ ] Plug Probe PWR and GND into DCOUT next to the X motor connector
-* - [ ] Plug Probe Signal (with BAT85 diode) in to Z+ (P1.24)
+* - [ ] Plug Probe Signal (with&nbsp;**BAT85 diode**) in to Z+ (P1.24)
 * - [ ] Plug in Chamber Exhaust Fan in to H-BED (P2.5)
 * - [ ] Plug display wires in to EXP1 and EXP2
 * - [ ] Wire 24V and 0V from DC power supply to DCIN/Power In
