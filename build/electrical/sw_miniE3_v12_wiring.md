@@ -18,7 +18,10 @@ nav_exclude: true
 
 ## MCU
 
-* - [ ] Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, Zm, and Em
+* - [ ] Plug in stepper motors for X in positions Xm (motor connector)
+* - [ ] Plug in stepper motors for Y in positions Ym (motor connector)
+* - [ ] Plug in stepper motors for Z in positions Zm (motor connector)
+* - [ ] Plug in stepper motors for E in positions Em (motor connector)
 * - [ ] Plug Hot End thermistor to thermistor TH0 (PA0)
 * - [ ] Plug Hot End heater in to E0 (PC8)
 * - [ ] Plug Hot End Fan Signal into PT-DET's Signal PIN (PC12)
