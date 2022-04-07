@@ -471,6 +471,14 @@ function scrollNav() {
   }
 }
 
+const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+
+function enable_checkboxes(){
+  Array.prototype.forEach.call(checkboxes, function (e) {
+    e.removeAttribute('disabled');
+  });
+}
+
 // Document ready
 
 jtd.onReady(function(){
@@ -479,6 +487,7 @@ jtd.onReady(function(){
   initSearch();
   {%- endif %}
   scrollNav();
+  enable_checkboxes();
 });
 
 })(window.jtd = window.jtd || {});
