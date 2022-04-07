@@ -30,8 +30,16 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## MCU in UART Mode
 
-* - [ ] Place stepper drivers for X, Y, Z, Z1, and E in positions X, Y, Z, E0, and E1
-* - [ ] Plug in stepper motors for X, Y, Z, Z1, and E in positions X, Y, Z, E0, and E1 (one of the Z connectors will be empty)
+* - [ ] Place stepper drivers for X in positions X (driver socket)
+* - [ ] Place stepper drivers for Y in positions Y (driver socket)
+* - [ ] Place stepper drivers for Z in positions Z (driver socket)
+* - [ ] Place stepper drivers for Z1 in positions E0 (driver socket)
+* - [ ] Place stepper drivers for E in positions E1 (driver socket)
+* - [ ] Plug in stepper motors for X in positions X (motor connector)
+* - [ ] Plug in stepper motors for Y in positions Y (motor connector)
+* - [ ] Plug in stepper motors for Z in positions Z (motor connector)
+* - [ ] Plug in stepper motors for Z1 in positions E0 (motor connector)
+* - [ ] Plug in stepper motors for E in positions E1 (motor connector)
 * - [ ] Plug Hot End thermistor to thermistor TH0 (P0.24)
 * - [ ] Plug Hot End heater in to HE0 (P2.7)
 * - [ ] Plug Hot End Fan + Controller Fan in to HE1 (P2.4)
