@@ -8,35 +8,40 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-* There is only **one jumper** on the SKR mini E3 V3.0 board.  This jumper will be set in the next step.
+* There is only **one jumper** on the SKR mini E3 V3.0 board. This jumper is called "Neo-PWR1" jumper.  See the next section about this jumper.
 
-## Initial Preparation - Set Jumper
+## Initial Preparation
 
-* Set the on-board jumper, located at the position as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below:
+* The Neo-PWR1 jumper setting will decide the source of the SKR's 5V rail. The board's 5V rail can be sourced from the board itself or from an external DCDC bridge module.  One can purchase an external DCDC bridge module (sold separately) to power 5V NeoPixel LEDs.  This bridge module is called the "DCDC Mode V1.0" board. Since the Voron printer does not require the extra DCDC bridge module, **set the Neo-PWR1 jumper** so that the board's 5V rail will be powered by the MCU (as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below).
 
 ###### ![](./images/SKR_mini_E3_V3.0_for_Prep_and_Wiring_Diagram_150.png) {#PREP_SKR_mini_E3_V3.0}
 
 ### USB Voltage Selection Header
 
-* Ensure the **removal of the SW_USB 5V power supply jumper ("SW_USB header, shown in the <span class="color-blind-red">RED box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+* Ensure the **removal of the SW_USB 5V power supply jumper ("SW_USB header, shown in the <span class="color-blind-purple">PURPLE box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+
+* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-orange">ORANGE boxes</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstops.
 
 ###### ![](./images/SKR_MINI_E3_V3.0_voltageselect.png) {#SSKR_MINI_E3_V3.0_voltageselect}
 
 ## MCU
 
-* Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, ZAm, and Em
-* Plug Hot End thermistor to thermistor TH0 (PA0)
-* Plug Hot End heater in to E0 (PC8)
-* Plug Hot End Fan in to FAN1 (PC7)
-* Plug Part Cooling Fan in to FAN0 (PC6)
-* Plug Bed Thermistor in to THB (PC4)
-* Connect Bed Heater to HB connector (PC9)
-* Connect X end stop to X-STOP connector (PC0)
-* Connect Y end stop to Y-STOP connector (PC1)
-* Plug Probe GND and Signal (with BAT85 diode) in to Z-STOP (PC2)
-* Connect Probe +V (Probe Voltage) to VIN in terminal on "DCIN (Power)" connector
-* Wire 24V and -V from DC power supply to VIN and GND terminals of the "DCIN (Power)" connector
-* Connect USB Cable to your SKR mini E3, **but do not connect it yet to your Raspberry Pi**
+* - [ ] Plug in stepper motors for X, Y, Z, and E in positions Xm, Ym, ZAm, and Em
+* - [ ] Plug Hot End thermistor to thermistor TH0 (PA0)
+* - [ ] Plug Hot End heater in to E0 (PC8)
+* - [ ] Plug Hot End Fan in to FAN1 (PC7)
+* - [ ] Plug Part Cooling Fan in to FAN0 (PC6)
+* - [ ] Plug Bed Thermistor in to THB (PC4)
+* - [ ] Connect Bed Heater to HB connector (PC9)
+* - [ ] Connect X end stop to X-STOP connector (PC0)
+* - [ ] Connect Y end stop to Y-STOP connector (PC1)
+* - [ ] Plug Probe GND and Signal (with&nbsp;**BAT85 diode**) in to Z-STOP (PC2)
+* - [ ] Connect Probe +V (Probe Voltage) to VIN/DCIN pin on the VIN header (look next to the 20Amp fuse)
+* - [ ] Wire 24V and -V from DC power supply to VIN and GND terminals of the POWER/DCIN connector
+* - [ ] Connect USB Cable to your SKR mini E3,&nbsp; **but do not connect it yet to your Raspberry Pi**
+
+BAT85
+: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ### MCU Diagram
 
@@ -62,28 +67,9 @@ The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for
 
 </div>
 
-## Color PIN Diagram for SKR Mini E3 V3.0
-For reference, here is the Color PIN diagram for the SKR mini E3 V3.0
+## URL Resources Links for the SKR mini E3 V2.0 (PIN Diagrams and Repo)
 
-###### ![](./images/SKR_mini_E3_V3.0_Color_PIN_diagram_300.jpg) {#skr_mini_E3_V3.0_Color_PIN_diagram}
-
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/SKR_mini_E3_V3.0_Color_PIN_diagram_300.pdf){:target="_blank" rel="noopener"}
-
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/SKR_mini_E3_V3.0_Color_PIN_diagram_300.jpg){:target="_blank" rel="noopener"}
-
-## Original SKR Mini E3 V3.0 Pinout
-
-For reference, here is the original pinout of the SKR mini E3 V3.0
-
-* Note: If you see a conflict between the original pinout and any other source, please refer back to the [BigTreeTech SKR mini E3 V3.0 schematic diagram](<./images/BTT E3 SKR MINI V3.0_SCH.pdf>){:target="_blank" rel="noopener"}
-
-###### ![](./images/miniE3-v30-pinout.png) {#miniE3-v30-pinout}
-
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/BTT E3 SKR MINI V3.0_PIN.pdf>){:target="_blank" rel="noopener"}
-
-### The BTT's GitHub Repo for the BTT SKR mini E3 V3.0 Board
-
-*  BTT's documentation for BTT SKR mini E3 V3.0 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V3.0){:target="_blank" rel="noopener"}
+* see [The SKR mini E3 V3.0 Resource Section](./mini_e3_v30_Resources#color-pin-diagram-for-skr-mini-e3-v30){:target="_blank" rel="noopener"}
 
 ## After I have Wired up the MCU Board, What Comes Next?
 
@@ -93,9 +79,8 @@ For reference, here is the original pinout of the SKR mini E3 V3.0
 
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create** the Klipper Config file (create a printer.cfg file);
 
-    * Please use the Color PIN Diagrams, [displayed here](#skr_mini_E3_V3.0_Color_PIN_diagram), as a source of information;
+    * Please use the Color PIN Diagrams, [displayed here](./mini_e3_v30_Resources#color-pin-diagram-for-skr-mini-e3-v30){:target="_blank" rel="noopener"}, as a source of information;
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
-
 
 4. After **creating** the Klipper Config file (printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
