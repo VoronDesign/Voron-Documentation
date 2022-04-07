@@ -3,6 +3,7 @@ layout: default
 title: "Voron V2 - BTT SKR V1.3 Wiring"
 nav_exclude: true
 has_children: true
+has_toc: false
 ---
 
 # Voron V2 - BTT SKR V1.3 Wiring
