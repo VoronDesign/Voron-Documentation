@@ -88,7 +88,7 @@ We have no idea what state your board is in when you start this process.  Someon
 
 ## MCU Wiring Diagram for SPI Mode
 
-###### ![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_SPI_mode_150.jpg){:height="65%" width="65%"} {#Voron2_Wiring_Diagram_FYSETC_Spider_V10_in_SPI}
+###### ![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_SPI_mode_150.jpg){:height="90%" width="90%"} {#Voron2_Wiring_Diagram_FYSETC_Spider_V10_in_SPI}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_SPI_mode_150.jpg){:target="_blank" rel="noopener"}</span>
 
