@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Trident - SKR V1.3 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)"
+title: "Trident - SKR V1.3: TMC2208, TMC2209, TMC2225, or TMC2226"
 parent: "Trident - BTT SKR V1.3 Wiring"
 nav_exclude: true
 nav_order: 1
 ---
 
-# Trident - SKR V1.3 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)
+# Trident - SKR V1.3: TMC2208, TMC2209, TMC2225, or TMC2226
 
 ## Initial Removal of Jumpers
 
@@ -18,7 +18,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * Ensure **all of "DIAG Jumpers" or "ST Jumper Block" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
 
-* **Set the USB-PWR jumper to the INT position (as shown in the <span class="color-blind-red">RED box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+* **Set the USB-PWR jumper to the INT position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
@@ -30,16 +30,16 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## MCU X/Y/E, Hot End in UART Mode
 
-* Place stepper drivers for X, Y, and E in positions X, Y, and E0
-* Plug in stepper motors for X, Y, and E in positions X, Y, and E0
-* Plug Hot End thermistor to thermistor TH0 (P0.24)
-* Plug Hot End heater in to HE0 (P2.7)
-* Plug Hot End Fan in to HE1 (P2.4)
-* Plug Part Cooling Fan in to Fan (P2.3)
-* Connect X end stop to X+ connector (P1.28)
-* Connect Y end stop to Y+ connector (P1.26)
-* Wire 24V and 0V from DC power supply to Power/DCIN
-* Connect USB Cable to your SKR V1.3, **but do not connect it yet to your Raspberry Pi**
+* - [ ] Place stepper drivers for X, Y, and E in positions X, Y, and E0
+* - [ ] Plug in stepper motors for X, Y, and E in positions X, Y, and E0
+* - [ ] Plug Hot End thermistor to thermistor TH0 (P0.24)
+* - [ ] Plug Hot End heater in to HE0 (P2.7)
+* - [ ] Plug Hot End Fan in to HE1 (P2.4)
+* - [ ] Plug Part Cooling Fan in to Fan (P2.3)
+* - [ ] Connect X end stop to X+ connector (P1.28)
+* - [ ] Connect Y end stop to Y+ connector (P1.26)
+* - [ ] Wire 24V and 0V from DC power supply to Power/DCIN
+* - [ ] Connect USB Cable to your SKR V1.3,&nbsp;**but do not connect it yet to your Raspberry Pi**
 
 ### MCU X/Y/E, Hot End in UART Mode Wiring Diagram
 
@@ -49,19 +49,20 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## MCU Z, Bed, Exhaust Fan in UART Mode
 
-* Place stepper drivers for Z2, Z1, and Z0 into positions X, Z, and E1
-* Plug in stepper motors for Z2, Z1, and Z0 into positions X, Z, and E1
-* Plug Bed Thermistor in to TB (P0.23)
-* Plug in Exhaust Fan in to H-BED (P2.5)
-* Plug in Controller Fans in to FAN (P2.3)
-* Plug SSR Control for Heated Bed in to HE1 (P2.4)
-* Plug Z Endstop Switch into Z- (P1.25)
-* Plug Probe Signal (with BAT85 diode) in to Z+ (P1.24)
-* Plug Probe GND and Probe Voltage in to "DC OUT" connector next to X motor connector
-* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
-* Plug display wires in to EXP1 and EXP2
-* Wire 24V and 0V from DC power supply to Power/DCIN
-* Connect USB Cable to your SKR 1.3, **but do not connect it yet to your Raspberry Pi**
+* - [ ] Place stepper drivers for Z2, Z1, and Z0 into positions X, Z, and E1
+* - [ ] Plug in stepper motors for Z2, Z1, and Z0 into positions X, Z, and E1
+* - [ ] Plug Bed Thermistor in to TB (P0.23)
+* - [ ] Plug in Exhaust Fan in to H-BED (P2.5)
+* - [ ] Plug in Controller Fans in to FAN (P2.3)
+* - [ ] Plug SSR Control for Heated Bed in to HE1 (P2.4)
+* - [ ] Plug Z Endstop Switch into Z- (P1.25)
+* - [ ] Plug Probe Signal (with&nbsp;**BAT85 diode**) in to Z+ (P1.24)
+* - [ ] Plug Probe GND and Probe Voltage in to "DC OUT" connector next to X motor connector
+* - [ ] Wire 24V and 0V from DC power supply to Power/DCIN
+* - [ ] Connect USB Cable to your SKR V1.3,&nbsp;**but do not connect it yet to your Raspberry Pi**
+
+BAT85
+: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ### MCU Z, Bed, Exhaust Fan in UART Mode Wiring Diagram
 
@@ -69,9 +70,10 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_Z_in_UART_mode_150.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](./tri_skr_v13#table-of-contents)
-
 ## Please Ensure the Heat Sinks are Installed Before Use
+
+<span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
+: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
 ### MCU X/Y/E, Hot End with Heat Sinks Installed
 
@@ -88,7 +90,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the SKR V1.3 Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in UART mode)
 
@@ -97,12 +99,6 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 ###### ![](./images/btt-SKRV1.3inUART-ssr-wiring.png) {#btt-SKRV13inUART-ssr-wiring_2}
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/btt-SKRV1.3inUART-ssr-wiring.png){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_skr_v13#table-of-contents)
-
-## mini 12864 Display
-
-* See [the mini12864 guide](./mini12864_klipper_guide#mini12864-klipper-guide){:target="_blank" rel="noopener"}
 
 ### The Klipper Configuration file for SKR V1.3 board
 
@@ -120,7 +116,7 @@ The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for SK
 
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron_Trident_SKR_1.3.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here](https://raw.githubusercontent.com/VoronDesign/Voron-Trident/main/Firmware/Voron_Trident_SKR_1.3.cfg){:target="_blank" rel="noopener"};
 
-    * Please use the Color PIN Diagrams, [displayed above](./skr_v13_Resources#SKRV13_Colored_PIN_Diagram){:target="_blank" rel="noopener"}, as a source of information;
+    * Please use the Color PIN Diagrams, [displayed here](./skr_v13_Resources#color-pin-diagram-for-skr-v13){:target="_blank" rel="noopener"}, as a source of information;
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
