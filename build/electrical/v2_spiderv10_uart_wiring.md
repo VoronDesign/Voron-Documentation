@@ -56,13 +56,13 @@ nav_order: 1
 * - [ ] Connect stepper driver for the A Motor (gantry right) into position Y-MOT (driver socket).
 * - [ ] Plug in stepper motor for the A Motor (gantry right) into position Y-MOT (motor connector).
 * - [ ] Connect stepper drivers for the Z into positions Z-MOT (driver socket).
-* - [ ] Connect stepper drivers for the Z1 into positions E1-MOT (driver socket).
-* - [ ] Connect stepper drivers for the Z2 into positions E2-MOT (driver socket).
-* - [ ] Connect stepper drivers for the Z3 into positions E3-MOT (driver socket).
-* - [ ] Ensure that Z2-MOT motor connector has two jumpers set.  These jumpers allow the Z1-MOT connector to work properly.
 * - [ ] Plug in stepper motors for the Z into positions Z1-MOT (motor connectors).
+* - [ ] Ensure that Z2-MOT motor connector has two jumpers set.  These jumpers allow the Z1-MOT connector to work properly.
+* - [ ] Connect stepper drivers for the Z1 into positions E1-MOT (driver socket).
 * - [ ] Plug in stepper motors for the Z1 into positions E1-MOT (motor connectors).
+* - [ ] Connect stepper drivers for the Z2 into positions E2-MOT (driver socket).
 * - [ ] Plug in stepper motors for the Z2 into positions E2-MOT (motor connectors).
+* - [ ] Connect stepper drivers for the Z3 into positions E3-MOT (driver socket).
 * - [ ] Plug in stepper motors for the Z3 into positions E3-MOT (motor connectors).
 * - [ ] Connect stepper driver for the extruder motor into position E0-MOT (driver socket).
 * - [ ] Plug in stepper motor for the extruder motor into position E0-MOT (motor connector).
@@ -84,7 +84,7 @@ nav_order: 1
 
 ## MCU Wiring Diagram for UART Mode
 
-###### ![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_UART_mode_150.jpg){:height="90%" width="90%"} {#Voron2_Wiring_Diagram_FYSETC_Spider_V10_in_UART}
+###### ![](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_UART_mode_150.jpg) {#Voron2_Wiring_Diagram_FYSETC_Spider_V10_in_UART}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron2.4r2_Wiring_Diagram_FYSETC_Spider_V1.0_in_UART_mode_150.jpg){:target="_blank" rel="noopener"}</span>
 
