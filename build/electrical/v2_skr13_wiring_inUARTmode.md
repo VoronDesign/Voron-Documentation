@@ -30,8 +30,12 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## MCU X/Y/E, Hot End in UART Mode
 
-* - [ ] Place stepper drivers for X, Y, and E in positions X, Y, and E0
-* - [ ] Plug in stepper motors for X, Y, and E in positions X, Y, and E0
+* - [ ] Place stepper drivers for X in positions X (driver socket)
+* - [ ] Place stepper drivers for Y in positions Y (driver socket)
+* - [ ] Place stepper drivers for E in positions E0 (driver socket)
+* - [ ] Plug in stepper motors for X in positions X (motor connector)
+* - [ ] Plug in stepper motors for Y in positions Y (motor connector)
+* - [ ] Plug in stepper motors for E in positions E0 (motor connector)
 * - [ ] Plug Hot End thermistor to thermistor TH0 (P0.24)
 * - [ ] Plug Hot End heater in to HE0 (P2.7)
 * - [ ] Plug Hot End Fan in to HE1 (P2.4)
@@ -49,8 +53,14 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## MCU Z, Bed, Exhaust Fan in UART Mode
 
-* - [ ] Place stepper drivers for Z0, Z1, Z2, and Z3 into positions X, Y, Z, and E0
-* - [ ] Plug in stepper motors for Z0, Z1, Z2, and Z3 into positions X, Y, Z, and E0
+* - [ ] Place stepper drivers for Z0 into positions X
+* - [ ] Place stepper drivers for Z1 into positions Y
+* - [ ] Place stepper drivers for Z2 into positions Z
+* - [ ] Place stepper drivers for Z3 into positions E0
+* - [ ] Plug in stepper motors for Z0 into positions X
+* - [ ] Plug in stepper motors for Z1 into positions Y
+* - [ ] Plug in stepper motors for Z2 into positions Z
+* - [ ] Plug in stepper motors for Z3 into positions E0
 * - [ ] Plug Bed Thermistor in to TB (P0.23)
 * - [ ] Plug in Exhaust Fan in to HE0 (P2.7)
 * - [ ] Plug in Controller Fans in to HE1 (P2.4)
