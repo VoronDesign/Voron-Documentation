@@ -19,7 +19,10 @@ nav_exclude: true
 
 ## MCU
 
-* - [ ] Plug in stepper motors for X, Y, Z, and E in positions X, Y, Z1, and E
+* - [ ] Plug in stepper motors for X positions X (motor connector)
+* - [ ] Plug in stepper motors for Y in positions Y (motor connector)
+* - [ ] Plug in stepper motors for Z in positions Z1 (motor connector)
+* - [ ] Plug in stepper motors for E in positions E (motor connector)
 * - [ ] Plug Hot End thermistor to thermistor TH0 (IO27)
 * - [ ] Plug Hot End heater in to HE (IO23)
 * - [ ] Plug Hot End Fan Signal in to FAN2 (IO18)
