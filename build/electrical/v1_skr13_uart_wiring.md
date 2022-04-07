@@ -57,8 +57,6 @@ BAT85
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/V1_Wiring_Diagram_BTT_SKRV1.3_XYE_in_UART_mode.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](./v1_skr13_wiring#voron-v1---btt-skr-v13-wiring)
-
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
@@ -75,7 +73,7 @@ BAT85
 
 ## Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the SKR V1.3 Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in UART mode)
 
@@ -84,8 +82,6 @@ BAT85
 ###### ![](./images/btt-SKRV1.3inUART-ssr-wiring.png) {#btt-SKRV13inUART-ssr-wiring}
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/btt-SKRV1.3inUART-ssr-wiring.png){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./v1_skr13_wiring#voron-v1---btt-skr-v13-wiring)
 
 ### The Klipper Configuration file for SKR V1.3 board
 
@@ -108,5 +104,3 @@ The Klipper Configuration file from VoronDesign/Voron-1/Voron1.8 GitHub Repo for
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
 4. After **creating/editing** the Klipper Config file (Voron_1_SKR_13_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./v1_skr13_wiring#voron-v1---btt-skr-v13-wiring)

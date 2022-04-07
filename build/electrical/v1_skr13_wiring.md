@@ -12,8 +12,11 @@ has_toc: false
 
 * This stuff refers to the way the hardware communicates.
 
-* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.3 board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.  In the list below, locate the name of the stepper motor drivers that were purchased with the boards and left-click on the name.
-<span> <br> </span>
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.3 board.
+
+* The list below shows which stepper motor drivers are UART mode and which are SPI mode.
+
+* In the list below, locate the name of the stepper motor drivers that were purchased with the boards and left-click on the name.
 
 ### Information
 
