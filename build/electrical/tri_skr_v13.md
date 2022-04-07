@@ -3,6 +3,7 @@ layout: default
 title: "Trident - BTT SKR V1.3 Wiring"
 nav_exclude: true
 has_children: true
+has_toc: false
 ---
 
 # Trident - BTT SKR V1.3 Wiring
