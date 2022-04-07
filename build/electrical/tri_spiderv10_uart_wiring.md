@@ -57,11 +57,11 @@ nav_order: 1
 * - [ ] Plug in stepper motor for the A Motor (gantry right) into position Y-MOT (motor connector).
 * - [ ] Connect stepper drivers for the Z into positions Z-MOT (driver socket).
 * - [ ] Plug in stepper motors for the Z into positions Z1-MOT (motor connectors).
+* - [ ] Ensure that Z2-MOT motor connector has two jumpers set.  These jumpers allow the Z1-MOT connector to work properly.
 * - [ ] Connect stepper drivers for the Z1 into positions E1-MOT (driver socket).
 * - [ ] Plug in stepper motors for the Z1 into positions E1-MOT (motor connectors).
 * - [ ] Connect stepper drivers for the Z2 into positions E2-MOT (driver socket).
 * - [ ] Plug in stepper motors for the Z2 into positions E2-MOT (motor connectors).
-* - [ ] Ensure that Z2-MOT motor connector has two jumpers set.  These jumpers allow the Z1-MOT connector to work properly.
 * - [ ] Connect stepper driver for the extruder motor into position E0-MOT (driver socket).
 * - [ ] Plug in stepper motor for the extruder motor into position E0-MOT (motor connector).
 * - [ ] Connect the hot end heater to E0 OUT (PB15)
