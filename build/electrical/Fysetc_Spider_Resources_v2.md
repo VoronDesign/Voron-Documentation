@@ -19,7 +19,7 @@ For reference, here is the original pinout of the Fysetc Spider V2.2
 
 ###### ![](./images/Spider_V2.2_Pinout.jpg) {#Spider_V22_Pinout_1}
 
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/Spider_V2.2_Pinout.pdf>){:target="_blank" rel="noopener"}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/Spider_V2.2_Pinout.pdf){:target="_blank" rel="noopener"}
 
 ### The Fysetc's GitHub Repo for the Spider V2.2 board
 
