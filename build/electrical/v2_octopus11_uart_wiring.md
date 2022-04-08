@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Voron V2 - BTT Octopus V1.0/V1.1 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)"
+title: "Voron V2 - BTT Octopus V1.0/V1.1: TMC2208, TMC2209, TMC2225, or TMC2226"
 parent: "Voron V2 - BTT Octopus V1.0/V1.1 Wiring"
 nav_exclude: true
 nav_order: 1
 ---
 
-# Voron V2 - BTT Octopus V1.0/V1.1 in UART Mode (TMC2208, TMC2209, TMC2225, TMC2226)
+# Voron V2 - BTT Octopus V1.0/V1.1: TMC2208, TMC2209, TMC2225, or TMC2226
 
 ## Initial Removal of Jumpers for UART Mode
 
@@ -24,7 +24,7 @@ nav_order: 1
 
 * As shown in the diagram below, ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-purple">PURPLE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
 
-* As shown in the diagram below, ensure the **removal of the USB 5V power supply jumper ("Power Selection Jumper, shown in the <span class="color-blind-red">RED box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+* As shown in the diagram below, ensure the **removal of the USB-PWR jumper (as shown in the <span class="color-blind-yellow">YELLOW box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
 * In the diagram below, the **<span class="color-blind-blue">BLUE</span> and <span class="color-blind-orange">ORANGE</span> boxes** indicate the headers with **<span class="color-blind-green">GREEN</span>** jumpers which are set for 24VDC.
 
@@ -48,55 +48,70 @@ nav_order: 1
 
 ## MCU Wiring for UART Mode
 
-* Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER
-* Connect stepper driver for the B Motor (gantry left) into position DRIVER0
-* Plug in stepper motor for the B Motor (gantry left) into position MOTOR0
-* Connect stepper driver for the A Motor (gantry right) into position DRIVER1
-* Plug in stepper motor for the A Motor (gantry right) into position MOTOR1
-* Connect stepper driver for the Z into positions DRIVER2
-* Plug in stepper motor for the Z into positions MOTOR2_1
-* Connect stepper driver for the Z1 into positions DRIVER3
-* Plug in stepper motor for the Z1 into positions MOTOR3
-* Connect stepper driver for the Z2 into positions DRIVER4
-* Plug in stepper motor for the Z2 into positions MOTOR4
-* Connect stepper driver for the Z3 into positions DRIVER5
-* Plug in stepper motor for the Z3 into positions MOTOR5
-* Connect stepper driver for the extruder motor into position DRIVER6
-* Plug in stepper motor for the extruder motor into position MOTOR6
-* Connect the hot end heater to HE0 (PA2)
-* Connect the bed SSR (DC Control Side) to HE1 (PA3)
-* Connect the part cooling fan to FAN0 (PA8)
-* Connect the hot end fan to FAN1 (PE5)
-* Connect the controller fans to FAN2 (PD12)
-* Connect the chamber exhaust fan to FAN3 (PD13)
-* Connect the hot end thermistor to T0 (PF4)
-* Connect the bed thermistor to TB (PF3)
-* Connect the X endstop to STOP_0 (PG6)
-* Connect the Y endstop to STOP_1 (PG9)
-* Connect the Z endstop to STOP_2 (PG10)
-* Connect the signal wire on the PROBE to STOP_7 (PG15)
-* Connect the V+ an 0V wires on the probe to PROBE
-* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
+* - [ ] Connect 24V and GND (V+ and V-) from the PSU to PWR and MOTOR_POWER
+* - [ ] Connect stepper driver for the B Motor (gantry left) into position DRIVER0 (driver socket)
+* - [ ] Plug in stepper motor for the B Motor (gantry left) into position MOTOR0 (motor connector)
+* - [ ] Connect stepper driver for the A Motor (gantry right) into position DRIVER1 (driver socket)
+* - [ ] Plug in stepper motor for the A Motor (gantry right) into position MOTOR1 (motor connector)
+* - [ ] Connect stepper driver for the Z into positions DRIVER2 (driver socket)
+* - [ ] Plug in stepper motor for the Z into positions MOTOR2_1 (motor connector)
+* - [ ] Connect stepper driver for the Z1 into positions DRIVER3 (driver socket)
+* - [ ] Plug in stepper motor for the Z1 into positions MOTOR3 (motor connector)
+* - [ ] Connect stepper driver for the Z2 into positions DRIVER4 (driver socket)
+* - [ ] Plug in stepper motor for the Z2 into positions MOTOR4 (motor connector)
+* - [ ] Connect stepper driver for the Z3 into positions DRIVER5 (driver socket)
+* - [ ] Plug in stepper motor for the Z3 into positions MOTOR5 (motor connector)
+* - [ ] Connect stepper driver for the extruder motor into position DRIVER6 (driver socket)
+* - [ ] Plug in stepper motor for the extruder motor into position MOTOR6 (motor connector)
+* - [ ] Connect the hot end heater to HE0 (PA2)
+* - [ ] Connect the bed SSR (DC Control Side) to HE1 (PA3)
+* - [ ] Connect the part cooling fan to FAN0 (PA8)
+* - [ ] Connect the hot end fan to FAN1 (PE5)
+* - [ ] Connect the controller fans to FAN2 (PD12)
+* - [ ] Connect the chamber exhaust fan to FAN3 (PD13)
+* - [ ] Connect the hot end thermistor to T0 (PF4)
+* - [ ] Connect the bed thermistor to TB (PF3)
+* - [ ] Connect the X endstop to STOP_0 (PG6)
+* - [ ] Connect the Y endstop to STOP_1 (PG9)
+* - [ ] Connect the Z endstop to STOP_2 (PG10)
+* - [ ] Plug Probe Signal (with&nbsp;**BAT85 diode**) in to STOP_7 (PG15)
+* - [ ] Connect the V+ an 0V wires on the probe to PROBE
+* if using a mini12864 display:
+    1. - [ ] [complete the steps in the mini 12864 Display section](#mini-12864-display)
+    2. - [ ] connect to EXP1 & EXP2
+* if using USB to communicate with Pi:
+    1. - [ ] Connect USB Cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+* if using UART (3-wire communication) with Pi:
+    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#powering-the-raspberry-pi--setting-up-uart-communications-with-the-raspberry-pi)
+    2. - [ ] Connect UART cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+
+* <span> </span>
+
+BAT85
+: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ## MCU Wiring Diagram for UART Mode
-<span> <br> </span>
 
 ###### ![](./images/Voron2.4r2_Wiring_Diagram_Octopus_V1.1_in_UART.jpg) {#Voron2_Wiring_Diagram_Octopus_V11_UART}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron2.4r2_Wiring_Diagram_Octopus_V1.1_in_UART.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](./v2_octopus_wiring#table-of-contents)
-
 ## Please Ensure the Heat Sinks are Installed Before Use
 
+<span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
+: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
+
 ### MCU in UART Mode with Heat Sinks Installed
-<span> <br> </span>
 
 ###### ![](./images/Octopus11_UART_Heatsinks.png) {#Octopus11_UART_Heatsinks}
 
+## Further Information about the PROBE port:
+
+* see [the Octopus V1.0/V1.1 Probe port section](./Octopus11_ProbePort#btt-octopus-v10v11-probe-port){:target="_blank" rel="noopener"}
+
 ## Powering the Raspberry Pi & Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](./Octopus11_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the Octopus V1.0/V1.1 Raspberry Pi Section](./Octopus11_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in UART mode)
 
@@ -106,17 +121,13 @@ nav_order: 1
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/BTTOctopus11-ssr-UART-wiring.png){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](./v2_octopus_wiring#table-of-contents)
-
 ## mini 12864 Display
 
 * See [the mini12864 guide](./mini12864_klipper_guide.md){:target="_blank" rel="noopener"}
 
 ## The Klipper Configuration file for BTT Octopus V1.0/V1.1 Board
 
-* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus 1.0/V1.1 board is [located here; Select "V2 Octopus"](../../build/software/configuration#initial-voron-printer-configuration){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./v2_octopus_wiring#table-of-contents)
+* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for BTT Octopus 1.0/V1.1 board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/Octopus/Voron2_Octopus_Config.cfg){:target="_blank" rel="noopener"};
 
 ## URL Resources Links for the Octopus V1.0/V1.1 (PIN Diagrams and Repo)
 
@@ -134,7 +145,4 @@ nav_order: 1
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
-
 4. After **creating/editing** the Klipper Config file (Voron2_Octopus_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./v2_octopus_wiring#table-of-contents)
