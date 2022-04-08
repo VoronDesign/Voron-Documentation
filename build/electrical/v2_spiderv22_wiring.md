@@ -12,7 +12,7 @@ has_toc: false
 
 * This stuff refers to the way the hardware communicates.
 
-* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the Fysetc Spider V1.1 board.
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the Fysetc Spider V2.2 board.
 
 * The list below shows which stepper motor drivers are UART mode and which are SPI mode.
 
