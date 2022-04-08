@@ -105,7 +105,7 @@ function initSearch() {
   };
 
   request.onerror = function(){
-    console.log('There was a connection error');
+    console.log('There was a connection error - status='+request.status+'    ready state='+request.readyState);
   };
 
   request.send();
@@ -120,7 +120,6 @@ function searchLoaded(index, docs) {
   var currentInput;
   var currentSearchIndex = 0;
 
-  // for toggle dark mode and light mode
   var body = document.querySelector('body');
 
   function showSearch() {
@@ -461,7 +460,7 @@ jtd.setTheme = function(css_theme) {
 }
 
 // Scroll site-nav to ensure the link to the current page is visible
-// for toggle dark mode and light mode
+
 function scrollNav() {
   const href = document.location.pathname.replace(/(\/.*)\/+$/, "$1");
   const siteNav = document.getElementById('site-nav');
@@ -472,6 +471,14 @@ function scrollNav() {
   }
 }
 
+const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+
+function enable_checkboxes(){
+  Array.prototype.forEach.call(checkboxes, function (e) {
+    e.removeAttribute('disabled');
+  });
+}
+
 // Document ready
 
 jtd.onReady(function(){
@@ -480,6 +487,7 @@ jtd.onReady(function(){
   initSearch();
   {%- endif %}
   scrollNav();
+  enable_checkboxes();
 });
 
 })(window.jtd = window.jtd || {});
