@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Trident - Mellow FLYF407ZG in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)"
+title: "Trident - Mellow FLYF407ZG: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO"
 parent: "Trident - Mellow FLYF407ZG Wiring"
 nav_exclude: true
 nav_order: 2
 ---
 
-# Trident - Mellow FLYF407ZG in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)
+# Trident - Mellow FLYF407ZG: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO
 
 ## Initial Removal of Female JST-XH connectors
 
@@ -38,50 +38,51 @@ nav_order: 2
 
 ## MCU Wiring for SPI Mode
 
-* Connect 24V and GND (V+ and V-) from the PSU to Power In
-* Connect stepper driver for the B Motor (gantry left) into position X (or DRIVER:X)
-* Plug in stepper motor for the B Motor (gantry left) into position X (or MOTOR:X)
-* Connect stepper driver for the A Motor (gantry right) into position Y (or DRIVER:Y)
-* Plug in stepper motor for the A Motor (gantry right) into position Y(or MOTOR:Y)
-* Connect stepper driver for the extruder motor into position E0 (or DRIVER:E0)
-* Plug in stepper motor for the extruder motor into position E0 (or MOTOR:E0)
-* Connect stepper driver for the Z into positions E2 (or DRIVER:E2)
-* Plug in stepper motor for the Z into positions E2 (or MOTOR:E2)
-* Connect stepper driver for the Z1 into positions E3 (or DRIVER:E3)
-* Plug in stepper motor for the Z1 into positions E3 (or MOTOR:E3)
-* Connect stepper driver for the Z2 into positions E4 (or DRIVER:E4)
-* Plug in stepper motor for the Z2 into positions E4 (or MOTOR:E4)
-* Plug Hot End thermistor to thermistor T0 (PA0)
-* Plug Hot End heater in to HEATER_0/HE0 (PF7)
-* Plug Bed Heater thermistor in to thermistor T1 (PC1)
-* Plug SSR Control for Heated Bed in to BED (PE2)
-* Plug Probe PWR and GND into VCC/DCout
-* Plug Probe Signal (with BAT85 diode) in to SERVO0, pin 1 {located toward USB} (PE11)
-* Plug Hot End Fan in to FAN0 (PF8)
-* Plug Part Cooling Fan in to FAN1 (PF9)
-* Connect X end stop to X-MAX connector (PC2)
-* Connect Y end stop to Y-MAX connector (PF1)
-* Plug in Exhaust Fan in to FAN2 (PA2)
-* Plug in Controller Fan 1 in to FAN3 (PA1)
-* Plug in Controller Fan 2 in to FAN4 (PE13)
-* Plug Z end stop Switch into Z-MAX (PC15)
-* Plug display wires in to EXP1 and EXP2
-* Connect USB Cable to your FLYF407ZG, **but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect 24V and GND (V+ and V-) from the PSU to Power In
+* - [ ] Connect stepper driver for the B Motor (gantry left) into position X (or DRIVER:X)
+* - [ ] Plug in stepper motor for the B Motor (gantry left) into position X (or MOTOR:X)
+* - [ ] Connect stepper driver for the A Motor (gantry right) into position Y (or DRIVER:Y)
+* - [ ] Plug in stepper motor for the A Motor (gantry right) into position Y(or MOTOR:Y)
+* - [ ] Connect stepper driver for the extruder motor into position E0 (or DRIVER:E0)
+* - [ ] Plug in stepper motor for the extruder motor into position E0 (or MOTOR:E0)
+* - [ ] Connect stepper driver for the Z into positions E2 (or DRIVER:E2)
+* - [ ] Plug in stepper motor for the Z into positions E2 (or MOTOR:E2)
+* - [ ] Connect stepper driver for the Z1 into positions E3 (or DRIVER:E3)
+* - [ ] Plug in stepper motor for the Z1 into positions E3 (or MOTOR:E3)
+* - [ ] Connect stepper driver for the Z2 into positions E4 (or DRIVER:E4)
+* - [ ] Plug in stepper motor for the Z2 into positions E4 (or MOTOR:E4)
+* - [ ] Plug Hot End thermistor to thermistor T0 (PA0)
+* - [ ] Plug Hot End heater in to HEATER_0/HE0 (PF7)
+* - [ ] Plug Bed Heater thermistor in to thermistor T1 (PC1)
+* - [ ] Plug SSR Control for Heated Bed in to BED (PE2)
+* - [ ] Plug Probe PWR and GND into VCC/DCout
+* - [ ] Plug Probe Signal (with&nbsp;**BAT85 diode**) in to SERVO0, pin 1 {located toward USB} (PE11)
+* - [ ] Plug Hot End Fan in to FAN0 (PF8)
+* - [ ] Plug Part Cooling Fan in to FAN1 (PF9)
+* - [ ] Connect X end stop to X-MAX connector (PC2)
+* - [ ] Connect Y end stop to Y-MAX connector (PF1)
+* - [ ] Plug in Exhaust Fan in to FAN2 (PA2)
+* - [ ] Plug in Controller Fan 1 in to FAN3 (PA1)
+* - [ ] Plug in Controller Fan 2 in to FAN4 (PE13)
+* - [ ] Plug Z end stop Switch into Z-MAX (PC15)
+* - [ ] Plug display wires in to EXP1 and EXP2
+* - [ ] Connect USB Cable to FLYF407ZG,&nbsp;**but do not connect it yet to your Raspberry Pi**
+
+BAT85
+: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ## MCU Wiring Diagram for SPI Mode
-<span> <br> </span>
 
 ###### ![](./images/Trident_WiringDiag_FLYF407ZG_SPI.jpg) {#Trident_Wiring_Diagram_FLYF407ZG_SPI}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Trident_WiringDiag_FLYF407ZG_SPI.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](./tri_flyf407zg_wiring#table-of-contents)
-
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 ### MCU in SPI Mode with Heat Sinks Installed
 
-<span> <br> </span>
+<span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
+: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
 ###### ![](./images/Trident_FLYF407ZG_SPI_Heatsinks.png) {#FLYF407ZG_SPI_Heatsinks_tri}
 
@@ -89,6 +90,10 @@ nav_order: 2
 
 ### Power
 * The Mellow FLYF407ZG is **NOT capable of providing 5V power** to run your Raspberry Pi.
+
+## Setting up UART Communications with the Raspberry Pi
+
+* Please see [the Mellow FLYF407ZG Raspberry Pi Section](./flyf407zg_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
@@ -98,13 +103,9 @@ nav_order: 2
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/FLYF407ZG-ssr-SPI-wiring.png){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](./tri_flyf407zg_wiring#table-of-contents)
-
 ## The Klipper Configuration file for Mellow FLYF407ZG Board
 
-* The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for Mellow FLYF407ZG board is [located here;](https://gist.githubusercontent.com/antage/1976d9df8e8a1126ebbe6f3935145394/raw/6bc4c53194be75a9889fba754ffa61fbb5c7cb89/printer.ini){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_flyf407zg_wiring#table-of-contents)
+* The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for Mellow FLYF407ZG board is [located here](https://gist.githubusercontent.com/antage/1976d9df8e8a1126ebbe6f3935145394/raw/6bc4c53194be75a9889fba754ffa61fbb5c7cb89/printer.ini){:target="_blank" rel="noopener"};
 
 ## URL Resources Links for the Mellow FLYF407ZG (PIN Diagrams and Repo)
 
@@ -114,7 +115,7 @@ nav_order: 2
 
 For reference, here is additional information about the Mellow FLYF407ZG board:
 
-1.  If you use a separate (independent power supply), you can replace the USB cable with a direct wire connection to the Raspberry Pi and use UART communications between the FLYF407ZG board and the Raspberry Pi.  Please see [the Raspberry Pi Section](./flyf407zg_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+1.  If you use a separate (independent power supply), you can replace the USB cable with a direct wire connection to the Raspberry Pi and use UART communications between the FLYF407ZG board and the Raspberry Pi.  Please see [the Mellow FLYF407ZG Raspberry Pi Section](./flyf407zg_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 2. Pinout the ESP-12S which can be used with the FLYF407ZG pre-soldered WIFI socket or via the EXP1 and EXP2 connectors. Please see [the Additional Information Section](./flyf407zg_additional_resources#pin-out-of-esp-12s-wifi-chip){:target="_blank" rel="noopener"}
 
@@ -130,13 +131,10 @@ For reference, here is additional information about the Mellow FLYF407ZG board:
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> FLY FLYF407ZG](../../build/software/flyf407zg_klipper#fly-flyf407zg-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (printer.ini rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here;](https://gist.githubusercontent.com/antage/1976d9df8e8a1126ebbe6f3935145394/raw/6bc4c53194be75a9889fba754ffa61fbb5c7cb89/printer.ini){:target="_blank" rel="noopener"}
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (printer.ini rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here](https://gist.githubusercontent.com/antage/1976d9df8e8a1126ebbe6f3935145394/raw/6bc4c53194be75a9889fba754ffa61fbb5c7cb89/printer.ini){:target="_blank" rel="noopener"};
 
-    * Please use the Color PIN Diagrams, [displayed here](./flyf407zg_Resources#color-pin-diagram-for-fly-flyf407zg){:target="_blank" rel="noopener"}, as a source of information;
+    * Please use the Color PIN Diagrams, [displayed here](./flyf407zg_Resources#color-pin-diagram-for-mellow-flyf407zg){:target="_blank" rel="noopener"}, as a source of information;
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
-
 4. After **creating/editing** the Klipper Config file (printer.ini renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_flyf407zg_wiring#table-of-contents)
