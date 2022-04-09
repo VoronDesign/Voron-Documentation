@@ -86,7 +86,6 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect the Z endstop to Z-STOP (P1.27)
 * - [ ] Connect the Probe Signal (with&nbsp;**BAT85 diode**) to PROBE connector (P0.10)
 * - [ ] Connect the Probe PWR and GND to FAN2
-* - [ ] Plug display wires in to EXP1 and EXP2
 * - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
 BAT85
