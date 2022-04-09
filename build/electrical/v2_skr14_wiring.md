@@ -3,44 +3,48 @@ layout: default
 title: "Voron V2 - BTT SKR V1.4/V1.4Turbo Wiring"
 nav_exclude: true
 has_children: true
+has_toc: false
 ---
 
 # Voron V2 - BTT SKR V1.4/V1.4Turbo Wiring
 
 ## What is the difference between UART mode and SPI mode?
 
-* This stuff refers to the way the hardware communicates. SPI is significantly faster than UART. In some cases, an SPI solution can be three times faster than a UART solution.
+* This stuff refers to the way the hardware communicates.
 
-* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.4 board or SKR V1.4 Turbo board.  The list below shows which stepper motor drivers are UART mode and which are SPI mode.
-<span> <br> </span>
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.4 board.
 
-### For Further Information
+* The list below shows which stepper motor drivers are UART mode and which are SPI mode.
 
-* Read this article ["Understanding the Difference Between UART vs SPI" ](./images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1){:target="_blank" rel="noopener"}
+* In the list below, locate the name of the stepper motor drivers that were purchased with the boards and click on its name.
 
-* A nice [comparison chart of the different TMC stepper motor drivers](https://learn.watterott.com/silentstepstick/comparison/){:target="_blank" rel="noopener"}
+### Information
+
+* Read this article ["Understanding the Difference Between UART vs SPI" ](./images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1){:target="_blank" rel="noopener"} for further information.
+
+* Here is a [comparison chart of the different TMC stepper motor drivers](https://learn.watterott.com/silentstepstick/comparison/){:target="_blank" rel="noopener"}
 
 
 ## UART Mode TMC Driver List
 
 ### UART Mode TMC Drivers That Use 24 VDC:
 
-1.  TMC2208
-2.  TMC2209
-3.  TMC2225
-4.  TMC2226
+1.  [TMC2208](./v2_skr14_uart_wiring#voron-v2---skr-v14v14turbo-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+2.  [TMC2209](./v2_skr14_uart_wiring#voron-v2---skr-v14v14turbo-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+3.  [TMC2225](./v2_skr14_uart_wiring#voron-v2---skr-v14v14turbo-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+4.  [TMC2226](./v2_skr14_uart_wiring#voron-v2---skr-v14v14turbo-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
 
 
 ## SPI Mode TMC Driver List
 
 ### SPI Mode TMC Drivers That Use 24 VDC:
 
-1.  TMC2100
-2.  TMC2130
-3.  TMC5160
-4.  TMC5161
+1.  [TMC2100](./v2_skr14_spi_wiring#voron-v2---skr-v14v14turbo-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+2.  [TMC2130](./v2_skr14_spi_wiring#voron-v2---skr-v14v14turbo-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+3.  [TMC5160](./v2_skr14_spi_wiring#voron-v2---skr-v14v14turbo-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+4.  [TMC5161](./v2_skr14_spi_wiring#voron-v2---skr-v14v14turbo-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
 
 ### SPI Mode TMC Drivers That Use 48 VDC or Higher:
 
-1. TMC5160HV
-2. TMC5160_PRO
+1. [TMC5160HV](./v2_skr14_spi_wiring#voron-v2---skr-v14v14turbo-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+2. [TMC5160_PRO](./v2_skr14_spi_wiring#voron-v2---skr-v14v14turbo-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
