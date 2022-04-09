@@ -108,7 +108,7 @@ BAT85
 
 ## The Klipper Configuration file for Mellow FLYF407ZG Board
 
-* The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Mellow FLYF407ZG board is [located here](https://gist.githubusercontent.com/antage/1976d9df8e8a1126ebbe6f3935145394/raw/6bc4c53194be75a9889fba754ffa61fbb5c7cb89/printer.ini){:target="_blank" rel="noopener"};
+* The Klipper Configuration file for Mellow FLYF407ZG board is [located here](https://gist.githubusercontent.com/antage/1976d9df8e8a1126ebbe6f3935145394/raw/6bc4c53194be75a9889fba754ffa61fbb5c7cb89/printer.ini){:target="_blank" rel="noopener"};
 
 ## URL Resources Links for the Mellow FLYF407ZG (PIN Diagrams and Repo)
 
