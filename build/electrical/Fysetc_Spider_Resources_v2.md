@@ -5,7 +5,7 @@ nav_exclude: true
 
 For reference, here is the Color PIN diagram for the Fysetc Spider V2.2
 
-###### ![](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.jpg) {#FYSETC_Spider_V22-color-PIN_1}
+###### ![](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_compressed.jpg) {#FYSETC_Spider_V22_Color_PIN_diagram_compressed}
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/FYSETC_Spider_V2.2_Color_PIN_diagram_300.pdf){:target="_blank" rel="noopener"}
 
