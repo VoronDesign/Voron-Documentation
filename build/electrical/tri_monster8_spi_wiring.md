@@ -132,7 +132,7 @@ BAT85
 
 ## The Klipper Configuration file for MKS Monster 8 V1.0 Board
 
-* The Klipper Configuration file from VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce GitHub Repo for MKS Monster 8 board is [located here;](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"}
+* The Klipper Configuration file from VoronDesign/VoronUsers RealDeuce's GitHub Repo for MKS Monster 8 board is [located here;](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"}
 
 ## URL Resources Links for the Monster 8 (PIN Diagrams and Repo)
 
@@ -142,7 +142,7 @@ BAT85
 
 1. Once the MCU board is wired up and wire management has been performed, the next step is to install Mainsail/Fluidd or Octoprint, please see [The Build ═► Software Installation](../../build/software/index#software-installation){:target="_blank" rel="noopener"}
 
-2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the [above Color Pin Diagram, look for "How To Compile the Klipper Firmware for MKS Monster 8 V1.0"](./images/MKS_Monster8-V1.0-color-PIN.pdf){:target="_blank" rel="noopener"} or an alternative source [for instructions on how to compile the klipper firmware for the MKS Monster 8 V1.0 board - See the README file](https://github.com/makerbase-mks/MKS-Monster8/tree/main/klipper%20firmware){:target="_blank" rel="noopener"}
+2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the [above Color Pin Diagram, look for "How To Compile the Klipper Firmware for MKS Monster 8 V1.0"](./images/MKS_Monster8-V1.0-color-PIN.pdf){:target="_blank" rel="noopener"} or an alternative source [for instructions on how to compile the klipper firmware for the MKS Monster 8 V1.0 board - See the README file](https://github.com/makerbase-mks/MKS-Monster8/tree/main/klipper%20firmware#to-compile-for-klipper-firmware){:target="_blank" rel="noopener"}
 
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Monster8_Config.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here by RealDeuce](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"};
 

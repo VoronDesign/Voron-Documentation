@@ -3,6 +3,7 @@ layout: default
 title: "Trident - MKS Monster 8 V1.0 Wiring"
 nav_exclude: true
 has_children: true
+has_toc: false
 ---
 
 # Trident - MKS Monster 8 V1.0 Wiring
