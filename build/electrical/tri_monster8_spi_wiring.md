@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Trident - MKS Monster 8 V1.0 in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)"
+title: "Trident - MKS Monster 8 V1.0: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO"
 parent: "Trident - MKS Monster 8 V1.0 Wiring"
 nav_exclude: true
 nav_order: 2
 ---
 
-# Trident - MKS Monster 8 V1.0 in SPI Mode (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO)
+# Trident - MKS Monster 8 V1.0: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO
 
 ## Initial Removal of Jumpers for SPI Mode
 
@@ -54,47 +54,58 @@ nav_order: 2
 
 ## MCU Wiring for SPI Mode
 
-* Connect 24V and GND (V+ and V-) from the PSU to POWER (silk screen markings are located on the underside of board)
-* Connect stepper driver for the B Motor (gantry left) into position DRIVER0
-* Plug in stepper motor for the B Motor (gantry left) into position DIRVER0:X (motor connector)
-* Connect stepper driver for the A Motor (gantry right) into position DRIVER1
-* Plug in stepper motor for the A Motor (gantry right) into position DRIVER1:Y (motor connector)
-* Connect stepper driver for the Z into positions DRIVER2
-* Plug in stepper motor for the Z (Front Left) into positions DRIVER2:Z2 (leaving an empty motor connector between A and Z)
-* Connect stepper driver for the Z1 into positions DRIVER3
-* Plug in stepper motor for the Z1 into positions DRIVER3:E0 (motor connector)
-* Connect stepper driver for the Z2 into positions DRIVER4
-* Plug in stepper motor for the Z2 into positions DRIVER4:E1 (motor connector)
-* Connect stepper driver for the extruder motor into position DRIVER7 (leaving two empty driver sockets between Z2 and E)
-* Plug in stepper motor for the extruder motor into position DRIVER7:E4 {motor connector} (leaving two empty motor connectors between Z2 and E)
-* Connect the hot end heater to HE0 (PB1)
-* Connect the bed SSR (DC Control Side) to H-BED {silk screen markings are located on the underside of board} (PB10)
-* Connect the hot end fan to FAN0 (PA2)
-* Connect the part cooling fan to FAN1 (PA1)
-* Connect the chamber exhaust fan to FAN2 (PA0)
-* Connect the controller fans to HE1 (PB0)
-* Connect the hot end thermistor to TH0 (PC1)
-* Connect the bed thermistor to TB (PC0)
-* Connect the X endstop to X+ (PA13)
-* Connect the Y endstop to Y+ (PC5)
-* Connect the Z endstop to Z- (PB13)
-* Connect the signal wire on the probe with BAT85 to Z+ (PB12)
-* Connect the V+ an 0V wires on the probe to Z+
-* if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-display)
+* - [ ] Connect 24V and GND (V+ and V-) from the PSU to POWER (silk screen markings are located on the underside of board)
+* - [ ] Connect stepper driver for the B Motor (gantry left) into position DRIVER0 (driver socket)
+* - [ ] Plug in stepper motor for the B Motor (gantry left) into position DIRVER0:X (motor connector)
+* - [ ] Connect stepper driver for the A Motor (gantry right) into position DRIVER1 (driver socket)
+* - [ ] Plug in stepper motor for the A Motor (gantry right) into position DRIVER1:Y (motor connector)
+* - [ ] Connect stepper driver for the Z into positions DRIVER2 (driver socket)
+* - [ ] Plug in stepper motor for the Z (Front Left) into positions DRIVER2:Z2 (leaving an empty motor connector between A and Z)
+* - [ ] Connect stepper driver for the Z1 into positions DRIVER3 (driver socket)
+* - [ ] Plug in stepper motor for the Z1 into positions DRIVER3:E0 (motor connector)
+* - [ ] Connect stepper driver for the Z2 into positions DRIVER4 (driver socket)
+* - [ ] Plug in stepper motor for the Z2 into positions DRIVER4:E1 (motor connector)
+* - [ ] Connect stepper driver for the extruder motor into position DRIVER7 (leaving an empty driver socket between Z3 and E)
+* - [ ] Plug in stepper motor for the extruder motor into position DRIVER7:E4 (leaving an empty motor connector between Z3 and E)
+* - [ ] Connect the hot end heater to HE0 (PB1)
+* - [ ] Connect the bed SSR (DC Control Side) to H-BED {silk screen markings are located on the underside of board} (PB10)
+* - [ ] Connect the hot end fan to FAN0 (PA2)
+* - [ ] Connect the part cooling fan to FAN1 (PA1)
+* - [ ] Connect the chamber exhaust fan to FAN2 (PA0)
+* - [ ] Connect the controller fans to HE1 (PB0)
+* - [ ] Connect the hot end thermistor to TH0 (PC1)
+* - [ ] Connect the bed thermistor to TB (PC0)
+* - [ ] Connect the X endstop to X+ (PA13)
+* - [ ] Connect the Y endstop to Y+ (PC5)
+* - [ ] Connect the Z endstop to Z- (PB13)
+* - [ ] Plug Probe Signal (with&nbsp;**BAT85 diode**) in to Z+ (PB12)
+* - [ ] Connect the V+ an 0V wires on the probe to Z+
+* if using a mini12864 display:
+    1. - [ ] [complete the steps in the mini 12864 Display section](#mini-12864-display)
+    2. - [ ] connect to EXP1 & EXP2
+* if using USB to communicate with Pi:
+    1. - [ ] Connect USB Cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+* if using UART (3-wire communication) with Pi:
+    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#setting-up-uart-communications-with-the-raspberry-pi)
+    2. - [ ] Connect UART cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+
+* <span> </span>
+
+BAT85
+: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ## MCU Wiring Diagram for SPI Mode
-<span> <br> </span>
 
 ###### ![](./images/Trident_Wiring_Diag_Monster8v10_SPI.jpg) {#Trident_Wiring_Diag_Monster8v10_SPI}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Trident_Wiring_Diag_Monster8v10_SPI.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](./tri_monster8_wiring#table-of-contents)
-
 ## Please Ensure the Heat Sinks are Installed Before Use
 
+<span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
+: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
+
 ### MCU in SPI Mode with Heat Sinks Installed
-<span> <br> </span>
 
 ###### ![](./images/Trident_Monster8v10_SPI_heatsinks.png) {#Trident_Monster8v10_SPI_heatsinks}
 
@@ -105,7 +116,7 @@ nav_order: 2
 
 ## Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](./monster8_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the MKS Monster 8 V1.0 Raspberry Pi Section](./monster8_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
@@ -115,8 +126,6 @@ nav_order: 2
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/moster8v10-ssr-SPI-wiring.png){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](./tri_monster8_wiring#table-of-contents)
-
 ## mini 12864 Display
 
 * See [the mini12864 guide](./mini12864_klipper_guide.md){:target="_blank" rel="noopener"}
@@ -124,8 +133,6 @@ nav_order: 2
 ## The Klipper Configuration file for MKS Monster 8 V1.0 Board
 
 * The Klipper Configuration file from VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce GitHub Repo for MKS Monster 8 board is [located here;](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_monster8_wiring#table-of-contents)
 
 ## URL Resources Links for the Monster 8 (PIN Diagrams and Repo)
 
@@ -143,7 +150,4 @@ nav_order: 2
 
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
-
 4. After **creating/editing** the Klipper Config file (Voron2_Monster8_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_monster8_wiring#table-of-contents)
