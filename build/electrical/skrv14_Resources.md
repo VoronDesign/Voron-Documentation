@@ -24,5 +24,3 @@ For reference, here is the original pinout of the SKR V1.4/Turbo
 ### The BTT's GitHub Repo for the SKR V1.4/Turbo board
 
 * BTT's documentation for SKR V1.4/Turbo board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_skrv14_exp-mot_wiring#trident---btt-skr-v14turbo-and-exp-mot-wiring)

@@ -14,5 +14,3 @@ For reference, here is the original pinout of the EXP-MOT V1.0
 ### The BTT's GitHub Repo for the EXP-MOT V1.0 board
 
 * BTT's documentation for EXP-MOT V1.0 board is [located here](https://github.com/bigtreetech/BTT-Expansion-module/tree/master/BTT%20EXP-MOT){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_skrv14_exp-mot_wiring#trident---btt-skr-v14turbo-and-exp-mot-wiring)

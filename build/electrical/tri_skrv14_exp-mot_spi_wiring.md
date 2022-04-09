@@ -1,17 +1,17 @@
 ---
 layout: default
-title: "Trident - SKR V1.4/Turbo and EXP-MOT using: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO"
+title: "Trident - SKR V1.4/Turbo and EXP-MOT: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO"
 parent: "Trident - BTT SKR V1.4/Turbo and EXP-MOT Wiring"
 nav_exclude: true
 nav_order: 2
 ---
 
-# Trident - SKR V1.4/Turbo and EXP-MOT using: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO
+# Trident - SKR V1.4/Turbo and EXP-MOT: TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO
 
 ## Initial Preparation Needed for TMC2130, TMC5160 or TMC5161 (TMCxxxx drivers with StallGuard) Stepper Motor Drivers
 <span> <br> </span>
 
-* <span style="font-size: 150%;">See [the Initial Preparation for SPI TMC Drivers](./init_prep_tmc_drvs_spi#preparation-of-tmc2130-tmc5160-or-tmc5161-stepper-motor-drivers){:target="_blank" rel="noopener"}</span>
+* <span style="font-size: 150%;">See [the Initial Preparation for TMC2130, TMC5160 or TMC5161 Drivers](./skrv14init_prep_tmc_drvs_spi#preparation-of-tmc2130-tmc5160-or-tmc5161-stepper-motor-drivers){:target="_blank" rel="noopener"}</span>
 
 ## Initial Removal of Jumpers for The SKR V1.4/Turbo in SPI Mode
 
@@ -35,11 +35,15 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/v2_skr14T_SPI_PREP.png) {#v2_skr14T_SPI_PREP_triskr-expmot}
 
+* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/v2_skr14T_SPI_PREP.png){:target="_blank" rel="noopener"}
+
 ## Initial Preparation for the EXP-MOT in SPI Mode - Set Jumpers
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
 ###### ![](./images/tri_EXP-MOT-V10_SPI_prep.png) {#tri_EXP-MOT-V10_SPI_prep_triskr-expmot_1}
+
+* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/tri_EXP-MOT-V10_SPI_prep.png){:target="_blank" rel="noopener"}
 
 ### Voltage Selection Headers for the SKR V1.4/Turbo in SPI mode
 
@@ -50,6 +54,8 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
 ###### ![](./images/v2_skr14T_SPI_voltageselect.png) {#v2_skr14T_SPI_voltageselect_triskr-expmot}
+
+* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/v2_skr14T_SPI_voltageselect.png){:target="_blank" rel="noopener"}
 
 ### Voltage Selection Header for the EXP-MOT in SPI mode
 
@@ -67,19 +73,21 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ###### ![](./images/tri_EXP-MOT-V10_SPI_voltageselect.png) {#tri_EXP-MOT-V10_SPI_voltageselect_triskr-expmot}
 
-## Stepper Motor Drivers
+* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/tri_EXP-MOT-V10_SPI_voltageselect.png){:target="_blank" rel="noopener"}
+
+## Stepper Motor Drivers for both SKR V1.4/Turbo and EXP-MOT
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
 * Install heat sinks on all stepper motor drivers
 
 ##  MCU X/Y/E, Hot End, Bed, and Exhaust Fan in SPI Mode (SKR V1.4/Turbo)
 
 * - [ ] Connect 24V and GND (V+ and V-) from the PSU to Power/DCIN
-* - [ ] Connect stepper driver for the B Motor (gantry left) into position X driver socket
-* - [ ] Plug in stepper motor for the B Motor (gantry left) into position X motor connector
-* - [ ] Connect stepper driver for the A Motor (gantry right) into position Y driver socket
-* - [ ] Plug in stepper motor for the A Motor (gantry right) into position Y motor connector
-* - [ ] Connect stepper driver for the extruder motor into position E0 driver socket
-* - [ ] Plug in stepper motor for the extruder motor into position E0 motor connector
+* - [ ] Connect stepper driver for the B Motor (gantry left) into position X (driver socket)
+* - [ ] Plug in stepper motor for the B Motor (gantry left) into position X (motor connector)
+* - [ ] Connect stepper driver for the A Motor (gantry right) into position Y (driver socket)
+* - [ ] Plug in stepper motor for the A Motor (gantry right) into position Y (motor connector)
+* - [ ] Connect stepper driver for the extruder motor into position E0 (driver socket)
+* - [ ] Plug in stepper motor for the extruder motor into position E0 (motor connector)
 * - [ ] Connect the hot end heater to HE0 (P2.7)
 * - [ ] Connect the bed SSR (DC Control Side) to HB (P2.5)
 * - [ ] Connect the part cooling fan to HE1 (P2.4)
@@ -109,12 +117,12 @@ BAT85
 ## MCU Z in SPI Mode (EXP-MOT)
 
 * - [ ] Connect 24V and GND (V+ and V-) from the PSU to Power_In/DCIN
-* - [ ] Connect stepper driver for the Z into positions M1 driver socket
-* - [ ] Plug in stepper motor for the Z into positions M1 motor connector
-* - [ ] Connect stepper driver for the Z1 into positions M2 driver socket
-* - [ ] Plug in stepper motor for the Z1 into positions M2 motor connector
-* - [ ] Connect stepper driver for the Z2 into positions M3 driver socket
-* - [ ] Plug in stepper motor for the Z2 into positions M3 motor connector
+* - [ ] Connect stepper driver for the Z into positions M1 (driver socket)
+* - [ ] Plug in stepper motor for the Z into positions M1 (motor connector)
+* - [ ] Connect stepper driver for the Z1 into positions M2 (driver socket)
+* - [ ] Plug in stepper motor for the Z1 into positions M2 (motor connector)
+* - [ ] Connect stepper driver for the Z2 into positions M3 (driver socket)
+* - [ ] Plug in stepper motor for the Z2 into positions M3 (motor connector)
 
 ### Two Options For 3-Pin Dupont Cable from SKR V1.4/Turbo to EXP-MOT board (choose ONLY ONE option)
 
@@ -134,9 +142,7 @@ BAT85
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Trident_Wiring_Diagram_SKRV1.4TurboandEXP-MOT_Z_SPI.jpg){:target="_blank" rel="noopener"}</span>
 
-[Go Back to the Table of Contents](./tri_skrv14_exp-mot_wiring#trident---btt-skr-v14turbo-and-exp-mot-wiring)
-
-## Please Ensure the Heat Sinks are Installed Before Use
+## Please Ensure the Heat Sinks are Installed Before Use on Both the SKR V1.4/Turbo and EXP-MOT boards
 
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
@@ -167,13 +173,9 @@ BAT85
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/Trident_SKRV1.4andEXP-MOTinSPI-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-[Go Back to the Table of Contents](./tri_skrv14_exp-mot_wiring#trident---btt-skr-v14turbo-and-exp-mot-wiring)
-
 ### The Klipper Configuration file for SKR V1.4/Turbo board with the EXP-MOT board
 
 The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for SKR V1.4/Turbo board using the EXP-MOT board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-Trident/main/Firmware/Voron_Trident_SKR14_EXPMOT.cfg){:target="_blank" rel="noopener"};
-
-[Go Back to the Table of Contents](./tri_skrv14_exp-mot_wiring#trident---btt-skr-v14turbo-and-exp-mot-wiring)
 
 ## URL Resources Links for the SKR V1.4/Turbo (PIN Diagrams and Repo)
 
@@ -198,5 +200,3 @@ The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for SK
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
 4. After **creating/editing** the Klipper Config file (Voron_Trident_SKR14_EXPMOT.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_skrv14_exp-mot_wiring#trident---btt-skr-v14turbo-and-exp-mot-wiring)

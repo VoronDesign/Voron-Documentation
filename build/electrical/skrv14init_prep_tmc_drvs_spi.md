@@ -32,5 +32,3 @@ nav_exclude: true
 *  **Desolder the pin, marked in purple (DIAG PIN), from the TMC2130, TMC5160 or TMC5161 stepper motor driver step stick** at the location shown [here](#tmc2209-pin-removal_spi_tri2skr)
 
 * If you need help with desoldering, please [consult this guide](https://www.instructables.com/The-Ultimate-Guide-to-Desoldering/){:target="_blank" rel="noopener"}
-
-[Go Back to the Table of Contents](./tri_skrv14_exp-mot_wiring#trident---btt-skr-v14turbo-and-exp-mot-wiring)
