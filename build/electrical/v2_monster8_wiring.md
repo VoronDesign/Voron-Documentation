@@ -3,6 +3,7 @@ layout: default
 title: "Voron V2 - MKS Monster 8 V1.0 Wiring"
 nav_exclude: true
 has_children: true
+has_toc: false
 ---
 
 # Voron V2 - MKS Monster 8 V1.0 Wiring
