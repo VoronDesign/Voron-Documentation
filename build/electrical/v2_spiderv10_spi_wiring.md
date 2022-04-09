@@ -101,6 +101,10 @@ We have no idea what state your board is in when you start this process.  Someon
 
 ###### ![](./images/FYSETC_Spider_V1.0_in_SPI_mode_Heatsinks_150.png) {#FYSETC_Spider_v10_SPI_Heatsinks}
 
+## Further Information about the PROBE port:
+
+* see [the Fystec Spider Probe port section](./Fysetc_Spider_ProbePort#fysetc-spider-probe-port){:target="_blank" rel="noopener"}
+
 ## Powering the Raspberry Pi & Setting up UART Communications with the Raspberry Pi
 
 * see [the Fysetc Spider Raspberry Pi Section](./Fysetc_Spider_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
