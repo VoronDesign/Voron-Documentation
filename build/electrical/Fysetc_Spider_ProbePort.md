@@ -53,7 +53,7 @@ Form Digikey website for Panasonic GX-HL15BI-P:
 
 * Just for your information, both Digikey's Omron TLQ5MC2 and the Aliexpress' Omron TL-Q5MC2-Z are a NPN style probes.  While Digikey's Panasonic GX-HL15BI-P is a PNP style probe.
 
-**The Voron wiring diagram for the Fysetc Spider board recommends wiring the PROBE up to Z+ connector.**  Connect the probe V+, probe GND, and probe signal pin to Z+ connector of the Fysetc spider board.
+**The Voron wiring diagram for the Fysetc Spider board recommends wiring the PROBE in to Z+ connector.**  Connect the probe V+, probe GND, and probe signal pin in to Z+ connector of the Fysetc spider board.
 
 * Here is a picture of the Fystec Spider probe port with colored boxes:
 ###### ![](./images/Colored_FysetcSpiderv1.0_2.2probeport.png) {#Colored_FysetcSpiderv10_22probeport}
@@ -64,4 +64,4 @@ Form Digikey website for Panasonic GX-HL15BI-P:
 
 1. test data shows, an optocoupler, which some MCU boards incorporate in to the PROBE circuit, adds a noticeable signal delay;
 2. the probe port is significantly less likely to work (across different MCU boards) than just using the normal endstop port;
-3. if the inductive probe fails, people will switch to a mechanical switch type of probe which uses an endstop port.  So using an endstop port, enables this interchangeability.
+3. if the inductive probe fails, people will switch to a mechanical switch type of probe which uses an endstop port so using an endstop port, enables this interchangeability.
