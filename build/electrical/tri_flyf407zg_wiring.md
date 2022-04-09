@@ -3,6 +3,7 @@ layout: default
 title: "Trident - Mellow FLYF407ZG Wiring"
 nav_exclude: true
 has_children: true
+has_toc: false
 ---
 
 # Trident - Mellow FLYF407ZG Wiring
@@ -15,7 +16,7 @@ has_children: true
 
 * The list below shows which stepper motor drivers are UART mode and which are SPI mode.
 
-* In the list below, locate the name of the stepper motor drivers that were purchased with the board and click on the name.
+* In the list below, locate the name of the stepper motor drivers that were purchased with the board and click on its name.
 
 ### Information
 
