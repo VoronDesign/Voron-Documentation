@@ -8,13 +8,15 @@ nav_exclude: true
 
 ## Initial Removal of Jumpers
 
-* There are only **two jumpers** on the SKR mini E3 V1.2 board.  The **<span class="color-blind-red">SPREAD jumper</span>** sets the board for Stealtchop or Spreadcycle mode, but this can also be set in the firmware.  The other jumper is called "NeoPWR" jumper.  See the next section about this jumper.
+* There are only **two jumpers** on the SKR mini E3 V1.2 board.  The **<span class="color-blind-red">RED SPREAD jumper</span>** sets the board for Stealtchop or Spreadcycle mode, but this can also be set in the firmware.  The other jumper is called "NeoPWR" jumper.  See the next section about this jumper.
 
 ## Initial Preparation
 
-* The NeoPWR jumper setting will decide the source of the SKR's 5V rail. The board's 5V rail can be sourced from the board itself or from an external DCDC bridge module.  One can purchase an external DCDC bridge module (sold separately) to power 5V NeoPixel LEDs.  This bridge module is called the "DCDC Mode V1.0" board. Since the Voron printer does not require the extra DCDC bridge module, **set the NeoPWR jumper** so that the board's 5V rail will be powered by the MCU (as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below).
+* The **<span class="color-blind-green">GREEN NeoPWR jumper</span>** setting will decide the source of the SKR's 5V rail. The board's 5V rail can be sourced from the board itself or from an external DCDC bridge module.  One can purchase an external DCDC bridge module (sold separately) to power 5V NeoPixel LEDs.  This bridge module is called the "DCDC Mode V1.0" board. Since the Voron printer does not require the extra DCDC bridge module, **set the NeoPWR jumper** so that the board's 5V rail will be powered by the MCU (as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below).
 
-###### ![](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png) {#PREP_v01_SKR_mini_E3_V12}
+###### ![](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png) {#PREP_v01_SKR_mini_E3_V12v01}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png){:target="_blank" rel="noopener"}
 
 ## MCU
 
