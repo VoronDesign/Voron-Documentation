@@ -13,9 +13,23 @@ nav_exclude: true
 
 * **All** Jumpers should be **removed** from the SKR Pico board.
 
+###### ![](./images/SKR_PICO_V1.0_PREP.png) {#SKR_PICO_V1.0_PREP_v2}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_PICO_V1.0_PREP.png){:target="_blank" rel="noopener"}
+
+## Voltage Selection Header and Other Headers
+
 * Ensure the **removal of the SW_USB 5V power supply jumper ("SW_USB header, shown in the <span class="color-blind-purple">PURPLE box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
+* In the diagram below, ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-orange">ORANGE boxes</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstops.
+
+* Ensure the **removal of the SELECT-PROXIMITY-I/O-PIN jumper (shown in the <span class="color-blind-yellow">YELLOW box</span>).**  This SELECT-PROXIMITY-I/O-PIN jumper selects which connector uses IO22 pin (either connector PS or PROBE). Since the Voron printer does not use a proximity sensor (inductive probe), remove the jumper.
+
+* Ensure the **removal of the SELECT-PROXIMITY-STYLE jumper (shown in the <span class="color-blind-red">RED box</span>).** Since the Voron printer does not use a probe device, ensure this header is empty.
+
 ###### ![](./images/SKR_PICO_V1.0_voltageselect.png) {#SKR_PICO_V1.0_voltageselect}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_PICO_V1.0_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## MCU
 

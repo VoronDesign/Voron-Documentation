@@ -6,7 +6,9 @@ nav_exclude: true
 For reference, here is the Color PIN diagram for the SKR Pico
 <span> <br> </span>
 
-###### ![](./images/SKR_PICO_V1.0_Color_PIN_diagram.jpg) {#SKR_PICO_V1.0_Color_PIN_diagram}
+###### ![](./images/SKR_PICO_V1.0_Color_PIN_diagram-comp.jpg) {#SKR_PICO_V1.0_Color_PIN_diagram-comp}
+
+* The above image is compressed. For a better quality image use the next two hyperlinks below. The above image is just a placeholder.
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/SKR_PICO_V1.0_Color_PIN_diagram.pdf){:target="_blank" rel="noopener"}
 
