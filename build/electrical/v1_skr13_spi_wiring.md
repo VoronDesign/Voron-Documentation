@@ -32,9 +32,9 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * Ensure **all of "DIAG Jumpers" or "ST Jumper Block" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed**, since the Voron printer does not use sensorless homing.
 
-###### ![](./images/SKR_V1.3_in_UART_voltageselect.png) {#SKR_V1.3_in_UART_voltageselect_v1}
+###### ![](./images/SKR_V1.3_in_SPI_voltageselect.png) {#SKR_V1.3_in_SPI_voltageselect_v1}
 
-* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_V1.3_in_UART_voltageselect.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_V1.3_in_SPI_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
