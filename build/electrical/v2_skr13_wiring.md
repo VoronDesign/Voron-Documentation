@@ -12,11 +12,11 @@ has_toc: false
 
 * This stuff refers to the way the hardware communicates.
 
-* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.3 board.
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.3 boards.
 
 * The list below shows which stepper motor drivers are UART mode and which are SPI mode.
 
-* In the list below, locate the name of the stepper motor drivers that were purchased with the boards and left-click on the name.
+* In the list below, locate the name of the stepper motor drivers that were purchased with the boards and click on their name.
 
 ### Information
 
@@ -29,22 +29,22 @@ has_toc: false
 
 ### UART Mode TMC Drivers That Use 24 VDC:
 
-1.  [TMC2208](./v2_skr13_wiring_inUARTmode#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
-2.  [TMC2209](./v2_skr13_wiring_inUARTmode#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
-3.  [TMC2225](./v2_skr13_wiring_inUARTmode#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
-4.  [TMC2226](./v2_skr13_wiring_inUARTmode#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+1.  [TMC2208](./v2_skr13_uart_wiring#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+2.  [TMC2209](./v2_skr13_uart_wiring#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+3.  [TMC2225](./v2_skr13_uart_wiring#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+4.  [TMC2226](./v2_skr13_uart_wiring#voron-v2---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
 
 
 ## SPI Mode TMC Driver List
 
 ### SPI Mode TMC Drivers That Use 24 VDC:
 
-1.  [TMC2100](./v2_skr13_wiring_inSPImode#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-2.  [TMC2130](./v2_skr13_wiring_inSPImode#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-3.  [TMC5160](./v2_skr13_wiring_inSPImode#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-4.  [TMC5161](./v2_skr13_wiring_inSPImode#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+1.  [TMC2100](./v2_skr13_spi_wiring#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+2.  [TMC2130](./v2_skr13_spi_wiring#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+3.  [TMC5160](./v2_skr13_spi_wiring#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+4.  [TMC5161](./v2_skr13_spi_wiring#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
 
 ### SPI Mode TMC Drivers That Use 48 VDC or Higher:
 
-1. [TMC5160HV](./v2_skr13_wiring_inSPImode#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-2. [TMC5160_PRO](./v2_skr13_wiring_inSPImode#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+1. [TMC5160HV](./v2_skr13_spi_wiring#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+2. [TMC5160_PRO](./v2_skr13_spi_wiring#voron-v2---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
