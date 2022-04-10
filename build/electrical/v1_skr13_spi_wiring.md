@@ -20,13 +20,21 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ## Initial Preparation for SPI Mode - Set Jumpers
 
-* Ensure **all of "DIAG Jumpers" or "ST Jumper Block" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed**, since the Voron printer does not use sensorless homing.
-
-* **Set the USB-PWR jumper to the INT position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
-
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
 ###### ![](./images/SKR_V1.3_in_SPI_mode_PREP_150.png) {#SKR_V13_in_SPI_mode_PREP_150_v1}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_V1.3_in_SPI_mode_PREP_150.png){:target="_blank" rel="noopener"}
+
+## Voltage Selection Header and Other Headers
+
+* **Set the USB-PWR jumper to the INT position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
+
+* Ensure **all of "DIAG Jumpers" or "ST Jumper Block" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed**, since the Voron printer does not use sensorless homing.
+
+###### ![](./images/SKR_V1.3_in_UART_voltageselect.png) {#SKR_V1.3_in_UART_voltageselect_v1}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_V1.3_in_UART_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
