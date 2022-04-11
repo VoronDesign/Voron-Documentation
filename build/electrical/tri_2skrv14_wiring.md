@@ -1,22 +1,22 @@
 ---
 layout: default
-title: "Trident - BTT SKR V1.4/V1.4Turbo Wiring"
+title: "Trident - BTT SKR V1.4/Turbo Wiring"
 nav_exclude: true
 has_children: true
 has_toc: false
 ---
 
-# Trident - BTT SKR V1.4/V1.4Turbo Wiring
+# Trident - BTT SKR V1.4/Turbo Wiring
 
 ## What is the difference between UART mode and SPI mode?
 
 * This stuff refers to the way the hardware communicates.
 
-* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.4 board.
+* So, how do you know which mode to pick? It depends on the stepper motor drivers you choose to buy with the SKR V1.4 boards.
 
 * The list below shows which stepper motor drivers are UART mode and which are SPI mode.
 
-* In the list below, locate the name of the stepper motor drivers that were purchased with the boards and click on its name.
+* In the list below, locate the name of the stepper motor drivers that were purchased with the boards and click on their name.
 
 ### Information
 

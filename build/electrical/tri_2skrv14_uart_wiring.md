@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Trident - SKR V1.4/V1.4Turbo: TMC2208, TMC2209, TMC2225, or TMC2226"
-parent: "Trident - BTT SKR V1.4/V1.4Turbo Wiring"
+title: "Trident - SKR V1.4/Turbo: TMC2208, TMC2209, TMC2225, or TMC2226"
+parent: "Trident - BTT SKR V1.4/Turbo Wiring"
 nav_exclude: true
 nav_order: 1
 ---
 
-# Trident - SKR V1.4/V1.4Turbo: TMC2208, TMC2209, TMC2225, or TMC2226
+# Trident - SKR V1.4/Turbo: TMC2208, TMC2209, TMC2225, or TMC2226
 
 ## Initial Preparation Needed for TMC2209 or TMC2226 UART Stepper Motor Drivers
 <span> <br> </span>
@@ -25,7 +25,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/v2_skr14T_UART_PREP.png) {#v2_skr14T_UART_PREP_tri2skr_1}
 
-* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/v2_skr14T_UART_PREP.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/v2_skr14T_UART_PREP.png){:target="_blank" rel="noopener"}
 
 ### Voltage Selection Headers
 
@@ -35,7 +35,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/v2_skr14T_UART_voltageselect.png) {#v2_skr14T_UART_voltageselect_tri2skr}
 
-* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/v2_skr14T_UART_voltageselect.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/v2_skr14T_UART_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
@@ -56,7 +56,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect the hot end thermistor to TH0 (P0.24)
 * - [ ] Connect the X endstop to X-STOP (P1.29)
 * - [ ] Connect the Y endstop to Y-STOP (P1.28)
-* - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect USB Cable to your SKR 1.4/Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
 ### MCU X/Y/E, Hot End in UART Mode Wiring Diagram
 
@@ -80,10 +80,10 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect the Z endstop to Z-STOP (P1.27)
 * - [ ] Connect the Probe Signal (with&nbsp;**BAT85 diode**) to PROBE connector (P0.10)
 * - [ ] Connect the Probe PWR and GND to FAN2
-* - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect USB Cable to your SKR 1.4/Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
 BAT85
-: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](https://docs.vorondesign.com/build/electrical/#bat85-diode){:target="_blank" rel="noopener"}
+: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ### MCU Z, Bed, Exhaust Fan in UART Mode Wiring Diagram
 
@@ -107,11 +107,11 @@ BAT85
 ## Raspberry Pi
 
 ### Power
-* The BTT SKR V1.4/V1.4Turbo board is **NOT capable of providing 5V power** to run your Raspberry Pi.
+* The BTT SKR V1.4/Turbo board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Communications with the Raspberry Pi
 
-* see [the SKR V1.4/V1.4Turbo Raspberry Pi Section](./skrv14_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the SKR V1.4/Turbo Raspberry Pi Section](./skrv14_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in UART mode)
 
@@ -121,13 +121,13 @@ BAT85
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/two_skrv1.4inUART-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-### The Klipper Configuration file for SKR V1.4/V1.4Turbo board
+### The Klipper Configuration file for SKR V1.4/Turbo board
 
-The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.4/V1.4Turbo board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.4/Voron2_SKR_14_Config.cfg){:target="_blank" rel="noopener"};
+The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.4/Turbo board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.4/Voron2_SKR_14_Config.cfg){:target="_blank" rel="noopener"};
 
-## URL Resources Links for the SKR V1.4/V1.4Turbo (PIN Diagrams and Repo)
+## URL Resources Links for the SKR V1.4/Turbo (PIN Diagrams and Repo)
 
-* see [The SKR V1.4/V1.4Turbo Resource Section](./skrv14_Resources#color-pin-diagram-for-skr-v14v14turbo){:target="_blank" rel="noopener"}
+* see [The SKR V1.4/Turbo Resource Section](./skrv14_Resources#color-pin-diagram-for-skr-v14v14turbo){:target="_blank" rel="noopener"}
 
 ## After I have Wired up the MCU Board, What Comes Next?
 
@@ -135,7 +135,7 @@ The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.4
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> SKR 1.4](../../build/software/skr13_klipper#skr-1314-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create** the Klipper Config file (create a printer.cfg file);
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create** the Klipper Config file (create printer.cfg file);
 
     * Please use the Color PIN Diagrams, [displayed here](./skrv14_Resources#color-pin-diagram-for-skr-v14v14turbo){:target="_blank" rel="noopener"}, as a source of information;
 
