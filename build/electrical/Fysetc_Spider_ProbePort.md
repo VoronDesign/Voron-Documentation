@@ -31,7 +31,7 @@ Form Digikey website for Panasonic GX-HL15BI-P:
 ###### ![](./images/Digikey_PanasonicGX-HL15BI-P_probeinfo.png) {#Digikey_PanasonicGX-HL15BI-P_probeinfo}
 
 * Now, you have the information on the style of probe you own (i.e. NPN or PNP) and its default state (NO-normally open or NC-normally closed).
-* The operating voltage (supply voltage) of the inductive probe.
+* Also, the operating voltage (supply voltage) of the inductive probe is now known.
 
 ## Understanding the Fysetc PROBE PORT:
 
@@ -43,17 +43,17 @@ Form Digikey website for Panasonic GX-HL15BI-P:
 
 ## What is the PIN Diagram telling me?
 
-* If you look at the Color PIN diagram picture from above, there are two portions of the PROBE port that need to be addressed.  The item labeled as "Z+" or "PROBE Port" and another item labeled as "Probe Voltage Select".
+* If you look at the picture of the Color PIN diagram from above, there are two portions of the PROBE port that need to be addressed.  The item labeled as "Z+" or "PROBE Port" and another item labeled as "Probe Voltage Select".
 
 * The item labeled "Z+/PROBE Port", shown in the **<span class="color-blind-purple">PURPLE box</span>** in the diagram below, is the connector that is used when wiring up the inductive probe sensor.
 
-* The "Probe Voltage Select", shown in the **<span class="color-blind-orange">ORANGE box</span>** in the diagram below, sets the voltage level that will appear on the V-PROBE pin of the "PROBE" port (which is labeled "V-PROBE").  The Jumper can set the voltage to be 5VDC, or 24VDC.  From the picture of the Fysetc PROBE port above, the Voron printer recommends setting the voltage to 24VDC.
+* The "Probe Voltage Select", shown in the **<span class="color-blind-orange">ORANGE box</span>** in the diagram below, sets the voltage level that will appear on the V-PROBE pin of the "PROBE port (which is labeled "V-PROBE").  The jumper can set the voltage to be 5VDC, or 24VDC.  From the picture of the Fysetc PROBE port above, the Voron design team recommends setting the voltage to 24VDC.
 
-* From the data obtained from the seller's website, ensure that the inductive probe purchased can run on 24VDC (supply voltage).  If it does not, then the Jumper "Probe Voltage Select" will need to be changed to match the Probe's voltage supply.
+* From the data obtained from the seller's website, ensure the inductive probe can run at 24VDC (supply voltage).  If it can not, then the jumper "Probe Voltage Select" will need to be changed to match the probe's voltage supply.
 
 * Just for your information, both Digikey's Omron TLQ5MC2 and the Aliexpress' Omron TL-Q5MC2-Z are a NPN style probes.  While Digikey's Panasonic GX-HL15BI-P is a PNP style probe.
 
-**The Voron wiring diagram for the Fysetc Spider board recommends wiring the PROBE in to Z+ connector.**  Connect the probe V+, probe GND, and probe signal pin in to Z+ connector of the Fysetc spider board.
+**The Voron wiring diagram for the Fysetc Spider board recommends wiring the PROBE in to the Z+ connector.**  Connect the probe V+, probe GND, and probe signal pin in to the Z+ connector of the Fysetc spider board.
 
 * Here is a picture of the Fystec Spider probe port with colored boxes:
 ###### ![](./images/Colored_FysetcSpiderv1.0_2.2probeport.png) {#Colored_FysetcSpiderv10_22probeport}
@@ -64,4 +64,4 @@ Form Digikey website for Panasonic GX-HL15BI-P:
 
 1. test data shows, an optocoupler, which some MCU boards incorporate in to the PROBE circuit, adds a noticeable signal delay;
 2. the probe port is significantly less likely to work (across different MCU boards) than just using the normal endstop port;
-3. if the inductive probe fails, people will switch to a mechanical switch type of probe which uses an endstop port so using an endstop port, enables this interchangeability.
+3. if the inductive probe fails, people will exchange the inductive probe for a probe that utilizes a mechanical switch which requires an endstop port. By wiring the inductive probe up to the endstop port in the first place, this interchangeability can now occur easily.
