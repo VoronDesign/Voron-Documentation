@@ -37,7 +37,7 @@ nav_exclude: true
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__  If you are using a TMC2209 or TMC2226 stepper motor driver for the **<span class="color-blind-red">extruder motor</span> and you want to use a filament run out sensor**, please do one of the following:
 
-1.  Either cut off the DIAG pin for the **stepper motor driver step stick** in the **extruder** driver socket (E0 or E1 on the SKR board); [The location of the DIAG pin](#tmc2209-pin-removal_uart_triskr-expmot) or
+1.  Cut off the DIAG pin for the **stepper motor driver step stick** in the **extruder** driver socket (E0 or E1 on the SKR board); [The location of the DIAG pin](#tmc2209-pin-removal_uart_triskr-expmot) or
 
 2.  Use stackable header pins and ensure the **DIAG pin does not get plugged into the SKR board's** extruder driver socket location (E0 or E1 on the SKR board); [The location of the DIAG pin](#disable_sensor-less_homing_uart_triskr-expmot) or
 

@@ -35,7 +35,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/v2_skr14T_SPI_PREP.png) {#v2_skr14T_SPI_PREP_triskr-expmot}
 
-* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/v2_skr14T_SPI_PREP.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/v2_skr14T_SPI_PREP.png){:target="_blank" rel="noopener"}
 
 ## Initial Preparation for the EXP-MOT in SPI Mode - Set Jumpers
 
@@ -43,7 +43,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/tri_EXP-MOT-V10_SPI_prep.png) {#tri_EXP-MOT-V10_SPI_prep_triskr-expmot_1}
 
-* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/tri_EXP-MOT-V10_SPI_prep.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/tri_EXP-MOT-V10_SPI_prep.png){:target="_blank" rel="noopener"}
 
 ### Voltage Selection Headers for the SKR V1.4/Turbo in SPI mode
 
@@ -55,7 +55,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ###### ![](./images/v2_skr14T_SPI_voltageselect.png) {#v2_skr14T_SPI_voltageselect_triskr-expmot}
 
-* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/v2_skr14T_SPI_voltageselect.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/v2_skr14T_SPI_voltageselect.png){:target="_blank" rel="noopener"}
 
 ### Voltage Selection Header for the EXP-MOT in SPI mode
 
@@ -73,13 +73,13 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ###### ![](./images/tri_EXP-MOT-V10_SPI_voltageselect.png) {#tri_EXP-MOT-V10_SPI_voltageselect_triskr-expmot}
 
-* If you want to open the above picture, in a new tab of your web browser, and have the ability to zoom and download the picture in PNG format then [click here](./images/tri_EXP-MOT-V10_SPI_voltageselect.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/tri_EXP-MOT-V10_SPI_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers for both SKR V1.4/Turbo and EXP-MOT
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
 * Install heat sinks on all stepper motor drivers
 
-##  MCU X/Y/E, Hot End, Bed, and Exhaust Fan in SPI Mode (SKR V1.4/Turbo)
+## MCU X/Y/E, Hot End, Bed, and Exhaust Fan in SPI Mode (SKR V1.4/Turbo)
 
 * - [ ] Connect 24V and GND (V+ and V-) from the PSU to Power/DCIN
 * - [ ] Connect stepper driver for the B Motor (gantry left) into position X (driver socket)
@@ -103,7 +103,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Connect the Probe PWR and GND to FAN1
 * - [ ] Plug the supplied ribbon cable into EXP1 on the SKR V1.4/Turbo board and then plug the other end into the EXP1 on the EXP-MOT board.
 * - [ ] Plug the supplied ribbon cable into EXP2 on the SKR V1.4/Turbo board and then plug the other end into the EXP2 on the EXP-MOT board.
-* - [ ] Connect USB Cable to your SKR 1.4/1.4Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect USB Cable to your SKR 1.4/Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
@@ -158,14 +158,13 @@ BAT85
 ## Raspberry Pi
 
 ### Power
-
 * The BTT SKR V1.4/Turbo board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Communications with the Raspberry Pi
 
 * see [the SKR V1.4/Turbo Raspberry Pi Section](./skrv14_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
-##  SSR Wiring (SKR V1.4/Turbo Board Shown is in SPI mode)
+## SSR Wiring (SKR V1.4/Turbo Board Shown is in SPI mode)
 
 * Wire colors will vary depending on your locale.
 
