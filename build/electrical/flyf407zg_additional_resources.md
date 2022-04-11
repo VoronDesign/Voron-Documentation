@@ -37,8 +37,7 @@ nav_exclude: true
 
 * The Mellow FLYF407ZG Board has a pre-soldered socket available for a MAX6675 Chip.
 
-* For reference, here is information on MAX6675 Chip that can be soldered onto the FLYF407ZG board so that you can use
-a K-Type Thermocouple at the T6 connector
+* For reference, here is information on MAX6675 Chip that can be soldered onto the FLYF407ZG board so that you can use a K-Type Thermocouple at the T6 connector
 
 * For reference, here is the [data sheet on the MAX6675 Chip](https://www.mouser.com/datasheet/2/256/maxim%20integrated%20products_max6675-1179403.pdf){:target="_blank" rel="noopener"}
 
@@ -70,7 +69,7 @@ a K-Type Thermocouple at the T6 connector
 
 * This information was obtained from [here](https://teamgloomy.github.io/fly_407zg_general.html#issues){:target="_blank" rel="noopener"}
 
-* It is recommended that two components for the Mellow FLYF407ZG Board have heat sinks installed.  The board I received from Mellow did not have ones supplied, but you can buy some from [Amazon here](https://www.amazon.com/gp/product/B082RWXFR2){:target="_blank" rel="noopener"}
+* It is recommended that two components for the Mellow FLYF407ZG Board have heat sinks installed.  The board I received from Mellow did not have heat sinks supplied inside the package, but you can buy some from [Amazon here](https://www.amazon.com/gp/product/B082RWXFR2){:target="_blank" rel="noopener"}
 
 ###### ![](./images/fly_407zg_heatsinks.jpg) {#fly_407zg_heatsinks-1}
 
@@ -81,7 +80,6 @@ a K-Type Thermocouple at the T6 connector
 ###### ![](./images/BOOTmode-STM32F407.png) {#BOOTmode-STM32F407}
 
 * [Here is the link from the above picture](https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf#page=69){:target="_blank" rel="noopener"}
-
 
 * Follow the below steps to rectify this issue (ISSUES Block):
 
