@@ -55,11 +55,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect X end stop to X+ connector (P1.28)
 * - [ ] Connect Y end stop to Y+ connector (P1.26)
 * - [ ] Wire 24V and 0V from DC power supply to Power/DCIN
-* if using USB to communicate with Pi:
-    1. - [ ] Connect USB Cable to your SKR V1.3, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
-    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#setting-up-uart-communications-with-the-raspberry-pi)
-    2. - [ ] Connect UART cable to your SKR V1.3, but do not connect it yet to your Raspberry Pi
+* - [ ] Connect USB Cable to your SKR V1.3,&nbsp;**but do not connect it yet to your Raspberry Pi**
 
 ### MCU X/Y/E, Hot End in SPI Mode Wiring Diagram
 
