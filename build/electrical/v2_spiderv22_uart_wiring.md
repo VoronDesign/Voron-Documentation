@@ -16,13 +16,21 @@ nav_order: 1
 
 ## Initial Preparation for UART Mode - Set Jumpers
 
-* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
+* Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
+
+###### ![](./images/FYSETC_Spider_V2.2_in_UART_Mode_PREP.png) {#FYSETC_Spider_V22_in_UART_Mode_PREP}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V2.2_in_UART_Mode_PREP.png){:target="_blank" rel="noopener"}
+
+## USB-PWR Selection Header and DIAG Headers
 
 * **Set the USB-PWR jumper to the +5V position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard. The top pin on this header is labeled "U5V", and the middle and bottom pins do not have labels, but the Fysetc Spider V2.2 schematic diagram labels the bottom pin as "+5V".  Ensure the USB-PWR jumper is set as shown in the diagram below.
 
-* Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
+* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
 
-###### ![](./images/FYSETC_Spider_V2.2_in_UART_Mode_PREP_150.png) {#FYSETC_Spider_V22_in_UART_Mode_PREP}
+###### ![](./images/FYSETC_Spider_V2.2_in_UART_Mode_PREP2.png) {#FYSETC_Spider_V22_in_UART_Mode_PREP2}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V2.2_in_UART_Mode_PREP2.png){:target="_blank" rel="noopener"}
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
 
@@ -43,6 +51,8 @@ nav_order: 1
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
 
 ###### ![](./images/FYSETC_Spider_V2.2_inUARTMode_VoltageSelect_150.png) {#FYSETC_Spider_V22_inUARTMode_VoltageSelect}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V2.2_inUARTMode_VoltageSelect_150.png){:target="_blank" rel="noopener"}
 
 ## Stepper Drivers
 * If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
@@ -80,8 +90,13 @@ nav_order: 1
 * - [ ] Connect the PROBE to Z+ (PA3)
 * - [ ] Connect the Z endstop to Z- (PA0)
 * if using a mini12864 display:
-    1. - [ ] [complete the steps shown below](#mini-12864-display)
+    1. - [ ] [complete the steps in the mini 12864 Display](#mini-12864-display)
     2. - [ ] connect to EXP1 & EXP2
+* if using USB to communicate with Pi:
+    1. - [ ] Connect USB Cable to the Spider board, but do not connect it yet to your Raspberry Pi
+* if using UART (3-wire communication) with Pi:
+    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#powering-the-raspberry-pi--setting-up-uart-communications-with-the-raspberry-pi)
+    2. - [ ] Connect UART cable to the Spider board, but do not connect it yet to your Raspberry Pi
 
 ## MCU Wiring Diagram for UART Mode
 
