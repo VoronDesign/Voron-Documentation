@@ -36,7 +36,11 @@ nav_exclude: true
 * - [ ] Plug Probe GND and Signal (with&nbsp;**BAT85 diode**) in to Z-STOP (PC2)
 * - [ ] Connect Probe +V to VIN in terminal of DCOUT whic is next to HB
 * - [ ] Wire 24V and -V from DC power supply to VIN and GND terminals of POWER/DCIN which is located in the corner
-* - [ ] Connect USB Cable to your SKR mini E3,&nbsp;**but do not connect it yet to your Raspberry Pi**
+* if using USB to communicate with Pi:
+    1. - [ ] Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
+* if using UART (3-wire communication) with Pi:
+    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#setting-up-uart-communications-with-the-raspberry-pi)
+    2. - [ ] Connect UART cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
