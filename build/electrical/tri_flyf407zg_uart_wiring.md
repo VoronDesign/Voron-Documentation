@@ -20,6 +20,8 @@ nav_order: 1
 
 ###### ![](./images/FLYF407ZG_UART_PREP.png) {#FLYF407ZG_UART_Mode_for_Prep_tri}
 
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FLYF407ZG_UART_PREP.png){:target="_blank" rel="noopener"}
+
 ### End Stop Voltage Selection Header
 
 * In the diagram below, the **<span class="color-blind-orange">ORANGE box</span>** indicates the header with **<span class="color-blind-green">a GREEN</span>** jumper which is set for 5VDC.
@@ -31,6 +33,8 @@ nav_order: 1
 ###  End Stop Voltage Selection Diagram
 
 ###### ![](./images/FLYF407ZG_UART_voltageSelect.png) {#FLYF407ZG_UART_VoltageSelect_tri}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FLYF407ZG_UART_voltageSelect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
@@ -66,10 +70,14 @@ nav_order: 1
 * - [ ] Plug in Controller Fan 2 in to FAN4 (PE13)
 * - [ ] Plug Z end stop Switch into Z-MAX (PC15)
 * - [ ] Plug display wires in to EXP1 and EXP2
-* - [ ] Connect USB Cable to FLYF407ZG,&nbsp;**but do not connect it yet to your Raspberry Pi**
+* if using USB to communicate with Pi:
+    1. - [ ] Connect USB Cable to FLYF407ZG board, but do not connect it yet to your Raspberry Pi
+* if using UART (3-wire communication) with Pi:
+    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#setting-up-uart-communications-with-the-raspberry-pi)
+    2. - [ ] Connect UART cable to FLYF407ZG board, but do not connect it yet to your Raspberry Pi
 
 BAT85
-: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
+: a Schottky barrier diode. BAT85 is needed to protect the FLYF407ZG board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ## MCU Wiring Diagram for UART Mode
 
