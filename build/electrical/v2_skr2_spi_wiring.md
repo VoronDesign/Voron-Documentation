@@ -24,15 +24,17 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/SKR2_in_SPI_PREP.png) {#SKR2_in_SPI_PREP_v2}
 
-* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR2_in_UART_PREP.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR2_in_SPI_PREP.png){:target="_blank" rel="noopener"}
 
 ## Voltage Selection Headers and Other Headers
 
-* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-purple">PURPLE box</span>) are removed**, since the Voron printer does not use sensorless homing.
-
 * **Set the USB-PWR jumper to the VDD position (as shown in the <span class="color-blind-orange">ORANGE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
+* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-purple">PURPLE box</span>) are removed**, since the Voron printer does not use sensorless homing.
+
 * In the diagram below, ensure that the "WIFI/UDISK Select" Jumpers (as shown in the **<span class="color-blind-yellow">YELLOW box</span>**) are set for WIFI to ensure the UDISK port is not connected (both jumpers have an empty pin beneath them).
+
+__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
 ###### ![](./images/SKR2_in_SPI_voltageselect.png) {#SKR2_in_SPI_voltageselect}
 
@@ -87,7 +89,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 * - [ ] Connect USB Cable to your SKR 2,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
 BAT85
-: a Schottky barrier diode. BAT85 is needed to protect the board (MCU board) from being fried.  An inductive probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
+: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An inductive probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ### MCU Z, Bed, Exhaust Fan in SPI Mode Wiring Diagram
 
@@ -117,7 +119,7 @@ BAT85
 
 * see [the SKR 2 Raspberry Pi Section](./skr2_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
-## SSR Wiring (Board Shown is in SPI mode)
+## SSR Wiring (Boards Shown is in SPI mode)
 
 * Wire colors will vary depending on your locale.
 
