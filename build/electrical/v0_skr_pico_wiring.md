@@ -48,7 +48,11 @@ nav_exclude: true
 * - [ ] Connect Y end stop to Y-STOP connector (IO3)
 * - [ ] Connect Z end stop to Z-STOP connector (IO25)
 * - [ ] Wire 24V and -V from DC power supply to POWER
-* - [ ] Connect USB Cable to your SKR Pico,&nbsp; **but do not connect it yet to your Raspberry Pi**
+* if using USB to communicate with Pi:
+    1. - [ ] Connect USB Cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
+* if using UART (3-wire communication) with Pi:
+    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#powering-the-raspberry-pi--setting-up-uart-communications-with-the-raspberry-pi)
+    2. - [ ] Connect UART cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
 
 ### MCU Diagram
 
