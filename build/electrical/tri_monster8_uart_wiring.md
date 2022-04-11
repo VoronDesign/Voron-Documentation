@@ -16,13 +16,21 @@ nav_order: 1
 
 ## Initial Preparation for UART Mode - Set Jumpers
 
-* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-orange">ORANGE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
+* Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-blue">BLUE</span>** jumpers in the diagram below:
+
+###### ![](./images/Monster8v10_UART_PREP1.png) {#Monster8v10_UART_PREP1_tri}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Monster8v10_UART_PREP1.png){:target="_blank" rel="noopener"}
+
+## USB-PWR Selection Header and DIAG Headers
 
 * **Set the USB-PWR jumper to off (as shown in the <span class="color-blind-red">RED box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
-* Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-blue">BLUE</span>** jumpers in the diagram below:
+* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-orange">ORANGE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
 
 ###### ![](./images/Monster8v10_UART_PREP.png) {#Monster8v10_UART_PREP_tri}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Monster8v10_UART_PREP.png){:target="_blank" rel="noopener"}
 
 ### (FAN & Endstop/PROBE & DRIVER IC) Voltage Selection Headers
 
@@ -47,6 +55,8 @@ nav_order: 1
 ### (FAN & Endstop/PROBE & DRIVER IC) Voltage Selection Diagram
 
 ###### ![](./images/Monster8v10_UART_voltageselect.png) {#Monster8v10_UART_voltageselect_tri}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Monster8v10_UART_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
@@ -84,15 +94,15 @@ nav_order: 1
     1. - [ ] [complete the steps in the mini 12864 Display section](#mini-12864-display)
     2. - [ ] connect to EXP1 & EXP2
 * if using USB to communicate with Pi:
-    1. - [ ] Connect USB Cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+    1. - [ ] Connect USB Cable to your Monster 8 board, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
     1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#setting-up-uart-communications-with-the-raspberry-pi)
-    2. - [ ] Connect UART cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART cable to your Monster 8 board, but do not connect it yet to your Raspberry Pi
 
 * <span> </span>
 
 BAT85
-: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
+: a Schottky barrier diode. BAT85 is needed to protect the Monster 8 board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ## MCU Wiring Diagram for UART Mode
 
