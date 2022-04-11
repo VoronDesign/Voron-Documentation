@@ -24,7 +24,7 @@ nav_order: 1
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V1.0_in_UART_mode_PREP.png){:target="_blank" rel="noopener"}
 
-## USB-PWR Selection Header and DAIG Headers
+## USB-PWR Selection Header and DIAG Headers
 
 * **Set the USB-PWR jumper to the +5V position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard. The top pin on this header is labeled "U5V", and the middle and bottom pins do not have labels, but the Fysetc Spider V1.0 schematic diagram labels the bottom pin as "+5V".  Ensure the USB-PWR jumper is set as shown in the diagram below.
 
