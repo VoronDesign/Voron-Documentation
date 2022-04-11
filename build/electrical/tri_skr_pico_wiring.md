@@ -49,7 +49,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Connect Y end stop to Y-STOP connector (IO3)
 * - [ ] Connect the Probe Signal (with&nbsp;**BAT85 diode**) to Z-STOP connector (IO25)
 * - [ ] Connect the V+ an 0V wires on the probe to LASER
-* - [ ] Connect USB Cable to your SKR 2,&nbsp;**but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect USB Cable to your SKR Pico,&nbsp;**but do not connect it yet to your Raspberry Pi**
 
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
@@ -71,7 +71,7 @@ BAT85
 * - [ ] Connect the chamber exhaust fan to FAN1 (IO17)
 * - [ ] Connect the controller fan B in to FAN2 (IO18)
 * - [ ] Connect Z end stop to Z-STOP connector (IO25)
-* - [ ] Connect USB Cable to your SKR 2,&nbsp;**but do not connect it yet to your Raspberry Pi**
+* - [ ] Connect USB Cable to your SKR Pico,&nbsp;**but do not connect it yet to your Raspberry Pi**
 
 ### MCU Z, Bed, Exhaust Fan Wiring Diagram
 
@@ -93,16 +93,16 @@ BAT85
 
 <div>
 
-<!--### The Klipper Configuration file for SKR 2 board
+<!--### The Klipper Configuration file for SKR Pico board
 
-The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR 2 board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg){:target="_blank" rel="noopener"};
+The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR Pico board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg){:target="_blank" rel="noopener"};
 -->
 
 </div>
 
-## URL Resources Links for the SKR 2 (PIN Diagrams and Repo)
+## URL Resources Links for the SKR Pico (PIN Diagrams and Repo)
 
-* see [The SKR 2 Resource Section](./skr_pico_Resources#color-pin-diagram-for-skr-pico){:target="_blank" rel="noopener"}
+* see [The SKR Pico Resource Section](./skr_pico_Resources#color-pin-diagram-for-skr-pico){:target="_blank" rel="noopener"}
 
 ## After I have Wired up the MCU Board, What Comes Next?
 
