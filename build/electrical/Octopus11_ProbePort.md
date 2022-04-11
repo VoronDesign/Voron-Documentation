@@ -30,7 +30,8 @@ From Aliexpress website for Omron TL-Q5MC2-Z:
 Form Digikey website for Panasonic GX-HL15BI-P:
 ###### ![](./images/Digikey_PanasonicGX-HL15BI-P_probeinfo.png) {#Digikey_PanasonicGX-HL15BI-P_probeinfo}
 
-* Now, you have the information on the type of probe you own (i.e. NPN or PNP and NO or NC)
+* Now, you have the information on the style of probe you own (i.e. NPN or PNP) and its default state (NO-normally open or NC-normally closed).
+* Also, the operating voltage (supply voltage) of the inductive probe is now known.
 
 ## Understanding the Octopus V1.0/V1.1 PROBE PORT:
 
@@ -42,11 +43,11 @@ Form Digikey website for Panasonic GX-HL15BI-P:
 
 ## What is the PIN Diagram telling me?
 
-* If you look at the Color PIN diagram picture from above, there are two portions of the PROBE port that need to be addressed.  The item labeled as "PROBE" and the other item labeled as "PROBE Voltage Select (DC)".
+If you look at the picture of the Color PIN diagram from above, there are two portions of the PROBE port that need to be addressed.  The item labeled as "PROBE" and the other item labeled as "PROBE Voltage Select (DC)".
 
 * The "PROBE Voltage Select (DC)" sets the voltage level that will appear on the DC pin of the "PROBE" port (which is labeled "PROBE Voltage Select (DC)").  The Jumper can set the voltage to be 5VDC, 12VDC or 24VDC.  From the picture of the Octopus PROBE port above, the Voron printer setup sets the voltage to 24VDC.
 
-* From the data obtained from the seller's website, ensure that the Inductive Probe purchased runs on 24VDC.  If it does not, then the Jumper "PROBE Voltage Select (DC)" will need to be changed to match the Probe's voltage supply.
+* From the data obtained from the seller's website, ensure the inductive probe can run at 24VDC (supply voltage).  If it does not, then the jumper "PROBE Voltage Select (DC)" will need to be changed to match the Probe's voltage supply.
 
 * The Color PIN diagram picture from above, has two footnotes: 2 & 4
 
@@ -66,8 +67,8 @@ Form Digikey website for Panasonic GX-HL15BI-P:
 
 ## Why does the Voron Team recommend the use of an endstop pin instead of the dedicated probe port?
 
-*  The Voron Design Team has been dealing with Inductive probes for a long time and has learned the following over the years from their test data and experience with helping Voron users:
+*  The Voron Design Team has been dealing with Inductive probes for a long time and has learned the following over the years from their test data and experience with helping Voron users setup probe devices:
 
-1. test data shows, the optocoupler which is in the PROBE circuit on the MCU board, adds a noticeable signal delay
-2. the probe port is significantly less likely to work (across different mcu boards) than just using the normal endstop port
-3. if the Inductive probe fails, people will switch to a mechanical switch probe which uses an endstop port.  So using an endstop port, enables this interchangeability.
+1. test data shows, an optocoupler, which some MCU boards incorporate in to the PROBE circuit, adds a noticeable signal delay;
+2. the probe port is significantly less likely to work (across different MCU boards) than just using the normal endstop port;
+3. if the inductive probe fails, people will exchange the inductive probe for a probe that utilizes a mechanical switch which requires an endstop port. By wiring the inductive probe up to the endstop port in the first place, this interchangeability can now occur easily.

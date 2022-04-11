@@ -16,7 +16,7 @@ has_toc: false
 
 * The list below shows which stepper motor drivers are UART mode and which are SPI mode.
 
-* In the list below, locate the name of the stepper motor drivers that were purchased with the board and left-click on the name.
+* In the list below, locate the name of the stepper motor drivers that were purchased with the board and click on ots name.
 
 ### Information
 
