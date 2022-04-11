@@ -30,9 +30,9 @@ From Aliexpress website for Omron TL-Q5MC2-Z:
 Form Digikey website for Panasonic GX-HL15BI-P:
 ###### ![](./images/Digikey_PanasonicGX-HL15BI-P_probeinfo.png) {#Digikey_PanasonicGX-HL15BI-P_probeinfo}
 
-* Now, you have the information on the style of probe you own (i.e. NPN or PNP) and its
-default state (NO-normally open or NC-normally close)
-* This information is need so jumpers can be set that effect the Octopus Pro board's PROBE connector.
+* Now, you have the information on the style of probe you own (i.e. NPN or PNP) and its default state (NO-normally open or NC-normally closed).
+* Also, the operating voltage (supply voltage) of the inductive probe is now known.
+* This information is needed so jumpers can be set that effect the Octopus Pro board's PROBE connector.
 
 ## Understanding the Octopus Pro PROBE PORT:
 
@@ -44,13 +44,13 @@ default state (NO-normally open or NC-normally close)
 
 ## What is the PIN Diagram telling me?
 
-* If you look at the Color PIN diagram picture from above, there are three portions of the PROBE port that need to be addressed.  The item labeled as "PROBE" and another item labeled as "PROBE Voltage Select (DC)" and finally the last item labeled "Probe Type" (probe style).
+If you look at the picture of the Color PIN diagram from above, there are three portions of the PROBE port that need to be addressed.  The item labeled as "PROBE" and another item labeled as "PROBE Voltage Select (DC)" and finally the last item labeled "Probe Type" (probe style).
 
 * The item labeled "PROBE", shown in the **<span class="color-blind-yellow">YELLOW box</span>** in the diagram below, is the connector that is used when wiring up the inductive probe sensor
 
 * The "PROBE Voltage Select (DC)", shown in the **<span class="color-blind-orange">ORANGE box</span>** in the diagram below, sets the voltage level that will appear on the DC pin of the "PROBE" port (which is labeled "PROBE Voltage Select (DC)").  The Jumper can set the voltage to be 5VDC, 12VDC or 24VDC.  From the picture of the Octopus PROBE port above, the Voron printer setup sets the voltage to 24VDC.
 
-* From the data obtained from the seller's website, ensure that the Inductive Probe purchased runs on 24VDC.  If it does not, then the Jumper "PROBE Voltage Select (DC)" will need to be changed to match the Probe's voltage supply.
+* From the data obtained from the seller's website, ensure the inductive probe can run at 24VDC (supply voltage).  If it does not, then the jumper "PROBE Voltage Select (DC)" will need to be changed to match the Probe's voltage supply.
 
 * The "Probe Type" is the Probe style, as seen in the **<span class="color-blind-purple">PURPLE box</span>** in the diagram below, that you wrote down earlier from the seller's website.
 
@@ -64,11 +64,10 @@ default state (NO-normally open or NC-normally close)
 * Here is a picture of the Octopus Pro probe port with colored boxes:
 ###### ![](./images/ColoredOctopusPro_Probeport_closeup.png) {#ColoredOctopusPro_Probeport_closeup}
 
-
 ## Why does the Voron Team recommend the use of an endstop pin instead of the dedicated probe port?
 
 *  The Voron Design Team has been dealing with inductive probes for a long time and has learned the following over the years from their test data and experience with helping Voron users setup probe devices:
 
-1. test data shows, the optocoupler which is in the PROBE circuit on the MCU board, adds a noticeable signal delay;
+1. test data shows, an optocoupler, which some MCU boards incorporate in to the PROBE circuit, adds a noticeable signal delay;
 2. the probe port is significantly less likely to work (across different MCU boards) than just using the normal endstop port;
-3. if the Inductive probe fails, people will switch to a mechanical switch probe which uses an endstop port.  So using an endstop port, enables this interchangeability.
+3. if the inductive probe fails, people will exchange the inductive probe for a probe that utilizes a mechanical switch which requires an endstop port. By wiring the inductive probe up to the endstop port in the first place, this interchangeability can now occur easily.

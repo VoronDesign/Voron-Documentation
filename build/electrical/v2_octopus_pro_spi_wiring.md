@@ -20,13 +20,21 @@ We have no idea what state your board is in when you start this process.  Someon
 
 ## Initial Preparation for SPI Mode - Set Jumpers
 
-* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** because the Voron printer does not use sensorless homing.
+* Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
+
+###### ![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep1.png) {#Octopus_Pro_F446_SPI_Mode_for_Prep1}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus_Pro_F446_SPI_Mode_for_Prep1.png){:target="_blank" rel="noopener"}
+
+## USB-PWR Selection Header and DIAG Headers
 
 * As shown in the diagram below, ensure the **removal of the USB-PWR jumper (as shown in the <span class="color-blind-yellow">YELLOW box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
-* Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
+* Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-blue">BLUE box</span>) are removed** because the Voron printer does not use sensorless homing.
 
-###### ![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep.png) {#Octopus_Pro_F446_SPI_Mode_for_Prep}
+###### ![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep.png) {#Octopus_Pro_F446_SPI_Mode_for_Prep_150}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png){:target="_blank" rel="noopener"}
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
 
@@ -49,6 +57,8 @@ We have no idea what state your board is in when you start this process.  Someon
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
 
 ###### ![](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png) {#Octopus_Pro_F446_SPI_VoltageSelect}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
@@ -88,15 +98,15 @@ We have no idea what state your board is in when you start this process.  Someon
     1. - [ ] [complete the steps in the mini 12864 Display section](#mini-12864-display)
     2. - [ ] connect to EXP1 & EXP2
 * if using USB to communicate with Pi:
-    1. - [ ] Connect USB Cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+    1. - [ ] Connect USB Cable to your Octopus Pro board, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
     1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#powering-the-raspberry-pi--setting-up-uart-communications-with-the-raspberry-pi)
-    2. - [ ] Connect UART cable to your BTT Octopus board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART cable to your Octopus Pro board, but do not connect it yet to your Raspberry Pi
 
 * <span> </span>
 
 BAT85
-: a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
+: a Schottky barrier diode. BAT85 is needed to protect the Octopus Pro board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
 ## MCU Wiring Diagram for SPI Mode
 
