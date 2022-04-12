@@ -116,56 +116,81 @@ The calibration process is:
 
 **Do not forget, you need to repeat this same process for the Y axis.**
 
-### Final setup
+### Homing macros
 
-If you have a `[safe_z_home]` section, you need to comment out the entire block (not just the `[safe_z_home]` line!). Or you could just delete the entire block, but if sensorless homing doesn't work reliably for you for some reason and you decide you want to go back to a physical endstop setup, you'll be glad you didn't delete it.
-
-Now you need to create a `[homing_override]` section. The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. Here's a setup that has been working well for several Voron owners (you will probably want to tweak the `HOME_CUR` values for your own setup):
+The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. We're renaming them to `_HOME_X` and `_HOME_Y` here (the leading underscores will hide them in Mainsail/Fluidd, and those specific names are special for Klicky). This setup that has been working well for several Voron owners; you will probably want to tweak the `HOME_CURRENT` values for your own setup. I suggest creating a new file called `sensorless.cfg` and adding it with `[include sensorless.cfg]` in your main printer.cfg
 
 <!-- {% raw %} -->
 ```ini
-[gcode_macro _SENSORLESS_HOME_X]
+[gcode_macro _HOME_X]
 gcode:
-    # Set current for sensorless homing
-    {% set driver_config = printer.configfile.settings['tmc2209 stepper_x'] %}
-    {% set RUN_CUR = driver_config.run_current|float %}
-    {% set HOME_CUR = 0.7 %}
-    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={HOME_CUR}
+    # Always use consistent run_current on A/B steppers during sensorless homing
+    {% set RUN_CURRENT_X = printer.configfile.settings['tmc2209 stepper_x'].run_current|float %}
+    {% set RUN_CURRENT_Y = printer.configfile.settings['tmc2209 stepper_y'].run_current|float %}
+    {% set HOME_CURRENT = 0.7 %}
+    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={HOME_CURRENT}
+    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={HOME_CURRENT}
+
     # Home
     G28 X
     # Move away
     G91
     G1 X-10 F1200
+    
+    # Wait just a second… (give StallGuard registers time to clear)
+    G4 P1000
     # Set current during print
-    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={RUN_CUR}
+    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={RUN_CURRENT_X}
+    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={RUN_CURRENT_Y}
 
-[gcode_macro _SENSORLESS_HOME_Y]
+[gcode_macro _HOME_Y]
 gcode:
     # Set current for sensorless homing
-    {% set driver_config = printer.configfile.settings['tmc2209 stepper_y'] %}
-    {% set RUN_CUR = driver_config.run_current|float %}
-    {% set HOME_CUR = 0.7 %}
-    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={HOME_CUR}
+    {% set RUN_CURRENT_X = printer.configfile.settings['tmc2209 stepper_x'].run_current|float %}
+    {% set RUN_CURRENT_Y = printer.configfile.settings['tmc2209 stepper_y'].run_current|float %}
+    {% set HOME_CURRENT = 0.7 %}
+    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={HOME_CURRENT}
+    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={HOME_CURRENT}
+
     # Home
     G28 Y
     # Move away
     G91
     G1 Y-10 F1200
-    # Set current during print
-    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={RUN_CUR}
 
+    # Wait just a second… (give StallGuard registers time to clear)
+    G4 P1000
+    # Set current during print
+    SET_TMC_CURRENT STEPPER=stepper_x CURRENT={RUN_CURRENT_X}
+    SET_TMC_CURRENT STEPPER=stepper_y CURRENT={RUN_CURRENT_Y}
+```
+<!-- {% endraw %} -->
+
+### Final setup
+
+If you have a `[safe_z_home]` section, you need to comment out the entire block (not just the `[safe_z_home]` line!). Or you could just delete the entire block, but if sensorless homing doesn't work reliably for you for some reason and you decide you want to go back to a physical endstop setup, you'll be glad you didn't delete it.
+
+The last piece to bring everything together is `[homing_override]`. If you use the Klicky probe, then you already *have* a `[homing_override]` section. Make sure you have [the latest klicky-macros.cfg][klickyMacros], and then you can skip the rest of this guide; you're done here!
+
+If you already have a `[homing_override]` and you're not using Klicky, replace `G28 X` with `_HOME_X` and replace `G28 Y` with `_HOME_Y`.
+
+For anybody who needs a `[homing_override]`, the following example has proven extremely reliably on a V0.1.
+
+<!-- {% raw %} -->
+```ini
 [homing_override]
 axes: xyz
 gcode:
   {% set home_all = 'X' not in params and 'Y' not in params and 'Z' not in params %}
 
   {% if home_all or 'X' in params %}
-    _SENSORLESS_HOME_X
+    _HOME_X
   {% endif %}
-  G4 P2000
+  
   {% if home_all or 'Y' in params %}
-    _SENSORLESS_HOME_Y
+    _HOME_Y
   {% endif %}
+  
   {% if home_all or 'Z' in params %}
     G28 Z
     G1 Z10
@@ -174,3 +199,5 @@ gcode:
 <!-- {% endraw %} -->
 
 Restart Klipper, and now the "Home X"/"Home Y"/"Home Z" buttons in Mainsail and Fluidd will work properly (and so will commands like "G28 X"), using your new sensorless homing setup.
+
+[klickyMacros]: https://github.com/jlas1/Klicky-Probe/blob/main/Klipper_macros/klicky-macros.cfg
