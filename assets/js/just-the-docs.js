@@ -487,7 +487,12 @@ jtd.onReady(function(){
   initSearch();
   {%- endif %}
   scrollNav();
-  enable_checkboxes();
+  // this allows check boxes to work in MCU descriptions 
+  // but since toggle color scheme now has to be separate
+  // from my other updated files, I will implement this per
+  // board page.  The call here enabled checkboxes for the 
+  // whole Voron Docs site.
+  // enable_checkboxes(); 
 });
 
 })(window.jtd = window.jtd || {});
