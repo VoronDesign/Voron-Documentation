@@ -76,7 +76,7 @@ The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 br
 
 1. Once the MCU board is wired up and wire management has been performed, the next step is to install Mainsail/Fluidd or Octoprint, please see [The Build ═► Software Installation](../../build/software/index#software-installation){:target="_blank" rel="noopener"}
 
-2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the [ Color Pin Diagram, look for "Klipper Building Options"](./images/SKR_PICO_V1.0_Color_PIN_diagram.pdf){:target="_blank" rel="noopener"}; an alternative source of information on [how to build and install the Klipper firmware for the SKR Pico is located here](https://github.com/bigtreetech/SKR-Pico/tree/master/Klipper#how-to-use-klipper-on-skr-pico-v10){:target="_blank" rel="noopener"}
+2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the [ Color Pin Diagram, look for "Klipper Building Options"](./images/SKR_PICO_V1.0_Color_PIN_diagram.pdf){:target="_blank" rel="noopener"}; an alternative source of information on how to build and install the Klipper firmware for the SKR Pico is [located here](https://github.com/bigtreetech/SKR-Pico/tree/master/Klipper#how-to-use-klipper-on-skr-pico-v10){:target="_blank" rel="noopener"}
 
 
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (skr-pico-v1.0.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-pico-v1.0.cfg){:target="_blank" rel="noopener"};
@@ -86,3 +86,12 @@ The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 br
     * Please consult [The Build ═► Software Configuration](../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
 4. After **creating/editing** the Klipper Config file (skr-pico-v1.0.cfg renamed to printer.cfg), the next step is to check all the motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
+
+<script>
+    window.onload = function v01_skr_pico_enable_checkboxes(){
+    const v01_skr_pico_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(v01_skr_pico_checkboxes, function (e) {
+        e.removeAttribute('disabled');
+    });
+    }
+</script>
