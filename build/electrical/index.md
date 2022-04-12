@@ -4,6 +4,7 @@ title: Electrical Wiring
 parent: The Build
 has_children: true
 nav_order: 2
+has_toc: false
 ---
 
 # Electrical Wiring
@@ -42,7 +43,7 @@ For larger wires, such as heater cartridge wiring, heatshrink tubing is helpful.
 
 ## Cables
 
-Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
+Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains.
 
 PTFE or Heluflon wires are a premium option as they have a thinner insulation and a lower friction coefficient, which increases bending capabilities and decreases wear. But these advantages are most useful in printers that use cable chains. For printers with an umbilical cord cabling setup (V0 Toolhead, Legacy), they might be overkill. Automation cable such as IGUS can be used, but the minimum bend radius of the cable needs to be verified as the typical bend radius for Voron cable chains is very small.
 
@@ -70,7 +71,6 @@ Traditionally, trying to move a stepper that's miswired, has either resulted in 
 TMC 'stepper_y' reports DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) olb=1(OpenLoad_B!) CS_ACTUAL=25
 Transition to shutdown state: TMC 'stepper_y' reports error: DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!)
 ```
-
 
 ## DC Power Supply Wiring
 Many of the latest generation of Voron printers spec the use of two or more independent power supplies.  That can include 24V, 5V, and 12V power supplies depending on configuration.
@@ -154,18 +154,18 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V0.1 - SKR Pico](./v0_skr_pico_wiring.md)
 
 ### Voron 1
-* [V1 - SKR 1.3](./v1_skr13_wiring.md)
-* [V1 - SKR 1.4](./v1_skr14_wiring.md)
+* [V1 - SKR V1.3](./v1_skr13_wiring.md)
+* [V1 - SKR V1.4](./v1_skr14_wiring.md)
 
 ### Trident
 * [Trident - BigTreeTech Octopus](./v2_octopus_wiring.md)
 * [Trident - MKS Makerbase Monster8](./v2_monster8_wiring.md)
 
 ### Voron 2
-* [V2 - SKR 1.3](./v2_skr13_wiring.md)
-* [V2 - SKR 1.4](./v2_skr14_wiring.md)
+* [V2 - SKR V1.3](./v2_skr13_wiring.md)
+* [V2 - SKR V1.4](./v2_skr14_wiring.md)
 * [V2 - FLYboard FLYF407ZG](./v2_flyf407zg_wiring.md)
-* [V2 - Fysetc Spider v1.1](./v2_spider_wiring.md)
+* [V2 - Fysetc Spider V1.1](./v2_spider_wiring.md)
 * [V2 - BigTreeTech Octopus](./v2_octopus_wiring.md)
 * [V2 - MKS Makerbase Monster8](./v2_monster8_wiring.md)
 
