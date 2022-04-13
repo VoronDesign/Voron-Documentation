@@ -17,9 +17,9 @@ nav_exclude: true
 
 __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
-###### ![](./images/PREP_SKR_mini_E3_V2.0_150.png) {#PREP_SKR_mini_E3_V2.0}
+###### ![](./images/PREP_SKR_mini_E3_V2.0_150.jpg) {#PREP_SKR_mini_E3_V2.0}
 
-* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/PREP_SKR_mini_E3_V2.0_150.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/PREP_SKR_mini_E3_V2.0_150.jpg){:target="_blank" rel="noopener"}
 
 ## MCU
 
