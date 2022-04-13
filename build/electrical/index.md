@@ -154,7 +154,6 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V0.1 - mini e3 V1.2](./v01_miniE3_v12_wiring.md)
 * [V0.1 - SKR Pico](./v0_skr_pico_wiring.md)
 
-
 ### Voron 1
 * [V1 - SKR V1.3](./v1_skr13_wiring.md)
 * [V1 - SKR V1.4](./v1_skr14_wiring.md)
