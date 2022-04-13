@@ -27,6 +27,8 @@ nav_exclude: true
 
 * Ensure the **removal of the SELECT-PROXIMITY-STYLE jumper (shown in the <span class="color-blind-red">RED box</span>).** Since the Voron printer does not use a probe device, ensure this header is empty.
 
+__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
+
 ###### ![](./images/SKR_PICO_V1.0_voltageselect.png) {#SKR_PICO_V1.0_voltageselect}
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_PICO_V1.0_voltageselect.png){:target="_blank" rel="noopener"}
