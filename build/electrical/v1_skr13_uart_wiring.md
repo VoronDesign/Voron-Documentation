@@ -12,7 +12,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 ###### ![](./images/SKR_V1.3_PREP-Removal_150.png) {#SKR_V13_PREP-Removal_UART1_v1}
 
-## Initial Preparation for UART Mode - Set Jumpers
+## Initial Preparation - Set Jumpers
 
 * Set the on-board jumpers, located at the positions as shown by the **<span class="color-blind-green">GREEN</span>** jumpers in the diagram below:
 
@@ -36,7 +36,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
 * Install heat sinks on all stepper motor drivers
 
-## MCU in UART Mode
+## MCU
 
 * - [ ] Place stepper drivers for X in positions X (driver socket)
 * - [ ] Place stepper drivers for Y in positions Y (driver socket)
@@ -71,7 +71,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
-### MCU in UART Mode Wiring Diagram
+### MCU Wiring Diagram
 
 ###### ![](./images/V1_Wiring_Diagram_BTT_SKRV1.3_XYE_in_UART_mode.jpg) {#V1_Wiring_Diagram_BTT_SKRV13_XYE_in_UART_mode}
 
