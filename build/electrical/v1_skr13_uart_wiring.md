@@ -95,7 +95,7 @@ BAT85
 
 * see [the SKR V1.3 Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
-## SSR Wiring (Board Shown is in UART mode)
+## SSR Wiring
 
 * Wire colors will vary depending on your locale.
 
