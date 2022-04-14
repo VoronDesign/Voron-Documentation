@@ -29,22 +29,22 @@ has_toc: false
 
 ### SPI Mode TMC Drivers That Use 24 VDC:
 
-1.  [TMC2100](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-2.  [TMC2130](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-3.  [TMC5160](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-4.  [TMC5161](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+1.  [TMC2100](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro-wiring){:target="_blank" rel="noopener"}
+2.  [TMC2130](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro-wiring){:target="_blank" rel="noopener"}
+3.  [TMC5160](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro-wiring){:target="_blank" rel="noopener"}
+4.  [TMC5161](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro-wiring){:target="_blank" rel="noopener"}
 
 ### SPI Mode TMC Drivers That Use 48 VDC or Higher:
 
-1. [TMC5160HV](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
-2. [TMC5160_PRO](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro){:target="_blank" rel="noopener"}
+1. [TMC5160HV](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro-wiring){:target="_blank" rel="noopener"}
+2. [TMC5160_PRO](./v1_skr13_spi_wiring#voron-v1---skr-v13-tmc2100-tmc2130-tmc5160-tmc5161-tmc5160hv-tmc5160pro-wiring){:target="_blank" rel="noopener"}
 
 
 ## UART Mode TMC Driver List
 
 ### UART Mode TMC Drivers That Use 24 VDC:
 
-1.  [TMC2208](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
-2.  [TMC2209](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
-3.  [TMC2225](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
-4.  [TMC2226](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-or-tmc2226){:target="_blank" rel="noopener"}
+1.  [TMC2208](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
+2.  [TMC2209](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
+3.  [TMC2225](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
+4.  [TMC2226](../../../build/electrical/v1_skr13_uart_wiring#voron-v1---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
