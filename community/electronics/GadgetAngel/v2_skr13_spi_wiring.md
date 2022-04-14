@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Voron V2 - SKR V1.3 (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO) Wiring Diagram"
+title: "Voron V2 - SKR V1.3 (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO) Wiring"
 parent: "Voron V2 - BTT SKR V1.3 Wiring for both SPI and UART modes"
 nav_exclude: true
 nav_order: 1
 ---
 
-# Voron V2 - SKR V1.3 (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO) Wiring Diagram
+# Voron V2 - SKR V1.3 (TMC2100, TMC2130, TMC5160, TMC5161, TMC5160HV, TMC5160_PRO) Wiring
 
 ## Initial Removal of Jumpers
 
