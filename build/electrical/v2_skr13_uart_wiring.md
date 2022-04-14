@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Voron V2 - SKR V1.3 (TMC2208, TMC2209, TMC2225, or TMC2226) Wiring Diagram"
+title: "Voron V2 - SKR V1.3 (TMC2208, TMC2209, TMC2225, TMC2226) Wiring"
 nav_exclude: true
 ---
 
-# Voron V2 - SKR V1.3 (TMC2208, TMC2209, TMC2225, or TMC2226) Wiring Diagram
+# Voron V2 - SKR V1.3 (TMC2208, TMC2209, TMC2225, TMC2226) Wiring
 
 ## Initial Removal of Jumpers
 
