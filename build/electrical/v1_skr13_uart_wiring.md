@@ -99,11 +99,11 @@ BAT85
 
 * Wire colors will vary depending on your locale.
 
-###### ![](./images/btt-SKRV1.3inUART-ssr-wiring.png) {#btt-SKRV13inUART-ssr-wiring}
+###### ![](./images/V1_btt-SKRV1.3inUART-ssr-wiring.png) {#V1_btt-SKRV1.3inUART-ssr-wiring_uart}
 
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/btt-SKRV1.3inUART-ssr-wiring.png){:target="_blank" rel="noopener"}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/V1_btt-SKRV1.3inUART-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-### The Klipper Configuration file for SKR V1.3 board
+## The Klipper Configuration file for SKR V1.3 board
 
 The Klipper Configuration file from VoronDesign/Voron-1/Voron1.8 GitHub Repo for SKR V1.3 board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-1/Voron1.8/Firmware/klipper_configurations/SKR_1.3/Voron_1_SKR_13_Config.cfg){:target="_blank" rel="noopener"};
 
