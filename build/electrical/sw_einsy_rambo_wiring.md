@@ -13,6 +13,10 @@ nav_exclude: true
 
 * **All** Jumpers should be **removed** from the Einsy Rambo board.
 
+###### ![](./images/EinsyRambo1.1B-baord.png) {#EinsyRambo1.1B-baord_sw}
+
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/EinsyRambo1.1B-baord.png){:target="_blank" rel="noopener"}
+
 ## MCU
 
 * - [ ] Plug in stepper motors for X in positions X (motor connector)
