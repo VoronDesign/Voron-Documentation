@@ -99,7 +99,7 @@ BAT85
 
 ## Setting up UART Communications with the Raspberry Pi
 
-* see [the Raspberry Pi Section](../../../build/electrical/skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [the SKR V1.3 Raspberry Pi Section](../../../build/electrical/skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
