@@ -28,7 +28,7 @@ nav_exclude: true
 
 * Ensure the **removal of the SELECT-PROXIMITY-STYLE jumper (shown in the <span class="color-blind-red">RED box</span>).** Since the Voron printer does not use the dedicated probe connector, ensure this header is empty.
 
-__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check the** __<span class="color-blind-green">GREEN</span>__ **jumper is set (and the other jumpers are removed) appropriately, especially the headers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
+__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check the** __<span class="color-blind-green">GREEN</span>__ **jumper is set appropriately (and the other jumpers are removed), especially the headers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
 ###### ![](./images/v2tri_SKR_PICO_V1.0_voltageselect.png) {#v2tri_SKR_PICO_V1.0_voltageselect_v2}
 
