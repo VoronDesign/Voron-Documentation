@@ -16,7 +16,7 @@ We have no idea what state your board is in when you start this process.  Someon
 
 Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, located at the positions shown below:
 
-###### ![](./images/SKR_V1.3_PREP-Removal_150.png) {#SKR_V13_PREP-Removal_SPI_v1}
+###### ![](../../../build/electrical/images/SKR_V1.3_PREP-Removal_150.png) {#SKR_V13_PREP-Removal_SPI_v1}
 
 ## Initial Preparation for SPI Mode - Set Jumpers
 
@@ -97,19 +97,19 @@ BAT85
 ### Power
 * The BTT SKR V1.3 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
-## Setting up UART Communications with the Raspberry Pi
+### Setting up UART Communications with the Raspberry Pi
 
-* see [the SKR V1.3 Raspberry Pi Section](../../../build/electrical/skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+* see [ the SKR V1.3 Raspberry Pi Section](../../../build/electrical/skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
 ## SSR Wiring (Board Shown is in SPI mode)
 
 * Wire colors will vary depending on your locale.
 
-###### ![](./images/btt-SKRV1.3inSPI-ssr-wiring.png) {#btt-SKRV13inSPI-ssr-wiring}
+###### ![](./images/V1_btt-SKRV1.3inSPI-ssr-wiring.png) {#V1_btt-SKRV1.3inSPI-ssr-wiring}
 
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/btt-SKRV1.3inSPI-ssr-wiring.png){:target="_blank" rel="noopener"}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/V1_btt-SKRV1.3inSPI-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-### The Klipper Configuration file for SKR V1.3 board (UART mode - SPI mode needs to be added to this)
+## The Klipper Configuration file for SKR V1.3 board (UART mode - SPI mode needs to be added to this)
 
 The Klipper Configuration file from VoronDesign/Voron-1/Voron1.8 GitHub Repo for SKR V1.3 board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-1/Voron1.8/Firmware/klipper_configurations/SKR_1.3/Voron_1_SKR_13_Config.cfg){:target="_blank" rel="noopener"};
 
