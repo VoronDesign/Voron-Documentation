@@ -24,7 +24,7 @@ nav_exclude: true
 
 * Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-orange">ORANGE boxes</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstops.
 
-__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
+__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check the** __<span class="color-blind-green">GREEN</span>__ **jumper is set appropriately (and the other jumpers are removed), especially the headers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
 ###### ![gone baby gone](./images/SKR_MINI_E3_V3.0_voltageselect.png) {#SSKR_MINI_E3_V30_voltageselect_v01}
 
@@ -68,7 +68,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * see [the SKR mini E3 V3.0 Raspberry Pi Section](./mini_e3_v30_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
-### The Klipper Configuration file for SKR mini E3 V3.0 Board
+## The Klipper Configuration file for SKR mini E3 V3.0 Board
 
 The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 branch for SKR mini E3 V3.0 board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-mini-E3-v3.0.cfg){:target="_blank" rel="noopener"};
 
