@@ -14,6 +14,8 @@ nav_exclude: true
 
 * The **<span class="color-blind-green">GREEN NeoPWR jumper</span>** setting will decide the source of the SKR's 5V rail. The board's 5V rail can be sourced from the board itself or from an external DCDC bridge module.  One can purchase an external DCDC bridge module (sold separately) to power 5V NeoPixel LEDs.  This bridge module is called the "DCDC Mode V1.0" board. Since the Voron printer does not require the extra DCDC bridge module, **set the NeoPWR jumper** so that the board's 5V rail will be powered by the MCU (as shown by the **<span class="color-blind-green">GREEN</span>** jumper in the diagram below).
 
+__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check the** __<span class="color-blind-green">GREEN</span>__ **jumper is set appropriately BEFORE the power supply is connected.**
+
 ###### ![](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png) {#PREP_v01_SKR_mini_E3_V12v01}
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_mini_E3_V1.2_for_Prep_Diagram_150.png){:target="_blank" rel="noopener"}
@@ -38,7 +40,7 @@ nav_exclude: true
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
-    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](#setting-up-uart-communications-with-the-raspberry-pi)
+    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](./mini_e3_v12_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
     2. - [ ] Connect UART cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
 ### MCU Diagram
