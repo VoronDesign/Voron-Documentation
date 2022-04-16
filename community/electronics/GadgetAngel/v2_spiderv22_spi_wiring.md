@@ -140,7 +140,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * See [the mini12864 guide](../../../build/electrical/mini12864_klipper_guide#mini12864-klipper-guide){:target="_blank" rel="noopener"}
 
 ## The Klipper Configuration file for Fysetc Spider V2.2 Board (UART mode - SPI mode needs to be added to this)
-
+<span> <br /> </span>
 The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for Fysetc Spider V2.2 board is [located here; Select "V2 Spider" ](../../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"}
 
 ## URL Resources Links for the Fystec Spider (PIN Diagrams and Repo)
