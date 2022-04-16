@@ -38,7 +38,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ###### ![](./images/FYSETC_Spider_V1.0_in_SPI_mode_PREP2.png) {#FYSETC_Spider_V10_in_SPI_mode_PREP2}
 
-* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V1.0_in_UART_mode_PREP2.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V1.0_in_SPI_mode_PREP2.png){:target="_blank" rel="noopener"}
 
 ### (FAN & PROBE) Voltage Selection Headers
 
