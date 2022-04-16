@@ -50,7 +50,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
     * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **If the voltage required by the PROBE device does not match the voltage selected by the "probe voltage selection Jumper" then the Fysetc Spider board could be damaged.**
 
-* __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers BEFORE the power supply is connected, to ensure these jumpers and wire jumper are set appropriately.**
+* __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers BEFORE the power supply is connected, to ensure these jumpers are set appropriately.**
 
 ### (FAN & PROBE) Voltage Selection Diagram
 
@@ -98,7 +98,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the Spider board, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
-    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](../../../build/electrical/Fysetc_Spider_RaspberryPi#raspberry-pi)
+    1. - [ ] [complete the steps for setting up UART serial communications with the Raspberry Pi](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Connect%20RPI%20uart.md){:target="_blank" rel="noopener"}
     2. - [ ] Connect UART cable to the Spider board, but do not connect it yet to your Raspberry Pi
 
 ## MCU Wiring Diagram for SPI Mode
