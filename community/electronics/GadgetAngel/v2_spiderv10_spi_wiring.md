@@ -100,7 +100,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the Spider board, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
-    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](../../../build/electrical/Fysetc_Spider_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+    1. - [ ] [complete the steps for setting up UART serial communications with the Raspberry Pi](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Connect%20RPI%20uart.md){:target="_blank" rel="noopener"}
     2. - [ ] Connect UART cable to the Spider board, but do not connect it yet to your Raspberry Pi
 
 ## MCU Wiring Diagram for SPI Mode
