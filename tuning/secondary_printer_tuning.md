@@ -25,7 +25,7 @@ This value equals ~2lb of tension on XY, which is on the lower end of the range 
 
 ![](./images/sound-spectrum-belt.jpg)
 
-###Watch this video
+##Watch this video
 
 
 
