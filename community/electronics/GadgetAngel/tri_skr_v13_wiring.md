@@ -44,7 +44,7 @@ has_toc: false
 
 ### UART Mode TMC Drivers That Use 24 VDC:
 
-1.  [TMC2208](../../../build/electrical/tri_skr_v13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
-2.  [TMC2209](../../../build/electrical/tri_skr_v13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
-3.  [TMC2225](../../../build/electrical/tri_skr_v13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
-4.  [TMC2226](../../../build/electrical/tri_skr_v13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
+1.  [TMC2208](../../../build/electrical/tri_skrv13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
+2.  [TMC2209](../../../build/electrical/tri_skrv13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
+3.  [TMC2225](../../../build/electrical/tri_skrv13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}
+4.  [TMC2226](../../../build/electrical/tri_skrv13_uart_wiring#trident---skr-v13-tmc2208-tmc2209-tmc2225-tmc2226-wiring){:target="_blank" rel="noopener"}

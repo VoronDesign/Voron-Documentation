@@ -118,9 +118,9 @@ BAT85
 
 * Wire colors will vary depending on your locale.
 
-###### ![](./images/btt-SKRV1.3inSPI-ssr-wiring.png) {#btt-SKRV13inSPI-ssr-wiring_2}
+###### ![](./images/Tri_btt-SKRV1.3inSPI-ssr-wiring.png) {#Tri_btt-SKRV1.3inSPI-ssr-wiring_2}
 
-* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/btt-SKRV1.3inSPI-ssr-wiring.png){:target="_blank" rel="noopener"}
+* If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/Tri_btt-SKRV1.3inSPI-ssr-wiring.png){:target="_blank" rel="noopener"}
 
 ## The Klipper Configuration file for SKR V1.3 board (UART mode - SPI mode needs to be added to this)
 
