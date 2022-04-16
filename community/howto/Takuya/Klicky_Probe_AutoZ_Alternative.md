@@ -44,7 +44,6 @@ nav_exclude: true
   ```python
   endstop_pin: probe:z_virtual_endstop
   ```
-
 4. Comment out `position_endstop`
 5. Set your probe offsets in `[probe]` section  
   ```python
@@ -62,4 +61,4 @@ Always test your freshly-set-up Z-offset on the outer edges of your print surfac
 
 ### What if I swap my nozzle?
 
-If you install a nozzle that is longer than your old one, you need to decrease your [probe] z_offset. If your new nozzle is shorter than the old one, you need to increase the z_offset. If it´s the same length, you can reuse the current value.
+If you install a nozzle that is _longer_ than your old one, you need to **decrease** your `[probe] z_offset`. If your new nozzle is _shorter_ than the old one, you need to **increase** the `[probe] z_offset`. If it´s the same length, you can just reuse the current value.
