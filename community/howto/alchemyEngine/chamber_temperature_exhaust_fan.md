@@ -6,7 +6,7 @@ nav_exclude: true
 
 # Chamber Temperature & Exhaust Fan
 
-While the two functions can be combined, if doing just chamber temperature the process is slightly different so they are documented separately.  The exhaust fan is already configured as part of the default build so no information on installation is provied.
+While the two functions can be combined, if doing just chamber temperature the process is slightly different so they are documented separately.  The exhaust fan is already configured as part of the default build, so no information on installation is provided.
 
 ### References
 
@@ -25,7 +25,7 @@ If _just_ doing chamber temperature monitoring, add the following code to the pr
 
 **Note:** Confirm that the thermistor type matches the type used.
 
-```
+```ini
 [temperature_sensor chamber]
 sensor_type: NTC 100K beta 3950
 sensor_pin: z:P0.24
@@ -34,7 +34,7 @@ max_temp: 100
 gcode_id: C
 ```
 
-Restart Klipper with a `FIRMWARE_RESTART`
+Restart Klipper with a `FIRMWARE_RESTART`.
 
 ### Temperature Controlled Exhaust Fan
 
@@ -45,7 +45,7 @@ To have the exhaust fan controlled by the chamber temperature, do the following.
 
 **Note:** Confirm that the thermistor type matches the type used.
 
-```
+```ini
 [temperature_fan chamber]
 pin: z:P2.7
 max_power: 1.0
@@ -64,7 +64,7 @@ gcode_id: C
 
 Add another section with a new macro.
 
-```
+```ini
 [gcode_macro M141]
 default_parameter_S: 0
 default_parameter_P: 0
@@ -72,7 +72,7 @@ gcode:
     SET_TEMPERATURE_FAN_TARGET temperature_fan="chamber" target={S}
 ```
 
-Restart Klipper with a `FIRMWARE_RESTART`
+Restart Klipper with a `FIRMWARE_RESTART`.
 
 With this configuration, the fan will run at 100% anytime the chamber temperature is above 35C.  The temperature is configurable later.
 
@@ -90,7 +90,7 @@ The chamber temperature will now be displayed and graphed in the temperature cha
 
 To display the chamber temperature on the front panel display, additional configuration is required.
 
-* Download the [lcd_tweaks.cfg](./lcd_tweaks.cfg) configuration file and load onto the pi.
+* Download the [lcd_tweaks.cfg](./lcd_tweaks.cfg) configuration file and load onto the Pi.
 * Edit _printer.cfg_ and add the line `[include lcd_tweaks.cfg]` to include the file.
 * If only doing chamber temperature, edit the line
 <!-- {% raw %} -->
