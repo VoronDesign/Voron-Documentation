@@ -13,21 +13,25 @@ The recommended way to install Mainsail on a Raspberry Pi is to use [MainsailOS]
 ## MainsailOS
 
 To install Mainsail on a Raspberry Pi:
-1. Download the latest mainsailOS  [Release](https://github.com/mainsail-crew/MainsailOS/releases)
-2. Unzip the .img file from your download.
-3. Use [BalenaEtcher](https://www.balena.io/etcher/) to write the .img to an 8GB (or larger) microSD card.  *THIS WILL DESTROY ALL DATA ON YOUR CARD*.
-
+1. Download and install [pi-imager](https://www.raspberrypi.com/software/)
+2. Click "Choose OS" and scroll down to "Other specific-purpose OS".
+3. Select "3D Printing" and choose "Mainsail OS". 
+4. Choose your SD Card. 
+5. If you will be using wifi, click on the GEAR icon in the bottom right corner and enter your wifi information. DO NOT EDIT THE USERNAME. 
+6. Click on "SAVE" and on "WRITE". *THIS WILL DESTROY ALL DATA ON YOUR CARD*.<br><br>
 _note: It is a good idea to use a premium microSD card from a reputable manufacturer such as Sandisk, Kingston or Samsung. Low end cards will often fail quickly when used in this application_
 
-4. If you will be using wifi, edit the file `mainsailos-wpa-supplicant.txt` with your Wifi information. If you are having trouble seeing this file on the microSD card, try removing it and re-inserting it into your card reader.
-5. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
-5. Insert the microSD card into your Pi, and power on the Pi.    
-6. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)
+
+6. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
+7. Insert the microSD card into your Pi, and power on the Pi.    
+8. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)  
+   
+   The default username is `pi` and the password is `raspberry`.
     * If your network supports bonjour, the pi should show up as `mainsailos.local`
     * If your network automatically assigns DNS hostnames, it may simply show up as `mainsailos`
     * Failing these two options, you may need to check your router's DHCP server, and find out what IP address as been assigned to the device.
 
-You can also use Raspberry Pi Imager; more information can be found in [the Mainsail docs](https://docs.mainsail.xyz/setup/mainsail-os).
+
  
 ### Software Update
  
@@ -38,6 +42,7 @@ As soon as you have MainsailOS loaded, it is highly recommended that you make su
 2. Click the "Machine" button on the left side of the screen
 3. In the "Update Manager" panel, click the refresh button
 4. Click the "Update" button for each component that needs updating.
+
 
 ### Next: [Firmware Flashing](./index.md#firmware-flashing)
 
