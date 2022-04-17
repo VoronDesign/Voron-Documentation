@@ -68,10 +68,10 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Connect stepper drivers for the Z into positions Z-MOT (driver socket).
 * - [ ] Plug in stepper motors for the Z into positions Z1-MOT (motor connectors).
 * - [ ] Ensure that Z2-MOT motor connector has two jumpers set.  These jumpers allow the Z1-MOT connector to work properly.
-* - [ ] Connect stepper drivers for the Z1 into positions E1-MOT (driver socket).
-* - [ ] Plug in stepper motors for the Z1 into positions E1-MOT (motor connectors).
-* - [ ] Connect stepper drivers for the Z2 into positions E2-MOT (driver socket).
-* - [ ] Plug in stepper motors for the Z2 into positions E2-MOT (motor connectors).
+* - [ ] Connect stepper drivers for the Z1 into positions E2-MOT (driver socket).
+* - [ ] Plug in stepper motors for the Z1 into positions E2-MOT (motor connectors).
+* - [ ] Connect stepper drivers for the Z2 into positions E3-MOT (driver socket).
+* - [ ] Plug in stepper motors for the Z2 into positions E3-MOT (motor connectors).
 * - [ ] Connect stepper driver for the extruder motor into position E0-MOT (driver socket).
 * - [ ] Plug in stepper motor for the extruder motor into position E0-MOT (motor connector).
 * - [ ] Connect the hot end heater to E0 OUT (PB15)
@@ -82,8 +82,8 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Connect the controller fans to FAN2 (PB2)
 * - [ ] Connect the hot end thermistor to TE0 (PC0)
 * - [ ] Connect the bed thermistor to TB (PC3)
-* - [ ] Connect the X endstop to X+ (PA1)
-* - [ ] Connect the Y endstop to Y+ (PA2)
+* - [ ] Connect the X endstop to X- (PB14)
+* - [ ] Connect the Y endstop to Y- (PB13)
 * - [ ] Connect the PROBE to Z+ (PA3)
 * - [ ] Connect the Z endstop to Z- (PA0)
 * if using a mini12864 display:
@@ -136,7 +136,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ## The Klipper Configuration file for Fysetc Spider V1.1 Board by Majarspeed
 
-The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo by Majarspeed for Fysetc Spider V1.1 board is called [voron-trident-spider.cfg](https://github.com/majarspeed/Voron-Trident/blob/main/Firmware/voron-trident-spider.cfg){:target="_blank" rel="noopener"};
+The Klipper Configuration file by Majarspeed for Fysetc Spider V1.1 board is called [voron-trident-spider.cfg](./images/voron-trident-spider.cfg){:target="_blank" rel="noopener"};
 
 ## URL Resources Links for the Fystec Spider (PIN Diagrams and Repo)
 
@@ -152,7 +152,7 @@ The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo by Maj
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> Fysetc Spider](../../build/software/spider_klipper#spider-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (voron-trident-spider.cfg rename it to printer.cfg). Please see [the file located here](https://github.com/majarspeed/Voron-Trident/blob/main/Firmware/voron-trident-spider.cfg){:target="_blank" rel="noopener"};
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file by Majarspeed (voron-trident-spider.cfg rename it to printer.cfg). Please see [the file located here](./images/voron-trident-spider.cfg){:target="_blank" rel="noopener"};
 
     * Please use the Color PIN Diagrams, [displayed here](./Fysetc_Spider_Resources_v1#color-pin-diagram-for-fysetc-spider-v10){:target="_blank" rel="noopener"}, as a source of information;
 
