@@ -154,3 +154,12 @@ BAT85
     * Please consult [The Build ═► Software Configuration](../../../build/software/configuration#software-configuration){:target="_blank" rel="noopener"} on how to edit the Klipper Config file.
 
 4. After **creating/editing** the Klipper Config file (Voron2_Octopus_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
+
+<script>
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
+        e.removeAttribute('disabled');
+    });
+    }
+</script>
