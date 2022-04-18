@@ -36,7 +36,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ###### ![](./images/Octopus_Pro_F446_SPI_Mode_for_Prep.png) {#Octopus_Pro_F446_SPI_Mode_for_Prep_150_v2}
 
-* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus_Pro_F446_SPI_Mode_for_Prep_150.png){:target="_blank" rel="noopener"}
+* If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus_Pro_F446_SPI_Mode_for_Prep.png){:target="_blank" rel="noopener"}
 
 ### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
 
@@ -108,7 +108,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * <span> </span>
 
 BAT85
-: a Schottky barrier diode. BAT85 is needed to protect the Octopus Pro board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
+: a Schottky barrier diode. BAT85 is needed to protect the Octopus Pro board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](../../../build/electrical/index#bat85-diode){:target="_blank" rel="noopener"}
 
 ## MCU Wiring Diagram for SPI Mode
 
