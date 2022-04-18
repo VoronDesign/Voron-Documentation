@@ -63,8 +63,9 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus_Pro_F446_SPI_VoltageSelect_150.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
-* Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
-* Install heat sinks on all stepper motor drivers
+* - [ ] Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
+* - [ ] Before installing heat sinks on to the stepper motor drivers,&nbsp;[please read this](#please-ensure-the-heat-sinks-are-installed-before-use)
+* - [ ] Install heat sinks on all stepper motor drivers
 
 ## MCU Wiring for SPI Mode
 
