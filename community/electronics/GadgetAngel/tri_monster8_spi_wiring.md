@@ -28,7 +28,7 @@ nav_order: 1
 
 * Ensure **all of "DIAG Jumpers" (shown in the <span class="color-blind-orange">ORANGE box</span>) are removed** to avoid the influence of TMC2209 DIAG on the endstop.
 
-__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
+__<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-blue">BLUE</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
 ###### ![](./images/Monster8v10_SPI_PREP.png) {#Monster8v10_SPI_PREP_tri}
 
@@ -143,13 +143,13 @@ BAT85
 
 * See [the mini12864 guide](../../../build/electrical/mini12864_klipper_guide.md){:target="_blank" rel="noopener"}
 
-## The Klipper Configuration file by RealDeuce for Voron 2.4 using MKS Monster 8 V1.0 Board (UART mode - SPI mode needs to be added to this)
+## The Klipper Configuration file by RealDeuce for MKS Monster 8 V1.0 Board (UART mode - SPI mode needs to be added to this)
 
-* The Klipper Configuration file for Voron 2.4 from VoronDesign/VoronUsers RealDeuce's GitHub Repo for MKS Monster 8 board is [located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"};
+* The Klipper Configuration file from VoronDesign/VoronUsers RealDeuce's GitHub Repo for MKS Monster 8 board is [located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"};
 
 ## URL Resources Links for the Monster 8 (PIN Diagrams and Repo)
 
-* see [The MKS Monster Resource Section](../../../build/electrical/monster8_Resources#color-pin-diagram-for-mks-monster-8-v10){:target="_blank" rel="noopener"}
+* see [The MKS Monster V1.0 Resource Section](../../../build/electrical/monster8_Resources#color-pin-diagram-for-mks-monster-8-v10){:target="_blank" rel="noopener"}
 
 ## After I have Wired up the MCU Board, What Comes Next?
 
@@ -157,7 +157,7 @@ BAT85
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the above Color Pin Diagram, look for "How To Compile the [Klipper Firmware for MKS Monster 8 V1.0"](../../../build/electrical/images/MKS_Monster8-V1.0-color-PIN.pdf){:target="_blank" rel="noopener"} or an alternative source for instructions on how to compile the klipper firmware for the MKS Monster 8 V1.0 board - [See the README file](https://github.com/makerbase-mks/MKS-Monster8/tree/main/klipper%20firmware#to-compile-for-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Monster8_Config.cfg rename it to printer.cfg and replace UART with SPI; also convert from Voron 2.4 to Trident). Please see [the file located here by RealDeuce](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"} as a good starting point;
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Monster8_Config.cfg rename it to printer.cfg and replace UART with SPI). Please see [the file by RealDeuce is located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"} as a good starting point;
 
     * Please use the Color PIN Diagrams, [displayed here](../../../build/electrical/monster8_Resources#color-pin-diagram-for-mks-monster-8-v10){:target="_blank" rel="noopener"}, as a source of information;
 
