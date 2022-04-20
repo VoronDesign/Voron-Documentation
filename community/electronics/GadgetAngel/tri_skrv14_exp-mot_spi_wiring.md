@@ -131,11 +131,11 @@ BAT85
 
 ###### ![](./images/skrv14_E1emptyDrvSocketPrep.png) {#skrv14_E1emptyDrvSocketPrep_triskr-expmot_tri}
 
-* Remove three jumper caps on the rows labeled MOSI, SCK and MISO, as shown in the above diagram.  Attach one end of the Dupont wire to the PIN in the appropriate row and in the column labeled "To/From MCU" on the SKR V1.4/Turbo board (use the pins that are now available since you removed three jumper caps), and the other end of the wire goes to the MOT-SPI header on the EXP-MOT board (as shown in the **<span class="color-blind-purple">PURPLE box</span>** of [the diagram above](#imagestriexp-mot-v10spivoltageselectpng-triexp-mot-v10spivoltageselecttriskr-expmottri)). Ensure you attach MOSI PIN on the SKR V1.4/Turbo to MOSI PIN on the EXP-MOT, SCK PIN to SCK PIN and MISO PIN to MISO PIN.
+* Remove three jumper caps on the rows labeled MOSI, SCK and MISO, as shown in the above diagram.  Attach one end of the Dupont wire to the PIN in the appropriate row and in the column labeled "To/From MCU" on the SKR V1.4/Turbo board (use the pins that are now available since you removed three jumper caps), and the other end of the wire goes to the MOT-SPI header on the EXP-MOT board (as shown in the **<span class="color-blind-purple">PURPLE box</span>** of [the diagram above](#tri_EXP-MOT-V10_SPI_voltageselect_triskr-expmot_tri)). Ensure you attach MOSI PIN on the SKR V1.4/Turbo to MOSI PIN on the EXP-MOT, SCK PIN to SCK PIN and MISO PIN to MISO PIN.
 
 * If you attach the wires to the PINS in the column labeled "To/From Driver" then the EXP-MOT board will not work because the information is not getting back to the microprocessor. If this is too hard to follow then hook the SPI wires up using the next option.
 
-* #2 Option: **DO NOT remove the SPI jumper caps in the E1 driver socket**. In fact, the SPI jumper caps **MUST be in place on the E1 socket for this option to work!** Attach MOSI, SCK and MISO wires from the EXP-MOT board to the E1 socket's red PIN-riser as shown in [this diagram above](#imagestridentwiringdiagramskrv14turboandexp-motxyespijpg-tridentwiringdiagramskrv14turboandexp-motxyespitriskr-expmottri).
+* #2 Option: **DO NOT remove the SPI jumper caps in the E1 driver socket**. In fact, the SPI jumper caps **MUST be in place on the E1 socket for this option to work!** Attach MOSI, SCK and MISO wires from the EXP-MOT board to the E1 socket's red PIN-riser as shown in [this diagram above](#Trident_Wiring_Diagram_SKRV14TurboandEXP-MOT_XYE_SPI_triskr-expmot_tri).
 
 ### MCU Z in SPI Mode Wiring Diagram (EXP-MOT)
 
