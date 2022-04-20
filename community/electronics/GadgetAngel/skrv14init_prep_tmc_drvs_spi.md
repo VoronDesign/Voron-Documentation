@@ -17,7 +17,7 @@ nav_exclude: true
 
 * **Use a small pair of wire cutters and remove the pin marked in <span class="color-blind-purple">PURPLE</span> (DIAG PIN) from the TMC2130, TMC5160 or TMC5161 stepper motor driver**
 
-###### ![](../../../build/electrical/images/tmc2209-pin-removal.png) {#tmc2209-pin-removal_spi_tri2skr_tri}
+###### ![](../../../build/electrical/images/tmc2209-pin-removal.png) {#tmc2209-pin-removal_spi_tri2skr}
 
 ### Disable Sensorless Homing - Method #2 - Use Stackable Header pins:
 
