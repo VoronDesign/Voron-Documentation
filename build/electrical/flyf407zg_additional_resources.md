@@ -1,11 +1,11 @@
 ---
 nav_exclude: true
 ---
-## Additional Information for the Mellow FLYF407ZG Board
+# Additional Information for the Mellow FLYF407ZG Board
 
-### The Mellow FLYF407ZG Board Has Additional Mounting Points for Additional Equipment
+## The Mellow FLYF407ZG Board Has Additional Mounting Points for Additional Equipment
 
-### PIN-OUT of ESP-12S WIFI Chip
+## PIN-OUT of ESP-12S WIFI Chip
 
 * The Mellow FLYF407ZG Board has a pre-soldered socket available for an ESP-12S WIFI Chip.
 
@@ -19,7 +19,7 @@ nav_exclude: true
 
 ---
 
-### PIN-OUT of the EEPROM Chip
+## PIN-OUT of the EEPROM Chip
 
 * The Mellow FLYF407ZG Board has a pre-soldered socket available for an EEPROM 24CO2 Chip.
 
@@ -33,7 +33,7 @@ nav_exclude: true
 
 ---
 
-### PIN-OUT of the MAX6675 Chip
+## PIN-OUT of the MAX6675 Chip
 
 * The Mellow FLYF407ZG Board has a pre-soldered socket available for a MAX6675 Chip.
 
@@ -45,7 +45,7 @@ nav_exclude: true
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/MAX56675_Chip.jpg){:target="_blank" rel="noopener"}
 
-#### Information on Thermocouples
+## Information on Thermocouples
 
 * Here is further information on how to prevent noisy K-Type Thermocouples
 
@@ -55,7 +55,7 @@ nav_exclude: true
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Prevent_a_Noisy_Thermocouple_MAX6675.jpg){:target="_blank" rel="noopener"}
 
-#### The Adafruit's URLs for Information on K-Type Thermocouples and MAX6675 board or MAX31855 board
+## The Adafruit's URLs for Information on K-Type Thermocouples and MAX6675 board or MAX31855 board
 
 * Adafruit's documentation for K-Type Thermocouples is [located here](https://learn.adafruit.com/thermocouple){:target="_blank" rel="noopener"}
 
@@ -65,7 +65,7 @@ nav_exclude: true
 
 ---
 
-### Information on ISSUES with the Mellow FLYF407ZG Board
+## Information on ISSUES with the Mellow FLYF407ZG Board
 
 * This information was obtained from [here](https://teamgloomy.github.io/fly_407zg_general.html#issues){:target="_blank" rel="noopener"}
 
