@@ -17,13 +17,13 @@ nav_exclude: true
 
 * **Use a small pair of wire cutters and remove the pin marked in <span class="color-blind-purple">PURPLE</span> (DIAG PIN) from the TMC2130, TMC5160 or TMC5161 stepper motor driver**
 
-###### ![](./images/tmc2209-pin-removal.png) {#tmc2209-pin-removal_spi_tri2skr}
+###### ![](../../../build/electrical/images/tmc2209-pin-removal.png) {#tmc2209-pin-removal_spi_tri2skr}
 
 ### Disable Sensorless Homing - Method #2 - Use Stackable Header pins:
 
 * By not adding the stackable header pin under the DIAG PIN location, the DIAG PIN will not make an electrical connection to the board. The added benefit with stackable header pins is the driver socket will also have more room for air flow to help with dissipation of heat. See the diagram below:
 
-###### ![](./images/disable_sensor-less_homing_TMC2209_TMC2226.jpg) {#disable_sensor-less_homing_spi_tri2skr}
+###### ![](../../../build/electrical/images/disable_sensor-less_homing_TMC2209_TMC2226.jpg) {#disable_sensor-less_homing_spi_tri2skr}
 
 * Here is the URL from the above diagram.  You can purchase the [Stackable Header PINS from Amazon](https://www.amazon.com/Glarks-Connector-Assortment-Stackable-Breakaway/dp/B07CWSXY7P){:target="_blank" rel="noopener"}.
 
