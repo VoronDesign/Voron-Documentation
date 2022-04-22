@@ -81,7 +81,6 @@ The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 br
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the [ Color Pin Diagram, look for "Klipper Building Options"](./images/SKR_PICO_V1.0_Color_PIN_diagram.pdf){:target="_blank" rel="noopener"}; an alternative source of information on how to build and install the Klipper firmware for the SKR Pico is [located here](https://github.com/bigtreetech/SKR-Pico/blob/master/Klipper/README.md#build-firmware-image){:target="_blank" rel="noopener"} or the [picture of the menu config screen for Klipper](https://raw.githubusercontent.com/bigtreetech/SKR-Pico/master/Klipper/Images/klipper_menuconfig.png){:target="_blank" rel="noopener"}
 
-
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (skr-pico-v1.0.cfg rename it to printer.cfg) to ensure your Voron build matches your Klipper Config file, please see [the file located here](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-pico-v1.0.cfg){:target="_blank" rel="noopener"};
 
     * Please use the Color PIN Diagrams, [displayed here](./skr_pico_Resources#color-pin-diagram-for-skr-pico){:target="_blank" rel="noopener"}, as a source of information.
