@@ -29,6 +29,7 @@ Image of SKR Pico using USB-A to USB-C cable:
 
 Image of SKR Pico using UART communication ribbon cable:
 ###### ![](./images/Pico-to-pi-via-UARTcoms.jpg) {#Pico-to-pi-via-UARTcoms_1}
+<span> <br /> </span>
 
 Instructions to be performed on the Raspberry Pi to enable UART communications:
 ###### ![](./images/ConnectPitoMCU-Instructions.png) {#ConnectPitoOctopusPro-Instructions_1}
