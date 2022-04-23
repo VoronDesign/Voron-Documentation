@@ -53,7 +53,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
-    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](./skr_pico_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+    1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./skr_pico_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
     2. - [ ] Connect UART cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
 
 BAT85
@@ -65,7 +65,7 @@ BAT85
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/SW_Wiring_Diagram_BTT_SKR_PICO_V1.0.jpg){:target="_blank" rel="noopener"}</span>
 
-## Powering the Raspberry Pi & Setting up UART Communications with the Raspberry Pi
+## Powering the Raspberry Pi & Setting up UART Serial Communications with the Raspberry Pi
 
 * see [the SKR Pico's Raspberry Pi Section](./skr_pico_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
