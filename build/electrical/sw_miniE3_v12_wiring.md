@@ -41,7 +41,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
-    1. - [ ] [complete the steps for setting up UART communications with the Raspberry Pi](./mini_e3_v12_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
+    1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./mini_e3_v12_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
     2. - [ ] Connect UART cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
 BAT85
@@ -65,7 +65,7 @@ BAT85
 ### Power
 * The BTT SKR mini E3 V1.2 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
-## Setting up UART Communications with the Raspberry Pi
+## Setting up UART Serial Communications with the Raspberry Pi
 
 * see [the SKR mini E3 V1.2 Raspberry Pi Section](./mini_e3_v12_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
