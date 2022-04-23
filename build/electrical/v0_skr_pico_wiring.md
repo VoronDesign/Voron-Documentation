@@ -49,7 +49,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Connect X end stop to X-STOP connector (IO4)
 * - [ ] Connect Y end stop to Y-STOP connector (IO3)
 * - [ ] Connect Z end stop to Z-STOP connector (IO25)
-* - [ ] Wire 24V and -V from DC power supply to POWER
+* - [ ] Wire 24V and -V from DC power supply to Power_In
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
 * if using UART (3-wire communication) with Pi:
