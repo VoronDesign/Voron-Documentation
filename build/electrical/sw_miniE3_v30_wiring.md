@@ -64,10 +64,10 @@ BAT85
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR mini E3 V3.0 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
-### Setting up UART Serial Communications with the Raspberry Pi
+## Setting up UART Serial Communications with the Raspberry Pi
 
 * see [the SKR mini E3 V3.0 Raspberry Pi Section](./mini_e3_v30_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
