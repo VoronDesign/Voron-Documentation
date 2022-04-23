@@ -52,7 +52,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 ## Please Ensure the Heat Sinks are Installed Before Use
 
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
-: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints on the MCU board. Please note, that your placement of heat sinks may be different from the orientation shown below.
+: Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow that can occur through the electronics compartment. Ensure the heat sinks are **not touching** the solder joints on the MCU board. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
 ###### ![](./images/SKR_E3_Mini_V1.2_heatsinks_150.png) {#v01_SKR_E3_Mini_V12_heatsinks}
 
