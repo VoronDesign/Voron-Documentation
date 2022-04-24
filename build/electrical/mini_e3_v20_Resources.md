@@ -23,6 +23,6 @@ For reference, here is the original pinout of the SKR mini E3 V2.0
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/BTT SKR MINI E3 V2.0-PIN.pdf>){:target="_blank" rel="noopener"}
 
 
-### The BTT's GitHub Repo for the SKR mini E3 V2.0
+## The BTT's GitHub Repo for the SKR mini E3 V2.0
 
 *  BTT's documentation for SKR mini E3 V2.0 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/hardware/BTT%20SKR%20MINI%20E3%20V2.0){:target="_blank" rel="noopener"}
