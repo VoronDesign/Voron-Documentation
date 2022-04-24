@@ -21,6 +21,6 @@ For reference, here is the original pinout of the SKR V1.3
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/SKR-V1.3-PIN.pdf>){:target="_blank" rel="noopener"}
 
-### The BTT's GitHub Repo for the SKR V1.3 board
+## The BTT's GitHub Repo for the SKR V1.3 board
 
 * BTT's documentation for SKR V1.3 board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.3){:target="_blank" rel="noopener"}
