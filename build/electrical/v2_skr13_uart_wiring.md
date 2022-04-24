@@ -33,8 +33,9 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_V1.3_in_UART_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
-* Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
-* Install heat sinks on all stepper motor drivers
+* - [ ] Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
+* - [ ] Before installing heat sinks on to the stepper motor drivers,&nbsp;[please read this](#please-ensure-the-heat-sinks-are-installed-before-use)
+* - [ ] Install heat sinks on all stepper motor drivers
 
 ## MCU X/Y/E, Hot End
 
@@ -103,10 +104,10 @@ BAT85
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR V1.3 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
-## Setting up UART Communications with the Raspberry Pi
+## Setting up UART Serial Communications with the Raspberry Pi
 
 * see [the SKR V1.3 Raspberry Pi Section](./skrv13_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
@@ -145,9 +146,9 @@ The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3
 4. After **creating/editing** the Klipper Config file (Voron2_SKR_13_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function v2_skrv13_uart_enable_checkboxes(){
-    const v2_skrv13_uart_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(v2_skrv13_uart_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
