@@ -42,17 +42,17 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Wire 24V and -V from DC power supply to VIN and GND on POWER/DCIN connector
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./mini_e3_v20_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
-### MCU Diagram
+## MCU Diagram
 
 ###### ![](./images/Voron0.0_Wiring_Diagram_SKR_mini_E3_V2.0.jpg) {#Voron00_Wiring_Diagram_SKR_mini_E3_V20}
 
 * <span class="fs_percent_110">If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/Voron0.0_Wiring_Diagram_SKR_mini_E3_V2.0.jpg){:target="_blank" rel="noopener"}</span>
 
-### Wiring for MagicStudios / Knacro 1-Channel SSR
+## Wiring for MagicStudios / Knacro 1-Channel SSR
 
 The MagicStudios / Knacro SSR requires 3 wires instead of the 2 referenced above.
 
@@ -67,7 +67,7 @@ The MagicStudios / Knacro SSR requires 3 wires instead of the 2 referenced above
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR mini E3 V2.0 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
@@ -99,9 +99,9 @@ The Klipper Configuration file from /VoronDesign/Voron-0 GitHub Repo, Voron0.0 b
 4. After **creating/editing** the Klipper Config file (the file is already named printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function v00_skrminie3_v20_enable_checkboxes(){
-    const v00_skrminie3_v20_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(v00_skrminie3_v20_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
