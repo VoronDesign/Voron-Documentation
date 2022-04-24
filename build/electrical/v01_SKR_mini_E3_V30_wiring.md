@@ -18,7 +18,7 @@ nav_exclude: true
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_mini_E3_V3.0_for_Prep_and_Wiring_Diagram_150.png){:target="_blank" rel="noopener"}
 
-### USB Voltage Selection Header and Other Headers
+## USB Voltage Selection Header and Other Headers
 
 * Ensure the **removal of the SW_USB 5V power supply jumper ("SW_USB header, shown in the <span class="color-blind-purple">PURPLE box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
@@ -49,11 +49,11 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Wire 24V and -V from DC power supply to VIN and GND terminals of the POWER/DCIN connector
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./mini_e3_v30_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
-### MCU Diagram
+## MCU Diagram
 
 ###### ![](./images/Voron0.1_Wiring_Diagram_SKR_mini_E3_V3.0_150.jpg) {#Voron01_Wiring_Diagram_SKR_mini_E3_V30}
 
@@ -91,9 +91,9 @@ The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 br
 4. After **creating/editing** the Klipper Config file (skr-mini-E3-v3.0.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function v01_skrminie3_v30_enable_checkboxes(){
-    const v01_skrminie3_v30_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(v01_skrminie3_v30_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
