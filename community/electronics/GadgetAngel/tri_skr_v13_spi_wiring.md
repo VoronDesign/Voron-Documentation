@@ -39,8 +39,9 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/SKR_V1.3_in_SPI_voltageselect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
-* Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
-* Install heat sinks on all stepper motor drivers
+* - [ ] Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
+* - [ ] Before installing heat sinks on to the stepper motor drivers,&nbsp;[please read this](#please-ensure-the-heat-sinks-are-installed-before-use)
+* - [ ] Install heat sinks on all stepper motor drivers
 
 ## MCU X/Y/E, Hot End in SPI Mode
 
@@ -107,7 +108,7 @@ BAT85
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR V1.3 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
@@ -145,9 +146,9 @@ The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for SK
 4. After **creating/editing** the Klipper Config file (Voron_Trident_SKR_1.3.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function tri_skrv13_spi_enable_checkboxes(){
-    const tri_skrv13_spi_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(tri_skrv13_spi_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
