@@ -109,7 +109,7 @@ BAT85
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR V1.3 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
@@ -147,9 +147,9 @@ The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.3
 4. After **creating/editing** the Klipper Config file (Voron2_SKR_13_Config.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function v2_skrv13_spi_enable_checkboxes(){
-    const v2_skrv13_spi_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(v2_skrv13_spi_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
