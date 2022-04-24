@@ -52,14 +52,14 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Connect the V+ an 0V wires of the probe to LASER connector
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./skr_pico_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
 
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
-### MCU Diagram
+## MCU Diagram
 
 ###### ![](.images/../images/SW_Wiring_Diagram_BTT_SKR_PICO_V1.0.jpg) {#SW_Wiring_Diagram_BTT_SKR_PICO_V1.0}
 
@@ -71,7 +71,7 @@ BAT85
 
 <div>
 
-<!--### The Klipper Configuration file for SKR Pico board
+<!--## The Klipper Configuration file for SKR Pico board
 <span> <br> </span>
 The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for SKR Pico board is [located here](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/xxxxxxxskr_pico_config.cfg){:target="_blank" rel="noopener"}
 -->
@@ -97,9 +97,9 @@ The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for
 4. After **creating** the Klipper Config file (printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function sw_skr_pico_enable_checkboxes(){
-    const sw_skr_pico_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(sw_skr_pico_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
