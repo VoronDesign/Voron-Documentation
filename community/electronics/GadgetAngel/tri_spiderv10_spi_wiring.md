@@ -40,7 +40,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V1.0_in_SPI_mode_PREP2.png){:target="_blank" rel="noopener"}
 
-### (FAN & PROBE) Voltage Selection Headers
+## (FAN & PROBE) Voltage Selection Headers
 
 * In the diagram below, the **<span class="color-blind-yellow">YELLOW box</span>** indicates the RGB Block header's Jumper is not present, but this header can be used to run fans. Other headers that can be used with fans (as shown by a **<span class="color-blind-orange">ORANGE box</span>**) have their Fan Voltage Selections headers which are located below the FAN0, FAN1 and FAN2 connectors. The **<span class="color-blind-green">GREEN</span>** jumpers are set for a fan voltage of 24VDC.
 
@@ -52,17 +52,18 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers BEFORE the power supply is connected, to ensure these jumpers are set appropriately.**
 
-### (FAN & PROBE) Voltage Selection Diagram
+## (FAN & PROBE) Voltage Selection Diagram
 
 ###### ![](./images/FYSETC_Spider_V1.0_inSPIMode_VoltageSelect_150.png) {#FYSETC_Spider_V10_inSPIMode_VoltageSelect_tri}
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V1.0_inSPIMode_VoltageSelect_150.png){:target="_blank" rel="noopener"}
 
 ## Stepper Drivers
-* If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
-* Install step drivers in all slots except E3-MOT and E4-MOT
-* Install heat sinks on all step drivers
+* - [ ] If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
 * _**NOTE: if the board has been powered, ensure that motor power caps are fully drained before inserting stepper drivers: Temporarily connect a 100K resistor between VMOT+ and VMOT- to safely drain the capacitors**_ See [Fysetc Spider 3.3v issue](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/Spider%203.3v%20issue.md){:target="_blank" rel="noopener"}
+* - [ ] Install step drivers in all slots except E1-MOT and E4-MOT
+* - [ ] Before installing heat sinks on to the stepper motor drivers,&nbsp;[please read this](#please-ensure-the-heat-sinks-are-installed-before-use)
+* - [ ] Install heat sinks on all stepper motor drivers
 
 ## MCU Wiring for SPI Mode
 
@@ -97,9 +98,9 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
     2. - [ ] connect to EXP1 & EXP2
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the Spider board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART serial communications with the Raspberry Pi](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Connect%20RPI%20uart.md){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to the Spider board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to the Spider board, but do not connect it yet to your Raspberry Pi
 
 ## MCU Wiring Diagram for SPI Mode
 
@@ -112,7 +113,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU in SPI Mode with Heat Sinks Installed
+## MCU in SPI Mode with Heat Sinks Installed
 
 ###### ![](./images/Trident_FYSETC_Spider_V1.0_in_SPI_mode_Heatsinks_150.png) {#Trident_FYSETC_Spider_v10_SPI_Heatsinks_7}
 
@@ -142,7 +143,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ## The Klipper Configuration file by Majarspeed for Fysetc Spider V1.1 Board (UART mode - SPI mode needs to be added to this)
 
-The Klipper Configuration file by Majarspeed for Fysetc Spider V1.1 board is [located here](https://github.com/VoronDesign/Voron-Trident/tree/main/Firmware/voron-trident-spider.cfg){:target="_blank" rel="noopener"};
+The Klipper Configuration file by Majarspeed for Fysetc Spider V1.1 board is [located here](https://raw.githubusercontent.com/majarspeed/Voron-Trident/main/Firmware/voron-trident-spider.cfg){:target="_blank" rel="noopener"};
 
 ## URL Resources Links for the Fystec Spider (PIN Diagrams and Repo)
 
@@ -154,7 +155,7 @@ The Klipper Configuration file by Majarspeed for Fysetc Spider V1.1 board is [lo
 
 2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please see [The Build ═► Software Installation -> Firmware Flashing(Header) -> Fysetc Spider](../../../build/software/spider_klipper#spider-klipper-firmware){:target="_blank" rel="noopener"}
 
-3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (voron-trident-spider.cfg rename it to printer.cfg and replace UART with SPI). Please see [voron-trident-spider.cfg by Majarspeed](https://github.com/VoronDesign/Voron-Trident/tree/main/Firmware/voron-trident-spider.cfg){:target="_blank" rel="noopener"} as a good starting point;
+3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (voron-trident-spider.cfg rename it to printer.cfg and replace UART with SPI). Please see [voron-trident-spider.cfg by Majarspeed](https://raw.githubusercontent.com/majarspeed/Voron-Trident/main/Firmware/voron-trident-spider.cfg){:target="_blank" rel="noopener"} as a good starting point;
 
     * Please use the Color PIN Diagrams, [displayed here](../../../build/electrical/Fysetc_Spider_Resources_v1#color-pin-diagram-for-fysetc-spider-v10){:target="_blank" rel="noopener"}, as a source of information;
 
