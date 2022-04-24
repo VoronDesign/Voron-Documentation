@@ -34,7 +34,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSTEC_Spider_V2.2_in_SPI_mode_PREP2.png){:target="_blank" rel="noopener"}
 
-### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
+## (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
 
 * In the diagram below, the **<span class="color-blind-yellow">YELLOW box</span>** indicates the RGB Block header's Jumper is not present, but this header can be used to run fans. Other headers that can be used with fans (as shown by a **<span class="color-blind-orange">ORANGE box</span>**) have their Fan Voltage Selections headers which are located below the FAN0, FAN1 and FAN2 connectors. The **<span class="color-blind-green">GREEN</span>** jumpers are set for a fan voltage of 24VDC.
 
@@ -50,17 +50,18 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers and the WIRE jumper BEFORE the power supply is connected, to ensure these jumpers and wire jumper are set appropriately.**
 
-### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
+## (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
 
 ###### ![](./images/FYSETC_Spider_V2.2_inSPIMode_VoltageSelect_150.png) {#FYSETC_Spider_V22_inSPIMode_VoltageSelect}
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FYSETC_Spider_V2.2_inSPIMode_VoltageSelect_150.png){:target="_blank" rel="noopener"}
 
 ## Stepper Drivers
-* If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
-* Install step drivers in all slots except E4-MOT
-* Install heat sinks on all step drivers
+* - [ ] If using Fysetc drivers, inspect for left over rosin, and clean with IPA if need
 * _**NOTE: if the board has been powered, ensure that motor power caps are fully drained before inserting stepper drivers: Temporarily connect a 100K resistor between VMOT+ and VMOT- to safely drain the capacitors**_ See [Fysetc Spider 3.3v issue](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/Spider%203.3v%20issue.md){:target="_blank" rel="noopener"}
+* - [ ] Install step drivers in all slots except E4-MOT
+* - [ ] Before installing heat sinks on to the stepper motor drivers,&nbsp;[please read this](#please-ensure-the-heat-sinks-are-installed-before-use)
+* - [ ] Install heat sinks on all stepper motor drivers
 
 ## MCU Wiring for SPI Mode
 
@@ -96,9 +97,9 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
     2. - [ ] connect to EXP1 & EXP2
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the Spider board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART serial communications with the Raspberry Pi](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Connect%20RPI%20uart.md){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to the Spider board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to the Spider board, but do not connect it yet to your Raspberry Pi
 
 ## MCU Wiring Diagram for SPI Mode
 
@@ -111,7 +112,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU in SPI Mode with Heat Sinks Installed
+## MCU in SPI Mode with Heat Sinks Installed
 
 ###### ![](./images/FYSETC_Spider_v2.2_SPImodeHeatsinks_150.png) {#FYSETC_Spider_v22_SPI_Heatsinks}
 
