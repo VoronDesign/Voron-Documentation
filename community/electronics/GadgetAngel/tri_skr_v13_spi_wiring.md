@@ -60,7 +60,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Wire 24V and 0V from DC power supply to Power/DCIN
 * - [ ] Connect USB Cable to your SKR V1.3,&nbsp;**but do not connect it yet to your Raspberry Pi**
 
-### MCU X/Y/E, Hot End in SPI Mode Wiring Diagram
+## MCU X/Y/E, Hot End in SPI Mode Wiring Diagram
 
 ###### ![](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_XYE_in_SPI_mode_150.jpg) {#Trident_Wiring_Diagram_BTT_SKRV13_XYE_in_SPI_mode}
 
@@ -87,7 +87,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](../../../build/electrical/index#bat85-diode){:target="_blank" rel="noopener"}
 
-### MCU Z, Bed, Exhaust Fan in SPI Mode Wiring Diagram
+## MCU Z, Bed, Exhaust Fan in SPI Mode Wiring Diagram
 
 ###### ![](./images/Trident_Wiring_Diagram_BTT_SKRV1.3_Z_in_SPI_mode_150.jpg) {#Trident_Wiring_Diagram_BTT_SKRV13_Z_in_SPI_mode}
 
@@ -98,11 +98,11 @@ BAT85
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU X/Y/E, Hot End with Heat Sinks Installed
+## MCU X/Y/E, Hot End with Heat Sinks Installed
 
 ###### ![](./images/SKR_V1.3_In_SPI_mode_Heatsinks1_150.png) {#SKR_V13_SPI_Heatsinks_2}
 
-### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
+## MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 
 ###### ![](./images/Trident_SKR_V13_in_SPI_mode_Heatsinks2_150.png) {#Trident_SKR_V13_SPI_Heatsinks2}
 
