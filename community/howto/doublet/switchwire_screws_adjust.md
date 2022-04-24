@@ -6,7 +6,7 @@ nav_exclude: true
 
 # Voron Switchwire - Screws Adjust method
 
-This process should be used when using the `Prusa Nylock Mod` with your Switchwire heated bed. This mod replaces 8 of the metallic 6mm spacers by nylon washers and M3 nylock nuts.
+This process should be used when using the `Prusa Nylock Mod` with your Switchwire heated bed. This mod replaces 8 of the metallic 6mm spacers with nylon washers and M3 nylock nuts.
 
 ## Bill of Materials
 
@@ -55,22 +55,22 @@ speed: 50.
 screw_thread: CCW-M3
 ```
 
-This sections tells Klipper the location of your screws. This measurements were taken from a Switchwire build using the LDO Y Carriage and Heated bed.
+This sections tells Klipper the location of your screws. These measurements were taken from a Switchwire build using the LDO Y Carriage and Heated bed.
 
-In this method, Klipper uses one screw as baseline for calculating the adjustment for the remaining screws. In this configuration, the center screw is the baseline, so it has to be our `screw1`. This screw still uses the original 6mm metallic spacer from the original bill of materials. All the other 8 screws will use the M3 screws, washers and the nylock nut.
+With this method, Klipper uses one screw as baseline for calculating the adjustment for the remaining screws. In this configuration, the center screw is the baseline, so it has to be our `screw1`. This screw still uses the original 6mm metallic spacer from the original bill of materials. All eight of the other screws will use the M3 screws, washers and the nylock nut.
 
-[Here](https://www.youtube.com/watch?v=qRbMOfMy-MA) is a quick video from `Chris Riley` showing show to assemble the screws, washers and the nylock nuts.
+[Here is a quick video from Chris Riley](https://www.youtube.com/watch?v=qRbMOfMy-MA) showing how to assemble the screws, washers and nylock nuts.
 
 ## Adjusting the screws
 
-Once you saved and restarted your firmware, run the following commands on Fluidd or Mainsails console:
+Once you saved and restarted your firmware, run the following commands on the Fluidd or Mainsail console:
 
-```
+```gcode
 G8 
 SCREWS_TILT_CALCULATE
 ```
 
-Klipper will move the toolhead over each of the 8 screws and calculate the amount of adjustment you need for each of the screws. Once it finishes it will give you an output similar to this one:
+Klipper will move the toolhead over each of the 8 screws and calculate the amount of adjustment you need for each of the screws. Once it finishes, it will give you an output similar to this one:
 
 ```
 08:35:49 // center (Base): X 128.0, Y 110.0, Z 2.02500
@@ -84,7 +84,6 @@ Klipper will move the toolhead over each of the 8 screws and calculate the amoun
 08:35:49 // rear_right : X 233.0, Y 215.0, Z 2.05000 : Adjust -> CCW 00:03
 ```
 
-`CW` refers to a clockwise turn and `CCW` refers to a counter-clockwise turn and the number after refers to the amount of "minutes" the screw needs to be turned, so for screw middle_right `CW 00:05`, the screw needs to be turned 5 minutes clockwise, while for screw middle_left `CCW 00:07` the screw needs to be turned 7 minutes counter clockwise.
+`CW` refers to a clockwise turn and `CCW` refers to a counter-clockwise turn, and the number after refers to the amount of "minutes" the screw needs to be turned. So for screw middle_right `CW 00:05`, the screw needs to be turned 5 minutes clockwise, while for screw middle_left `CCW 00:07` the screw needs to be turned 7 minutes counter-clockwise.
 
-According to Klipper [documentation](https://github.com/KevinOConnor/klipper/blob/master/docs/Manual_Level.md#adjusting-bed-leveling-screws-using-the-bed-probe), you should be good when the amount to be adjusted is less or equal than `00:06` (6 minutes) - but you should aim for at least `00:02` (2 minutes).
-
+According to Klipper [documentation](https://github.com/KevinOConnor/klipper/blob/master/docs/Manual_Level.md#adjusting-bed-leveling-screws-using-the-bed-probe), you should be good when the amount to be adjusted is less than or equal to `00:06` (6 minutes) - but you should aim for at least `00:02` (2 minutes).

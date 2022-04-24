@@ -49,7 +49,7 @@ Klipper uses the [menuconfig](https://en.wikipedia.org/wiki/Menuconfig) system, 
 configuring the [Linux Kernel](https://en.wikipedia.org/wiki/Linux_kernel) easier. The `menuconfig` system is a more
 user-friendly way of setting options in the configuration file (usually called `.config`).
 
-Because the name of the configuration file does not change inbetween invocations of `make menuconfig`, settings done for
+Because the name of the configuration file does not change between invocations of `make menuconfig`, settings done for
 one MCU board will overwrite the previous settings in the default `.config` file.
 
 Fortunately, the `menuconfig` infrastructure supports custom configuration files, so we can easily add one configuration
@@ -58,7 +58,7 @@ name of the configuration file instead of `.config`.
 
 Note that the `.config` file is often not visible because files starting with a dot are treated as hidden files by
 Linux/Unix systems. To view the contents of this file, simply type `cat .config` in your Klipper directory or use
-`ls -all` to view all files in the directory.
+`ls -al` to view all files in the directory.
 
 An example would be:
 
@@ -73,7 +73,7 @@ system would revert to the `.config` filename.
 
 ## flash-sdcard Theory
 
-Usually you would copy the firmware file onto your SD-Card and then restart your board(s), then waiting for the board(s)
+Usually you would copy the firmware file onto your SD-Card and then restart your board(s), then wait for the board(s)
 to flash the new firmware for you. Thanks to Klipper's [flash-sdcard.sh](https://www.klipper3d.org/SDCard_Updates.html)
 script, this can be automated.
 
