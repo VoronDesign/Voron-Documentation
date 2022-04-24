@@ -41,11 +41,11 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Wire 24V and -V from DC power supply to VIN and GND on POWER/DCIN connector
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./mini_e3_v20_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
-### MCU Diagram
+## MCU Diagram
 
 ###### ![](./images/Voron0.1_Wiring_Diagram_SKR_mini_E3_V2.0.jpg) {#Voron0.1_Wiring_Diagram_SKR_mini_E3_V20}
 
@@ -60,7 +60,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR mini E3 V2.0 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
@@ -90,9 +90,9 @@ The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 br
 4. After **creating/editing** the Klipper Config file (skr-mini-E3-v2.0.cfg renamed to printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function v01_skrminie3_V20_enable_checkboxes(){
-    const v01_skrminie3_V20_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(v01_skrminie3_V20_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
