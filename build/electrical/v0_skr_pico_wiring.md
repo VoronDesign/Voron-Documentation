@@ -52,12 +52,12 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Wire 24V and -V from DC power supply to Power_In
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to the SKR Pico board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./skr_pico_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
     2. - [ ] Move Hot End Fan V+ (+5VDC) in to SERVOS connector's 5V PIN
-    3. - [ ] Connect UART cable (3-wire communication) to the SKR Pico board's "Raspberry Pi" connector, but do not connect it yet to your Raspberry Pi
+    3. - [ ] Connect UART serial cable (3-wire communication) to the SKR Pico board's "Raspberry Pi" connector, but do not connect it yet to your Raspberry Pi
 
-### MCU Diagram
+## MCU Diagram
 
 ###### ![](.images/../images/Voron0.1_Wiring_Diagram_SKR_PICO_V1.0.jpg) {#Voron0.1_Wiring_Diagram_SKR_PICO}
 
@@ -67,7 +67,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * see [the SKR Pico's Raspberry Pi Section](./skr_pico_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
 
-### The Klipper Configuration file for SKR Pico board
+## The Klipper Configuration file for SKR Pico board
 <span> <br> </span>
 The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 branch for SKR Pico board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-pico-v1.0.cfg){:target="_blank" rel="noopener"}
 
@@ -90,9 +90,9 @@ The Klipper Configuration file from VoronDesign/Voron-0 GitHub Repo, Voron0.1 br
 4. After **creating/editing** the Klipper Config file (skr-pico-v1.0.cfg renamed to printer.cfg), the next step is to check all the motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function v01_skr_pico_enable_checkboxes(){
-    const v01_skr_pico_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(v01_skr_pico_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
