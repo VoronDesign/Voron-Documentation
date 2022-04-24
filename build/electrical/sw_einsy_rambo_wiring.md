@@ -36,7 +36,7 @@ nav_exclude: true
 * - [ ] Wire +V and -V from DC power supply to both Power Input and Bed Power Input.
 * - [ ] Connect USB Cable,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
-### MCU Diagram
+## MCU Diagram
 
 ###### ![](./images/SW_EinsyRambo1.1B_Wiring_Diagram_150.jpg) {#SW_EinsyRambo1.1B_Wiring_Diagram}
 
@@ -49,7 +49,7 @@ nav_exclude: true
 
 ###### ![](./images/EinsyRambo1.1b_PREP-WiringDiagram-heatsinks_150.jpg) {#EinsyRambo1.1b_PREP-WiringDiagram-heatsinks}
 
-### The Klipper Configuration file for Einsy Rambo Board
+## The Klipper Configuration file for Einsy Rambo Board
 
 The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for Einsy Rambo is [located here;](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg){:target="_blank" rel="noopener"}
 
@@ -84,9 +84,9 @@ For reference, here is the pinout of the Einsy Rambo
 4.  After **creating/editing** the Klipper Config file (einsy_config.cfg renamed to printer.cfg), the next step is to check all the motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function sw_einsy_enable_checkboxes(){
-    const sw_einsy_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(sw_einsy_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }
