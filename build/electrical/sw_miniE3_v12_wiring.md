@@ -40,14 +40,14 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Wire 24V and -V from DC power supply to VIN and GND terminals in corner on the "Power DCIN" connector
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./mini_e3_v12_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
-### MCU Diagram
+## MCU Diagram
 
 ###### ![](./images/SW_Wiring_Diagram_SKR_mini_E3_V1.2_150.jpg) {#SW_Wiring_Diagram_SKR_mini_E3_V1.2}
 
@@ -62,7 +62,7 @@ BAT85
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR mini E3 V1.2 board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
@@ -71,7 +71,7 @@ BAT85
 
 <div>
 
-<!--### The Klipper Configuration file for SKR Mini E3 V1.2 board
+<!--## The Klipper Configuration file for SKR Mini E3 V1.2 board
 
 The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for SKR Mini E3 V1.2 board is [located here](https://github.com/VoronDesign/Voron-Switchwire/blob/master/Firmware/xxxxxxxxxxxxxxxsw_skr_mini_e3_v12_config.cfg)
 -->
@@ -97,9 +97,9 @@ The Klipper Configuration file from VoronDesign/Voron-Switchwire GitHub Repo for
 4. After **creating** the Klipper Config file (printer.cfg), the next step is to check all the Motors and the mechanics of the Voron printer, please see [The Build ═► Initial Startup Checks](../../build/startup/index#initial-startup-checks){:target="_blank" rel="noopener"}
 
 <script>
-    window.onload = function sw_skrminie3_v12_enable_checkboxes(){
-    const sw_skrminie3_v12_checkboxes = document.getElementsByClassName('task-list-item-checkbox');
-    Array.prototype.forEach.call(sw_skrminie3_v12_checkboxes, function (e) {
+    window.onload = function enable_checkboxes(){
+    const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+    Array.prototype.forEach.call(checkboxes, function (e) {
         e.removeAttribute('disabled');
     });
     }

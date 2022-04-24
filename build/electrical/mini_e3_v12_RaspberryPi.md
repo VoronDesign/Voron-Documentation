@@ -3,7 +3,7 @@ nav_exclude: true
 ---
 # Raspberry Pi
 
-### Connection Using Separate Power Supply
+## Connection Using Separate Power Supply
 * Since the BTT SKR mini E3 V1.2 board does not produce enough amps to power the Raspberry Pi directly, the Raspberry Pi can be powered by an independent power supply.
 * Use at least 24awg wire for V+ and GND connections to the Pi's power supply
 * Tie all the DC 0V (typically labelled V-) lines for all the DC power supplies together to ensure that all power supplies have the same voltage reference.
