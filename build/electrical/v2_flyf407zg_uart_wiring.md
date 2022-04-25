@@ -20,7 +20,7 @@ nav_exclude: true
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FLYF407ZG_UART_PREP.png){:target="_blank" rel="noopener"}
 
-### End Stop Voltage Selection Header
+## End Stop Voltage Selection Header
 
 * In the diagram below, the **<span class="color-blind-orange">ORANGE box</span>** indicates the header with **<span class="color-blind-green">a GREEN</span>** jumper which is set for 5VDC.
 
@@ -28,7 +28,7 @@ nav_exclude: true
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumper called out by the _COLORED BOX_, BEFORE the power supply is connected.**
 
-###  End Stop Voltage Selection Diagram
+##  End Stop Voltage Selection Diagram
 
 ###### ![](./images/FLYF407ZG_UART_voltageSelect.png) {#FLYF407ZG_UART_VoltageSelect_v2}
 
@@ -73,9 +73,9 @@ nav_exclude: true
 * - [ ] Plug display wires in to EXP1 and EXP2
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to FLYF407ZG board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./flyf407zg_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to FLYF407ZG board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to FLYF407ZG board, but do not connect it yet to your Raspberry Pi
 
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the FLYF407ZG board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
@@ -89,7 +89,7 @@ BAT85
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
-### MCU with Heat Sinks Installed
+## MCU with Heat Sinks Installed
 
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
@@ -98,7 +98,7 @@ BAT85
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The Mellow FLYF407ZG is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
