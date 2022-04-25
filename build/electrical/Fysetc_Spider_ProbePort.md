@@ -23,9 +23,13 @@ nav_exclude: true
 
 From Digikey website for Omron TL-Q5MC2:
 ###### ![](./images/Dikey_OmronTLQ5MC2_probeinfo.png) {#Dikey_OmronTLQ5MC2_probeinfo}
+<span> <br /> </span>
+<span> <br /> </span>
 
 From Aliexpress website for Omron TL-Q5MC2-Z:
 ###### ![](./images/Aliexpress_OmronTL-Q5MC2-Z_probeinfo.png) {#Aliexpress_OmronTL-Q5MC2-Z_probeinfo}
+<span> <br /> </span>
+<span> <br /> </span>
 
 Form Digikey website for Panasonic GX-HL15BI-P:
 ###### ![](./images/Digikey_PanasonicGX-HL15BI-P_probeinfo.png) {#Digikey_PanasonicGX-HL15BI-P_probeinfo}
