@@ -31,7 +31,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/v2_skr14T_SPI_PREP.png){:target="_blank" rel="noopener"}
 
-### Voltage Selection Headers
+## Voltage Selection Headers
 
 * **Set the USB-PWR jumper to the VDD position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
@@ -65,7 +65,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 * - [ ] Connect the Y endstop to Y-STOP (P1.28)
 * - [ ] Connect USB Cable to your SKR 1.4/Turbo,&nbsp; **but do not connect it yet to your Raspberry Pi**
 
-### MCU X/Y/E, Hot End in SPI Mode Wiring Diagram
+## MCU X/Y/E, Hot End in SPI Mode Wiring Diagram
 
 ###### ![](./images/v2tri_Wiring_Diagram_skrv14T_XYE_SPI.jpg) {#v2tri_Wiring_Diagram_skrv14T_XYE_SPI_v2}
 
@@ -94,7 +94,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](../../../build/electrical/index#bat85-diode){:target="_blank" rel="noopener"}
 
-### MCU Z, Bed, Exhaust Fan in SPI Mode Wiring Diagram
+## MCU Z, Bed, Exhaust Fan in SPI Mode Wiring Diagram
 
 ###### ![](./images/v2_Wiring_Diagram_skrv14T_Z_SPI.jpg) {#v2_Wiring_Diagram_skrv14T_Z_SPI_v2}
 
@@ -105,17 +105,17 @@ BAT85
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU X/Y/E, Hot End with Heat Sinks Installed
+## MCU X/Y/E, Hot End with Heat Sinks Installed
 
 ###### ![](./images/v2_skr14T_SPI_heatsinks.png) {#v2_skr14T_SPI_heatsinks1_v2}
 
-### MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
+## MCU Z, Bed, Exhaust Fan with Heat Sinks Installed
 
 ###### ![](./images/v2_skr14T_SPI_heatsinks2.png) {#v2_skr14T_SPI_heatsinks2_v2}
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The BTT SKR V1.4/Turbo board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
@@ -130,7 +130,7 @@ BAT85
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/two_skrv1.4inSPI-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-### The Klipper Configuration file for SKR V1.4/Turbo board (UART mode - SPI mode needs to be added to this)
+## The Klipper Configuration file for SKR V1.4/Turbo board (UART mode - SPI mode needs to be added to this)
 
 The Klipper Configuration file from VoronDesign/Voron-2 GitHub Repo for SKR V1.4/Turbo board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.4/Voron2_SKR_14_Config.cfg){:target="_blank" rel="noopener"};
 
