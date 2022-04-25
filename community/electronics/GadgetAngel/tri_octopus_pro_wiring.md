@@ -18,7 +18,7 @@ has_toc: false
 
 * In the list below, locate the name of the stepper motor drivers that were purchased with the board and click on its name.
 
-### Information
+## Information
 
 * Read this article ["Understanding the Difference Between UART vs SPI" ](./images/What_is_the_Difference_Between_SPI_vs_UART.pdf#toolbar=1&page=1){:target="_blank" rel="noopener"} for further information.
 
