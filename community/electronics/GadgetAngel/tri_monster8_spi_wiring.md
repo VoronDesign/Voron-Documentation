@@ -34,7 +34,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Monster8v10_SPI_PREP.png){:target="_blank" rel="noopener"}
 
-### (FAN & Endstop/PROBE & DRIVER IC) Voltage Selection Headers
+## (FAN & Endstop/PROBE & DRIVER IC) Voltage Selection Headers
 
 * In the diagram below, the **COLORED BOXES** indicate the headers with **<span class="color-blind-blue">BLUE</span>** jumpers that will be discussed next.
 
@@ -54,7 +54,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-blue">BLUE</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
-### (FAN & Endstop/PROBE & DRIVER IC) Voltage Selection Diagram
+## (FAN & Endstop/PROBE & DRIVER IC) Voltage Selection Diagram
 
 ###### ![](./images/Monster8v10_SPI_voltageselect.png) {#Monster8v10_SPI_voltageselect_tri}
 
@@ -98,9 +98,9 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
     2. - [ ] connect to EXP1 & EXP2
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your Monster 8 board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](../../../build/electrical/monster8_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to your Monster 8 board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to your Monster 8 board, but do not connect it yet to your Raspberry Pi
 
 * <span> </span>
 
@@ -118,13 +118,13 @@ BAT85
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU in SPI Mode with Heat Sinks Installed
+## MCU in SPI Mode with Heat Sinks Installed
 
 ###### ![](./images/Trident_Monster8v10_SPI_heatsinks.png) {#Trident_Monster8v10_SPI_heatsinks_tri}
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The MKS Monster 8 is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
@@ -155,7 +155,7 @@ BAT85
 
 1. Once the MCU board is wired up and wire management has been performed, the next step is to install Mainsail/Fluidd or Octoprint, please see [The Build ═► Software Installation](../../../build/software/index#software-installation){:target="_blank" rel="noopener"}
 
-2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the above Color Pin Diagram, look for "How To Compile the [Klipper Firmware for MKS Monster 8 V1.0"](../../../build/electrical/images/MKS_Monster8-V1.0-color-PIN.pdf){:target="_blank" rel="noopener"} or an alternative source for instructions on how to compile the klipper firmware for the MKS Monster 8 V1.0 board - [See the README file](https://github.com/makerbase-mks/MKS-Monster8/tree/main/klipper%20firmware#to-compile-for-klipper-firmware){:target="_blank" rel="noopener"}
+2. Once Mainsail/Fluidd or Octoprint has been installed, the next step is to **compile and install** the Klipper Firmware, please use the above Color Pin Diagram, look for "How To Compile the [Klipper Firmware for MKS Monster 8 V1.0"](../../../build/electrical/images/MKS_Monster8-V1.0-color-PIN.pdf){:target="_blank" rel="noopener"} or an alternative source for instructions on how to compile the klipper firmware for the MKS Monster 8 V1.0 board - [See the README file](https://github.com/makerbase-mks/MKS-Monster8/tree/main/klipper%20firmware#user-content-to-compile-for-klipper-firmware){:target="_blank" rel="noopener"}
 
 3. Once the MCU board has the Klipper Firmware Installed, the next step is to **create/edit** the Klipper Config file (Voron2_Monster8_Config.cfg rename it to printer.cfg and replace UART with SPI). Please see [the file by RealDeuce is located here](https://raw.githubusercontent.com/VoronDesign/VoronUsers/master/firmware_configurations/klipper/RealDeuce/MKS-Makerbase/Monster8_v1.0_003/Voron2_Monster8_Config.cfg){:target="_blank" rel="noopener"} as a good starting point;
 
