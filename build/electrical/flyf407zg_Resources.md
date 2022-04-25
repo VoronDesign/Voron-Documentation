@@ -7,6 +7,8 @@ For reference, here is the Color PIN diagram for the Mellow FLYF407ZG
 
 ###### ![](./images/FLYF407ZG-color-PIN-compressed.jpg) {#FLYF407ZG-color-PIN-compressed_1}
 
+* The above image is compressed. For a better quality image use the next two hyperlinks below. The above image is just a placeholder.
+
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/FLYF407ZG-color-PIN.pdf){:target="_blank" rel="noopener"}
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in JPG format then [click here](./images/FLYF407ZG-color-PIN.jpg){:target="_blank" rel="noopener"}
