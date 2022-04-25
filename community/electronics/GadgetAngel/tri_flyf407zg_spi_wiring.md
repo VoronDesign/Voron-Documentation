@@ -22,7 +22,7 @@ nav_order: 1
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/FLYF407ZG_SPI_PREP.png){:target="_blank" rel="noopener"}
 
-### End Stop Voltage Selection Header
+## End Stop Voltage Selection Header
 
 * In the diagram below, the **<span class="color-blind-orange">ORANGE box</span>** indicates the header with **<span class="color-blind-green">a GREEN</span>** jumper which is set for 5VDC.
 
@@ -30,7 +30,7 @@ nav_order: 1
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumper called out by the _COLORED BOX_, BEFORE the power supply is connected.**
 
-###  End Stop Voltage Selection Diagram
+##  End Stop Voltage Selection Diagram
 
 ###### ![](./images/FLYF407ZG_SPI_voltageSelect.png) {#FLYF407ZG_SPI_VoltageSelect_tri}
 
@@ -88,7 +88,7 @@ BAT85
 
 ## Please Ensure the Heat Sinks are Installed Before Use
 
-### MCU in SPI Mode with Heat Sinks Installed
+## MCU in SPI Mode with Heat Sinks Installed
 
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
@@ -97,7 +97,7 @@ BAT85
 
 ## Raspberry Pi
 
-### Power
+## Power
 * The Mellow FLYF407ZG is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
 ## Setting up UART Serial Communications with the Raspberry Pi
