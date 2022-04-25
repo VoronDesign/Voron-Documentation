@@ -21,6 +21,6 @@ For reference, here is the original pinout of the SKR V1.4/V1.4Turbo
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](<./images/BTT SKR V1.4PIN.pdf>){:target="_blank" rel="noopener"}
 
-### The BTT's GitHub Repo for the SKR V1.4/V1.4Turbo board
+## The BTT's GitHub Repo for the SKR V1.4/V1.4Turbo board
 
 * BTT's documentation for SKR V1.4/V1.4Turbo board is [located here](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4){:target="_blank" rel="noopener"}

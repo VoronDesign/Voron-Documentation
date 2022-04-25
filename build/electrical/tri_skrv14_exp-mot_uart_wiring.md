@@ -39,7 +39,7 @@ Remove **all <span class="color-blind-yellow">YELLOW</span>** on-board jumpers, 
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/tri_EXP-MOT-V10_UART_PREP.png){:target="_blank" rel="noopener"}
 
-### Voltage Selection Headers for the SKR V1.4/Turbo
+## Voltage Selection Headers for the SKR V1.4/Turbo
 
 * **Set the USB-PWR jumper to the VDD position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** to avoid the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
@@ -51,7 +51,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/v2_skr14T_UART_voltageselect.png){:target="_blank" rel="noopener"}
 
-### Voltage Selection Header for the EXP-MOT
+## Voltage Selection Header for the EXP-MOT
 
 * **Set the LOGIC-VOLTAGE jumper to the 3.3V position (as shown in the <span class="color-blind-purple">PURPLE box</span>)** since the SKR board is a 32-bit processor which uses 3.3V logic level for the stepper motor driver boards.
 
@@ -99,7 +99,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 BAT85
 : a Schottky barrier diode. BAT85 is needed to protect the SKR board (MCU board) from being fried.  An Inductive Probe device (Omron TL-Q5MC2; Omron TL-Q5MC2-Z or Panasonic GX-HL15BI-P) communicates at a much higher voltage level (10V - 30V) then the MCU board.  The BAT85 is used to protect the input signal PIN of the MCU board; without the BAT85 the MCU board will be damaged.  If two BAT85s are used in series, the circuit will protect the MCU board and still allow the inductive probe to function properly. [For more information, click here](./index#bat85-diode){:target="_blank" rel="noopener"}
 
-### MCU X/Y/E, Hot End, Bed, and Exhaust Fan Wiring Diagram (SKR V1.4/Turbo)
+## MCU X/Y/E, Hot End, Bed, and Exhaust Fan Wiring Diagram (SKR V1.4/Turbo)
 
 ###### ![](./images/Trident_Wiring_Diagram_SKRV1.4TurboandEXP-MOT_XYE_UART.jpg) {#Trident_Wiring_Diagram_SKRV14TurboandEXP-MOT_XYE_UART_triskr-expmot_tri}
 
@@ -115,7 +115,7 @@ BAT85
 * - [ ] Connect stepper driver for the Z2 into positions M3 (driver socket)
 * - [ ] Plug in stepper motor for the Z2 into positions M3 (motor connector)
 
-### MCU Z Wiring Diagram (EXP-MOT)
+## MCU Z Wiring Diagram (EXP-MOT)
 
 ###### ![](./images/Trident_Wiring_Diagram_SKRV1.4TurboandEXP-MOT_Z_UART.jpg) {#Trident_Wiring_Diagram_SKRV14TurboandEXP-MOT_Z_UART_triskr-expmot_tri}
 
@@ -126,17 +126,17 @@ BAT85
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU X/Y/E, Hot End, Bed, and Exhaust Fan with Heat Sinks Installed (SKR V1.4/Turbo)
+## MCU X/Y/E, Hot End, Bed, and Exhaust Fan with Heat Sinks Installed (SKR V1.4/Turbo)
 
 ###### ![](./images/v2_skr14T_XYE_UART_heatsinks.png) {#v2_skr14T_XYE_UART_heatsinks1_triskr-expmot_tri}
 
-### MCU Z with Heat Sinks Installed (EXP-MOT)
+## MCU Z with Heat Sinks Installed (EXP-MOT)
 
 ###### ![](./images/tri_EXP-MOT-V10_UART_heatsinks2.png) {#tri_EXP-MOT-V10_UART_heatsinks2_triskr-expmot_tri}
 
 ## Raspberry Pi
 
-### Power
+## Power
 
 * The BTT SKR V1.4/Turbo board is **NOT capable of providing 5V power** to run your Raspberry Pi.
 
@@ -152,7 +152,7 @@ BAT85
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PNG format then [click here](./images/Trident_SKRV1.4andEXP-MOTinUART-ssr-wiring.png){:target="_blank" rel="noopener"}
 
-### The Klipper Configuration file for SKR V1.4/Turbo board with the EXP-MOT board
+## The Klipper Configuration file for SKR V1.4/Turbo board with the EXP-MOT board
 
 The Klipper Configuration file from VoronDesign/Voron-Trident GitHub Repo for SKR V1.4/Turbo board using the EXP-MOT board is [located here](https://raw.githubusercontent.com/VoronDesign/Voron-Trident/main/Firmware/Voron_Trident_SKR14_EXPMOT.cfg){:target="_blank" rel="noopener"};
 
