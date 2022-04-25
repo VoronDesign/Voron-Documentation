@@ -26,7 +26,7 @@ We have no idea what state your board is in when you start this process.  Someon
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus11_SPI_Mode_for_Prep.png){:target="_blank" rel="noopener"}
 
-### (FAN & PROBE) Voltage Selection Headers
+## (FAN & PROBE) Voltage Selection Headers
 
 * As shown in the diagram below, ensure the **removal of the USB-PWR jumper (as shown in the <span class="color-blind-yellow">YELLOW box</span>")** which avoids the interaction between the USB 5V of Raspberry Pi and the DC-DC 5V of the motherboard.
 
@@ -44,15 +44,16 @@ We have no idea what state your board is in when you start this process.  Someon
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
-### (FAN & PROBE) Voltage Selection Diagram
+## (FAN & PROBE) Voltage Selection Diagram
 
 ###### ![](./images/Octopus11_SPI_VoltageSelect.png) {#Octopus11_SPI_VoltageSelect_v2}
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus11_SPI_VoltageSelect.png){:target="_blank" rel="noopener"}
 
 ## Stepper Motor Drivers
-* Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
-* Install heat sinks on all stepper motor drivers
+* - [ ] Inspect the stepper motor drivers for left over rosin, and clean with IPA, if needed
+* - [ ] Before installing heat sinks on to the stepper motor drivers,&nbsp;[please read this](#please-ensure-the-heat-sinks-are-installed-before-use)
+* - [ ] Install heat sinks on all stepper motor drivers
 
 ## MCU Wiring for SPI Mode
 
@@ -89,9 +90,9 @@ We have no idea what state your board is in when you start this process.  Someon
     2. - [ ] connect to EXP1 & EXP2
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your Octopus board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](../../../build/electrical/Octopus11_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to your Octopus board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to your Octopus board, but do not connect it yet to your Raspberry Pi
 
 * <span> </span>
 
@@ -109,7 +110,7 @@ BAT85
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU in SPI Mode with Heat Sinks Installed
+## MCU in SPI Mode with Heat Sinks Installed
 
 ###### ![](./images/Octopus11_SPI_Heatsinks.png) {#Octopus11_SPI_Heatsinks_v2}
 
