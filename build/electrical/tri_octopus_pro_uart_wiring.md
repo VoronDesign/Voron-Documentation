@@ -32,7 +32,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * If you want to open the above picture, in a new tab of your web browser, then [click here](./images/Octopus_Pro_F446_UART_Mode_for_Prep_150.png){:target="_blank" rel="noopener"}
 
-### (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
+## (FAN & MOTOR POWER & PROBE) Voltage Selection Headers
 
 * In the diagram below, the **<span class="color-blind-blue">BLUE box</span>** indicates the "fan voltage selection headers" with **<span class="color-blind-green">GREEN</span>** jumpers which are set for 24VDC.
 
@@ -50,7 +50,7 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
 
 * __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **Double check all the** __<span class="color-blind-green">GREEN</span>__ **jumpers are set appropriately, especially the jumpers called out by the _COLORED BOXES_, BEFORE the power supply is connected.**
 
-### (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
+## (FAN & MOTOR POWER & PROBE) Voltage Selection Diagram
 
 ###### ![](./images/Octopus_Pro_F446_UART_VoltageSelect_150.png) {#Octopus_Pro_F446_UART_VoltageSelect_Tri}
 
@@ -94,9 +94,9 @@ __<span class="underline-double-trouble color-blind-red">IMPORTANT:</span>__ **D
     2. - [ ] connect to EXP1 & EXP2
 * if using USB to communicate with Pi:
     1. - [ ] Connect USB Cable to your Octopus Pro board, but do not connect it yet to your Raspberry Pi
-* if using UART (3-wire communication) with Pi:
+* if using UART (3-wire serial communication) with Pi:
     1. - [ ] [complete the steps for setting up UART Serial communications with the Raspberry Pi](./OctopusPro_RaspberryPi#raspberry-pi){:target="_blank" rel="noopener"}
-    2. - [ ] Connect UART cable to your Octopus Pro board, but do not connect it yet to your Raspberry Pi
+    2. - [ ] Connect UART serial cable to your Octopus Pro board, but do not connect it yet to your Raspberry Pi
 
 * <span> </span>
 
@@ -114,7 +114,7 @@ BAT85
 <span class="color-blind-red">Note on the Orientation of the Stepper Motor Driver's Heat Sinks</span>
 : Place the heat sinks for the stepper motor drivers so that the orientation of the fins on the heat sinks are parallel to the air flow from the controller fans once the MCU board is installed on the DIN rail. Ensure the heat sinks are **not touching** the solder joints located on the top of the step stick. Please note, that your placement of heat sinks may be different from the orientation shown below.
 
-### MCU with Heat Sinks Installed
+## MCU with Heat Sinks Installed
 
 ###### ![](./images/Trident_Octopus_Pro_UART_Heatsinks_150.png) {#Tri_Octopus_Pro_UART_Heatsinks_tri}
 
