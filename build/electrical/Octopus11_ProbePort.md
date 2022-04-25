@@ -4,13 +4,13 @@ nav_exclude: true
 
 ## BTT Octopus V1.0/V1.1 Probe Port
 
-For reference, here is a small discussion on Reddit about how to determine your style of inductive probe, [click here](https://www.reddit.com/r/AskElectronics/comments/5zdlmm/help_me_identify_which_inductive_sensor_i_need/){:target="_blank" rel="noopener"}
+* For reference, here is a small discussion on Reddit about how to determine your style of inductive probe, [click here](https://www.reddit.com/r/AskElectronics/comments/5zdlmm/help_me_identify_which_inductive_sensor_i_need/){:target="_blank" rel="noopener"}
 
 ## The Voron BOM recommends the following Inductive Probe Sensors
 
 1.  Omron TL-Q5MC2 from [Digikey](https://www.digikey.com/en/products/detail/omron-automation-and-safety/tl-q5mc2/2669828){:target="_blank" rel="noopener"}
 2.  Omron "TL-Q5MC2-Z NPN NC" from [Aliexpress](https://www.aliexpress.com/item/32442790824.html){:target="_blank" rel="noopener"}
-3.  Panasonic GX-HL15BI-P from [Digikey](https://www.digikey.ca/en/products/detail/panasonic-industrial-automation-sales/GX-HL15BI-P/3896953){:target="_blank" rel="noopener"}
+3.  Panasonic GX-HL15BI-P from [Digikey](https://www.digikey.com/en/products/detail/panasonic-industrial-automation-sales/GX-HL15BI-P/3896953){:target="_blank" rel="noopener"}
 
 * If you want more information about the "differences between a NPN and PNP style of probe", [here is a Google search](https://www.google.com/search?q=NPN+PNP+inductive+sensor&rlz=1C1SQJL_enUS837US837&sxsrf=APq-WBsU3fGY-63GDmolIVZSPNcraR7A_g:1649436226813&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjVx4Pj9IT3AhXlomoFHU94AnYQ_AUoAXoECAEQAw&biw=1305&bih=749&dpr=1.1){:target="_blank" rel="noopener"} that will help you.
 
@@ -23,9 +23,13 @@ For reference, here is a small discussion on Reddit about how to determine your 
 
 From Digikey website for Omron TL-Q5MC2:
 ###### ![](./images/Dikey_OmronTLQ5MC2_probeinfo.png) {#Dikey_OmronTLQ5MC2_probeinfo}
+<span> <br /> </span>
+<span> <br /> </span>
 
 From Aliexpress website for Omron TL-Q5MC2-Z:
 ###### ![](./images/Aliexpress_OmronTL-Q5MC2-Z_probeinfo.png) {#Aliexpress_OmronTL-Q5MC2-Z_probeinfo}
+<span> <br /> </span>
+<span> <br /> </span>
 
 Form Digikey website for Panasonic GX-HL15BI-P:
 ###### ![](./images/Digikey_PanasonicGX-HL15BI-P_probeinfo.png) {#Digikey_PanasonicGX-HL15BI-P_probeinfo}
