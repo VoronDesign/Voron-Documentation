@@ -22,10 +22,13 @@ Community-generated documentation for the many items that the official guide may
 | [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md)                                 | DoubleT |
 | [Print Tuning Guide](./ellis/print-tuning-guide.md)                                               | Ellis |
 | [Multi-Colour Prints with a Single Nozzle](./mikhail/multi-colour-prints-with-a-single-nozzle.md) | mikhail |
-| [Custom Raspberry Pi Boot screens ](./samwiseg0/voron_rpi_bootscreen.md)                          | samwiseg0 |
-| [Klicky Probe as Endstop with constant Z Offset ](./Takuya/Klicky_Probe_AutoZ_Alternative.md)     | Takuya & Clee |
-| [Setting Up and Calibrating Sensorless XY Homing](./clee/sensorless_xy_homing.md)                 | clee |
+| [Custom Raspberry Pi Boot Screens ](./samwiseg0/voron_rpi_bootscreen.md) | samwiseg0 |
+| [Klicky Probe as Endstop with constant Z Offset ](./Takuya/Klicky_Probe_AutoZ_Alternative.md) | Takuya & Clee |
+| [Setting Up and Calibrating Sensorless XY Homing](./clee/sensorless_xy_homing.md) | clee |
+| [Transferring Device History (Moonraker DB)](./kyleisah/transferring_machine_history.md) | kyleisah |
+| [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya |
 | [Stealthburner Neopixel Guide](./drachenkatze/neopixel_guide.md)                                  | Drachenkatze |
+
 
 ### External Links
 
