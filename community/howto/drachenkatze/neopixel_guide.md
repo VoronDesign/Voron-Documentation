@@ -82,7 +82,7 @@ following measurement tasks for each pixel:
 * Ensure you have continuity between `E` and `B` of the previous pixel (or your mainboard)
 
 If any of the measurements have an unexpected result, triple-check your solder joints. A jig like
-[NeoPixelSolderingTool](https://github.com/camerony/VoronCustom/tree/main/NeoPixelSolderingTool]) can help you in case
+[NeoPixelSolderingTool](https://github.com/camerony/VoronCustom/tree/main/NeoPixelSolderingTool) can help you in case
 you need to re-solder the joints.
 
 ### Adding a 100 Ohm resistor to combat signal integrity issues
