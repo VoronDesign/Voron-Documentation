@@ -81,6 +81,10 @@ following measurement tasks for each pixel:
 * Ensure you have continuity between `F` and `C` of the previous pixel (or your mainboard)
 * Ensure you have continuity between `E` and `B` of the previous pixel (or your mainboard)
 
+If any of the measurements have an unexpected result, triple-check your solder joints. A jig like
+[NeoPixelSolderingTool](https://github.com/camerony/VoronCustom/tree/main/NeoPixelSolderingTool]) can help you in case
+you need to re-solder the joints.
+
 ### Adding a 100 Ohm resistor to combat signal integrity issues
 
 The data is sent with a signal rate of 800kHz, which is pretty high and can cause signal reflections, which in turn
@@ -124,7 +128,7 @@ somewhere else on these boards.
 |---------------------------------------------|----------------------|-------------------|
 | Bigtreetech SKR 1.3, SKR 1.4, SKR 1.4 Turbo | Servos               | P2.0              |
 | Fysetc Spider 1.0, 1.1, 2.2                 | any free endstop pin | check pin diagram |
-| Bigtreetech Octopus (Pro)                   | BL_TOUCH J43         | PB6 / PB7         |
+| Bigtreetech Octopus (Pro)                   | BL_TOUCH J43         | PB6               |
 | Bigtreetech SKR Mini E3 v1.2                | Servos               | PA1               |
 | Bigtreetech SKR Mini E3 v2.0 / v3.0         | Z-Probe              | PC14 / PA1        |
 | Bigtreetech SKR Pico v1.0                   | Servos               | IO29              |
