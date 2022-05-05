@@ -9,7 +9,7 @@ nav_order: 1
 
 Community-generated documentation for the many items that the official guide may not cover.
 
-| Guide Name / Link | Author | Last Updated |
+| Guide Name / Link | Author | Last Updated* |
 |---|---|---|
 | [Calculating Driver Current Settings](./120decibell/calculating_driver_current.md) | 120decibell | Dec 27, 2021 |
 | [Chamber Temperature Exhaust Fan](./alchemyEngine/chamber_temperature_exhaust_fan.md) | alchemyEngine | Feb 23, 2021 |
