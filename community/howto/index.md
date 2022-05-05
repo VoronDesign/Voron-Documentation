@@ -27,7 +27,7 @@ Community-generated documentation for the many items that the official guide may
 | [Transferring Device History (Moonraker DB)](./kyleisah/transferring_machine_history.md) | kyleisah | Mar 22, 2022 |
 | [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya | Apr 15, 2022 |
 
-
+*Last Update excludes typos and grammatical corrections.
 
 ### External Links
 * [Print Tuning Guide](https://github.com/AndrewEllis93/Print-Tuning-Guide)
@@ -37,3 +37,5 @@ Community-generated documentation for the many items that the official guide may
 * [Drill and Counterbore Voron Bed](https://www.youtube.com/watch?v=N6EgYW_W3Js)
 * [Printed 80t pulley assembly](https://www.youtube.com/watch?v=W-mwJ2gfe9c)
 * [RAMPS 24V Conversion](https://www.youtube.com/watch?v=3eRuHNw-Uz)
+
+
