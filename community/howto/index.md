@@ -9,29 +9,28 @@ nav_order: 1
 
 Community-generated documentation for the many items that the official guide may not cover.
 
-| Guide Name / Link | Author |
-|---|---|
-| [Calculating Driver Current Settings](./120decibell/calculating_driver_current.md) | 120decibell |
-| [Chamber Temperature Exhaust Fan](./alchemyEngine/chamber_temperature_exhaust_fan.md) | alchemyEngine |
-| [IGUS Chain Ordering Guide](./amonkeybutler/igus_chain_ordering_guide.md) | AMonkeyButler |
-| [Installing a Bed Heater with RTV](./fulg/installing_heater_with_rtv.md) | Fulg |
-| [Installing BetterBootLoader on a SKR](./kage-chan/installing_better_bootloader.md) | kage-chan |
-| [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell |
-| [I wish I had known](./simonthecat/I_wish_I_had_known.md) | simonthecat |
-| [Automating Klipper MCU Updates](./drachenkatze/automating_klipper_mcu_updates.md) | Drachenkatze |
-| [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md) | DoubleT |
-| [Print Tuning Guide](./ellis/print-tuning-guide.md) | Ellis |
-| [Multi-Colour Prints with a Single Nozzle](./mikhail/multi-colour-prints-with-a-single-nozzle.md) | mikhail |
-| [Custom Raspberry Pi Boot Screens ](./samwiseg0/voron_rpi_bootscreen.md) | samwiseg0 |
-| [Klicky Probe as Endstop with constant Z Offset ](./Takuya/Klicky_Probe_AutoZ_Alternative.md) | Takuya & Clee |
-| [Setting Up and Calibrating Sensorless XY Homing](./clee/sensorless_xy_homing.md) | clee |
-| [Transferring Device History (Moonraker DB)](./kyleisah/transferring_machine_history.md) | kyleisah |
-| [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya |
+| Guide Name / Link | Author | Last Updated |
+|---|---|---|
+| [Calculating Driver Current Settings](./120decibell/calculating_driver_current.md) | 120decibell | Dec 27, 2021 |
+| [Chamber Temperature Exhaust Fan](./alchemyEngine/chamber_temperature_exhaust_fan.md) | alchemyEngine | Feb 23, 2021 |
+| [IGUS Chain Ordering Guide](./amonkeybutler/igus_chain_ordering_guide.md) | AMonkeyButler |  Feb 23, 2021 |
+| [Installing a Bed Heater with RTV](./fulg/installing_heater_with_rtv.md) | Fulg | Aug 17, 2021 |
+| [Installing BetterBootLoader on a SKR](./kage-chan/installing_better_bootloader.md) | kage-chan | Jan 30, 2021 |
+| [Z Endstop Configuration](./120decibell/z_endstop_configuration.md) | 120decibell | Nov 16, 2021 |
+| [I wish I had known](./simonthecat/I_wish_I_had_known.md) | simonthecat | Apr 7, 2021 |
+| [Automating Klipper MCU Updates](./drachenkatze/automating_klipper_mcu_updates.md) | Drachenkatze | Oct 28, 2021 |
+| [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md) | DoubleT | Jun 18, 2021 |
+| [Multi-Colour Prints with a Single Nozzle](./mikhail/multi-colour-prints-with-a-single-nozzle.md) | mikhail |  Nov 16, 2021 |
+| [Custom Raspberry Pi Boot Screens ](./samwiseg0/voron_rpi_bootscreen.md) | samwiseg0 | Mar 22, 2022 |
+| [Klicky Probe as Endstop with constant Z Offset ](./Takuya/Klicky_Probe_AutoZ_Alternative.md) | Takuya & Clee | Mar 1, 2022 |
+| [Setting Up and Calibrating Sensorless XY Homing](./clee/sensorless_xy_homing.md) | clee | Apr 11, 2022 |
+| [Transferring Device History (Moonraker DB)](./kyleisah/transferring_machine_history.md) | kyleisah | Mar 22, 2022 |
+| [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya | Apr 15, 2022 |
 
 
 
 ### External Links
-
+* [Print Tuning Guide](https://github.com/AndrewEllis93/Print-Tuning-Guide)
 * [Assembling Limit Switches](https://www.youtube.com/watch?v=fKyn02Ntz7A)
 * [Changing OctoPi Hostname](https://github.com/guysoft/OctoPi/wiki/Changing-the-hostname)
 * [Cleaning and greasing Linear Rails](https://www.youtube.com/watch?v=i_F7D4UgkWY) _Be sure to read the description first_
