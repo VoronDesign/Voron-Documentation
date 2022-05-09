@@ -5,7 +5,9 @@ nav_exclude: true
 
 For reference, here is the Color PIN diagram for the BTT Octopus Pro V1.0
 
-###### ![](./images/BTT-Octopus-Pro-V1.0-color-PIN.jpg) {#BTT-Octopus-Pro-V1.0-color-PIN_1}
+###### ![](./images/BTT-Octopus-Pro-V1.0-color-PIN_compress.jpg) {#BTT-Octopus-Pro-V1.0-color-PIN_compress}
+
+* The above image is compressed. For a better quality image use the next two hyperlinks below. The above image is just a placeholder.
 
 * If you want to open the above diagram, in a new tab of your web browser, and have the ability to zoom and download the diagram in PDF format then [click here](./images/BTT-Octopus-Pro-V1.0-Color-PIN-V4.0.pdf){:target="_blank" rel="noopener"}
 
