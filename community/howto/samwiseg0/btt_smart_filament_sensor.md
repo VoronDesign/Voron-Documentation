@@ -11,7 +11,7 @@ This is a guide to setup a [BIGTREETECH Smart Filament Sensor](https://github.co
 There are a few things you should do to ensure the sensor works effectively.
 
 1. Set your endstop as a pull-up.
-1. Take it entirely apart and lubricate everything especially the little wheel that sits in front of the sensor. The grease that comes with the sensor is not the best and can cause the filament to slide on the bearings instead of rotating them which is needed to drive the sensing wheel. 
+1. Take it entirely apart and lubricate everything especially the little wheel that sits in front of the sensor. The grease that comes with the sensor is not the best and can cause the filament to slide on the bearings instead of rotating them which is needed to drive the sensing wheel.
 1. Shim the interior so it can only move back and forth. See picture bellow.
   * **Green arrows** indicate where the sensor should be shimmed.
   * **Red arrows** indicate what the internal body motion should be constrained to.
@@ -35,4 +35,4 @@ runout_gcode:
     M117 Runout Detected!
 ```
 ## NOTE:
-**You will want to ensure that you have good pause and resume macros. Your pause macro may need to prime the nozzle slightly so there are no gaps where the printer resumes**
+**You will want to ensure that you have good pause and resume macros. Your resume macro may need to prime the nozzle slightly so there are no gaps where the printer resumes**
