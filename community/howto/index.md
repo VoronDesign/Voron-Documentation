@@ -22,7 +22,7 @@ Community-generated documentation for the many items that the official guide may
 | [Switchwire Screws Adjust](./doublet/switchwire_screws_adjust.md) | DoubleT | Jun 18, 2021 |
 | [Multi-Colour Prints with a Single Nozzle](./mikhail/multi-colour-prints-with-a-single-nozzle.md) | mikhail |  Nov 16, 2021 |
 | [Custom Raspberry Pi Boot Screens ](./samwiseg0/voron_rpi_bootscreen.md) | samwiseg0 | Mar 22, 2022 |
-| [Klicky Probe as Endstop with constant Z Offset ](./Takuya/Klicky_Probe_AutoZ_Alternative.md) | Takuya & Clee | Mar 1, 2022 |
+| [Klicky Probe as Endstop with constant Z Offset ](./Takuya/Klicky_Probe_AutoZ_Alternative.md) | Takuya & clee | Mar 1, 2022 |
 | [Setting Up and Calibrating Sensorless XY Homing](./clee/sensorless_xy_homing.md) | clee | Apr 11, 2022 |
 | [Transferring Device History (Moonraker DB)](./kyleisah/transferring_machine_history.md) | kyleisah | Mar 22, 2022 |
 | [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya | Apr 15, 2022 |
