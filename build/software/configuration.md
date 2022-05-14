@@ -49,7 +49,7 @@ Rename the downloaded file to `printer.cfg`
 ## Review printer.cfg
 There are a variety of entries in printer.cfg which will need to be edited to match your particular build.  Open it with your choice of editors, and go through it carefully.  While the key edits are highlighted below, you should read the entire file, and make sure you have found everything which needs your attention.
 
-**Klipper is CASE SENSITIVE.  Be sure everything except comments is LOWER CASE.**
+**Klipper is CASE SENSITIVE. Most keywords are lower case, make sure your phone doesn't capitalize keywords when they shouldn't be. **
 
 ## Required Changes
 
