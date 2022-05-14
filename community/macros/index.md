@@ -26,7 +26,7 @@ To see examples of the macros themselves, look at the standard printer.cfg for t
 
 ### Homing Override / Safe Z Home
 
-By default, all printers are setup with a `[homing_override]` configuration section that includes a gcode macro for the home process.  This macro is updating during thee setup process to define the Z endstop location.  However the homing override method always homes X and Y before homing Z.
+By default, all printers are setup with a `[homing_override]` configuration section that includes a gcode macro for the home process.  This macro is updating during the setup process to define the Z endstop location.  However the homing override method always homes X and Y before homing Z.
 
 The `[safe_z_home]` configuration allows for a Z homing process without requiring a repeat home of X and Y.  To enable safe z homing disable homing override and provide a X,Y coordinate of your Z endstop pin.  Be aware that enabling safe Z home will likely require a change in other processes / macros.
 
