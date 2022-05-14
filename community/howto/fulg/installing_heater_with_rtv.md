@@ -8,7 +8,9 @@ nav_exclude: true
 
 In some cases the bed heater may need / want to be installed with something other than the normally provided 468MP adhesive sheet.  This can be a heter ordered without the adhesive, a heater being reinstalled, or a desire to have the heater glued on above the rated temperature of the 468MP adhesive.
 
-_Note:  This guide is not intended for installing a heater that already came with a 468MP adhesive sheet installed. In the installation manual Keenovo recommends sealing the edges of the pad with RTV, that is not the same as using RTV as the main adhesive. In their case it is a safety measure to ensure the pad cannot peel off with time. Slathering RTV all over the pad is not helpful._
+
+## _Note:  This guide is NOT intended for installing a heater that already came with a 468MP adhesive sheet installed._
+
 
 In my experience 468MP starts to degrade when going over 115C, not that there is a risk of adhesive failure but that it starts to smell really bad, and that smell only gets worse with time. It is permanent. Not everyone is affected though so the exact cause is still unknown. 468MP has a shelf life, it is possible it is related to that (maybe I had old stock, maybe it depends on environmental factors...).
 
