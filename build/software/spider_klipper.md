@@ -36,6 +36,7 @@ to power your pi from some other source, such as a regular USB power supply
   * If your Spider was made prior to  `2021/06/23`, Set the Bootloader offset to `64KiB bootloader`
   * Set the Clock Reference to `12 MHz crystal`
   * Set the Communication interface to `USB (on PA11/PA12)`  (note: see Fysetc documentation if you intend to use UART rather than USB)
+  * Ensure that GPIO pins to set at startup includes "PB0" (Spider 1.0/1.1) or "PA13" (Spider 2.2)
 
    ![](./images/spider_klipper_menuconfig.png)
 

@@ -32,8 +32,10 @@ In the menu structure there are a number of items to be selected.
 
 ![](./images/klipper_turbo_selection.png)
 
+* Ensure that "Enable extra low level configuration options" is enabled
 * Ensure that "Target board uses Smoothieware bootloader" is enabled
 * Ensure that "Use USB for communication (instead of serial)" is enabled
+* Ensure that GPIO pins to set at micro-controller startup includes "P2.4"
 
 ![](./images/klipper_menuconfig.png)
 

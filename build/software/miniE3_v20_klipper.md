@@ -30,7 +30,7 @@ In the menu structure there are a number of items to be selected.
 * Ensure that the Clock Reference is set to '8 Mhz'
 * Ensure that "Enable extra low-level configuration options" is selected.
 * Ensure that "Use USB for communication (instead of serial)" is selected.
-* Ensure that "GPIO pins to set at micro-controller startup" includes '!PA14'.
+* Ensure that "GPIO pins to set at micro-controller startup" includes '!PA14,PC7'.
 
 ![](./images/miniE3_v20_klipper_menuconfig.png)
 

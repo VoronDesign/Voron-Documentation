@@ -29,7 +29,8 @@ In the menu structure there are a number of items to be selected.
 * Ensure that the Processor model is set to "STM32F407"
 * Ensure that the Bootloader offet is set to "32KiB bootloader"
 * Ensure that Clock Reference is set to "8 MHz crystal"
-* Ensure that  "Use USB for communication (instead of serial)" is selected
+* Ensure that the communication interface is set to "USB on PA11/PA12"
+* Ensure that GPIO pins to set at startup includes "PF8"
 
 ![](./images/flyf407zg_klipper_menuconfig.png)
 
