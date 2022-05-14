@@ -21,9 +21,17 @@ Check out [Nero's video on gantry racking](https://www.youtube.com/watch?v=cOn6u
 
 This value equals ~2lb of tension on XY, which is on the lower end of the range but should be a good initial setting (without stretching your belts too tight). The phone app I am using is called Sound Spectrum Analysis on iOS, the image below shows the output (not of my belts).
 
-[Watch this video](./images/belt-tension.mov?raw=true)
+
 
 ![](./images/sound-spectrum-belt.jpg)
+
+### Watch this video
+
+
+
+https://user-images.githubusercontent.com/54855101/163674612-930d737d-0ab3-4056-a2b9-def2939db61f.mp4
+
+
 
 ## Bed Mesh (Legacy, Trident, 2.4)
 
