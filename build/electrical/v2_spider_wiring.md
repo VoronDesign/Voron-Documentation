@@ -4,7 +4,7 @@ title: "Voron V2 - Fysetc Spider Wiring"
 nav_exclude: true
 ---
 
-# Voron V2 - Fysetc Spider Wiring
+# Voron V2 - Fysetc Spider v1.1 Wiring
 
 ## Initial Preparation
 
@@ -50,8 +50,8 @@ Set jumpers as shown:
 
 ### Control
  * Voron Design recommends using USB to control the Spider, which simply requires connecting a USB-A to USB-C cable between the Spider and Pi. 
- * The option does also exist to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the [fysetc documentation](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Switch%20RPI%20hardware%20uart.md)
- 
+ * The option does also exist to use a UART connection from the Pi header, in place of the USB.  If you prefer this option, please see the [fysetc](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/firmware/Klipper/Connect%20RPI%20uart.md) documentation
+
 ## mini 12864 Display
 
 * *spider Rev 1.0 only*: the EXP1 & EXP2 header labels are swapped. Connect  EXP1 (display) to EXP2(spider), and EXP2 (display) to EXP1 (spider).  On the Spider 1.1 or later: connect EXP1->EXP1, and EXP2->EXP2
