@@ -253,7 +253,7 @@ It will perform a PID calibration routine that will last about 5 minutes. Once i
 Depending on the printer type and capability, the following command(s) are used:
 
 * V0: `BED_SCREWS_ADJUST`
-* V1, SW, Legacy: `Z_TILT_ADJUST`, `SCREWS_TILT_CALCULATE`
+* V1, Legacy: `Z_TILT_ADJUST`, `SCREWS_TILT_CALCULATE`
 * V2: `QUAD_GANTRY_LEVEL`
 
 ### Bed Screws (V0)
