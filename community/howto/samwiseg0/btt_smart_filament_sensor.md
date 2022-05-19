@@ -10,11 +10,11 @@ This is a guide to setup a [BIGTREETECH Smart Filament Sensor](https://github.co
 
 There are a few things you should do to ensure the sensor works effectively.
 
-1. Set your endstop as a pull-up.
+1. Set your endstop as a pull-up (put a ^ before the pin).
 1. Take it entirely apart and lubricate everything especially the little wheel that sits in front of the sensor. The grease that comes with the sensor is not the best and can cause the filament to slide on the bearings instead of rotating them which is needed to drive the sensing wheel.
 1. Shim the interior so it can only move back and forth. See picture bellow.
-  * **Green arrows** indicate where the sensor should be shimmed.
-  * **Red arrows** indicate what the internal body motion should be constrained to.
+    * **Green arrows** indicate where the sensor should be shimmed.
+    * **Red arrows** indicate what the internal body motion should be constrained to.
 1. Ensure that the reverse bowden is contiguous all the way from the toolhead to the sensor. Any open/unconstrained filament will cause it to false detect
 1. Sensorless homing/StallGuard is known to interfere with the sensor if the diag pin is set on the MCU where the filament sensor is connected.
 
@@ -22,10 +22,10 @@ There are a few things you should do to ensure the sensor works effectively.
   <img width="400" src="./Images/btt_shim.png">
 </p>
 
-## Example config
+## Example config:
 ```ini
 [filament_motion_sensor SFS_T0]
-detection_length: 7.00
+detection_length: 10.00 ; This can be adjusted to your desired level of sensitivity. 10 is a safe value.
 extruder: extruder
 switch_pin: ^PG11
 pause_on_runout: True
@@ -34,5 +34,5 @@ pause_delay: 0.5
 runout_gcode:
     M117 Runout Detected!
 ```
-## NOTE:
-**You will want to ensure that you have good pause and resume macros. Your resume macro may need to prime the nozzle slightly so there are no gaps where the printer resumes**
+## WARNING:
+**You will want to ensure that you have good pause and resume macros. Your resume macro may need to prime the nozzle slightly so there are no gaps where the printer resumes. Ellis has good examples on [their GitHub](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/040d31c6daaed23c2a1a353545e7ee442a232f32/articles/useful_macros.md)**
