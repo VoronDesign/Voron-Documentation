@@ -88,7 +88,7 @@ There are multiple options for getting this firmware file installed onto your Oc
 * Does NOT require an sdcard
 
 1. Power off Octopus
-2. Install a jumper between BOOT0 and 3.3V
+2. Install the BOOT0 jumper
 3. Connect Octopus & Pi via USB-C
 4. Power on Octopus
 5. From your ssh session, run `lsusb`. and find the ID of the dfu device. The device is typically named `STM Device in DFU mode`.
