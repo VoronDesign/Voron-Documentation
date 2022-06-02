@@ -37,8 +37,7 @@ https://user-images.githubusercontent.com/54855101/163674612-930d737d-0ab3-4056-
 
 Generally when your Voron is first built, Bed Mesh is not necessary. However, it can still be used as an analysis tool to check assembly and see if there's anything obviously incorrect--just don't run SAVE_CONFIG at the end of your BED_MESH_CALIBRATE, and run BED_MESH_CLEAR after running bed mesh.
 
-The [bed_mesh] configuration options can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md) described in detail. A sample configuration for your Voron printer can be found [here](https://github.com/VoronDesign/Voron-1/blob/328113babcdb4934c461beb82b7f3b4dbeeb7eb5/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg#L464).
-
+The [bed_mesh] configuration options can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md) described in detail. A sample configuration for your Voron printer can be found below.
 ```python
 [bed_mesh]
 speed: 300
