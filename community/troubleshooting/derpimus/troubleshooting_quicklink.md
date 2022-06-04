@@ -25,4 +25,4 @@ Fysetc Spider 2.2 | [Pinout](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/i
 
 [Print Tuning Guide](https://github.com/AndrewEllis93/Print-Tuning-Guide) by Ellis
 
-[G-Code Reference](https://www.klipper3d.org/G-Codes.html) and [Configuration reference](https://www.klipper3d.org/Config_Reference.html) for Klipper
+[G-Code Reference](https://www.klipper3d.org/G-Codes.html) and [Configuration Reference](https://www.klipper3d.org/Config_Reference.html) for Klipper
