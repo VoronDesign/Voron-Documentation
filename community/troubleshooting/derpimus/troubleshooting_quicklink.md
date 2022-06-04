@@ -20,7 +20,9 @@ SKR Pico | [Pinout](https://github.com/bigtreetech/SKR-Pico/blob/master/Hardware
 Fysetc Spider 1.x | [Pinout](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/images/Spider_V1.0_Pinout.jpg) | [Schematic](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/hardware/Spider%20V1.0C%20SCH.pdf) 
 Fysetc Spider 2.2 | [Pinout](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/images/Spider_V2.2_Pinout.jpg) | [Schematic](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/hardware/Spider%20V2.2%20SCH.pdf)
 
-## Tools
+## Tools & Miscellaneous Links
 [Probe Accuracy Testing Suite](https://github.com/sporkus/probe_accuracy_tests/tree/master) by sporkus/foonietunes
 
 [Print Tuning Guide](https://github.com/AndrewEllis93/Print-Tuning-Guide) by Ellis
+
+Klipper [G-Code Reference](https://www.klipper3d.org/G-Codes.html) and [Configuration reference](https://www.klipper3d.org/Config_Reference.html)
