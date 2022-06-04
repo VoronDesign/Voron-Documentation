@@ -9,8 +9,9 @@ This guide is
 # Troubleshooting 
 
 ## Board Pinouts & Schematics
----
+
 Board | Pinout | Schematic
+--- | --- | ---
 SKR Mini E3 V2 | asdsa | asdsa 
 BTT Octopus | ads | asdsa 
 BTT Octopus Pro | asdas | asdsa 
