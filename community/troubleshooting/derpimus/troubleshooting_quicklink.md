@@ -21,4 +21,4 @@ Fysetc Spider 1.x | [Pinout](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/i
 Fysetc Spider 2.2 | [Pinout](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/images/Spider_V2.2_Pinout.jpg) | [Schematic](https://github.com/FYSETC/FYSETC-SPIDER/blob/main/hardware/Spider%20V2.2%20SCH.pdf)
 
 ## Tools
-[Probe Accuracy Testing Suite](https://github.com/sporkus/probe_accuracy_tests/tree/master) by porkus
+[Probe Accuracy Testing Suite](https://github.com/sporkus/probe_accuracy_tests/tree/master) by sporkus
