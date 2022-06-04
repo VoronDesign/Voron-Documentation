@@ -11,9 +11,9 @@ This guide is
 ## Board Pinouts & Schematics
 ---
 Board | Pinout | Schematic
-SKR Mini E3 V2 |
-BTT Octopus |
-BTT Octopus Pro |
-SKR 1.4 |
-Fysetc Spider 1.x |
-Fysetc Spider 2.2 |
+SKR Mini E3 V2 | asdsa | asdsa 
+BTT Octopus | ads | asdsa 
+BTT Octopus Pro | asdas | asdsa 
+SKR 1.4 | asdsa | asdsa 
+Fysetc Spider 1.x | asdsa | asdsa 
+Fysetc Spider 2.2 | sadas | sadas
