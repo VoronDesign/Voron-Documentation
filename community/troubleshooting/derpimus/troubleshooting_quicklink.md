@@ -3,10 +3,9 @@ layout: default
 title: "Troubleshooting Quick-links"
 nav_exclude: true
 ---
+# Troubleshooting Quick-links
+This document is a curated set of links
 
-This guide is
-
-# Troubleshooting 
 
 ## Board Pinouts & Schematics
 
