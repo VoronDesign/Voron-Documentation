@@ -4,7 +4,7 @@ title: "Troubleshooting Quick-links"
 nav_exclude: true
 ---
 # Troubleshooting Quick-links
-This document is a curated set of links
+This document is a curated set of links useful in the diagnosis of Voron 3D printers.
 
 
 ## Board Pinouts & Schematics
