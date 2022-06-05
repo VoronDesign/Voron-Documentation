@@ -41,7 +41,7 @@ These are the options specified to have Misumi tap and drill the hex key access 
 
 No, you can substitute ball spring post-assembly nuts from Ali just as easily in 99% of the manual.
 
-### Why do you recommend Chinese linear rails vs a Hiwin or THK genuine rail?
+### Why do you recommend generic linear rails vs a Hiwin or THK genuine rail?
 
 - We are not imparting cutting forces onto the carriages on the rails (ie: side loads), so the low preload and ok tolerances are good for this application
 - A set of 7 V2 rails is the cost of one genuine mid-grade THK rail.
@@ -53,7 +53,7 @@ No, the Voron V1/V2 are not designed for anything but a MGN9H.  The MGN12 rail c
 
 ### Why does VORON-Design not use IGUS products?
 
-IGUS bushings exhibit a phenomenon called stiction, therefore in small movements the bushings will actually stick instead of gliding, at small detail, this causes detrimental issues. The amount of slop required is unfavorable, tolerances are quite poor. Bushing life is low for the price when compared to Misumi and even standard chinese offerings.
+IGUS bushings exhibit a phenomenon called stiction, therefore in small movements the bushings will actually stick instead of gliding, at small detail, this causes detrimental issues. The amount of slop required is unfavorable, tolerances are quite poor. Bushing life is low for the price when compared to Misumi and even generic offerings.
 
 ### I cannot find MIC6 Aluminum anywhere, is there something else I can use?
 
