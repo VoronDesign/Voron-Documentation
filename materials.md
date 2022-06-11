@@ -13,19 +13,19 @@ When determining what materials to create the Voron printed parts from, there ar
 
 ## PLA
 
-PLA has a glass temperature of around 55C - 60C. It is very stiff and has a low ductility (ability of a material to have its shape changed without losing strength or breaking).  It is not recommended for Voron parts.  This is due to both the low temperature tolerance and the low ductility that can occasionally cause unexpected cracking.  The high temperature variant HTPLA is viable for temperature tolerance but is expensive and still has issues with ductility and risk of cracking.  PLA is entirely acceptable for skirts and panel clips as they do not see the same high temperatures or forces.
+PLA has a glass transition temperature of around 55C - 60C. It is very stiff and has a low ductility (ability of a material to have its shape changed without losing strength or breaking).  It is not recommended for Voron parts.  This is due to both the low temperature tolerance and the low ductility that can occasionally cause unexpected cracking.  The high temperature variant HTPLA is viable for temperature tolerance but is expensive and still has issues with ductility and risk of cracking.  PLA is entirely acceptable for skirts and panel clips as they do not see the same high temperatures or forces.
 
 ## PETG
 
-PETG has a glass temperature of around 70-80C. It has moderate stiffness depending on the additives and typically high ductility.  It is not recommended for Voron parts due to the low temperature tolerance. The thermal properties do not change with additives such as carbon fiber.  Some have successfully built a Voron in PETG and used that to reprint in ABS but the part failure rate in that situation is very high.  PETG is acceptable for skirts and panel clips.
+PETG has a glass transition temperature of around 70-80C. It has moderate stiffness depending on the additives and typically high ductility.  It is not recommended for Voron parts due to the low temperature tolerance. The thermal properties do not change with additives such as carbon fiber.  Some have successfully built a Voron in PETG and used that to reprint in ABS but the part failure rate in that situation is very high.  PETG is acceptable for skirts and panel clips.
 
 ## ABS
 
-ABS has a glass temperature of around 90-100C. It had moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  Both of the variants ASA and ABS+ are also fully supported.
+ABS has a glass transition temperature of around 90-100C. It had moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  ASA is fully supported as well due to the very similar technical properties. ABS+ while supported has a glass transition temperature thats closer to 75C.
 
 ## Nylon
 
-PA6 nylon has a glass temperature of around 70-80C. It has moderate stiffness and moderate ductility.  It is not recommended for Voron parts due to the tendency of nylon PA6 to creep (slowly deform) under the constant pressure exerted by the bolts clamping on the parts. PA12 nylon has the same or very similar temperature rating and a similar stiffness and ductility, but it is a viable option for Voron parts as it exhibits only minimal creep under pressure. However it is quite expensive and is more commonly found in SLS processes than FDM.
+PA6 nylon has a glass transition temperature of around 70-80C. It has moderate stiffness and moderate ductility.  It is not recommended for Voron parts due to the tendency of nylon PA6 to creep (slowly deform) under the constant pressure exerted by the bolts clamping on the parts. PA12 nylon has the same or very similar temperature rating and a similar stiffness and ductility, but it is a viable option for Voron parts as it exhibits only minimal creep under pressure. However it is quite expensive and is more commonly found in SLS processes than FDM.
 
 ## Polycarbonate
 
