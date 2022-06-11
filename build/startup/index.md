@@ -172,7 +172,7 @@ Depending on bed location, the positional parameters may need to be adjusted to 
 
 If X and Y offsets are less than 1mm and 0,0 is over the bed, nothing needs to be changed.
 
-If X and Y offsets are within 5mm or 0,0 is past the bed, the *postition_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* and *position_endstop* for both *[stepper_x]* and *[stepper_y]* as follows:
+If X and Y offsets are within 5mm or 0,0 is past the bed, the *position_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* and *position_endstop* for both *[stepper_x]* and *[stepper_y]* as follows:
 
 * For X: New = Current - Get Position X (M114) Result
 * For Y: New = Current - Get Position Y (M114) Result
