@@ -17,19 +17,19 @@ PLA has a glass temperature of around 55C - 60C. It is very stiff and has a low 
 
 ## PETG
 
-PETG has a glass temperature of around 55C - 60C. It has moderate stiffness depending on the additives and typically high ductility.  It is not recommended for Voron parts due to the low temperature tolerance. The thermal properties do not change with additives such as carbon fiber.  Some have successfully built a Voron in PETG and used that to reprint in ABS but the part failure rate in that situation is very high.  PETG is acceptable for skirts and panel clips.
+PETG has a glass temperature of around 70-80C. It has moderate stiffness depending on the additives and typically high ductility.  It is not recommended for Voron parts due to the low temperature tolerance. The thermal properties do not change with additives such as carbon fiber.  Some have successfully built a Voron in PETG and used that to reprint in ABS but the part failure rate in that situation is very high.  PETG is acceptable for skirts and panel clips.
 
 ## ABS
 
-ABS has a glass temperature of around 90C. It had moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  Both of the variants ASA and ABS+ are also fully supported.
+ABS has a glass temperature of around 90-100C. It had moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  Both of the variants ASA and ABS+ are also fully supported.
 
 ## Nylon
 
-PA6 nylon has a high glass temperature of 180C. It has moderate stiffness and moderate ductility.  It is not recommended for Voron parts due to the tendency of nylon PA6 to creep (slowly deform) under the constant pressure exerted by the bolts clamping on the parts. PA12 nylon has the same temperature rating and a similar stiffness and ductility, but it is a viable option for Voron parts as it exhibits only minimal creep under pressure. However it is quite expensive and is more commonly found in SLS processes than FDM.
+PA6 nylon has a glass temperature of around 70-80C. It has moderate stiffness and moderate ductility.  It is not recommended for Voron parts due to the tendency of nylon PA6 to creep (slowly deform) under the constant pressure exerted by the bolts clamping on the parts. PA12 nylon has the same or very similar temperature rating and a similar stiffness and ductility, but it is a viable option for Voron parts as it exhibits only minimal creep under pressure. However it is quite expensive and is more commonly found in SLS processes than FDM.
 
 ## Polycarbonate
 
-Polycarbonate (PC) and one of the various blends and/or additives (e.g. PC-ABS, PC-CF) have a high glass temperature of close to 150C but have a very high stiffness and low ductility.  Some blends such as PC-ABS have slightly lower stiffness and higher ductility but not by huge amounts.  PC and PC blends are not recommended for Voron parts due to the risk of sudden cracking.  However some have successfully printed and used toolheads made from PC blends as the mechanical loads are low and the need for thermal tolerance is high.
+Polycarbonate (PC) and one of the various blends and/or additives (e.g. PC-ABS, PC-CF) have a high glass temperature of 110-130C but have a very high stiffness and low ductility but not by huge amounts.  Some blends such as PC-ABS have slightly lower stiffness and higher ductility.  PC and PC blends are not recommended for Voron parts due to the risk of sudden cracking.  However some have successfully printed and used toolheads made from PC blends as the mechanical loads are low and the need for thermal tolerance is high.
 
 ## Resin
 
