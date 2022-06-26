@@ -10,11 +10,11 @@ This documentation would not exist without contributions from the following peop
 
 * 120Decibel
 * Shiftingtech
-* Clee
-* Dunar
+* clee
+* dunar
 * CMRNY
 * T4KUUY4
-* Raymond
+* ray
 * Drachenkaetzchen
 * KiloQbit
 * Tetsunosuke
