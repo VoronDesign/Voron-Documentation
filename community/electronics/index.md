@@ -7,7 +7,7 @@ nav_order: 3
 
 # Alternate Electronics
 
-Community-generated documentation for alternate (non-spec) electronics and related configurations..
+Community-generated documentation for alternate (non-spec) electronics and related configurations.
 
 | Guide Name / Link | Author |
 |---|---|
@@ -16,6 +16,7 @@ Community-generated documentation for alternate (non-spec) electronics and relat
 | [Hall Effect Endstop Setup](./120decibell/hall_effect_endstop_setup.md) | 120decibell |
 | [PT100 MAX31865 Setup](./xbst_/PT100.md) | xbst_ |
 | [MKS Makerbase Monster8 v1.0](./Deuce/Voron2_Monster8_v1.0_Config.md) | Deuce |
+| [Trident - MKS Monster 8 V1.0 Wiring for both SPI and UART modes](./GadgetAngel/tri_monster8_wiring.md) | GadgetAngel |
 
 ### External Links
 
