@@ -8,18 +8,25 @@ nav_exclude: true
 
 This documentation would not exist without contributions from the following people:
 
-* Eddie
-* Chron
-* Lakabos
-* Fermion
-* Timmitt
-* Insurgus
-* Defib
-* Nemb
-* Mjoaris
+* 120Decibel
 * Shiftingtech
-* Failopen
-* Dunar
+* clee
+* dunar
+* CMRNY
+* T4KUUY4
+* ray
+* Drachenkaetzchen
+* KiloQbit
+* Tetsunosuke
+* kyleisah
+* samwiseg0
+* RealDeuce
+* Nemgrea
+* Ellis
+* mikhailbot
+* Bigtreetech
 * Fulg
-* RCF
+* Sorvis
+* Bart
 * _many others_
+
