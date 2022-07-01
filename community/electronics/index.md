@@ -16,6 +16,7 @@ Community-generated documentation for alternate (non-spec) electronics and relat
 | [Hall Effect Endstop Setup](./120decibell/hall_effect_endstop_setup.md) | 120decibell |
 | [PT100 MAX31865 Setup](./xbst_/PT100.md) | xbst_ |
 | [MKS Makerbase Monster8 v1.0](./Deuce/Voron2_Monster8_v1.0_Config.md) | Deuce |
+| [Trident - BTT Octopus Pro V1.0 Wiring for both SPI and UART modes](./GadgetAngel/tri_octopus_pro_wiring.md) | GadgetAngel |
 
 ### External Links
 
