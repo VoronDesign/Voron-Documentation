@@ -50,7 +50,15 @@ Set jumpers as shown:
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
 ![](./images/v2_octopus_wiring.png)
- 
+
+## SSR Wiring
+
+* Wire colors will vary depending on your location.
+
+
+![](./images/btt-octopus-ssr-wiring.png)
+<br>
+<br>
 ## mini 12864 Display
 * See [the mini12864 guide](./mini12864_klipper_guide.md)
 
