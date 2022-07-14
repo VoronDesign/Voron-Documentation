@@ -6,6 +6,10 @@ nav_exclude: true
 
 # Octopus(Pro) Klipper Firmware
 
+<div><b>WARNING:</b>  Do not leave HE0 or HE1 connected.
+ <p>There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we recommend leaving the heaters disconnected until after loading the klipper firmware</p></div>
+{: .warning }
+
 The firmware update process for both Octopus and Octopus Pro is the same so the guides have been combined.
 
 ### Prerequisites
