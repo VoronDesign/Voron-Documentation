@@ -35,7 +35,7 @@ Set jumpers as shown:
 * Connect the Z3 motor to MOTOR5 (v2 only)
 * Connect the extruder motor to MOTOR6
 * Connect the hot end heater to HE0  ( do not leave connected )
-* Connect the bed SSR (DC Control Side) to HE1 ( do not leave )
+* Connect the bed SSR (DC Control Side) to HE1 ( do not leave connected )
 * Connect the part cooling fan to FAN0
 * Connect the hot end fan to FAN1
 * Connect the controller fans to FAN2
