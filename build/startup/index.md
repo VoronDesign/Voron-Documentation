@@ -254,6 +254,7 @@ Depending on the printer type and capability, the following command(s) are used:
 
 * V0: `BED_SCREWS_ADJUST`
 * V1, Legacy: `Z_TILT_ADJUST`, `SCREWS_TILT_CALCULATE`
+* Trident: `Z_TILT_ADJUST`
 * V2: `QUAD_GANTRY_LEVEL`
 
 ### Bed Screws (V0)
