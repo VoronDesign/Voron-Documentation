@@ -3,8 +3,8 @@ name: Voron Documentation
 description: Voron Official and Community Documentation
 logo: "/images/voron_design_logo.png"
 markdown: kramdown
-remote_theme: pmarsceill/just-the-docs
-color_scheme: voron-dark
+remote_theme: just-the-docs/just-the-docs
+color_scheme: voron_dark
 search_enabled: true
 search.button: true
 aux_links:
@@ -12,4 +12,15 @@ aux_links:
     - "https://github.com/VoronDesign/Voron-Documentation"
   "VoronDesign Home":
     - "https://vorondesign.com"
-
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
