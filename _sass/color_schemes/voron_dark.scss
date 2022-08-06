@@ -136,3 +136,21 @@ button.btn.theme-toggle[id=theme-toggle]{
   background-color: $mytogglebtnbg;
   color: $mytogglebtncolor;
 }
+
+.warning {
+  padding: 10px;
+  background-color: darken($voron-red-80, 30%);
+  border-width: 2px;
+  border-color: $voron-red-50;
+  border-style: solid;    
+  border-radius: 20px;
+}
+.summary {
+  padding: 10px;
+  background-color: $grey-dk-500;
+  border-width: 2px;
+  border-color: $voron-red-70;
+  border-style: solid;
+  border-radius: 20px;
+
+} 

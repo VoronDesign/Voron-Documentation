@@ -111,3 +111,21 @@ $border-color: $grey-lt-400;
 a:link {
   font-weight: 700;
 }
+.warning {
+  padding: 10px;
+  background-color: $voron-red-70;
+  border-width: 2px;
+  border-color: $voron-red-50;
+  border-style: solid;    
+  border-radius: 20px;
+} 
+.summary {
+  padding: 10px;
+  background-color: $grey-dk-000;
+  border-width: 2px;
+  border-color: $blue-300;
+  border-style: solid;
+  border-radius: 20px;
+
+} 
+
