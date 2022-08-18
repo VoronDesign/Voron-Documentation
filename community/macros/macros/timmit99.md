@@ -19,7 +19,7 @@ gcode:
     {% set pixelCount= params.COUNT|default(0)|int %}
     
     {% for index in range(indexCount,indexCount + pixelCount) %}
-        SET_LED LED={ledName} RED={colorRed} GREEN={colorGreen} BLUE={colorBlue} WHITE={colorWhite} INDEX={index} TRANSMIT=1
+        SET_LED LED={ledName} RED={colorRed} GREEN={colorGreen} BLUE={colorBlue} WHITE={colorWhite} INDEX={index} TRANSMIT={ '1' if index==(indexCount+pixelCount-1) else '0' }
     {% endfor %}
 ```
 <!-- {% endraw %} -->
