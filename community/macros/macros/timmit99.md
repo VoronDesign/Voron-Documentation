@@ -48,13 +48,14 @@ gcode:
    
 ```ini
 [gcode_macro DELAY]
-description: Send `DELAY [H=<value>] [M=<value>] [S=<value>] ` to set the Hours, Minutes, and Seconds for a delay. Passing no paramaters will not have any delay.
+description: Send `DELAY [H=<value>] [M=<value>] [S=<value>] [P=<value>] ` to set the Hours, Minutes, and Seconds for a delay. Passing no paramaters will not have any delay.
 gcode:
 	{% set Hours   = params.H|default(0)|int %}
 	{% set Minutes = params.M|default(0)|int %}
 	{% set Seconds = params.S|default(0)|int %}
+	{% set Milliseconds = params.P|default(0)|int %}
 
-	{% set TIME = ((Hours*3600) + (Minutes*60) + (Seconds))*1000|int %}
+	{% set TIME = (((Hours*3600) + (Minutes*60) + (Seconds))*1000)+Milliseconds|int %}
 	
 	{action_respond_info('Delaying for {} milliseconds'.format(TIME))}
 	G4 P{TIME}
