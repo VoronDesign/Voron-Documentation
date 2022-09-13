@@ -66,9 +66,8 @@ Add another section with a new macro.
 
 ```ini
 [gcode_macro M141]
-default_parameter_S: 0
-default_parameter_P: 0
 gcode:
+    {% set s = params.S|default(0)|int %}
     SET_TEMPERATURE_FAN_TARGET temperature_fan="chamber" target={S}
 ```
 
