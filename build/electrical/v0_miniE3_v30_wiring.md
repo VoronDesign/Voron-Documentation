@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## MCU
 
-#See the below diagram for connector locations.
+# See the below diagram for connector locations.
 
 * Plug in stepper motors for X, Y, Z, and E in positions XM, YM, ZAM, and EM
 * Plug Hot End thermistor to thermistor TH0 (PA0)
