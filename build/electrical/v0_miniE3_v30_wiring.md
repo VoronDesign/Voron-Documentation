@@ -6,9 +6,7 @@ nav_exclude: true
 
 # Voron V0.1 - SKR mini E3 V3.0 Wiring
 
-# Microcontroller Connections
-
-## See the below diagram for connector locations.
+## Microcontroller Connections
 
 * Plug in stepper motors for X, Y, Z, and E in positions XM, YM, ZAM, and EM
 * Plug Hot End thermistor to thermistor TH0 (PA0)
@@ -24,5 +22,7 @@ nav_exclude: true
 * Connect Z end stop to Z-STOP connector (PC2)
 * Wire V+ and V- from the DC power supply to VIN and GND. Double check the polarity of your connections.
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
+
+## See the below diagram for connector locations.
 
 ![](./images/v0-miniE3-v30-mcu.png)
