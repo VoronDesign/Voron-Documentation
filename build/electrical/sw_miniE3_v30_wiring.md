@@ -1,0 +1,31 @@
+---
+layout: default
+title: "Voron Switchwire - SKR mini E3 V3.0 Wiring"
+nav_exclude: true
+---
+
+# Voron Switchwire - SKR mini E3 V3.0 Wiring
+
+Do not plug or unplug any connections while power is applied to the system. You can kill the circuitry that drives the part or even the MCU pins, which requires a board replacement.
+
+## Microcontroller Connections
+
+* Plug in stepper motors for X, Y, Z, and E in positions XM, YM, ZAM, and EM
+* Plug Hot End thermistor to thermistor TH0 (PA0)
+* Plug Hot End heater in to E0 (PC8)
+* Plug Hot End Fan in to FAN0 (PC6)- make sure JST connector polarity is correct.
+* Plug Part Cooling Fan in to HB (PC9)- make sure JST connector polarity is correct.
+* Plug Bed Thermistor in to THB (PC4)
+* If using mains voltage to heat bed, connect SSR control pins to PWR-DET connector (PC12)
+  * Crydom SSR: SSR Input + => PC12, SSR Input => GND
+  * MagicStudios / Knacro 1-Channel SSR: CH1 => PC12, DC- => GND, DC+ => NC
+* Connect X end stop to X-STOP connector (PC0)
+* Connect Y end stop to Y-STOP connector (PC1)
+* Connect Z probe +V to the 24V Vin terminal.
+* Connect Z probe GND and signal (with BAT85 diode) into Z stop. 
+* Wire V+ and V- from the DC power supply to VIN and GND. Double check the polarity of your connections.
+* Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
+
+## See the below diagram for connector locations.
+
+![](./images/v0-miniE3-v30-mcu.png)
