@@ -6,6 +6,8 @@ nav_exclude: true
 
 # Voron V0.1 - SKR mini E3 V3.0 Wiring
 
+Do not plug or unplug any connections while power is applied to the system. You can kill the circuitry that drives the part or even the MCU pins, which requires a board replacement.
+
 ## Microcontroller Connections
 
 * Plug in stepper motors for X, Y, Z, and E in positions XM, YM, ZAM, and EM
