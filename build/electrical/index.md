@@ -149,7 +149,7 @@ The X/Y endstop connector can be strapped to the bottom of the joint. Just make 
 Follow the links to the wiring configuration guides specific to your printer and controller selection.  There are other controllers on the market that may work (such as Duet), but those are not commonly used so standard configurations have not been developed.
 
 ### Voron 0
-* [V0 - mini e3 V2.0](./v0_miniE3_v30_wiring.md)
+* [V0 - mini e3 V3.0](./v0_miniE3_v30_wiring.md)
 * [V0 - mini e3 V2.0](./v0_miniE3_v20_wiring.md)
 * [V0 - mini e3 V1.2](./v0_miniE3_v12_wiring.md)
 * [V0 - SKR Pico](./v0_skr_pico_wiring.md)
@@ -171,7 +171,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V2 - MKS Makerbase Monster8](./v2_monster8_wiring.md)
 
 ### Voron Switchwire
-* [SW - mini e3 v3.0](./sw_miniE3_v30_wiring.md)
+* [SW - mini e3 V3.0](./sw_miniE3_v30_wiring.md)
 * [SW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
 * [SW - Einsy Rambo](./sw_einsy_rambo_wiring.md)
 
