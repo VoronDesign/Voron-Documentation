@@ -179,6 +179,8 @@ If X and Y offsets are within 5mm or 0,0 is past the bed, the *position_max* val
 * For X: New = Current - Get Position X (M114) Result
 * For Y: New = Current - Get Position Y (M114) Result
 
+Make sure to also check the XY coordinates of the Z homing routine in your configuration file to be at within the value of your position max for X and Y. If you do not you will not be able to run Z homing in the next step if your movement region is smaller than the default. 
+
 *If the Z endstop pin location has been previously defined, be sure to re-follow the process to set the Z endstop pin location (if applicable).*
 
 If anything is updated in the printer configuration file, save the file and restart Klipper using `FIRMWARE_RESTART`.
