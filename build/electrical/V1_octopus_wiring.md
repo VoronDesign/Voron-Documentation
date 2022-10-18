@@ -48,7 +48,7 @@ Set jumpers as shown:
 * Connect the V+ and 0V wires on the probe to PROBE
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
-![](./images/trident_octopus_wiring.png)
+![](./images/trident_octopus_wiring_no_stepstick.png)
 
 ## SSR Wiring
 
