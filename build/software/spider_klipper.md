@@ -56,12 +56,13 @@ There are multiple options for getting this firmware file installed onto your Sp
 2. Install a jumper between BT0 and 3.3V
 3. Connect Spider & Pi via USB
 4. Power on Spider
-5. From your ssh session, run `lsusb`. and find the ID of the DFU device.
-6. Run `make flash FLASH_DEVICE=1234:5678`, replacing 1234:5678 with the ID from the previous step
-7. Power off the Spider
-8. Remove the jumper from BT0/3.3V
-9. Power up the Spider
-10. You can confirm that the flash was successful by running `ls /dev/serial/by-id`.  If the flash was successful, this should now show a klipper device, similar to:
+5. From your ssh session, run `cd ~/klipper` to make sure you are in the correct directory
+6. Run `lsusb`. and find the ID of the DFU device.
+7. Run `make flash FLASH_DEVICE=1234:5678`, replacing 1234:5678 with the ID from the previous step
+8. Power off the Spider
+9. Remove the jumper from BT0/3.3V
+10. Power up the Spider
+11. You can confirm that the flash was successful by running `ls /dev/serial/by-id`.  If the flash was successful, this should now show a klipper device, similar to:
  
    ![](./images/stm32f446_id.png)
 
