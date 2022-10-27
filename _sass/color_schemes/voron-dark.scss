@@ -38,11 +38,3 @@ $code-background-color: $grey-dk-250;
 $search-background-color: $grey-dk-250;
 $table-background-color: $grey-dk-250;
 $feedback-color: darken($sidebar-color, 3%);
-
-.warning {
-    padding: 10px;
-    background-color: darken($voron-red-80, 30%);
-    border-width: 1px;
-    border-color: $voron-red-50;
-    border-style: solid;    
-  }

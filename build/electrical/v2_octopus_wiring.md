@@ -6,10 +6,6 @@ nav_exclude: true
 
 # Voron V2 / Trident - BigTreeTech Octopus Wiring
 
-<div><b>WARNING:</b>  Do not leave HE0 or HE1 connected.
- <p>There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we recommend leaving the heaters disconnected until after loading the klipper firmware</p></div>
-{: .warning }
-
 ## Initial Preparation 
 
 Set jumpers as shown:
@@ -34,8 +30,8 @@ Set jumpers as shown:
 * Connect the Z2 motor to MOTOR4
 * Connect the Z3 motor to MOTOR5 (v2 only)
 * Connect the extruder motor to MOTOR6
-* Connect the hot end heater to HE0  ( do not leave connected )
-* Connect the bed SSR (DC Control Side) to HE1 ( do not leave connected )
+* Connect the hot end heater to HE0
+* Connect the bed SSR (DC Control Side) to HE1
 * Connect the part cooling fan to FAN0
 * Connect the hot end fan to FAN1
 * Connect the controller fans to FAN2
