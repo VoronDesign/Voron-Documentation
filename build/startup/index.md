@@ -172,7 +172,7 @@ Depending on bed location, the positional parameters may need to be adjusted to 
 
 If X and Y offsets are less than 1mm and 0,0 is over the bed, nothing needs to be changed.
 
-If X and Y offsets are within 5mm or 0,0 is past the bed, the *postition_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* and *position_endstop* for both *[stepper_x]* and *[stepper_y]* as follows:
+If X and Y offsets are within 5mm or 0,0 is past the bed, the *position_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* and *position_endstop* for both *[stepper_x]* and *[stepper_y]* as follows:
 
 * For X: New = Current - Get Position X (M114) Result
 * For Y: New = Current - Get Position Y (M114) Result
@@ -338,7 +338,7 @@ The Z offset can be adjusted during a print using the Tune menu on the display, 
 The "babystepping" controls may be used to fine tune the z offset.
 
 #### Without LCD Screen
-If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mailsail and Fluidd, but requires some additional work for Octoprint.
+If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mainsail and Fluidd, but requires some additional work for Octoprint.
 
 1) (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
 
@@ -374,7 +374,7 @@ run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will res
 Before the first print, make sure that the extruder extrudes the correct amount of material.
 
 * With the hotend at temperature, make a mark on the filament between the roll of filament and your extruder, between 120mm and 150mm away from the entrance to the extruder.  Measure the distance from the entrance of the extruder to that mark.
-* In Octoprint / Mailsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
+* In Octoprint / Mainsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
 * Measure from the entrance of your extruder to the mark you made previously. 
 	* *In a perfect world, assuming the mark was at 120mm, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
 * Update `rotation_distance` in the extruder section of the configuration file using this formula:
