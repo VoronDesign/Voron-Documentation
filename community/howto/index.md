@@ -26,6 +26,7 @@ Community-generated documentation for the many items that the official guide may
 | [Setting Up and Calibrating Sensorless XY Homing](./clee/sensorless_xy_homing.md) | clee | Apr 11, 2022 |
 | [Transferring Device History (Moonraker DB)](./kyleisah/transferring_machine_history.md) | kyleisah | Mar 22, 2022 |
 | [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya | Apr 15, 2022 |
+| [Setup a BTT Smart Filament Sensor](./samwiseg0/btt_smart_filament_sensor.md) | samwiseg0 | |
 
 *Last Update excludes typos and grammatical corrections.
 
