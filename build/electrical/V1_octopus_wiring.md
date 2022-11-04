@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Voron V2 - Octopus (Pro) Wiring"
+title: "Voron V1.8/Trident - Octopus (Pro) Wiring"
 nav_exclude: true
 ---
 
-# Voron V2 - BigTreeTech Octopus Wiring
+# Voron V1.8/Trident - Octopus (Pro) Wiring
 
 <div><b>WARNING:</b>  Do not leave HE0 or HE1 connected.
  <p>There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we recommend leaving the heaters disconnected until after loading the klipper firmware</p></div>
@@ -30,9 +30,8 @@ Set jumpers as shown:
 * Connect the B Motor (gantry left) to MOTOR0
 * Connect the A Motor (gantry right) to MOTOR1
 * Connect the Z (Front Left) motor to MOTOR2_1 
-* Connect the Z1 (Rear left) motor to MOTOR3
-* Connect the Z2 (Rear right motor to MOTOR4
-* Connect the Z3 (Front right) motor to MOTOR5 
+* Connect the Z1 (Rear) motor to MOTOR3
+* Connect the Z2 (Front Right) motor to MOTOR4
 * Connect the extruder motor to MOTOR6
 * Connect the hot end heater to HE0  ( do not leave connected )
 * Connect the bed SSR (DC Control Side) to HE1 ( do not leave connected )
@@ -49,7 +48,7 @@ Set jumpers as shown:
 * Connect the V+ and 0V wires on the probe to PROBE
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
-![](./images/v2_octopus_wiring.png)
+![](./images/trident_octopus_wiring_no_stepstick.png)
 
 ## SSR Wiring
 
