@@ -63,14 +63,14 @@ gcode_id: C
 ```
 
 Add another section with a new macro.
-
+<!-- {% raw %} -->
 ```ini
 [gcode_macro M141]
 gcode:
     {% set s = params.S|default(0)|float %}
     SET_TEMPERATURE_FAN_TARGET temperature_fan="chamber" target={s}
 ```
-
+<!-- {% endraw %} -->
 Restart Klipper with a `FIRMWARE_RESTART`.
 
 With this configuration, the fan will run at 100% anytime the chamber temperature is above 35C.  The temperature is configurable later.
