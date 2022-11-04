@@ -384,7 +384,7 @@ Before the first print, make sure that the extruder extrudes the correct amount 
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
 
-Typical `rotation_distance` values should be around 22.6789511 for Afterburner and Mobius (update gear_ratio to 80:20 for Mobius).
+Typical `rotation_distance` values should be around 22.6789511 for Afterburner, Stealthburner and Mobius (update gear_ratio to 50:10 for Stealthburner with Clockwork 2 or 80:20 for Mobius).
 
 ---
 ### Next: [Slicer Setup](../slicer/index.md)
