@@ -350,6 +350,43 @@ run again after 1 second. Otherwise, it will cancel itself.
 > **Warning** Be careful when using the above mechanism to create background macros. In most case,
 > it is difficult to implement the exact desired behavior due to the limitations imposed by Klipper
 > and delayed GCode macros.
+
+## Saving and Restoring GCode State
+Klipper GCode state is the current state of the GCode parser. The state includes the following
+settings:
+* GCode coordinate mode (absolute vs relative).
+* Extrude mode (absolute vs relative).
+* Origin.
+* Z offset.
+* Speed and extrude overrides.
+* Move speed.
+* Current nozzle position.
+* Relative extruder position.
+
+Saving the GCode state allows other macros to perform actions without interfering with the state of
+previous macros. This is especially useful for macros like `PAUSE` and `RESUME` - the `PAUSE` macro saves
+the GCode state when the print was paused and the `RESUME` macro restores it. This prevents any GCode that 
+is executed between the `PAUSE` and `RESUME` macros (like change filament macros, clean nozzle macros, etc.)
+from interfering or destroying the state the printer was in when it paused.
+
+Saving and restoring GCode state is done with the `SAVE_GCODE_STATE`[^8] and `RESTORE_GCODE_STATE`[^9]
+commands. When saving a state, the `SAVE_GCODE_STATE` command takes in a `NAME` argument. The saved state can
+then be referenced using that name. This allows nesting of these commands.
+
+Upon execution of the `SAVE_GCODE_STATE NAME=<name>` command, the current GCode state is saved under the
+name "<name>". When the `RESTORE_GCODE_STATE NAME=<name>` command is executed, the state saved as "<name>" is
+restored. Any changes to the settings listed above done between the `SAVE_GCODE_STATE` and `RESTORE_GCODE_STATE`
+commands is lost (unless saved under a different name).
+
+> **Warning** The use of the save/restore commands should be done carefully and intentionally. Due to state
+> that is changed between the too commands being lost, it could lead to unexpected results. One common example
+> of this is using save/restore in `PRINT_START` macros. In most cases, virtually all actions done by `PRINT_START`
+> macro examples are wrapped by a set of `SAVE_GCODE_STATE/RESTORE_GCODE_STATE` commands. This includes homing,
+> bed leveling, bed mesh generation, etc.
+>
+> If one of the things that a `PRINT_START` macro could do is adjust the Z offset for a particular filament
+> type or print surface. If that is done between the save and restore commands, the newly set Z offset will be
+> lost when the `PRINT_START` macro ends.
 ## References
   [^1]: Klipper Documentation: https://www.klipper3d.org/
   [^2]: Klipper GCode command reference: https://www.klipper3d.org/G-Codes.html
@@ -358,3 +395,5 @@ run again after 1 second. Otherwise, it will cancel itself.
   [^5]: https://www.klipper3d.org/Command_Templates.html?h=printer#the-printer-variable
   [^6]: https://jinja.palletsprojects.com/en/3.1.x/templates/#filters
   [^7]: https://www.klipper3d.org/Command_Templates.html?h=delayed#delayed-gcodes
+  [^8]: https://www.klipper3d.org/G-Codes.html?h=save_gc#save_gcode_state
+  [^9]: https://www.klipper3d.org/G-Codes.html?h=save_gc#restore_gcode_state
