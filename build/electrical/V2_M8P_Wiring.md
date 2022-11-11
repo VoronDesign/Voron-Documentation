@@ -14,7 +14,7 @@ nav_exclude: true
 
 Set jumpers as shown:
 
-![](./images/v2-octopus-initial-preparation.png)
+![](./images/m8p-initial-preparation.png)
 
 * Green – Add Jumper
 * Red – Remove Jumper 
@@ -49,7 +49,7 @@ Set jumpers as shown:
 * Connect the signal wire on the probe to M4-STOP
 * Connect the V+ and V- wires on the probe to MOTOR_FAN (WARNING: USES BOARD INPUT VOLTAGE.) 
 
-![](./images/v2_octopus_wiring.png)
+![](./images/M8P_V2_Wiring.png)
 
 ## SSR Wiring
 
