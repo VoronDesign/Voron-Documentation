@@ -160,6 +160,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 ### Trident
 * [Trident - BigTreeTech Octopus](./v1_octopus_wiring.md)
 * [Trident - MKS Makerbase Monster8](./v2_monster8_wiring.md)
+* [Trident - BTT Manta M8P](./V1_M8P_Wiring.md)
 
 ### Voron 2
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)
@@ -168,6 +169,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V2 - Fysetc Spider v1.1](./v2_spider_wiring.md)
 * [V2 - BigTreeTech Octopus](./v2_octopus_wiring.md)
 * [V2 - MKS Makerbase Monster8](./v2_monster8_wiring.md)
+* [V2 - BTT Manta M8P](./V2_M8P_Wiring.md)
 
 ### Voron Switchwire
 * [SW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
