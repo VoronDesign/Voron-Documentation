@@ -46,7 +46,7 @@ Set jumpers as shown:
 
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
-![](./images/trident_octopus_wiring_no_stepstick.png)
+![](./images/M8P_Trident_Wiring.png)
 
 ## SSR Wiring
 
