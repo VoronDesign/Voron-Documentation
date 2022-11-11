@@ -23,7 +23,8 @@ Download the respective Voron base configuration file from the following links:
 * [SW Einsy Rambo](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg)
 * [Legacy SKR 1.3](https://raw.githubusercontent.com/VoronDesign/Voron-Legacy/main/Firmware/skr_v1.3_config.cfg)
 * [Trident Octopus](https://raw.githubusercontent.com/VoronDesign/Voron-Trident/main/Firmware/Octopus/Trident_Octopus_Config.cfg)
-
+* [Trident Manta M8P](./configs/Trident_M8P_config.cfg)
+* [V2 Manta M8P](./configs/V2_M8P_config.cfg)
 Rename the downloaded file to `printer.cfg`
 
 **Mainsail**: Upload the file via Mainsail's interface.  Go to the "Machine" tab, and under "Config Files", press the "Upload File" button
