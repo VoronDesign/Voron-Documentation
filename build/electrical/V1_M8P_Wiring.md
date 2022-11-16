@@ -6,10 +6,6 @@ nav_exclude: true
 
 # Voron V1.8/Trident - Manta M8P Wiring
 
-<div><b>WARNING:</b>  Do not leave HE0 or HE1 connected.
- <p>There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we recommend leaving the heaters disconnected until after loading the klipper firmware</p></div>
-{: .warning }
-
 ## Initial Preparation 
 
 Set jumpers as shown:
@@ -42,7 +38,7 @@ Set jumpers as shown:
 * Connect the Y endstop to M2-STOP
 * Connect the Z endstop to M3-STOP
 * Connect the signal wire on the probe to M4-STOP
-* Connect the V+ and V- wires on the probe to MOTOR_FAN (WARNING: USES BOARD INPUT VOLTAGE.) 
+* Connect the V+ and V- wires of the probe to MOTOR_FAN (WARNING: USES BOARD INPUT VOLTAGE.) 
 
 * if using a mini12864 display, connect to EXP1 & EXP2, only after completing the steps shown [below](#mini-12864-Display)
 
