@@ -26,17 +26,3 @@ Otherwise, you will burn out your fan immediately.
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
 ![](./images/miniE3-v30-pinout.png)
-
-
-### Wiring for MagicStudios / Knacro 1-Channel SSR
-
-The MagicStudios / Knacro SSR requires 3 wires instead of the 2 referenced above.
-
-![Knacro Wiring](./images/knacro_ssr_wiring_diagram.png)
-
-
-## Mini E3 V2.0 Pinout
-
-For reference, here is the pinout of the SKR mini E3 V2.0
-
-![](./images/miniE3-v20-pinout.png)
