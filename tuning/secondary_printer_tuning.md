@@ -149,7 +149,7 @@ Look at the "Variance" value instead.
 
 4. In the printer's web interface, click the "Tuning" tab (Fluidd) or "Heightmap" tab (Mainsail) on the left.
 
-For total variance under ~0.05mm, a bes mesh may not be necessary. This is up to your personal preference.
+For total variance under ~0.05mm, a bed mesh may not be necessary. This is up to your personal preference.
 
 A bed mesh is cheap insurance, however, especially since your variance can change a bit over time and at different bed/chamber temperatures.
 
