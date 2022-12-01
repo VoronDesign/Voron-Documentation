@@ -244,6 +244,8 @@ adxl_results/vibrations/*.tar.gz
 
 In this example, I am excluding *.csv from inpur shaper and other data collection related files and my Nevermore filter's runtime file. These are just things I do not want in my backup.
 
+Note how these directories are relative to the root of your git repository, which in our case, is `~/klipper_config`, so just specify the paths from that point forward.
+
 6. When done, save the file and exit nano
 
 7. At this point we are ready to commit (at least manually)! Run the following command:
