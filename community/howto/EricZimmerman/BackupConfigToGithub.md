@@ -134,7 +134,12 @@ NOTE: This script originates from <a href="https://github.com/th33xitus/kiauh/bl
 ### the listed folders, just keep that line commented out.        ###
 #####################################################################
 ### Path to your config folder you want to backup
-config_folder=~/klipper_config
+config_folder=~/printer_data/config
+
+#NOTE: The above should work for just about everyone, but a somewhat
+# recent update to moonraker changed paths, etc. You can run the 
+# provided moonraker script 'data-path-fix.sh' to fix/update
+# older installs
 
 ### Path to your Klipper folder, by default that is '~/klipper'
 klipper_folder=~/klipper
