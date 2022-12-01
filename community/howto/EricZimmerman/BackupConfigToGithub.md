@@ -355,12 +355,12 @@ Enjoy your new backups and never worry again about your config files being unava
 
 If you want to maintain a backup via cron, visit <a href="https://crontab-generator.org/https://crontab-generator.org/" target="_blank">this</a> site and select the appropriate options.
 
-Script to execute: `/home/pi/klipper_config/autocommit.sh`
+Script to execute: `/home/pi/printer_data/config/autocommit.sh`
 
 This results in a crontab entry similar to:
 
 ```bash
-0 */6 * * * /home/pi/klipper_config/autocommit.sh >/dev/null 2>&1
+0 */6 * * * /home/pi/printer_data/config/autocommit.sh >/dev/null 2>&1
 ```
 
 which can then be added to your crontab file via the `crontab -e` command by pasting it in at the bottom:
