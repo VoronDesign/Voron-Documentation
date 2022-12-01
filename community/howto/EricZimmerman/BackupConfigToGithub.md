@@ -98,7 +98,7 @@ Note that you do not want the <> symbols, as that's just a placeholder so you ca
 
 ## Connect to your printer via SSH
 
-1. Open up a PowerShell window, or use whatever program you usually use to connect to your printer via SSH, and connect to your printer
+1. Open up a PowerShell window, or use whatever program you usually use (many people use **putty**, but ssh is built right into Windows) to connect to your printer via SSH, and connect to your printer
 
 ![](img/InitialSsh.png)
 
