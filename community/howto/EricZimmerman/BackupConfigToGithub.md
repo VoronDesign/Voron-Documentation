@@ -315,7 +315,7 @@ In some cases, it is useful to edit files on GitHub and then have those changes 
 
 Be warned though that if you edit files on your printer and do not back them up, then edit the same files on GitHub, and THEN do a backup, you may run into issues where git cannot automatically merge these changes together.
 
-Do not worry too much about this tho, because git is usually very good at merges, but if you get stuck, feel free to ask in Discord!
+Do not worry too much about this though, because git is usually very good at merges, but if you get stuck, feel free to ask in Discord!
 
 Enjoy your new backups and never worry again about your config files being unavailable!
 
