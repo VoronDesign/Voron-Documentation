@@ -107,7 +107,7 @@ Note that you do not want the <> symbols, as that's just a placeholder so you ca
 ```bash
 cd ~/klipper_config
 ```
-3. Using nano, or your favorite text editor (its nano, right?), create new file named `autocommit.sh` in your `klipper_config` directory
+3. Using nano, or your favorite command line based text editor (its nano, right?), create new file named `autocommit.sh` in your `klipper_config` directory
 
 ```bash
 nano autocommit.sh
