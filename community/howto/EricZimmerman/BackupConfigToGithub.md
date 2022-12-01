@@ -111,12 +111,12 @@ Note that you do not want the <> symbols, as that's just a placeholder so you ca
 
 ![](img/InitialSsh.png)
 
-2. Change directories into your `klipper_config` directory, which is where all of your configuration files live
+2. Change directories into your `config` directory, which is where all of your configuration files live
 
 ```bash
-cd ~/klipper_config
+cd ~/printer_data/config
 ```
-3. Using nano, or your favorite command line based text editor (its nano, right?), create new file named `autocommit.sh` in your `klipper_config` directory
+3. Using nano, or your favorite command line based text editor (its nano, right?), create new file named `autocommit.sh` in your `config` directory
 
 ```bash
 nano autocommit.sh
@@ -136,7 +136,7 @@ NOTE: This script originates from <a href="https://github.com/th33xitus/kiauh/bl
 ### Path to your config folder you want to backup
 config_folder=~/printer_data/config
 
-#NOTE: The above should work for just about everyone, but a somewhat
+# NOTE: The above should work for just about everyone, but a somewhat
 # recent update to moonraker changed paths, etc. You can run the 
 # provided moonraker script 'data-path-fix.sh' to fix/update
 # older installs
@@ -247,7 +247,7 @@ git remote add origin https://ghp_dKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX@github.co
 
 ![](img/remoteVerify.png)
 
-4. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/klipper_config` named `.gitignore` and 
+4. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/printer_data/config` named `.gitignore` and 
 add entries to the file, specifying the file patterns and/or locations to ignore.
 
 ```bash
@@ -258,7 +258,9 @@ adxl_results/vibrations/*.tar.gz
 
 In this example, I am excluding *.csv from inpur shaper and other data collection related files and my Nevermore filter's runtime file. These are just things I do not want in my backup.
 
-Note how these directories are relative to the root of your git repository, which in our case, is `~/klipper_config`, so just specify the paths from that point forward.
+Note how these directories are relative to the root of your git repository, which in our case, is `~/printer_data/config`, so just specify the paths from that point forward.
+
+This is a more or less optional step, but it is handy for preventing large or unwanted files from being committed.
 
 6. When done, save the file and exit nano
 
@@ -296,13 +298,13 @@ Here you can see what actually changed. In my simple example, I just removed a b
 
 Now that things are working at the shell, lets create a macro that lets us back up on demand in Mainsail or Fluidd.
 
-1. In your terminal window, use nano to create a new file in the location of your choosing under `~/klipper_config` named `config_backup.cfg`
+1. In your terminal window, use nano to create a new file in the location of your choosing under `~/printer_data/config` named `config_backup.cfg`
 
 2. Paste the following content into the editor:
 
 ```bash
 [gcode_shell_command backup_cfg]
-command: /home/pi/klipper_config/autocommit.sh
+command: /home/pi/printer_data/config/autocommit.sh
 timeout: 30
 verbose: True
 
