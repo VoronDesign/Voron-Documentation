@@ -233,7 +233,20 @@ git remote add origin https://ghp_dKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX@github.co
 
 ![](img/remoteVerify.png)
 
-4. At this point we are ready to commit (at least manually)! Run the following command:
+4. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/klipper_config` named `.gitignore` and 
+add entries to the file, specifying the file patterns and/or locations to ignore.
+
+```bash
+saved_variables.cfg
+adxl_results/belts/*.csv
+adxl_results/vibrations/*.tar.gz
+```
+
+In this example, I am excluding *.csv from inpur shaper and other data collection related files and my Nevermore filter's runtime file. These are just things I do not want in my backup.
+
+6. When done, save the file and exit nano
+
+7. At this point we are ready to commit (at least manually)! Run the following command:
 
 ```bash
 sh autocommit.sh
