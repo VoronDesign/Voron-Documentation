@@ -16,6 +16,15 @@ things from working or accessing configuration files on your printer.
 
 Let's solve both of these problems by setting up a simple backup/change tracking methodology to GitHub!
 
+
+## Before we begin
+
+This tutorial will expose you to a lot of common aspects of owning a Voron, including managing configuration files, editing files from Linux, and more. If you have never done this before, 
+do not panic! Its easy! Just follow along with the commands which you can copy to your clipboard. Screenshots are also included to give you an idea of what to expect your side to look like, etc.
+
+Experience is just a series of past mistakes we try to not make anymore. Remember, everyone started out at some point right where you find yourself now. You will improve with practice!
+
+
 ## Sign into GitHub and create a new repository
 
 **NOTE**: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
