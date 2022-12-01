@@ -18,7 +18,7 @@ Let's solve both of these problems by setting up a simple backup/change tracking
 
 ## Sign into GitHub and create a new repository
 
-**NOTE**: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details
+**NOTE**: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
 
 1. Sign into your GitHub account
 2. Create a new repository by clicking on the New button
