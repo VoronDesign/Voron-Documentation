@@ -254,7 +254,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 
 3. Save the file via `Ctrl-o` and exit via `Ctrl-x`
 
-4. Edit `printer.cfg` and add an `[include path/to/config_backup.cfg]`, then save and exit. Adjust your path as necessary to wherever you created your cfg file.
+4. Edit `printer.cfg` and add an `[include config_backup.cfg]`, then save and exit. Adjust your path as necessary to wherever you created your cfg file.
 
 5. Finally, execute the following to download the latest version of the `gcode_shell_command` script
 
