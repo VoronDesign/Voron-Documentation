@@ -3,6 +3,11 @@ The following guide is my attempt at explaining how Klipper[^1] macros work and 
 write macros. It's mostly based on my knowledge from reading the Klipper
 documentation, experimentation, and information from the Klipper Discord.
 
+> **Warning** **Warning**
+> The guide below includes GCode and macro examples. They are for illustration purposes
+> only and are not meant to be used on actual hardware. Please, do not copy the examples
+> to your working/production configurations.
+
 ## What Are Macros?
 Macros are a collection of GCode commands[^2] that Klipper executes as a unit when the
 macro is executed. Macros can contain any valid GCode commands and when triggered the
@@ -249,7 +254,7 @@ As you can see, filters can be chained one after the other to provide fuller con
 parameter values and types.
 
 ## Delayed GCode
-Delayed GCode[^7] macro are a way to schedule a macro to be executed at a later time. They are
+Delayed GCode[^7] macros are a way to schedule a macro to be executed at a later time. They are
 mostly the same as normal macros with the following exceptions:
   * The only key/value pairs that are valid are `gcode` and `initial_duration`.
   * They cannot define variables.
@@ -387,6 +392,67 @@ commands is lost (unless saved under a different name).
 > If one of the things that a `PRINT_START` macro could do is adjust the Z offset for a particular filament
 > type or print surface. If that is done between the save and restore commands, the newly set Z offset will be
 > lost when the `PRINT_START` macro ends.
+
+## Macros and Slicers
+When first building or setting up a new printer, the first place where a user
+might need to modify Klipper macros is probably going to be the `PRINT_START`
+macro.
+
+Normally, this will take the shape of adding code to the macro to do bed mesh
+leveling or enabling a filament sensor. However, a frequent issue that has
+happened to users is the need to pass information from the slicer to the
+printer.
+
+While passing values, settings, etc. from a slicer to the printer can take
+many different forms, a common way to do that is to use macro parameters to
+pass values to the `PRINT_START` macro. Such values may include the bed and
+extruder temperatures, chamber temperature, type of filament being used, etc.
+
+Passing values from the slicer is as simple as calling the `PRINT_START`
+macro in the beginning of the produced GCode. Every commonly used slicer has
+a way for the user to provide custom GCode that will be inserted at the start
+of the output file. Each slicer also should have a way to reference slicer
+setting by that custom GCode. At this point, passing information to the
+printer is only a matter of calling `PRINT_START` with a macro parameter for
+each of the slicer settings of interest.
+
+Below are some examples for some of the common slicers.
+
+> **WARNING** What is shown below are just examples. Please, don't just use
+> the GCode blindly. Verify that the correct settings/placeholders are being
+> used.
+
+### PrusaSlicer/SuperSlicer
+PrusaSlicer (PS) and SuperSlicer (SS) have multiple places where custom GCode
+can be added depending on what that GCode affects. For the `PRINT_START` macro,
+the location where to add custom GCode is in "Start G-code" section under the "Printer Settings -> Custom G-code" .
+
+```gcode
+PRINT_START EXTRUDER_TEMP={first_layer_temperature[initial_extruder]} BED_TEMP=[first_layer_bed_temperature] CHAMBER_TEMP=[chamber_temperature]
+```
+
+The above example will call the `PRINT_START` macro in the beginning of the
+GCode file, passing the extruder, bed, and chamber temperature as defined in
+the slicer profile being used. In order to allow the slicer to substitute the
+actual values, the command uses "placeholders"[^10]. When outputting the
+final GCode, PS/SS will substitute the actual values in place of the
+placeholders. For example, if the profile being used define extruder
+temperature as 240C, bed temperature as 75C, and chamber temperature as 40C,
+the command appearing in the GCode file will be:
+
+```gcode
+PRINT_START EXTRUDER_TEMP=240 BED_TEMP=75 CHAMBER_TEMP=40
+```
+
+### Cura
+The place where to add similar custom GCode in Cura is in the "Start G-code" window in the "Machine Settings -> Printer" screen.
+
+```gcode
+PRINT_START EXTRUDER_TEMP={material_print_temperature_layer_0} BED_TEMP={material_bed_temperature_layer_0} CHAMBER_TEMP={build_volume_temperature}
+```
+
+The Cura GCode is very similar with the exception of the placeholder names[^11].
+
 ## References
   [^1]: Klipper Documentation: https://www.klipper3d.org/
   [^2]: Klipper GCode command reference: https://www.klipper3d.org/G-Codes.html
@@ -397,3 +463,5 @@ commands is lost (unless saved under a different name).
   [^7]: https://www.klipper3d.org/Command_Templates.html?h=delayed#delayed-gcodes
   [^8]: https://www.klipper3d.org/G-Codes.html?h=save_gc#save_gcode_state
   [^9]: https://www.klipper3d.org/G-Codes.html?h=save_gc#restore_gcode_state
+  [^10]: PrusaSlicer Placeholders: https://help.prusa3d.com/article/list-of-placeholders_205643
+  [^11]: Cura Placeholders: http://files.fieldofview.com/cura/Replacement_Patterns.html
