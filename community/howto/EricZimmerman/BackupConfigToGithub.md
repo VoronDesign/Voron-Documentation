@@ -32,7 +32,7 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
 1. Sign into your GitHub account
 2. Create a new repository by clicking on the New button
 
-    ![CreateNewRepo](img/newRepo.png)
+    ![Creating a new repository](img/newRepo.png)
 
 3. Update details for the new repository
 
@@ -41,15 +41,15 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
     3. Public or Private is up to you.
     4. License is optional too, but best to specify something. I usually do MIT for all my stuff, but your mileage may vary
 
-    ![NewRepoDetails](img/newRepoDetails.png)
+    ![New repository details](img/newRepoDetails.png)
 
 4. You now have a new git repository! The next thing to do is make a note of the URL to this repository. Click the green `Code` button, then copy the `HTTPS` url to the clipboard via the button to the right of the URL.
 
-    ![](img/CopyUrl.png)
+    ![Url copy](img/CopyUrl.png)
 
 5. Open up your favorite text editor and paste this URL into it for later use
 
-    ![](img/NotePad.png)
+    ![Notepad](img/NotePad.png)
 
 ## Generate an access token
 
@@ -61,17 +61,17 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
     NOTE: If you are prompted to reauthenticate, do so. This is a safety measure as you are about to create a sensitive credential
 
-    ![](img/newToken.png)
+    ![New token](img/newToken.png)
 
 3. Give your token a meaningful name, set the **Expiration** date to `No expiration`, and check the `workflow` and `read:org` under `admin:org` section
 
     :warning: If you prefer to set an expiration date for your token, feel free to do so, but be aware you will have to regenerate a new token as things expire, as well as update some other settings that we have not got to yet :warning:
 
-    ![](img/tokenSettings.png)
+    ![Token settings](img/tokenSettings.png)
 
 4. Scroll to the bottom of the page, and click `Generate token`
 
-    ![](img/generateToken.png)
+    ![Generate token](img/generateToken.png)
 
 5. You now have a new access key! Protect it well, like you would any other password! Click on the `Copy` button to copy the token to the clipboard, then paste it into the same place you saved your HTTPS URL from the previous step. 
    
@@ -79,7 +79,7 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
     NOTE: The image below has the key redacted. Yours will of course not look like that
 
-    ![](img/copyToken.png)
+    ![Copy token](img/copyToken.png)
 
 ### Combine our HTTPS URL with our token
 
@@ -111,43 +111,37 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 1. Open up a PowerShell window, or use whatever program you usually use (many people use **putty**, but ssh is built right into Windows) to connect to your printer via SSH, and connect to your printer
 
-    ![](img/InitialSsh.png)
+    ![Initial SSH](img/InitialSsh.png)
 
 2. Change directories into your `config` directory, which is where all of your configuration files live
 
     ```bash
     cd ~/printer_data/config
     ```
-    
-3. Using nano, or your favorite command line based text editor (its nano, right?), create new file named `autocommit.sh` in your `config` directory
 
-    ```bash
-    nano autocommit.sh
-    ```
-
-4. Download the `autocommit.sh` file using the command below:
+3. Download the `autocommit.sh` file using the command below:
 
     ```bash
     wget -O /home/pi/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
     ```
 
-5. Edit the file for your particular use case using the command below. For example, if you use fluidd, uncomment the `fluidd_folder` line, comment out `mainsail_folder` and so on.
+4. Edit the file for your particular use case using the command below. For example, if you use fluidd, uncomment the `fluidd_folder` line, comment out `mainsail_folder` and so on.
 
     ```bash
     nano /home/pi/printer_data/config/autocommit.sh
     ```
 
-    ![](img/editSh.png)
+    ![Editing autocommit.sh](img/editSh.png)
 
-6. Save the file. If using nano, press `Ctrl-o` (o, not zero), verify the name of the file in the bottom left, and press `Enter`
+5. Save the file. If using nano, press `Ctrl-o` (o, not zero), verify the name of the file in the bottom left, and press `Enter`
 
-    ![](img/nanoSave.png)
+    ![Nano save](img/nanoSave.png)
 
-7. Exit your editor. In nano, press `Ctrl-x`. You should now be back in your shell.
+6. Exit your editor. In nano, press `Ctrl-x`. You should now be back in your shell.
 
-    ![](img/shellAfterNano.png)
+    ![Returning to shell](img/shellAfterNano.png)
 
-8. Next, we need to change the permissions on the file so that it can be executed easily. Type the following command, followed by `Enter`
+7. Next, we need to change the permissions on the file so that it can be executed easily. Type the following command, followed by `Enter`
 
     ```bash
     chmod +x autocommit.sh
@@ -155,9 +149,9 @@ We can now put the pieces together we have created so far. To make this easier, 
 
     This command will add execute permission for the owner of the file (you), group members, and all other users on the system. This makes it easy to run the script by different users, etc.
 
-9. Type `ls -la autocommit.sh` and verify the new permissions. Note the `x` for user, group, and other. This is the execute permission we added in the previous step.
+8. Type `ls -la autocommit.sh` and verify the new permissions. Note the `x` for user, group, and other. This is the execute permission we added in the previous step.
 
-    ![](img/chmodDone.png)
+    ![chmod complete](img/chmodDone.png)
 
 ### Initialize git
 
@@ -169,7 +163,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
     which results in something like this:
 
-    ![](img/gitInit.png)
+    ![git initialize](img/gitInit.png)
 
 2. Recall earlier that we generated an access token and crafted a special URL to our repository. Now we need to tell git to use this URL. Using the URL we generated in the last step of our GitHub work, run the following command:
 
@@ -181,9 +175,9 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 3. Verify things by running `git remote -v` which should look similar to this (your URLs will be different)
 
-    ![](img/remoteVerify.png)
+    ![git remote verify](img/remoteVerify.png)
 
-4. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/printer_data/config` named `.gitignore` and 
+4. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/printer_data/config` named `.gitignore` (using the command `nano .gitignore`) and 
 add entries to the file, specifying the file patterns and/or locations to ignore.
 
     ```bash
@@ -208,27 +202,41 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     which should result in a lot of activity, ending with something like this:
 
-    ![](img/initialCommit.png)
+    ![Initial commit](img/initialCommit.png)
 
     If you see something similar to what is shown in the image above, congratulations! You are now backed up to GitHub! Rerunning the previous command `sh autocommit.sh` should result in the following:  
   
-    ![](img/noChanges.png)
+    ![No changes](img/noChanges.png)
 
     However, if you change any file in Mainsail, via nano, etc. and then rerun the `sh autocommit.sh` command, you will see it found your changes and sent them upstream! Here is an example after I edited `printer.cfg`:
 
-    ![](img/fileChangeCommit.png)
+    ![File committed](img/fileChangeCommit.png)
 
     If you go to your GitHub repository, you can also see these changes by clicking on the commits, which is on the right side:
 
-    ![](img/commitHistory.png)
+    ![Commit history](img/commitHistory.png)
 
     You are now looking at all the commits to your repository. Clicking the top one shows all the files and their changes!
 
-    ![](img/commitList.png)
+    ![Commit list](img/commitList.png)
 
     Here you can see what actually changed. In my simple example, I just removed a blank line from the end of my `printer.cfg` file. Also of note is the exact versions of other software being used with these configs, which is shown in the commit message.
 
-    ![](img/CommitChanges.png)
+    ![Commit changes](img/CommitChanges.png)
+    
+One thing to be aware of is that, from a commit _message_ perspective, about the only thing that will be changing for each commit is the timestamp associated with the commit. However, git will know about all the exact changes for everything being committed. If you recall a specific timeframe where you made a configuration change, it is rather straightforward to find the previous commit to see older values, but, since git is keeping track of all changes over time, you can easily look at a single file and then drill down into that file's commit history. 
+
+For example, say I wanted to see, over time, all of the changes to my Auto Z related config file. After clicking on the file to view it, notice the `History` button in the upper right corner.
+
+![History button example](img/zHistory.png)
+
+Once you click the `History` button, you can then see all of the revisions that contain changes to that particular file. This is another great way to see the exact dates changes were made for a given file, as shown below.
+
+![History list example](img/zHistList.png)
+
+Note that while the history list contains every change to the file that is being viewed, it also contains all other revisions to other files that were committed on the same date/time.
+
+Using this approach makes it easier to track down a specific change configuation details.
 
 # Adding the backup to a macro
 
@@ -268,11 +276,11 @@ Now that things are working at the shell, lets create a macro that lets us back 
 
 1. Connect to your printer, then look in the **Macros** section for our newly minted macro, named `BACKUP CFG`
 
-    ![](img/newMacro.png)
+    ![New macro](img/newMacro.png)
 
 2. Click on the `BACKUP CFG` button and the console will report the output from the command:
 
-    ![](img/macroConsole.png)
+    ![Macro console](img/macroConsole.png)
 
 3. You can click this button manually any time you want to create a backup
 
@@ -285,7 +293,6 @@ Be warned though that if you edit files on your printer and do not back them up,
 Do not worry too much about this though, because git is usually very good at merges, but if you get stuck, feel free to ask in Discord!
 
 Enjoy your new backups and never worry again about your config files being unavailable!
-
 
 ## Automating via crontab (OPTIONAL)
 
@@ -301,4 +308,4 @@ This results in a crontab entry similar to:
 
 which can then be added to your crontab file via the `crontab -e` command by pasting it in at the bottom:
 
-![](img/cronExample.png)
+![Cron example](img/cronExample.png)
