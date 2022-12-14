@@ -259,4 +259,6 @@ For a much more robust example of passing values between the slicer and PRINT_ST
 - slicer config: https://github.com/EricZimmerman/VoronConfigs/blob/master/Slicer.md
 - PRINT_START macro: https://github.com/EricZimmerman/VoronConfigs/blob/master/macros/print_base/PRINT_START.cfg
 
+Another great option is from jontek2, and can be found at https://github.com/jontek2/A-better-print_start-macro
+
 If you have any questions, feel free to ask on the Voron Discord!
