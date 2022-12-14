@@ -22,7 +22,7 @@ PRINT_START EXTRUDER={first_layer_temperature[initial_extruder] + extruder_tempe
 ```
 
 The first thing to notice is that the first two lines are commented out. This means they are essentially ignored and will not be processed. 
-We will come back these later, but for now, those macros would heat up the bed and extruder (if they were uncommented):
+We will come back these later, but for now, those macros allow for setting the temperature for the bed and extruder (if they were uncommented):
 
 ```
 M190: Wait for bed temperature
