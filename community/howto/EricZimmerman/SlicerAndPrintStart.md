@@ -19,7 +19,11 @@ Of course, we also need to deal with our PRINT_START macro, usually found in `pr
 This tutorial is primarily concerned with step 1 as well as our PRINT_START macro. We will be using SuperSlicer for the slicer and a Voron 2.4 for 
 the printer side of things (though any Voron will do).
 
-On the slicer side, lets take a look at the default configuration for the printer's custom G-code. Specifically, this is the **Start G-code**:
+On the slicer side, lets take a look at the default configuration for the printer's custom G-code. 
+
+![](images/printstart/SlicerGcode.png)
+
+Specifically, this is the **Start G-code**:
 
 ```
 ; M190 S0
@@ -50,7 +54,7 @@ Hovering over the text box where we can type in a value shows the parameter name
 The other parameters, such as **EXTRUDER** or **BED**, would work in a similar fashion. In fact, since we are here, look at the parameter right above Chamber. Here, you will see Bed, and two configuration options, one for first layer temperature, and one for other layer temperatures. Hovering over these boxes shows the parameter name, and at this point, it should not be a surprise that we see these same parameter names inside square brackets in our call to PRINT_START in the Start G-code section.
 
 
-On the printer side, let's start with a simplistic PRINT_START macro, commonly defined in printer.cfg
+On the printer side, let's start with a simplistic PRINT_START macro, commonly defined in `printer.cfg`
 
 ```
 [gcode_macro PRINT_START]
@@ -256,7 +260,7 @@ If we continue to extend our PRINT_START with our new options, we could add mess
 RESPOND MSG="Printing {MATERIAL} at {EXTRUDER_TEMP}"
 ```
 
-and so on. The sky is the limit, and you can get as detailed as you choose.
+and so on. From here, the sky is the limit, and you can get as detailed as you choose.
 
 Note that you need to add a `[respond]` configuration option in `printer.cfg` for the RESPOND command to work. For more options, such as formatting options, see https://www.klipper3d.org/G-Codes.html#respond
 
