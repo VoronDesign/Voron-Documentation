@@ -26,7 +26,7 @@ To see examples of the macros themselves, look at the standard printer.cfg for t
 
 ### Homing Override / Safe Z Home
 
-By default, all printers are setup with a `[homing_override]` configuration section that includes a gcode macro for the home process.  This macro is updating during thee setup process to define the Z endstop location.  However the homing override method always homes X and Y before homing Z.
+By default, all printers are setup with a `[homing_override]` configuration section that includes a gcode macro for the home process.  This macro is updating during the setup process to define the Z endstop location.  However the homing override method always homes X and Y before homing Z.
 
 The `[safe_z_home]` configuration allows for a Z homing process without requiring a repeat home of X and Y.  To enable safe z homing disable homing override and provide a X,Y coordinate of your Z endstop pin.  Be aware that enabling safe Z home will likely require a change in other processes / macros.
 
@@ -53,5 +53,6 @@ The PRINT_END macro is called at the end of every print by slicers that are conf
 | Creator | Macros | Bed Size |
 | --- | --- | --- |
 | [120decibell](./macros/120decibell.md) | CG28, G32, G141, PURGE\_BUCKET, TEST\_SPEED\_FAST | 350mm |
+| [Timmit99](./macros/timmit99.md) | set_led_length, Update_idle_timeout, delay | N/A |
 
 _Contributors - please make sure your macros are well documented!_

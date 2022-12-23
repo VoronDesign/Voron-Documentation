@@ -2,7 +2,6 @@
 layout: default
 title: Secondary Printer Tuning
 parent: Tuning Guides
-grand_parent: Voron Official Documentation
 nav_order: 1
 ---
 
@@ -21,16 +20,23 @@ Check out [Nero's video on gantry racking](https://www.youtube.com/watch?v=cOn6u
 
 This value equals ~2lb of tension on XY, which is on the lower end of the range but should be a good initial setting (without stretching your belts too tight). The phone app I am using is called Sound Spectrum Analysis on iOS, the image below shows the output (not of my belts).
 
-[Watch this video](./images/belt-tension.mov?raw=true)
+
 
 ![](./images/sound-spectrum-belt.jpg)
+
+### Watch this video
+
+
+
+https://user-images.githubusercontent.com/54855101/163674612-930d737d-0ab3-4056-a2b9-def2939db61f.mp4
+
+
 
 ## Bed Mesh (Legacy, Trident, 2.4)
 
 Generally when your Voron is first built, Bed Mesh is not necessary. However, it can still be used as an analysis tool to check assembly and see if there's anything obviously incorrect--just don't run SAVE_CONFIG at the end of your BED_MESH_CALIBRATE, and run BED_MESH_CLEAR after running bed mesh.
 
-The [bed_mesh] configuration options can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md) described in detail. A sample configuration for your Voron printer can be found [here](https://github.com/VoronDesign/Voron-1/blob/328113babcdb4934c461beb82b7f3b4dbeeb7eb5/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg#L464).
-
+The [bed_mesh] configuration options can be found [on the Klipper website](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md) described in detail. A sample configuration for your Voron printer can be found below.
 ```python
 [bed_mesh]
 speed: 300
