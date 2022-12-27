@@ -280,7 +280,7 @@ You would of course have to extract those parameters into variables, and then do
 For a much more robust example of passing values between the slicer and PRINT_START, see the following:
 
 - slicer config: https://github.com/EricZimmerman/VoronConfigs/blob/master/Slicer.md
-- PRINT_START macro: https://github.com/EricZimmerman/VoronConfigs/blob/master/macros/print_base/PRINT_START.cfg
+- PRINT_START macro: https://github.com/EricZimmerman/VoronConfigs/blob/master/macros/print_base/print_start.cfg
 
 Another great option is from jontek2, and can be found at https://github.com/jontek2/A-better-print_start-macro
 
