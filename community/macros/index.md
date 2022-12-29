@@ -21,7 +21,8 @@ gcode:
 **Important:** The tab / spaces before the gcode is required.
 
 ## Beginner's Guide
-There is a [Klipper Macros Beginner's Guide](../howto/voidtrance/Klipper_Macros_Beginners_Guilde.md) in the How-To section.
+There is a [Klipper Macros Beginner's Guide](../howto/voidtrance/Klipper_Macros_Beginners_Guide.md) in the How-To section.
+
 ## Required / Pre-built
 
 To see examples of the macros themselves, look at the standard printer.cfg for the printer.
