@@ -125,13 +125,58 @@ control statements based on the Jinja2 template language[^4].
 
 Macro templates can be a bit confusing because it looks like they offer the ability to created
 non-static macros (macros that change what they do based on some condition). This is only partially
-true.
+true. The Jinja2 template language is only a macro pre-processor.
 
 Klipper evaluates the macro when the macro is triggered/called. The evaluation processes the
 conditions at that time and generates the body of the macro (the set of commands that the macro will
 execute). Once evaluated, the set of commands executed by the macro cannot be changed until the
 macro is triggered/called again. What this means is that there is no way to have the macro content
 change based on changing printer conditions.
+
+The following is an example that illustrates this. Consider the following example macro:
+
+```gcode
+[gcode_macro EXAMPLE]
+gcode:
+    M109 S200
+    {% for i in range(5) %}
+        {% if printer.extruder.temperature < 100 %}
+            M117 HEATING...
+        {% else %}
+            M117 Done.
+        {% endif %}
+    {% endfor %}
+```
+
+Normally, the expectation would be that the above macro will output "Done" five times to the console
+since the `M109 S200` command would ensure that the extruder has
+reached 200C before the loop begins. Hence, the condition inside the loop will always be false. The
+expected GCode stream would be:
+
+```gcode
+M109 S200
+M117 Done.
+M117 Done.
+M117 Done.
+M117 Done.
+M117 Done.
+```
+
+However, as described above Klipper macro evaluation happens when the macro is triggered and it
+happens only once. The template portion of the macro is evaluate prior to any of the GCode commands
+listed in the macro having been executed. Therefore, if the macro is triggered when the extruder is
+cold, the `M109 S200` command would not have been issued yet and the extruder temperature used in
+the condition would be the ambient temperature. Hence, the condition inside the loop will always be
+**true**. The actual GCode steam generated would be:
+
+```gcode
+M1109 S200
+M117 HEATING...
+M117 HEATING...
+M117 HEATING...
+M117 HEATING...
+M117 HEATING...
+```
 
 Going through the Jinja2 template language is beyond the scope of this guide. However, below are
 a few examples with descriptions:
