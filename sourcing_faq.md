@@ -108,7 +108,7 @@ The BOM currently specifies silicone wire for bend and heat tolerance.  For an i
 
 ### Why an SKR 1.4? What about turbo / faster speeds? What about FYSETC?
 
-The BTT SKR controller is inexpensive and extremely capable for the purpose. Either an SKR 1.3 or 1.4 is historically recommended and can be used. While both controllers have different pin configurations, they use the same controller chip. BTT is no longer producing both the 1.3 and 1.4 and they will eventually be unavailable. Current alteranives include:
+The BTT SKR controller is inexpensive and extremely capable for the purpose. Either an SKR 1.3 or 1.4 is historically recommended and can be used. While both controllers have different pin configurations, they use the same controller chip. BTT is no longer producing both the 1.3 and 1.4 and they will eventually be unavailable. Current alternatives include:
 
 - FYSETC Spider
 - FYSETC S6
