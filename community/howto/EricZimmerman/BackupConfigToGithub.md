@@ -199,9 +199,9 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     This is a more or less optional step, but it is handy for preventing large or unwanted files from being committed.
 
-1. When done, save the file and exit nano
+6. When done, save the file and exit nano
 
-2. At this point we are ready to commit (at least manually)! Run the following command:
+7. At this point we are ready to commit (at least manually)! Run the following command:
 
     ```bash
     sh autocommit.sh
