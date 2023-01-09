@@ -28,6 +28,7 @@ Community-generated documentation for the many items that the official guide may
 | [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya | Apr 15, 2022 |
 | [Setup a BTT Smart Filament Sensor](./samwiseg0/btt_smart_filament_sensor.md) | samwiseg0 | |
 | [Stealthburner Neopixel Guide](./drachenkatze/neopixel_guide.md) | Drachenkatze |
+| [Klipper Macros Beginner's Guide](./voidtrance/Klipper_Macros_Beginners_Guide.md) | voidtrace |
 
 
 *Last Update excludes typos and grammatical corrections.
@@ -40,5 +41,3 @@ Community-generated documentation for the many items that the official guide may
 * [Drill and Counterbore Voron Bed](https://www.youtube.com/watch?v=N6EgYW_W3Js)
 * [Printed 80t pulley assembly](https://www.youtube.com/watch?v=W-mwJ2gfe9c)
 * [RAMPS 24V Conversion](https://www.youtube.com/watch?v=3eRuHNw-Uz)
-
-
