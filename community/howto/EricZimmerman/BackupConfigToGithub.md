@@ -177,7 +177,14 @@ We can now put the pieces together we have created so far. To make this easier, 
 
     ![git remote verify](images/backup/remoteVerify.png)
 
-4. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/printer_data/config` named `.gitignore` (using the command `nano .gitignore`) and 
+4. If this is your first time setting up git on your printer you may need to set your user and email details for git to use later. *if you don't do it now it will prompt you later ;)*
+
+    ```
+    git config --global user.email "your@email.com"
+    git config --global user.name "your name"
+    ```
+
+5. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/printer_data/config` named `.gitignore` (using the command `nano .gitignore`) and 
 add entries to the file, specifying the file patterns and/or locations to ignore.
 
     ```bash
@@ -296,7 +303,7 @@ Enjoy your new backups and never worry again about your config files being unava
 
 ## Automating via crontab (OPTIONAL)
 
-If you want to maintain a backup via cron, visit <a href="https://crontab-generator.org/https://crontab-generator.org/" target="_blank">this</a> site and select the appropriate options.
+If you want to maintain a backup via cron, visit <a href="https://crontab-generator.org/" target="_blank">this</a> site and select the appropriate options.
 
 Script to execute: `/home/pi/printer_data/config/autocommit.sh`
 
