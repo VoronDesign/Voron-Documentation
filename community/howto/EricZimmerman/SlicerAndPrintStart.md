@@ -39,7 +39,7 @@ M190: Wait for bed temperature
 M109: Wait for hot end temperature
 ```
 
-You can read more about these macros at https://marlinfw.org/docs/gcode/M109.html and https://marlinfw.org/docs/gcode/M190.html
+You can read more about these macros at https://www.klipper3d.org/G-Codes.html and searching for `M109`
 
 Also note that the third line contains a call to PRINT_START, along with several values after PRINT_START. 
 The options after PRINT_START are parameters and these allow for passing information from the slicer into the PRINT_START macro on the printer itself.
