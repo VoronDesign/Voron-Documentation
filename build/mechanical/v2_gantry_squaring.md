@@ -110,10 +110,10 @@ Adjust your gantry so that it sits perfectly on top of the lower Z joints.
 11. Re-install your lower Z joints and *lightly* tighten the M5 bolts.
     - Don't fully tighten them down yet - just lightly. The joint should still be able to articulate freely.
 
-12. Follow [:page_facing_up: Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
+12. Follow [Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
     - Make sure to come back here afterwards! The following steps are still important.
 
-13. [:page_facing_up: Re-tension your A/B belts](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz **over a 15cm span**).
+13. [Re-tension your A/B belts](/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz **over a 15cm span**).
 
 14. Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
 

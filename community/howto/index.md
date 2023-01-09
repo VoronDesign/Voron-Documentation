@@ -29,6 +29,8 @@ Community-generated documentation for the many items that the official guide may
 | [Setup a BTT Smart Filament Sensor](./samwiseg0/btt_smart_filament_sensor.md) | samwiseg0 | |
 | [Stealthburner Neopixel Guide](./drachenkatze/neopixel_guide.md) | Drachenkatze |
 | [Klipper Macros Beginner's Guide](./voidtrance/Klipper_Macros_Beginners_Guide.md) | voidtrace |
+| [Using Slicers and PRINT_START macros](./EricZimmerman/SlicerAndPrintStart.md) | EricZimmerman |
+| [Backing up printer configuration files to GitHub](./EricZimmerman/BackupConfigToGithub.md) | EricZimmerman |
 
 
 *Last Update excludes typos and grammatical corrections.
