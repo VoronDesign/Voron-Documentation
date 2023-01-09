@@ -11,7 +11,7 @@ Tuning steps and processes after everything is working.
 
 ## Gantry Racking & Squaring
 
-**V2:** See the [V2 gantry squaring instructions](https://docs.vorondesign.com/build/mechanical/v2_gantry_squaring.html).
+**V2:** See the [V2 gantry squaring instructions](/build/mechanical/v2_gantry_squaring.html).
 
 **All Printers:** See [Nero's gantry racking video](https://www.youtube.com/watch?v=cOn6u9kXvy0).
 
