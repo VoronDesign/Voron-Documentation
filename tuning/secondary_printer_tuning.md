@@ -76,6 +76,7 @@ All of the `[bed_mesh]` configuration options and explanations can be found [in 
 
 Here is a sample configuration. You can copy & paste this into your `printer.cfg`, making sure to uncomment the appropriate `mesh_min` and `mesh_max` for your bed size.
 - **The Switchwire stock configs already include this.**
+
 ```python
 [bed_mesh]
 speed: 300
