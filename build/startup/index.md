@@ -86,6 +86,9 @@ If the stepper does not move at all, then verify the "enable_pin" and "step_pin"
 
 ## Endstop Check
 
+**Important:** 
+If you are building a V0.2 that requires sensorless homing you should follow [this guide](./Voron-Documentation/blob/main/community/howto/clee/sensorless_xy_homing.md) for setting up the sensorless endstops before continuing.
+
 Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
 
 ```
@@ -192,7 +195,10 @@ If anything is updated in the printer configuration file, save the file and rest
 
 ## Z Endstop Location (V0)
 
-The V0 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+The V0.0 and v0.1 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+
+For V0.2 the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE`command to find the correct `position_endstop` value automatically. This value in your config is the distance from the nozzle to the bed surface when then printer triggers the z endstop switch. It also represents your maximum Z travel distance. this value can be edited manually as well.
+
 
 ## Inductive Probe Check (V1, Trident, V2, Switchwire, Legacy)
 
