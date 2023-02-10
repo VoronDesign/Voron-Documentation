@@ -87,7 +87,7 @@ If the stepper does not move at all, then verify the "enable_pin" and "step_pin"
 ## Endstop Check
 
 **Important:** 
-If you are building a V0.2 that requires sensorless homing you should follow [this guide](./Voron-Documentation/blob/main/community/howto/clee/sensorless_xy_homing.md) for setting up the sensorless endstops before continuing.
+If you are building a V0.2 that requires sensorless homing you should follow [this guide](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html) for setting up the sensorless endstops before continuing.
 
 Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
 
