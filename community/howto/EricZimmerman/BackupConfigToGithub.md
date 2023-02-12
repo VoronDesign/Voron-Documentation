@@ -148,6 +148,8 @@ We can now put the pieces together we have created so far. To make this easier, 
     ```
 
     This command will add execute permission for the owner of the file (you), group members, and all other users on the system. This makes it easy to run the script by different users, etc.
+    
+    **WARNING**: If you edit this file from MainSail, the execute permission will be removed, and you will have to repeat the above command!
 
 8. Type `ls -la autocommit.sh` and verify the new permissions. Note the `x` for user, group, and other. This is the execute permission we added in the previous step.
 
@@ -201,7 +203,7 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
 6. When done, save the file and exit nano
 
-7. At this point we are ready to commit (at least manually)! Run the following command:
+7. At this point we are ready to commit (at least manually)! Run the following command (**NOTE**: Any errors about `master` not existing the first time you run the script can be safely ignored):
 
     ```bash
     sh autocommit.sh
@@ -219,7 +221,7 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     ![File committed](images/backup/fileChangeCommit.png)
 
-    If you go to your GitHub repository, you can also see these changes by clicking on the commits, which is on the right side:
+    If you go to your GitHub repository, you can also see these changes by clicking on the commits, which is on the right side (**NOTE**: You may have to change the branch from `main` to `master` via the dropdown on the left side):
 
     ![Commit history](images/backup/commitHistory.png)
 
@@ -255,7 +257,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 
     ```bash
     [gcode_shell_command backup_cfg]
-    command: /home/pi/printer_data/config/autocommit.sh
+    command: /usr/bin/bash /home/pi/printer_data/config/autocommit.sh
     timeout: 30
     verbose: True
 
@@ -305,12 +307,12 @@ Enjoy your new backups and never worry again about your config files being unava
 
 If you want to maintain a backup via cron, visit <a href="https://crontab-generator.org/" target="_blank">this</a> site and select the appropriate options.
 
-Script to execute: `/home/pi/printer_data/config/autocommit.sh`
+Script to execute: `/usr/bin/bash /home/pi/printer_data/config/autocommit.sh`
 
 This results in a crontab entry similar to:
 
 ```bash
-0 */6 * * * /home/pi/printer_data/config/autocommit.sh >/dev/null 2>&1
+0 */6 * * * /usr/bin/bash /home/pi/printer_data/config/autocommit.sh >/dev/null 2>&1
 ```
 
 which can then be added to your crontab file via the `crontab -e` command by pasting it in at the bottom:
