@@ -20,7 +20,6 @@ PLA has a glass transition temperature of around 55C - 60C. It is very stiff and
 PETG has a glass transition temperature of around 70-80C. It has moderate stiffness depending on the additives and typically high ductility.  It is not recommended for Voron parts due to the low temperature tolerance. The thermal properties do not change with additives such as carbon fiber.  Some have successfully built a Voron in PETG and used that to reprint in ABS but the part failure rate in that situation is very high.  PETG is acceptable for skirts and panel clips.
 
 ## ABS
-
 ABS has a glass transition temperature of around 90-100C. It had moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  ASA is fully supported as well due to the very similar technical properties. ABS+ while supported has a glass transition temperature thats closer to 75C.
 
 ## Nylon

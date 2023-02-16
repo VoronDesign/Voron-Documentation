@@ -6,6 +6,10 @@ nav_exclude: true
 
 # Octopus(Pro) Klipper Firmware
 
+<div><b>WARNING:</b>  Do not leave HE0 or HE1 connected.
+ <p>There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we recommend leaving the heaters disconnected until after loading the klipper firmware</p></div>
+{: .warning }
+
 The firmware update process for both Octopus and Octopus Pro is the same so the guides have been combined.
 
 ### Prerequisites
@@ -91,13 +95,14 @@ There are multiple options for getting this firmware file installed onto your Oc
 2. Install the BOOT0 jumper
 3. Connect Octopus & Pi via USB-C
 4. Power on Octopus
-5. From your ssh session, run `lsusb`. and find the ID of the dfu device. The device is typically named `STM Device in DFU mode`.
-6. If you do not see a DFU device in the list, press the reset button next to the USB connector and run `lsusb` again.
-7. Run `make flash FLASH_DEVICE=1234:5678` replace 1234:5678 with the ID from the previous step. Note that the ID is in hexadecimal, it only contains the numbers `0-9` and letters `A-F`.
-8. Power off the Octopus
-9. Remove the jumper from BOOT0 and 3.3V
-10. Power on the Octopus
-11. You can confirm that the flash was successful by running `ls /dev/serial/by-id`.  If the flash was successful, this should now show a klipper device, similar to:
+5. From your ssh session, run `cd ~/klipper` to make sure you are in the correct directory
+6. Run `lsusb`. and find the ID of the dfu device. The device is typically named `STM Device in DFU mode`.
+7. If you do not see a DFU device in the list, press the reset button next to the USB connector and run `lsusb` again.
+8. Run `make flash FLASH_DEVICE=1234:5678` replace 1234:5678 with the ID from the previous step. Note that the ID is in hexadecimal, it only contains the numbers `0-9` and letters `A-F`.
+9. Power off the Octopus
+10. Remove the jumper from BOOT0 and 3.3V
+11. Power on the Octopus
+12. You can confirm that the flash was successful by running `ls /dev/serial/by-id`.  If the flash was successful, this should now show a klipper device, similar to:
  
    ![](./images/stm32f446_id.png)
 

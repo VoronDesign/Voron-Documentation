@@ -86,6 +86,9 @@ If the stepper does not move at all, then verify the "enable_pin" and "step_pin"
 
 ## Endstop Check
 
+**Important:** 
+If you are building a V0.2 that requires sensorless homing you should follow [this guide](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html) for setting up the sensorless endstops before continuing.
+
 Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
 
 ```
@@ -192,7 +195,10 @@ If anything is updated in the printer configuration file, save the file and rest
 
 ## Z Endstop Location (V0)
 
-The V0 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+The V0.0 and v0.1 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+
+For V0.2 the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE`command to find the correct `position_endstop` value automatically. This value in your config is the distance from the nozzle to the bed surface when then printer triggers the z endstop switch. It also represents your maximum Z travel distance. this value can be edited manually as well.
+
 
 ## Inductive Probe Check (V1, Trident, V2, Switchwire, Legacy)
 
@@ -338,7 +344,7 @@ The Z offset can be adjusted during a print using the Tune menu on the display, 
 The "babystepping" controls may be used to fine tune the z offset.
 
 #### Without LCD Screen
-If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mailsail and Fluidd, but requires some additional work for Octoprint.
+If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mainsail and Fluidd, but requires some additional work for Octoprint.
 
 1) (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
 
@@ -374,7 +380,7 @@ run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will res
 Before the first print, make sure that the extruder extrudes the correct amount of material.
 
 * With the hotend at temperature, make a mark on the filament between the roll of filament and your extruder, between 120mm and 150mm away from the entrance to the extruder.  Measure the distance from the entrance of the extruder to that mark.
-* In Octoprint / Mailsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
+* In Octoprint / Mainsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
 * Measure from the entrance of your extruder to the mark you made previously. 
 	* *In a perfect world, assuming the mark was at 120mm, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
 * Update `rotation_distance` in the extruder section of the configuration file using this formula:
@@ -384,7 +390,7 @@ Before the first print, make sure that the extruder extrudes the correct amount 
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
 
-Typical `rotation_distance` values should be around 22.6789511 for Afterburner and Mobius (update gear_ratio to 80:20 for Mobius).
+Typical `rotation_distance` values should be around 22.6789511 for Afterburner, Stealthburner and Mobius (update gear_ratio to 50:10 for Stealthburner with Clockwork 2 or 80:20 for Mobius).
 
 ---
 ### Next: [Slicer Setup](../slicer/index.md)

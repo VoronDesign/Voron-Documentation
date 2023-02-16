@@ -151,6 +151,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 ### Voron 0
 * [V0.0 - mini e3 V1.2](./v0_miniE3_v12_wiring.md)
 * [V0.0 - mini e3 V2.0](./v0_miniE3_v20_wiring.md)
+* [V0.1 - mini e3 V3.0](./v0_miniE3_v30_wiring.md)
 * [V0.1 - SKR Pico](./v0_skr_pico_wiring.md)
 
 ### Voron 1
@@ -158,7 +159,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V1 - SKR 1.4](./v1_skr14_wiring.md)
 
 ### Trident
-* [Trident - BigTreeTech Octopus](./v2_octopus_wiring.md)
+* [Trident - BigTreeTech Octopus](./v1_octopus_wiring.md)
 * [Trident - MKS Makerbase Monster8](./v2_monster8_wiring.md)
 
 ### Voron 2

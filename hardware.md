@@ -16,7 +16,7 @@ _Note: Pricing estimates are in US Dollars and do not include any necessary tool
 
 ## Voron Zero
 
-The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm^3 print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock Makerbeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design will start to increase cost or labor involved with tapping. The bed is also cantilevered which will also restrict scaling. This printer can be built for between \$400 - \$600. Current release is V0.1.
+The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm^3 print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock Makerbeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design will start to increase cost or labor involved with tapping. The bed is also cantilevered which will also restrict scaling. This printer can be built for between \$400 - \$600. Current release is V0.2.
 
 [V0 Preview](https://www.youtube.com/watch?v=KR9YlTzWzQQ)
 
@@ -32,7 +32,7 @@ The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional Core
 
 ## Voron 2
 
-The [Voron V2](https://vorondesign.com/voron2.4) is a modified CoreXY design with a static bed and a gantry that moves along the Z axis. It is a much more complex build because it includes things such as 4-point gantry tramming to align to the print surface, dual MCUs, and other unique features. It is also designed to be fully enclosed so it prints ABS or similar filaments very well. Due to the linear rails the design is scalable in stock form from 250mm^3 and 300mm^3 all the way up to 350mm^3. More linear rails, larger print surface, and other V2-specific items make this printer more expensive, at between \$1,500 - \$1,900. Current release is V2.4r2.
+The [Voron V2](https://vorondesign.com/voron2.4) is a modified CoreXY design with a static bed and a gantry that moves along the Z axis. It is a much more complex build because it includes things such as 4-point gantry tramming to align to the print surface, more stepper motors and other unique features. It is also designed to be fully enclosed so it prints ABS or similar filaments very well. Due to the linear rails the design is scalable in stock form from 250x250x220mm and 300x300x280mm all the way up to 350x350x330mm. More linear rails, larger print surface, and other V2-specific items make this printer more expensive, at between \$1,500 - \$1,900. Current release is V2.4r2.
 
 [V2.4 Quad Level](https://www.youtube.com/watch?v=xfsnEO2VtwM)
 
@@ -78,17 +78,17 @@ Afterburner is not specifically an extruder, but the collective name for the Vor
 
 ![](./images/afterburner.jpg)
 
-## Mini Afterburner
+## Mini Stealthburner
 
-Mini Afterburner refers to the V0.1 toolhead with a built-in direct-drive extruder based on the Pocketwatch from the original Voron Zero.
+Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extruder. it is the successor to teh Mini Afterburner toolhead.
 
 ## Clockwork
 
 Clockwork is the name given to the original extruder system for Afterburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA17 motor.  The Afterburner term is commonly (but incorrectly) used to refer to this extruder.
 
-## Pocketwatch
+## Nightwatch
 
-Pocketwatch is the Afterburner Clockwork repackaged for the smaller size needed by the Voron Zero printer. Pocketwatch is available as a [standalone extruder](https://github.com/VoronDesign/Pocket-Watch/) for Bowden setups.
+Nightwatch is the Clockwork2 repackaged for the smaller size needed by the Voron Zero printer. Nightwatch is available as a [standalone extruder](https://github.com/VoronDesign/Pocket-Watch/) for Bowden setups.
 
 ## Galileo
 

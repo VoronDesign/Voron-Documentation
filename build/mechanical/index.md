@@ -3,6 +3,7 @@ layout: default
 title: Mechanical Assembly
 parent: The Build
 nav_order: 1
+has_children: true
 ---
 
 # Mechanical Assembly

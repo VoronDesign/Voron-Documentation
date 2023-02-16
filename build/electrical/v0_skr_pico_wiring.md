@@ -11,7 +11,8 @@ nav_exclude: true
 * Plug in stepper motors for X, Y, Z, and E in positions X, Y, Z1, and E
 * Plug Hot End thermistor to thermistor TH0
 * Plug Hot End heater in to HE
-* Plug Hot End Fan in to FAN2
+* Plug Hot End Fan (+) in to 5Pin connector (5V pin)
+* Plug Hot End Fan (-) in to FAN2
 * Plug Part Cooling Fan in to FAN1
 * Plug Bed Thermistor in to THB
 * Connect The DC bed to HB
@@ -26,6 +27,6 @@ nav_exclude: true
 
 ## SKR Pico Pinout
 
-For reference, here is the pinout of the SKR mini E3 V2.0
+For reference, here is the pinout of the BTT SKR Pico
 
 ![](./images/skr-pico-pinout.png)

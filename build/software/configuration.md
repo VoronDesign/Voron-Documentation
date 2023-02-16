@@ -9,20 +9,17 @@ nav_order: 4
 
 ## Initial Voron Printer Configuration
 
-Download the respective Voron base configuration file from the following links:
+Voron Configuration templates are available in the github repository for each printer.  You likely have them in the files you have already downloaded, in the "firmware" directory, or you can use the appropriate link below:
+* [V0.2](https://github.com/VoronDesign/Voron-0/tree/Voron0.2/Firmware)
+* [V1.8](https://github.com/VoronDesign/Voron-1/tree/Voron1.8/Firmware/klipper_configurations)
+* [Trident](https://github.com/VoronDesign/Voron-Trident/tree/main/Firmware)
+* [V2.4](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/firmware/klipper_configurations)
+* [Switchwire](https://github.com/VoronDesign/Voron-Switchwire/tree/master/Firmware)
+* [Legacy](https://github.com/VoronDesign/Voron-Legacy/tree/main/Firmware)
 
-* [V0 SKR mini e3 1.2](https://raw.githubusercontent.com/VoronDesign/Voron-0/master/VORON-0/Firmware/SKR_E3_Mini_1.2/printer.cfg) *note:  Not compatible with V0.1*
-* [V0 SKR mini e3 2.0](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-mini-E3-v2.0.cfg)
-* [V0 SKR mini e3 3.0](https://raw.githubusercontent.com/VoronDesign/Voron-0/Voron0.1/Firmware/skr-mini-E3-v3.0.cfg)
-* [V1 SKR 1.4](https://raw.githubusercontent.com/VoronDesign/Voron-1/Voron1.8/Firmware/klipper_configurations/SKR_1.4/Voron_1_SKR_14_Config.cfg)
-* [V2 SKR 1.3](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.3/Voron2_SKR_13_Config.cfg)
-* [V2 SKR 1.4](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/SKR_1.4/Voron2_SKR_14_Config.cfg)
-* [V2 Spider](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/Spider/Voron2_Spider_Config.cfg)
-* [V2 Octopus](https://raw.githubusercontent.com/VoronDesign/Voron-2/Voron2.4/firmware/klipper_configurations/Octopus/Voron2_Octopus_Config.cfg)
-* [SW SKR mini e3 V2.0](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/skr_mini_e3_v2_config.cfg)
-* [SW Einsy Rambo](https://raw.githubusercontent.com/VoronDesign/Voron-Switchwire/master/Firmware/einsy_config.cfg)
-* [Legacy SKR 1.3](https://raw.githubusercontent.com/VoronDesign/Voron-Legacy/main/Firmware/skr_v1.3_config.cfg)
-* [Trident Octopus](https://raw.githubusercontent.com/VoronDesign/Voron-Trident/main/Firmware/Octopus/Trident_Octopus_Config.cfg)
+Note:  When downloading text configuration files from github, click the "raw" button at the top right of the file, and then use your browser's "save-as" function.
+
+![raw button](./images/github-raw.png)
 
 Rename the downloaded file to `printer.cfg`
 
