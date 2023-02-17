@@ -40,7 +40,7 @@ Rename the downloaded file to `printer.cfg`
 * [bbEdit Information](./bbedit.md)
 
 * Nano: The nano command is slightly different, depending on whether you are using Mainsail, Fluidd, or Octoprint
-	* **Mainsail & Fluidd**: `nano ~/klipper_config/printer.cfg`
+	* **Mainsail & Fluidd**: `nano ~/printer_data/config/printer.cfg`
 	* **Octoprint**:`nano ~/printer.cfg`
 
 ## Review printer.cfg
