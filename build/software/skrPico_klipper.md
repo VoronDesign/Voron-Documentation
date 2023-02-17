@@ -58,7 +58,7 @@ Now, you can flash the SKR Pico a couple different ways - via PC or the Raspberr
 You can now copy the klipper.uf2 file to a directory that you can access via mainsail/fluid by running the following command
 
 ```
-cp out/klipper.uf2 ../klipper_config/klipper.uf2
+cp out/klipper.uf2 ~/printer_data/config/klipper.uf2
 ```
  
 After running the above command, you should find the klipper.uf2 file in the config section of your UI (Mainsail/fluidd)
