@@ -80,7 +80,7 @@ Afterburner is not specifically an extruder, but the collective name for the Vor
 
 ## Mini Stealthburner
 
-Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extruder. it is the successor to teh Mini Afterburner toolhead.
+Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extruder. it is the successor to the Mini Afterburner toolhead.
 
 ## Clockwork
 
