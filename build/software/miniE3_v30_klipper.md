@@ -25,7 +25,7 @@ make menuconfig
 In the menu structure there are a number of items to be selected.
 
 * Ensure that the micro-controller architecture is set to 'STM32' 
-* Ensure that the processor model is set to 'STM32F103' 
+* Ensure that the processor model is set to 'STM32G0B1' 
 * Ensure that the Bootloader offset is set to '28KiB'
 * Ensure that the Clock Reference is set to '8 Mhz'
 * Ensure that "Enable extra low-level configuration options" is selected.
