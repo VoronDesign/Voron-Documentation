@@ -46,6 +46,7 @@ At this point Klipper will be installed on the Raspberry Pi.  The next step is t
 * [SKR 1.4](./skr13_klipper.md)
 * [SKR mini e3 V1.2](./miniE3_v12_klipper.md)
 * [SKR mini e3 V2.0](./miniE3_v20_klipper.md)
+* [SKR mini e3 V3.0](./miniE3_v30_klipper.md)
 * [FLY FLYF407ZG](./flyf407zg_klipper.md)
 * [Fysetc Spider](./spider_klipper.md)
 * [BTT Octopus](./octopus_klipper.md)
