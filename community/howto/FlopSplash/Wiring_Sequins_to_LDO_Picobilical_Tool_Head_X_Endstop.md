@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sequins to LDO Picobilical Tool Head X Endstop
+title: Wiring_Sequins_to_LDO_Picobilical_Tool_Head_X_Endstop
 nav_exclude: true
 ---
 
