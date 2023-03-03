@@ -47,7 +47,7 @@ The [Picobilical](https://github.com/MotorDynamicsLab/LDO-Picobilical) by LDO is
 6. Double check your wire path and tidy up as needed.
 
 ### Configuring Klipper
-1. In your board_pins section for the LDO Picobilical, comment out your gpio0, 'endstop_pin: umb:gpio0' if using the LDO .cfg at time of writing.
+1. In your board_pins section for the LDO Picobilical, comment out your gpio0, 'endstop_pin: umb:gpio0' if using the [LDOs cfg](https://github.com/MotorDynamicsLab/LDO-Picobilical/blob/master/Klipper_Configs/ldo-picobilical.cfg) at time of writing.
 
 2. Add the Sequins as an output_pin:
 [output_pin hotend_light]
