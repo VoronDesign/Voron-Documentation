@@ -41,7 +41,7 @@ Klipper documentation for the `gcode_macro` section
 [here](https://www.klipper3d.org/Config_Reference.html#gcode_macro).
 
 Normally, a macro will take the following form:
-```gcode
+```
 [gcode_macro <MACRO_NAME>]
 gcode:
     <GCode command>
@@ -57,7 +57,7 @@ callable but are not shown in frontends like Mainsail or Fluidd.
 Macros are called/triggered either from a frontend or from other macros. To
 trigger a macro from another macro call it at the appropriate time. For example:
 
-```gcode
+```
 [gcode_macro MACRO1]
 gcode:
     G28 ; home all axis
@@ -78,7 +78,7 @@ Macro variables (the `variable_<name>` key/value pair) are persistent variables
 assigned to the macro. Their values can be used/set within the macro or even
 from another macro. You can think of them as macro-specific global variables.
 
-```gcode
+```
 [gcode_macro MACRO3]
 variable_var1: 0
 gcode:
@@ -91,7 +91,7 @@ later time, the new value will persist until changed again.
 
 Variables defined by a macro can be referenced from within the macro directly:
 
-```gcode
+```
 [gcode_macro MACRO4]
 variable_var1: 0
 gcode:
@@ -101,7 +101,7 @@ gcode:
 Referencing macro variables from a different macro requires the look up of the
 macro object that defines the desired variables:
 
-```gcode
+```
 [gcode_macro MACRO5]
 gcode:
     {% set macro2 = printer["gcode_macro MACRO2"] %}
@@ -111,7 +111,7 @@ gcode:
 Changing variable values at runtime is done with the `SET_GCODE_VARIABLE`
 command:
 
-```gcode
+```
 [gcode_macro MACRO6]
 gcode:
     SET_GCODE_VARIABLE MACRO=MACRO2 VARIABLE=var1 VALUE=10
@@ -125,7 +125,7 @@ Because Klipper allows the definition of an "empty" macro - a macro that does
 not contain any GCode commands, a macro can be created that is just a common
 storage for various settings/values:
 
-```gcode
+```
 [gcode_macro _USER_VARIABLES]
 variable_var1: 0
 variable_var2: 1
@@ -188,7 +188,7 @@ macro content change based on changing printer conditions.
 The following is an example that illustrates this. Consider the following
 example macro:
 
-```gcode
+```
 [gcode_macro EXAMPLE]
 gcode:
     M109 S200
@@ -206,7 +206,7 @@ times to the console since the `M109 S200` command would ensure that the
 extruder has reached 200C before the loop begins. Hence, the condition inside
 the loop will always be false. The expected GCode stream would be:
 
-```gcode
+```
 M109 S200
 M117 Done.
 M117 Done.
@@ -224,7 +224,7 @@ used in the condition would be the ambient temperature. Hence, the condition
 inside the loop will always be **true**. The actual GCode steam generated would
 be:
 
-```gcode
+```
 M1109 S200
 M117 HEATING...
 M117 HEATING...
@@ -237,7 +237,7 @@ Going through the Jinja2 template language is beyond the scope of this guide.
 However, below are a few examples with descriptions:
 
 ### Setting Internal Variables
-```gcode
+```
 [gcode_macro EXAMPLE1]
 gcode:
     {% set var1 = printer.toolhead.axis_maximum.x %}
@@ -248,7 +248,7 @@ the maximum position of the X axis[^5]. The it uses the variable to move the
 toolhead to that position along the X axis.
 
 ### Conditions
-```gcode
+```
 [gcode_macro EXAMPLE1]
 gcode:
     {% set var1 = printer.toolhead.axis_maximum.x %}
@@ -270,7 +270,7 @@ abilities to loop (execute a set of commands repeatedly). For example, the
 template language does not provide a `while` loop since such a loop would depend
 on evaluating changing conditions, which is not possible.
 
-```gcode
+```
 [gcode_macro EXAMPLE3]
 gcode:
     {% set var1 = 10 %}
@@ -293,7 +293,7 @@ After defining the variables, the printer is homed (`G28`) and the toolhead is
 moved to the origin, 10mm above the build plate (`G0 X0 Y0 Z10`).
 
 Then the macro repeats the commands
-```gcode
+```
 G0 X{var2} Y{var3}
 G0 X0 Y0
 ```
@@ -310,7 +310,7 @@ Parameters are passed through the `params` object that is automatically provided
 and populated by Klipper. If a macro requires parameters, it can make use of the
 `params` object like below:
 
-```gcode
+```
 [gcode_macro EXAMPLE4]
 gcode:
     {% set var1 = params.VALUE1 %}
@@ -318,7 +318,7 @@ gcode:
 
 Then callers can trigger the macro as such:
 
-```gcode
+```
 EXAMPLE1 VALUE1=<value>
 ```
 
@@ -331,7 +331,7 @@ This can be done through the use of Jinja's filters[^6]. Filters are applied to
 values through the pipe (`|`) operator. While a full discussion on filters is
 beyond the scope of this guide, common filters are `int`, `float`, `split`.
 
-```gcode
+```
 [gcode_macro EXAMPLE5]
 gcode:
     {% set var_int = params.INT_VALUE|int %}
@@ -342,7 +342,7 @@ gcode:
 Another useful filter is the `default()` filter, which will assign a default
 value to a parameter:
 
-```gcode
+```
 [gcode_macro EXAMPLE6]
 gcode:
     {% set var_int = params.INT_VALUE|default(5)|int %}
@@ -370,7 +370,7 @@ there is a workaround for passing parameters to delayed macros.
 
 To define a delayed GCode macro, use the `[delayed_gcode]` section:
 
-```gcode
+```
 [delayed_gcode DELAYED_GCODE_MACRO1]
 gcode:
     M117 Delayed GCode macro triggered.
@@ -379,7 +379,7 @@ gcode:
 Scheduling the delayed GCode macro is done with the `UPDATE_DELAYED_GCODE`
 command:
 
-```gcode
+```
 UPDATE_DELAYED_GCODE ID=<delayed GCode macro name> DURATION=<delay before execution>
 ```
 
@@ -388,7 +388,7 @@ execution of the `UPDATE_DELAYED_GCODE` command to when the delayed GCode macro
 will be triggered. For example, to schedule the `DELAYED_GCODE_MACRO1` macro to
 trigger 5 seconds in the future, the command would be:
 
-```gcode
+```
 UPDATE_DELAYED_GCODE ID=DELAYED_GCODE_MACRO1 DURATION=5
 ```
 
@@ -402,7 +402,7 @@ macros directly, there is an indirect way to do this - by using variables
 defined by another macro (see 
 [User Macro Settings](./README.md#user-macro-settings)):
 
-```gcode
+```
 [gcode_macro __PARAMETERS]
 variable_var1: 0
 variable_var2: 10
@@ -434,7 +434,7 @@ schedules itself based on current conditions. This is possible because
 Klipper updates the current state of the printer just prior to executing the
 macro. Below is a simple example of this:
 
-```gcode
+```
 [delayed_gcode DELAYED_GCODE_MACRO3]
 gcode:
     {% set current_temp = printer[printer.toolhead.extruder].temperature %}
@@ -545,7 +545,7 @@ can be added depending on what that GCode affects. For the `PRINT_START` macro,
 the location where to add custom GCode is in "Start G-code" section under the
 "Printer Settings -> Custom G-code" .
 
-```gcode
+```
 PRINT_START EXTRUDER_TEMP={first_layer_temperature[initial_extruder]} BED_TEMP=[first_layer_bed_temperature] CHAMBER_TEMP=[chamber_temperature]
 ```
 
@@ -558,7 +558,7 @@ example, if the profile being used define extruder temperature as 240C, bed
 temperature as 75C, and chamber temperature as 40C, the command appearing in the
 GCode file will be:
 
-```gcode
+```
 PRINT_START EXTRUDER_TEMP=240 BED_TEMP=75 CHAMBER_TEMP=40
 ```
 
@@ -566,7 +566,7 @@ PRINT_START EXTRUDER_TEMP=240 BED_TEMP=75 CHAMBER_TEMP=40
 The place where to add similar custom GCode in Cura is in the "Start G-code"
 window in the "Machine Settings -> Printer" screen.
 
-```gcode
+```
 PRINT_START EXTRUDER_TEMP={material_print_temperature_layer_0} BED_TEMP={material_bed_temperature_layer_0} CHAMBER_TEMP={build_volume_temperature}
 ```
 
