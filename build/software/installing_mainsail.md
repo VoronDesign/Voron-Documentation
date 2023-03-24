@@ -31,7 +31,8 @@ _note: It is a good idea to use a premium microSD card from a reputable manufact
     * If your network automatically assigns DNS hostnames, it may simply show up as `mainsailos`
     * Failing these two options, you may need to check your router's DHCP server, and find out what IP address as been assigned to the device.
 
-
+### LCD User Interface
+The MainsailOS does not include KlipperScreen which is needed for the LCD interface.  This can be installed using Kiauh by following instructions here: [Klipper Screen Install](https://klipperscreen.readthedocs.io/en/latest/Installation/#setup).
  
 ### Software Update
  
