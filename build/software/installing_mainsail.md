@@ -24,7 +24,8 @@ _note: It is a good idea to use a premium microSD card from a reputable manufact
 
 6. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
 7. Insert the microSD card into your Pi, and power on the Pi.    
-8. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)  
+8. If you have LCD connected and the LCD shows "Generating SSH Keys..." and appears to hang, this is a known issue in MainSailos and the work around is to wait around 3 minutes and reboot the Raspberry PI. After which the LCD should show the raspberry pi boot console. 
+9. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)  
    
    The default username is `pi` and the password is `raspberry`.
     * If your network supports bonjour, the pi should show up as `mainsailos.local`
