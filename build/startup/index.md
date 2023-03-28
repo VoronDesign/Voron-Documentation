@@ -78,7 +78,7 @@ Run this command for each of the motors:
 | extruder            | Movement                                                       |
 | **Switchwire**      |                                                                |
 | stepper_x           | Movement                                                       |
-| stepper_y           | the bed moves towards forward, then back.                      |
+| stepper_y           | the bed moves towards the front, then back.                    |
 | stepper_z           | Movement                                                       |
 | extruder            | Movement                                                       |
 
