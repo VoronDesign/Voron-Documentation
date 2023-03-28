@@ -14,6 +14,7 @@ Voron Configuration templates are available in the github repository for each pr
 * [V1.8](https://github.com/VoronDesign/Voron-1/tree/Voron1.8/Firmware/klipper_configurations)
 * [Trident](https://github.com/VoronDesign/Voron-Trident/tree/main/Firmware)
 * [V2.4](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/firmware/klipper_configurations)
+* [Switchwire](https://github.com/VoronDesign/Voron-Switchwire/tree/master/Firmware)
 * [Legacy](https://github.com/VoronDesign/Voron-Legacy/tree/main/Firmware)
 
 Note:  When downloading text configuration files from github, click the "raw" button at the top right of the file, and then use your browser's "save-as" function.
@@ -39,7 +40,7 @@ Rename the downloaded file to `printer.cfg`
 * [bbEdit Information](./bbedit.md)
 
 * Nano: The nano command is slightly different, depending on whether you are using Mainsail, Fluidd, or Octoprint
-	* **Mainsail & Fluidd**: `nano ~/klipper_config/printer.cfg`
+	* **Mainsail & Fluidd**: `nano ~/printer_data/config/printer.cfg`
 	* **Octoprint**:`nano ~/printer.cfg`
 
 ## Review printer.cfg
