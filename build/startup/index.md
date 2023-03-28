@@ -76,7 +76,11 @@ Run this command for each of the motors:
 | stepper_z2          | The back right corner of the gantry moves up, then back down   |
 | stepper_z3          | The front right corner of the gantry moves up, then back down  |   
 | extruder            | Movement                                                       |
-
+| **Switchwire**      |                                                                |
+| stepper_x           | Movement                                                       |
+| stepper_y           | the bed moves towards forward, then back.                      |
+| stepper_z           | Movement                                                       |
+| extruder            | Movement                                                       |
 
 If the stepper does not move at all, then verify the "enable_pin" and "step_pin" settings for the stepper. If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting. If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. This is done by adding a '!' to the "dir_pin" in the printer config file (or removing it if one is already there). If the motor moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
 
