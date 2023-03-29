@@ -48,8 +48,9 @@ The STEPPER_BUZZ command will cause the given stepper to move one millimeter in 
 
 
 Run this command for each of the motors:
+
 | **Motor**           | **Expectation**                                                |
-|---------------------|----------------------------------------------------------------|
+|:---------------------|:----------------------------------------------------------------|
 | **Voron 0**         |                                                                |
 | stepper_x           | The motor will rotate clockwise first, then back counterclockwise|           
 | stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
