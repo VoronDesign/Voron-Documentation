@@ -44,39 +44,43 @@ To verify that each stepper motor is operating correctly, send the following com
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
+The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.  For some motors, we will verify direction again later, nowever ideally all motors will be running correctly at the end of this test. See the list below.  Note, if you have trouble seeing what direction a motor is rotating, try adding a small sharpy mark on the pulley
+
+
 Run this command for each of the motors:
-
-### V0, SW
-* stepper_x
-* stepper_y
-* stepper_z
-* extruder
-
-### V1, Legacy
-* stepper_x
-* stepper_y
-* stepper_z
-* stepper_z1 
-* extruder
-
-### Trident
-* stepper_x
-* stepper_y
-* stepper_z
-* stepper_z1 
-* stepper_z2 
-* extruder
-
-### V2
-* stepper_x
-* stepper_y
-* stepper_z
-* stepper_z1   
-* stepper_z2   
-* stepper_z3   
-* extruder
-
-The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.
+| **Motor**           | **Expectation**                                                |
+|---------------------|----------------------------------------------------------------|
+| **Voron 0**         |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|           
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z           | The bed moves down, then back up                               |
+| extruder            | Movement: Direction will be tested later                       |
+| **Voron 1, Legacy** |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z           | the left side of the bed moves down, then back up              |
+| stepper_z1          | the right side of the bed moves down, then back up             |
+| extruder            | Movement: Direction will be tested later                       |
+| **Trident**	      |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z	      | The front left corner of the bed moves down, then back up      |
+| stepper_z1	      | The back of the bed moves down, then back up                   |
+| stepper_z2          | The front right corner of the bed moves down, then back up     |
+| extruder            | Movement: Direction will be tested later                       |
+| **V2**              |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z	      | The front left corner of the gantry moves up, then back down   |
+| stepper_z1	      | The back left corner of the gantry moves up, then back down    |
+| stepper_z2          | The back right corner of the gantry moves up, then back down   |
+| stepper_z3          | The front right corner of the gantry moves up, then back down  |   
+| extruder            | Movement: Direction will be tested later                       |
+| **Switchwire**      |                                                                |
+| stepper_x           | The motor will rotate counterclockwise first, then back clockwise|
+| stepper_y           | the bed moves towards the front, then back.                    |
+| stepper_z           | The motor will rotate counterclockwise first, then back clockwise|
+| extruder            | Movement: Direction will be tested later                       |
 
 If the stepper does not move at all, then verify the "enable_pin" and "step_pin" settings for the stepper. If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting. If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. This is done by adding a '!' to the "dir_pin" in the printer config file (or removing it if one is already there). If the motor moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
 
