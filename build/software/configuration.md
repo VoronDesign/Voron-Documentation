@@ -21,6 +21,7 @@ Note:  When downloading text configuration files from github, click the "raw" bu
 
 ![raw button](./images/github-raw.png)
 
+
 Rename the downloaded file to `printer.cfg`
 
 **Mainsail**: Upload the file via Mainsail's interface.  Go to the "Machine" tab, and under "Config Files", press the "Upload File" button
