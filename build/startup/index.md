@@ -44,39 +44,44 @@ To verify that each stepper motor is operating correctly, send the following com
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
+The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.  For some motors, we will verify direction again later, nowever ideally all motors will be running correctly at the end of this test. See the list below.  Note, if you have trouble seeing what direction a motor is rotating, try adding a small sharpy mark on the pulley
+
+
 Run this command for each of the motors:
 
-### V0, SW
-* stepper_x
-* stepper_y
-* stepper_z
-* extruder
-
-### V1, Legacy
-* stepper_x
-* stepper_y
-* stepper_z
-* stepper_z1 
-* extruder
-
-### Trident
-* stepper_x
-* stepper_y
-* stepper_z
-* stepper_z1 
-* stepper_z2 
-* extruder
-
-### V2
-* stepper_x
-* stepper_y
-* stepper_z
-* stepper_z1   
-* stepper_z2   
-* stepper_z3   
-* extruder
-
-The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.
+| **Motor**           | **Expectation**                                                |
+|:---------------------|:----------------------------------------------------------------|
+| **Voron 0**         |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|           
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z           | The bed moves down, then back up                               |
+| extruder            | Movement: Direction will be tested later                       |
+| **Voron 1, Legacy** |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z           | the left side of the bed moves down, then back up              |
+| stepper_z1          | the right side of the bed moves down, then back up             |
+| extruder            | Movement: Direction will be tested later                       |
+| **Trident**	      |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z	      | The front left corner of the bed moves down, then back up      |
+| stepper_z1	      | The back of the bed moves down, then back up                   |
+| stepper_z2          | The front right corner of the bed moves down, then back up     |
+| extruder            | Movement: Direction will be tested later                       |
+| **V2**              |                                                                |
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
+| stepper_z	      | The front left corner of the gantry moves up, then back down   |
+| stepper_z1	      | The back left corner of the gantry moves up, then back down    |
+| stepper_z2          | The back right corner of the gantry moves up, then back down   |
+| stepper_z3          | The front right corner of the gantry moves up, then back down  |   
+| extruder            | Movement: Direction will be tested later                       |
+| **Switchwire**      |                                                                |
+| stepper_x           | The motor will rotate counterclockwise first, then back clockwise|
+| stepper_y           | the bed moves towards the front, then back.                    |
+| stepper_z           | The motor will rotate counterclockwise first, then back clockwise|
+| extruder            | Movement: Direction will be tested later                       |
 
 If the stepper does not move at all, then verify the "enable_pin" and "step_pin" settings for the stepper. If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting. If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. This is done by adding a '!' to the "dir_pin" in the printer config file (or removing it if one is already there). If the motor moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
 
@@ -85,6 +90,9 @@ If the stepper does not move at all, then verify the "enable_pin" and "step_pin"
 ![](./images/V2-motor-positions.png)
 
 ## Endstop Check
+
+**Important:** 
+If you are building a V0.2 that requires sensorless homing you should follow [this guide](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html) for setting up the sensorless endstops before continuing.
 
 Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
 
@@ -192,7 +200,10 @@ If anything is updated in the printer configuration file, save the file and rest
 
 ## Z Endstop Location (V0)
 
-The V0 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+The V0.0 and v0.1 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+
+For V0.2 the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE`command to find the correct `position_endstop` value automatically. This value in your config is the distance from the nozzle to the bed surface when then printer triggers the z endstop switch. It also represents your maximum Z travel distance. this value can be edited manually as well.
+
 
 ## Inductive Probe Check (V1, Trident, V2, Switchwire, Legacy)
 
