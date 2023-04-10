@@ -58,7 +58,7 @@ has_children: true
 
 ### Current
 
-[V0.1 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.1/Manuals/Assembly_Manual_0.1.pdf)
+[V0.2 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.2/Manuals/VORON_V0.2_Assembly_Manual.pdf)
 
 ### Historical
 
