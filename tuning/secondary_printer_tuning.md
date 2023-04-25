@@ -162,7 +162,7 @@ Input Shaper is a Klipper-specific software technique for reducing ringing (also
 
 ## Print Tuning
 
-Andrew Ellis' [Print Tuning Guide](https://github.com/AndrewEllis93/Print-Tuning-Guide) goes into more detail about print tuning.
+Andrew Ellis' [Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide/) goes into more detail about print tuning.
 
 It covers topics like build surface adhesion, first layer, pressure advance calibration, extrusion multiplier calibration, cooling, and retraction — along with some more advanced topics and troubleshooting pages.
 
