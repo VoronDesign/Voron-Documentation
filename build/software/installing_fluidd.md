@@ -8,31 +8,15 @@ nav_order: 2
 
 # Installing Fluidd
 
-The recommended way to install Fluidd on a Raspberry Pi is to use [FluiddPi](#FluiddPi), a pre-packaged disk image.  If you are building a custom configuration, you may need to skip these instructions and install Fluidd [manually](#fluidd-manual-installation).
+The recommended way to install Fluidd on a Raspberry Pi is to use [KIAUH](#KIAUH), the Klipper Installation and Update Helper. Formally Fluidd installation was recommended to be performed using the FluiddPI disk image, however this is no longer maintained or updated.
 
-## FluiddPi
+## KIAUH
 
-To install Fluidd on a Raspberry Pi:
-1. Download the latest fluiddPi  [Release](https://github.com/cadriel/FluiddPI/releases)
-2. Unzip the .img file from your download.
-3. Use [BalenaEtcher](https://www.balena.io/etcher/) to write the .img to an 8GB (or larger) microSD card.  *THIS WILL DESTROY ALL DATA ON YOUR CARD*. <br><br>
-_note: It is a good idea to use a premium microSD card from a reputable manufacturer such as Sandisk, Kingston or Samsung. Low end cards will often fail quickly when used in this application_
-
-5. If you will be using wifi, edit the file `fluiddpi-wpa-supplicant.txt` with your Wifi information. If you are having trouble seeing this file on the microSD card, try removing it and re-inserting it into your card reader.
-6. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
-7. Insert the microSD card into your Pi, and power on the Pi.    
-8. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)
-  
-   The default username is `pi` and the password is `raspberry`.
-    * If your network supports bonjour, the pi should show up as `fluiddpi.local`
-    * If your network automatically assigns DNS hostnames, it may simply show up as `fluiddpi`
-    * Failing these two options, you may need to check your router's DHCP server, and find out what IP address as been assigned to the device.
-9. Connect to your Pi in a web browser: [http://fluiddpi.local](http://fluiddpi.local) (or whatever you determined the hostname/IP to be in the previous step)
-10.  When you first connect, fluiddpi will ask you to "provide the moonraker API URL":  enter the same host name or IP address once more.  (`fluiddpi.local`)
+Follow the [instructions in the KIAUH repo](https://github.com/th33xitus/kiauh) for imaging and installing KIAUH.
+Once you launch KIAUH you will be able to select "Install" and then select Fluidd. This will download and install the
+latest version of Fluidd.
 
 ### Software Update
- 
-As soon as you have Fluiddpi loaded, it is highly recommended that you make sure all the software is up to date.  (At times, the downloaded image file contains fairly out of date software.)
 
 1. Access Fluidd through a web browser, using whatever IP or hostname you found above.  
 (Note, you will see some errors regarding the non-configured state of your printer.  These can be ignored… for now)
