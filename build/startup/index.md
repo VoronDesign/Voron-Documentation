@@ -265,6 +265,7 @@ Depending on the printer type and capability, the following command(s) are used:
 
 * V0: `BED_SCREWS_ADJUST`
 * V1, Legacy: `Z_TILT_ADJUST`, `SCREWS_TILT_CALCULATE`
+* Trident: `Z_TILT_ADJUST`
 * V2: `QUAD_GANTRY_LEVEL`
 
 ### Bed Screws (V0)
@@ -277,15 +278,15 @@ Once the screw is adjusted so that a small amount of friction is felt, run eithe
 
 After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
 
-### Bed Tilt (V1, Legacy)
+### Z Tilt & Screws Tilt (V1, Legacy)
 
 The V1 and Legacy use a combination of automated and manual bed leveling.  There are two macros built into Klipper to assist with the function.
 
-First, run the `BED_TILT` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
+First, run the `Z_TILT_ADJUST` macro.  This will go back and forth between the predefined points to level the two Z motors.  This setting is dynamically changed and nothing will need to be saved.
 
-Second, run the `SCREWS_TILT_CALCULATE` macro.  It will check the 3 positions defined in the _[screws\_tilt\_adjust section]_ of printer.cfg for level, then return how much to adjust the front thumbscrew by.  Re-run the process at least one more time to verify the adjustment.
+Second, run the `SCREWS_TILT_CALCULATE` macro.  It will check the positions defined in the _[screws\_tilt\_adjust]_ section of printer.cfg for level, then return how much to adjust the screws by (one for the V1 and four for the Legacy).  Re-run the process at least one more time to verify the adjustment.
 
-After both processes have been completed rerun the `Z_ENDSTOP_CALIBRATE` command to to bring your nozzle to the correct Z=0 position.
+After both processes have been completed, re-home z by running `G28 Z`, and then rerun the `Z_ENDSTOP_CALIBRATE` (V1) or `PROBE_CALIBRATE` (Legacy) command to to bring your nozzle to the correct Z=0 position.
 
 ### Z Tilt (Trident)
 
