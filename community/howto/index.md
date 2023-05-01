@@ -31,7 +31,7 @@ Community-generated documentation for the many items that the official guide may
 | [Klipper Macros Beginner's Guide](./voidtrance/Klipper_Macros_Beginners_Guide.md) | voidtrace |
 | [Using Slicers and PRINT_START macros](./EricZimmerman/SlicerAndPrintStart.md) | EricZimmerman |
 | [Backing up printer configuration files to GitHub](./EricZimmerman/BackupConfigToGithub.md) | EricZimmerman |
-
+| [Wiring Sequins to LDO Picobilical Tool Head X Endstop](./FlopSplash/Wiring_Sequins_to_LDO_Picobilical_Tool_Head_X_Endstop.md) | FlopSplash |
 
 *Last Update excludes typos and grammatical corrections.
 
