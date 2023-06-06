@@ -31,7 +31,7 @@ The recommended accent parts are denoted with a "[a]_" in the filename. Many of 
 
 Filenames that end with "_x#", indicate that the part must be printed multiple times (ie. x2, x4, etc.)
 
-Typical printers require approximately 1.5kg of the primary color and 0.3kg of the alternate color, assuming no failed or reprinted parts. Most people end up reprinting a few parts and a few mods, so plan on 2kg of the primary color. Refer to the table [here] for your specific model.
+Typical printers require approximately 1.5kg of the primary color and 0.3kg of the alternate color, assuming no failed or reprinted parts. Most people end up reprinting a few parts and a few mods, so plan on 2kg of the primary color. Refer to the table [here](./sourcing_faq.md) for your specific model.
 
 For informtion on selecting parts to print, clarification of colors and quantities, and even what parts PIF will provide, see the [Printed Part Reference](https://docs.google.com/spreadsheets/d/1njgHapSZLiQHobrEVkeuAuhhDsXzFOJOiIpvfVFeGxQ/edit?usp=sharing) spreadsheet.
 
