@@ -170,7 +170,7 @@ The Z endstop should be located at close to max Y position.  Home X and Y with `
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
 
-## Define 0,0 Point (V0, V1, Trident, V2, Legacy)
+## Define 0,0 Point (V1, Trident, V2, Legacy)
 
 The homing position is not at the typical location of 0,0 but at the maximum travel location.  The actual numbers vary by printer build size.
 
