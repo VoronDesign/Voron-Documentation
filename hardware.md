@@ -20,7 +20,7 @@ The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design 
 
 [V0 Preview](https://www.youtube.com/watch?v=KR9YlTzWzQQ)
 
-![V0.582 built by mrnatethegreat](./images/Voron0.2.png)
+![V0.582 built by mrnatethegreat](./images/Voron0.2r1.png)
 
 ## Voron Trident
 
