@@ -10,7 +10,7 @@ nav_order: 4
 ## Initial Voron Printer Configuration
 
 Voron Configuration templates are available in the github repository for each printer.  You likely have them in the files you have already downloaded, in the "firmware" directory, or you can use the appropriate link below:
-* [V0.2](https://github.com/VoronDesign/Voron-0/tree/Voron0.2/Firmware)
+* [V0.2r1](https://github.com/VoronDesign/Voron-0/tree/Voron0.2r1/Firmware)
 * [V1.8](https://github.com/VoronDesign/Voron-1/tree/Voron1.8/Firmware/klipper_configurations)
 * [Trident](https://github.com/VoronDesign/Voron-Trident/tree/main/Firmware)
 * [V2.4](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/firmware/klipper_configurations)
