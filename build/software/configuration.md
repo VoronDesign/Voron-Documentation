@@ -130,7 +130,7 @@ This section only applies to printers with more than one controller.
 10. **If printer is a V2**, Under **[quad\_gantry\_level]**, uncomment the _gantry\_corners_ and _points_ sections appropriate to the printer size.  Delete the other options to prevent confusion.
 11. Exit the text editor with CTRL-X  and save when prompted.
 
-### Additional Changes: Mainsail only
+### Additional Changes: MainsailOS only
 1. Add the following entry to your printer.cfg:
 ```ini
 [include mainsail.cfg]
