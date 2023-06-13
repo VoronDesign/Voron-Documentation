@@ -32,7 +32,7 @@ Also, as the Klipper docs instruct, set the `homing_retract_dist` to `0`, and ma
 The following pin examples are from a BTT E3 mini V2; make sure to adjust based on your own configuration.
 
 Before:
-```ini
+```
 [stepper_x]
 # …
 endstop_pin: PC0
@@ -49,7 +49,7 @@ endstop_pin: PC1
 ```
 
 After:
-```ini
+```
 [stepper_x]
 endstop_pin: tmc2209_stepper_x:virtual_endstop
 
@@ -73,7 +73,7 @@ driver_SGTHRS: 255 # 255 is most sensitive value, 0 is least sensitive
 The following pin examples are from a BTT Octopus Pro; make sure to adjust based on your own configuration.
 
 Before:
-```ini
+```
 [stepper_x]
 # …
 endstop_pin: PG6
@@ -84,7 +84,7 @@ endstop_pin: PG6
 
 After:
 
-```ini
+```
 [stepper_x]
 # …
 endstop_pin: tmc5160_stepper_x:virtual_endstop
@@ -121,7 +121,7 @@ The calibration process is:
 The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. We're renaming them to `_HOME_X` and `_HOME_Y` here (the leading underscores will hide them in Mainsail/Fluidd, and those specific names are special for Klicky). This setup that has been working well for several Voron owners; you will probably want to tweak the `HOME_CURRENT` values for your own setup. I suggest creating a new file called `sensorless.cfg` and adding it with `[include sensorless.cfg]` in your main printer.cfg
 
 <!-- {% raw %} -->
-```ini
+```
 [gcode_macro _HOME_X]
 gcode:
     # Always use consistent run_current on A/B steppers during sensorless homing
@@ -177,7 +177,7 @@ If you already have a `[homing_override]` and you're not using Klicky, replace `
 For anybody who needs a `[homing_override]`, the following example has proven extremely reliably on a V0.1.
 
 <!-- {% raw %} -->
-```ini
+```
 [homing_override]
 axes: xyz
 gcode:
