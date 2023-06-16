@@ -365,7 +365,7 @@ If you're running your printer headless, the Z height can still be adjusted on-t
 
 1) (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
 
-```ini
+```
 [gcode_macro ZUP]
 gcode:
     SET_GCODE_OFFSET Z_ADJUST=0.01 MOVE=1
