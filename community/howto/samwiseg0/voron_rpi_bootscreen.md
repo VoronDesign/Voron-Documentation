@@ -64,7 +64,7 @@ sudo nano /etc/systemd/system/splashscreen.service
 
 Add the following:
 
-```ini
+```
 [Unit]
 Description=Splash screen
 DefaultDependencies=no

@@ -69,7 +69,7 @@ The following items _must_ be updated before the printer can function.
 
 In this section you set your maximum accelerations and velocity. The stock config is configured fast - so if you are facing issues - you can tweak these values lower and then increase them as you finish tuning your printer. These are the highest values that klipper will allow regardless of what you may have configured in your slicer. 
 
-```ini
+```
 [printer]
 kinematics: corexy
 max_velocity: 350
@@ -132,14 +132,14 @@ This section only applies to printers with more than one controller.
 
 ### Additional Changes: MainsailOS only
 1. Add the following entry to your printer.cfg:
-```ini
+```
 [include mainsail.cfg]
 ```
 
 ### Additional Changes: FluiddOS only
 
 1.  Add the following entries to your printer.cfg:
-```ini
+```
 [include fluidd.cfg]
 ```
 

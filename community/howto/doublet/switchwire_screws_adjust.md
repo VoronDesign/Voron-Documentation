@@ -18,7 +18,7 @@ This process should be used when using the `Prusa Nylock Mod` with your Switchwi
 
 In your printer.cfg, include the following section:
 
-```ini
+```
 [screws_tilt_adjust]
 # SW Nylock Mod: Screw 1 uses the 6mm metallic spacer so its
 # height is considered the baseline. For tilt adjust using the
