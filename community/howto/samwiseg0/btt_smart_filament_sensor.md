@@ -36,7 +36,7 @@ The BTT Smart Filament Sensor has other advantages beyond letting you seamlessly
 **You will want to ensure that you have robust pause and resume macros. Your resume macro will need to prime the nozzle slightly so there are no gaps where the printer resumes. Ellis has examples on [his GitHub](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/040d31c6daaed23c2a1a353545e7ee442a232f32/articles/useful_macros.md)**
 
 ## Example configs:
-```ini
+```
 [filament_motion_sensor SFS_T0]
 detection_length: 10.00 ; This can be adjusted to your desired level of sensitivity. 10 is a recomended value to prevent flow dropoff false triggers.
 extruder: extruder

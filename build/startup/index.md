@@ -160,11 +160,17 @@ Once the Z endstop is fixed into position the base plate should be adjusted so t
 
 Before the 0,0 point and Z endstop locations are set, the physical locations of the Z endstop and print bed need to be finalized.
 
+### V1, Legacy:
+
 The Z endstop should be located at close to max X position.  Home X and Y with `G28 X Y`  and then traverse just Y to locate a Z endstop position at the maximum X travel that will still trigger the endstop.  Lock down the Z endstop at that position.
+
+### Trident:
+
+The Z endstop should be located at close to max Y position.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
 
-## Define 0,0 Point (V0, V1, Trident, V2, Legacy)
+## Define 0,0 Point (V1, Trident, V2, Legacy)
 
 The homing position is not at the typical location of 0,0 but at the maximum travel location.  The actual numbers vary by printer build size.
 
@@ -202,7 +208,12 @@ If anything is updated in the printer configuration file, save the file and rest
 
 The V0.0 and v0.1 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
 
-For V0.2 the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE`command to find the correct `position_endstop` value automatically. This value in your config is the distance from the nozzle to the bed surface when then printer triggers the z endstop switch. It also represents your maximum Z travel distance. this value can be edited manually as well.
+For **V0.2** the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE`command to find the correct `position_endstop` value automatically. we will use a piece of copy paper to set the height of our nozzle relative to the endstop position, do this test with your nozzle cold. When the nozzle is heated, its position (relative to the bed) changes due to thermal expansion. This thermal expansion is typically around a 100 microns, which is about the same thickness as a typical piece of printer paper. The exact amount of thermal expansion isn't crucial, just as the exact thickness of the paper isn't crucial. Start with the assumption that the two are equal.
+
+Run the `Z_ENDSTOP_CALIBRATE`command, if you are using mainsail a dialog box will open that allows you to move the nozzle up and down by preset amounts. if you are NOT using mainsail you will have to manually issue nozzle movment commands `TESTZ Z=` those manual instructions can be found [HERE](https://www.klipper3d.org/Bed_Level.html#the-paper-test) 
+place a piece of copy paper under the nozzle and lower the nozzle in small increments, after each movment push the paper back and forth to check if the nozzle is in contact with the paper and to feel the amount of friction. Continue issuing commands until you feels a small amount of friction when testing with the paper. If too much friction is found then you can use a positive Z value to move the nozzle up. once you have found the proper height click the ACCEPT button or manually issue the `ACCEPT` command. you then need to issue the `SAVE_CONFIG` command to save the value to the bottom of your config file.
+
+This value that we just calculated in now in your config and it represents the distance from the point that the nozzle touches the bed surface to when then bed assembly triggers the z endstop switch. It also represents your maximum Z travel distance. this value can be edited manually as well.
 
 
 ## Inductive Probe Check (V1, Trident, V2, Switchwire, Legacy)
@@ -264,7 +275,8 @@ It will perform a PID calibration routine that will last about 5 minutes. Once i
 Depending on the printer type and capability, the following command(s) are used:
 
 * V0: `BED_SCREWS_ADJUST`
-* V1, Legacy: `Z_TILT_ADJUST`, `SCREWS_TILT_CALCULATE`
+* V1, Legacy: `BED_TILT`, `SCREWS_TILT_CALCULATE`
+* Trident: `Z_TILT_ADJUST`
 * V2: `QUAD_GANTRY_LEVEL`
 
 ### Bed Screws (V0)
@@ -353,7 +365,7 @@ If you're running your printer headless, the Z height can still be adjusted on-t
 
 1) (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
 
-```ini
+```
 [gcode_macro ZUP]
 gcode:
     SET_GCODE_OFFSET Z_ADJUST=0.01 MOVE=1
