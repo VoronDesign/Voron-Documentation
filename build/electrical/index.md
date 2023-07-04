@@ -94,9 +94,9 @@ Please see the associated assembly guides for power supply configurations.
 
 The following are guides for each printer model for planning of wire counts and lengths.  As always, these are recommendations and adding allowances is always a good idea.
 
-- [V1 Gantry Wires](./V1_gantry_wires.md)
-- [Trident Gantry Wires](./Trident_gantry_wires.md)
-- [V2 Gantry Wires](./V2_gantry_wires.md)
+- [V1 Gantry Wires](./v1_gantry_wires.md)
+- [Trident Gantry Wires](./trident_gantry_wires.md)
+- [V2 Gantry Wires](./v2_gantry_wires.md)
 
 ### Gantry Routing
 
@@ -161,7 +161,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 ### Trident
 * [Trident - BigTreeTech Octopus](./v1_octopus_wiring.md)
 * [Trident - MKS Makerbase Monster8](./v2_monster8_wiring.md)
-* [Trident - BTT Manta M8P](./V1_M8P_Wiring.md)
+* [Trident - BTT Manta M8P](./v1_m8p_wiring.md)
 
 ### Voron 2
 * [V2 - SKR 1.3](./v2_skr13_wiring.md)
@@ -170,7 +170,7 @@ Follow the links to the wiring configuration guides specific to your printer and
 * [V2 - Fysetc Spider v1.1](./v2_spider_wiring.md)
 * [V2 - BigTreeTech Octopus](./v2_octopus_wiring.md)
 * [V2 - MKS Makerbase Monster8](./v2_monster8_wiring.md)
-* [V2 - BTT Manta M8P](./V2_M8P_Wiring.md)
+* [V2 - BTT Manta M8P](./v2_m8p_wiring.md)
 
 ### Voron Switchwire
 * [SW - mini e3 V2.0](./sw_miniE3_v20_wiring.md)
