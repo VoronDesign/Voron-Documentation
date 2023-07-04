@@ -6,9 +6,11 @@ nav_exclude: true
 
 # Voron V2 - BigTreeTech Octopus Wiring
 
-<div><b>WARNING:</b>  Do not leave HE0 or HE1 connected.
- <p>There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we recommend leaving the heaters disconnected until after loading the klipper firmware</p></div>
 {: .warning }
+>Do not leave HE0 or HE1 connected.
+>
+>There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we
+>recommend leaving the heaters disconnected until after loading the klipper firmware
 
 ## Initial Preparation 
 

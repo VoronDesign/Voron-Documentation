@@ -247,11 +247,3 @@ $feedback-color: darken($sidebar-color, 3%);
 .highlight .il {
   color: #2aa198;
 } // literal.number.integer.long //
-
-.warning {
-    padding: 10px;
-    background-color: darken($voron-red-80, 30%);
-    border-width: 1px;
-    border-color: $voron-red-50;
-    border-style: solid;    
-  }
