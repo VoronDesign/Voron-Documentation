@@ -32,6 +32,8 @@ Community-generated documentation for the many items that the official guide may
 | [Using Slicers and PRINT_START macros](./EricZimmerman/SlicerAndPrintStart.md) | EricZimmerman |
 | [Backing up printer configuration files to GitHub](./EricZimmerman/BackupConfigToGithub.md) | EricZimmerman |
 | [Wiring Sequins to LDO Picobilical Tool Head X Endstop](./FlopSplash/Wiring_Sequins_to_LDO_Picobilical_Tool_Head_X_Endstop.md) | FlopSplash |
+| [Remote Access to Your Voron](./jade/RemoteAccessToYourVoron.md) | Jade | Apr 27, 2023
+
 
 *Last Update excludes typos and grammatical corrections.
 
