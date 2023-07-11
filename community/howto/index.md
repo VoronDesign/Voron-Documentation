@@ -30,7 +30,7 @@ Community-generated documentation for the many items that the official guide may
 | [Stealthburner Neopixel Guide](./drachenkatze/neopixel_guide.md) | Drachenkatze |
 | [Klipper Macros Beginner's Guide](./voidtrance/Klipper_Macros_Beginners_Guide.md) | voidtrace |
 | [Using Slicers and PRINT_START macros](./EricZimmerman/SlicerAndPrintStart.md) | EricZimmerman |
-| [Backing up printer configuration files to GitHub](./EricZimmerman/BackupConfigToGithub.md) | EricZimmerman |
+| [Backing up printer configuration files to GitHub](./EricZimmerman/BackupConfigToGithub.md) | EricZimmerman & maz0r | May 8, 2023 | 
 | [Wiring Sequins to LDO Picobilical Tool Head X Endstop](./FlopSplash/Wiring_Sequins_to_LDO_Picobilical_Tool_Head_X_Endstop.md) | FlopSplash |
 | [Remote Access to Your Voron](./jade/RemoteAccessToYourVoron.md) | Jade | Apr 27, 2023
 

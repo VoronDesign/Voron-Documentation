@@ -318,3 +318,66 @@ This results in a crontab entry similar to:
 which can then be added to your crontab file via the `crontab -e` command by pasting it in at the bottom:
 
 ![Cron example](images/backup/cronExample.png)
+
+# Restoring from your backup
+
+
+This is written assuming a fresh install but steps can be omitted if previously completed on the current install.
+
+<blockquote><strong>Note</strong>
+<p>Only files which have been backed up can be restored, if during setup you created exclusions then  those files/directories will be omitted </blockquote>
+
+
+## The Restore Process
+
+1. Open an SSH terminal to your printer
+
+2. Configure your global credentials
+    ```bash
+    git config --global user.email "your@email.com"
+    git config --global user.name "your name"
+    ```
+
+    ![global creds](images/backup/restore-credentials.png)
+
+3. Move the "default" `~/printer_data/config` folder so we can restore to that location.
+   ```bash
+   mv ~/printer_data/config ~/printer_data/config_default
+   ```
+
+   ![move default](images/backup/restore_defaultfiles.png)
+
+
+4. Generate yourself a new [Github Access Token](#generate-an-access-token) but stop where it says to connect to SSH (we already did that ;)
+
+5. Clone the backup from Github using the following command (subtituting your own values)
+    ```bash
+    git clone https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git ~/printer_data/config
+    ```
+    
+   for example
+
+    ```bash
+    git clone https://supersecrettoken@github.com/maz0r/v2615_backup.git ~/printer_data/config
+    ```
+
+    ![restore success](images/backup/restore_clone.png)
+
+
+## Post restore clean up
+
+At this point your automated backups are not enabled on the new install so we need to do a little cleanup.
+
+1. Verify that your ~/printer_data/conifg/autocommit.sh works
+   ```bash
+   cd ~/printer_data/config/
+   ./autocommit.sh
+   ```
+    It should look something like this (as nothing has changed yet!)
+
+   ![success!](images/backup/restore_success.png)
+
+
+2. Add "gcode_shell_command.py per step 5 under [Adding the backup to a macro](#adding-the-backup-to-a-macro).
+3. (optional) Add a cron job to backup on a set interval per [Automatic backups via crontab](#automating-via-crontab-optional)
+4. Test the backup [macro from mainsail](#running-things-from-mainsail)
