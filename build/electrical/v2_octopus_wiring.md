@@ -33,7 +33,7 @@ Set jumpers as shown:
 * Connect the A Motor (gantry right) to MOTOR1
 * Connect the Z (Front Left) motor to MOTOR2_1 
 * Connect the Z1 (Rear left) motor to MOTOR3
-* Connect the Z2 (Rear right motor to MOTOR4
+* Connect the Z2 (Rear right) motor to MOTOR4
 * Connect the Z3 (Front right) motor to MOTOR5 
 * Connect the extruder motor to MOTOR6
 * Connect the hot end heater to HE0  ( do not leave connected )
