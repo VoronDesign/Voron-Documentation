@@ -28,8 +28,6 @@ Start by verifying that temperatures are being properly reported. Navigate to th
 
 ![](./images/mainsail_temp_graph.png)
 
-![](./images/octoprint_temp_graph.png)
-
 Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the `sensor_type` and `sensor_pin` settings for the extruder and/or bed.
 
 ## Verify heaters
@@ -363,7 +361,7 @@ The "babystepping" controls may be used to fine tune the z offset.
 #### Without LCD Screen
 If you're running your printer headless, the Z height can still be adjusted on-the-fly using the web interface.  This is built into Mainsail and Fluidd, but requires some additional work for Octoprint.
 
-1) (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
+1. (Optional) Create macros in your printer.cfg file so that the commands are easier to remember/run:
 
 ```
 [gcode_macro ZUP]
@@ -375,8 +373,9 @@ gcode:
     SET_GCODE_OFFSET Z_ADJUST=-0.01 MOVE=1
 ```
 
-2) Run `ZUP` or `ZDOWN` (or the associated `SET_GCODE_OFFSET` command) as needed in the terminal window until you have perfected your squish.
-3) Run `GET_POSITION` and look for "gcode base". *Note the Z value*.
+{:style="counter-reset:none"}
+1. Run `ZUP` or `ZDOWN` (or the associated `SET_GCODE_OFFSET` command) as needed in the terminal window until you have perfected your squish.
+1. Run `GET_POSITION` and look for "gcode base". *Note the Z value*.
 
 #### Saving your results  (V0, Trident, V2)
 All of the above methods are "transient".  The changes are lost as soon as your printer restarts.  Once you find an adjustment you are happy with, you may make it permanent, by applying it to the `position_endstop` in your config file:
@@ -396,8 +395,11 @@ run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will res
 
 Before the first print, make sure that the extruder extrudes the correct amount of material.
 
+* first, make sure the extruder is running the correct direction: heat the hotend, and extrude 10mm or so of filament:  
+	* If the extruder pulls the filament in, all is well.  
+	* If the filament gets pushed back out the top, , reverse the extruder in your printer.cfg by finding the `[extruder]` `dir_pin`, and adding a `!` to the pin name. (if one is already present, remove it instead)  
 * With the hotend at temperature, make a mark on the filament between the roll of filament and your extruder, between 120mm and 150mm away from the entrance to the extruder.  Measure the distance from the entrance of the extruder to that mark.
-* In Octoprint / Mainsail, extrude 50mm 2 times (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
+* In Octoprint / Mainsail, set the extrusion speed to 1mm/s, and extrude 50mm 2 times,  (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
 * Measure from the entrance of your extruder to the mark you made previously. 
 	* *In a perfect world, assuming the mark was at 120mm, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
 * Update `rotation_distance` in the extruder section of the configuration file using this formula:
