@@ -322,10 +322,6 @@ Once the readings are stable, run `Z_TILT_ADJUST` or `QUAD_GANTRY_LEVEL`.  Make 
 * If the QGL is having issues with too high of a standard deviation and the printer is heated and stable, check Z belt tension.  Make sure they are reasonably tight and even.
 * If QGL fails with being unable to reach the probe in time, do a `FIRMWARE_RESTART`, manually level the bed as closely as possible, then home (`G28`) and re-attempt.
 
-### Bed Mesh Only (Switchwire)
-
-Crazy things.  More to come.
-
 ## Z Offset Adjustment
 
 If you did not run PID tuning, set your extruder to 245C and heated bed to 100C and let the printer heat up for at least 15 minutes.
