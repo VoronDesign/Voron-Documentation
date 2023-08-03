@@ -16,7 +16,11 @@ _Note: Pricing estimates are in US Dollars and do not include any necessary tool
 
 ## Voron Zero
 
-The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm^3 print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock Makerbeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design will start to increase cost or labor involved with tapping. The bed is also cantilevered which will also restrict scaling. This printer can be built for between \$400 - \$600. Current release is V0.2r1.
+The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm^3 print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock Makerbeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design will start to increase cost or labor involved with tapping. The bed is also cantilevered which will also restrict scaling. This printer can be built for between \$400 - \$600 and weights around 12lbs (≈4.5Kg) Current release is V0.2r1.
+
+| Build Size | Frame External Dimensions | Weight |
+| :-: | :-: | :-: |
+| 120 x 120 x 120 | 230 x 230 x 380 | 12 lbs (≈5.5Kg) |
 
 [V0 Preview](https://www.youtube.com/watch?v=KR9YlTzWzQQ)
 
@@ -24,7 +28,13 @@ The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design 
 
 ## Voron Trident
 
-The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional CoreXY design with a fixed gantry and the 3-point bed moves along the Z axis. It is simpler to build compared to V2 and can be built for between \$1,000 - \$1,300. It encloses naturally so ABS or other temperature sensitive filaments can be printed easily. It uses linear rails for all axes, driven by belts on the X and Y axes and stepper motors with integrated leadscrews on the Z axis.  Standard sizes include a 250x250mm plate, a 300x300mm plate, or a 350x350mm plate. Z height is somewhat restrictive due to the limited options with integrated lead screw steppers, maxing out at 250mm without custom leadscrew motors. 
+The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional CoreXY design with a fixed gantry and the 3-point bed moves along the Z axis. It is simpler to build compared to V2 and can be built for between \$1,000 - \$1,300. It encloses naturally so ABS or other temperature sensitive filaments can be printed easily. It uses linear rails for all axes, driven by belts on the X and Y axes and stepper motors with integrated leadscrews on the Z axis.  Standard sizes include a 250x250mm plate, a 300x300mm plate, or a 350x350mm plate. Z height is somewhat restrictive due to the limited options with integrated lead screw steppers, maxing out at 250mm without custom leadscrew motors.
+
+| Build Size | Frame External Dimensions | Weight |
+| :-: | :-: | :-: |
+| 250 x 250 x 250 | 410 x 410 x 500 |  |
+| 300 x 300 x 250 | 460 x 460 x 500 | 40 lbs (≈18Kg) |
+| 350 x 350 x 250 | 510 x 510 x 500 |  |
 
 [Trident Homing Routine](https://www.youtube.com/watch?v=iwKfW8ggwE8)
 
@@ -34,6 +44,12 @@ The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional Core
 
 The [Voron V2](https://vorondesign.com/voron2.4) is a modified CoreXY design with a static bed and a gantry that moves along the Z axis. It is a much more complex build because it includes things such as 4-point gantry tramming to align to the print surface, more stepper motors and other unique features. It is also designed to be fully enclosed so it prints ABS or similar filaments very well. Due to the linear rails the design is scalable in stock form from 250x250x220mm and 300x300x280mm all the way up to 350x350x330mm. More linear rails, larger print surface, and other V2-specific items make this printer more expensive, at between \$1,500 - \$1,900. Current release is V2.4r2.
 
+| Build Size | Frame External Dimensions | Weight |
+| :-: | :-: | :-: |
+| 250 x 250 x 250 | 410 x 410 x 430 |  |
+| 300 x 300 x 300 | 460 x 460 x 480 |  |
+| 350 x 350 x 350 | 510 x 510 x 530 |  |
+
 [V2.4 Quad Level](https://www.youtube.com/watch?v=xfsnEO2VtwM)
 
 ![](./images/Voron2.jpg)
@@ -42,6 +58,10 @@ The [Voron V2](https://vorondesign.com/voron2.4) is a modified CoreXY design wit
 
 The [Switchwire](https://vorondesign.com/voron_switchwire) is a Voron take on a classic Mendel (aka "bedflinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the gantry by moving the X motor to the frame. The stiff 3030/3060 contructed frame is just large enough to cover the entire swing of the Prusa 250x210mm bed and allows for a natural enclosure.  Without having an existing Prusa printer to pull parts from, cost is between \$700 - \$900
 
+| Build Size | Frame External Dimensions | Weight |
+| :-: | :-: | :-: |
+| 250 x 210 x 240 | 360 x 525 x 500 |  lbs (≈Kg) |
+
 [Switchwire Introduction Video](https://www.youtube.com/watch?v=jwPLl1v5ae4)
 
 ![](./images/VoronSW.jpg)
@@ -49,6 +69,10 @@ The [Switchwire](https://vorondesign.com/voron_switchwire) is a Voron take on a 
 ## Legacy
 
 The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LM8UU rods and bearings in the 230mm^3 size but retains the new Afterburner toolhead.  It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LM8UU components but are expected to be between \$600 - \$800.
+
+| Build Size | Frame External Dimensions | Weight |
+| :-: | :-: | :-: |
+| 230 x 230 x 230 | 410 x 410 x 410 |  lbs (≈Kg) |
 
 [Legacy Introduction Video](https://www.youtube.com/watch?v=NZqvRLa8ShE)
 
