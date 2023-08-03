@@ -72,7 +72,7 @@ The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of 
 
 | Build Size | Frame External Dimensions | Weight |
 | :-: | :-: | :-: |
-| 230 x 230 x 230 | 410 x 410 x 410 |  lbs (≈Kg) |
+| 230 x 230 x 230 | 410 x 410 x 410 |  22 lbs (≈10Kg) |
 
 [Legacy Introduction Video](https://www.youtube.com/watch?v=NZqvRLa8ShE)
 
