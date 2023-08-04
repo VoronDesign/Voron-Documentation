@@ -143,6 +143,33 @@ Wiring mechanical endstop switches for NC operation is easy as the BOM spec swit
 
 The X/Y endstop connector can be strapped to the bottom of the joint. Just make sure the cable is long enough, be sure to install the cover to keep any prints that fly off from bonding to your endstops.
 
+## Controller (MCU) Sourcing
+All boards listed below have Voron-tested Klipper configuration files and wiring diagrams available.
+
+### Voron0
+| Board | Source 1 |         | Source 2 |        | Notes |
+| :---  | :-----:  | :-----: | :-----: | :-----: | :---- |
+| BTT SKR mini e3 v2 | [Aliexpress](https://www.aliexpress.com/item/4001050145015.html) | Affiliate Link | [Amazon](https://smile.amazon.com/BIGTREETECH-Upgrade-Control-TMC2209-Creality/dp/B0882QGFZR/) | Affiliate Link | |
+| BTT SKR Pico | [Biqu](https://www.biqu.equipment/products/btt-skr-pico-v1-0) | | | | |
+
+### Voron2
+| Board | Source 1 |         | Source 2 |        | Notes |
+| :---  | :-----:  | :-----: | :-----: | :-----: | :---- |
+| BTT SKR 1.4 | [Aliexpress](https://www.aliexpress.com/item/33029587820.html) | Affiliate Link | | | Requires two boards |
+| BTT Octopus | [Aliexpress](https://www.aliexpress.com/item/1005002611654405.html) | Affiliate Link | [Amazon](https://smile.amazon.com/BIGTREETECH-Compatible-Firmware-Raspberry-Printing/dp/B0967G39SJ/) | Affiliate Link | |
+| Fysetc Spider | [Aliexpress](https://www.aliexpress.com/item/1005002324070189.html) | Affiliate Link | | | | |
+
+### Trident
+| Board | Source 1 |         | Source 2 |        | Notes |
+| :---  | :-----:  | :-----: | :-----: | :-----: | :---- |
+| BTT SKR 1.4 | [Aliexpress](https://www.aliexpress.com/item/33029587820.html) | Affiliate Link | | | Requires the motor expander board |
+| BTT Octopus | [Aliexpress](https://www.aliexpress.com/item/1005002611654405.html) | Affiliate Link | [Amazon](https://smile.amazon.com/BIGTREETECH-Compatible-Firmware-Raspberry-Printing/dp/B0967G39SJ/) | Affiliate Link | |
+
+### Switchwire
+| Board | Source 1 |         | Source 2 |        | Notes |
+| :---  | :-----:  | :-----: | :-----: | :-----: | :---- |
+| BTT SKR mini e3 v2 | [Aliexpress](https://www.aliexpress.com/item/4001050145015.html) | Affiliate Link | [Amazon](https://smile.amazon.com/BIGTREETECH-Upgrade-Control-TMC2209-Creality/dp/B0882QGFZR/) | Affiliate Link | |
+
 
 ## Controller (MCU) Wiring
 
