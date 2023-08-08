@@ -69,6 +69,9 @@ This often requires a bed mesh to compensate.
 
 ### Setup
 
+{: .note }
+These instructions assume that you are using a reasonably up to date klipper, which supports ZERO_REFERENCE_POSITION.  If you have an older install, and need to use RELATIVE_REFERENCE_INDEX, you may find instructions for that [here](./relative_reference_index.html)
+
 Because your mesh can change at different bed, chamber, and frame temperatures, it is generally recommended to generate a mesh before every print rather than using saved meshes.
 
 All of the `[bed_mesh]` configuration options and explanations can be found [in the Klipper docs](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md).
@@ -85,20 +88,23 @@ horizontal_move_z: 10
 ##	Uncomment below for 250mm build
 #mesh_min: 40, 40
 #mesh_max: 210,210
+#zero_reference_position: 125,125 #for use with stock z endstop
 
 ##	Uncomment for 300mm build
 #mesh_min: 40, 40
 #mesh_max: 260,260
+#zero_reference_position: 150,150 #for use with stock z endstop
 
 ##	Uncomment for 350mm build
 #mesh_min: 40, 40
 #mesh_max: 310,310
+#zero_reference_position: 175,175 #for use with stock z endstop
+
 ##--------------------------------------------------------------------
 fade_start: 0.6
 fade_end: 10.0
 probe_count: 5,5 # Values should be odd, so one point is directly at bed center
 algorithm: bicubic
-relative_reference_index: 12 # Update when changing probe_count, to ((x points * y points) - 1) / 2. (the center point)
 ```
 
 Then, place `BED_MESH_CALIBRATE` in your `PRINT_START` macro, **AFTER** any homing and leveling routines like `G28`, `G32`, `QUAD_GANTRY_LEVEL`, and `Z_TILT_ADJUST`.\
@@ -110,20 +116,17 @@ Generally a 5x5 grid is acceptable for even the largest Voron printer, but you c
 
 It is recommended to use **odd** values for numbers of points in X and Y, *(such as 3x3, 5x5, or 7x7)*, so that there is always a probe point directly in the center of your bed. 
 
-### Relative Reference Index (!)
+### Zero Reference Position (!)
 
-- The Switchwire should **NOT** use `relative_reference_index`.
+- The Switchwire should **NOT** use `zero_reference_position`.
 
-- The Legacy, Trident, and V2 **SHOULD** use `relative_reference_index`.
+- The Legacy, Trident, and V2 **SHOULD** use `zero_reference_position`, if they are using the stock z endstop.
 
-As the Legacy, Trident, and V2 use the probe as a relative and not absolute measurement device, **it is critical that you have the `relative_reference_index` parameter. This value will change as you adjust your mesh size.**
+- Printers using Tap, or other probes as their z endstop should not use `zero_reference_position`
 
-Your `relative_reference_index` should be set to **((x points * y points) - 1) / 2**.
-- Examples:
-    - 3x3 mesh = 4
-    - 5x5 mesh = 12
-    - 7x7 mesh = 24 
-    - *(etc)*
+As the Legacy, Trident, and V2 use the probe as a relative and not absolute measurement device, **it is critical that you have the `zero_reference_position` parameter.**
+
+Your `zero_reference_position` should be set to the center of the bed.
 
 #### Verification
 **Again, this does NOT apply to Switchwire**.
@@ -133,7 +136,9 @@ In the printer's web interface, click the "Tuning" tab (Fluidd) or "Heightmap" t
 
 - The left image shows a **correctly** configured mesh. It is located around Z0.
 
-- The right image shows an **incorrect** mesh config. This is what it looks like when your `relative_reference_index` is not set.
+- The right image shows an **incorrect** mesh config. 
+  - This is what it looks like when your `zero_reference_position` is not set. 
+  - If you are using tap, or another probe as the z endstop (and therefore not the stock z endstop), check that you have calibrated the probe with `probe_calibrate`
 
 - ![](./images/heightmap.png)
 
