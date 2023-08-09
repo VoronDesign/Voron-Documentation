@@ -34,6 +34,7 @@ Filenames that end with "_x#", indicate that the part must be printed multiple t
 Typical printers require approximately 1.5kg of the primary color and 0.3kg of the alternate color, assuming no failed or reprinted parts. Most people end up reprinting a few parts and a few mods, so plan on 2kg of the primary color. Refer to the table [here](./sourcing_faq.md) for your specific model.
 
 For informtion on selecting parts to print, clarification of colors and quantities, and even what parts PIF will provide, see the [Printed Part Reference](https://docs.google.com/spreadsheets/d/1njgHapSZLiQHobrEVkeuAuhhDsXzFOJOiIpvfVFeGxQ/edit?usp=sharing) spreadsheet.
+If you are looking for a list of the necessary (and optional) printed parts that you can download and tick off, see the [List of Printed Parts](https://docs.google.com/spreadsheets/d/1xGepU4OfSGdyihcH446__9x0MBUdLXAUNZtiprYMDl4/edit?usp=sharing). (NOTE: this is still a work in progress.)
 
 ### Print Settings
 
