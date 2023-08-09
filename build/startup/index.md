@@ -32,7 +32,7 @@ Verify that the temperature of the nozzle and bed are present and **not increasi
 
 ## Verify heaters
 
-Navigate to the temperature graph and type in 50 followed by enter in the "Tool" temperature target feild. The extruder temperature in the graph should start to increase (within about 10 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. If the temperature does not increase, then verify the `heater_pin` setting in the config.
+Navigate to the temperature graph and type in 50 followed by enter in the "Tool" temperature target field. The extruder temperature in the graph should start to increase (within about 10 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. If the temperature does not increase, then verify the `heater_pin` setting in the config.
 
 Perform the above steps again with the bed.
 
@@ -42,7 +42,7 @@ To verify that each stepper motor is operating correctly, send the following com
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
-The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.  For some motors, we will verify direction again later, nowever ideally all motors will be running correctly at the end of this test. See the list below.  Note, if you have trouble seeing what direction a motor is rotating, try adding a small sharpy mark on the pulley
+The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.  For some motors, we will verify direction again later, however, ideally all motors will be running correctly at the end of this test. See the list below.  Note, if you have trouble seeing what direction a motor is rotating, try adding a small sharpy mark on the pulley
 
 
 Run this command for each of the motors:
@@ -160,11 +160,11 @@ Before the 0,0 point and Z endstop locations are set, the physical locations of 
 
 ### V1, Legacy:
 
-The Z endstop should be located at close to max X position.  Home X and Y with `G28 X Y`  and then traverse just Y to locate a Z endstop position at the maximum X travel that will still trigger the endstop.  Lock down the Z endstop at that position.
+The Z endstop should be located as close to max X position as possible.  Home X and Y with `G28 X Y`  and then traverse just Y to locate a Z endstop position at the maximum X travel that will still trigger the endstop.  Lock down the Z endstop at that position.
 
 ### Trident:
 
-The Z endstop should be located at close to max Y position.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
+The Z endstop should be located as close to max Y position as possible.  Home X and Y with `G28 X Y`  and then traverse just X to locate a Z endstop position at the maximum Y travel that will still trigger the endstop.  Lock down the Z endstop at that position.
 
 Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
 
@@ -391,7 +391,7 @@ run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will res
 
 Before the first print, make sure that the extruder extrudes the correct amount of material.
 
-* first, make sure the extruder is running the correct direction: heat the hotend, and extrude 10mm or so of filament:  
+* First, make sure the extruder is running the correct direction: heat the hotend, and extrude 10mm or so of filament:  
 	* If the extruder pulls the filament in, all is well.  
 	* If the filament gets pushed back out the top, , reverse the extruder in your printer.cfg by finding the `[extruder]` `dir_pin`, and adding a `!` to the pin name. (if one is already present, remove it instead)  
 * With the hotend at temperature, make a mark on the filament between the roll of filament and your extruder, between 120mm and 150mm away from the entrance to the extruder.  Measure the distance from the entrance of the extruder to that mark.
