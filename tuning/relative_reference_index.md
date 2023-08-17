@@ -7,7 +7,7 @@ nav_exclude: true
 ## Bed Mesh with RELATIVE_REFERENCE_INDEX
 
 {: .note }
-These are the OLD instructions, for configuring a mesh using RELATIVE_REFERENCE_INDEX.  If your klipper install is new enough to support the new ZERO_REFERENCE_POSITION, you should follow the updated instructions [here](./secondary_printer_tuning.html)
+These are the OLD instructions, for configuring a mesh using RELATIVE_REFERENCE_INDEX.  If your Klipper install is new enough to support the new ZERO_REFERENCE_POSITION, you should follow the updated instructions [here](./secondary_printer_tuning.html)
 
 ### Legacy, Trident, V2
 
