@@ -4,7 +4,7 @@ title: "Choosing a Printer / Extruder"
 nav_order: 3
 ---
 
-# Choosing a Printer / Extruder 
+# Choosing a Printer / Extruder
 
 This is a guide to help people in selecting and building their first Voron printer and/or extruder.
 
@@ -20,11 +20,11 @@ The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design 
 
 [V0 Preview](https://www.youtube.com/watch?v=KR9YlTzWzQQ)
 
-![V0.2r1 rendred by Kyleisah](./images/Voron0.2r1.png)
+![V0.2r1 rendered by Kyleisah](./images/Voron0.2r1.png)
 
 ## Voron Trident
 
-The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional CoreXY design with a fixed gantry and the 3-point bed moves along the Z axis. It is simpler to build compared to V2 and can be built for between \$1,000 - \$1,300. It encloses naturally so ABS or other temperature sensitive filaments can be printed easily. It uses linear rails for all axes, driven by belts on the X and Y axes and stepper motors with integrated leadscrews on the Z axis.  Standard sizes include a 250x250mm plate, a 300x300mm plate, or a 350x350mm plate. Z height is somewhat restrictive due to the limited options with integrated lead screw steppers, maxing out at 250mm without custom leadscrew motors. 
+The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional CoreXY design with a fixed gantry and the 3-point bed moves along the Z axis. It is simpler to build compared to V2 and can be built for between \$1,000 - \$1,300. It encloses naturally so ABS or other temperature sensitive filaments can be printed easily. It uses linear rails for all axes, driven by belts on the X and Y axes and stepper motors with integrated leadscrews on the Z axis.  Standard sizes include a 250x250mm plate, a 300x300mm plate, or a 350x350mm plate. Z height is somewhat restrictive due to the limited options with integrated lead screw steppers, maxing out at 250mm without custom leadscrew motors.
 
 [Trident Homing Routine](https://www.youtube.com/watch?v=iwKfW8ggwE8)
 
@@ -40,7 +40,7 @@ The [Voron V2](https://vorondesign.com/voron2.4) is a modified CoreXY design wit
 
 ## Switchwire
 
-The [Switchwire](https://vorondesign.com/voron_switchwire) is a Voron take on a classic Mendel (aka "bedflinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the gantry by moving the X motor to the frame. The stiff 3030/3060 contructed frame is just large enough to cover the entire swing of the Prusa 250x210mm bed and allows for a natural enclosure.  Without having an existing Prusa printer to pull parts from, cost is between \$700 - \$900
+The [Switchwire](https://vorondesign.com/voron_switchwire) is a Voron take on a classic Mendel (aka "bedslinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the gantry by moving the X motor to the frame. The stiff 3030/3060 constructed frame is just large enough to cover the entire swing of the Prusa 250x210mm bed and allows for a natural enclosure.  Without having an existing Prusa printer to pull parts from, cost is between \$700 - \$900
 
 [Switchwire Introduction Video](https://www.youtube.com/watch?v=jwPLl1v5ae4)
 
@@ -66,7 +66,7 @@ Mobius is the original Bowden extruder for Voron printers, designed to be mounte
 
 ## Jetpack
 
-Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  Was designed as an intermediary solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superceded by the M4.  It is driven by a compact "pancake" NEMA17 motor.
+Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  Was designed as an intermediary solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superseded by the M4.  It is driven by a compact "pancake" NEMA17 motor.
 
 ![](./images/jetpack.jpg)
 

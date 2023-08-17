@@ -32,7 +32,7 @@ Some slicers (e.g. PrusaSlicer) do not recognize the Klipper `PRINT_START` macro
 
 Both Cura and SuperSlicer (in current versions) have built-in profiles for V2 printers which can be setup using each software's normal processes.  The V1 is similar enough to V2 that the profile can be re-used.
 
-There is also a Voron Design profile available for PrusaSlicer / Superslicer.
+There is also a Voron Design profile available for PrusaSlicer / SuperSlicer.
 
 * [Voron 2.4 - PrusaSlicer / SuperSlicer](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/slicer_profiles/PrusaSlicer)
 

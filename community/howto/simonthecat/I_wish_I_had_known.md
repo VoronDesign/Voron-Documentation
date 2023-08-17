@@ -6,13 +6,13 @@ nav_exclude: true
 
 # Introduction
 
-Advice commonly given to newcomers is to ask questions in Discord. After reading through the docs, the BOM, the sourcing guide, and watching Nero's videos, a person normally has the basics down and Discord fills in the cracks that aren't covered or things just missed. Some things, though, are not obvious to ask, so without months of lurking on Discord and watching discussions, important details may be missed. Often this information is just part of the fast-paced learning the Voron community goes through as recommended practices adjust over time as a result of community learning. 
+Advice commonly given to newcomers is to ask questions in Discord. After reading through the docs, the BOM, the sourcing guide, and watching Nero's videos, a person normally has the basics down and Discord fills in the cracks that aren't covered or things just missed. Some things, though, are not obvious to ask, so without months of lurking on Discord and watching discussions, important details may be missed. Often this information is just part of the fast-paced learning the Voron community goes through as recommended practices adjust over time as a result of community learning.
 
 This guide as a result intends to be a summary of lessons learned that can be quickly adjusted over time. Information is meant to be sparse but searching in Discord or asking questions can fill in the gaps. The lessons are focused on the 2.4 printer, but may also apply to other printers.
 
 # Lessons
 ## Expensive
-1. Bed tacos are expensive and can be avoided by not heating too fast and not tightening fasteners cold! When tightening do one screw tight, 2 firm, and last one loose or not even there. You can confirm a taco by rotating the bed 90 degrees then doing a bed mesh to see if it rotates as well. Twisted extrusions could also make a bed look tacoed. 
+1. Bed tacos are expensive and can be avoided by not heating too fast and not tightening fasteners cold! When tightening do one screw tight, 2 firm, and last one loose or not even there. You can confirm a taco by rotating the bed 90 degrees then doing a bed mesh to see if it rotates as well. Twisted extrusions could also make a bed look tacoed.
 1. Nozzle crashes can bend the frame.
 1. The button by the control knob is an e stop but only kills the z motors ... Wire the boards together and it will be for them all
 1. The kits from MagicPhoenix, DigMach, or most vendors with channels on the Voron Discord server will likely be of good quality. In contrast, most kits from China are considered suspect quality, especially for the power supply and SSR.
@@ -36,7 +36,7 @@ This guide as a result intends to be a summary of lessons learned that can be qu
 
 ### AfterBurner
 1. There is a catch on the claw in the AfterBurner that fits into a notch. If you filament does not grip tight at all, check out the diagrams in the build guide to see if this is the issue.
-1. Hone the AferBurner filament path with a very sharp drill bit or a reaming bit.
+1. Hone the AfterBurner filament path with a very sharp drill bit or a reaming bit.
 
 ### Wiring
 1. Connectors for hotend and the probe could be put below the cover to help save space in the cover and make toolhead swaps faster

@@ -22,13 +22,13 @@ When wiring your printer electronics, you will be working with line voltage wiri
 
 * AC wiring should be properly dimensioned. Use at least 18 AWG (0.75 mm²) for mains AC wiring, even better would be 16 AWG (1.25 mm²)
 * Buy a quality SSR (see the official sourcing guide), cheap clones may overheat and fail closed causing a heater thermal runaway. Add a 115-125°C thermal fuse to your bed heater as an additional safety measure
-* Dont run your bed above 110°C, this reduces the lifespan of the adhesive holding it onto the build plate
+* Don't run your bed above 110°C, this reduces the lifespan of the adhesive holding it onto the build plate
 * If using an AC powered bed, be sure to ground the bed regardless of if the assembly manual specifies it or not.
 * Grounding the frame is recommended.
 
 ## Connectors
 
-The recommended MicroFit 3.0 connectors are specified for up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). JST connnectors are not available as mid-wire connectors so they must be mixed.  Adding Molex connectors to all stepper motors is useful. Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin Microfit connector.
+The recommended MicroFit 3.0 connectors are specified for up to 5A and should be used for all connections to the stepper motors, hotend and limit switches The JST connectors are used for connections to the MCU board(s). JST connectors are not available as mid-wire connectors so they must be mixed.  Adding Molex connectors to all stepper motors is useful. Use a 3pin MLX connector (see the official sourcing guide) to allow your bed to be removable without disconnecting from the SSR directly. The thermistor can use a 2pin Microfit connector.
 
 ### Microfit Pins
 
@@ -42,11 +42,11 @@ For larger wires, such as heater cartridge wiring, heatshrink tubing is helpful.
 
 ## Cables
 
-Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains. 
+Silicone wiring has been specified because it has a high strand count which means it has higher fatigue life. Silicone insulation withstands heat and is more flexible which is good in high movement applications. It is less prone to snagging on other wires or the walls inside the cable chain. Check your cable loom before installing the chains.
 
 PTFE or Heluflon wires are a premium option as they have a thinner insulation and a lower friction coefficient, which increases bending capabilities and decreases wear. But these advantages are most useful in printers that use cable chains. For printers with an umbilical cord cabling setup (V0 Toolhead, Legacy), they might be overkill. Automation cable such as IGUS can be used, but the minimum bend radius of the cable needs to be verified as the typical bend radius for Voron cable chains is very small.
 
-See the cable lengths and count section for specific counts. Do not downsize the hot end heater wires, they are oversized for safety reasons. 
+See the cable lengths and count section for specific counts. Do not downsize the hot end heater wires, they are oversized for safety reasons.
 
 You may add additional wires to your cable chains as a replacement in case of wire breaks. However, these cables will be heated/cooled and moved around as much as your live cables and may be broken already when you need them! So may be better to keep extra wires as spares outside of the printer.
 
@@ -60,7 +60,7 @@ There is no standard either for the color of wire on stepper motors, nor for the
 There are 3 basic options for identifying windings:
 1) Check the documentation.  Many motors come with a card which tells you what wire colors are on the same winding.  If there's no card, the manufacturer's website may have something.
 2) Use a multimeter: put your meter in "continuity" mode.  Pick one wire, and then find any other wire that shows continuity with it.  Those two wires are on the same winding. By process of elimination, it should be safe to assume the other two represent the other winding.
-3) If you don't have a meter available, you can twist 2 wires together, and then try to spin the shaft of the motor.  If the wires are on the same winding, it will become noticably harder to spin the shaft.
+3) If you don't have a meter available, you can twist 2 wires together, and then try to spin the shaft of the motor.  If the wires are on the same winding, it will become noticeably harder to spin the shaft.
 
 ### Symptoms of miswired motors
 
@@ -68,7 +68,7 @@ Traditionally, trying to move a stepper that's miswired, has either resulted in 
 
 ```
 TMC 'stepper_y' reports DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) olb=1(OpenLoad_B!) CS_ACTUAL=25
-Transition to shutdown state: TMC 'stepper_y' reports error: DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!) 
+Transition to shutdown state: TMC 'stepper_y' reports error: DRV_STATUS: 001900d0 s2vsa=1(LowSideShort_A!) ola=1(OpenLoad_A!)
 ```
 
 
@@ -114,7 +114,7 @@ If the purchased steppers do not match the color order in the documentation, the
 
 ### Inductive Probe Wiring (V1, Trident, V2, Switchwire)
 
-The BOM spec PL-08N inductive probe (and the alterate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1/Legacy) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
+The BOM spec PL-08N inductive probe (and the alternate Omron probe) that is used for Bed Mesh, Z Tilt Adjust (V1/Legacy) or Quad Gantry Leveling (V2) needs to be powered with 12-24V, not the typical 5V that is used for end stop switches.  This is critical because if powered with 5V the sense distance is reduced enough to cause a nozzle crash.
 
 If not closely following the BOM spec, ensure that the inductive probe purchased is a normally closed (NC) version rather than normally open (NO).  The configuration cannot be changed as that is built specifically from the factory.  A normally open (NO) probe may cause crashes if a wire breaks.
 

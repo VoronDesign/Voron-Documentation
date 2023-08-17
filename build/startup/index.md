@@ -7,7 +7,7 @@ nav_order: 5
 
 # Initial Startup Checks
 
-This section provides a list of steps to help confirm the pin settings in the Klipper printer.cfg file. 
+This section provides a list of steps to help confirm the pin settings in the Klipper printer.cfg file.
 During this guide, it may be necessary to make changes to the Klipper config file. Be sure to issue a `RESTART` command after every change to the config file to ensure that the change takes effect (type "restart" in the Octoprint or Mainsail terminal and then click "Send"). It's also a good idea to issue a `STATUS` command after every `RESTART` to verify that the config file is successfully loaded.
 
 Any time commands are requested to be issued, those will happen in the 'Terminal' or 'Console' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
@@ -22,7 +22,7 @@ Any time movements need to be made, those will happen in the 'Control' tab / sec
 
 ![](./images/mainsail_controls.png)
 
-## Verify Temperature 
+## Verify Temperature
 
 Start by verifying that temperatures are being properly reported. Navigate to the Octoprint/Mainsail temperature graph.
 
@@ -50,7 +50,7 @@ Run this command for each of the motors:
 | **Motor**           | **Expectation**                                                |
 |:---------------------|:----------------------------------------------------------------|
 | **Voron 0**         |                                                                |
-| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|           
+| stepper_x           | The motor will rotate clockwise first, then back counterclockwise|
 | stepper_y           | The motor will rotate clockwise first, then back counterclockwise|
 | stepper_z           | The bed moves down, then back up                               |
 | extruder            | Movement: Direction will be tested later                       |
@@ -73,7 +73,7 @@ Run this command for each of the motors:
 | stepper_z	      | The front left corner of the gantry moves up, then back down   |
 | stepper_z1	      | The back left corner of the gantry moves up, then back down    |
 | stepper_z2          | The back right corner of the gantry moves up, then back down   |
-| stepper_z3          | The front right corner of the gantry moves up, then back down  |   
+| stepper_z3          | The front right corner of the gantry moves up, then back down  |
 | extruder            | Movement: Direction will be tested later                       |
 | **Switchwire**      |                                                                |
 | stepper_x           | The motor will rotate counterclockwise first, then back clockwise|
@@ -89,7 +89,7 @@ If the stepper does not move at all, then verify the "enable_pin" and "step_pin"
 
 ## Endstop Check
 
-**Important:** 
+**Important:**
 If you are building a V0.2 that requires sensorless homing you should follow [this guide](https://docs.vorondesign.com/community/howto/clee/sensorless_xy_homing.html) for setting up the sensorless endstops before continuing.
 
 Make sure that none of the X, Y, or Z endstops are being pressed.  Then send a `QUERY_ENDSTOPS` command.  The terminal window should respond with the following:
@@ -99,7 +99,7 @@ Send: QUERY_ENDSTOPS
 Recv: x:open y:open z:open
 ```
 
-If any of them say "triggered" instead of "open", double-check to make sure none of them are pressed.  Next, manually press the X endstop switch, send the `QUERY_ENDSTOPS` command again, and make sure that the X enstop says "triggered and the Y and Z endstops stay open.  Repeat with the Y and Z endstops.
+If any of them say "triggered" instead of "open", double-check to make sure none of them are pressed.  Next, manually press the X endstop switch, send the `QUERY_ENDSTOPS` command again, and make sure that the X endstop says "triggered and the Y and Z endstops stay open.  Repeat with the Y and Z endstops.
 
 If it is found that one of the endstops has inverted login (i.e. it reads as "open" when it is pressed and "triggered" when not pressed), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. For example, if the X endstop was inverted, add a ! in front of the pin number as follows:
 
@@ -174,7 +174,7 @@ The homing position is not at the typical location of 0,0 but at the maximum tra
 
 Depending on bed location, the positional parameters may need to be adjusted to re-locate the 0,0 point.
 
-1. Start by re-running `G28 X Y` to home X and Y.  After this, the nozzle will be at the maximum X,Y as defined by *position_max* under *[stepper_x]* and *[stepper_y]*. 
+1. Start by re-running `G28 X Y` to home X and Y.  After this, the nozzle will be at the maximum X,Y as defined by *position_max* under *[stepper_x]* and *[stepper_y]*.
 2. Using the OctoPrint or Mainsail controls, move the nozzle to the front left corner of the bed.
 3. If the left corner of the bed cannot be reached within 3-5mm, the bed location needs to be physically adjusted (if possible). Move the bed on the extrusions or move the extrusions to get the bed location within range.
 	* For V2, make sure whatever bed position results still allows the nozzle to reach the Z endstop switch (See 'Bed Locating').
@@ -199,17 +199,17 @@ If anything is updated in the printer configuration file, save the file and rest
 * Using the software controls, move the nozzle until it is directly over the Z endstop switch.
 * Send an `M114` command and record the X and Y values.
 * Update the homing routing in the printer configuration file under *[homing_override]* or *[safe\_z\_home]* with those values.
-* Restart Klipper with `FIRMWARE_RESTART`. 
-* Run a full `G28` and make sure that the printer properly homes X, Y, and Z.  
+* Restart Klipper with `FIRMWARE_RESTART`.
+* Run a full `G28` and make sure that the printer properly homes X, Y, and Z.
 
 ## Z Endstop Location (V0)
 
-The V0.0 and v0.1 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+The V0.0 and v0.1 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is.
 
 For **V0.2** the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE`command to find the correct `position_endstop` value automatically. we will use a piece of copy paper to set the height of our nozzle relative to the endstop position, do this test with your nozzle cold. When the nozzle is heated, its position (relative to the bed) changes due to thermal expansion. This thermal expansion is typically around a 100 microns, which is about the same thickness as a typical piece of printer paper. The exact amount of thermal expansion isn't crucial, just as the exact thickness of the paper isn't crucial. Start with the assumption that the two are equal.
 
-Run the `Z_ENDSTOP_CALIBRATE`command, if you are using mainsail a dialog box will open that allows you to move the nozzle up and down by preset amounts. if you are NOT using mainsail you will have to manually issue nozzle movment commands `TESTZ Z=` those manual instructions can be found [HERE](https://www.klipper3d.org/Bed_Level.html#the-paper-test) 
-place a piece of copy paper under the nozzle and lower the nozzle in small increments, after each movment push the paper back and forth to check if the nozzle is in contact with the paper and to feel the amount of friction. Continue issuing commands until you feels a small amount of friction when testing with the paper. If too much friction is found then you can use a positive Z value to move the nozzle up. once you have found the proper height click the ACCEPT button or manually issue the `ACCEPT` command. you then need to issue the `SAVE_CONFIG` command to save the value to the bottom of your config file.
+Run the `Z_ENDSTOP_CALIBRATE`command, if you are using mainsail a dialog box will open that allows you to move the nozzle up and down by preset amounts. if you are NOT using mainsail you will have to manually issue nozzle movement commands `TESTZ Z=` those manual instructions can be found [HERE](https://www.klipper3d.org/Bed_Level.html#the-paper-test)
+place a piece of copy paper under the nozzle and lower the nozzle in small increments, after each movement push the paper back and forth to check if the nozzle is in contact with the paper and to feel the amount of friction. Continue issuing commands until you feels a small amount of friction when testing with the paper. If too much friction is found then you can use a positive Z value to move the nozzle up. once you have found the proper height click the ACCEPT button or manually issue the `ACCEPT` command. you then need to issue the `SAVE_CONFIG` command to save the value to the bottom of your config file.
 
 This value that we just calculated in now in your config and it represents the distance from the point that the nozzle touches the bed surface to when then bed assembly triggers the z endstop switch. It also represents your maximum Z travel distance. this value can be edited manually as well.
 
@@ -222,7 +222,7 @@ With the toolhead in the center of the bed, reconfirm that the probe is working 
 
 When it is far from the bed, `QUERY_PROBE` should return “open”. When a metal object is close to the probe, `QUERY_PROBE` should return “triggered”. If the signal is inverted, add a “!” In front of the pin definition (ie, pin: ! z:P1.24).
 
-Slowly reduce your Z height and run `QUERY_PROBE` each time until `QUERY_PROBE` returns “triggered” - make sure the nozzle is not touching the print surface (and has clearance). 
+Slowly reduce your Z height and run `QUERY_PROBE` each time until `QUERY_PROBE` returns “triggered” - make sure the nozzle is not touching the print surface (and has clearance).
 
 ### Probe Accuracy Check
 
@@ -254,7 +254,7 @@ The PID tune is important for tuning the printer for a given hardware configurat
 
 ### PID Tune Heated Bed
 
-Move nozzle to the center of the bed and approximately 5-10mm above the bed surface, then run: 
+Move nozzle to the center of the bed and approximately 5-10mm above the bed surface, then run:
 
 `PID_CALIBRATE HEATER=heater_bed TARGET=100`
 
@@ -262,7 +262,7 @@ It will perform a PID calibration routine that will last about 10 minutes. Once 
 
 ### PID Tune Hotend
 
-Set the part cooling fans to 25% (`M106 S64`) and then run: 
+Set the part cooling fans to 25% (`M106 S64`) and then run:
 
 `PID_CALIBRATE HEATER=extruder TARGET=245`
 
@@ -391,12 +391,12 @@ run the command `Z_OFFSET_APPLY_PROBE` followed by `SAVE_CONFIG`.  This will res
 
 Before the first print, make sure that the extruder extrudes the correct amount of material.
 
-* First, make sure the extruder is running the correct direction: heat the hotend, and extrude 10mm or so of filament:  
-	* If the extruder pulls the filament in, all is well.  
-	* If the filament gets pushed back out the top, , reverse the extruder in your printer.cfg by finding the `[extruder]` `dir_pin`, and adding a `!` to the pin name. (if one is already present, remove it instead)  
+* First, make sure the extruder is running the correct direction: heat the hotend, and extrude 10mm or so of filament:
+	* If the extruder pulls the filament in, all is well.
+	* If the filament gets pushed back out the top, , reverse the extruder in your printer.cfg by finding the `[extruder]` `dir_pin`, and adding a `!` to the pin name. (if one is already present, remove it instead)
 * With the hotend at temperature, make a mark on the filament between the roll of filament and your extruder, between 120mm and 150mm away from the entrance to the extruder.  Measure the distance from the entrance of the extruder to that mark.
-* In Octoprint / Mainsail, set the extrusion speed to 1mm/s, and extrude 50mm 2 times,  (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time). 
-* Measure from the entrance of your extruder to the mark you made previously. 
+* In Octoprint / Mainsail, set the extrusion speed to 1mm/s, and extrude 50mm 2 times,  (for a total of 100mm since Klipper doesn’t allow you to extrude more than 50mm at a time).
+* Measure from the entrance of your extruder to the mark you made previously.
 	* *In a perfect world, assuming the mark was at 120mm, it would measure 20mm (120mm - 20mm = 100mm), but usually won’t be.*
 * Update `rotation_distance` in the extruder section of the configuration file using this formula:
 	* New Config Value = Old Config Value * (Actual Extruded Amount/Target Extruded Amount)

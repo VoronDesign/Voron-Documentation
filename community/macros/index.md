@@ -45,7 +45,7 @@ The G32 macro is included with the stock configuration for most printers.  This 
 
 ### PRINT_START
 
-The PRINT_START macro is called at the start of every print by slicers that are confgured to be aware of it.
+The PRINT_START macro is called at the start of every print by slicers that are configured to be aware of it.
 
 ### PRINT_END
 
