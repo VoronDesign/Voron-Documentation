@@ -70,7 +70,7 @@ This often requires a bed mesh to compensate.
 ### Setup
 
 {: .note }
-These instructions assume that you are using a reasonably up to date klipper, which supports ZERO_REFERENCE_POSITION.  If you have an older install, and need to use RELATIVE_REFERENCE_INDEX, you may find instructions for that [here](./relative_reference_index.html)
+These instructions assume that you are using a reasonably up to date Klipper, which supports ZERO_REFERENCE_POSITION.  If you have an older install, and need to use RELATIVE_REFERENCE_INDEX, you may find instructions for that [here](./relative_reference_index.html)
 
 Because your mesh can change at different bed, chamber, and frame temperatures, it is generally recommended to generate a mesh before every print rather than using saved meshes.
 
