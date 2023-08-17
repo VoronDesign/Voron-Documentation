@@ -26,13 +26,13 @@ Pretty much every Single Board Computer has an hdmi port.  However, on some mode
 To connect to a Pi over the network, you need 3 pieces of information:
 
 1. Your username on the pi. You may have set this during the flashing step.  If not, it likely defaulted to `pi`
-1. Your password:  You  should already know this: you set this during the flashing step.  
+1. Your password:  You  should already know this: you set this during the flashing step.
 
 {: .note }
 On old Raspberry pi systems, the default password was  "raspberry".  Modern installs wisely discourage this
 
 {:style="counter-reset:none"}
-1. A hostname or IP Address.  
+1. A hostname or IP Address.
 
 
 Hopefully, mdns is working on your network, and you can simply use the ".local" address.  If you set a hostname for your device via pi imager, the hostname will be  `the_thing_you_set.local`  if you didn't, your device will likely be `raspberrypi.local` or `mainsailos.local`  If none of these options work, you may need to locate the pi by IP address.  see [Finding a Device's IP Address](#finding-a-devices-ip-address )
@@ -42,13 +42,13 @@ Hopefully, mdns is working on your network, and you can simply use the ".local" 
 ### putty
 Putty is a windows ssh client with a long history.  It is a free download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-To connect with putty: 
+To connect with putty:
 1. Open Putty
 1. Enter your username and hostname in the "hostname" field, in the format `<user>@<host>`, for example `pi@mainsailos.local`
 1. Press the "Open" button
 ![](images/putty_connection_settings.png)
 1. Since this is your first time connecting to this remote machine, you will find yourself facing security warning.  It should be safe to just click accept.
- ![Putty Security Alert](images/putty_connection_security.png) 
+ ![Putty Security Alert](images/putty_connection_security.png)
 1. You will then find yourself with a black window and a password prompt.  Type your password, and press enter.  It is normal for nothing to appear on the screen while you are typing the password. (Linux applications traditionally hide passwords *completely* rather than the more familiar dots or stars)
  ![Putty password entry](images/putty_password.png)
 
@@ -56,16 +56,16 @@ To connect with putty:
 
 1. Open the Mac OS "terminal" app  (Utilities->Terminal)
 1. type a command in the format `ssh <user>@<host>`, substituting your username and hostname from your pi:  for example `ssh pi@mainsailos.local`, and press enter.
-1. You will then be presented with a security warning regarding an unrecognised security key.  It should be safe to simply accept this by typing  "yes" and press enter.
+1. You will then be presented with a security warning regarding an unrecognized security key.  It should be safe to simply accept this by typing  "yes" and press enter.
  ![OpenSSH security warning](images/openssh_security_warning.png)
 1. You will then be prompted for your password.  Type your password, and press enter.   It is normal for nothing to appear on the screen while you are typing. (Linux applications traditionally hide passwords *completely* rather than the more familiar dots or stars)
 
 
 ### pc command line
 
-1. Open the windows commandline: Press the windows key, type "cmd" and press enter
+1. Open the windows command line: Press the windows key, type "cmd" and press enter
 1. type a command in the format `ssh <user>@<host>`, substituting your username and hostname from your pi:  for example `ssh pi@mainsailos.local`, and press enter.
-1. You will then be presented with a security warning regarding an unrecognised security key.  It should be safe to simply accept this by typing  "yes" and press enter.
+1. You will then be presented with a security warning regarding an unrecognized security key.  It should be safe to simply accept this by typing  "yes" and press enter.
  ![OpenSSH security warning](images/openssh_security_warning.png)
 1. You will then be prompted for your password.  Type your password, and press enter.   It is normal for nothing to appear on the screen while you are typing. (Linux applications traditionally hide passwords *completely* rather than the more familiar dots or stars)
 
@@ -85,7 +85,7 @@ Congratulations!  If you've gotten here, you should have crossed the first major
 * `ls <some_dir_name>` will list the files in the named directory, instead of the current one
 * `ls -l` will include additional information, including file size, and ownership
 * `ls -h` will convert numerical information to a more readable form. commonly combined with -l, to get file sizes in a more readable form
-* arguments can be chained together.  for example `ls -lh klippeer` will list off all the files in the "klipper" directory, and include the extended information, with the numbers in a readable format
+* arguments can be chained together.  for example `ls -lh klipper` will list off all the files in the "klipper" directory, and include the extended information, with the numbers in a readable format
 * ls has many, many other options, but these couple should be enough to get started
 
 ![ls](images/linux_prompt_ls.png)
@@ -102,7 +102,7 @@ Congratulations!  If you've gotten here, you should have crossed the first major
 3. we land in "home".  Note how the command prompt changes to tell us where we are.
 
 ### cp & mv
-* `cp` ("copy") makes a duplicate of a file.   `cp <original_name> <new_name>`  
+* `cp` ("copy") makes a duplicate of a file.   `cp <original_name> <new_name>`
 * `mv` ("move") moves a file to a new filename or a new directory  `mv <original_file> <new_name>`
 * in both cases, the second command could be either a new file name, OR a new directory name.  for example, `cp 1.txt 2.txt` will make a duplicate file named `2.txt``, in the current working directory.  whereas mv 1.txt klipper/ would  create the new copy, *still called 1.txt*, in the directory "klipper".
 
@@ -118,7 +118,7 @@ Congratulations!  If you've gotten here, you should have crossed the first major
 
 ### sudo
 
-* sudo (superuser do) allows you to execute commands as the system administrator (known as "root") when necessary.  
+* sudo (superuser do) allows you to execute commands as the system administrator (known as "root") when necessary.
 * sudo will sometimes ask for your password:  note, this is the password of the normal account, *not* some other administrator password
 * This tool is often needed to edit a file in `/etc` or `/boot` that normal users don't have access to.  For example, several common processes require edits in the file `/boot/config.txt`.  This file is only editable by root.  so if you try to just open it normally with nano `nano /boot/config.txt`, you'll just get an error:  file is unwritable.  Instead, you can use sudo:  `sudo nano /boot/config.txt`, and then you'll be able to edit normally.
 ![nope](images/nano-readonly.png)
@@ -161,7 +161,7 @@ graph LR;
 
 ### ~
 * the `~` symbol is short hand for "the user's home directory".  generally, this will be `/home/<username>`, so for example, `/home/pi`
-* this is also the directory you first start out in when logging in.  
+* this is also the directory you first start out in when logging in.
 * on most klipper installs, this will be the directory that contains most of the klipper stuff:  klipper, mainsail, moonraker, etc.
 
 {: .note }
@@ -210,14 +210,14 @@ If you know that it makes sense your pi's ID has changed, such as the pi being a
     - download Angry IP scanner from [here](https://angryip.org/)
     - install & run it
     - Go to `Tools->Fetchers`.  Select the "MAC Vendor"(1) fetcher, and press the left arrow(2) to activate it.  press okay(3)
-     
+
      ![fetchers](images/angryip_fetchers.png)
     - Go to `Settings`, and change to the `Display`(1) tab.  Set `Display in the results list` to `Alive hosts`(2).  press okay (3)
-     
+
      ![prefs](images/angryip_prefs.png)
     - Press "Start"
     - Once the scan finishes, look for a result with a MAC Vendor similar to "Raspberry Pi Trading"
-     
+
      ![angryip](images/angryip_results.png)
 
 ### Static IPs

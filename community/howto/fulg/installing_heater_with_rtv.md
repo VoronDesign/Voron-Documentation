@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Installing Heater with RTV	
+title: Installing Heater with RTV
 nav_exclude: true
 ---
 
 # Installing Heater with RTV
 
-In some cases the bed heater may need / want to be installed with something other than the normally provided 468MP adhesive sheet.  This can be a heter ordered without the adhesive, a heater being reinstalled, or a desire to have the heater glued on above the rated temperature of the 468MP adhesive.
+In some cases the bed heater may need / want to be installed with something other than the normally provided 468MP adhesive sheet.  This can be a heater ordered without the adhesive, a heater being reinstalled, or a desire to have the heater glued on above the rated temperature of the 468MP adhesive.
 
 
 ## _Note:  This guide is NOT intended for installing a heater that already came with a 468MP adhesive sheet installed._
@@ -25,7 +25,7 @@ Tools Needed:
 - Masking tape
 - Nitrile/Latex gloves
 - Trash bag (to keep those used towels & gloves in!)
-- Spatula (I used a plastic spatula meants for wall plaster)
+- Spatula (I used a plastic spatula meant for wall plaster)
 - Face mask (the smell is surprisingly strong!)
 
 Process:

@@ -7,8 +7,8 @@ nav_exclude: true
 # Backing up printer configuration files to GitHub
 
 Having working backups is a good idea for just about everything, and for our printers,
-even more so! Configuration files are often changed when tuning or experimentation, 
-but how can you keep track of those changes and be able to find previous values? 
+even more so! Configuration files are often changed when tuning or experimentation,
+but how can you keep track of those changes and be able to find previous values?
 In some cases, adding the old value as a comment can be useful, but long term, this becomes tedious.
 
 Additionally, sometimes SD cards just fail, or some other unforeseen circumstances arise that prevent
@@ -19,7 +19,7 @@ Let's solve both of these problems by setting up a simple backup/change tracking
 
 ## Before we begin
 
-This tutorial will expose you to a lot of common aspects of owning a Voron, including managing configuration files, editing files from Linux, and more. If you have never done this before, 
+This tutorial will expose you to a lot of common aspects of owning a Voron, including managing configuration files, editing files from Linux, and more. If you have never done this before,
 do not panic! Its easy! Just follow along with the commands which you can copy to your clipboard. Screenshots are also included to give you an idea of what to expect your side to look like, etc.
 
 Experience is just a series of past mistakes we try to not make anymore. Remember, everyone started out at some point right where you find yourself now. You will improve with practice!
@@ -73,8 +73,8 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
     ![Generate token](images/backup/generateToken.png)
 
-5. You now have a new access key! Protect it well, like you would any other password! Click on the `Copy` button to copy the token to the clipboard, then paste it into the same place you saved your HTTPS URL from the previous step. 
-   
+5. You now have a new access key! Protect it well, like you would any other password! Click on the `Copy` button to copy the token to the clipboard, then paste it into the same place you saved your HTTPS URL from the previous step.
+
     This is your **ONE AND ONLY** chance to copy this key, so make sure you record it before leaving this screen.
 
     NOTE: The image below has the key redacted. Yours will of course not look like that
@@ -88,7 +88,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 - **URL**: https://github.com/EricZimmerman/Voron24Configs.git
 - **Token**: ghp_dKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-1. Insert the token into the URL following this pattern:  
+1. Insert the token into the URL following this pattern:
 
     ```
     https://<Token>@github.com/EricZimmerman/Voron24Configs.git
@@ -148,7 +148,7 @@ We can now put the pieces together we have created so far. To make this easier, 
     ```
 
     This command will add execute permission for the owner of the file (you), group members, and all other users on the system. This makes it easy to run the script by different users, etc.
-    
+
     **WARNING**: If you edit this file from MainSail, the execute permission will be removed, and you will have to repeat the above command!
 
 8. Type `ls -la autocommit.sh` and verify the new permissions. Note the `x` for user, group, and other. This is the execute permission we added in the previous step.
@@ -186,7 +186,7 @@ We can now put the pieces together we have created so far. To make this easier, 
     git config --global user.name "your name"
     ```
 
-5. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/printer_data/config` named `.gitignore` (using the command `nano .gitignore`) and 
+5. Finally, lets create a `.gitignore` file that lets us tell git to NOT commit certain things, like input shaper csv files, etc.  Using nano, create a new file in `~/printer_data/config` named `.gitignore` (using the command `nano .gitignore`) and
 add entries to the file, specifying the file patterns and/or locations to ignore.
 
     ```bash
@@ -195,7 +195,7 @@ add entries to the file, specifying the file patterns and/or locations to ignore
     adxl_results/vibrations/*.tar.gz
     ```
 
-    In this example, I am excluding *.csv from inpur shaper and other data collection related files and my Nevermore filter's runtime file. These are just things I do not want in my backup.
+    In this example, I am excluding *.csv from input shaper and other data collection related files and my Nevermore filter's runtime file. These are just things I do not want in my backup.
 
     Note how these directories are relative to the root of your git repository, which in our case, is `~/printer_data/config`, so just specify the paths from that point forward.
 
@@ -213,8 +213,8 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     ![Initial commit](images/backup/initialCommit.png)
 
-    If you see something similar to what is shown in the image above, congratulations! You are now backed up to GitHub! Rerunning the previous command `sh autocommit.sh` should result in the following:  
-  
+    If you see something similar to what is shown in the image above, congratulations! You are now backed up to GitHub! Rerunning the previous command `sh autocommit.sh` should result in the following:
+
     ![No changes](images/backup/noChanges.png)
 
     However, if you change any file in Mainsail, via nano, etc. and then rerun the `sh autocommit.sh` command, you will see it found your changes and sent them upstream! Here is an example after I edited `printer.cfg`:
@@ -232,8 +232,8 @@ add entries to the file, specifying the file patterns and/or locations to ignore
     Here you can see what actually changed. In my simple example, I just removed a blank line from the end of my `printer.cfg` file. Also of note is the exact versions of other software being used with these configs, which is shown in the commit message.
 
     ![Commit changes](images/backup/CommitChanges.png)
-    
-One thing to be aware of is that, from a commit _message_ perspective, about the only thing that will be changing for each commit is the timestamp associated with the commit. However, git will know about all the exact changes for everything being committed. If you recall a specific timeframe where you made a configuration change, it is rather straightforward to find the previous commit to see older values, but, since git is keeping track of all changes over time, you can easily look at a single file and then drill down into that file's commit history. 
+
+One thing to be aware of is that, from a commit _message_ perspective, about the only thing that will be changing for each commit is the timestamp associated with the commit. However, git will know about all the exact changes for everything being committed. If you recall a specific timeframe where you made a configuration change, it is rather straightforward to find the previous commit to see older values, but, since git is keeping track of all changes over time, you can easily look at a single file and then drill down into that file's commit history.
 
 For example, say I wanted to see, over time, all of the changes to my Auto Z related config file. After clicking on the file to view it, notice the `History` button in the upper right corner.
 
@@ -245,7 +245,7 @@ Once you click the `History` button, you can then see all of the revisions that 
 
 Note that while the history list contains every change to the file that is being viewed, it also contains all other revisions to other files that were committed on the same date/time.
 
-Using this approach makes it easier to track down a specific change configuation details.
+Using this approach makes it easier to track down a specific change configuration details.
 
 # Adding the backup to a macro
 
@@ -350,11 +350,11 @@ This is written assuming a fresh install but steps can be omitted if previously 
 
 4. Generate yourself a new [Github Access Token](#generate-an-access-token) but stop where it says to connect to SSH (we already did that ;)
 
-5. Clone the backup from Github using the following command (subtituting your own values)
+5. Clone the backup from Github using the following command (substituting your own values)
     ```bash
     git clone https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git ~/printer_data/config
     ```
-    
+
    for example
 
     ```bash
@@ -368,7 +368,7 @@ This is written assuming a fresh install but steps can be omitted if previously 
 
 At this point your automated backups are not enabled on the new install so we need to do a little cleanup.
 
-1. Verify that your ~/printer_data/conifg/autocommit.sh works
+1. Verify that your ~/printer_data/config/autocommit.sh works
    ```bash
    cd ~/printer_data/config/
    ./autocommit.sh
