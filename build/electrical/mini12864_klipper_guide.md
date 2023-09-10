@@ -2,6 +2,8 @@
 layout: default
 title: Mini12864 Klipper Guide
 parent: Electrical Wiring
+grand_parent: The Build
+nav_exclude: true
 nav_order: 1
 ---
 
@@ -13,26 +15,35 @@ nav_order: 1
 2. The EXP1/EXP2 ports must be available and not connected to another expansion module
 
 ## Hardware
-*NOTE: The two connector housings only need to be reversed if the MCU and display are different brands.  If you have both a BigTree Tech mini12864 and a BigTree Tech MCU (Or both a FYSETC mini12864 and an FYSETC F6/S6), skip steps 1 & 2*
+
+*NOTE: The two connector housings only need to be reversed if the MCU and display are different brands.  
+If you have both a BigTree Tech mini12864 and a BigTree Tech MCU (Or both a FYSETC mini12864 and an FYSETC F6/S6), skip steps 1 & 2*
+
 1. Pry off the two black connector housings from the back of the display
 2. Rotate connector housings 180 degrees and insert back onto pins
 3. *Fysetc Spider Only*: The Fysetc Spider requires certain components to be removed from the mini12864 display.  
    * From a Fysetc display, remove R1 & R4
    * From a BTT display, remove R1 & C6
-4. Connect EXP1 and EXP2 cables to the display and to your MCU board, being sure to match port numbers (EXP1 <> EXP1).  <br> *Note: The Fysetc Spider V1.0 has a silk screen error.  __for V1.0 only__, Connect EXP1 to EXP2, and EXP2 to EXP1*
+4. Connect EXP1 and EXP2 cables to the display and to your MCU board, being sure to match port numbers (EXP1 <> EXP1).  
+   *Note: The Fysetc Spider V1.0 has a silk screen error.  __for V1.0 only__, Connect EXP1 to EXP2, and EXP2 to EXP1*
 
-
-![](./images/mini12864_header_flip.jpg)
+![Mini12864 header housing flipped](./images/mini12864_header_flip.jpg)
 
 ## Klipper Configuration
-Most stock Voron configuration files already have appropriate configurations for this display built in, which simply needs to be un-commented.  These  configs are customized for the specific builds, and should be what you use.  *_Note: There are multiple config sections required to make the mini12864 fully operational: `[display]`, `[neopixel fysetc_mini12864]` and `[delayed_gcode setdisplayneopixel]`_*
 
-Some users find that they want to reverse the direction the menu wheel spins.  You can easily reverse its operation by swapping the order of the two pins in the `[display]` `encoder_pins` line.  For example, if your stock config contains the line 
-```
+Most stock Voron configuration files already have appropriate configurations for this display built in, which simply needs to be un-commented.  These  configs are customized for the specific builds, and should be what you use.  *_Note: There are multiple config sections required to make the mini12864 fully operational: `[display]`, `[neopixel fysetc_mini12864]` and `[delayed_gcode setdisplayneopixel]`*
+
+Some users find that they want to reverse the direction the menu wheel spins.  You can easily reverse its operation by swapping the order of the two pins in the `[display]` `encoder_pins` line.
+
+For example, if your stock config contains the line
+
+```bash
 encoder_pins: ^PC7,^PC6
 ```
+
 you would change it to
-```
+
+```bash
 encoder_pins: ^PC6,^PC7
 ```
 

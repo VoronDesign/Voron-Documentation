@@ -18,7 +18,6 @@ Pretty much every Single Board Computer has an hdmi port.  However, on some mode
 
 * ssh is a suite of tools widely used in the linux world to remotely access machines, granting terminal access, transfering files, and providing many other advanced functions.  To do what we need to do here, we are barely scraping the surface of what ssh is capable of.
 
-
 ## ssh
 
 ### finding the pi
@@ -26,20 +25,19 @@ Pretty much every Single Board Computer has an hdmi port.  However, on some mode
 To connect to a Pi over the network, you need 3 pieces of information:
 
 1. Your username on the pi. You may have set this during the flashing step.  If not, it likely defaulted to `pi`
-1. Your password:  You  should already know this: you set this during the flashing step.
+2. Your password:  You  should already know this: you set this during the flashing step.
 
-{: .note }
-On old Raspberry pi systems, the default password was  "raspberry".  Modern installs wisely discourage this
+    {: .note }
+    On old Raspberry pi systems, the default password was  "raspberry".  Modern installs wisely discourage this
 
-{:style="counter-reset:none"}
-1. A hostname or IP Address.
-
+3. A hostname or IP Address.
 
 Hopefully, mdns is working on your network, and you can simply use the ".local" address.  If you set a hostname for your device via pi imager, the hostname will be  `the_thing_you_set.local`  if you didn't, your device will likely be `raspberrypi.local` or `mainsailos.local`  If none of these options work, you may need to locate the pi by IP address.  see [Finding a Device's IP Address](#finding-a-devices-ip-address )
 
 ### ssh tools
 
-### putty
+#### putty
+
 Putty is a windows ssh client with a long history.  It is a free download [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
 To connect with putty:
@@ -52,7 +50,7 @@ To connect with putty:
 1. You will then find yourself with a black window and a password prompt.  Type your password, and press enter.  It is normal for nothing to appear on the screen while you are typing the password. (Linux applications traditionally hide passwords *completely* rather than the more familiar dots or stars)
  ![Putty password entry](images/putty_password.png)
 
-### mac command line
+#### MacOS command line
 
 1. Open the Mac OS "terminal" app  (Utilities->Terminal)
 1. type a command in the format `ssh <user>@<host>`, substituting your username and hostname from your pi:  for example `ssh pi@mainsailos.local`, and press enter.
@@ -60,8 +58,7 @@ To connect with putty:
  ![OpenSSH security warning](images/openssh_security_warning.png)
 1. You will then be prompted for your password.  Type your password, and press enter.   It is normal for nothing to appear on the screen while you are typing. (Linux applications traditionally hide passwords *completely* rather than the more familiar dots or stars)
 
-
-### pc command line
+#### Windows command line
 
 1. Open the windows command line: Press the windows key, type "cmd" and press enter
 1. type a command in the format `ssh <user>@<host>`, substituting your username and hostname from your pi:  for example `ssh pi@mainsailos.local`, and press enter.
@@ -70,14 +67,16 @@ To connect with putty:
 1. You will then be prompted for your password.  Type your password, and press enter.   It is normal for nothing to appear on the screen while you are typing. (Linux applications traditionally hide passwords *completely* rather than the more familiar dots or stars)
 
 ## the terminal
-Congratulations!  If you've gotten here, you should have crossed the first major hurdle: you've gotten yourself connected to the pi.  Now let's look around a little.  The basic work flow here, is that everything scrolls up the screen, so whatever is at the bottom is the most recent interaction.  Consider the following screenshot:
+
+Congratulations!  If you've gotten here, you should have crossed the first major hurdle: you've gotten yourself connected to the pi.
+
+Now let's look around a little. The basic work flow here, is that everything scrolls up the screen, so whatever is at the bottom is the most recent interaction.  Consider the following screenshot:
+
 ![the linux command prompt](images/linux_prompt_basic.png)
-1.  We received our initial prompt `shifting@voront:~ $` . This is a very information-dense prompt, but let's not worry about it too much for now.  For now, it simply tells us that the machine is ready to receive our next instruction.  We then typed the command `ls`, and pressed enter.
+
+1. We received our initial prompt `shifting@voront:~ $` . This is a very information-dense prompt, but let's not worry about it too much for now.  For now, it simply tells us that the machine is ready to receive our next instruction.  We then typed the command `ls`, and pressed enter.
 2. The pi responded with the listing of files in our current directory
 3. When the command finished, we were given a new prompt, ready for the next instruction.
-
-
-### the prompt
 
 ### ls
 
@@ -91,6 +90,7 @@ Congratulations!  If you've gotten here, you should have crossed the first major
 ![ls](images/linux_prompt_ls.png)
 
 ### cd
+
 * `cd` ("change directory") is used to change your "working directory" basically, this is the equivelent of browsing to a different folder in Windows Explorer or Mac Finder
 * `cd` will return you to a special location: your home directory. (more on what that means later)
 * `cd <some_dir_name>` will change your working directory to the named directory
@@ -102,12 +102,13 @@ Congratulations!  If you've gotten here, you should have crossed the first major
 3. we land in "home".  Note how the command prompt changes to tell us where we are.
 
 ### cp & mv
+
 * `cp` ("copy") makes a duplicate of a file.   `cp <original_name> <new_name>`
 * `mv` ("move") moves a file to a new filename or a new directory  `mv <original_file> <new_name>`
 * in both cases, the second command could be either a new file name, OR a new directory name.  for example, `cp 1.txt 2.txt` will make a duplicate file named `2.txt``, in the current working directory.  whereas mv 1.txt klipper/ would  create the new copy, *still called 1.txt*, in the directory "klipper".
 
-
 ### nano
+
 * nano is a simple text editor that is available on virtually every possible system.  It comes in handy if you ever need to solve a problem which is preventing Mainsail/Fluidd from editing configs, or when you need to edit things outside of the limited scope that the Mainsail & Fluidd editors allow access.
 * you start the editor with `nano <file>`, so, for example to edit the printer.cfg, one might issue the command `nano ~/printer_data/config/printer.cfg`
 * once in nano, remember you still don't have a mouse, so all navigation is by keyboard:  Page up & Page down are your friends!
@@ -138,8 +139,9 @@ Congratulations!  If you've gotten here, you should have crossed the first major
 
 * Mac: ⌘ + C / ⌘ + V should work pretty much normally
 
-## the file system
-* the filesystem is laid out a little differently than you may be familiar with on other systems.  Everything is organized in to a single "tree" structure, with the top level directory simply being called `/`  (sometimes referred to as the "root" directory).  A typical `/` contains a handful of system folders `etc`, `lib`, `boot`, `home`, and each of those contains many further things, until you have the entire system.
+## The filesystem
+
+The filesystem is laid out a little differently than you may be familiar with on other systems.  Everything is organized in to a single "tree" structure, with the top level directory simply being called root or `/`. A typical root contains a handful of system folders: `etc`, `lib`, `boot`, `home`. Each of those may contain several other folders and many files comprising the entire operating system.
 
 ```mermaid
 graph LR;
@@ -155,30 +157,42 @@ graph LR;
     pi-->printer_data;
     pi-->id2[tmp];
 ```
-(note, the actual filesystem typically contains many more directories, this is just a simplified example)
 
-* when using a command like `cd`, there are two different forms the directory name can take:  either starting with a `/`, or not.  When you start with a `/`, as in  `cd /tmp`  you are giving an *absolute* path, meaning that the path is expressed all the way from the `/` directory.  this means it will function exactly the same no matter where you are coming from.  By contrast, you can also do `cd tmp`.  This is a *relative* path, meaning that it's starting from the current working directory.  So if we start out in `/home/pi`, and we do `cd tmp`, we'll end up in `/home/pi/tmp`.  but if we start out in `/`, and issue that same command, we'll end up in `/tmp`.
+(note: the actual filesystem typically contains many more directories, this is just a simplified example)
 
-### ~
-* the `~` symbol is short hand for "the user's home directory".  generally, this will be `/home/<username>`, so for example, `/home/pi`
-* this is also the directory you first start out in when logging in.
-* on most klipper installs, this will be the directory that contains most of the klipper stuff:  klipper, mainsail, moonraker, etc.
+When using a command like `cd`, there are different forms the directory name can take on. For our examples, it's either starting with a `/`, or starting blank.  When you start with a `/`, as in `cd /tmp` you are giving an *absolute* path, meaning that the path is expressed all the way from the root or `/` directory.  This means it will function exactly the same no matter where you are coming from.  
+By contrast, `cd tmp` is a *relative* path meaning that it's starting from the current working directory. If we start out in `/home/pi`, `cd tmp` will navigate us to `/home/pi/tmp`.
+
+### Tilde (~)
+
+The Tilde or `~` symbol is short hand for "the user's home directory". Usually, this will be `/home/<username>`, e.g. `/home/pi`.
+
+The user's home directory is oftentimes the current working directory when starting a session over SSH, where the user is the username you logged in with.
+
+On most Klipper installs, the user's home directory will be the directory that contains most of the Klipper stuff:  Klipper, Mainsail, Moonraker, etc.
 
 {: .note }
 This trait of starting out in the home directory is important to remember when looking for things that are in the system root, such as `/etc` or `/boot`:  you need to go up to `/` before you're going to see them.
 
 ## remote file transfers
-### filezilla
-* filezilla is a simple, user friendly file transfer tool, available for pc & mac from [here](https://filezilla-project.org/)
-* simply fill in the host as `sftp://<hostname>` eg: `sftp://mainsailos`, the username & password, & hit "quickconnect"
-* your files on your computer appear on the left, the files on your voron on the right, and you can drag and drop between them.  Note that you are a normal user here, so you will not be able to directly write files to `/boot` or `/etc`
+
+### FileZilla
+
+FileZilla is a simple, user friendly file transfer tool. It is available for Windows, MacOS and Linux through the [FileZilla website](https://filezilla-project.org/)
+
+To get started with FileZilla, simply fill in the host as `sftp://<hostname>` (e.g. `sftp://mainsailos`), the username and the password; then click "quickconnect"
+
+The files on your computer are displayed on the left, while the files on your Voron are displayed on the right You can drag and drop files between them to transfer from and to either side.
+
+Note that you are just the user here, so you will not be able to directly write files to `/boot` or `/etc` that require root or sudo permissions.
+
 ![filezilla](images/filezilla.png)
 
 ### scp
 
 ## other tips & tricks
 
-```
+```text
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -193,37 +207,38 @@ RSA host key for mainsailos.local has changed and you have requested strict chec
 Host key verification failed.
 ```
 
-
 In certain circumstances (mostly involving re-imaging your pi), you may encounter this rather intimidating message.
 If you don't think anything should have changed, its worth checking that you're actually trying to connect to the device you meant to connect to.
 If you know that it makes sense your pi's ID has changed, such as the pi being a new setup, it is safe to resolve this by simply deleting the old, conflicting key off your computer.
 
 `ssh-keygen -R <hostname>` will take care of this.  for example, if your pi is `mainsailos.local`, you would do `ssh-keygen -R <hostname>`
 
-
 ### Finding a device's IP Address
 
 * if your pi is accessible via `mainsailos.local` or `raspberrypi.local`, don't worry about it too much.  You can (and should) just use that hostname everywhere. If you ever do need to get the ip, open a command prompt (pc) /terminal (mac) and type `ping <hostname>`, eg: `ping mainsailos.local`.  this will get you the IP.
 * If you have access to your network router, you may also be able to look in it's DHCP settings, and see what IP address your pi has been given
 * Failing the approaches above, "Angry IP Scanner" should be able to locate the pi on your network:
+  
+  * download Angry IP scanner from [here](https://angryip.org/)
+  * install & run it
+  * Go to `Tools->Fetchers`.  Select the "MAC Vendor"(1) fetcher, and press the left arrow(2) to activate it.  press okay(3)
 
-    - download Angry IP scanner from [here](https://angryip.org/)
-    - install & run it
-    - Go to `Tools->Fetchers`.  Select the "MAC Vendor"(1) fetcher, and press the left arrow(2) to activate it.  press okay(3)
+    ![fetchers](images/angryip_fetchers.png)
 
-     ![fetchers](images/angryip_fetchers.png)
-    - Go to `Settings`, and change to the `Display`(1) tab.  Set `Display in the results list` to `Alive hosts`(2).  press okay (3)
+  * Go to `Settings`, and change to the `Display`(1) tab.  Set `Display in the results list` to `Alive hosts`(2).  press okay (3)
 
      ![prefs](images/angryip_prefs.png)
-    - Press "Start"
-    - Once the scan finishes, look for a result with a MAC Vendor similar to "Raspberry Pi Trading"
+
+  * Press "Start"
+  * Once the scan finishes, look for a result with a MAC Vendor similar to "Raspberry Pi Trading"
 
      ![angryip](images/angryip_results.png)
 
-### Static IPs
+### Static IP's
 
-* on most networks, IP addresses are handed out by DHCP: "Dynamic Host Configuration Protocol"  This means the device's IP may occasionally change.  If you're accessing the device via host name, this doesn't matter:  the hostname should follow it.  But if you're accessing it by IP directly, this is quite inconvenient.
+On most networks, IP addresses are handed out by DHCP: "Dynamic Host Configuration Protocol"  This means the device's IP may occasionally change.  If you're accessing the device via host name, this doesn't matter:  the hostname should follow it.  But if you're accessing it by IP directly, this is quite inconvenient.  
+There are two basic approaches to solving this problem:
 
-* There are two basic approaches to solving this problem.  The better solution, where possible, is to use an "IP Reservation" feature on your DHCP server (your network router).  Basically, this allows you to tell the router "whenever you see this device, always give it the same IP address.  The trouble here, is that not all routers have this feature.
+1. The better solution, where possible, is to use an "IP Reservation" feature on your DHCP server (your network router). This allows you to tell the router "whenever you see this device, always give it the same IP address." Not all routers have this feature.
 
-* The second solution is to actually configure the Pi itself to use a static IP, removing it from the DHCP system entirely. To do this correctly involves determining an appropriate IP, and a variety of settings to use on your network, as such, it's beyond the scope of this quick little guide. However, there are a wide variety of guides easily found.
+2. The second solution is to configure the Pi to use a static IP, removing it from the DHCP system entirely. To do this, determine an unused and free IP address. Configure the other settings to use on your network. Since this can sometimes be quite an involved process, it's beyond the scope of this quick little guide. However, there are a wide variety of guides to be found online.

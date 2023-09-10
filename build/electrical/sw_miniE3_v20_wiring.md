@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron Switchwire - SKR mini E3 V2.0 Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -22,11 +24,10 @@ nav_exclude: true
 * Wire 24V and -V from DC power supply to VIN and GND terminals in corner
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
-![](./images/v0-miniE3-v20-mcu.png)
-
+![SKR mini E3 V2.0 MCU](./images/v0-miniE3-v20-mcu.png)
 
 ## Mini E3 V2.0 Pinout
 
 For reference, here is the pinout of the SKR mini E3 V2.0
 
-![](./images/miniE3-v20-pinout.png)
+![SKR mini E3 V2.0 Pinout](./images/miniE3-v20-pinout.png)

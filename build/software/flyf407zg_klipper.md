@@ -6,7 +6,7 @@ nav_exclude: true
 
 # FLY FLYF407ZG Klipper Firmware
 
-### Required Items
+## Required Items
 
 * Klipper must be installed onto the Raspberry Pi
 * At least one microSD card needs to be available depending on number of controllers.
@@ -16,7 +16,7 @@ nav_exclude: true
 * Login to the Raspberry Pi
 * Run the following:
 
-```
+```bash
 sudo apt install make
 cd ~/klipper
 make menuconfig
@@ -31,20 +31,20 @@ In the menu structure there are a number of items to be selected.
 * Ensure that Clock Reference is set to "8 MHz crystal"
 * Ensure that  "Use USB for communication (instead of serial)" is selected
 
-![](./images/flyf407zg_klipper_menuconfig.png)
+![Klipper compilation config menu](./images/flyf407zg_klipper_menuconfig.png)
 
 Once the configuration is selected, select "Exit" and "Yes" if asked to save the configuration.
 
 Run the following:
 
-```
+```bash
 make clean
 make
 ```
 
 The `make` command, when completed, creates a firmware file **klipper.bin** that is store in the folder `/home/pi/klipper/out`.  This file need to be copied to the FLY board.  The easiest way to do this is to use a GUI like [WinSCP](https://winscp.net/eng/download.php) on Windows or either [Cyberduck](https://cyberduck.io) or scp (from terminal) on Mac to copy the file to your computer.
 
-![](./images/cyberduck_example.png)
+![Cyberduck software example](./images/cyberduck_example.png)
 
 ### Load Firmware Image
 
@@ -63,5 +63,7 @@ Replace the microSD card(s) into the FLY.  If more than one, it does not matter 
 Turn on the power supply to power on the FLY board.  If named properly, the FLY will automatically update with the Klipper firmware.
 
 **Important:** If the FLY not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the FLY will automatically shut down.
+
+---
 
 ### Back to [Software Installation](./index.md#klipper-octoprint-configuration)

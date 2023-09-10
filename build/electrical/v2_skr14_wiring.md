@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron V2 - SKR 1.4 Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -8,13 +10,13 @@ nav_exclude: true
 
 ## Initial Preparation
 
-* If using the TMC2209 stepper drivers, use a small pair of wire cutters and remove the pin marked in purple.  This is to disable sensorless homing which is not needed for the V2.
+If you're using the TMC2209 stepper drivers, use a small pair of wire cutters and remove the (diagnostic) pin marked in purple. This is to disable sensorless homing, which is not needed for the V2.
 
-![](./images/tmc2209-pin-removal.png)
+![SKR 1.4 TMC2209 diagnostics pin removal](./images/tmc2209-pin-removal.png)
 
-* Reconfigure the on-board jumpers as shown.
+Then reconfigure the on-board jumpers as shown.
 
-![](./images/skr14-preparation.png)
+![SKR 1.4 preparation](./images/skr14-preparation.png)
 
 ## MCU X/Y/E, Hot End
 
@@ -29,7 +31,7 @@ nav_exclude: true
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
 
-![](./images/v2-skr14-mcu-xye.png)
+![SKR 1.4 MCU XYE](./images/v2-skr14-mcu-xye.png)
 
 ## MCU Z, Bed, Exhaust Fan
 
@@ -46,10 +48,10 @@ nav_exclude: true
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
 
-![](./images/v2-skr14-mcu-z.png)
+![SKR 1.4 MCU Z](./images/v2-skr14-mcu-z.png)
 
 ## SKR 1.4 Pinout
 
 For reference, here is the pinout of the SKR 1.4
 
-![](./images/SKR-V1.4-pinout.jpg)
+![SKR 1.4 Pinout](./images/SKR-V1.4-pinout.jpg)

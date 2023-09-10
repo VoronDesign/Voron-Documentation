@@ -13,11 +13,10 @@ Slice the file and save the .gcode file to your desktop (if you haven’t set up
 
 Once you are printing (with your printer fully assembled), take a quick video, upload it to the Voron subreddit and eat a well deserved bowl of cereal!
 
-![](./images/voron_cereal.png)
+![Voron cereal](./images/voron_cereal.png)
 
 # Next Steps
 
 Done with your cereal?  The printer's not not done yet!  There is still lots of adjusting to do so the printer can turn out high speed perfection.
 
 Head over to the [Tuning Guides](../../tuning/index.md) and dial it in.
-
