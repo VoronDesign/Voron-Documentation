@@ -188,7 +188,19 @@ Note that you are just the user here, so you will not be able to directly write 
 
 ![filezilla](images/filezilla.png)
 
-### scp
+### WinSCP
+
+WinSCP is a simple and user friendly tool for transfering files over SCP, a protocol that uses SSH for transfering files.
+
+We suggest to configure [Putty](#putty) first, as WinSCP can make use of Putty's credentials for connecting to your Voron. To import Putty credentials into WinSCP, select Import Sites under the Tools menu.
+
+![WinSCP import sites](images/winscp-import-sites.jpg)
+
+To get started with WinSCP, select an existing site entry or create a new one using New Site. Click Login to connect.
+
+The files on your computer are displayed on the left, while the files on your Voron are displayed on the right You can drag and drop files between them to transfer from and to either side.
+
+Note that you are just the user here, so you will not be able to directly write files to `/boot` or `/etc` that require root or sudo permissions.
 
 ## other tips & tricks
 
