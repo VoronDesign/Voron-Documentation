@@ -47,5 +47,5 @@ nav_exclude: true
 
 For reference, here is the pinout of the FLYF407ZG
 
-![FLY FLYF407ZG Pinout](./images/flyf407zg_pinout.png)
+![FLY FLYF407ZG Pinout](./images/flyf407zg_pinout.jpg)
 ![FLY FLYF407ZG Ports illustrated](./images/flyf407zg_port_illustration.png)

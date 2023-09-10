@@ -38,7 +38,7 @@ Then reconfigure the on-board jumpers as shown.
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
 
-![SKR 1.4 MCU](./images/v1-skr14-mcu.png)
+![SKR 1.4 MCU](./images/v1-skr14-mcu.jpg)
 
 ## SKR 1.4 Pinout
 
