@@ -28,7 +28,7 @@ Community-generated documentation for the many items that the official guide may
 | [Installing on an SSD ](./Takuya/Installing_on_an_SSD.md) | Takuya | Apr 15, 2022 |
 | [Setup a BTT Smart Filament Sensor](./samwiseg0/btt_smart_filament_sensor.md) | samwiseg0 | |
 | [Stealthburner Neopixel Guide](./drachenkatze/neopixel_guide.md) | Drachenkatze |
-| [Klipper Macros Beginner's Guide](./voidtrance/Klipper_Macros_Beginners_Guide.md) | voidtrace |
+| [Klipper Macros Beginner's Guide](./voidtrance/Klipper_Macros_Beginners_Guide.md) | voidtrace | Sep 25, 2023 |
 | [Using Slicers and PRINT_START macros](./EricZimmerman/SlicerAndPrintStart.md) | EricZimmerman |
 | [Backing up printer configuration files to GitHub](./EricZimmerman/BackupConfigToGithub.md) | EricZimmerman & maz0r | May 8, 2023 | 
 | [Wiring Sequins to LDO Picobilical Tool Head X Endstop](./FlopSplash/Wiring_Sequins_to_LDO_Picobilical_Tool_Head_X_Endstop.md) | FlopSplash |

@@ -35,6 +35,31 @@ span multiple lines as long as all lines are indented deeper than the original
 line. This is especially important for macros since they are usually comprised
 of multiple GCode commands, each on a separate line.
 
+### Basic Structure of a GCode Command
+To better understand macros, it is helpful to understand the structure/syntax of GCode commands.
+
+GCode commands consist of the command name and, optionally, a list of parameters. GCode commands
+appear one per line, where the line starts with the GCode command name, followed by any
+parameters and, may be, a comment at the end of the line:
+
+```
+G0 X10 Y10 Z10 F3600 ; Move to X=10, Y=10, Z=10 at 3600 mm/min
+```
+
+In the above example, `G0` is the GCode command name, `X10 Y10 Z10 F3600` are the command
+parameters, and `;  Move to X=10, Y=10, Z=10 at 3600 mm/min` is the comment following the
+command. (The `;` character tells any GCode processors that a comment is starting and that
+everything after it can be ignored.)
+
+GCode commands don't necessarily have to have arguments. Some GCode commands don't even accept
+parameters as they don't need them. For example, `G90` or `G91`. Furthermore, not all accepted
+parameters have to be specified. For example, the `G0` command accepts `X`, `Y`, `Z`, and `F` as
+parameters but a `G0` command may specify any subset of them:
+
+```
+G0 X20 ; Move to X20 maintaining current Y and Z coordinates.
+```
+
 ### Macros
 Macros are defined with the `[gcode_macro]` section. You can see the full
 Klipper documentation for the `gcode_macro` section 
@@ -72,6 +97,24 @@ gcode:
 In the above example, `MACRO2` triggers `MACRO1` as the first command executed.
 This will cause `MACRO1` to be executed entirely before `MACRO2` continuing to
 the next GCode command.
+
+#### A Bit More About Macros and How To Call Them
+When a macro is defined with `[gcode_macro MACRO_NAME]`, the collection of GCode commands that are
+in the body of the macro are grouped together and given the label `MACRO_NAME`. From that point on,
+`MACRO_NAME` becomes pseudo-GCode command that Klipper recognizes. As such, it can be used in any
+way that can be used to execute GCode commands - Mainsail console, Moonraker API, GCode files,
+etc. Also, just like any other GCode command, macros may be created to accept parameters (see
+(Basic Structure of a GCode Command)[#basic-structure-of-a-gcode-command] and
+(Macro Template Parameters)[#macro-template-parameters]) or not.
+
+It is important to remember that Klipper treats macros as GCode commands in order to better
+understand how Klipper sequences operations.
+
+Klipper completes each GCode command before executing the another one. There is no way to execute
+two separate GCode commands at the same time. Since macros are treated as GCode commands, they are
+subject to the same rule - the macro has to complete before the next GCode command is executed.
+So, despite the fact that macros are comprised of many other GCode commands, Klipper cannot
+insert/execute other GCode commands while the macro is being executed.
 
 ### Variables
 Macro variables (the `variable_<name>` key/value pair) are persistent variables
@@ -480,91 +523,106 @@ includes the following settings:
 * Current nozzle position.
 * Relative extruder position.
 
-Saving the GCode state allows other macros to perform actions without
-interfering with the state of previous macros. This is especially useful for
-macros like `PAUSE` and `RESUME` - the `PAUSE` macro saves the GCode state when
-the print was paused and the `RESUME` macro restores it. This prevents any GCode
-that is executed between the `PAUSE` and `RESUME` macros (like change filament
-macros, clean nozzle macros, etc.) from interfering or destroying the state the
-printer was in when it paused.
+Saving the GCode state allows other macros to perform actions without interfering with the state of
+previous macros. This is especially useful for macros like `PAUSE` and `RESUME` - the `PAUSE` macro
+saves the GCode state when the print was paused and the `RESUME` macro restores it. This prevents any
+GCode that  is executed between the `PAUSE` and `RESUME` macros (like change filament macros, clean
+nozzle macros, etc.) from interfering or destroying the state the printer was in when it paused.
 
-Saving and restoring GCode state is done with the `SAVE_GCODE_STATE`[^8] and 
-`RESTORE_GCODE_STATE`[^9] commands. When saving a state, the `SAVE_GCODE_STATE`
-command takes in a `NAME` argument. The saved state can then be referenced using
-that name. This allows nesting of these commands.
+Saving and restoring GCode state is done with the `SAVE_GCODE_STATE`[^8] and `RESTORE_GCODE_STATE`[^9]
+commands. When saving a state, the `SAVE_GCODE_STATE` command takes in a `NAME` argument. The saved
+state can then be referenced using that name. This allows nesting of these commands.
 
-Upon execution of the `SAVE_GCODE_STATE NAME=<name>` command, the current GCode
-state is saved under the name "<name>". When the 
-`RESTORE_GCODE_STATE NAME=<name>` command is executed, the state saved as
-"<name>" is restored. Any changes to the settings listed above done between the
-`SAVE_GCODE_STATE` and `RESTORE_GCODE_STATE` commands is lost (unless saved
-under a different name).
+Upon execution of the `SAVE_GCODE_STATE NAME=<name>` command, the current GCode state is saved under
+the name "<name>". When the `RESTORE_GCODE_STATE NAME=<name>` command is executed, the state saved as
+"<name>" is restored. Any changes to the settings listed above done between the `SAVE_GCODE_STATE` and
+`RESTORE_GCODE_STATE` commands is lost (unless saved under a different name).
 
-> **Warning** The use of the save/restore commands should be done carefully and
-> intentionally. State that has changed between the too commands can be lost,
-> which can lead to unexpected results. One example of this is using
-> save/restore in `PRINT_START` macros. Actions done by a `PRINT_START` macro
-> wrapped in a set of `SAVE_GCODE_STATE/RESTORE_GCODE_STATE` commands might be
-> lost after the previous state is restored.
+> **Warning** The use of the save/restore commands should be done carefully and intentionally. State
+> that has changed between two two commands can be lost, which can lead to unexpected results. One
+> example of this is using save/restore in `PRINT_START` macros. Action done by a `PRINT_START` macro
+> wrapped by a set of `SAVE_GCODE_STATE/RESTORE_GCODE_STATE` commands might be lost after the previous
+> state is restored.
 >
-> For example, if one of the things that a `PRINT_START` macro does is adjust
-> the Z offset for a particular filament type or print surface, the newly set Z
-> offset will be lost when the `PRINT_START` macro ends.
+> For example, if one of the things that a `PRINT_START` macro does is adjust the Z offset for a
+> particular filament type or print surface, the newly set Z offset will be lost when the `PRINT_START`
+> macro ends.
 
 ## Macros and Slicers
-When first building or setting up a new printer, the first place where a user
-might need to modify Klipper macros is probably going to be the `PRINT_START`
-macro.
+When first building or setting up a new printer, the first place where a user might need to modify
+Klipper macros is probably going to be the `PRINT_START` and/or `PRINT_END` macros.
 
-Normally, this will take the shape of adding code to the macro to do bed mesh
-leveling or enabling a filament sensor. However, a frequent issue that has
-happened to users is the need to pass information from the slicer to the
+These two macros are usually used to do all of the operations to prepare for a print (`PRINT_START`)
+or to finish a print (`PRINT_END`). Such operations may include homing, bed leveling, generating a bed
+mesh, pre-heating the nozzle, bed, or chamber, etc.
+
+Normally, this will take the shape of adding code to the macro to do the desired operations. However,
+a frequent issue that has happened to users is the need to pass information from the slicer to the
 printer.
 
-While passing values, settings, etc. from a slicer to the printer can take many
-different forms, a common way to do that is to use macro parameters to pass
-values to the `PRINT_START` macro. Such values may include the bed and extruder
-temperatures, chamber temperature, type of filament being used, etc.
+Slicer profiles define the parameters for the printer, filament(s), and the individual print. Those
+parameters are then used to generate the appropriate GCode commands for the print.
 
-Passing values from the slicer is as simple as calling the `PRINT_START` macro
-in the beginning of the produced GCode. Every commonly used slicer has a way for
-the user to provide custom GCode that will be inserted at the start of the
-output file. Each slicer also should have a way to reference slicer setting by
-that custom GCode. At this point, passing information to the printer is only a
-matter of calling `PRINT_START` with a macro parameter for each of the slicer
-settings of interest.
+While passing values, settings, etc. from a slicer to the printer can take many different forms, a
+common way to do that is to use macro parameters to pass values to the `PRINT_START` macro. Such
+values may include the bed and extruder temperatures, chamber temperature, type of filament being used,
+etc.
+
+Passing values from the slicer is as simple as calling the `PRINT_START` macro in the beginning of the
+produced GCode. Every commonly used slicer has a way for the user to provide custom GCode that will be
+inserted at the start of the output file. Each slicer also should have a way to reference slicer
+setting by that custom GCode. At this point, passing information to the printer is only a matter of
+calling `PRINT_START` with a macro parameter for each of the slicer settings of interest.
+
+<details>
+<summary>More detailed information about passing values from slicers to Klipper</summary>
+
+#### Slicer Placeholders
+Commonly-used slicers use, what they call, "placeholders" to allow referencing profile values and
+settings. When generating the GCode, slicers will replace the placeholder with the actual value from
+the profile. For example, the placeholder `[first_layer_bed_temperature]` will be replaced with the
+temperature value set for the first layer in the currently used profile.
+
+#### Macro Parameters
+As described in previous sections, macro parameters take the form `PARAM_NAME=VALUE`. The macro will
+have access to the `VALUE` through the variable `params.PARAM_NAME`. So, in the case of `PRINT_START
+BED_TEMP=110`, the macro `PRINT_START` will be able to get the value `110` through by using
+`params.BED_TEMP`.
+
+As you can see there are two levers of indirection/translation happening here. First, the slicer
+will generate the GCode command/macro by substituting the values for each placeholder that it sees,
+thus generating the GCode command/macro with its arguments. Then, the Klipper macro will execute and
+use the value through the parameter it has been given.
+</details>
 
 Below are some examples for some of the common slicers.
 
-> **Warning** What is shown below are just examples. Please, don't just use the
-> GCode blindly. Verify that the correct settings/placeholders are being used.
+> **WARNING** What is shown below are just examples. Please, don't just use the GCode blindly. Verify
+> that the correct settings/placeholders are being used.
 
 ### PrusaSlicer/SuperSlicer
-PrusaSlicer (PS) and SuperSlicer (SS) have multiple places where custom GCode
-can be added depending on what that GCode affects. For the `PRINT_START` macro,
-the location where to add custom GCode is in "Start G-code" section under the
-"Printer Settings -> Custom G-code" .
+PrusaSlicer (PS) and SuperSlicer (SS) have multiple places where custom GCode can be added depending
+on what that GCode affects. For the `PRINT_START` macro, the location where to add custom GCode is in
+"Start G-code" section under the "Printer Settings -> Custom G-code" .
 
 ```
 PRINT_START EXTRUDER_TEMP={first_layer_temperature[initial_extruder]} BED_TEMP=[first_layer_bed_temperature] CHAMBER_TEMP=[chamber_temperature]
 ```
 
-The above example will call the `PRINT_START` macro in the beginning of the
-GCode file, passing the extruder, bed, and chamber temperature as defined in the
-slicer profile being used. In order to allow the slicer to substitute the actual
-values, the command uses "placeholders"[^10]. When outputting the final GCode,
-PS/SS will substitute the actual values in place of the placeholders. For
-example, if the profile being used define extruder temperature as 240C, bed
-temperature as 75C, and chamber temperature as 40C, the command appearing in the
-GCode file will be:
+The above example will call the `PRINT_START` macro in the beginning of the GCode file, passing the
+extruder, bed, and chamber temperature as defined in the slicer profile being used. In order to allow
+the slicer to substitute the actual values, the command uses "placeholders"[^10]. When outputting the
+final GCode, PS/SS will substitute the actual values in place of the placeholders. For example, if
+the profile being used define extruder temperature as 240C, bed temperature as 75C, and chamber
+temperature as 40C, the command appearing in the GCode file will be:
 
 ```
 PRINT_START EXTRUDER_TEMP=240 BED_TEMP=75 CHAMBER_TEMP=40
 ```
 
 ### Cura
-The place where to add similar custom GCode in Cura is in the "Start G-code"
-window in the "Machine Settings -> Printer" screen.
+The place where to add similar custom GCode in Cura is in the "Start G-code" window in the "Machine
+Settings -> Printer" screen.
 
 ```
 PRINT_START EXTRUDER_TEMP={material_print_temperature_layer_0} BED_TEMP={material_bed_temperature_layer_0} CHAMBER_TEMP={build_volume_temperature}
