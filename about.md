@@ -28,9 +28,9 @@ All Voron printers use [Klipper](https://www.klipper3d.org/Overview.html) firmwa
 
 In 2015, the very first set of 18 Voron printers were packaged in RCF's garage and shipped as kits. As a fun addition, he gave each kit a serial number. While those were the only printers ever sold directly by RCF, the tradition has lived on as a way to represent the hard work each Voron owner puts into sourcing, assembling, and configuring their printer. It also is a great way to show how the community has grown throughout the years!
 
-All it takes to receive a serial number after you have completed your build is to post a video of your printer printing on the Voron [Subreddit](https://www.reddit.com/r/voroncorexy/). Be sure to have your printer cleaned up with all cable management above the deck plate done. Wiring can be tricky, but do your best!
+All it takes to receive a serial number after you have completed your build is to post a video of your printer printing on the Voron [Subreddit](https://www.reddit.com/r/voroncorexy/). Be sure to have your printer cleaned up with necessary safety features - deck plate or electronics separate from chamber, and cables managed above the deck plate. Wiring can be tricky, but do your best!
 
-*Note: the serial submission process has become more automated now. In order to have the bot pick up your serial request video, be sure to use the "Serial Request" flair and add your full Discord name, including the unique 4 digit number (for example, #1234) after your username. Mods will review the requests periodically!*
+*Note: As per latest requirement, include paper with hand written Reddit username and a date, visible within camera view when filming a video. You can also include Discord username in your request, the 4-digit number is no longer a requirement. Mods will review the requests periodically!*
 
 
 ---
