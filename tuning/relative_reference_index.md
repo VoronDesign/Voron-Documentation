@@ -4,6 +4,7 @@ title: Bed Mesh with Relative Reference Index
 parent: Tuning Guides
 nav_exclude: true
 ---
+
 ## Bed Mesh with RELATIVE_REFERENCE_INDEX
 
 {: .note }
@@ -24,9 +25,9 @@ Because your mesh can change at different bed, chamber, and frame temperatures, 
 
 All of the `[bed_mesh]` configuration options and explanations can be found [in the Klipper docs](https://github.com/KevinOConnor/klipper/blob/master/docs/Bed_Mesh.md).
 
-
 Here is a sample configuration. You can copy & paste this into your `printer.cfg`, making sure to uncomment the appropriate `mesh_min` and `mesh_max` for your bed size.
-- **The Switchwire stock configs already include this.**
+
+**The Switchwire stock configs already include this.**
 
 ```python
 [bed_mesh]
@@ -59,7 +60,7 @@ This will generate a mesh before every print.
 
 Generally a 5x5 grid is acceptable for even the largest Voron printer, but you can adjust the points as you see fit.
 
-It is recommended to use **odd** values for numbers of points in X and Y, *(such as 3x3, 5x5, or 7x7)*, so that there is always a probe point directly in the center of your bed. 
+It is recommended to use **odd** values for numbers of points in X and Y, *(such as 3x3, 5x5, or 7x7)*, so that there is always a probe point directly in the center of your bed.
 
 ### Relative Reference Index (!)
 
@@ -70,8 +71,10 @@ It is recommended to use **odd** values for numbers of points in X and Y, *(such
 As the Legacy, Trident, and V2 use the probe as a relative and not absolute measurement device, **it is critical that you have the `relative_reference_index` parameter. This value will change as you adjust your mesh size.**
 
 Your `relative_reference_index` should be set to **((x points * y points) - 1) / 2**.
-- Examples:
-    - 3x3 mesh = 4
-    - 5x5 mesh = 12
-    - 7x7 mesh = 24 
-    - *(etc)*
+
+Examples:
+
+- 3x3 mesh = 4
+- 5x5 mesh = 12
+- 7x7 mesh = 24
+- *(etc)*

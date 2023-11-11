@@ -53,4 +53,5 @@ At this point Klipper will be installed on the Raspberry Pi.  The next step is t
 * [SKR Pico](./skrPico_klipper.md)
 
 ---
+
 ### Next: [Software Configuration](./configuration.md)

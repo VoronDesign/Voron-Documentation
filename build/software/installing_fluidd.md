@@ -8,7 +8,7 @@ nav_order: 2
 
 # Installing Fluidd
 
-The recommended way to install Fluidd on a Raspberry Pi is to use [KIAUH](#KIAUH), the Klipper Installation and Update Helper. Formally Fluidd installation was recommended to be performed using the FluiddPI disk image, however this is no longer maintained or updated.
+The recommended way to install Fluidd on a Raspberry Pi is to use [KIAUH](#kiauh), the Klipper Installation and Update Helper. Formally Fluidd installation was recommended to be performed using the FluiddPI disk image, however this is no longer maintained or updated.
 
 ## KIAUH
 
@@ -32,4 +32,5 @@ latest version of Fluidd.
 Coming soon.
 
 ---
+
 ### Back: [Software Installation](./index.md)

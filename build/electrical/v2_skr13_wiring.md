@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron V2 - SKR 1.3 Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -10,7 +12,7 @@ nav_exclude: true
 
 * Reconfigure the on-board jumpers as shown.
 
-![](./images/skr13-preparation.png)
+![SKR 1.3 Preparation](./images/skr13-preparation.png)
 
 ## MCU X/Y/E, Hot End
 
@@ -25,7 +27,7 @@ nav_exclude: true
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.3, but do not connect it yet to your Raspberry Pi
 
-![](./images/v2-skr13-mcu-xye.png)
+![SKR 1.3 MCU XYE](./images/v2-skr13-mcu-xye.png)
 
 ## MCU Z, Bed, Exhaust Fan
 
@@ -36,15 +38,15 @@ nav_exclude: true
 * Plug in Controller Fan in to HE1 (P2.4)
 * Plug SSR Control for Heated Bed in to Fan (P2.3)
 * Plug Z Endstop Switch into -Z (P1.25)
-* Plug Probe GND and Signal (with BAT85 diode) in to +Z (P1.24
+* Plug Probe GND and Signal (with BAT85 diode) in to +Z (P1.24)
 * Plug display wires in to EXP1 and EXP2
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.3, but do not connect it yet to your Raspberry Pi
 
-![](./images/v2-skr13-mcu-z.png)
+![SKR 1.3 MCU Z](./images/v2-skr13-mcu-z.png)
 
 ## SKR 1.3 Pinout
 
 For reference, here is the pinout of the SKR 1.3
 
-![](./images/SKR-V1.3-pinout.jpg)
+![SKR 1.3 Pinout](./images/SKR-V1.3-pinout.jpg)
