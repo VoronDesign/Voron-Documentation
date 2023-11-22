@@ -56,7 +56,7 @@ Notice that the idlers get "pinched" when moving the X extrusion back/forth (thi
 7. Unscrew and drop your lower Z joints.  
     Your gantry will now be floating on just the belts.
 
-    {: .important }
+    {: .note }
     > Make sure your printer is on a (fairly) level surface. Unlevel surfaces could cause your gantry to swing too much to one side.  
     > It doesn't have to be perfectly level; Just don't do it on a hill!
 
