@@ -84,7 +84,7 @@ The currently recommended lube for the linear rails is Mobilux EP1 or EP2, or th
 
 ### What are the hammer nuts used for?
 
-The hammer nuts are intended to be used with the panel clips to allow easier removal and reinstallation. It is possible to apply some locktite and create quarter-turn fasteners for easy removal and installation.
+The hammer nuts are intended to be used with the panel clips to allow easier removal and reinstallation. It is possible to apply some Loctite and create quarter-turn fasteners for easy removal and installation.
 
 ## Wiring
 

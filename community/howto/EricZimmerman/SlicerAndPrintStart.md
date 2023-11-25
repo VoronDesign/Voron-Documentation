@@ -25,7 +25,7 @@ On the slicer side, lets take a look at the default configuration for the printe
 
 Specifically, this is the **Start G-code**:
 
-```ini
+```
 ; M190 S0
 ; M109 S0 ; uncomment to remove  & wait temp gcode added automatically after this start gcode
 PRINT_START EXTRUDER={first_layer_temperature[initial_extruder] + extruder_temperature_offset[initial_extruder]} BED=[first_layer_bed_temperature] CHAMBER=[chamber_temperature]
@@ -34,7 +34,7 @@ PRINT_START EXTRUDER={first_layer_temperature[initial_extruder] + extruder_tempe
 The first thing to notice is that the first two lines are commented out. This means they are essentially ignored and will not be processed. 
 We will come back these later, but for now, those macros allow for setting the temperature for the bed and extruder (if they were uncommented):
 
-```ini
+```
 M190: Wait for bed temperature
 M109: Wait for hot end temperature
 ```
@@ -59,7 +59,7 @@ The other parameters, such as **EXTRUDER** or **BED**, would work in a similar f
 
 On the printer side, let's start with a simplistic PRINT_START macro, commonly defined in `printer.cfg`
 
-```ini
+```
 [gcode_macro PRINT_START]
 gcode:
     G32                            ; home all axes
@@ -72,7 +72,7 @@ Most of us, when first starting out, used these types of macros and hoped for th
 
 To see the gcode, we simply need to export the gcode after slicing an STL and then open it in a text editor. Once we open the gcode, we can scroll down below the thumbnails, to where we see the call to PRINT_START:
 
-```ini
+```
 ;TYPE:Custom
 ; M190 S0
 ; M109 S0 ; uncomment to remove set & wait temp gcode added automatically after this start gcode
@@ -100,7 +100,7 @@ THIS is how we were able to be successful in printing things without having to m
 
 However, what happens if we slightly change our custom start gcode, uncommenting the first two lines, so it looks like this in our slicer:
 
-```ini
+```
 M190 S0
 M109 S0 ; uncomment to remove set & wait temp gcode added automatically after this start gcode
 PRINT_START EXTRUDER={first_layer_temperature[initial_extruder] + extruder_temperature_offset[initial_extruder]} BED=[first_layer_bed_temperature] CHAMBER=[chamber_temperature]
@@ -108,7 +108,7 @@ PRINT_START EXTRUDER={first_layer_temperature[initial_extruder] + extruder_tempe
 
 If we then reslice our STL and export out the gcode, open the exported file in a text editor, and then find the PRINT_START call, we see something like this:
 
-```ini
+```
 ;TYPE:Custom
 M190 S0
 M109 S0 ; uncomment to remove set & wait temp gcode added automatically after this start gcode
@@ -132,7 +132,7 @@ All is not lost though, and in fact, this is better for us on the long term, bec
 
 Let's consider a slightly revised PRINT_START macro that looks like this:
 
-```ini
+```
 [gcode_macro PRINT_START]
 gcode: 
     # Parameters
@@ -154,7 +154,7 @@ Inside the curly brace is a variable, but where did this variable come from? I a
 
 Before we can actually use those variables however, we have to extract them from the parameters passed into the PRINT_START macro. These parameters are held in a collection that klipper maintains, called `params`. Notice at the beginning of our new macro we see another new notation, also in curly braces. One example is shown below:
 
-```ini
+```
 {% set BED_TEMP = params.BED|float %}
 ```
 
@@ -166,7 +166,7 @@ The  %**{%** and **%}**  around the **set** command is just how macros work for 
 
 So now if we revisit the `M190 S{BED_TEMP}` call, we can see that when the PRINT_START macro evaluates this, it in fact will end up being:
 
-```ini
+```
 M190 S55
 ```
 
@@ -186,7 +186,7 @@ So now lets go through a more complicated starting gcode call in our slicer, and
 
 Consider the following starting gcode in the slicer:
 
-```ini
+```
 M104 S0 ; Stops PS/SS from sending temp waits separately
 M140 S0
 PRINT_START BED=[first_layer_bed_temperature] EXTRUDER={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} CHAMBER=[chamber_temperature] SIZE={first_layer_print_min[0]}_{first_layer_print_min[1]}_{first_layer_print_max[0]}_{first_layer_print_max[1]} MATERIAL={filament_type}
@@ -202,7 +202,7 @@ We again see the two macros for setting zero temperature are uncommented, and th
 
 These will work the same as we saw before, so if we use this starting gcode and export to a file, we end up with something like this:
 
-```ini
+```
 ;TYPE:Custom
 M104 S0 ; Stops PS/SS from sending temp waits separately
 M140 S0
@@ -222,7 +222,7 @@ M107
 
 And if we then tweak our PRINT_START to pull those values from the parameters, we might end up with this:
 
-```ini
+```
 [gcode_macro PRINT_START]
 gcode: 
     # Parameters
@@ -249,7 +249,7 @@ Notice the discrepancy between what the slicer sent in, and what the PRINT_START
 
 There are ways to prevent the above error from happening, and the **FL_SIZE** variable shows how to do it. Notice that you can, after the 'params.VARIABLE' call, use a pipe and then specify a default value. In the case of **SIZE**, it is a string, so it is specified in double quotes. If we wanted to this with a numerical variable, it might look like this:
 
-```ini
+```
 {% set MY_SHOE_SIZE = params.SHOE_SIZE|default(11)|int %}
 ```
 
@@ -259,7 +259,7 @@ Use this with caution though. It is not a good idea to set a default BED or EXTR
 
 If we continue to extend our PRINT_START with our new options, we could add messages to be shown, such as:
 
-```ini
+```
 RESPOND MSG="Printing {MATERIAL} at {EXTRUDER_TEMP}"
 ```
 
@@ -269,7 +269,7 @@ Note that you need to add a `[respond]` configuration option in `printer.cfg` fo
 
 Finally, note that you are not limited to only passing things that exist as parameters from the slicer. If you wanted to pass in custom variables, just add them to the custom start gcode section, and then pull them out in PRINT_START, like this:
 
-```ini
+```
 PRINT_START BED=[first_layer_bed_temperature] VERBOSE=1 PLAY_SONG=0
 ```
 

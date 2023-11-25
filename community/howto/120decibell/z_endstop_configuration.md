@@ -21,7 +21,7 @@ The Z endstop position value is defined in the printer.cfg file that Klipper rea
 
 The default for the value for the endstop position is -0.5 as a safety factor to prevent crashing the nozzle into the print surface during initial operations.  This value should be set to the exact distance that the Z endstop triggers relative to the print surface.
 
-The Z endstop position must already be set in Klipper.  The endstop much be functioning and trigger appropriately during all homing operations.
+The Z endstop position must already be set in Klipper.  The endstop must be functioning and trigger appropriately during all homing operations.
 
 The Z endstop calibration process can be performed with the printer (both hot end and build surface) either hot or cold.  Klipper is written with the assumption that the Z endstop calibration is performed cold. While it is calibrated using a 0.1 mm gap, it expects movement from thermal expansion to take up that space.
 

@@ -6,7 +6,7 @@ nav_exclude: true
 
 # Hall Effect Endstop Setup
 
-**The hall effect endstop is only designed for a V2.4.  It will not work on any other models!**
+**The hall effect endstop is only designed for Trident and V2.4.  It will not work on any other models!**
 
 The hall effect endstop board is a non-mechanical alternative to the X and Y endstop switches.  It triggers on magnets installed in the X carriage and one Z joint.
 
@@ -48,7 +48,7 @@ _The hall effect sensors are sensitive to polarity so the magnets must be instal
 ## Verification
 
 * Manually move the gantry away from the endstops and run `QUERY_ENDSTOPS`.  Both X and Y endstops should read as `open`.
-* If any of them say "triggered" instead of "open", double-check to make sure the gantry is away from the homeing corner and that both LEDs are off.
+* If any of them say "triggered" instead of "open", double-check to make sure the gantry is away from the homing corner and that both LEDs are off.
 * Manually move the gantry to close the X endstop and run `QUERY_ENDSTOPS`.  The X endstop should read `triggered` and the Y endstop should read `open`.
 * Manually move the gantry into the endstop corner and run `QUERY_ENDSTOPS`. Both X and Y endstops should read `triggered`.
 * If it is found that one of the endstops has inverted login (i.e. it reads as "open" when it is pressed and "triggered" when not pressed), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. For example, if the X endstop was inverted, add a ! in front of the pin number as follows: `endstop_pin: P1.28 -> endstop_pin: !P1.28`

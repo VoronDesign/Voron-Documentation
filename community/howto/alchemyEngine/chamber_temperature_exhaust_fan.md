@@ -25,7 +25,7 @@ If _just_ doing chamber temperature monitoring, add the following code to the pr
 
 **Note:** Confirm that the thermistor type matches the type used.
 
-```ini
+```
 [temperature_sensor chamber]
 sensor_type: NTC 100K beta 3950
 sensor_pin: z:P0.24
@@ -45,7 +45,7 @@ To have the exhaust fan controlled by the chamber temperature, do the following.
 
 **Note:** Confirm that the thermistor type matches the type used.
 
-```ini
+```
 [temperature_fan chamber]
 pin: z:P2.7
 max_power: 1.0
@@ -64,7 +64,7 @@ gcode_id: C
 
 Add another section with a new macro.
 <!-- {% raw %} -->
-```ini
+```
 [gcode_macro M141]
 gcode:
     {% set s = params.S|default(0)|float %}

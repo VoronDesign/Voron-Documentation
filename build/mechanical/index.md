@@ -58,13 +58,14 @@ has_children: true
 
 ### Current
 
-[V0.1 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.1/Manuals/Assembly_Manual_0.1.pdf)
+[V0.2r1 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.2r1/Manuals/VORON_V0.2r1_Assembly_Manual.pdf)
 
 ### Historical
 
+* [V0.2 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.2/Manuals/VORON_V0.2_Assembly_Manual.pdf)
+* [V0.1 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/Voron0.1/Manuals/Assembly_Manual_0.1.pdf)
 * [V0 Assembly Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON-0/Manuals/V0_Assembly_Manual.pdf)
 * [V0 Pocketwatch Manual](https://github.com/VoronDesign/Voron-0/raw/master/VORON_Pocketwatch/Manuals/VORON_Pocketwatch_Assembly_Manual.pdf)
-* [V0 Dozuki Guides](https://voron.dozuki.com/c/Voron_0)
 
 ## V1
 

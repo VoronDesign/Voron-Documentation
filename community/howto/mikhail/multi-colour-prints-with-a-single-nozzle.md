@@ -30,7 +30,7 @@ Identify the bodies that will be your primary colour and your accent colour, in 
 
 We're first going to slice the accent pieces, so you will need to right click the primary colour piece and select **change type** and then pick **modifier** from the list. This tells the slicer this body is no longer a printable body and is instead used to modify the other bodies (for example as support enforcer or blocker). For us we merely just need it to not be printed.
 
-![Primary and secondy parts](./images/primary_modifier.png)
+![Primary and secondary parts](./images/primary_modifier.png)
 
 You will now slice the remaining accent pieces as normal. If possible omit a skirt as it will make your life easier but it's not required. Export the resulting gcode and save it to an appropriate place.
 
@@ -66,7 +66,7 @@ Once that's done and your second one is going you should see the toolhead print 
 
 ![Second part printing](./images/second_part_printing.jpg)
 
-You should also see the exagerated z-hops on the lower layers of the print to avoid colliding with the first printed part.
+You should also see the exaggerated z-hops on the lower layers of the print to avoid colliding with the first printed part.
 
 ![Second part printing](./images/zhop.gif)
 

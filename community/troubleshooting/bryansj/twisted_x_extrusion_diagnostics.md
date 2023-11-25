@@ -12,7 +12,7 @@ The sensor is correctly offset from the bed based on the Bed_Tilt or Quad_Gantry
 
 This process helps to identify a twisted X extrusion without tearing down the printer.
 
-_Note: The values used in this exmaple are for a printer with a 300x300 bed.  If the printer being tested is larger or smaller, compensate accordingly._
+_Note: The values used in this example are for a printer with a 300x300 bed.  If the printer being tested is larger or smaller, compensate accordingly._
 
 ## Prep
 

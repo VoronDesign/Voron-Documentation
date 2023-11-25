@@ -12,9 +12,9 @@ The recommended way to install Mainsail or Fluidd on a Raspberry Pi is to use th
 
 ## Requirements
 
-1. A spare microSD card, for the bootloader 
+1. A spare microSD card, for the bootloader
 2. A USB to SATA adapter
-  I (Takuya#0523) have personally tested a SATA to USB adapter from Sabrent. Even though it says USB3.0, it only works with USB 2.0 on the Pi 4. Some people also had success with the SATA to USB A Cable from JSAUX. Sadly, some adapters dont work and there is no perfect way to know until it arrives.
+  I (Takuya#0523) have personally tested a SATA to USB adapter from Sabrent. Even though it says USB3.0, it only works with USB 2.0 on the Pi 4. Some people also had success with the SATA to USB A Cable from JSAUX. Sadly, some adapters don't work and there is no perfect way to know until it arrives.
 4. A SATA SSD
 
 ### Why SATA?
@@ -26,12 +26,12 @@ NVMe does not offer any particular advantages when used over USB, and actually m
 To enable USB-Boot, you need a spare microSD card with the USB Boot Bootloader flashed onto it.
 
 1. [Download and install the Raspberry Pi Imager](https://www.raspberrypi.com/software/)
-2. Insert the microSD card into your computer, then choose the following OS in Raspberry Pi Imager:  
+2. Insert the microSD card into your computer, then choose the following OS in Raspberry Pi Imager:
   ```Misc utility images``` --> ```Bootloader``` --> ```USB BOOT```
 3. Flash the USB BOOT image to your spare microSD card
 4. Turn off the Pi and remove the microSD card from the Pi
 5. Transfer the USB BOOT microSD card from your PC to the Pi
-6. Turn on the Pi  
+6. Turn on the Pi
   The green activity light will blink a steady pattern once the update has been completed. If you have an HDMI monitor attached, the screen will go green once the update is complete. Allow 10 seconds or more for the update to complete. Do not remove the microSD card until the update is complete.
 7. Turn off the Pi and remove the microSD card
 

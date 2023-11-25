@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron V2 - FLY FLYF407ZG Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -10,7 +12,7 @@ nav_exclude: true
 
 * Remove all jumpers from the board.  Install just the jumpers as shown.
 
-![](./images/voron2_flyf407zg_uart_jumpers.png)
+![FLY FLYF407ZG UART jumpers](./images/voron2_flyf407zg_uart_jumpers.png)
 
 ## MCU Part 1
 
@@ -25,7 +27,7 @@ nav_exclude: true
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your FLYF407ZG, but do not connect it yet to your Raspberry Pi
 
-![](./images/voron2_flyf407zg_mcu_1.png)
+![FLY FLYF407ZG MCU](./images/voron2_flyf407zg_mcu_1.png)
 
 ## MCU Part 2
 
@@ -39,12 +41,11 @@ nav_exclude: true
 * Plug Z Endstop Switch into Z-MAX
 * Plug display wires in to EXP1 and EXP2
 
-
-![](./images/voron2_flyf407zg_mcu_2.png)
+![FLY FLYF407ZG MCU 2](./images/voron2_flyf407zg_mcu_2.png)
 
 ## Pinout
 
 For reference, here is the pinout of the FLYF407ZG
 
-![](./images/flyf407zg_pinout.png)
-![](./images/flyf407zg_port_illustration.png)
+![FLY FLYF407ZG Pinout](./images/flyf407zg_pinout.jpg)
+![FLY FLYF407ZG Ports illustrated](./images/flyf407zg_port_illustration.png)
