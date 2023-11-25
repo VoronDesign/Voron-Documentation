@@ -39,7 +39,11 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
     1. If you plan on having more than one printer some day, use a repository name that is specific to that printer
     2. Description is optional, but nice to have, especially for other people that may reference your config
     3. Public or Private is up to you.
-    4. License is optional too, but best to specify something. I usually do MIT for all my stuff, but your mileage may vary
+    4. Select the following options under "Initialize this repository with":
+        1. Make sure "Add a README file" is unchecked.
+        2. Select "None" for .gitignore template.
+        3. Select "None" for the license.  
+           The license is optional, but after your backup is working you should <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" target="_blank">add one</a>. I usually do MIT for all my stuff, but your mileage may vary.
 
     ![New repository details](images/backup/newRepoDetails.png)
 
@@ -181,7 +185,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 4. If this is your first time setting up git on your printer you may need to set your user and email details for git to use later. *if you don't do it now it will prompt you later ;)*
 
-    ```
+    ```bash
     git config --global user.email "your@email.com"
     git config --global user.name "your name"
     ```
