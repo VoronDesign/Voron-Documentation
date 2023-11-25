@@ -157,10 +157,10 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 ### Initialize git
 
-1. Right now our config files are not being tracked by git. Run the following command to initialize git:
+1. Right now our config files are not being tracked by git. Run the following command to initialize git, using the branch main:
 
     ```bash
-    git init
+    git init -b main
     ```
 
     which results in something like this:
@@ -217,11 +217,13 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     ![No changes](images/backup/noChanges.png)
 
+    **NOTE**: In the screenshots, the master branch is shown, but yours is most likely the main branch, as that is what GitHub uses as its default these days. Do not worry about this.
+
     However, if you change any file in Mainsail, via nano, etc. and then rerun the `sh autocommit.sh` command, you will see it found your changes and sent them upstream! Here is an example after I edited `printer.cfg`:
 
     ![File committed](images/backup/fileChangeCommit.png)
 
-    If you go to your GitHub repository, you can also see these changes by clicking on the commits, which is on the right side (**NOTE**: You may have to change the branch from `main` to `master` via the dropdown on the left side):
+    If you go to your GitHub repository, you can also see these changes by clicking on the commits, which is on the right side (**NOTE**: Make sure you are looking at the branch `main` in GitHub. This can be changed via the dropdown on the left side if needed):
 
     ![Commit history](images/backup/commitHistory.png)
 
