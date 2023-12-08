@@ -339,42 +339,48 @@ This is written assuming a fresh install but steps can be omitted if previously 
 1. Open an SSH terminal to your printer
 
 2. Configure your global credentials
-    ```bash
+
+   ```bash
     git config --global user.email "your@email.com"
     git config --global user.name "your name"
     ```
 
     ![global creds](images/backup/restore-credentials.png)
 
-3. Move the "default" `~/printer_data/config` folder so we can restore to that location.
+3. Generate yourself a new [Github Access Token](#generate-an-access-token) but stop where it says to connect to SSH (we already did that ;)
+
+4. Run the following commands to restore the files from your latest GitHub commit back to your printer:
+
    ```bash
-   mv ~/printer_data/config ~/printer_data/config_default
-   ```
-
-   ![move default](images/backup/restore_defaultfiles.png)
-
-
-4. Generate yourself a new [Github Access Token](#generate-an-access-token) but stop where it says to connect to SSH (we already did that ;)
-
-5. Clone the backup from Github using the following command (substituting your own values)
-    ```bash
     git clone https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git ~/printer_data/config
+
+    cd ~/printer_data/config
+    git init -b main
+    git remote add origin [https://<token>@github.com/EricZimmerman/Voron02.git](https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git)
+    git fetch
+    git reset origin/master
+    git reset --hard HEAD
     ```
 
    for example
 
     ```bash
-    git clone https://supersecrettoken@github.com/maz0r/v2615_backup.git ~/printer_data/config
+    cd ~/printer_data/config
+    git init -b main
+    git remote add origin https://<token>@github.com/EricZimmerman/Voron02.git
+    git fetch
+    git reset origin/master
+    git reset --hard HEAD
     ```
 
     ![restore success](images/backup/restore_clone.png)
-
 
 ## Post restore clean up
 
 At this point your automated backups are not enabled on the new install so we need to do a little cleanup.
 
 1. Verify that your ~/printer_data/config/autocommit.sh works
+
    ```bash
    cd ~/printer_data/config/
    ./autocommit.sh
@@ -384,6 +390,6 @@ At this point your automated backups are not enabled on the new install so we ne
    ![success!](images/backup/restore_success.png)
 
 
-2. Add "gcode_shell_command.py per step 5 under [Adding the backup to a macro](#adding-the-backup-to-a-macro).
-3. (optional) Add a cron job to backup on a set interval per [Automatic backups via crontab](#automating-via-crontab-optional)
-4. Test the backup [macro from mainsail](#running-things-from-mainsail)
+3. Add "gcode_shell_command.py per step 5 under [Adding the backup to a macro](#adding-the-backup-to-a-macro).
+4. (optional) Add a cron job to backup on a set interval per [Automatic backups via crontab](#automating-via-crontab-optional)
+5. Test the backup [macro from mainsail](#running-things-from-mainsail)
