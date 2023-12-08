@@ -352,13 +352,11 @@ This is written assuming a fresh install but steps can be omitted if previously 
 4. Run the following commands to restore the files from your latest GitHub commit back to your printer:
 
    ```bash
-    git clone https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git ~/printer_data/config
-
     cd ~/printer_data/config
     git init -b main
     git remote add origin [https://<token>@github.com/EricZimmerman/Voron02.git](https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git)
     git fetch
-    git reset origin/master
+    git reset origin/main
     git reset --hard HEAD
     ```
 
@@ -369,7 +367,7 @@ This is written assuming a fresh install but steps can be omitted if previously 
     git init -b main
     git remote add origin https://<token>@github.com/EricZimmerman/Voron02.git
     git fetch
-    git reset origin/master
+    git reset origin/main
     git reset --hard HEAD
     ```
 
