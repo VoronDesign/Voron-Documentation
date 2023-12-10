@@ -126,13 +126,13 @@ We can now put the pieces together we have created so far. To make this easier, 
 3. Download the `autocommit.sh` file using the command below:
 
     ```bash
-    wget -O /home/pi/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
+    wget -O ~/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
     ```
 
 4. Edit the file for your particular use case using the command below. For example, if you use fluidd, uncomment the `fluidd_folder` line, comment out `mainsail_folder` and so on.
 
     ```bash
-    nano /home/pi/printer_data/config/autocommit.sh
+    nano ~/printer_data/config/autocommit.sh
     ```
 
     ![Editing autocommit.sh](images/backup/editSh.png)
@@ -263,7 +263,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 
     ```bash
     [gcode_shell_command backup_cfg]
-    command: /usr/bin/bash /home/pi/printer_data/config/autocommit.sh
+    command: /usr/bin/bash ~/printer_data/config/autocommit.sh
     timeout: 30
     verbose: True
 
@@ -282,7 +282,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 5. Finally, execute the following to download the latest version of the `gcode_shell_command` script
 
     ```bash
-    wget -O /home/pi/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
+    wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
     ```
 
     You can optionally use `kiauh`, via option `4`, then option `8` to accomplish this. For more info on kiauh, go <a href="https://github.com/th33xitus/kiauhhttps://github.com/th33xitus/kiauh" target="_blank">here</a>
