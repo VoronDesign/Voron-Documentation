@@ -263,7 +263,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 
     ```bash
     [gcode_shell_command backup_cfg]
-    command: /usr/bin/bash ~/printer_data/config/autocommit.sh
+    command: ~/printer_data/config/autocommit.sh
     timeout: 30
     verbose: True
 
