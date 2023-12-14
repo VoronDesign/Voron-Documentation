@@ -25,11 +25,11 @@ ABS has a glass temperature of around 90 ºC. It has moderate stiffness and mode
 
 ## Nylon
 
-PA6 nylon has a high glass temperature of 180 ºC. It has moderate stiffness and moderate ductility.  It is not recommended for Voron parts due to the tendency of nylon PA6 to creep (slowly deform) under the constant pressure exerted by the bolts clamping on the parts. PA12 nylon has the same temperature rating and a similar stiffness and ductility, but it is a viable option for Voron parts as it exhibits only minimal creep under pressure. However it is quite expensive and is more commonly found in SLS processes than FDM.
+PA6 nylon has a high glass temperature of 180 ºC. It has moderate stiffness and moderate ductility.  It is not recommended for Voron parts due to the tendency of nylon PA6 to creep (slowly deform) under the constant pressure exerted by the bolts clamping on the parts. PA12 nylon has the same temperature rating and a similar stiffness and ductility, but it exhibits only minimal creep under pressure. While some PA12 blends may be usable in a Voron, we do not recommend using it, as it is still quite expensive and more commonly found in SLS processes than FDM. Use it at your own risk, it will not transform your printer into a high temperature Voron. 
 
 ## Polycarbonate
 
-Polycarbonate (PC) and one of the various blends and/or additives (e.g. PC-ABS, PC-CF) have a high glass temperature of close to 150 ºC but have a very high stiffness and low ductility.  Some blends such as PC-ABS have slightly lower stiffness and higher ductility but not by huge amounts.  PC and PC blends are not recommended for Voron parts due to the risk of sudden cracking.  However some have successfully printed and used toolheads made from PC blends as the mechanical loads are low and the need for thermal tolerance is high.
+Polycarbonate (PC) and one of the various blends and/or additives (e.g. PC-ABS, PC-CF) have a high glass temperature of close to 150 ºC but have a very high stiffness and low ductility.  Some blends such as PC-ABS have slightly lower stiffness and higher ductility but not by huge amounts.  PC and PC blends are not recommended for Voron parts due to the risk of sudden cracking.  However some have successfully printed and used toolheads made from PC blends as the mechanical loads are low and the need for thermal tolerance is high. 
 
 ## Resin
 
