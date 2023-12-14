@@ -193,7 +193,8 @@ gcode:
   
   {% if home_all or 'Z' in params %}
     G28 Z
-    G1 Z10
+    G91
+    G1 Z-10
   {% endif %}
 ```
 <!-- {% endraw %} -->
