@@ -1,0 +1,224 @@
+.btn-danger{
+    color:#fff;
+    background-color:#5e5657;
+    border-color:#dc3545;
+    border-width: 10px;
+}
+.btn-danger:hover{
+    color:#fff;
+    background-color:#c82333; /* old c82333 */
+    border-color:#bd2130
+    
+}
+.btn-danger.focus,.btn-danger:focus{
+    box-shadow:0 0 0 .2rem rgba(220,53,69,.5)
+}
+.btn-danger.disabled,.btn-danger:disabled{
+    color:#fff;
+    background-color:#dc3545;
+    border-color:#dc3545
+}
+.btn-danger:not(:disabled):not(.disabled).active,.btn-danger:not(:disabled):not(.disabled):active,.show>.btn-danger.dropdown-toggle{
+    color:#fff;
+    background-color:#bd2130;
+    border-color:#b21f2d
+}
+.btn-danger:not(:disabled):not(.disabled).active:focus,.btn-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-danger.dropdown-toggle:focus{
+    box-shadow:0 0 0 .2rem rgba(220,53,69,.5)
+}
+
+
+/*default hide  */
+.defaulthide {
+    display: none;
+}
+
+.spacer {
+    height: 10px;
+}
+
+input[type=checkbox],input[type=radio]{
+    margin:4px 0 0;
+    margin-top:1px\9;
+    line-height:normal
+}
+.text-center{
+    text-align:center;
+    
+    
+}
+.btn-group-lg>.btn,.btn-lg{
+    padding:10px 16px;
+    font-size:18px;
+    line-height:1.3333333;
+    border-radius:6px
+}
+.btn-group-sm>.btn,.btn-sm{
+    padding:5px 10px;
+    font-size:12px;
+    line-height:1.5;
+    border-radius:3px
+}
+.btn-group-xs>.btn,.btn-xs{
+    padding:1px 5px;
+    font-size:12px;
+    line-height:1.5;
+    border-radius:3px
+}
+
+
+@-webkit-keyframes progress-bar-stripes{
+    from{
+        background-position:1rem 0
+    }
+    to{
+        background-position:0 0
+    }
+}
+@keyframes progress-bar-stripes{
+    from{
+        background-position:1rem 0
+    }
+    to{
+        background-position:0 0
+    }
+}
+
+.progress{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    height:1rem;
+    overflow:hidden;
+    font-size:.75rem;
+    background-color:#e9ecef;
+    border-radius:.25rem
+}
+.progress-bar{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    color:#fff;
+    text-align:center;
+    background-color:#007bff;
+    transition:width .6s ease
+}
+.progress-bar-striped{
+    background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size:1rem 1rem
+}
+.progress-bar-animated{
+    -webkit-animation:progress-bar-stripes 1s linear infinite;
+    animation:progress-bar-stripes 1s linear infinite
+}
+
+.margin-right2 {
+    margin-right: 200px;
+}
+.margin-right3 {
+    margin-right: 10px;
+}
+
+.bg-danger{
+    background-color:#dc3545!important
+}
+a.bg-danger:focus,a.bg-danger:hover,button.bg-danger:focus,button.bg-danger:hover{
+    background-color:#bd2130!important
+}
+
+.btn-group,.btn-group-vertical{
+    position:relative;
+    display:inline-block;
+    vertical-align:middle
+}
+.btn-group-vertical>.btn,.btn-group>.btn{
+    position:relative;
+    float:left
+}
+
+.alignvideo {
+    align-items: center;
+}
+
+/* mobile */
+@media only screen and (max-width: 850px) {
+  /* For mobile phones: */
+  [class*="btn-spacing-mobile"] {
+    margin-bottom: 10px;
+  }
+}
+
+.whitetext {
+    color: white;
+}
+
+.alert-heading {
+    color: inherit;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-warning{
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.alert{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+div.alert code,h2 code{
+    background-color:transparent!important
+}
+.alert a{
+    text-decoration:underline
+}
+
+.note code,.alert code,.warning code,div#toc code,h2 code,h3 code,h4 code{
+    color:inherit;
+    padding:0
+}
+
+.alert,.callout{
+    overflow:hidden
+}
+.form-check-label {
+    margin-bottom: 0;
+}
+
+.form-check-input:disabled~.form-check-label {
+    color: #6c757d;
+}
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+}
+.form-check-inline {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
+    margin-right: 0.75rem;
+}
+
+.highlighted {
+    color: green;
+}
