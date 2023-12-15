@@ -70,11 +70,11 @@ layout: table_wrappers
               <div class="nav-category">{{ collection_value.name }}</div>
             {% endif %}
 			
-            <!-- {% include nav.html pages=collection %} -->
+            {% include nav.html pages=collection %}
           {% endif %}
         {% endfor %}
       {% else %}
-        <!--{% include nav.html pages=site.html_pages %}-->
+        {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
 
