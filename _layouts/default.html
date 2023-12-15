@@ -57,6 +57,7 @@ layout: table_wrappers
     <!-- for toggle dark mode and light mode-->
     {% include toggle.html %}
 
+		
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
@@ -68,11 +69,12 @@ layout: table_wrappers
             {% if collections_size > 1 %}
               <div class="nav-category">{{ collection_value.name }}</div>
             {% endif %}
-            {% include nav.html pages=collection %}
+			
+            <!-- {% include nav.html pages=collection %} -->
           {% endif %}
         {% endfor %}
       {% else %}
-        {% include nav.html pages=site.html_pages %}
+        <!--{% include nav.html pages=site.html_pages %}-->
       {% endif %}
     </nav>
 
