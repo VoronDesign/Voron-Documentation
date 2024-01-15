@@ -354,7 +354,7 @@ This is written assuming a fresh install but steps can be omitted if previously 
    ```bash
     cd ~/printer_data/config
     git init -b main
-    git remote add origin [https://<token>@github.com/EricZimmerman/Voron02.git](https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git)
+    git remote add origin https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git
     git fetch
     git reset origin/main
     git reset --hard HEAD
