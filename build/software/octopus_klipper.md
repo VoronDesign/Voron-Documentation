@@ -54,7 +54,31 @@ There are multiple options for getting this firmware file installed onto your Oc
 
 **Important**: Please write down these steps or bookmark this page - you might need to repeat the following steps if you update Klipper.
 
-### Option 1: SDcard Firmware Install
+### Option 1: DFU Firmware Install
+
+* Requires a USB connection
+* Requires the installation of an extra jumper on the Octopus
+* Does NOT require an sdcard
+
+1. Power off Octopus
+2. Install the BOOT0 jumper (Located near the AUX headers)
+3. Connect Octopus & Pi via USB-C
+4. Power on Octopus
+5. press the reset button next to the USB connector
+6. From your ssh session, run `cd ~/klipper` to make sure you are in the correct directory
+7. Run `lsusb`. and find the ID of the dfu device. The device is typically named `STM Device in DFU mode`.
+8. Run `make flash FLASH_DEVICE=1234:5678`, replacing 1234:5678 with the ID from the previous step. Note that the ID is in hexadecimal form; it only contains the numbers `0-9` and letters `A-F`.
+9. Power off the Octopus
+10. Remove the jumper from BOOT0 and 3.3V
+11. Power on the Octopus
+12. You can confirm that the flash was successful by running `ls /dev/serial/by-id`. If the flash was successful, this should now show a klipper device, similar to:
+
+   ![Serial ID](./images/stm32f446_id.png)
+
+   (note: this test is not applicable if the firmware was compiled for UART, rather than USB)
+
+
+### Option 2: SDcard Firmware Install
 
 * Works regardless of USB vs UART
 * Requires a microSD card
@@ -86,28 +110,22 @@ There are multiple options for getting this firmware file installed onto your Oc
 
 **Important:** If the Octopus is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Octopus will automatically shut down.
 
-### Option 2: DFU Firmware Install
 
-* Requires a USB connection
-* Requires the installation of an extra jumper on the Octopus
-* Does NOT require an sdcard
+# Firmware Updates
+It is a normal and expected behavior, that updating klipper (on the pi) will sometimes also require you to update the klipper firmware on the Octopus. Klipper will not do this for you automatically.  One option is to simply repeating the full flashing process as seen above.  However, this is often inconvenient, since it requires physical access to the MCU.
 
-1. Power off Octopus
-2. Install the BOOT0 jumper
-3. Connect Octopus & Pi via USB-C
-4. Power on Octopus
-5. From your ssh session, run `cd ~/klipper` to make sure you are in the correct directory
-6. Run `lsusb`. and find the ID of the dfu device. The device is typically named `STM Device in DFU mode`.
-7. If you do not see a DFU device in the list, press the reset button next to the USB connector and run `lsusb` again.
-8. Run `make flash FLASH_DEVICE=1234:5678`, replacing 1234:5678 with the ID from the previous step. Note that the ID is in hexadecimal form; it only contains the numbers `0-9` and letters `A-F`.
-9. Power off the Octopus
-10. Remove the jumper from BOOT0 and 3.3V
-11. Power on the Octopus
-12. You can confirm that the flash was successful by running `ls /dev/serial/by-id`. If the flash was successful, this should now show a klipper device, similar to:
+Instead, you can update the Spider using a slight variation of the  DFU flashing technique shown above
 
-   ![Serial ID](./images/stm32f446_id.png)
-
-   (note: this test is not applicable if the firmware was compiled for UART, rather than USB)
+1. build the firmware, as shown above
+2. Determining the full ID of your MCU, either from printer.cfg, or from the command `ls /dev/serial/by-id/*`.  It should look something like `/dev/serial/by-id/usb-Klipper_stm32f446xx_1D0004001050563046363120-if00`
+3. running  the commands:
+```bash
+sudo service klipper stop
+cd ~/klipper
+make flash FLASH_DEVICE=<insert serial id here>
+sudo service klipper start
+```
+so, with our example serial ID, the 3rd line would look like: `make flash FLASH_DEVICE=/dev/serial/by-id/usb-Klipper_stm32f446xx_1D0004001050563046363120-if00`
 
 ---
 
