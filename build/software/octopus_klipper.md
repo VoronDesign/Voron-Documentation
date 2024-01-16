@@ -9,7 +9,7 @@ nav_exclude: true
 {: .warning }
 >Do not leave HE0 or HE1 connected during initial flashing
 >
->There have been reports of Octopus boards coming preloaded with a firmware that turns on all heaters and fans as soon as you power up the board.  As a result, we >recommend leaving the heaters disconnected until after loading the klipper firmware
+>There have been reports of Octopus boards turning on all heaters and fans as soon as you power up the board.  As a result, we recommend leaving the heaters disconnected until after loading the klipper firmware
 
 The firmware update process for both Octopus and Octopus Pro is the same so the guides have been combined.
 
@@ -36,13 +36,14 @@ The firmware update process for both Octopus and Octopus Pro is the same so the 
 
     * Select "Enable extra low-level configuration options"
     * Set the micro-controller architecture is set to `STMicroelectronics STM32`
-    * Set the Processor model to `STM32F446` or `STM32F429` (Depends on the MCU of your motherboard)
-    * Set the Bootloader offset to `32KiB bootloader`
-    * Set the Clock Reference to `12 MHz crystal`(for `STM32F446`) or `8 MHz crystal`(for `STM32F429`)
+    * Set the Processor model to `STM32F446`,`STM32F429` or `STM32H723` (Depends on the MCU of your motherboard)
+    * Set the Bootloader offset to `32KiB bootloader` (for `STM32F446`, `STM32F429`) or `128KiB bootloader` (for `STM32H723`)
+    * Set the Clock Reference to `12 MHz crystal`(for `STM32F446`), `8 MHz crystal`(for `STM32F429`), `25MHz crystal` (for `STM32H723`)
     * Set the Communication interface to `USB (on PA11/PA12)`  (note: see [BigTreeTech documentation](https://github.com/bigtreetech/BIGTREETECH-OCTOPUS-V1.0/tree/master/Octopus%20works%20on%20Voron%20v2.4/Firmware/Klipper) if you intend to use UART rather than USB)
 
-    ![Klipper compilation config menu](./images/octopus_f446_klipper_menuconfig.png)
-    ![Klipper compilation config menu](./images/octopus_f429_klipper_menuconfig.png)
+    ![Klipper compilation config menu f446](./images/octopus_f446_klipper_menuconfig.png)
+    ![Klipper compilation config menu f429](./images/octopus_f429_klipper_menuconfig.png)
+    ![Klipper compilation config menu h723](./images/octopus_h723_klipper_menuconfig.png)
 
 4. Once the configuration is selected, press `q` to exit, and "Yes" when asked to save the configuration.
 5. Run the command `make`
@@ -114,10 +115,10 @@ There are multiple options for getting this firmware file installed onto your Oc
 # Firmware Updates
 It is a normal and expected behavior, that updating klipper (on the pi) will sometimes also require you to update the klipper firmware on the Octopus. Klipper will not do this for you automatically.  One option is to simply repeating the full flashing process as seen above.  However, this is often inconvenient, since it requires physical access to the MCU.
 
-Instead, you can update the Octopus using a slight variation of the  DFU flashing technique shown above
-
 {: .note }
 The technique shown below only applies to updating an mcu which is already running klipper firmware.  It cannot be used for new installs
+
+Instead, you can update the Octopus using a slight variation of the  DFU flashing technique shown above
 
 1. build the firmware, as shown above
 2. Determine the full ID of your MCU, either from printer.cfg, or from the command `ls /dev/serial/by-id/*`.  It should look something like `/dev/serial/by-id/usb-Klipper_stm32f446xx_1D0004001050563046363120-if00`
