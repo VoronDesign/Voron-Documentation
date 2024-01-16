@@ -64,6 +64,27 @@ Turn on the power supply to power on the Mini E3 board.  If named properly, the 
 
 **Important:** If the Mini E3 is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Mini E3 will automatically shut down.
 
+# Firmware Updates
+It is a normal and expected behavior, that updating klipper (on the pi) will sometimes also require you to update the klipper firmware on the SKR mini. Klipper will not do this for you automatically.  One option is to simply repeating the full flashing process as seen above.  However, this is often inconvenient, since it requires physical access to the MCU.
+
+{: .note }
+The technique shown below only applies to updating an mcu which is already running klipper firmware.  It cannot be used for new installs
+
+Instead, if you still have an sdcard in your SKR mini, You can quickly update the firmware without needing physical access by:
+
+1. Building the firmware as normal, above
+2. Determine the full ID of your MCU, either from printer.cfg, or from the command `ls /dev/serial/by-id/*`.  It should look something like `/dev/serial/by-id/usb-Klipper_stm32f103xe_1C10011425813AAFCED76B5CC22000F5-if00`
+3. run  the commands:
+
+```bash
+sudo service klipper stop
+~/klipper/scripts/flash-sdcard <insert mcu ID> btt-skr-mini-e3-v1.2
+sudo service klipper start
+```
+
+so, for our example, the middle command would be `~/klipper/scripts/flash-sdcard /dev/serial/by-id/usb-Klipper_stm32f103xe_1C10011425813AAFCED76B5CC22000F5-if00 btt-skr-mini-e3-v1.2`
+
+
 ---
 
 ### Back to [Software Installation](./index.md#klipper-octoprint-configuration)
