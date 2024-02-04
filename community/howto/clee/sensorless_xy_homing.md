@@ -102,26 +102,12 @@ The calibration process is:
 - Try running `G28 X0` to see if the toolhead moves along the X axis.
 - If your toolhead moves all the way to the end of the rail, **IMMEDIATELY HIT THE EMERGENCY STOP BUTTON**. Go back and double-check that you have configured your hardware and the Klipper sections above correctly. Ask on Discord if you need help.
 
-- When running the `G28 X0` or `G28 Y0` command, the toolhead *WILL* move a millimeter or so before it triggers the virtual endstop. This is normal. after triggering the toolhead will also move 10mm beck in the opposite direction. for example: if you stallguard value is too high you may observe the toolhead only moving 10mm to the left. this is expected and simply means your stallguard value is still too sensative for the toolhead to overcome the resistance in the beltpath.
-When you first start trying to find your value, it will look like the toolhead is moving away from the right rail, then stopping.
+- When running the `G28 X0` or `G28 Y0` command, the toolhead *WILL* move ever so slightly before it triggers the virtual endstop. This is normal. after triggering the toolhead will also move 10mm beck in the opposite direction. for example: if you stallguard value is too high you may observe the toolhead only moving 10mm to the left. this is expected and simply means your stallguard value is still too sensative for the toolhead to overcome the resistance in the beltpath.
+- As described above when you first start trying to find your value, it will look like the toolhead is moving away from the right rail, then stopping. This is normal and just means the value is still too sensitive to home properly. Early on, you can jump down in jumps of 50. to change the stallguard value quickly simply enter `SET_TMC_FIELD FIELD=SGTHRS STEPPER=stepper_x VALUE=XXX` into the console, replacing the XXX with your desired stallgurad value to test. This command only overwites the value temporarily so when you are finished it will have to be updated in your actual printer.cfg file.
+- At some point you will get X to home all the way to the rail. However, if you went TOO low, it might bump harder into the rail than it should. In this case, split the difference and try homing the axis again.
+- Eventually you will find the BIGGEST number that homes X successfully. Nice! With the maximum found, continue to DECREASE the value by 5 or so until X homes, but bumps too hard into the rail. You may need to walk this in by changing the value by 1 when getting close. This is your MINIUMUM value. Ideally we want to hard code a final value between the minimum and maximum that will always work, it is best to shoot for something slightly LESS than halfway between minimum and maximum.
 
-This is normal and just means the value is still too sensitive to home properly.
-
-Early on, I tend to jump down in jumps of 50. At some point you will get X to home all the way to the rail.
-
-However, if you went TOO low, it might bump harder into the rail than it should. In this case, ADD half the value you last went down by and repeat steps 1 and 2.
-
-Eventually you will find the BIGGEST number that homes X successfully. Nice!
-
-With the maximum found, continue to DECREASE the value by 5 or so until X homes, but bumps too hard into the rail. You may need to walk this in by changing the value by 1 when getting close.
-
-This is your MINIUMUM value.
-
-Ideally we want a value between the minimum and maximum that will always work, so I tend to shoot for something slightly LESS than halfway between minimum and maximum.
-
-Example: If maximum is 113 and minimum is 99, the difference is 14. Half of 14 is 7, so use a value of 99+6, or 105, and repeat steps 1 and 2.
-
-If that looks and feels good, you now have the driver value you need to update in your printer.cfg file's [tmc2209 stepper_x] section.
+- Example: If maximum is 113 and minimum is 99, the difference is 14. Half of 14 is 7, so use a value of 99+6, or 105. If that looks and feels good, you now have the driver value that you need in order to update your printer.cfg file's [tmc2209 stepper_x] section.
 
 **Do not forget, you need to repeat this same process for the Y axis.**
 
