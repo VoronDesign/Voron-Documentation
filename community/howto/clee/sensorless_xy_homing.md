@@ -113,7 +113,7 @@ The calibration process is:
 
 ### Homing macros
 
-The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. We're renaming them to `_HOME_X` and `_HOME_Y` here (the leading underscores will hide them in Mainsail/Fluidd, and those specific names are special for Klicky). This setup that has been working well for several Voron owners; you will probably want to tweak the `HOME_CURRENT` values for your own setup. I suggest creating a new file called `sensorless.cfg` and adding it with `[include sensorless.cfg]` in your main printer.cfg
+The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. The stock configs have renamed them to `_HOME_X` and `_HOME_Y` (the leading underscores will hide them in Mainsail/Fluidd, and those specific names are special for Klicky). This setup that has been working well for several Voron owners. these should already be present in your stock config but if you are building a confi file from scratch or configuring a board that does not have a premade file the homing macros basic layout is as follows:
 
 <!-- {% raw %} -->
 ```
@@ -165,7 +165,7 @@ gcode:
 
 If you have a `[safe_z_home]` section, you need to comment out the entire block (not just the `[safe_z_home]` line!). Or you could just delete the entire block, but if sensorless homing doesn't work reliably for you for some reason and you decide you want to go back to a physical endstop setup, you'll be glad you didn't delete it.
 
-The last piece to bring everything together is `[homing_override]`. If you use the Klicky probe, then you already *have* a `[homing_override]` section. Make sure you have [the latest klicky-macros.cfg][klickyMacros], and then you can skip the rest of this guide; you're done here!
+The last piece to bring everything together is `[homing_override]`. If you use a stock config file from the voron repo or the Klicky probe, then you already *have* a `[homing_override]` section. Make sure you have [the latest klicky-macros.cfg][klickyMacros], and then you can skip the rest of this guide; you're done here!
 
 If you already have a `[homing_override]` and you're not using Klicky, replace `G28 X` with `_HOME_X` and replace `G28 Y` with `_HOME_Y`.
 
