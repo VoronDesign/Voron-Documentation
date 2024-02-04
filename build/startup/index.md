@@ -42,7 +42,9 @@ To verify that each stepper motor is operating correctly, send the following com
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
-The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this oscillation ten times.  For some motors, we will verify direction again later, however, ideally all motors will be running correctly at the end of this test. See the list below.  Note, if you have trouble seeing what direction a motor is rotating, try adding a small sharpy mark on the pulley
+The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. It will perform this oscillation ten times. we will verify direction again later, ideally all motors will be running correctly at the end of this test. See the list below for the expected motion for each command.  
+
+Note, if you have trouble seeing what direction a motor is rotating, try adding a small sharpy mark on the pulley. clockwise and counterclockwise are from the top down view looking at the X and Y motors.
 
 
 Run this command for each of the motors:
