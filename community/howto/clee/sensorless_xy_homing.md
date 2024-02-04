@@ -101,18 +101,27 @@ The calibration process is:
 - For TMC2209, start with `SET_TMC_FIELD FIELD=SGTHRS STEPPER=stepper_x VALUE=255` in the console. For TMC2130/TMC2660/TMC5160, use `SET_TMC_FIELD FIELD=SGT STEPPER=stepper_x VALUE=-64` instead. Start with the most sensitive value for the StallGuard threshold based on which kind of TMC driver you're using (`255` for TMC2209, or `-64` for TMC2130/TMC2660/TMC5160).
 - Try running `G28 X0` to see if the toolhead moves along the X axis.
 - If your toolhead moves all the way to the end of the rail, **IMMEDIATELY HIT THE EMERGENCY STOP BUTTON**. Go back and double-check that you have configured your hardware and the Klipper sections above correctly. Ask on Discord if you need help.
-- The Klipper documentation is good here, with one exception. This information is not correct:  
-  > Then issue a G28 X0 command and verify the axis does not move at all.  
-  
-  When running the `G28 X0` or `G28 Y0` command, the toolhead *WILL* move a millimeter or so before it triggers the virtual endstop. This is normal.
-- Assuming that the toolhead moved a millimeter or so and then stopped, change the `VALUE` to decrease the sensitivity by 5-10, try again, and keep going until you find the first value that successfully homes your printer. The toolhead should gently tap the edge of travel and then stop.
-- Follow the Klipper instructions on fine-tuning the value once your toolhead is homing successfully on this axis. Make sure you run  
-  ```gcode
-  G91
-  G1 X-10
-  ```  
-  to back the toolhead off after hitting the end of the rail (assuming you're homing to the maximum X value) or else homing the other axis will not work properly.
-- Update the `driver_SGTHRS` or `driver_SGT` value with your new StallGuard threshold.
+
+- When running the `G28 X0` or `G28 Y0` command, the toolhead *WILL* move a millimeter or so before it triggers the virtual endstop. This is normal. after triggering the toolhead will also move 10mm beck in the opposite direction. for example: if you stallguard value is too high you may observe the toolhead only moving 10mm to the left. this is expected and simply means your stallguard value is still too sensative for the toolhead to overcome the resistance in the beltpath.
+When you first start trying to find your value, it will look like the toolhead is moving away from the right rail, then stopping.
+
+This is normal and just means the value is still too sensitive to home properly.
+
+Early on, I tend to jump down in jumps of 50. At some point you will get X to home all the way to the rail.
+
+However, if you went TOO low, it might bump harder into the rail than it should. In this case, ADD half the value you last went down by and repeat steps 1 and 2.
+
+Eventually you will find the BIGGEST number that homes X successfully. Nice!
+
+With the maximum found, continue to DECREASE the value by 5 or so until X homes, but bumps too hard into the rail. You may need to walk this in by changing the value by 1 when getting close.
+
+This is your MINIUMUM value.
+
+Ideally we want a value between the minimum and maximum that will always work, so I tend to shoot for something slightly LESS than halfway between minimum and maximum.
+
+Example: If maximum is 113 and minimum is 99, the difference is 14. Half of 14 is 7, so use a value of 99+6, or 105, and repeat steps 1 and 2.
+
+If that looks and feels good, you now have the driver value you need to update in your printer.cfg file's [tmc2209 stepper_x] section.
 
 **Do not forget, you need to repeat this same process for the Y axis.**
 
