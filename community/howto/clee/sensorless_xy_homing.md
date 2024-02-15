@@ -101,24 +101,19 @@ The calibration process is:
 - For TMC2209, start with `SET_TMC_FIELD FIELD=SGTHRS STEPPER=stepper_x VALUE=255` in the console. For TMC2130/TMC2660/TMC5160, use `SET_TMC_FIELD FIELD=SGT STEPPER=stepper_x VALUE=-64` instead. Start with the most sensitive value for the StallGuard threshold based on which kind of TMC driver you're using (`255` for TMC2209, or `-64` for TMC2130/TMC2660/TMC5160).
 - Try running `G28 X0` to see if the toolhead moves along the X axis.
 - If your toolhead moves all the way to the end of the rail, **IMMEDIATELY HIT THE EMERGENCY STOP BUTTON**. Go back and double-check that you have configured your hardware and the Klipper sections above correctly. Ask on Discord if you need help.
-- The Klipper documentation is good here, with one exception. This information is not correct:  
-  > Then issue a G28 X0 command and verify the axis does not move at all.  
-  
-  When running the `G28 X0` or `G28 Y0` command, the toolhead *WILL* move a millimeter or so before it triggers the virtual endstop. This is normal.
-- Assuming that the toolhead moved a millimeter or so and then stopped, change the `VALUE` to decrease the sensitivity by 5-10, try again, and keep going until you find the first value that successfully homes your printer. The toolhead should gently tap the edge of travel and then stop.
-- Follow the Klipper instructions on fine-tuning the value once your toolhead is homing successfully on this axis. Make sure you run  
-  ```gcode
-  G91
-  G1 X-10
-  ```  
-  to back the toolhead off after hitting the end of the rail (assuming you're homing to the maximum X value) or else homing the other axis will not work properly.
-- Update the `driver_SGTHRS` or `driver_SGT` value with your new StallGuard threshold.
+
+- When running the `G28 X0` or `G28 Y0` command, the toolhead *WILL* move ever so slightly before it triggers the virtual endstop. This is normal. after triggering the toolhead will also move 10mm beck in the opposite direction. for example: if you stallguard value is too high you may observe the toolhead only moving 10mm to the left. this is expected and simply means your stallguard value is still too sensative for the toolhead to overcome the resistance in the beltpath.
+- As described above when you first start trying to find your value, it will look like the toolhead is moving away from the right rail, then stopping. This is normal and just means the value is still too sensitive to home properly. Early on, you can jump down in jumps of 50. to change the stallguard value quickly simply enter `SET_TMC_FIELD FIELD=SGTHRS STEPPER=stepper_x VALUE=XXX` into the console, replacing the XXX with your desired stallgurad value to test. This command only overwrites the value temporarily so when you are finished it will have to be updated in your actual printer.cfg file.
+- At some point you will get X to home all the way to the rail. However, if you went TOO low, it might bump harder into the rail than it should. In this case, split the difference and try homing the axis again.
+- Eventually you will find the BIGGEST number that homes X successfully. Nice! With the maximum found, continue to DECREASE the value by 5 or so until X homes, but bumps too hard into the rail. You may need to walk this in by changing the value by 1 when getting close. This is your MINIUMUM value. Ideally we want to hard code a final value between the minimum and maximum that will always work, it is best to shoot for something slightly LESS than halfway between minimum and maximum.
+
+- Example: If maximum is 113 and minimum is 99, the difference is 14. Half of 14 is 7, so use a value of 99+6, or 105. If that looks and feels good, you now have the driver value that you need in order to update your printer.cfg file's [tmc2209 stepper_x] section.
 
 **Do not forget, you need to repeat this same process for the Y axis.**
 
 ### Homing macros
 
-The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. We're renaming them to `_HOME_X` and `_HOME_Y` here (the leading underscores will hide them in Mainsail/Fluidd, and those specific names are special for Klicky). This setup that has been working well for several Voron owners; you will probably want to tweak the `HOME_CURRENT` values for your own setup. I suggest creating a new file called `sensorless.cfg` and adding it with `[include sensorless.cfg]` in your main printer.cfg
+The Klipper docs recommend setting up dedicated `SENSORLESS_HOME_X`/`SENSORLESS_HOME_Y` macros. The stock configs have renamed them to `_HOME_X` and `_HOME_Y` (the leading underscores will hide them in Mainsail/Fluidd, and those specific names are special for Klicky). This setup that has been working well for several Voron owners. these should already be present in your stock config but if you are building a confi file from scratch or configuring a board that does not have a premade file the homing macros basic layout is as follows:
 
 <!-- {% raw %} -->
 ```
@@ -170,7 +165,7 @@ gcode:
 
 If you have a `[safe_z_home]` section, you need to comment out the entire block (not just the `[safe_z_home]` line!). Or you could just delete the entire block, but if sensorless homing doesn't work reliably for you for some reason and you decide you want to go back to a physical endstop setup, you'll be glad you didn't delete it.
 
-The last piece to bring everything together is `[homing_override]`. If you use the Klicky probe, then you already *have* a `[homing_override]` section. Make sure you have [the latest klicky-macros.cfg][klickyMacros], and then you can skip the rest of this guide; you're done here!
+The last piece to bring everything together is `[homing_override]`. If you use a stock config file from the voron repo or the Klicky probe, then you already *have* a `[homing_override]` section. Make sure you have [the latest klicky-macros.cfg][klickyMacros], and then you can skip the rest of this guide; you're done here!
 
 If you already have a `[homing_override]` and you're not using Klicky, replace `G28 X` with `_HOME_X` and replace `G28 Y` with `_HOME_Y`.
 
