@@ -159,6 +159,14 @@ We can now put the pieces together we have created so far. To make this easier, 
 
     ![chmod complete](images/backup/chmodDone.png)
 
+9. If you want to export and backup your data.mdb file every time you run this script, you will need to install some software. To do this, run the following via ssh:
+
+    ```bash
+    sudo apt install lmdb-utils
+    ```
+
+    NOTE: By default, ALL tables in data.mdb will be exported and backed up. If you are worried about your API keys and any other user auth info, edit `autocommit.sh` and set the **history_only** value to true. This is generally something you do not need to worry about tho.
+
 ### Initialize git
 
 1. Right now our config files are not being tracked by git. Run the following command to initialize git, using the branch main:
