@@ -27,7 +27,7 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
 
 ## Sign into GitHub and create a new repository
 
-**NOTE**: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
+{: .note} If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
 
 1. Sign into your GitHub account
 2. Create a new repository by clicking on the New button
@@ -63,7 +63,7 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
 2. Ensure `Tokens (classic)` is selected on the leftmost side, then create a new token via the `Generate new token` menu. Be sure to select the `classic option`
 
-    NOTE: If you are prompted to reauthenticate, do so. This is a safety measure as you are about to create a sensitive credential
+    {: .note} If you are prompted to reauthenticate, do so. This is a safety measure as you are about to create a sensitive credential
 
     ![New token](images/backup/newToken.png)
 
@@ -81,7 +81,7 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
     This is your **ONE AND ONLY** chance to copy this key, so make sure you record it before leaving this screen.
 
-    NOTE: The image below has the key redacted. Yours will of course not look like that
+    {: .note} The image below has the key redacted. Yours will of course not look like that
 
     ![Copy token](images/backup/copyToken.png)
 
@@ -153,7 +153,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
     This command will add execute permission for the owner of the file (you), group members, and all other users on the system. This makes it easy to run the script by different users, etc.
 
-    **WARNING**: If you edit this file from MainSail, the execute permission will be removed, and you will have to repeat the above command!
+    {: .warning } If you edit this file from MainSail, the execute permission will be removed, and you will have to repeat the above command!
 
 8. Type `ls -la autocommit.sh` and verify the new permissions. Note the `x` for user, group, and other. This is the execute permission we added in the previous step.
 
@@ -165,7 +165,7 @@ We can now put the pieces together we have created so far. To make this easier, 
     sudo apt install lmdb-utils
     ```
 
-    NOTE: By default, ALL tables in data.mdb will be exported and backed up. If you are worried about your API keys and any other user auth info, edit `autocommit.sh` and set the **history_only** value to true. This is generally something you do not need to worry about tho.
+    {: .note} By default, ALL tables in data.mdb will be exported and backed up. If you are worried about your API keys and any other user auth info, edit `autocommit.sh` and set the **history_only** value to true. This is generally something you do not need to worry about tho.
 
 ### Initialize git
 
@@ -181,7 +181,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 2. Recall earlier that we generated an access token and crafted a special URL to our repository. Now we need to tell git to use this URL. Using the URL we generated in the last step of our GitHub work, run the following command:
 
-    NOTE: Be sure to use YOUR URL and not type what you see below or you will be disappointed with the results =)
+    {: .note} Be sure to use YOUR URL and not type what you see below or you will be disappointed with the results =)
 
     ```bash
     git remote add origin https://ghp_dKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX@github.com/EricZimmerman/Voron24Configs.git/
@@ -229,7 +229,7 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     ![No changes](images/backup/noChanges.png)
 
-    **NOTE**: In the screenshots, the master branch is shown, but yours is most likely the main branch, as that is what GitHub uses as its default these days. Do not worry about this.
+    {: .note} In the screenshots, the master branch is shown, but yours is most likely the main branch, as that is what GitHub uses as its default these days. Do not worry about this.
 
     However, if you change any file in Mainsail, via nano, etc. and then rerun the `sh autocommit.sh` command, you will see it found your changes and sent them upstream! Here is an example after I edited `printer.cfg`:
 
@@ -335,12 +335,9 @@ which can then be added to your crontab file via the `crontab -e` command by pas
 
 # Restoring from your backup
 
-
 This is written assuming a fresh install but steps can be omitted if previously completed on the current install.
 
-<blockquote><strong>Note</strong>
-<p>Only files which have been backed up can be restored, if during setup you created exclusions then  those files/directories will be omitted </blockquote>
-
+{: .warning} Only files which have been backed up can be restored, if during setup you created exclusions then those files/directories will be omitted
 
 ## The Restore Process
 
@@ -367,7 +364,7 @@ This is written assuming a fresh install but steps can be omitted if previously 
     git reset origin/main
     git reset --hard HEAD
     ```
-
+   
    for example
 
     ```bash
