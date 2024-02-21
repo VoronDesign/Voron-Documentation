@@ -27,7 +27,7 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
 
 ## Sign into GitHub and create a new repository
 
-{{site.data.alerts.note}} If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
+<strong>NOTE</strong>: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
 
 1. Sign into your GitHub account
 2. Create a new repository by clicking on the New button
@@ -63,13 +63,13 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
 2. Ensure `Tokens (classic)` is selected on the leftmost side, then create a new token via the `Generate new token` menu. Be sure to select the `classic option`
 
-    {{site.data.alerts.note}} If you are prompted to reauthenticate, do so. This is a safety measure as you are about to create a sensitive credential
+    <strong>NOTE</strong>: If you are prompted to reauthenticate, do so. This is a safety measure as you are about to create a sensitive credential
 
     ![New token](images/backup/newToken.png)
 
 3. Give your token a meaningful name, set the **Expiration** date to `No expiration`, and check the `workflow` and `read:org` under `admin:org` section
 
-    {{site.data.alerts.warning}} If you prefer to set an expiration date for your token, feel free to do so, but be aware you will have to regenerate a new token as things expire, as well as update some other settings that we have not got to yet
+    <strong>WARNING</strong>: If you prefer to set an expiration date for your token, feel free to do so, but be aware you will have to regenerate a new token as things expire, as well as update some other settings that we have not got to yet
 
     ![Token settings](images/backup/tokenSettings.png)
 
@@ -81,7 +81,7 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
     This is your **ONE AND ONLY** chance to copy this key, so make sure you record it before leaving this screen.
 
-    {{site.data.alerts.note}} The image below has the key redacted. Yours will of course not look like that
+    <strong>NOTE</strong>: The image below has the key redacted. Yours will of course not look like that
 
     ![Copy token](images/backup/copyToken.png)
 
@@ -108,7 +108,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 2. Copy this newly crafted URL to your text editor. This is the URL we will be using in a later step.
 
-    {{site.data.alerts.warning}} **NEVER EVER** put the token you generated in any of the files that will be committed to GitHub! If you do so, GitHub will see it and (rightly) revoke your token!
+    <strong>WARNING</strong>: **NEVER EVER** put the token you generated in any of the files that will be committed to GitHub! If you do so, GitHub will see it and (rightly) revoke your token!
 
 
 ## Connect to your printer via SSH
@@ -165,7 +165,7 @@ We can now put the pieces together we have created so far. To make this easier, 
     sudo apt install lmdb-utils
     ```
 
-    {{site.data.alerts.note}} By default, ALL tables in data.mdb will be exported and backed up. If you are worried about your API keys and any other user auth info, edit `autocommit.sh` and set the **history_only** value to true. This is generally something you do not need to worry about tho.
+    <strong>NOTE</strong>: By default, ALL tables in data.mdb will be exported and backed up. If you are worried about your API keys and any other user auth info, edit `autocommit.sh` and set the **history_only** value to true. This is generally something you do not need to worry about tho.
 
 ### Initialize git
 
@@ -181,7 +181,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 2. Recall earlier that we generated an access token and crafted a special URL to our repository. Now we need to tell git to use this URL. Using the URL we generated in the last step of our GitHub work, run the following command:
 
-    {{site.data.alerts.note}} Be sure to use YOUR URL and not type what you see below or you will be disappointed with the results =)
+    <strong>NOTE</strong>: Be sure to use YOUR URL and not type what you see below or you will be disappointed with the results =)
 
     ```bash
     git remote add origin https://ghp_dKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX@github.com/EricZimmerman/Voron24Configs.git/
@@ -229,7 +229,7 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     ![No changes](images/backup/noChanges.png)
 
-    {{site.data.alerts.note}} In the screenshots, the master branch is shown, but yours is most likely the main branch, as that is what GitHub uses as its default these days. Do not worry about this.
+    <strong>NOTE</strong>: In the screenshots, the master branch is shown, but yours is most likely the main branch, as that is what GitHub uses as its default these days. Do not worry about this.
 
     However, if you change any file in Mainsail, via nano, etc. and then rerun the `sh autocommit.sh` command, you will see it found your changes and sent them upstream! Here is an example after I edited `printer.cfg`:
 
@@ -337,7 +337,7 @@ which can then be added to your crontab file via the `crontab -e` command by pas
 
 This is written assuming a fresh install but steps can be omitted if previously completed on the current install.
 
-{{site.data.alerts.warning}} Only files which have been backed up can be restored, if during setup you created exclusions then those files/directories will be omitted
+<strong>WARNING</strong>: Only files which have been backed up can be restored, if during setup you created exclusions then those files/directories will be omitted
 
 ## The Restore Process
 
