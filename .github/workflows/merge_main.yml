@@ -27,7 +27,6 @@ jobs:
           fetch-depth: 0
       - name: Regular merge attempt
         if: ${{ github.event.inputs.force == 'false' }}
-        continue-on-error: true
         run: |
           git checkout ${{ inputs.targetBranch }}
           git merge main --ff-only
