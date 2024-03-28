@@ -24,6 +24,7 @@ PETG has a glass temperature of around 85 ºC. It has moderate stiffness dependi
 ABS has a glass temperature of around 90 ºC. It has moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  The variants ASA is also fully supported.
 
 Note on ABS+:
+
 ABS comes from a well-known basic chemical formula (Acrylonitrile Butadiene Styrene), however manufacturers of ABS+ filament  don’t offer us much information on what makes their filaments “Plus”. Some brands claim reduced odor and toxic fumes, which may be related to a lower percentage of styrene. the variability in the chemical composition of ABS+ filaments means that consistency across brands cannot be guaranteed.
 
 ## Nylon
