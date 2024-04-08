@@ -36,6 +36,14 @@ Navigate to the temperature graph and type in 50 followed by enter in the "Tool"
 
 Perform the above steps again with the bed.
 
+## Verify cooling fans
+
+Typically there are three types of cooling fan which you must verify are working correctly.
+
+* **Hotend fan**: Verify by heating the hotend. The heatsink cooling fan should be spinning whenever the hotend is active or above 50C. This is essential to prevent clogging.
+* **Part cooling fan**: Use the Octoprint/Mainsail interface to set the part cooling fan to 100%. You should be able to hear the fan(s) and feel air being blown just under the nozzle, where your print would be.
+* **Controller fan**: These vary by config, but typically will be triggered by heating the bed (and won't turn off until the printer has been idle for a while).
+
 ## Stepper Motor Check
 
 To verify that each stepper motor is operating correctly, send the following command in the terminal:
