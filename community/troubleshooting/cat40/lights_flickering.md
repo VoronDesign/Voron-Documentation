@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## tl;dr
 
-The primary way to reduce flicker is to adjust the PWM frequency to 44.9 or 47.9 Hz on a 60Hz mains grid. Alternatively or additionally, change your lamps to the ones recommended below.
+The primary way to reduce flicker is to adjust the PWM frequency to 44.9 or 47.9 Hz on a 60Hz mains grid, or 37.4Hz or 39.9Hz for a 50Hz grid (note that only 60Hz values have been tested to date). Alternatively or additionally, change your lamps to the ones recommended below.
 
 ## Why flicker happens
 
@@ -36,14 +36,27 @@ A lamp was connected and a phototransistor was used to gauge the light output, a
 Math to arrive at the frequencies recommended
 44.9Hz = 60Hz*(3/4)-0.1
 47.9Hz = 60Hz*(4/5)-0.1
+37.4Hz = 50Hz*(3/4)-0.1
+39.9Hz = 50Hz*(4/5)-0.1
 
-It seems that 44.9 or 47.9Hz results in a sweet spot between reducing flicker and causing instability during heating (see below). To set this, simply add a line in the `[bed_heater]` section of your Klipper config. If you already have a `pwm_cycle_time` line simply change the number.
+It seems that 44.9 or 47.9Hz results in a sweet spot between reducing flicker and causing instability during heating (see below). To set this, simply add a line in the `[heater_bied]` section of your Klipper config. If you already have a `pwm_cycle_time` line simply change the number.
 
-`pwm_cycle_time: 0.02227 #44.9Hz`
+`pwm_cycle_time: 0.02227 # 44.9Hz`
 
 or
 
-`pwm_cycle_time: 0.02088 #47.9Hz`
+`pwm_cycle_time: 0.02088 # 47.9Hz`
+
+for 60Hz, or
+
+`pwm_cycle_time: 0.02674 # 37.4Hz`
+
+or
+
+`pwm_cycle_time: 0.02506 # 39.9Hz`
+
+for 50Hz.
+
 
 With this frequency applied you can see that the lamp brightness fluctuates far less and at a higher frequency:
 
@@ -70,7 +83,7 @@ The reason for this is the SSR only switches at zero-crossings. If the switching
 
 ### Change to different light bulbs
 * Lower power lightbulbs have been observed to flicker less, with the exception of 40W equivalent GE bulbs
-* GE relax 60W and GE Classisc 60W tested well.  Other models tested include: Lowe's store brand, and IKEA.
+* GE relax 60W and GE Classic 60W tested well.  Other models tested include: Lowe's store brand, and IKEA, neither of which worked well.
 * Limited bulb models were tested so this list is by no means exhaustive.
 
 ### Install an inlet filter?
@@ -78,6 +91,7 @@ The reason for this is the SSR only switches at zero-crossings. If the switching
 
 ## Attributions:
 This was a major team effort on the Voron discord, but special recognition should go to:
+
 * Voron discord user royicus, for many scope captures and much testing
 * Voron discord user ark, for coming up with the numbers and some scope captures showing the reasons for instability at mains frequency
 
