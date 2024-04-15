@@ -75,6 +75,8 @@ There is a decent chance you will get heating instability, such as:
 
 (images taken at 60Hz, credit Thor)
 
+In those images you can see a heating with the bed frequency at the mains frequency on the left, and the default 10Hz on the right.
+
 The reason for this is the SSR only switches at zero-crossings. If the switching frequency is close enough to the mains frequency the SSR can wind up getting sort of locked, where it can't control whether the power is fully on or half on, so the heating becomes erratic. You can see the problematic power waveform below;
 
 ![unstable ssr switching](images/ark_60hz_mains.jpg)
