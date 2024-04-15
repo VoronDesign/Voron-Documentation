@@ -47,7 +47,7 @@ or
 
 `pwm_cycle_time: 0.02088 # 47.9Hz`
 
-for 60Hz, or
+for 60Hz, and
 
 `pwm_cycle_time: 0.02674 # 37.4Hz`
 
