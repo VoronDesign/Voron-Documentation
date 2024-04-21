@@ -66,7 +66,7 @@ With this frequency applied you can see that the lamp brightness fluctuates far 
 
 With both reduced and higher frequency fluctuation, human vision is less likely to detect flicker. Which of those two PWM frequencies works better seems to be variable.
 
-#### Why you should not set the PWM frequency to or near your mains frequency
+### Why you should not set the PWM frequency to or near your mains frequency
 There is a decent chance you will get heating instability, such as:
 
 ![unstable bed heating graph](images/thor_instability1.png)
@@ -91,11 +91,13 @@ The reason for this is the SSR only switches at zero-crossings. If the switching
 ### Install an inlet filter?
 * Inlet filters are generally not recommended to address flicker. They are aimed at much higher frequencies that would not be observable to the human eye, and therefore unlikely to be effective at reducing flicker
 
-## Attributions:
+## Attributions
 This was a major team effort on the Voron discord, but special recognition should go to:
 
 * Voron discord user royicus, for many scope captures and much testing
 * Voron discord user ark, for coming up with the numbers and some scope captures showing the reasons for instability at mains frequency
+
+## Footnotes
 
 [^1]: In smart systems with a voltage regulator you will usually see an undershoot when the load is switched on and an overshoot when the load is switched off
 
