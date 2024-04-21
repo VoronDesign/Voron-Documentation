@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## tl;dr
 
-The primary way to reduce flicker is to adjust the PWM frequency to 44.9 or 47.9 Hz on a 60Hz mains grid, or 37.4Hz or 39.9Hz for a 50Hz grid (note that only 60Hz values have been tested to date). Alternatively or additionally, change your lamps to the ones recommended below.
+The primary way to reduce flicker is to adjust the PWM frequency to 44.9 or 47.9 Hz on a 60Hz mains grid, or 37.4Hz or 39.9Hz for a 50Hz grid. Alternatively or additionally, change your lamps to the ones recommended below.
 
 ## Why flicker happens
 
@@ -39,7 +39,7 @@ Math to arrive at the frequencies recommended
 37.4Hz = 50Hz*(3/4)-0.1
 39.9Hz = 50Hz*(4/5)-0.1
 
-It seems that 44.9 or 47.9Hz results in a sweet spot between reducing flicker and causing instability during heating (see below). To set this, simply add a line in the `[heater_bied]` section of your Klipper config. If you already have a `pwm_cycle_time` line simply change the number.
+It seems that 44.9 or 47.9Hz results in a sweet spot between reducing flicker and causing instability during heating (see below). To set this, simply add a line in the `[heater_bed]` section of your Klipper config. If you already have a `pwm_cycle_time` line simply change the number.
 
 `pwm_cycle_time: 0.02227 # 44.9Hz`
 
