@@ -43,7 +43,7 @@ No, you can substitute ball spring post-assembly nuts from Ali just as easily in
 
 ### Why do you recommend generic linear rails vs a Hiwin or THK genuine rail?
 
-- We are not imparting cutting forces onto the carriages on the rails (ie: side loads), so a medium preload lieanr rail is fine. the most important aspect is to not have any "slop" or "play" between the rail and carriage.
+- We are not imparting cutting forces onto the carriages on the rails (ie: side loads), so a medium preload linear rail is fine. the most important aspect is to not have any "slop" or "play" between the rail and carriage.
 - A set of 7 V2 rails is the cost of one genuine mid-grade THK rail.
 - Clean all of your rails, then grease them (there are numerous videos on YouTube on how to do this). Pick your best rail for the X axis, then the Y, use the worst on the Z (if applicable).
 
