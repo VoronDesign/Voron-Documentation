@@ -154,12 +154,13 @@ Remember that **force_move** thing you added and the macros in `homing.cfg` from
 Let's take a closer look at what the macro responsible for homing X is doing (Y will work the same way, just with different moves, etc.).
 
 **NOTE**: The macro is shown below in code blocks. These are _not_ meant to be copy pasted anywhere (we did all the macros above into `homing.cfg`) but they are shown here so we can understand what the macros are doing.
-
+{% raw %}
 ```
     {% set RUN_CURRENT_X = printer.configfile.settings['tmc2209 stepper_x'].run_current|float %}
     {% set RUN_CURRENT_Y = printer.configfile.settings['tmc2209 stepper_y'].run_current|float %}
     {% set HOME_CURRENT = 0.49 %}
 ```
+{% endraw %}
 Here we are recording our motor's run current into variables so we can restore them later, then we set a homing current of 0.49. This helps with stability and finding a sane value for homing.
 
 ```
