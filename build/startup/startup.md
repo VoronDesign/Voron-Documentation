@@ -1,4 +1,3 @@
-
 <!-- 
 
 NOTES ON EDITING: 
@@ -116,11 +115,11 @@ Start by verifying that temperatures are being properly reported. Navigate to th
 Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the `sensor_type` and `sensor_pin` settings for the extruder and/or bed.
 <br>
 
-<details>
+<details markdown="1">
   <summary>Troubleshooting</summary>
-    <p>If your Thermistors are not working as they should (Rapidly changing temperatures for example). Double check all your crimps and wires.  </p>
-    <p>A Multimeter in continuity mode is a useful tool for this</p>
-    <p markdown="1">You can also download your klipper log file and upload it to [Klippylyzer](https://klippylyzer.github.io/)</p>
+  * If your Thermistors are not working as they should (Rapidly changing temperatures for example). Double check all your crimps and wires. 
+  * A Multimeter in continuity mode is a useful tool for this
+  * You can also download your klipper log file and upload it to [Klippylyzer](https://klippylyzer.github.io/)
 </details>
 <br>
 </div>
@@ -129,11 +128,23 @@ Verify that the temperature of the nozzle and bed are present and **not increasi
 ## Verify heaters
  
 
-Navigate to the temperature graph and type in 50 followed by enter in the "Tool" temperature target field. The extruder temperature in the graph should start to increase (within about 10 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. If the temperature does not increase, then verify the `heater_pin` setting in the config.
+Navigate to the temperature graph and type in 50 followed by enter in the "Tool" temperature target field. The extruder temperature in the graph should start to increase (within about 10 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. 
 
 Perform the above steps again with the bed.
 
+
 <img src="images/heaters.gif" alt="RAW button GIF" width="70%">
+
+<details markdown="1">
+  <summary>Troubleshooting</summary>
+  * If the temperature does not increase, then verify the `heater_pin` setting in the config's `[extruder]` or `[heater_bed]` section
+  * If the temperature increases on an unexpected sensor, you likely have either the thermistor connections swapped, or the heater connections swapped.
+  * For the heated bed, on models with a mains heated bed.
+    * check if the SSR indicator light is blinking/solid.  If it is, you know everything up to the ssr is working, but something may be wrong on the mains side.
+    * if the SSR light is not on, you likely have an issue on the control side.  One common mistake is getting the polarity of the control wires swapped:  make sure + on the Control board is connected to + on the SSR
+</details>
+
+
 <br>
 
 </div>
@@ -275,38 +286,46 @@ If anything is updated in the printer configuration file, save the file and rest
 <div class="defaulthide" id="v1motor" markdown="1">
 ## Stepper Motor Check
 
-To verify that each stepper motor is operating correctly, send the following command in the terminal:
+To verify that each stepper motor is operating correctly, send an appropriate `STEPPER_BUZZ` command, such as:
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
-Run this command for each of the motors:
+The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position.  This movement cycle will repeat 10 times.
 
-* stepper_x
-* stepper_y
-* stepper_z
-* stepper_z1
-* stepper_z2
-* extruder
-
-
-The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this movement ten times.
+You will be looking for three things:
+  1. Ensure that the motore which responds is the one you expected.
+  1. Ensure that the motor moves cleanly:  forward, pause, back, pause, repeat.  Lack of movement, or vibrating or buzzing oddly are all cause for concern
+  2. Ensure that the motor moves the correct direction first.  If the movement is backwards, it is important to correct at this stage.
 
 <img src="images/verifysteppers.gif" alt="RAW button GIF" width="70%">
 
-If the motor moves back and forth, it's working, and you can move on to the next step.
+Run this command for each of the motors:
+
+| **Command**                                   | **Expectation**                                                |
+|:-------------------------------------------|:----------------------------------------------------------------|
+| STEPPER_BUZZ STEPPER=stepper_x           | The back left gantry motor will rotate clockwise first, then back counterclockwise   |
+| STEPPER_BUZZ STEPPER=stepper_y           | The back right gantry motor will rotate clockwise first, then back counterclockwise  |
+| STEPPER_BUZZ STEPPER=stepper_z           | the left side of the bed moves down, then back up                                    |
+| STEPPER_BUZZ STEPPER=stepper_z1          | the right side of the bed moves down, then back up                                   |
+| STEPPER_BUZZ STEPPER=stepper_z2          | The front right corner of the bed moves down, then back up                           |
+| STEPPER_BUZZ STEPPER=extruder            | The extruder moves.  Direction will be tested later for this motor                   |
 
 <details markdown="1">
   <summary>Troubleshooting</summary>
   
-* If the stepper does not move at all verify the following the "enable_pin" and "step_pin" in your printer.cfg.
+* If the stepper does not move at all
+  * Verify the `enable_pin` and `step_pin` in your printer.cfg.
+  * Verify that the motor driver has power
 
-* If the stepper motor moves but does not return to its original position then verify the "dir_pin" setting.
+* If the stepper motor moves but does not return to its original position then verify the `dir_pin` setting.
 
-* If the stepper motor oscillates in an incorrect direction, then it generally indicates that the "dir_pin" for the axis needs to be inverted. To do this, add a '!' in front of the "dir_pin". Example: "dir_pin: !PIN"
+* If the wrong motor moves, verify that the correct motors are plugged into the correct ports of the controller
 
-* If the motor moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
+* If the stepper motor movement is backwards, then it generally indicates that the "dir_pin" for the axis needs to be inverted. Add a '!' in front of the "dir_pin", or remove it if already present. Example: `dir_pin: PA1` -> `dir_pin: !PA1`
 
-* If the motor buzzes, check the stepper motor wiring.
+* If the load moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
+
+* If the motor buzzes, check the [stepper motor wiring](/build/electrical/#stepper-motor-wiring).
 
 </details>
 
