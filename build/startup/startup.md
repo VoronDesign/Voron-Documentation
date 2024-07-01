@@ -133,6 +133,10 @@ Any time movements need to be made, those will happen in the 'Control' tab / sec
 <div class="defaulthide hide" id="verifytemp" markdown="1">
 ## Verify Temperature 
 
+{: .note }
+If your heaters are still disconnected from the initial flashing process, it is now time to connect them.  Power down, 
+connect your heaters, and power back up before continuing below.
+
 Start by verifying that temperatures are being properly reported. Navigate to the Octoprint/Mainsail temperature graph.
 
 
@@ -153,10 +157,6 @@ Verify that the temperature of the nozzle and bed are present and **not increasi
 
 <div class="defaulthide hide" id="verifyheater" markdown="1">
 ## Verify heaters
-
-{: .note }
-If your heaters are still disconnected from the initial flashing process, it is now time to connect them.  Power down, 
-connect your heaters, and power back up before continuing below.
  
 
 Navigate to the temperature graph and type in 50 followed by enter in the "Tool" temperature target field. The extruder temperature in the graph should start to increase (within about 10 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. 
@@ -176,18 +176,6 @@ Perform the above steps again with the bed.
     * if the SSR light is not on, you likely have an issue on the control side.  One common mistake is getting the polarity of the control wires swapped:  make sure + on the Control board is connected to + on the SSR
 </details>
 
-
-
-<details markdown="1">
-  <summary>Troubleshooting</summary>
-  * If the temperature does not increase, then verify the `heater_pin` setting in the config's `[extruder]` or `[heater_bed]` section
-  * If the temperature increases on an unexpected sensor, you likely have either the thermistor connections swapped, or the heater connections swapped.
-  * For the heated bed, on models with a mains heated bed.
-    * check if the SSR indicator light is blinking/solid.  If it is, you know everything up to the ssr is working, but something may be wrong on the mains side.
-    * if the SSR light is not on, you likely have an issue on the control side.  One common mistake is getting the polarity of the control wires swapped:  make sure + on the Control board is connected to + on the SSR
-</details>
-
-
 <br>
 
 </div>
@@ -197,23 +185,31 @@ Perform the above steps again with the bed.
 <div class="defaulthide" id="v0motor" markdown="1">
 ## Stepper Motor Check
 
-To verify that each stepper motor is operating correctly, send the following command in the terminal:
+To verify that each stepper motor is operating correctly, send an appropriate `STEPPER_BUZZ` command, such as:
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
-Run this command for each of the motors:
+The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position.  This movement cycle will repeat 10 times.
 
-* stepper_x
-* stepper_y
-* stepper_z
-* extruder
+You will be looking for three things:
+  1. Ensure that the motor which responds is the one you expected.
+  1. Ensure that the motor moves cleanly:  forward, pause, back, pause, repeat.  Lack of movement, or vibrating or buzzing oddly are all cause for concern
+  1. Ensure that the motor moves the correct direction first.  If the movement is backwards, it is important to correct at this stage.
 
+{: .note }
+A single test of each motor is being used to confirm multiple aspects of its function:  that the motor moves properly, that it's the correct motor, and what direction it moves.  Please make sure you confirm ALL stated expectations for each motor.  You can repeat the test multiple times if needed.
 
-The STEPPER_BUZZ command will cause the given stepper to move one millimeter in a positive direction and then it will return to its starting position. (If the endstop is defined at position_endstop=0 then at the start of each movement the stepper will move away from the endstop.) It will perform this movement ten times.
 
 <img src="images/verifysteppers.gif" alt="RAW button GIF" width="70%">
 
-If the motor moves back and forth, it's working, and you can move on to the next step.
+Run this command for each of the motors:
+
+| **Command**                                   | **Expectation**                                                |
+|:-------------------------------------------|:----------------------------------------------------------------|
+| STEPPER_BUZZ STEPPER=stepper_x           | The back left gantry motor will rotate clockwise first, then back counterclockwise   |
+| STEPPER_BUZZ STEPPER=stepper_y           | The back right gantry motor will rotate clockwise first, then back counterclockwise  |
+| STEPPER_BUZZ STEPPER=stepper_z           | the bed will move down, then back up                |
+| STEPPER_BUZZ STEPPER=extruder            | The extruder moves.  Direction will be tested later for this motor                   |
 
 <details markdown="1">
   <summary>Troubleshooting</summary>
@@ -243,15 +239,34 @@ If the motor moves back and forth, it's working, and you can move on to the next
 
 At this point everything is ready to home X and Y.
 
-**Important:** You need to be able to quickly stop the printer in case something goes wrong (e.g. the tool head goes the wrong direction).  There are a few ways of doing this:
+{: .warning} 
+>You need to be able to quickly stop the printer in case something goes wrong (e.g. the tool head goes the wrong direction).  There are a few ways of doing this:
+>
+> 1. Use the E-stop button on the display (if installed).  On the Mini12864 it is the small button underneath the main control knob.  Test the button and see what happens -  Klipper should shut down. The Raspberry Pi and OctoPrint/Mainsail/Fluidd should still be running but disconnected from Klipper.  
+> 2. Have a computer right next to the printer with the `RESTART` or `M112` command already in the terminal command line.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
+> 3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and to recover would require reinstalling everything from scratch.
 
-1. Use the E-stop button on the display (if installed).  On the Mini12864 it is the small button underneath the main control knob.  Test the button and see what happens -  Klipper should shut down. Raspberry Pi and OctoPrint/Mainsail/Fluidd should still be running but disconnected from Klipper.  Press "Connect" in the upper left corner of OctoPrint, then in the Octoprint terminal window send a `FIRMWARE_RESTART` to get the printer back up and running.
-2. Have a computer right next to the printer with the `RESTART` or `M112` command already in the terminal command line in OctoPrint.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
-3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and to recover would require reinstalling everything from scratch.
+<div class="defaulthide mainsailclass" markdown="1">
+{: .note }
+After a shutdown, press the `FIRMWARE_RESTART` button in Mainsail or Fluidd to resume normal operation
+</div>
+<div class="defaulthide octoprintclass" markdown="1">
+{: .note }
+After a shutdown, press "Connect" in the upper left corner of OctoPrint. Next, in the Octoprint terminal window send a `FIRMWARE_RESTART` to get the printer back up and running.
+</div>
 
-Once there is a _tested_ process for stopping the printer in case of something going wrong,  you can test X and Y movement.  *note: you will need to test X AND Y before you can correctly determine what adjustments are needed.*  First, send a `G28 X` command. This will only home X: The tool head should *move up slightly and then move to the right until it hits the X endstop*. If it moves any other direction, abort, take note, but still move on to testing Y. Next, test Y: run `G28 Y`.  The toolhead should move to the back of the printer until it hits the Y endstop. In a CoreXY configuration, both motors have to move in order to get the toolhead to go in only and X or Y direction (think Etch A Sketch). If the gantry moves downward first before moving to the right, you must reverse your z stepper directions in the config.
+Once there is a _tested_ process for stopping the printer in case of something going wrong,  you can test X and Y movement.   First, send a `G28 X` command. This will only home X: The bed should  *move down slightly and then the toolhead should move to the right until it hits the X endstop*. 
 
-If either axis does not move the toolhead in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition by adding a `!` to the pin name. For example, `dir_pin: PB2` would become `dir_pin: !PB2`.  (if the entry already has a `!`, remove it instead).   If the motors are going in directions that match the lower row of the chart, physically swap your X and Y (A and B) motor connectors on the MCU.
+* If the bed moves upwards before moving to the right, you must reverse your z stepper directions in the config.
+* If the toolhead moves in an incorrect direction, stop it with emergency stop, take note of what direction it went, and move on to testing Y
+
+Next, test Y: run `G28 Y`.  The toolhead should move up slightly, and then towards the back of the printer until it hits the Y endstop.  
+
+{: .note}
+In a CoreXY configuration, both motors motors work together to move the printer in X or Y (think Etch A Sketch). As a result, testing X homing alone tells us very little.  We *must* test X and Y in order to determine what (if any) adjustments are needed
+
+
+If either axis does not move the toolhead in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition by adding a `!` to the pin name. For example, `dir_pin: PB2` would become `dir_pin: !PB2`.  (if the entry already has a `!`, remove it instead).   If the motors are going in directions that match the lower row of the chart, physically swap your X and Y (A and B) motor connectors at the MCU.
 
 * [stepper x] = Motor B
 * [stepper y] = Motor A
@@ -268,7 +283,36 @@ If either axis does not move the toolhead in the expected or correct direction, 
 <div class="defaulthide" id="v0endstop" markdown="1">
 
 ## Z Endstop Location 
-The V0 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm. by using the adjustable screw in the T8 nut block and by being able to physically move the endstop switch up or down along the extrusion you need to position these so that the point at which your nozzle touches the bed (your Z0 point) happens within that 0.6mm window of travel. You can then use the `Z_ENDSTOP_CALIBRATE`routine to then tell your printer where within that window you land, or in other words, what the offset between the z0 position and the endstop trigger point is. 
+
+### V0.2
+For V0.2 the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE` command to find the correct position_endstop value automatically. 
+
+### V0.0 & V0.1
+The V0.0 and V0.1 uses the bed assembly to contact the Z endstop switch via an adjustable screw in the T8 nut block. Ideally the activation of that switch will be at the exact bed height at which your nozzle also reaches the bed surface. However there is a window of travel from the moment that switch is activated to the point at which that switch bottoms out, this window is about 0.6mm.  As a result, calibrating Z on these printers is a 2 step process:
+1. Adjust the screw, so that the endstop is triggered just slightly before the nozzle hits the bed (within about 0.6mm)
+1. Use the  `Z_ENDSTOP_CALIBRATE`routine (below) to fine tune the calibration of the endstop switch in software.
+
+### Z Endstop Calibrate
+We will use a piece of copy paper to set the height of our nozzle relative to the endstop position, do this test with your nozzle cold. When the nozzle is heated, its position (relative to the bed) changes due to thermal expansion. This thermal expansion is typically around a 100 microns, which is about the same thickness as a typical piece of printer paper. The exact amount of thermal expansion isn’t crucial, just as the exact thickness of the paper isn’t crucial. Start with the assumption that the two are equal.
+* Home z
+* Place the piece of copy paper on the bed
+* Run the `Z_ENDSTOP_CALIBRATE` command.
+<div class="defaulthide octoprintclass" markdown="1">
+* move the nozzle closer to the bed in small increments, using `TESTZ Z=` commands.
+</div>
+
+<div class="defaulthide mainsailclass" markdown="1">
+* a dialog box will open that allows you to move the nozzle up and down by preset amounts.
+* move the nozzle closer to the bed in small increments, using the controls in the dialog
+</div>
+* after each movement push the paper back and forth to check if the nozzle is in contact with the paper and to feel the amount of friction. 
+* Continue issuing commands until you feel a small amount of friction when testing with the paper. If too much friction is found then you can use a positive Z value to move the nozzle up.
+* Once you have found the correct height, run the `ACCEPT` command
+* run the `SAVE_CONFIG` command
+
+
+
+This value that we just calculated is now in your config (note: save_config stores things down at the bottom of your config, not in the main section) and it represents the distance from the point that the nozzle touches the bed surface to when the bed assembly triggers the z endstop switch. It also represents your maximum Z travel distance.
 
 <br>
 
@@ -329,7 +373,6 @@ If anything is updated in the printer configuration file, save the file and rest
 <div class="defaulthide" id="v1motor" markdown="1">
 ## Stepper Motor Check
 
-To verify that each stepper motor is operating correctly, send an appropriate `STEPPER_BUZZ` command, such as:
 To verify that each stepper motor is operating correctly, send an appropriate `STEPPER_BUZZ` command, such as:
 
 `STEPPER_BUZZ STEPPER=stepper_x`
@@ -745,6 +788,9 @@ On a V2, the bed should now be adjusted so there is a small (2-3mm) gap between 
 <div  class="defaulthide"  id="xyendstop"  markdown="1">
 
 ## Endstop Check
+
+{: .note }
+this document describes testing all 3 endstops.  if you will be using sensorless homing on x and/or y, test any endstops you do have, and then refer to the separate sensorless homing guide.
 
 Slowly move the toolhead to the center, then send the `QUERY_ENDSTOPS` command. The terminal window should respond with the following:
 
