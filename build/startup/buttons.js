@@ -35,6 +35,7 @@
 let params = new URLSearchParams(window.location.search);
 let modelparam = params.get('model');
 let interfaceparam = params.get("interface");
+let probeparam = params.get("probe");
 var currentstep = parseInt(params.get("step")); 
 let lastpage = currentstep - 1;
 //Custom Variables  
@@ -53,6 +54,37 @@ function checkstatus() {
     $(document).ready(function(){
       $(".mainsailclass").hide();
       $(".octoprintclass").show();
+    });
+  }
+
+  if (probeparam == "inductive") {
+    $(document).ready(function(){
+      $(".inductiveclass").show();
+      $(".dockableclass").hide();
+      $(".tapclass").hide();
+    });
+  } else if (probeparam == "dockable") {
+    $(document).ready(function(){
+      $(".inductiveclass").hide();
+      $(".dockableclass").show();
+      $(".tapclass").hide();
+    });
+  } else if (probeparam == "tap") {
+    $(document).ready(function(){
+      $(".inductiveclass").hide();
+      $(".dockableclass").hide();
+      $(".tapclass").show();
+    });
+  }
+
+
+
+
+
+
+  if (modelparam != "v0") {
+    $(document).ready(function(){
+       document.getElementById("ProbeSelect").style.display = "block";
     });
   }
 
@@ -136,6 +168,17 @@ function setinterfaceparam() {
   }
 } 
 
+//set Probe parameter
+function setprobeparam() {
+  if (document.getElementById("inductive").checked) {
+    params.set('probe', 'inductive');
+  } else if(document.getElementById("dockable").checked){
+    params.set('probe', 'dockable');
+  } else if(document.getElementById("tap").checked){
+    params.set('probe', 'tap');  
+  }
+} 
+
 
 //show and hide octoprint warning
 function showoctowarning() {
@@ -154,6 +197,7 @@ function hideoctowarning() {
 
 function start() {
   setinterfaceparam();
+  setprobeparam();
   window.location.search = params;
   
 }

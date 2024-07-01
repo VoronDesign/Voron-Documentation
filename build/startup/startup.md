@@ -27,7 +27,7 @@ FILL IN YOUR CONTENT HERE IN MARKDOWN
 
 <!-- PAGES BEGIN -->
 
-<!-- Webinterface check -->
+<!-- Options Selection -->
 <div id="0" class="defaulthide hide" markdown="1">
 
 # Welcome to the initial startup guide for Voron <span id="printermodel">MODEL</span>
@@ -46,13 +46,37 @@ Please follow each step closely and once ready, click the "I am done, let's move
   <label class="form-check-label" for="octoprint">
     Octoprint
   </label>
-  
 </div>
-
 
 <div id="octowarning" class="defaulthide">
  <br>
 <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i><b> Important:</b> Most users use Mainsail or Fluidd instead of Octoprint.<p>It might be hard to get support for your interface.</p></div>
+</div>
+
+<div id="ProbeSelect" class="defaulthide hide" markdown="1">
+
+### Select your Probe
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="probeSelect" id="inductive">
+    <label class="form-check-label" for="inductive">
+      Stock Inductive probe (TL-Q5MC2 or similar)
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="probeSelect" id="dockable">
+    <label class="form-check-label" for="dockable">
+      Dockable Probe  (klicky and other similar probes) 
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="probeSelect" id="tap">
+    <label class="form-check-label" for="tap">
+      Tap
+    </label>
+  </div>
 </div>
 
 <button type="button" class="text-center btn btn-danger margin-right2 btn-spacing-mobile" id="button-start" onclick="start()">I am ready, let´s go</button>
@@ -115,8 +139,11 @@ Start by verifying that temperatures are being properly reported. Navigate to th
 Verify that the temperature of the nozzle and bed are present and **not increasing**. If it is increasing, remove power from the printer. If the temperatures are not accurate, review the `sensor_type` and `sensor_pin` settings for the extruder and/or bed.
 <br>
 
-<details markdown="1">
+<details markdown="1" markdown="1">
   <summary>Troubleshooting</summary>
+  * If your Thermistors are not working as they should (Rapidly changing temperatures for example). Double check all your crimps and wires. 
+  * A Multimeter in continuity mode is a useful tool for this
+  * You can also download your klipper log file and upload it to [Klippylyzer](https://klippylyzer.github.io/)
   * If your Thermistors are not working as they should (Rapidly changing temperatures for example). Double check all your crimps and wires. 
   * A Multimeter in continuity mode is a useful tool for this
   * You can also download your klipper log file and upload it to [Klippylyzer](https://klippylyzer.github.io/)
@@ -126,6 +153,10 @@ Verify that the temperature of the nozzle and bed are present and **not increasi
 
 <div class="defaulthide hide" id="verifyheater" markdown="1">
 ## Verify heaters
+
+{: .note }
+If your heaters are still disconnected from the initial flashing process, it is now time to connect them.  Power down, 
+connect your heaters, and power back up before continuing below.
  
 
 Navigate to the temperature graph and type in 50 followed by enter in the "Tool" temperature target field. The extruder temperature in the graph should start to increase (within about 10 seconds or so). Then go to the "Tool" temperature drop-down box and select "Off". After several minutes the temperature should start to return to its initial room temperature value. 
@@ -133,7 +164,19 @@ Navigate to the temperature graph and type in 50 followed by enter in the "Tool"
 Perform the above steps again with the bed.
 
 
+
 <img src="images/heaters.gif" alt="RAW button GIF" width="70%">
+
+<details markdown="1">
+  <summary>Troubleshooting</summary>
+  * If the temperature does not increase, then verify the `heater_pin` setting in the config's `[extruder]` or `[heater_bed]` section
+  * If the temperature increases on an unexpected sensor, you likely have either the thermistor connections swapped, or the heater connections swapped.
+  * For the heated bed, on models with a mains heated bed.
+    * check if the SSR indicator light is blinking/solid.  If it is, you know everything up to the ssr is working, but something may be wrong on the mains side.
+    * if the SSR light is not on, you likely have an issue on the control side.  One common mistake is getting the polarity of the control wires swapped:  make sure + on the Control board is connected to + on the SSR
+</details>
+
+
 
 <details markdown="1">
   <summary>Troubleshooting</summary>
@@ -287,6 +330,7 @@ If anything is updated in the printer configuration file, save the file and rest
 ## Stepper Motor Check
 
 To verify that each stepper motor is operating correctly, send an appropriate `STEPPER_BUZZ` command, such as:
+To verify that each stepper motor is operating correctly, send an appropriate `STEPPER_BUZZ` command, such as:
 
 `STEPPER_BUZZ STEPPER=stepper_x`
 
@@ -295,7 +339,11 @@ The STEPPER_BUZZ command will cause the given stepper to move one millimeter in 
 You will be looking for three things:
   1. Ensure that the motore which responds is the one you expected.
   1. Ensure that the motor moves cleanly:  forward, pause, back, pause, repeat.  Lack of movement, or vibrating or buzzing oddly are all cause for concern
-  2. Ensure that the motor moves the correct direction first.  If the movement is backwards, it is important to correct at this stage.
+  1. Ensure that the motor moves the correct direction first.  If the movement is backwards, it is important to correct at this stage.
+
+{: .note }
+A single test of each motor is being used to confirm multiple aspects of its function:  that the motor moves properly, that it's the correct motor, and what direction it moves.  Please make sure you confirm ALL stated expectations for each motor.  You can repeat the test multiple times if needed.
+
 
 <img src="images/verifysteppers.gif" alt="RAW button GIF" width="70%">
 
@@ -305,14 +353,18 @@ Run this command for each of the motors:
 |:-------------------------------------------|:----------------------------------------------------------------|
 | STEPPER_BUZZ STEPPER=stepper_x           | The back left gantry motor will rotate clockwise first, then back counterclockwise   |
 | STEPPER_BUZZ STEPPER=stepper_y           | The back right gantry motor will rotate clockwise first, then back counterclockwise  |
-| STEPPER_BUZZ STEPPER=stepper_z           | the left side of the bed moves down, then back up                                    |
-| STEPPER_BUZZ STEPPER=stepper_z1          | the right side of the bed moves down, then back up                                   |
+| STEPPER_BUZZ STEPPER=stepper_z           | the front left corner of the bed moves down, then back up                |
+| STEPPER_BUZZ STEPPER=stepper_z1          | the back of the bed moves down, then back up                                   |
 | STEPPER_BUZZ STEPPER=stepper_z2          | The front right corner of the bed moves down, then back up                           |
 | STEPPER_BUZZ STEPPER=extruder            | The extruder moves.  Direction will be tested later for this motor                   |
+
 
 <details markdown="1">
   <summary>Troubleshooting</summary>
   
+* If the stepper does not move at all
+  * Verify the `enable_pin` and `step_pin` in your printer.cfg.
+  * Verify that the motor driver has power
 * If the stepper does not move at all
   * Verify the `enable_pin` and `step_pin` in your printer.cfg.
   * Verify that the motor driver has power
@@ -325,7 +377,7 @@ Run this command for each of the motors:
 
 * If the load moves significantly more or significantly less than one millimeter then verify the `rotation_distance` setting.
 
-* If the motor buzzes, check the [stepper motor wiring](/build/electrical/#stepper-motor-wiring).
+* If the motor buzzes without making clean 1mm movements, check the [stepper motor wiring](/build/electrical/#stepper-motor-wiring)
 
 </details>
 
@@ -342,15 +394,34 @@ Run this command for each of the motors:
 
 At this point everything is ready to home X and Y.
 
-**Important:** You need to be able to quickly stop the printer in case something goes wrong (e.g. the tool head goes the wrong direction).  There are a few ways of doing this:
+{: .warning} 
+>You need to be able to quickly stop the printer in case something goes wrong (e.g. the tool head goes the wrong direction).  There are a few ways of doing this:
+>
+> 1. Use the E-stop button on the display (if installed).  On the Mini12864 it is the small button underneath the main control knob.  Test the button and see what happens -  Klipper should shut down. The Raspberry Pi and OctoPrint/Mainsail/Fluidd should still be running but disconnected from Klipper.  
+> 2. Have a computer right next to the printer with the `RESTART` or `M112` command already in the terminal command line.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
+> 3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and to recover would require reinstalling everything from scratch.
 
-1. Use the E-stop button on the display (if installed).  On the Mini12864 it is the small button underneath the main control knob.  Test the button and see what happens -  Klipper should shut down. Raspberry Pi and OctoPrint/Mainsail/Fluidd should still be running but disconnected from Klipper.  Press "Connect" in the upper left corner of OctoPrint, then in the Octoprint terminal window send a `FIRMWARE_RESTART` to get the printer back up and running.
-2. Have a computer right next to the printer with the `RESTART` or `M112` command already in the terminal command line in OctoPrint.  When you start homing the printer, if it goes in the wrong direction, quickly send the restart command and it will stop the printer.
-3. As a "nuclear" option, power off the printer with the power switch if something goes wrong.  This is not ideal because it may corrupt the files on the SD card and to recover would require reinstalling everything from scratch.
+<div class="defaulthide mainsailclass" markdown="1">
+{: .note }
+After a shutdown, press the `FIRMWARE_RESTART` button in Mainsail or Fluidd to resume normal operation
+</div>
+<div class="defaulthide octoprintclass" markdown="1">
+{: .note }
+After a shutdown, press "Connect" in the upper left corner of OctoPrint. Next, in the Octoprint terminal window send a `FIRMWARE_RESTART` to get the printer back up and running.
+</div>
 
-Once there is a _tested_ process for stopping the printer in case of something going wrong,  you can test X and Y movement.  *note: you will need to test X AND Y before you can correctly determine what adjustments are needed.*  First, send a `G28 X` command. This will only home X: The tool head should *move up slightly and then move to the right until it hits the X endstop*. If it moves any other direction, abort, take note, but still move on to testing Y. Next, test Y: run `G28 Y`.  The toolhead should move to the back of the printer until it hits the Y endstop. In a CoreXY configuration, both motors have to move in order to get the toolhead to go in only and X or Y direction (think Etch A Sketch). If the gantry moves downward first before moving to the right, you must reverse your z stepper directions in the config.
+Once there is a _tested_ process for stopping the printer in case of something going wrong,  you can test X and Y movement.   First, send a `G28 X` command. This will only home X: The bed should  *move down slightly and then the toolhead should move to the right until it hits the X endstop*. 
 
-If either axis does not move the toolhead in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition by adding a `!` to the pin name. For example, `dir_pin: PB2` would become `dir_pin: !PB2`.  (if the entry already has a `!`, remove it instead).   If the motors are going in directions that match the lower row of the chart, physically swap your X and Y (A and B) motor connectors on the MCU.
+* If the bed moves upwards before moving to the right, you must reverse your z stepper directions in the config.
+* If the toolhead moves in an incorrect direction, stop it with emergency stop, take note of what direction it went, and move on to testing Y
+
+Next, test Y: run `G28 Y`.  The toolhead should move up slightly, and then towards the back of the printer until it hits the Y endstop.  
+
+{: .note}
+In a CoreXY configuration, both motors motors work together to move the printer in X or Y (think Etch A Sketch). As a result, testing X homing alone tells us very little.  We *must* test X and Y in order to determine what (if any) adjustments are needed
+
+
+If either axis does not move the toolhead in the expected or correct direction, refer to the table below to figure out how to correct it.  If you need to invert the direction of one of the motors, invert the direction pin definition by adding a `!` to the pin name. For example, `dir_pin: PB2` would become `dir_pin: !PB2`.  (if the entry already has a `!`, remove it instead).   If the motors are going in directions that match the lower row of the chart, physically swap your X and Y (A and B) motor connectors at the MCU.
 
 * [stepper x] = Motor B
 * [stepper y] = Motor A
@@ -375,13 +446,13 @@ If either axis does not move the toolhead in the expected or correct direction, 
 
 The Trident uses automated bed leveling using 3 motors.  There is a macro `Z_TILT_ADJUST` built into Klipper for that function. It is very similar to the `QUAD_GANTRY_LEVEL` used by V2, but supports 3 or more motors. Run the `Z_TILT_ADJUST` and it will probe each of the 3 points 3 times, average the readings, then make adjustments until the gantry is level.
 
-After that process has been completed, re-home z by running `G28 Z`, and then rerun the `Z_ENDSTOP_CALIBRATE` command to bring your nozzle to the correct Z=0 position.
+After that process has been completed, re-home z by running `G28 Z`.
 
 ### Tilt with Heated Bed and Chamber
 
-Run a `G28` command to home the printer since a `SAVE_CONFIG` restarts the printer.
+Set your bed temperature to 100C
 
-This will be the first time that a Quad Gantry Level has been run at a high chamber temperature.  To ensure that the probe has stabilized with the heated bed at 100C and the hot end at 240C, run `PROBE_ACCURACY` with the nozzle at the center of the bed.  If the values are trending (increasing or decreasing) throughout the 10 probes or the standard deviation is greater than 0.003mm, wait another 5 minutes and try again.
+This will be the first time that a `Z_TILT_ADJUST` has been run at a high chamber temperature.  To ensure that the probe has stabilized with the heated bed at 100C run `PROBE_ACCURACY` with the nozzle at the center of the bed.  If the values are trending (increasing or decreasing) throughout the 10 probes or the standard deviation is greater than 0.003mm, wait another 5 minutes and try again.
 
 Once the readings are stable, run `Z_TILT_ADJUST`.  Make a note of how long the probe readings took to stabilize for when starting prints - typically a cold printer takes 10-20 minutes to stabilize at temperature.
 
@@ -505,6 +576,16 @@ Once the readings are stable, run `QUAD_GANTRY_LEVEL`.  Make a note of how long 
 <div class="defaulthide" id="zendstop" markdown="1">
 ## Z Endstop Pin Location
 
+<div class="defaulthide dockableclass" markdown=1>
+{: .note }
+Some dockable probe users choose to use their probe as a "z virtual endstop", and thus will not have a z endstop to locate.  If this is you, you probably just want to use the coordinates of the center of your bed for this step.  Also note that these coordinates will likely be in your "klicky macros", rather than the locations mentioned below.
+</div>
+
+<div class="defaulthide tapclass" markdown=1>
+{: .note }
+As a Tap user, you do not actually have a z endstop to locate.  Instead, simply set the  `[homing_override]` or `[safe_z_home]` coordinates to the center of your bed
+</div>
+
 * Start by re-running `G28 X Y` to home X and Y.
 * Using the software controls, move the nozzle until it is directly over the Z endstop switch.
 * Send an `M114` command and record the X and Y values.
@@ -516,15 +597,42 @@ Once the readings are stable, run `QUAD_GANTRY_LEVEL`.  Make a note of how long 
 <!-- Probe Check -->
 <div class="defaulthide" id="probecheck" markdown="1">
 
-## Inductive Probe Check
+## Probe Check
+
+<div class="defaulthide dockableclass" markdown=1>
+{: .note }
+If you haven't already, this is probably a good time to get your dockable probe up and running, including picking up out of the dock. If you are using klicky macros, there is documentation [here](https://github.com/jlas1/Klicky-Probe/tree/main/Klipper_macros).  You should NOT enable the klicky meshing module at this time:  that will come later.
+</div>
 
 ### Probe Testing
 
 With the toolhead in the center of the bed, reconfirm that the probe is working correctly.
-
-When it is far from the bed, `QUERY_PROBE` should return “open”. When a metal object is close to the probe, `QUERY_PROBE` should return “triggered”. If the signal is inverted, add a “!” In front of the pin definition (ie, pin: ! z:P1.24).
+<div class="defaulthide inductiveclass" markdown=1>
+When it is far from the bed, `QUERY_PROBE` should return “open”. When a metal object is close to the probe, `QUERY_PROBE` should return “triggered”. If the signal is inverted, add a “!” In front of the pin definition (ie, `pin: ! z:P1.24` ).
 
 Slowly reduce your Z height and run `QUERY_PROBE` each time until `QUERY_PROBE` returns “triggered” - make sure the nozzle is not touching the print surface (and has clearance). 
+</div>
+<div class="defaulthide dockableclass" markdown=1>
+There are 3 states to test with your dockable probe:
+1. Probe not attached:
+  a. Remove the probe from the toolhead.
+  b. run `QUERY_PROBE`.  It is expected to return "triggered"
+2. When the probe is attached, but not triggered.
+  a. Attach the probe to the toolhead
+  b. run `QUERY_PROBE. It is expected to return "open"
+3. When the probe is attached, *and triggered*.
+  a. Keep the probe attached to the toolhead
+  b. activate  the probe switch with your finger, and *while keeping the switch pressed*,
+  c. run `QUERY_PROBE`.  It is expected to return "triggered"
+</div>
+<div class="defaulthide tapclass" markdown=1>
+{: .note }
+There are software configuration instructions for Tap, including an important activation macro located [here](https://github.com/VoronDesign/Voron-Tap/blob/main/config/tap_klipper_instructions.md).  Note that without this macro, it is likely you will accidentally hit your bed with a fully heated hotend, and ruin your PEI.
+ 
+
+Test that when the toolhead is in its normal (down) position, `QUERY_PROBE` indicates "open", and when the toolhead is lifted slightly, `QUERY_PROBE` indicates "triggered"
+</div>
+
 
 ### Probe Accuracy Check
 
@@ -549,8 +657,20 @@ Recv: // probe at 125.000,125.000 is z=4.932500
 Recv: // probe accuracy results: maximum 4.975000, minimum 4.932500, range 0.042500, average 4.949000, median 4.948750,
 standard deviation 0.011948
 ```
-</div>
 
+<details markdown="1">
+  <summary>Troubleshooting</summary>
+  * If the probe is stuck always showing triggered  (or always open) It is typically indicitive of a wiring issue:
+    * Make sure that the physical wiring has (G)round, (S)ignal, and (V)oltage correctly connected
+    * If there is a jumper to select the supply voltage for your probe, make sure it is set correctly
+    * Make sure the klipper `[probe] pin:` matches where your probe is actually connected
+  * If the probe is trending one direction or the other in the accuracy check, it is typically indicitive of a mechanical issue
+    * Check grub screws on the z drives
+    * check z belt tension (if applicable)
+    * if all else fails, try reducing the `[Probe] speed:`
+</details>
+</div>
+<br>
 
 
 
@@ -563,21 +683,30 @@ The homing position is not at the typical location of 0,0 but at the maximum tra
 
 Depending on bed location, the positional parameters may need to be adjusted to re-locate the 0,0 point.
 
-1. Start by re-running `G28 X Y` to home X and Y.  After this, the nozzle will be at the maximum X,Y as defined by *position_max* under *[stepper_x]* and *[stepper_y]*. 
-2. Using the OctoPrint or Mainsail controls, move the nozzle to the front left corner of the bed.
-3. If the left corner of the bed cannot be reached within 3-5mm, the bed location needs to be physically adjusted (if possible). Move the bed on the extrusions or move the extrusions to get the bed location within range.
-	* If questionable, turn off motors and attempt to move the gantry by hand to see if the front left corner can physically be reached by the nozzle.
-4. Once the nozzle is close to the front left corner of the bed but still on the bed, send an `M114` command to retrieve the current location.
-	* *Note: Due to other tolerances, it is usually not recommended to have the 0,0 exactly on the corner of the bed or build surface. Spec bed sizes are always slightly larger than the defined print volume so print volume loss will be minimal.*
+1. Test that the toolhead is *physically* capable of reaching the front left corner of the bed.  
+  * Run `M84` to turn off the motors
+  * gently move the toolhead by hand to the front left.  
+  * If you encounter resistance before the nozzle gets close to the front left corner, consider:
+       - Is a mechanical problem stopping the toolhead before it should? If so, you may need to go back to earlier build steps, such as "deracking".
+       - Is your bed oversized?  If, for example, you have a 320mm bed on a 300mm build, it's perfectly reasonable that there be some extra build plate that you can't actually reach
+       - Otherwise, you may need to physically adjust the placement of your bed. 
 
-If X and Y offsets are less than 1mm and 0,0 is over the bed, nothing needs to be changed.
+2. Run `G28 X Y` to home X and Y.  After this, the nozzle will be at the position defined as `position_endstop` under `[stepper_x]` and `[stepper_y]`. In Vorons, this will generally be the same as `position_max`
+3. Using the OctoPrint or Mainsail controls, move the toolhead to 0,0
+  * Pay attention as the toolhead is moving.  If there is any skipping as it gets near the corner, you will need to stop and deal with that before continuing
+    * This may indicate a racked gantry, or other belting issue
+    * It may be that, for one reason or another, your printer simply has slightly less travel than stock:
+      * Rehome, with `G28 X Y`
+      * Move the X and Y axes one at a time to 0 to determine which one is the problem
+      * Reduce `position_endstop` AND `position_max` for that axis until the problem goes away
+4. Once the toolhead is able to reach 0,0 cleanly, inspect how close it is to the front left corner of the bed
+	 * _Note: Due to other tolerances, it is usually not recommended to have the 0,0 exactly on the corner of the bed or build surface. Spec bed sizes are always slightly larger than the defined print volume so print volume loss will be minimal._
+   * if the nozzle is above the bed, within 5 mm of the edge, perfect.  Move on.
+   * for each axis, if the nozzle is too far in to the bed, INCREASE `position_endstop` and `position_max`.  For example, to move the 0,0 point 2mm to the *left*, you would *add* 2mm to `[stepper_x]` `position_endstop` AND `position_max`.
+   * if the nozzle is out beyond the bed, DECREASE `position_endstop` and `position_max`.  For example, to move the 0,0 point 2mm *back*, you would *subtract* 2mm from  `[stepper_y]` `position_endstop` AND `position_max`.
 
-If X and Y offsets are within 5mm or 0,0 is past the bed, the *position_max* values should be adjusted to change where the 0,0 point is computed.  If the 0,0 is over the bed, the distance from the home point to the front left (*position_max*) must be increased.  If the 0,0 is past the bed, the distance must be decreased. The amount is determined by the output of the `M114` command. Update *position_max* and *position_endstop* for both *[stepper_x]* and *[stepper_y]* as follows:
-
-* For X: New = Current - Get Position X (M114) Result
-* For Y: New = Current - Get Position Y (M114) Result
-
-*If the Z endstop pin location has been previously defined, be sure to re-follow the process to set the Z endstop pin location (if applicable).*
+{: .note }
+If the Z endstop pin location has already been set in klipper, be sure to re-adjust these coordinates any time you recalibrate the x or y endstop.
 
 If anything is updated in the printer configuration file, save the file and restart Klipper using `FIRMWARE_RESTART`.
 
@@ -585,13 +714,28 @@ If anything is updated in the printer configuration file, save the file and rest
 
 <!-- Bed Locating -->
 <div class="defaulthide" id="bedlocating" markdown="1">
-## Bed locating
+## Bed Locating
 
-Before the 0,0 point and Z endstop locations are set, the physical locations of the Z endstop and print bed need to be finalized.
+<div class="defaulthide dockableclass" markdown=1>
+{: .note }
+If you are using your dockable probe as a "virtual z endstop", you do not require the stock z endstop.  On a Trident, no action is required for this step.  On a Voron 2, the bed placement may be adjusted by moving the toolhead as far forward as possible (by hand) and then sliding the bed until it is just slightly under the nozzle
+</div>
 
-The Z endstop should be located at close to max X position. Home X and Y with G28 X Y and then traverse just Y to locate a Z endstop position at the maximum X travel that will still trigger the endstop. Lock down the Z endstop at that position.
+<div class="defaulthide tapclass" markdown=1>
+{: .note }
+As tap is used as a "virtual z endstop", your printer does not require the installation of the stock Z endstop.  On a Trident, no action is required for this step. On a Voron 2, the bed placement may be adjusted by moving the toolhead as far forward as possible (by hand) and then sliding the bed until it is just slightly under the nozzle
+</div>
 
-Once the Z endstop is fixed into position the base plate should be adjusted so that the Z endstop pin is approximately 2-3mm from the aluminum base plate.
+Before the 0,0 point and Z endstop locations are set in software, the physical locations of the Z endstop and print bed need to be finalized.
+
+The Z endstop should be located close to max Y position. 
+
+* Home X and Y with `G28 X Y` 
+* Move the toolhead to the left until the nozzle is in line with the z endstop.
+* Move the Z endstop along the extrusion until the endstop is centered directly under the nozzle
+* Secure the Z endstop in this position
+
+On a V2, the bed should now be adjusted so there is a small (2-3mm) gap between the back edge of the bed, and the shaft of the Z endstop.
 
 
 </div>
@@ -617,6 +761,15 @@ Make sure that the X endstop says "triggered" and the Y and Z endstops stay open
 
 Move the toolhead back to center and repeat with the Y endstop by moving the gantry all the way to the back.
 
+<div class="defaulthide dockableclass" markdown=1>
+{: .note }
+Some dockable probe users choose to use their dockable probe as a "virtual endstop".  If you are one of these users, You may ignore the z endstop for now.  It will be attended to in a later step, when you test the probe
+</div>
+<div class="defaulthide tapclass" markdown=1>
+{: .note }
+Tap acts as a "virtual endstop".  This functionality will be tested in a later step, so the Z endstop may be safely ignored for now.
+</div>
+
 To check the Z endstop, manually press the z endstop until you hear a clicking sound. Check with `QUERY_ENDSTOPS` if the endstop works.
 
 
@@ -626,11 +779,14 @@ To check the Z endstop, manually press the z endstop until you hear a clicking s
 
 * <p markdown="1">If one of the endstops acts backwards (reading "TRIGGERED" when open and vice-versa), go into the printer configuration file (typically printer.cfg) and add or remove the ! in front of the pin identifier. 
 For example, if the X endstop was inverted, add a ! in front of the pin number as follows: 
-<br>`endstop_pin: P1.28` -> `endstop_pin: !P1.28` </p>
+<br>`endstop_pin: P1.28` -> `endstop_pin: !P1.28` 
+<br>Be warned however:  All stock Voron endstops are N.C. switches connected to GND.  If a stock endstop requires `!` it may indicate a wiring issue</p>
 
 * <p>If the endstop cannot be reached with the toolhead, make sure that you don't have any rubber rail stoppers left on the rail. </p>
 
 * <p>If there are no rubber rail stoppers in place and you still can't trigger the endstop, make sure that your gantry is deracked. <a  href="https://www.youtube.com/watch?v=cOn6u9kXvy0">Gantry deracking</a>  </p>
+
+* if a switch seems "slow" to respond, you may need to add a software controlled pullup to its pin, using `^`.  Most controllers in Vorons have hardwired pullups, and do not require this, but there are always exceptions.
 
 </details>
 
@@ -709,8 +865,6 @@ If you're running your printer headless, the Z height can still be adjusted on-t
 But wait! There's more:
 
 
-
-
 ## Extruder Calibration (e-steps)
 
 Before the first print, make sure that the extruder extrudes the correct amount of material.
@@ -730,14 +884,9 @@ Paste the new value into the configuration file, restart Klipper, and try again.
 
 Typical `rotation_distance` values should be around 22.6789511 for Afterburner, Stealthburner and Mobius (update gear_ratio to 50:10 for Stealthburner with Clockwork 2 or 80:20 for Mobius).
 
-
-
-<div>A <b>Note</b> on your host device.
- <p>A RaspberryPi is like a computer. Please shut it down appropriately using your webinterfaces shutdown button.</p>
- <p>It is also advised to make regular backups of your printer.cfg and other config files.</p>
- </div>
 {: .warning }
-
+> A Raspberry Pi is like a computer. Please shut it down appropriately using your webinterface's shutdown button.
+> <br> It is also strongly recommended to make regular backups of your printer.cfg and other config files.
 
 ---
 ### Next: [Slicer Setup](../slicer/index.md)
