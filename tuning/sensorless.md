@@ -215,7 +215,7 @@ Eventually you will find the BIGGEST number that homes X successfully. Nice!
 
 With the maximum found, continue to DECREASE the value by 5 or so until X homes, but bumps too hard into the rail. You may need to walk this in by changing the value by 1 when getting close.
 
-This is your MINIUMUM value.
+This is your MINIMUM value.
 
 Ideally we want a value between the minimum and maximum that will always work, so I tend to shoot for something slightly LESS than halfway between minimum and maximum.
 
