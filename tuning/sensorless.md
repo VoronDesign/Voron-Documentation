@@ -10,7 +10,7 @@ This writeup covers how to set up sensorless homing on an Octopus 1.1 with 2209 
 Also note that there are example working configurations at the bottom of this guide. Use them as examples based on your MCU and drivers, etc.
 
 {: .note }
-IF YOU DO NOT READ THIS CAREFULLY AND ADJUST THINGS WHEN NEEDED YOU WILL BE SAD. IF YOU USE A PHYSICAL ENDSTOP YOU MUST CHANGE THINGS TO HOME Z TO THE ENDSTOP PIN, NOT THE MIDDLE OF THE BED. YOU HAVE BEEN WARNED!
+IF YOU DO NOT READ THIS CAREFULLY AND ADJUST THINGS WHEN NEEDED YOU WILL BE SAD. IF YOU USE A PHYSICAL ENDSTOP YOU MUST CHANGE MACROS TO HOME Z TO THE ENDSTOP PIN, NOT THE MIDDLE OF THE BED. YOU HAVE BEEN WARNED!
 
 At the end of this document is a section with working examples you can use as a reference for some common hardware
 
