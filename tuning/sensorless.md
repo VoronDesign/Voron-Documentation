@@ -125,7 +125,7 @@ With those changes complete, save your configuration.
 
 ## Finding the appropriate driver value
 
-Recall earlier we set the driver threshhold to 255. This is the most sensitive value and will almost certainly NOT work for your use case. We now need to find the appropriate value, or rather, range of values that will work for you.
+Recall earlier we set the driver threshold to 255. This is the most sensitive value and will almost certainly NOT work for your use case. We now need to find the appropriate value, or rather, range of values that will work for you.
 
 Note that if at any time things seem off, PRESS EMERGENCY STOP. 
 
