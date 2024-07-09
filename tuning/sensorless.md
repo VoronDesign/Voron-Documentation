@@ -52,7 +52,7 @@ The `[homing_override]` block we have in the above macros is now going to be res
 
 While it sounds dangerous, there is nothing to be afraid of! Choosing this route means you do not need to do any of the macro stuff as listed above, as we can just simply add a new property in our X and Y driver section to handle homing current. Thats it!
 
-If you want to switch to Danger Klipper, now is the time to do so. You can follow [this](https://github.com/EricZimmerman/VoronTools/blob/main/DangerKlipper.md) to make the switch! Switching will not make you change anything else about your configutation.
+If you want to switch to Danger Klipper, now is the time to do so. You can [follow this other guide](https://github.com/EricZimmerman/VoronTools/blob/main/DangerKlipper.md) to make the switch! Switching will not make you change anything else about your configuration.
 
 
 # Updating your configuration
