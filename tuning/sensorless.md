@@ -21,7 +21,7 @@ Since this example revolves around an Octopus 1.1, you need to verify which diag
 
 1. Power off the printer gracefully
 2. Physically disconnect the X and Y endstop connections from the MCU.
-3. Plug in jumpers on the `DIAG` ports as shown below (**J16** and **J17**). We use these ports since thats the corresponding diag jumper for where our XY steppers are connected.
+3. Plug in jumpers on the `DIAG` ports as shown below (**J16** and **J17**). We use these ports since these are the corresponding diag jumpers for where our XY steppers are connected.
    
     ![image](images/sensorless/OctoDiag.png)
    
