@@ -159,7 +159,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
     ![chmod complete](images/backup/chmodDone.png)
 
-9. The script will also copy your orint statistics and history each time thr backup is made. This data is kept in a sqlite database
+9. The script will also copy your print statistics and history each time the backup is made. This data is kept in a sqlite database
 
 
 ### Initialize git
