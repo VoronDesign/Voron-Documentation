@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bed Mesh with Relative Reference Index
+title: (obsolete)Bed Mesh with Relative Reference Index
 parent: Tuning Guides
 nav_exclude: true
 ---

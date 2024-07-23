@@ -15,15 +15,15 @@ While using different slicers for different kinds of prints can be beneficial av
 
 ## Slicer Selection
 
-There are two slicers that come with built-in profiles for most Voron printers:
+There are three slicers that come with built-in profiles for most Voron printers:
 
 * Cura
 * SuperSlicer
+* OrcaSlicer
 
 Other slicers that can be configured to support Voron printers but do not have built-in support:
 
 * PrusaSlicer
-* OrcaSlicer
 * Simplify3D
 * Slic3r
 
@@ -32,10 +32,6 @@ Some slicers (e.g. PrusaSlicer) do not recognize the Klipper `PRINT_START` macro
 ## Slicer Profile Creation
 
 Both Cura and SuperSlicer (in current versions) have built-in profiles for V2 printers which can be setup using each software's normal processes. The V1 is similar enough to V2 that the profile can be re-used.
-
-There is also a Voron Design profile available for PrusaSlicer / SuperSlicer.
-
-* [Voron 2.4 - PrusaSlicer / SuperSlicer](https://github.com/VoronDesign/Voron-2/tree/Voron2.4/slicer_profiles/PrusaSlicer)
 
 ## Preheat and Start Sequences
 

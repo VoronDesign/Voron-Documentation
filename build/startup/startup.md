@@ -97,12 +97,7 @@ This guide provides a list of steps to help confirm the pin settings in the Klip
 
 During this guide, it may be necessary to make changes to the Klipper config file. Be sure to issue a ```RESTART``` command after every change to the config file to ensure that the change takes effect (type "restart" in the Octoprint or Mainsail terminal and then click "Send"). It's also a good idea to issue a ```STATUS```command after every ```RESTART``` to verify that the config file is successfully loaded.
 
-  
-
 Any time commands are requested to be issued, those will happen in the 'Terminal' or 'Console' tab of the OctoPrint, Mainsail, or Fluidd web UI, in the box for entering commands directly.
-
-
-
 
 <div class="defaulthide octoprintclass" markdown="1">
 ![](./images/octoprint_terminal_tab.png)
@@ -112,7 +107,6 @@ Any time commands are requested to be issued, those will happen in the 'Terminal
 <div class="defaulthide mainsailclass" markdown="1">
 ![](./images/mainsail_terminal.png)
 </div>
-  
 
 Any time movements need to be made, those will happen in the 'Control' tab / section of the Octoprint, Mainsail, or Fluidd web UI. The numbers underneath X, Y, and Z control the movement distance.
 
@@ -148,9 +142,7 @@ Verify that the temperature of the nozzle and bed are present and **not increasi
   * If your Thermistors are not working as they should (Rapidly changing temperatures for example). Double check all your crimps and wires. 
   * A Multimeter in continuity mode is a useful tool for this
   * You can also download your klipper log file and upload it to [Klippylyzer](https://klippylyzer.github.io/)
-  * If your Thermistors are not working as they should (Rapidly changing temperatures for example). Double check all your crimps and wires. 
-  * A Multimeter in continuity mode is a useful tool for this
-  * You can also download your klipper log file and upload it to [Klippylyzer](https://klippylyzer.github.io/)
+  * If the temperature is rising rapidly, the heater is probably powered for some reason.  This could indicate a wiring error, or an issue with the control board.
 </details>
 <br>
 </div>
@@ -816,7 +808,7 @@ Some dockable probe users choose to use their dockable probe as a "virtual endst
 Tap acts as a "virtual endstop".  This functionality will be tested in a later step, so the Z endstop may be safely ignored for now.
 </div>
 
-To check the Z endstop, manually press the z endstop until you hear a clicking sound. Check with `QUERY_ENDSTOPS` if the endstop works.
+To check the Z endstop, manually press the z endstop until you hear a clicking sound. Check with `QUERY_ENDSTOPS` whether the endstop works.
 
 
 <details  markdown="1">
