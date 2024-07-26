@@ -113,6 +113,8 @@ If it has been flashed properly the result should be similar to the one in the i
 
 * NOTE: your USB-ID will be different, but it should start with usb-Klipper-rp2040
 
+Copy this serial ID, it is unique to your MCU, you will need to add it to your printer.cfg file un the `[mcu]` section on the `serial:` line
+
 **Important:** If the Pico is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Pico will automatically shut down.
 
 ---
