@@ -132,8 +132,9 @@ gcode:
     G91
     G1 X-10 F1200
     
-    # Wait just a second… (give StallGuard registers time to clear)
-    G4 P1000
+    # Wait for current moves to finish (and give StallGuard registers time to clear)
+    M400
+
     # Set current during print
     SET_TMC_CURRENT STEPPER=stepper_x CURRENT={RUN_CURRENT_X}
     SET_TMC_CURRENT STEPPER=stepper_y CURRENT={RUN_CURRENT_Y}
@@ -153,8 +154,9 @@ gcode:
     G91
     G1 Y-10 F1200
 
-    # Wait just a second… (give StallGuard registers time to clear)
-    G4 P1000
+    # Wait for current moves to finish (and give StallGuard registers time to clear)
+    M400
+
     # Set current during print
     SET_TMC_CURRENT STEPPER=stepper_x CURRENT={RUN_CURRENT_X}
     SET_TMC_CURRENT STEPPER=stepper_y CURRENT={RUN_CURRENT_Y}
