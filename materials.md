@@ -8,6 +8,7 @@ parent: Sourcing Information
 
 When determining what materials to create the Voron printed parts from, there are a number of criteria that need to be considered.
 
+* The parts have been designed with ABS/ASA shrinkage in mind. This is built in to the parts already, so shrinkage should be set to 100%. Compensating for this is likely to make bearing fits and screw holes too large.
 * It is common for the chamber temperatures inside an enclosed Voron printer to reach 55–60 ºC. The material chosen should have a thermal deformation temperature or “glass temperature” that is at least 80 ºC.
 * The V2 gantry can become misaligned for a variety of reasons. Since the gantry is 4 points, that misalignment can cause flex in the AB drive units. It is recommended that the material for the AB drive units be able to handle that movement.
 
