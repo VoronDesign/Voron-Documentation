@@ -27,7 +27,7 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
 
 ## Sign into GitHub and create a new repository
 
-**NOTE**: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
+<strong>NOTE</strong>: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
 
 1. Sign into your GitHub account
 2. Create a new repository by clicking on the New button
@@ -63,13 +63,13 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
 2. Ensure `Tokens (classic)` is selected on the leftmost side, then create a new token via the `Generate new token` menu. Be sure to select the `classic option`
 
-    NOTE: If you are prompted to reauthenticate, do so. This is a safety measure as you are about to create a sensitive credential
+    <strong>NOTE</strong>: If you are prompted to reauthenticate, do so. This is a safety measure as you are about to create a sensitive credential
 
     ![New token](images/backup/newToken.png)
 
 3. Give your token a meaningful name, set the **Expiration** date to `No expiration`, and check the `workflow` and `read:org` under `admin:org` section
 
-    :warning: If you prefer to set an expiration date for your token, feel free to do so, but be aware you will have to regenerate a new token as things expire, as well as update some other settings that we have not got to yet :warning:
+    <strong>WARNING</strong>: If you prefer to set an expiration date for your token, feel free to do so, but be aware you will have to regenerate a new token as things expire, as well as update some other settings that we have not got to yet
 
     ![Token settings](images/backup/tokenSettings.png)
 
@@ -81,7 +81,7 @@ Next up, we need to generate a token that can be used to authenticate against ou
 
     This is your **ONE AND ONLY** chance to copy this key, so make sure you record it before leaving this screen.
 
-    NOTE: The image below has the key redacted. Yours will of course not look like that
+    <strong>NOTE</strong>: The image below has the key redacted. Yours will of course not look like that
 
     ![Copy token](images/backup/copyToken.png)
 
@@ -108,7 +108,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 2. Copy this newly crafted URL to your text editor. This is the URL we will be using in a later step.
 
-    :warning: :warning: :warning: **NEVER EVER** put the token you generated in any of the files that will be committed to GitHub! If you do so, GitHub will see it and (rightly) revoke your token! :warning: :warning: :warning:
+    <strong>WARNING</strong>: **NEVER EVER** put the token you generated in any of the files that will be committed to GitHub! If you do so, GitHub will see it and (rightly) revoke your token!
 
 
 ## Connect to your printer via SSH
@@ -126,13 +126,13 @@ We can now put the pieces together we have created so far. To make this easier, 
 3. Download the `autocommit.sh` file using the command below:
 
     ```bash
-    wget -O /home/pi/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
+    wget -O ~/printer_data/config/autocommit.sh https://raw.githubusercontent.com/EricZimmerman/VoronTools/main/autocommit.sh
     ```
 
 4. Edit the file for your particular use case using the command below. For example, if you use fluidd, uncomment the `fluidd_folder` line, comment out `mainsail_folder` and so on.
 
     ```bash
-    nano /home/pi/printer_data/config/autocommit.sh
+    nano ~/printer_data/config/autocommit.sh
     ```
 
     ![Editing autocommit.sh](images/backup/editSh.png)
@@ -153,11 +153,14 @@ We can now put the pieces together we have created so far. To make this easier, 
 
     This command will add execute permission for the owner of the file (you), group members, and all other users on the system. This makes it easy to run the script by different users, etc.
 
-    **WARNING**: If you edit this file from MainSail, the execute permission will be removed, and you will have to repeat the above command!
+    :boom: If you edit this file from MainSail, the execute permission will be removed, and you will have to repeat the above command!
 
 8. Type `ls -la autocommit.sh` and verify the new permissions. Note the `x` for user, group, and other. This is the execute permission we added in the previous step.
 
     ![chmod complete](images/backup/chmodDone.png)
+
+9. The script will also copy your print statistics and history each time the backup is made. This data is kept in a sqlite database
+
 
 ### Initialize git
 
@@ -173,7 +176,7 @@ We can now put the pieces together we have created so far. To make this easier, 
 
 2. Recall earlier that we generated an access token and crafted a special URL to our repository. Now we need to tell git to use this URL. Using the URL we generated in the last step of our GitHub work, run the following command:
 
-    NOTE: Be sure to use YOUR URL and not type what you see below or you will be disappointed with the results =)
+    <strong>NOTE</strong>: Be sure to use YOUR URL and not type what you see below or you will be disappointed with the results =)
 
     ```bash
     git remote add origin https://ghp_dKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX@github.com/EricZimmerman/Voron24Configs.git/
@@ -221,7 +224,7 @@ add entries to the file, specifying the file patterns and/or locations to ignore
 
     ![No changes](images/backup/noChanges.png)
 
-    **NOTE**: In the screenshots, the master branch is shown, but yours is most likely the main branch, as that is what GitHub uses as its default these days. Do not worry about this.
+    <strong>NOTE</strong>: In the screenshots, the master branch is shown, but yours is most likely the main branch, as that is what GitHub uses as its default these days. Do not worry about this.
 
     However, if you change any file in Mainsail, via nano, etc. and then rerun the `sh autocommit.sh` command, you will see it found your changes and sent them upstream! Here is an example after I edited `printer.cfg`:
 
@@ -263,7 +266,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 
     ```bash
     [gcode_shell_command backup_cfg]
-    command: /usr/bin/bash /home/pi/printer_data/config/autocommit.sh
+    command: ~/printer_data/config/autocommit.sh
     timeout: 30
     verbose: True
 
@@ -282,7 +285,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 5. Finally, execute the following to download the latest version of the `gcode_shell_command` script
 
     ```bash
-    wget -O /home/pi/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
+    wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
     ```
 
     You can optionally use `kiauh`, via option `4`, then option `8` to accomplish this. For more info on kiauh, go <a href="https://github.com/th33xitus/kiauhhttps://github.com/th33xitus/kiauh" target="_blank">here</a>
@@ -327,54 +330,55 @@ which can then be added to your crontab file via the `crontab -e` command by pas
 
 # Restoring from your backup
 
-
 This is written assuming a fresh install but steps can be omitted if previously completed on the current install.
 
-<blockquote><strong>Note</strong>
-<p>Only files which have been backed up can be restored, if during setup you created exclusions then  those files/directories will be omitted </blockquote>
-
+<strong>WARNING</strong>: Only files which have been backed up can be restored, if during setup you created exclusions then those files/directories will be omitted
 
 ## The Restore Process
 
 1. Open an SSH terminal to your printer
 
 2. Configure your global credentials
-    ```bash
+
+   ```bash
     git config --global user.email "your@email.com"
     git config --global user.name "your name"
     ```
 
     ![global creds](images/backup/restore-credentials.png)
 
-3. Move the "default" `~/printer_data/config` folder so we can restore to that location.
+3. Generate yourself a new [Github Access Token](#generate-an-access-token) but stop where it says to connect to SSH (we already did that ;)
+
+4. Run the following commands to restore the files from your latest GitHub commit back to your printer:
+
    ```bash
-   mv ~/printer_data/config ~/printer_data/config_default
-   ```
-
-   ![move default](images/backup/restore_defaultfiles.png)
-
-
-4. Generate yourself a new [Github Access Token](#generate-an-access-token) but stop where it says to connect to SSH (we already did that ;)
-
-5. Clone the backup from Github using the following command (substituting your own values)
-    ```bash
-    git clone https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git ~/printer_data/config
+    cd ~/printer_data/config
+    git init -b main
+    git remote add origin https://<new github access token>@github.com/<yourname>/<yourbackuprepo>.git
+    git fetch
+    git reset origin/main
+    git reset --hard HEAD
     ```
-
+   
    for example
 
     ```bash
-    git clone https://supersecrettoken@github.com/maz0r/v2615_backup.git ~/printer_data/config
+    cd ~/printer_data/config
+    git init -b main
+    git remote add origin https://<token>@github.com/EricZimmerman/Voron02.git
+    git fetch
+    git reset origin/main
+    git reset --hard HEAD
     ```
 
     ![restore success](images/backup/restore_clone.png)
-
 
 ## Post restore clean up
 
 At this point your automated backups are not enabled on the new install so we need to do a little cleanup.
 
 1. Verify that your ~/printer_data/config/autocommit.sh works
+
    ```bash
    cd ~/printer_data/config/
    ./autocommit.sh
@@ -384,6 +388,6 @@ At this point your automated backups are not enabled on the new install so we ne
    ![success!](images/backup/restore_success.png)
 
 
-2. Add "gcode_shell_command.py per step 5 under [Adding the backup to a macro](#adding-the-backup-to-a-macro).
-3. (optional) Add a cron job to backup on a set interval per [Automatic backups via crontab](#automating-via-crontab-optional)
-4. Test the backup [macro from mainsail](#running-things-from-mainsail)
+3. Add "gcode_shell_command.py per step 5 under [Adding the backup to a macro](#adding-the-backup-to-a-macro).
+4. (optional) Add a cron job to backup on a set interval per [Automatic backups via crontab](#automating-via-crontab-optional)
+5. Test the backup [macro from mainsail](#running-things-from-mainsail)

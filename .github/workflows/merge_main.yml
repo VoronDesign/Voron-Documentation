@@ -25,20 +25,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Attempt the merge
-        id: merge_one
-        continue-on-error: true
+      - name: Regular merge attempt
+        if: ${{ github.event.inputs.force == 'false' }}
         run: |
           git checkout ${{ inputs.targetBranch }}
           git merge main --ff-only
           git push
-      - name: Force merge if necessary
-        if: ${{ job.steps.merge_one.status == failure() && github.event.inputs.force == 'true' }}
+      - name: Force merge attempt
+        if: ${{ github.event.inputs.force == 'true' }}
         run: |
           git checkout ${{ inputs.targetBranch }}
           git reset --hard main
-          git push --force  
-      - name: Properly fail if force is false
-        if: ${{ job.steps.merge_one.status == failure() && github.event.inputs.force == 'false' }}
-        run: exit 1
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          git push --force

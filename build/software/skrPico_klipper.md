@@ -76,7 +76,7 @@ The last step is to copy the file you saved above (klipper.uf2) onto the Skr Pic
 Now, unplug the Pico from the PC, remove the jumpers, plug it into your Raspberry Pi, push the reset button, and check if it’s been flashed properly by running the following command:
 
 ```bash
-ls /dev/serial/by-id
+ls /dev/serial/by-id/*
 ```
 
 ![Serial ID](./images/SKR_pico_by-id_output.png)
@@ -104,7 +104,7 @@ Next remove the jumpers that were installed earlier and reset the SKR Pico
 Run this command to receive the USB-ID for the SKR Pico
 
 ```bash
-ls /dev/serial/by-id
+ls /dev/serial/by-id/*
 ```
 
 If it has been flashed properly the result should be similar to the one in the img below. 
@@ -112,6 +112,8 @@ If it has been flashed properly the result should be similar to the one in the i
 ![Serial ID](./images/SKR_pico_by-id_output.png)
 
 * NOTE: your USB-ID will be different, but it should start with usb-Klipper-rp2040
+
+Copy this serial ID, it is unique to your MCU, you will need to add it to your printer.cfg file un the `[mcu]` section on the `serial:` line
 
 **Important:** If the Pico is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Pico will automatically shut down.
 
