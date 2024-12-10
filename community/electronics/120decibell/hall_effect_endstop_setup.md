@@ -13,7 +13,7 @@ The hall effect endstop board is a non-mechanical alternative to the X and Y end
 ## Requirements
 
 * The alternate Z joint "z\_joint\_upper\_hall\_effect" must be printed, quantity 1.
-* The alternate endstop pod "[a]\_endstop\_pod\_hall|_effect" must be printed, quantity 1.
+* The alternate endstop pod "[a]\_endstop\_pod\_hall\_effect" must be printed, quantity 1.
 * 4 wires must be installed into the cable chain.
 
 ## Wiring

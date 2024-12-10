@@ -8,6 +8,7 @@ parent: Sourcing Information
 
 When determining what materials to create the Voron printed parts from, there are a number of criteria that need to be considered.
 
+* The parts have been designed with ABS/ASA shrinkage in mind. This is built in to the parts already, so shrinkage should be set to 100%. Compensating for this is likely to make bearing fits and screw holes too large.
 * It is common for the chamber temperatures inside an enclosed Voron printer to reach 55–60 ºC. The material chosen should have a thermal deformation temperature or “glass temperature” that is at least 80 ºC.
 * The V2 gantry can become misaligned for a variety of reasons. Since the gantry is 4 points, that misalignment can cause flex in the AB drive units. It is recommended that the material for the AB drive units be able to handle that movement.
 
@@ -21,7 +22,10 @@ PETG has a glass temperature of around 85 ºC. It has moderate stiffness dependi
 
 ## ABS
 
-ABS has a glass temperature of around 90 ºC. It has moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  Both of the variants ASA and ABS+ are also fully supported.
+ABS has a glass temperature of around 90 ºC. It has moderate stiffness and moderate ductility.  It is the primary recommended material for Voron printers due to the high temperature rating and moderate ductility.  This allows for the parts to hold up in a higher temperature environment well yet endure some flex without cracking.  The variant ASA is also fully supported.
+
+Note on ABS+ and other blended ABS products:  
+ABS comes from a well-known basic chemical formula (Acrylonitrile Butadiene Styrene), however manufacturers of ABS+ filament don’t offer us much information on what makes their filaments “Plus”. Some brands claim reduced odor and toxic fumes, which may be related to a lower percentage of styrene. the variability in the chemical composition of ABS+ filaments means that consistency across brands cannot be guaranteed. As such, ABS+ is not recommended for new builds given the unknown mechanical properties.
 
 ## Nylon
 
