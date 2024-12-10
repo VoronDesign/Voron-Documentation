@@ -223,7 +223,7 @@ In certain circumstances (mostly involving re-imaging your pi), you may encounte
 If you don't think anything should have changed, its worth checking that you're actually trying to connect to the device you meant to connect to.
 If you know that it makes sense your pi's ID has changed, such as the pi being a new setup, it is safe to resolve this by simply deleting the old, conflicting key off your computer.
 
-`ssh-keygen -R <hostname>` will take care of this.  for example, if your pi is `mainsailos.local`, you would do `ssh-keygen -R <hostname>`
+`ssh-keygen -R <hostname>` will take care of this.  for example, if your pi is `mainsailos.local`, you would do `ssh-keygen -R mainsailos.local`
 
 ### Finding a device's IP Address
 

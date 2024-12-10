@@ -5,7 +5,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -65,4 +66,8 @@ fp-info-cache
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# local test build stuff
+_site
+
 
