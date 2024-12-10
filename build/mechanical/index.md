@@ -79,8 +79,8 @@ has_children: true
 
 ## Trident (Replaces V1)
 
-[Trident Assembly Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Assembly_Manual_Trident.pdf)
-[V1 Upgrade Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Frame_Upgrade_Trident.pdf)
+* [Trident Assembly Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Assembly_Manual_Trident.pdf)
+* [V1 Frame Upgrade Manual](https://github.com/VoronDesign/Voron-Trident/raw/main/Manual/Frame_Upgrade_Trident.pdf)
 
 ## V2
 
