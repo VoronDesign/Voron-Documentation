@@ -28,7 +28,11 @@ sudo tailscale up
     ![](images/RemoteAccessToYourVoron/Tailscale/step3-1.png)
     ![](images/RemoteAccessToYourVoron/Tailscale/step3-2.png)
 4. Install Tailscale on your client device(s), such as your laptop or phone. Once again, see the instructions](https://tailscale.com/download) provided by Tailscale.
-5. Once you have the client and logged in on two devices, if you navigate (or SSH) to the VPN IP address, you should be able to access the web interface!
+5. Add the Tailscale IP range (100.0.0.0/8) to the Moonraker authorized IP configuration file.
+    * Navigate to your Mainsail machine settings and edit `moonraker.conf`.
+    * Under the `[authorization]` -> `trusted_clients` section, add `100.0.0.0/8`.
+    * Save the changes and restart.
+6. Once you have the client and logged in on two devices, if you navigate (or SSH) to the VPN IP address, you should be able to access the web interface!
     ![](images/RemoteAccessToYourVoron/Tailscale/step5.png)
 
 ## Getting Started with ZeroTier
