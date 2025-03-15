@@ -30,9 +30,9 @@ Since this example revolves around an Octopus 1.1, you need to verify which diag
 
 ## Choose your own adventure
 
-Here we come to a choice. Do you want to use stock Klipper and macros to control homing, or do you want to switch to an alternate version of Klipper, named Danger Klipper (do not worry. its not really dangerous)?
+Here we come to a choice. Do you want to use stock Klipper and macros to control homing, or do you want to switch to an alternate version of Klipper, named Kalico?
 
-The Danger Klipper route will make things simpler from the configuration side, but in the end, your printer will home either way without too much fuss. Pick ONE of the two options below, either Stock Klipper or Danger Klipper.
+The Kalico route will make things simpler from the configuration side, but in the end, your printer will home either way without too much fuss. Pick ONE of the two options below, either Stock Klipper or Kalico.
 
 ### Stock Klipper
 
@@ -48,11 +48,47 @@ In this path, you will need to download some macros dependong on your printer. I
 
 The `[homing_override]` block we have in the above macros is now going to be responsible for all homing, whether via the buttons in Mainsail or Fluidd, or via commands like G28 X, etc. This override allows us, the end user, to customize how the homing operation happens. When using sensorless, this is important, as it lets us adjust things like the current used for homing, etc. More on this later.
 
-### Danger Klipper
+### Kalico (formerly known as Danger Klipper)
 
-While it sounds dangerous, there is nothing to be afraid of! Choosing this route means you do not need to do any of the macro stuff as listed above, as we can just simply add a new property in our X and Y driver section to handle homing current. Thats it!
+Choosing this route means you do not need to do any of the macro stuff as listed above, as we can just simply add a new property in our X and Y driver section to handle homing current. Thats it!
 
-If you want to switch to Danger Klipper, now is the time to do so. You can [follow this other guide](https://github.com/EricZimmerman/VoronTools/blob/main/DangerKlipper.md) to make the switch! Switching will not make you change anything else about your configuration.
+If you want to switch to Kalico, now is the time to do so. You can [follow this other guide](https://github.com/EricZimmerman/VoronTools/blob/main/Kalico.md) to make the switch! Switching will not make you change anything else about your configuration.
+
+Kalico example (from a v0.2, running a Manta 5p, and 2240 drivers):
+
+Note how the homing current can be specified without the need for macros, etc. For other examples of Kalico see [here](https://github.com/EricZimmerman/Voron24/blob/master/config/XY.cfg) and [here](https://github.com/EricZimmerman/PandorasBox/blob/main/config/XY.cfg).
+
+```
+[stepper_x] #A, motor 2
+step_pin: PA10
+dir_pin: PA14
+enable_pin: !PA13
+rotation_distance: 40
+microsteps: 32
+full_steps_per_rotation: 200
+endstop_pin: tmc2240_stepper_x:virtual_endstop
+position_endstop: 120
+position_max: 120
+homing_speed: 80
+homing_retract_dist: 60
+min_home_dist: 40
+homing_positive_dir: true
+use_sensorless_homing: true
+
+[tmc2240 stepper_x]
+cs_pin: PD8
+spi_software_miso_pin: PB14
+spi_software_mosi_pin: PB15
+spi_software_sclk_pin: PB13
+interpolate: True
+run_current: 0.85
+home_current: 0.5
+current_change_dwell_time: 0.2
+rref: 12000
+stealthchop_threshold: 0
+diag0_pin: ^!PD2
+driver_SGT: 1
+```
 
 
 # Updating your configuration
@@ -83,7 +119,7 @@ You may also need to tweak the `diag_pin` property to be either `diag0_pin` or `
     Example: `diag_pin: ^PG6`
 8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
 
-For those of you that took the Danger Klipper route above, add these lines below your `run_current` property:
+For those of you that took the Kalico route above, add these lines below your `run_current` property:
 
 ```
 home_current: 0.49
@@ -104,7 +140,7 @@ The first property sets the current to use when doing sensorless homing. The sec
     Example: `diag_pin: ^PG9`
 8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
 
-For those of you that took the Danger Klipper route above, add this line below your `run_current` property:
+For those of you that took the Kalico route above, add this line below your `run_current` property:
 
 ```
 home_current: 0.49
@@ -195,9 +231,9 @@ Once homed, move away from the rail again.
 ```
 Finally, restore our motor's run current we captured before. 
 
-### Danger Klipper details
+### Kalico details
 
-Nothing to see here. Danger Klipper manages the process
+Nothing to see here. Kalico manages the process
 
 
 
@@ -401,7 +437,7 @@ driver_SGTHRS: 125 # 255 is most sensitive value, 0 is least sensitive
 
 ### Manta M8P v1.1 with BTT 5160 PROs
 
-Note that this example uses Danger Klipper, (use_sensorless_homing: True, home_current: 0.4, etc), so some of those parameters will not exist/be valid if not using DK
+Note that this example uses Kalico, (use_sensorless_homing: True, home_current: 0.4, etc), so some of those parameters will not exist/be valid if not using Kalico
 
 ```
 [stepper_x]
