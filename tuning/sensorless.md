@@ -2,7 +2,7 @@
 layout: default
 title: Configuring sensorless homing
 parent: Tuning Guides
-nav_exclude: true
+nav_exclude: false
 ---
 
 This writeup covers how to set up sensorless homing on an Octopus 1.1 with 2209 drivers. Different drivers and/or MCUs may differ. Adjust accordingly.
