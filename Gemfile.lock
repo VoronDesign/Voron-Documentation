@@ -265,7 +265,6 @@ GEM
       unf_ext
     unf_ext (0.0.9.1)
     unicode-display_width (1.8.0)
-    webrick (1.8.1)
 
 PLATFORMS
   x86_64-linux
@@ -273,7 +272,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   just-the-docs
-  webrick (~> 1.8)
 
 BUNDLED WITH
    2.4.22
