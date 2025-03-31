@@ -96,6 +96,25 @@ There are multiple options for getting this firmware file installed onto your Sp
 
 **Important:** If the Spider is not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the Spider will automatically shut down.
 
+# Firmware Updates
+It is a normal and expected behavior, that updating klipper (on the pi) will sometimes also require you to update the klipper firmware on the Spider. Klipper will not do this for you automatically.  One option is to simply repeating the full flashing process as seen above.  However, this is often inconvenient, since it requires physical access to the MCU.
+
+{: .note }
+The technique shown below only applies to updating an mcu which is already running klipper firmware.  It cannot be used for new installs
+
+Instead, you can update the Spider using a slight variation of the  DFU flashing technique shown above
+
+1. build the firmware, as shown above
+2. Determine the full ID of your MCU, either from printer.cfg, or from the command `ls /dev/serial/by-id/*`.  It should look something like `/dev/serial/by-id/usb-Klipper_stm32f446xx_1D0004001050563046363120-if00`
+3. run  the commands:
+```bash
+sudo service klipper stop
+cd ~/klipper
+make flash FLASH_DEVICE=<insert serial id here>
+sudo service klipper start
+```
+so, with our example serial ID, the 3rd line would look like: `make flash FLASH_DEVICE=/dev/serial/by-id/usb-Klipper_stm32f446xx_1D0004001050563046363120-if00`
+
 ---
 
 ### Back to [Software Installation](./index.md#klipper-octoprint-configuration)
