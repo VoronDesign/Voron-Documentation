@@ -186,11 +186,6 @@ Add the following entries to your printer.cfg:
 [include fluidd.cfg]
 ```
 
-> ### Community References
->
-> [Calculating Driver Current Settings](../../community/howto/120decibell/calculating_driver_current.md)
->
-
 ### Restart to take effect
 
 Under Mainsail or Fluidd's console, or Octoprint's terminal tab type `FIRMWARE_RESTART` and press enter to send the command to restart Klipper.
