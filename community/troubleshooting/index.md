@@ -15,3 +15,4 @@ nav_order: 2
 | [Rail Misalignment Causing Twist](./badnoob/rail_misalignment_causing_twist.md) | badnoob |
 | [Twisted X Extrusion Diagnostics](./bryansj/twisted_x_extrusion_diagnostics.md) | Bryansj |
 | [Bed Causing Lights to Flicker](./cat40/lights_flickering.md) | cat40 |
+| [Fixing a Wonky Trident Bed Mesh](./thor/trident-wonky-bedmesh.md) | thor |
