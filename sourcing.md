@@ -31,9 +31,9 @@ The recommended accent parts are denoted with a "[a]_" in the filename. Many of 
 
 Filenames that end with "_x#", indicate that the part must be printed multiple times (ie. x2, x4, etc.)
 
-Typical printers require approximately 1.5kg of the primary color and 0.3kg of the alternate color, assuming no failed or reprinted parts. Most people end up reprinting a few parts and a few mods, so plan on 2kg of the primary color.
+Typical printers require approximately 1.5kg of the primary color and 0.3kg of the alternate color, assuming no failed or reprinted parts. Most people end up reprinting a few parts and a few mods, so plan on 2kg of the primary color. Refer to the table [here](./sourcing_faq.md) for your specific model.
 
-For informtion on selecting parts to print, clarification of colors and quantities, and even what parts PIF will provide, see the [Printed Part Reference](https://docs.google.com/spreadsheets/d/1njgHapSZLiQHobrEVkeuAuhhDsXzFOJOiIpvfVFeGxQ/edit?usp=sharing) spreadsheet.
+For information on selecting parts to print, clarification of colors and quantities, and even what parts PIF will provide, see the [Printed Part Reference](https://docs.google.com/spreadsheets/d/1njgHapSZLiQHobrEVkeuAuhhDsXzFOJOiIpvfVFeGxQ/edit?usp=sharing) spreadsheet.
 
 ### Print Settings
 
@@ -41,12 +41,11 @@ These are the recommended settings.
 
 - Layer height: 0.2mm
 - Extrusion width: 0.4mm, forced
-- Infill pecentage: 40%
+- Infill percentage: 40%
 - Infill type: grid, gyroid, honeycomb, triangle, or cubic
 - Wall count: 4
 - Solid top/bottom layers: 5
 - Supports: NONE
-
 
 ## Ordering Parts
 
@@ -110,9 +109,9 @@ _It might be possible to build, troubleshoot, and tune a Voron without this list
 * Multimeter
 * Metric calipers, 6"/150mm
 * Crimpers
-	* Molex Crimpers (Good: IWISS IWS-3220M, Better: Engineer PA-09, Best: Molex Crimper)
-	* Ferrule Crimpers
-	* Terminal Crimpers
+  * Molex Crimpers (Good: IWISS IWS-3220M, Better: Engineer PA-09, Best: Molex Crimper)
+  * Ferrule Crimpers
+  * Terminal Crimpers
 
 ### Helpful / Nice To Have Tools
 

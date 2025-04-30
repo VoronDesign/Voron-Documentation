@@ -1,9 +1,10 @@
 layout: default
 name: Voron Documentation
+title: Voron Documentation
 description: Voron Official and Community Documentation
 logo: "/images/voron_design_logo.png"
 markdown: kramdown
-remote_theme: pmarsceill/just-the-docs
+remote_theme: just-the-docs/just-the-docs
 color_scheme: voron-dark
 search_enabled: true
 search.button: true
@@ -12,4 +13,17 @@ aux_links:
     - "https://github.com/VoronDesign/Voron-Documentation"
   "VoronDesign Home":
     - "https://vorondesign.com"
+
+callouts:
+  warning:
+    title: Warning
+    color: voron-red
+  note:
+    title: Note
+    color: grey-lt
+
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "10.2.4"
 

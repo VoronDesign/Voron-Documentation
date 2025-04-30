@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron V0 - SKR mini E3 V1.2 Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -23,8 +25,7 @@ nav_exclude: true
 * Wire 24V and -V from DC power supply to VIN and GND
 * Connect USB Cable to your SKR mini E3, but do not connect it yet to your Raspberry Pi
 
-![](./images/v0-miniE3-v12-mcu.png)
-
+![SKR mini E3 V1.2 MCU](./images/v0-miniE3-v12-mcu.png)
 
 ### Wiring for MagicStudios / Knacro 1-Channel SSR
 
@@ -32,9 +33,8 @@ The MagicStudios / Knacro SSR requires 3 wires instead of the 2 referenced above
 
 ![Knacro Wiring](./images/knacro_ssr_wiring_diagram.png)
 
-
 ## Mini E3 V1.2 Pinout
 
 For reference, here is the pinout of the SKR mini E3 V1.2
 
-![](./images/miniE3-V12-pinout.png)
+![SKR mini E3 V1.2 Pinout](./images/miniE3-V12-pinout.png)
