@@ -8,7 +8,7 @@ nav_exclude: true
 
 The firmware update process for both SKR 1.3 and SKR 1.4 is the same so the guides have been combined.
 
-### Required Items
+## Required Items
 
 * Klipper must be installed onto the Raspberry Pi
 * At least one microSD card needs to be available depending on number of controllers.
@@ -18,7 +18,7 @@ The firmware update process for both SKR 1.3 and SKR 1.4 is the same so the guid
 * Login to the Raspberry Pi
 * Run the following:
 
-```
+```bash
 sudo apt install make
 cd ~/klipper
 make menuconfig
@@ -41,16 +41,16 @@ Once the configuration is selected, select "Exit" and "Yes" if asked to save the
 
 Run the following:
 
-```
+```bash
 make clean
 make
 ```
 
 The `make` command, when completed, creates a firmware file **klipper.bin** which is stored in the folder `/home/pi/klipper/out`.  This file needs to be copied to both of the SKR boards.  The easiest way to do this is to use a GUI like [WinSCP](https://winscp.net/eng/download.php) on Windows or either [Cyberduck](https://cyberduck.io) or scp (from terminal) on Mac to copy the file to your computer.
 
-![](./images/cyberduck_example.png)
+![Cyberduck software example](./images/cyberduck_example.png)
 
-### Load Firmware Image
+## Load Firmware Image
 
 Copy the **klipper.bin** to the desktop, then rename it to **firmware.bin**
 
@@ -69,5 +69,7 @@ Replace the microSD card(s) into the SKR(s).  If more than one, it does not matt
 Turn on the power supply to power on the SKR board(s).  If named properly, the SKR will automatically update with the Klipper firmware.
 
 **Important:** If the SKR(s) are not powered with 12-24V, Klipper will be unable to communicate with the TMC drivers via UART and the SKR will automatically shut down.
+
+---
 
 ### Back to [Software Installation](./index.md#klipper-octoprint-configuration)

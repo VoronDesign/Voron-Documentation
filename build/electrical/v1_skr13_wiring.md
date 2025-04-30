@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron V1 - SKR 1.3 Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -10,7 +12,7 @@ nav_exclude: true
 
 * Reconfigure the on-board jumpers as shown.
 
-![](./images/skr13-preparation.png)
+![SKR 1.3 preparation](./images/skr13-preparation.png)
 
 ## MCU
 
@@ -32,10 +34,10 @@ nav_exclude: true
 * Wire 24V and 0V from DC power supply to Power In
 * Connect USB Cable to your SKR 1.4, but do not connect it yet to your Raspberry Pi
 
-![](./images/v1-skr13-mcu.png)
+![SKR 1.3 MCU](./images/v1-skr13-mcu.png)
 
 ## SKR 1.3 Pinout
 
 For reference, here is the pinout of the SKR 1.3
 
-![](./images/SKR-V1.3-pinout.jpg)
+![SKR 1.3 Pinout](./images/SKR-V1.3-pinout.jpg)

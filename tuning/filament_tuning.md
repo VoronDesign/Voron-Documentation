@@ -17,7 +17,7 @@ Some slicers (such as SuperSlicer) have a number of these process steps built-in
 
 The first step with any process is to identify the ideal temperature for the filament.  The most common process is to print a temperature tower.  A temperature tower help identify the ideal temperature for a filament.
 
-Take note - with enclosures, some filaments such as PLA may need to have the doors opened and the exhaust fan running (and even the sides removed) in order to keep the enclosure cool enough.  Be sure to experiement with your setup.
+Take note - with enclosures, some filaments such as PLA may need to have the doors opened and the exhaust fan running (and even the sides removed) in order to keep the enclosure cool enough.  Be sure to experiment with your setup.
 
 ## Extrusion Rate
 

@@ -22,7 +22,7 @@ cp /tmp/klippy.log .
 
 The script will extract the printer config file and MCU shutdown information to work_directory.
 
-_Mainsail and Fluidd have built-in tools to extract and downlaod the klippy.log._
+_Mainsail and Fluidd have built-in tools to extract and download the klippy.log._
 
 #### TMC UART Error
 

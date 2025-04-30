@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## Set range of pixels to single color
    -Set the color of a selection of LED's in a neopixel string. Sets the color of LEDs from position INDEX to INDEX+COUNT to the color submitted.
-```ini
+```
 [gcode_macro SET_LED_LENGTH]
 description: SET_LED_LENGTH LED=<config_name> RED=<value> GREEN=<value> BLUE=<value> WHITE=<value> INDEX=<indexToStart> COUNT=<numberOfPixels>
 gcode: 
@@ -27,7 +27,7 @@ gcode:
 
 ## Update Idle_timout with Hours Minutes and Seconds
    -Takes in hours, minutes, and seconds and converts it to seconds for an easy way to update idle_timeout.
-```ini
+```
 [gcode_macro UPDATE_IDLE_TIMEOUT]
 description: Send `UPDATE_IDLE_TIMEOUT [H=<value>] [M=<value>] [S=<value>] ` to set the Hours, Minutes, and Seconds for Idle_Timout. Passing no paramaters will return it to the config default value.
 gcode:
@@ -46,7 +46,7 @@ gcode:
 ## Delay command with hours, minutes, and seconds.
    -Takes in hours, minutes, and seconds and converts it to millisceonds for an easy way to delay an exact time.
    
-```ini
+```
 [gcode_macro DELAY]
 description: Send `DELAY [H=<value>] [M=<value>] [S=<value>] [P=<value>] ` to set the Hours, Minutes, and Seconds for a delay. Passing no paramaters will not have any delay.
 gcode:

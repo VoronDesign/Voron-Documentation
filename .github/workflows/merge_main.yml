@@ -1,0 +1,39 @@
+name: Merge main into testing/live
+run-name: ${{ github.actor }} is merging ${{ github.ref }} into ${{ inputs.targetBranch }} 🚀
+on: 
+  workflow_dispatch:
+    inputs:
+      targetBranch:
+        description: 'Target Branch'
+        required: true
+        default: 'testing'
+        type: choice
+        options:
+        - testing
+        - live
+      force:
+        description: 'Force sync (hard reset to main)'
+        required: true
+        default: false
+        type: boolean
+jobs:
+  manual_merge:
+    if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Regular merge attempt
+        if: ${{ github.event.inputs.force == 'false' }}
+        run: |
+          git checkout ${{ inputs.targetBranch }}
+          git merge main --ff-only
+          git push
+      - name: Force merge attempt
+        if: ${{ github.event.inputs.force == 'true' }}
+        run: |
+          git checkout ${{ inputs.targetBranch }}
+          git reset --hard main
+          git push --force

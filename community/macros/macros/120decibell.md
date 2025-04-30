@@ -5,7 +5,7 @@ nav_exclude: true
 ---
 
 <!-- {% raw %} -->
-```ini
+```
 # Conditional G28 (home if not already homed)
 [gcode_macro CG28]
 gcode:

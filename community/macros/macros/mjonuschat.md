@@ -17,7 +17,7 @@ A config snippet/macro for a LED strip with individually adresseable pixels
 This is based on the [default configuration](https://github.com/Klipper3d/klipper/blob/342d3f1414f905fc85ea14a125463ff2df4e9b51/klippy/extras/display/menu.cfg#L297)
 included with Klippy, only the input step size has been increased to 10%.
 
-```ini
+```
 [menu __main __control __caselightpwm]
 type: input
 enable: {'output_pin caselight' in printer}
@@ -45,7 +45,7 @@ channel as well to determine if the strip is currently on.
 
 ### Macros
 
-```ini
+```
 [gcode_macro _SET_CASE_LEDS]
 description: Helper: Set the color for a segment of the case led strip.
 gcode:
@@ -59,21 +59,21 @@ gcode:
     SET_LED_LENGTH LED=case_leds RED={r} GREEN={g} BLUE={b} WHITE={w} INDEX={idx} COUNT={cnt}
 ```
 
-```ini
+```
 [gcode_macro _CASELIGHT_ON]
 description: Helper: Light on
 gcode:
   _SET_CASE_LEDS W=1.0
 ```
 
-```ini
+```
 [gcode_macro _CASELIGHT_OFF]
 description: Helper: Light off
 gcode:
   _SET_CASE_LEDS W=0
 ```
 
-```ini
+```
 [gcode_macro CASELIGHT]
 description: Toggle case light
 gcode:
@@ -87,7 +87,7 @@ gcode:
 
 ### MINI12864 LCD menu configuration
 
-```ini
+```
 [menu __main __control __caselightpwm]
 type: input
 enable: {'neopixel case_leds' in printer}
@@ -120,7 +120,7 @@ gcode:
 Send `UPDATE_DELAYED_GCODE ID=_CLEAR_DISPLAY DURATION=<seconds>` to clear the
 last message after N seconds.
 
-```ini
+```
 [delayed_gcode _CLEAR_DISPLAY]
 gcode:
   M117

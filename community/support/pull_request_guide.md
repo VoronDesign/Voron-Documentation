@@ -7,7 +7,7 @@ nav_order: 8
 
 # Pull Request Guide
 
-The following is a basic guide for creating pull requests for submtting to any of the Voron repositories such as Documentation and UserMods.
+The following is a basic guide for creating pull requests for submitting to any of the Voron repositories such as Documentation and UserMods.
 
 1. Create a github user if you don't have one already.
 2. Browse to the Voron github repo, either VoronUsers or Voron-Documentation.

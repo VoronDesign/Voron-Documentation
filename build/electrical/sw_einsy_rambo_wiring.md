@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron Switchwire - Einsy Rambo Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -16,10 +18,9 @@ nav_exclude: true
 * Plug Bed Thermistor in to thermistor T2 (PF2)
 * Connect Bed Heater to Bed Output (PG5)
 * Connect X end stop to X-MIN (PB6)
-* _Y Endstop is not used._
-* Connect inductive probe to Probe input (PB4), on pins +, -, and 's' on the drawing.  _Pin 1 (T) is unused._
+* *Y Endstop is not used.*
+* Connect inductive probe to Probe input (PB4), on pins +, -, and 's' on the drawing. *Pin 1 (T) is unused.*
 * Wire +V and -V from DC power supply to both Power Input and Bed Power Input.
 * Connect USB Cable, but do not connect it yet to your Raspberry Pi
 
-![](./images/EinsyRambo1.1a-connections.jpg)
-
+![Einsy Rambo 1A connections](./images/EinsyRambo1.1a-connections.jpg)

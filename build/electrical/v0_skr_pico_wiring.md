@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Voron V0.1 - SKR Pico v1.0 Wiring"
+parent: Electrical Wiring
+grand_parent: The Build
 nav_exclude: true
 ---
 
@@ -22,11 +24,10 @@ nav_exclude: true
 * Wire 24V and -V from DC power supply to POWER
 * Connect USB Cable to your SKR Pico, but do not connect it yet to your Raspberry Pi
 
-![](.images/../images/Voron0.1_Wiring_Diagram_SKR_PICO_V1.0.jpg)
-
+![SKR Pico wiring diagram for Voron V0](.images/../images/Voron0.1_Wiring_Diagram_SKR_PICO_V1.0.jpg)
 
 ## SKR Pico Pinout
 
 For reference, here is the pinout of the BTT SKR Pico
 
-![](./images/skr-pico-pinout.png)
+![SKR Pico Pinout](./images/skr-pico-pinout.png)
