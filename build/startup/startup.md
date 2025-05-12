@@ -71,7 +71,7 @@ Please follow each step closely and once ready, click the "I am done, let's move
     </label>
   </div>
 
-  <div class="form-check">
+  <div id="TapSelect" class="form-check">
     <input class="form-check-input" type="radio" name="probeSelect" id="tap">
     <label class="form-check-label" for="tap">
       Tap

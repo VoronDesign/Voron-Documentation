@@ -88,6 +88,13 @@ function checkstatus() {
     });
   }
 
+  if (modelparam == "vsw") {
+    $(document).ready(function(){
+       document.getElementById("TapSelect").style.display = "none";
+    });
+  }
+
+
     //unblock buttons on page 1 and block on page 0
     if (currentstep == 0) {
       document.getElementById("button-next").style.display="none";
