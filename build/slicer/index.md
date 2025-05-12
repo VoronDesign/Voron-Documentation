@@ -15,19 +15,20 @@ While using different slicers for different kinds of prints can be beneficial av
 
 ## Slicer Selection
 
-There are three slicers that come with built-in profiles for most Voron printers:
+There are at least four slicers that come with built-in profiles for most Voron printers:
 
+* Prusaslicer
 * Cura
 * SuperSlicer
 * OrcaSlicer
 
 Other slicers that can be configured to support Voron printers but do not have built-in support:
 
-* PrusaSlicer
 * Simplify3D
 * Slic3r
+* KissSlicer
 
-Some slicers (e.g. PrusaSlicer) do not recognize the Klipper `PRINT_START` macro as a valid start macro and add an additional bed heat and nozzle heat to the start gcode. If examination of the output gcode shows an M109 and/or M190 before the `PRINT_START` macro, consider using a different or newer slicer that recognizes that macro as a valid start macro.
+Some slicers do not recognize the Klipper `PRINT_START` macro as a valid start macro and add an additional bed heat and nozzle heat to the start gcode. If examination of the output gcode shows an M109 and/or M190 before the `PRINT_START` macro, consider using a different or newer slicer that recognizes that macro as a valid start macro.
 
 ## Slicer Profile Creation
 
