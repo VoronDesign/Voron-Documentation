@@ -36,7 +36,7 @@ The Kalico route will make things simpler from the configuration side, but in th
 
 ### Stock Klipper
 
-In this path, you will need to download some macros dependong on your printer. If you do not have a v0 or a 2.4, you can tweak whichever makes the most sense for you. When in doubt, ask in the Voron Discord channel for your printer
+In this path, you will need to download some macros depending on your printer. If you do not have a v0 or a 2.4, you can tweak whichever makes the most sense for you. When in doubt, ask in the Voron Discord channel for your printer
 
 1. Create a new file in the location of your choosing named `homing.cfg`
 2. Open another browser tab and open [this](https://github.com/EricZimmerman/Voron24/blob/PreKlippain/macros/helpers/homing.cfg) page if you have a 2.4, or [this](https://github.com/EricZimmerman/Voron02/blob/PreKlippain/macros/helpers/homing.cfg) page if you have a v0.
