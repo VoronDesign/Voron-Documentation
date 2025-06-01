@@ -288,7 +288,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
     wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
     ```
 
-    You can optionally use `kiauh`, via option `4`, then option `8` to accomplish this. For more info on kiauh, go <a href="https://github.com/th33xitus/kiauhhttps://github.com/th33xitus/kiauh" target="_blank">here</a>
+    You can optionally use `kiauh`, via option `4`, then option `8` to accomplish this. For more info on kiauh, go <a href="https://github.com/th33xitus/kiauh" target="_blank">here</a>
 
 ## Running things from Mainsail
 
