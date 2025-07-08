@@ -9,7 +9,7 @@
       const v0pages = new Array("0", "info", "verifytemp", "verifyheater", "v0motor", "xyendstop", "v0homing", "v000", "v0endstop", "pid", "v0bedscrews", "initial", "finish");
       const v1pages = new Array("0", "info", "verifytemp", "verifyheater", "v1motor", "xyendstop", "v1homing",  "bedlocating" ,"point00", "zendstop",  "probecheck", "pid", "ztilt", "initial", "finish" );
       const v2pages = new Array("0", "info", "verifytemp", "verifyheater", "v2motor", "xyendstop", "v2homing", "bedlocating", "point00", "zendstop", "probecheck", "pid", "qgl", "initial", "finish" );
-      const vswpages = new Array("0", "info", "verifytemp", "verifyheater", "vswmotor", "vswendstop", "probecheck", "vswhoming", "probecalibrate", "point00", "pid", "initial", "finish");
+      const vswpages = new Array("0", "info", "verifytemp", "verifyheater", "vswmotor", "vswendstop", "probecheck", "vswhoming", "probecalibrate", "point00", "pid", "vswinitial", "finish");
    
 
       //Page names per Model
