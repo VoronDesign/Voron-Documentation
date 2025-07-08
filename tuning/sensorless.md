@@ -91,8 +91,6 @@ diag0_pin: ^!PD2
 driver_SGT: 1
 ```
 
-
-
 # Updating your configuration
 
 Regardless of the choice you made above, with the initial steps behind you, we now have to adjust some existing settings in the configuration file.

@@ -71,6 +71,7 @@ Please follow each step closely and once ready, click the "I am done, let's move
     </label>
   </div>
 
+
   <div id="TapSelect" class="form-check">
     <input class="form-check-input" type="radio" name="probeSelect" id="tap">
     <label class="form-check-label" for="tap">
@@ -927,6 +928,7 @@ The homing position is not at the typical location of 0,0 but at the maximum tra
 > * It is also accepted practice that 0 is at the LEFT, and 0 is at the FRONT.  So when we refer to the 0,0 point, we are referring to the nozzle of the printer being located at the front left corner of the bed.
 > * This point is used as a common reference between you, your slicer, and your printer. Without consensus on where this point is, you'll have a variety of strange problems.
 
+
 Depending on bed location, the positional parameters may need to be adjusted to re-locate the 0,0 point.
 
 1. Test that the toolhead is *physically* capable of reaching the front left corner of the bed.  
@@ -1094,6 +1096,7 @@ If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE`, `ACCEPT`, and th
 
 ### Fine Tuning Z Height
 
+
 #### LCD Screen 
 The Z offset can be adjusted during a print using the Tune menu on the display, and the printer configuration can be updated with this new value. Remember that higher values for the position_endstop means that the nozzle will be closer to the bed.  These changes will be temporary:  it will be discarded when you restart klipper, unless you save it with the `z_offset_apply_endstop` command.
 
@@ -1123,6 +1126,7 @@ The "babystepping"  ("Z Offset") controls may be used to fine tune the z offset.
 
 #### Last Resort
 If all else fails, you can locate the `[probe] z_offset` in your config file, and adjust it by hand.  A positive change will result in more squish, negative in less squish.  *be careful*  You don't want to damage your bed.
+
 
 <br>
 </div>
