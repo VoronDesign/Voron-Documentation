@@ -913,7 +913,7 @@ Note:  Users of Beacon, Cartographer, or the Btt Eddy Probe should follow the ca
 {: .note }
 When moving in small increments during the paper test, klipper will use a back & forth motion, which is intended to negate back lash issues during the test. Don't worry!  we promise, after the back and forth is complete, the end delta is the distance you requested.  It just went the long way to get there.
 
-![](./images/mainsail_manual_probe.png.png )
+![](./images/mainsail_manual_probe.png)
 
 </div>
 
@@ -1086,12 +1086,62 @@ It will perform a PID calibration routine that will last about 5 minutes. Once i
 Run a `G28`.
 * Move the nozzle to the center of the bed if it is not already.
 
+<div class="defaulthide tapclass" markdown=1>
+Run `PROBE_CALIBRATE`
+</div>
+<div class="defaulthide dockableclass" markdown=1>
+
+{: .note }
+With Dockable probes, some users choose to use the probe as their Z endstop, and others choose to use the stock Z endstop.  If you have chosen to use the stock endstop, you will use the `Z_ENDSTOP_CALIBRATE` command, as shown in this guide.  If you are using the Probe as your Z endstop, you should substitute the `PROBE_CALIBRATE` command
+
 Run `Z_ENDSTOP_CALIBRATE`
+</div>
+<div class="defaulthide inductiveclass" markdown=1>
+Run `Z_ENDSTOP_CALIBRATE`
+</div>
 
 Slowly move the nozzle toward the bed by using `TESTZ Z=-1` until the nozzle is relatively close to the bed, and then stepping down with `TESTZ Z=-0.1` until the nozzle touches a piece of paper on top of the build plate. If you go too far down, you can move the nozzle back up with: `TESTZ Z=0.1`. Once you are satisfied with the nozzle height, run `ACCEPT` and then `SAVE_CONFIG`.
 
 **Important:** Klipper assumes that this process is being done cold.  If being performed hot, do an additional `TESTZ Z=-0.1` before accepting.
 
+<div class="defaulthide tapclass" markdown=1>
+If an "out of bounds" error occurs, send `PROBE_CALIBRATE`, `ACCEPT`, and then `SAVE_CONFIG`. This will redefine the 0 bed height so you will be able to get closer.
+
+### Fine Tuning Z Height
+
+
+#### LCD Screen 
+The Z offset can be adjusted during a print using the Tune menu on the display, and the printer configuration can be updated with this new value. Remember that higher values for the position_endstop means that the nozzle will be closer to the bed.  These changes will be temporary:  it will be discarded when you restart klipper, unless you save it with the `z_offset_apply_probe` command.
+
+#### Mainsail and Fluidd
+The "babystepping"  ("Z Offset") controls may be used to fine tune the z offset.  These changes are temporary:  they will be discarded unless you press the save button, or use the `z_offset_apply_probe` command.
+
+
+#### Last Resort
+If all else fails, you can locate the `[probe] z_offset` in your config file, and adjust it by hand.  A positive change will result in more squish, negative in less squish.  *be careful*  You don't want to damage your bed.
+</div>
+
+
+<div class="defaulthide dockableclass" markdown=1>
+If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE` or ` PROBE_CALIBRATE, `ACCEPT`, and then `SAVE_CONFIG`. This will redefine the 0 bed height so you will be able to get closer.
+
+### Fine Tuning Z Height
+
+
+#### LCD Screen 
+The Z offset can be adjusted during a print using the Tune menu on the display, and the printer configuration can be updated with this new value. Remember that higher values for the position_endstop means that the nozzle will be closer to the bed.  These changes will be temporary:  it will be discarded when you restart klipper, unless you save it with the `z_offset_apply_endstop` or `z_offset_apply_probe` command.
+
+#### Mainsail and Fluidd
+The "babystepping"  ("Z Offset") controls may be used to fine tune the z offset.  These changes are temporary:  they will be discarded unless you press the save button, or use the `z_offset_apply_endstop` or `z_offset_apply_probe` command.
+
+
+#### Last Resort
+If all else fails, you can locate the `[stepper_z] position_endstop`  or `[probe] z_offset` in your config file, and adjust it by hand.  A positive change will result in more squish, negative in less squish.  *be careful*  You don't want to damage your bed.
+
+</div>
+
+
+<div class="defaulthide inductiveclass" markdown=1>
 If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE`, `ACCEPT`, and then `SAVE_CONFIG`. This will redefine the 0 bed height so you will be able to get closer.
 
 ### Fine Tuning Z Height
@@ -1101,11 +1151,16 @@ If an "out of bounds" error occurs, send `Z_ENDSTOP_CALIBRATE`, `ACCEPT`, and th
 The Z offset can be adjusted during a print using the Tune menu on the display, and the printer configuration can be updated with this new value. Remember that higher values for the position_endstop means that the nozzle will be closer to the bed.  These changes will be temporary:  it will be discarded when you restart klipper, unless you save it with the `z_offset_apply_endstop` command.
 
 #### Mainsail and Fluidd
-The "babystepping"  ("Z Offset") controls may be used to fine tune the z offset.  These changes are temporary:  they will be discarded unless you press the save button, or use the `z_offset_apply_endstopp` command.
+The "babystepping"  ("Z Offset") controls may be used to fine tune the z offset.  These changes are temporary:  they will be discarded unless you press the save button, or use the `z_offset_apply_endstop` command.
 
 
 #### Last Resort
 If all else fails, you can locate the `[stepper_z] position_endstop` in your config file, and adjust it by hand.  A positive change will result in more squish, negative in less squish.  *be careful*  You don't want to damage your bed.
+</div>
+
+
+
+
 
 <br>
 </div>
