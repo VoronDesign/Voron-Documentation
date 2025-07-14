@@ -1211,7 +1211,7 @@ You can also use the calculator [here](http://tools.takuya.wtf/esteps.html)
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
 
-Typical `rotation_distance` values should be around 22.6789511 for Clockwork1 (Gear Ratio 50:17 for Afterburner) , Clockwork2 (Gear Ratio 50:10 for Stealthburner) and Mobius (Gear Ratio 80:20 for M3, M4). 
+Please adjust your `rotation_distance` in the `extruder` section according to the following table. If you are building Stealthburner with its corresponding Extruder, you are looking for Clockwork2.  
 | **Extruder**    | **Gear Ratio**  | **Rotation Distance**  |
 |:----------------|:----------------|:------------------------|
 | Clockwork1           | 50:17  | 22.6789511 |
