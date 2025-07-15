@@ -1,3 +1,11 @@
+---
+layout: default
+parent: The Build
+title: Initial Startup
+nav_exclude: true
+nav_order: 5
+---
+
 <!-- 
 
 NOTES ON EDITING: 
@@ -176,7 +184,7 @@ Perform the above steps again with the bed.
 <!-- V0 ONLY from now on-->
 <!-- V0 Motors and Stepper buzz -->
 <div class="defaulthide" id="v0motor" markdown="1">
-## Stepper Motor Check
+## V0 Stepper Motor Check
 
 To verify that each stepper motor is operating correctly, send an appropriate `STEPPER_BUZZ` command, such as:
 
@@ -228,7 +236,7 @@ Run this command for each of the motors:
 <!-- V0 Homing -->
 <div class="defaulthide" id="v0homing" markdown="1">
 
-## XY Homing Check
+## V0 XY Homing Check
 
 At this point everything is ready to home X and Y.
 
@@ -275,7 +283,7 @@ If either axis does not move the toolhead in the expected or correct direction, 
 <!-- V0 ENDSTOP -->
 <div class="defaulthide" id="v0endstop" markdown="1">
 
-## Z Endstop Location 
+## V0 Z Endstop Location 
 
 ### V0.2
 For V0.2 the Z endstop is located at the bottom of the machine. After homing Z you can use the `Z_ENDSTOP_CALIBRATE` command to find the correct position_endstop value automatically. 
@@ -315,7 +323,7 @@ This value that we just calculated is now in your config (note: save_config stor
 </div>
 <!-- Bed Leveling -->
 <div class="defaulthide" id="v0bedscrews" markdown="1">
-## Bed Leveling
+## V0 Bed Leveling
 
 ### Bed Screws
 
@@ -333,7 +341,7 @@ After the `BED_SCREWS_ADJUST` command has been completed rerun the `Z_ENDSTOP_CA
 
 <!-- 00 Point -->
 <div class="defaulthide" id="v000" markdown="1">
-## Define 0,0 Point
+## V0 Define 0 Point
 
 The homing position is not at the typical location of 0,0 but at the maximum travel location.  The actual numbers vary by printer build size.
 
@@ -364,7 +372,7 @@ If anything is updated in the printer configuration file, save the file and rest
 <!-- V1/Trident START-->
 <!-- Trident Motor Check-->
 <div class="defaulthide" id="v1motor" markdown="1">
-## Stepper Motor Check
+## Trident Stepper Motor Check
 
 To verify that each stepper motor is operating correctly, send a `STEPPER_BUZZ` command, such as:
 
@@ -423,7 +431,7 @@ Run this command for each of the motors:
 <!-- Trident Homing -->
 <div class="defaulthide" id="v1homing" markdown="1">
 
-## XY Homing Check
+## Trident XY Homing Check
 
 At this point everything is ready to home X and Y.
 
@@ -473,9 +481,7 @@ If either axis does not move the toolhead in the expected or correct direction, 
 
 
 <div class="defaulthide" id="ztilt" markdown="1">
-## Bed Leveling
-
-### Z Tilt 
+## Trident Bed Leveling
 
 The Trident uses automated bed leveling using 3 motors.  There is a macro `Z_TILT_ADJUST` built into Klipper for that function. It is very similar to the `QUAD_GANTRY_LEVEL` used by V2, but supports 3 or more motors. Run the `Z_TILT_ADJUST` and it will probe each of the 3 points 3 times, average the readings, then make adjustments until the gantry is level.
 
@@ -500,7 +506,7 @@ Once the readings are stable, run `Z_TILT_ADJUST`.  Make a note of how long the 
 <!-- V2 Motors -->
 
 <div class="defaulthide" id="v2motor" markdown="1">
-## Stepper Motor Check
+## V2 Stepper Motor Check
 
 To verify that each stepper motor is operating correctly, send a command such as :
 
@@ -560,7 +566,7 @@ Run this command for each of the motors:
 <!-- V2 Homing -->
 <div class="defaulthide" id="v2homing" markdown="1">
 
-## XY Homing Check
+## V2 XY Homing Check
 
 At this point everything is ready to home X and Y.
 
@@ -588,9 +594,7 @@ If either axis does not move the toolhead in the expected or correct direction, 
 
 <!-- V2 Bed Leveling -->
 <div class="defaulthide" id="qgl" markdown="1">
-## Bed Leveling
-
-### Quad Gantry Level 
+## V2 Bed Leveling
 
 Since the V2 uses 4 independent Z motors, the entire gantry system must be specially levelled.  The macro to call this process is `QUAD_GANTRY_LEVEL` (sometimes referred to in conversation as 'QGL').  It will probe each of 4 points 3 times, average the readings, then make adjustments until the gantry is level.
 
@@ -619,7 +623,7 @@ Once the readings are stable, run `QUAD_GANTRY_LEVEL`.  Make a note of how long 
 <!-- VSW START -->
 <!-- VWS Motors -->
 <div class="defaulthide" id="vswmotor" markdown="1">
-## Stepper Motor Check
+## Switchwire Stepper Motor Check
 
 To verify that each stepper motor is operating correctly, send a `STEPPER_BUZZ` command, such as:
 
@@ -677,7 +681,7 @@ Run this command for each of the motors:
 <!-- VSW Endstops -->
 <div  class="defaulthide"  id="vswendstop"  markdown="1">
 
-## Endstop Check
+## Switchwire Endstop Check
 
 {: .note }
 this document describes testing x and y endstops.  if you will be using sensorless homing, test any physical endstops you do have, and refer to the [sensorless homing guide](/tuning/sensorless.html).
@@ -728,7 +732,7 @@ For example, if the X endstop was inverted, add a ! in front of the pin number a
 <!-- V0 Homing -->
 <div class="defaulthide" id="vswhoming" markdown="1">
 
-## XY Homing Check
+## Switchwire XY Homing Check
 
 At this point everything is ready to home X and Y.
 
@@ -919,7 +923,7 @@ When moving in small increments during the paper test, klipper will use a back &
 
 <!-- 00 Point General-->
 <div class="defaulthide" id="point00" markdown="1">
-## Define 0,0 Point
+## Define 0 Point
 
 The homing position is not at the typical location of 0,0 but at the maximum travel location.  The actual numbers vary by printer build size.
 
@@ -1050,7 +1054,7 @@ For example, if the X endstop was inverted, add a ! in front of the pin number a
 
 <!-- PID tuning -->
 <div class="defaulthide" id="pid" markdown="1">
-## PID Tune Bed & Hotend
+## PID Tune Bed and Hotend
 
 The PID tune is important for tuning the printer for a given hardware configuration to ensure that temperatures can remain as stable as possible during operation.
 
@@ -1168,7 +1172,7 @@ If all else fails, you can locate the `[stepper_z] position_endstop` in your con
 
 <!-- Switchwire Z Offset -->
 <div class="defaulthide" id="vswinitial" markdown="1">
-## Z Offset Adjustment
+## Switchwire Z Offset Adjustment
 
 The Switchwire uses its probe as the Z endstop, which you have already calibrated.  However, you may find that some fine tuning is still required.  There are various ways you can do this:
 
@@ -1188,8 +1192,9 @@ If all else fails, you can locate the `[probe] z_offset` in your config file, an
 
 <!-- FINAL STAGE -->
 <div class="defaulthide" id="finish" markdown="1">
+# Finish Line
 
-# Looks like you are done with the initial startup guide for your brand new printer! 
+## Looks like you are done with the initial startup guide for your brand new printer! 
 
 But wait! There's more:
 
@@ -1211,7 +1216,14 @@ You can also use the calculator [here](http://tools.takuya.wtf/esteps.html)
 
 Paste the new value into the configuration file, restart Klipper, and try again. Once the extrusion amount is within 0.5% of the target value (ie, 99.5-100.5mm for a target 100mm of extruded filament), the extruder is calibrated!
 
-Typical `rotation_distance` values should be around 22.6789511 for Afterburner, Stealthburner and Mobius (update gear_ratio to 50:10 for Stealthburner with Clockwork 2 or 80:20 for Mobius).
+Please adjust your `rotation_distance` in the `extruder` section according to the following table. If you are building Stealthburner with its corresponding Extruder, you are looking for Clockwork2.
+
+| **Extruder**    | **Gear Ratio**  | **Rotation Distance**  |
+|:----------------|:----------------|:------------------------|
+| Clockwork1           | 50:17  | 22.6789511 |
+| Clockwork2           | 50:10  | 22.6789511 |
+| Galileo2             | 9:1    | 47.088     |
+| Mobius 3 and 4       | 80:20  | 22.6789511 |
 
 {: .warning }
 > A Raspberry Pi is like a computer. Please shut it down appropriately using your webinterface's shutdown button.

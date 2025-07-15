@@ -2,24 +2,26 @@
 // To edit (change, remove or add) a page, edit the corresponding arrays below. The Array starts at page 0 and the docs page will always display them in order (0, info, verifytemp,...). 
 // To Add a new third page, put your new Page ID after "info". 
 // If you add a page or remove one, also add/remove the pagename in the array below for the corresponding model. 
+//the page name has to match the Title of the new page!!
+//If you are adding a page thats dedicated to a specific printer model, please add the Printer Model (V0, Trident, V2, Switchwire) to the title. Example: Trident XY Homing Check
 
 
 //Edit Me:
       //Page ID per Model
       const v0pages = new Array("0", "info", "verifytemp", "verifyheater", "v0motor", "xyendstop", "v0homing", "v000", "v0endstop", "pid", "v0bedscrews", "initial", "finish");
-      const v1pages = new Array("0", "info", "verifytemp", "verifyheater", "v1motor", "xyendstop", "v1homing",  "bedlocating" ,"point00", "zendstop",  "probecheck", "pid", "ztilt", "initial", "finish" );
-      const v2pages = new Array("0", "info", "verifytemp", "verifyheater", "v2motor", "xyendstop", "v2homing", "bedlocating", "point00", "zendstop", "probecheck", "pid", "qgl", "initial", "finish" );
+      const v1pages = new Array("0", "info", "verifytemp", "verifyheater", "v1motor", "xyendstop", "v1homing",  "bedlocating" , "probecalibrate", "point00", "zendstop",  "probecheck", "pid", "ztilt", "initial", "finish" );
+      const v2pages = new Array("0", "info", "verifytemp", "verifyheater", "v2motor", "xyendstop", "v2homing", "bedlocating", "probecalibrate",  "point00", "zendstop", "probecheck", "pid", "qgl", "initial", "finish" );
       const vswpages = new Array("0", "info", "verifytemp", "verifyheater", "vswmotor", "vswendstop", "probecheck", "vswhoming", "probecalibrate", "point00", "pid", "vswinitial", "finish");
 
    
 
       //Page names per Model
-      const v0pagename = new Array("Start", "Information", "Verify Temperatures", "Verify Heaters", "Motor Checks", "XY Endstop Check", "Homing Check", "0 Point", "Z-Endstop", "PID Tuning", "Bed Leveling", "Initial Setup", "Finish Line" );
-      const v2pagename = new Array("Start", "Information", "Verify Temperatures", "Verify Heaters", "Motor Checks", "XY Endstop Check", "Homing Check", "Bed Locating", "0 Point", "Z Endstop", "Probe Check", "PID Tuning", "Quad Gantry Level", "Initial Setup", "Finish Line" );
-      const v1pagename = new Array("Start", "Information", "Verify Temperatures", "Verify Heaters", "Motor Checks", "XY Endstop Check", "Homing Check", "Bed Locating", "0 Point", "Z Endstop", "Probe Check", "PID Tuning", "Z-Tilt", "Initial Setup", "Finish Line" );
-      const vswpagename = new Array("Start", "Information", "Verify Temperatures", "Verify Heaters", "Motor Checks", "XY Endstop Check", "Probe Check", "Homing Check", "Probe Calibration", "0 Point"  , "PID Tuning", "Initial Setup", "Finish Line" );
+      const v0pagename = new Array("Start", "Information regarding this guide", "Verify Temperature", "Verify Heaters", "V0 Stepper Motor Check", "Endstop Check", "V0 XY Homing Check", "V0 Define 0 Point", "V0 Z Endstop Location", "PID Tune Bed and Hotend", "V0 Bed Leveling", "Z Offset Adjustment", "Finish Line" );
+      const v2pagename = new Array("Start", "Information regarding this guide", "Verify Temperature", "Verify Heaters", "V2 Stepper Motor Check", "Endstop Check", "V2 XY Homing Check", "Bed Locating","Probe Calibration",  "Define 0 Point", "Z Endstop Pin Location", "Probe Check", "PID Tune Bed and Hotend", "V2 Bed Leveling", "Z Offset Adjustment", "Finish Line" );
+      const v1pagename = new Array("Start", "Information regarding this guide", "Verify Temperature", "Verify Heaters", "Trident Stepper Motor Check", "Endstop Check", "Trident XY Homing Check", "Bed Locating","Probe Calibration", "Define 0 Point", "Z Endstop Pin Location", "Probe Check", "PID Tune Bed and Hotend", "Trident Bed leveling", "Z Offset Adjustment", "Finish Line" );
+      const vswpagename = new Array("Start", "Information regarding this guide", "Verify Temperature", "Verify Heaters", "Switchwire Stepper Motor Check", "Switchwire Endstop Check", "Probe Check", "Switchwire XY Homing Check", "Probe Calibration", "Define 0 Point"  , "PID Tune Bed and Hotend", "Switchwire Z Offset Adjustment", "Finish Line" );
  
-
+    
 
 
 
@@ -40,6 +42,43 @@ let probeparam = params.get("probe");
 var currentstep = parseInt(params.get("step")); 
 let lastpage = currentstep - 1;
 //Custom Variables  
+
+
+///// GET CURRENT PAGE URL AND FIND IF PARAMS EXIST
+let url = window.location.href;
+let spliturl = url.split("#");
+let spliturl2 = spliturl[1].replaceAll("-", " ");
+
+const v2_index = v2pagename.findIndex((item) => 
+	new RegExp(spliturl2, "i").test(item));
+console.log(v2_index);
+
+const v0_index = v0pagename.findIndex((item) => 
+	new RegExp(spliturl2, "i").test(item));
+console.log(v0_index);
+
+const vt_index = v1pagename.findIndex((item) => 
+	new RegExp(spliturl2, "i").test(item));
+console.log(vt_index);
+
+const vsw_index =vswpagename.findIndex((item) => 
+	new RegExp(spliturl2, "i").test(item));
+console.log(vsw_index);
+
+let search = url.includes("#");
+
+
+if(search == true && url.includes("v0")) {
+    window.location.replace(spliturl[0]+ "?model=v0&step=" + v0_index);
+} else if(search == true && url.includes("trident")) {
+    window.location.replace(spliturl[0]+ "?model=v1&step=" + vt_index);
+} else if(search == true && url.includes("switchwire")) {
+    window.location.replace(spliturl[0]+ "?model=vsw&step=" + vsw_index);
+} else if(search == true) {
+    window.location.replace(spliturl[0]+ "?model=v2&step=" + v2_index);
+}
+
+
 
 //check current url params and act accordingly
 function checkstatus() { 
