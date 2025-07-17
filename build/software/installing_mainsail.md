@@ -20,6 +20,7 @@ To install Mainsail on a Raspberry Pi:
 4. Choose your SD Card.
 5. Click `NEXT`
 6. Click the `EDIT SETINGS` button
+
   on the General tab you can give your printer a host name, you can also change the default username and password for your raspberry pi, lastly you can enter your WIFI credentials
   on the Services tab be sure to tick the ` enable SSH box
 
