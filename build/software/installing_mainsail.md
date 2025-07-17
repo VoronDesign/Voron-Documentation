@@ -18,14 +18,19 @@ To install Mainsail on a Raspberry Pi:
 2. Click "Choose OS" and scroll down to "Other specific-purpose OS".
 3. Select "3D Printing" and choose "Mainsail OS".
 4. Choose your SD Card.
-5. If you will be using Wi-Fi, click on the GEAR icon in the bottom right corner and enter your Wi-Fi information.
-6. Click on "SAVE" and on "WRITE". *THIS WILL DESTROY ALL DATA ON YOUR CARD*.  
+5. Click `NEXT`
+6. Click the `EDIT SETINGS` button
+  on the General tab you can give your printer a host name, you can also change the default username and password for your raspberry pi, lastly you can enter your WIFI credentials
+  on the Services tab be sure to tick the ` enable SSH box
+
+8. When finished with the settings, click `SAVE` and then click `YES` when asked if you would like to apply customized OS settings
+9. Double check that your target device SD card is correct and then Click on `YES`. *THIS WILL DESTROY ALL DATA ON YOUR CARD*. 
   
     _note: It is a good idea to use a premium microSD card from a reputable manufacturer such as Sandisk, Kingston or Samsung. Low end cards will often fail quickly when used in this application_
 
-7. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
-8. Insert the microSD card into your Pi, and power on the Pi.
-9. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)  
+10. Make sure that your MCU(s) is connected to your pi. If you will be using wired networking, also make sure your ethernet cable is connected.
+11. Insert the microSD card into your Pi, and power on the Pi.
+12. Find your Pi on the network, and ssh into it (using PuTTY on Windows or the terminal on MacOS)  
    The default username is `pi` and the password is `raspberry`.
     * If your network supports bonjour, the pi should show up as `mainsailos.local`
     * If your network automatically assigns DNS hostnames, it may simply show up as `mainsailos`
