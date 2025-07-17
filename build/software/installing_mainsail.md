@@ -25,7 +25,7 @@ To install Mainsail on a Raspberry Pi:
     
 ![general_settings](./images/pi_imager_general_settings.png)
   
-    on the Services tab be sure to tick the ` enable SSH box
+    on the Services tab be sure to tick the "enable SSH" box
     
 ![services_settings](./images/pi_imager_services_settings.png)
 
