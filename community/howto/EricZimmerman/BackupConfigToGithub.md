@@ -30,7 +30,7 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
 <strong>NOTE</strong>: If you do not have a GitHub account, create one by clicking <a href="https://github.com/signup" target="_blank">here</a> and filling out all the details (Hold down the CTRL key to open that URL in a new tab, vs changing to it in this one)
 
 1. Sign into your GitHub account
-2. Create a new repository by clicking on the New button
+2. Create a new repository by clicking on the `New` button
 
     ![Creating a new repository](images/backup/newRepo.png)
 
@@ -47,7 +47,7 @@ Experience is just a series of past mistakes we try to not make anymore. Remembe
 
     ![New repository details](images/backup/newRepoDetails.png)
 
-4. You now have a new git repository! The next thing to do is make a note of the URL to this repository. Click the green `Code` button, then copy the `HTTPS` url to the clipboard via the button to the right of the URL.
+4. You now have a new git repository! The next thing to do is make a note of the URL to this repository. Click the green `Code` button, then copy the `HTTPS` url to the clipboard via the button to the right of the URL. Depending on the settings above, you may not have a `Code` button, so just look for the URL under the `Quick setup` area and click the button at the end to copy the URL to the clipboard.
 
     ![Url copy](images/backup/CopyUrl.png)
 
@@ -288,7 +288,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
     wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
     ```
 
-    You can optionally use `kiauh`, via option `4`, then option `8` to accomplish this. For more info on kiauh, go <a href="https://github.com/th33xitus/kiauhhttps://github.com/th33xitus/kiauh" target="_blank">here</a>
+    You can optionally use `kiauh`, via option `E`, then option `1` to accomplish this. For more info on kiauh, go <a href="https://github.com/th33xitus/kiauhhttps://github.com/th33xitus/kiauh" target="_blank">here</a>
 
 ## Running things from Mainsail
 
