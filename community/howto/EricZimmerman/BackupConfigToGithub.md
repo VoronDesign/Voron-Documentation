@@ -285,7 +285,7 @@ Now that things are working at the shell, lets create a macro that lets us back 
 5. Finally, execute the following to download the latest version of the `gcode_shell_command` script
 
     ```bash
-    wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/th33xitus/kiauh/master/resources/gcode_shell_command.py
+    wget -O ~/klipper/klippy/extras/gcode_shell_command.py https://raw.githubusercontent.com/dw-0/kiauh/refs/heads/master/kiauh/extensions/gcode_shell_cmd/gcode_shell_cmd_extension.py
     ```
 
     You can optionally use `kiauh`, via option `4`, then option `8` to accomplish this. For more info on kiauh, go <a href="https://github.com/th33xitus/kiauh" target="_blank">here</a>
