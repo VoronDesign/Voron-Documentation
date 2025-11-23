@@ -14,10 +14,10 @@ Source PSD and images can be found in my [GitHub repo](https://github.com/samwis
 
 Start by removing all the default screens and also the Raspberry images. Also, disable all the bootup lines.
 
-Edit `/boot/config.txt` to remove the color test/rainbow screen.
+Edit `/boot/firmware/config.txt` to remove the color test/rainbow screen.
 
 ```cmd
-sudo nano /boot/config.txt
+sudo nano /boot/firmware/config.txt
 ```
 
 Add:
@@ -26,9 +26,9 @@ disable_splash=1
 ```
 Press **Ctrl+X, Y** for save and **Enter** to return to the command line.
 
-Edit `/boot/cmdline.txt`
+Edit `/boot/firmware/cmdline.txt`
  ```cmd
-sudo nano /boot/cmdline.txt
+sudo nano /boot/firmware/cmdline.txt
 ```
 Add the following to the end of the first line
 
