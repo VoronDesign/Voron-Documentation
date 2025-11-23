@@ -121,7 +121,7 @@ Now let's look around a little. The basic work flow here, is that everything scr
 
 * sudo (superuser do) allows you to execute commands as the system administrator (known as "root") when necessary.
 * sudo will sometimes ask for your password:  note, this is the password of the normal account, *not* some other administrator password
-* This tool is often needed to edit a file in `/etc` or `/boot` that normal users don't have access to.  For example, several common processes require edits in the file `/boot/config.txt`.  This file is only editable by root.  so if you try to just open it normally with nano `nano /boot/config.txt`, you'll just get an error:  file is unwritable.  Instead, you can use sudo:  `sudo nano /boot/config.txt`, and then you'll be able to edit normally.
+* This tool is often needed to edit a file in `/etc` or `/boot` that normal users don't have access to.  For example, several common processes require edits in the file `/boot/firmware/config.txt`.  This file is only editable by root.  so if you try to just open it normally with nano `nano /boot/firmware/config.txt`, you'll just get an error:  file is unwritable.  Instead, you can use sudo:  `sudo nano /boot/firmware/config.txt`, and then you'll be able to edit normally.
 ![nope](images/nano-readonly.png)
 
 ### more
