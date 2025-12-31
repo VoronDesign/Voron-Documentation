@@ -93,7 +93,7 @@ Voron printers are currently not designed for exotic materials and there are no 
 
 ### Multimaterial / Multicolor
 
-Voron does not currently support a native, in-house designs for dual extrusion, dual hot ends, tool changers, or other multimaterial/multicolor solutions.  However, there are many community-provided systems available, including:
+Voron does not currently support native, in-house designs for dual extrusion, dual hot ends, tool changers, or other multimaterial/multicolor solutions.  However, there are many community-provided systems available, including:
 
 - [BoxTurtle](https://github.com/ArmoredTurtle/BoxTurtle)
 - [Enraged Rabbit Carrot Feeder (ERCF)](https://github.com/Carrot-collective/ERCF_v3)
