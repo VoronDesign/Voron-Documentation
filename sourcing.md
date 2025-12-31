@@ -91,9 +91,20 @@ While Vorons are designed to be enclosed, chamber temperatures generally do not 
 
 Voron printers are currently not designed for exotic materials and there are no plans to modify the design to support this in the future. We recommend purchasing an industrial printer designed for this purpose if you intend to print with these materials.
 
-### Multimaterial
+### Multimaterial / Multicolor
 
-Voron does not currently support dual extrusion, dual hot ends, tool changers, or other multimaterial solutions. The only exception to this is the bowden Y splitter attachment which is available for the Afterburner tool head. --please note that this attachment is still considered "beta" level, and as with all Y-splitter solutions, tuning the filament switch routine can be difficult.
+Voron does not currently support a native, in-house designs for dual extrusion, dual hot ends, tool changers, or other multimaterial/multicolor solutions.  However, there are many community-provided systems available, including:
+
+- [BoxTurtle](https://github.com/ArmoredTurtle/BoxTurtle)
+- [Enraged Rabbit Carrot Feeder (ERCF)](https://github.com/Carrot-collective/ERCF_v3)
+- [NightOwl](https://github.com/mjonuschat/NightOwl)
+- [QuattroBox](https://github.com/Batalhoti/QuattroBox)
+- [EMU](https://github.com/DW-Tas/EMU)
+- [PicoMMU](https://github.com/lhndo/LH-Stinger/wiki/Pico-MMU)
+- [MadMax](https://github.com/zruncho3d/madmax)
+- [StealthChanger](https://github.com/DraftShift/StealthChanger)
+
+This is not an exhaustive list and the landscape changes rapidly.
 
 ## Tools
 

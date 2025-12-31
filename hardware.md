@@ -48,7 +48,7 @@ The [Switchwire](https://vorondesign.com/voron_switchwire) is a Voron take on a 
 
 ## Legacy
 
-The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LM8UU rods and bearings in the 230mm^3 size but retains the new Afterburner toolhead.  It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LM8UU components but are expected to be between \$600 - \$800.
+The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LM8UU rods and bearings in the 230mm^3 size but retains the Afterburner toolhead.  It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LM8UU components but are expected to be between \$600 - \$800.
 
 [Legacy Introduction Video](https://www.youtube.com/watch?v=NZqvRLa8ShE)
 
@@ -70,21 +70,21 @@ Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter 
 
 ![](./images/jetpack.jpg)
 
-## Afterburner
+## Stealthburner
 
-Afterburner is not specifically an extruder, but the collective name for the Voron direct-drive interchangeable toolhead system.  The Afterburner system has three interchangeable components: the extruder, the toolhead holding the hot end, and the cooling assembly.  Each of those can be swapped without affecting the other components.
+Stealthburner is not specifically an extruder, but the collective name for the Voron direct-drive interchangeable toolhead system.  The Stealthburner system has three interchangeable components: the extruder, the toolhead holding the hot end, and the cooling assembly.  Each of those can be swapped without affecting the other components.
 
-[Afterburner Announcement Video](https://www.youtube.com/watch?v=lmJkIXW5tXc)
+[Stealthburner Announcement Video](https://www.youtube.com/watch?v=lnMJBdUXuH4)
 
-![](./images/afterburner.jpg)
+![](./images/stealthburner.jpg)
 
 ## Mini Stealthburner
 
 Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extruder. it is the successor to the Mini Afterburner toolhead.
 
-## Clockwork
+## Clockwork2
 
-Clockwork is the name given to the original extruder system for Afterburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA17 motor.  The Afterburner term is commonly (but incorrectly) used to refer to this extruder.
+Clockwork is the successor the original extruder system for Afterburner, now adapted for Stealthburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA14 motor.  The Steatlhburner term is commonly (but incorrectly) used to refer to this extruder.
 
 ## Nightwatch
 
