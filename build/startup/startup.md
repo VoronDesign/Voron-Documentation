@@ -156,16 +156,6 @@ Navigate to the temperature graph and type in 50 followed by enter in the "Tool"
 
 Perform the above steps again with the bed.
 
-## Verify fans
-
-Typically there are three types of cooling fan which you must verify are working correctly.
-
-Hotend fan: Verify by heating the hotend. The heatsink cooling fan should be spinning whenever the hotend is active or above 50C. This is essential to prevent clogging.
-
-Part cooling fan: Use the Octoprint/Mainsail interface to set the part cooling fan to 100%. You should be able to hear the fan(s) and feel air being blown just under the nozzle, where your print would be.
-
-Controller fan: These vary by config, but typically will be triggered by heating the bed (and won't turn off until the printer has been idle for a while).
-
 <img src="images/heaters.gif" alt="RAW button GIF" width="70%">
 
 <details markdown="1">
@@ -177,6 +167,35 @@ Controller fan: These vary by config, but typically will be triggered by heating
     * if the SSR light is not on, you likely have an issue on the control side.  One common mistake is getting the polarity of the control wires swapped:  make sure + on the Control board is connected to + on the SSR
 </details>
 
+</div>
+
+<div class="defaulthide hide" id="verifyfan" markdown="1">
+## Verify fans
+
+Typically there are three types of cooling fan which you must verify are working correctly.
+
+### Hotend fan
+
+Verify by heating the hotend. If you still have the hotend set to 50C from the previous step, the fan should already be running. The heatsink cooling fan should be spinning whenever the hotend is active or above 50C. This is essential to prevent clogging.  On stealthburner, this is the BOTTOM fan.
+
+### Part cooling fan
+
+Use the Mainsail/Fluidd interface to set "fan" to 100%. You should be able to hear the fan(s) and feel air being blown just under the nozzle, where your print would be. On Stealthburner, this is the TOP fan.  On many other toolheads, this will be two fans, on the lower sides of the toolhead.
+
+### Controller fan
+
+These are the fans mounted on the side of the electronics bay.  These vary by config, but typically will be triggered by heating the bed (and won't turn off until the printer has been idle for a while).
+
+<details markdown="1">
+  <summary>Troubleshooting</summary>
+  * if a fan doesn't start at all
+    * verify that the port its actually plugged into matches the pin in your config file
+    * verify that the fan's polarity is correct:  note, BLDC fans DO NOT run backwards when polarity is reversed.  Because of their electonic package, either nothing happens, or they burn out immediately.
+    * verify that the voltage jumper on the control board is set correctly for your fan.
+  * if a fan only turns very slowly
+    * verify that nothing is physically interferring with the fan
+    * verify that the voltage jumper on the control board is set correctly for your fan
+</details>
 <br>
 
 </div>
