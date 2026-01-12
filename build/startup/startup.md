@@ -1024,7 +1024,10 @@ On a V2, the bed should now be adjusted so there is a small (2-3mm) gap between 
 {: .note }
 this document describes testing all 3 endstops.  if you will be using sensorless homing on x and/or y, test any physical endstops you do have, and refer to the [sensorless homing guide](/tuning/sensorless.html).
 
-Slowly move the toolhead to the center, then send the `QUERY_ENDSTOPS` command. The terminal window should respond with the following:
+
+Your motors should not be energized for this step, as you will be moving the toolhead by hand.  If they are energized, run `M84` to power down the motors.
+
+By hand, slowly move the toolhead to the center, then send the `QUERY_ENDSTOPS` command. The terminal window should respond with the following:
 
 
 ```
