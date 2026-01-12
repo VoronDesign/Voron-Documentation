@@ -170,7 +170,7 @@ This section only applies to printers with more than one controller.
 
 11. Exit the text editor with CTRL-X  and save when prompted.
 
-### Additional Changes: MainsailOS only
+### Additional Changes: Mainsail only
 
 Add the following entry to your printer.cfg:
 
@@ -178,7 +178,7 @@ Add the following entry to your printer.cfg:
 [include mainsail.cfg]
 ```
 
-### Additional Changes: FluiddOS only
+### Additional Changes: Fluidd only
 
 Add the following entries to your printer.cfg:
 
