@@ -20,25 +20,25 @@
       const vswpagename = new Array("Start", "Information", "Verify Temperatures", "Verify Heaters", "Verify Fans", "Motor Checks", "XY Endstop Check", "Probe Check", "Homing Check", "Probe Calibration", "0 Point"  , "PID Tuning", "Initial Setup", "Finish Line" );
  
 
-
-
-
-
-
-
-
-
-
-
+      // Valid options for interface and probe parameters. This should match the radio buttons in startup.md
+      const INTERFACE_OPTIONS = ["mainsail", "octoprint"];
+      const PROBE_OPTIONS = ["inductive", "dockable", "tap"];
 
 
 ///// DON'T EDIT BELOW HERE /////
 
+function validateOrDefault(options, value) {
+  if (options.indexOf(value) == -1) {
+    return options[0];
+  }
+  return value;
+}
+
 let params = new URLSearchParams(window.location.search);
-let modelparam = params.get('model');
-let interfaceparam = params.get("interface");
-let probeparam = params.get("probe");
-var currentstep = parseInt(params.get("step")); 
+let modelparam = params.get("model");
+let interfaceparam = validateOrDefault(INTERFACE_OPTIONS, params.get("interface"));
+let probeparam = validateOrDefault(PROBE_OPTIONS, params.get("probe"));
+var currentstep = parseInt(params.get("step"));
 let lastpage = currentstep - 1;
 //Custom Variables  
 
@@ -46,31 +46,16 @@ let lastpage = currentstep - 1;
 function checkstatus() { 
   sidebar();
 
-  $(document).ready(function(){
-    if (interfaceparam == "octoprint") {
-      $(".mainsailclass").hide();
-      $(".octoprintclass").show();
-    } else {  // Stock config, "mainsail"
-      $(".mainsailclass").show();
-      $(".octoprintclass").hide();
-    }
+  $(document).ready(function () {
+    // Interface images
+    $(".mainsailclass").toggle(interfaceparam == "mainsail");
+    $(".octoprintclass").toggle(interfaceparam == "octoprint");
 
-    if (probeparam == "dockable") {
-      $(".inductiveclass").hide();
-      $(".dockableclass").show();
-      $(".tapclass").hide();
-    } else if (probeparam == "tap") {
-      $(".inductiveclass").hide();
-      $(".dockableclass").hide();
-      $(".tapclass").show();
-    } else {  // Stock config, "inductive"
-      $(".inductiveclass").show();
-      $(".dockableclass").hide();
-      $(".tapclass").hide();
-    }
+    // Probe details
+    $(".inductiveclass").toggle(probeparam == "inductive");
+    $(".dockableclass").toggle(probeparam == "dockable");
+    $(".tapclass").toggle(probeparam == "tap");
   });
-
-
 
   if (modelparam != "v0") {
     $(document).ready(function(){
