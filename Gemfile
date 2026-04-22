@@ -18,6 +18,9 @@ gem "github-pages", group: :jekyll_plugins
 #   gem "jekyll-feed", "~> 0.12"
 # end
 
+gem "webrick", "~> 1.9"
+gem "csv", "~> 3.3"
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 #platforms :mingw, :x64_mingw, :mswin, :jruby do
@@ -32,4 +35,4 @@ gem "github-pages", group: :jekyll_plugins
 # do not have a Java counterpart.
 #gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-# gem "webrick", "~> 1.8"
+
