@@ -32,7 +32,8 @@
 
 
 
- ///// DON'T EDIT BELOW HERE /////    
+///// DON'T EDIT BELOW HERE /////
+
 let params = new URLSearchParams(window.location.search);
 let modelparam = params.get('model');
 let interfaceparam = params.get("interface");
@@ -45,41 +46,29 @@ let lastpage = currentstep - 1;
 function checkstatus() { 
   sidebar();
 
-
-  if (interfaceparam == "mainsail") {
-    $(document).ready(function(){
-      $(".mainsailclass").show();
-      $(".octoprintclass").hide();
-    });
-  } else if (interfaceparam == "octoprint") {
-    $(document).ready(function(){
+  $(document).ready(function(){
+    if (interfaceparam == "octoprint") {
       $(".mainsailclass").hide();
       $(".octoprintclass").show();
-    });
-  }
+    } else {  // Stock config, "mainsail"
+      $(".mainsailclass").show();
+      $(".octoprintclass").hide();
+    }
 
-  if (probeparam == "inductive") {
-    $(document).ready(function(){
-      $(".inductiveclass").show();
-      $(".dockableclass").hide();
-      $(".tapclass").hide();
-    });
-  } else if (probeparam == "dockable") {
-    $(document).ready(function(){
+    if (probeparam == "dockable") {
       $(".inductiveclass").hide();
       $(".dockableclass").show();
       $(".tapclass").hide();
-    });
-  } else if (probeparam == "tap") {
-    $(document).ready(function(){
+    } else if (probeparam == "tap") {
       $(".inductiveclass").hide();
       $(".dockableclass").hide();
       $(".tapclass").show();
-    });
-  }
-
-
-
+    } else {  // Stock config, "inductive"
+      $(".inductiveclass").show();
+      $(".dockableclass").hide();
+      $(".tapclass").hide();
+    }
+  });
 
 
 
