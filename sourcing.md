@@ -97,10 +97,15 @@ Voron does not currently support native, in-house designs for dual extrusion, du
 
 - [BoxTurtle](https://github.com/ArmoredTurtle/BoxTurtle)
 - [Enraged Rabbit Carrot Feeder (ERCF)](https://github.com/Carrot-collective/ERCF_v3)
+- [Tradrack](https://github.com/Annex-Engineering/TradRack)
 - [NightOwl](https://github.com/mjonuschat/NightOwl)
 - [QuattroBox](https://github.com/Batalhoti/QuattroBox)
 - [EMU](https://github.com/DW-Tas/EMU)
+- [3MS](https://github.com/3DCoded/3MS)
+- [KMS](https://github.com/muzixiaoyang/KMS)
+- [3DChameleon](https://github.com/3DChameleon/3DChameleonMk4)
 - [PicoMMU](https://github.com/lhndo/LH-Stinger/wiki/Pico-MMU)
+- [MMX](https://www.printables.com/model/1181017)
 - [MadMax](https://github.com/zruncho3d/madmax)
 - [StealthChanger](https://github.com/DraftShift/StealthChanger)
 
