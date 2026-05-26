@@ -1,0 +1,482 @@
+connectors:
+  24V_Supply:
+    pinlabels: [Line, Neutral, Earth, 24V+, 24V-]
+    show_pincount: false
+  48V_Supply:
+    pinlabels: [Line, Neutral, Earth, 48V+, 48V-]
+    show_pincount: false
+  Motor_X:
+    pinlabels: [1A, 1B, 2A, 2B]
+    show_pincount: false
+  Motor_Y:
+    pinlabels: [1A, 1B, 2A, 2B]
+    show_pincount: false
+  Motor_Z:
+    pinlabels: [1A, 1B, 2A, 2B]
+    show_pincount: false
+  PL08N_X:
+    pinlabels: [Gnd, Signal, Vcc]
+    show_pincount: false
+  PL08N_Y:
+    pinlabels: [Gnd, Signal, Vcc]
+    show_pincount: false
+  PL08N_Z:
+    pinlabels: [Gnd, Signal, Vcc]
+    show_pincount: false
+  Toolsetter:
+    pinlabels: [Offset1, Offset2, Over1, Over2]
+    show_pincount: false
+  Probe:
+    pinlabels: [Ground, Signal, Vcc]
+    show_pincount: false
+  DoorSwitch:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  Button_Halt:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  Button_Hold:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  Button_Start:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  MistSolenoid:
+    pinlabels: [Vcc, Gnd]
+    show_pincount: false
+  VFD:
+    pinlabels: [Gnd, RS485_High, RS485_Low]
+    show_pincount: false
+  CaseLights:
+    pinlabels: [Vcc, Gnd]
+    show_pincount: false
+  DM542T_X: 
+    pinlabels: [
+      PUL+, 
+      PUL-, 
+      DIR+, 
+      DIR-, 
+      ENA+, 
+      ENA-, 
+      ALM+, 
+      ALM-, 
+      Vdc, 
+      Gnd, 
+      Drive_A+, 
+      Drive_A-, 
+      Drive_B+, 
+      Drive_B-  
+    ]
+    show_pincount: false
+  DM542T_Y:
+    pinlabels: [
+      PUL+, 
+      PUL-, 
+      DIR+, 
+      DIR-, 
+      ENA+, 
+      ENA-, 
+      ALM+, 
+      ALM-, 
+      Vdc, 
+      Gnd, 
+      Drive_A+, 
+      Drive_A-, 
+      Drive_B+, 
+      Drive_B-  
+    ]
+    show_pincount: false
+  DM542T_Z:
+    pinlabels: [
+      PUL+, 
+      PUL-, 
+      DIR+, 
+      DIR-, 
+      ENA+, 
+      ENA-, 
+      ALM+, 
+      ALM-, 
+      Vdc, 
+      Gnd, 
+      Drive_A+, 
+      Drive_A-, 
+      Drive_B+, 
+      Drive_B- 
+    ]
+    show_pincount: false
+  FlexiHAL:
+    pinlabels: [
+      24V+, 
+      24V-, 
+      Limit_X_Ground, 
+      Limit_X_Signal, 
+      Limit_X_12V, 
+      Limit_Y_Ground, 
+      Limit_Y_Signal, 
+      Limit_Y_12V, 
+      Limit_Z_Ground, 
+      Limit_Z_Signal, 
+      Limit_Z_12V, 
+      Limit_A_Ground, 
+      Limit_A_Signal, 
+      Limit_A_12V, 
+      Limit_B_Ground, 
+      Limit_B_Signal, 
+      Limit_B_12V, 
+      Input_Door_Ground, 
+      Input_Door_Signal, 
+      Input_Door_12V, 
+      Input_Halt_Ground, 
+      Input_Halt_Signal, 
+      Input_Halt_12V, 
+      Input_Pause_Ground, 
+      Input_Pause_Signal, 
+      Input_Pause_12V, 
+      Input_Start_Ground, 
+      Input_Start_Signal, 
+      Input_Start_12V, 
+      Input_Probe_Ground, 
+      Input_Probe_Signal, 
+      Input_Probe_12V, 
+      Input_Tool_Ground, 
+      Input_Tool_Signal, 
+      Input_Tool_12V, 
+      Encoder_RJ45(1)-A_Index_Ext+, 
+      Encoder_RJ45(2)-A_Index_Ext-, 
+      Encoder_RJ45(3)-B_Ext+, 
+      Encoder_RJ45(4)-B_Ext-, 
+      Encoder_RJ45(5)-Z_Pulse_Ext+, 
+      Encoder_RJ45(6)-Z_Pulse_Ext-, 
+      Encoder_RJ45(7)-5V, 
+      Encoder_RJ45(8)-Gnd, 
+      Switch_RJ45(1)-12V, 
+      Switch_RJ45(2)-Gnd, 
+      Switch_RJ45(3)-Start, 
+      Switch_RJ45(4)-Hold, 
+      Switch_RJ45(5)-Halt, 
+      Switch_RJ45(6)-Door, 
+      Switch_RJ45(7)-N/C, 
+      Switch_RJ45(8)-N/C, 
+      Limit_RJ45(1)-12V, 
+      Limit_RJ45(2)-Gnd, 
+      Limit_RJ45(3)-LimitX, 
+      Limit_RJ45(4)-LimitY, 
+      Limit_RJ45(5)-LimitZ, 
+      Limit_RJ45(6)-LimitA, 
+      Limit_RJ45(7)-Tool, 
+      Limit_RJ45(8)-Probe, 
+      Output_Aux0+, 
+      Output_Aux0-, 
+      Output_Aux1+, 
+      Output_Aux1-, 
+      Output_Aux2+, 
+      Output_Aux2-, 
+      Output_Aux3+, 
+      Output_Aux3-, 
+      Output_Mist+, 
+      Output_Mist-, 
+      Output_Flood+, 
+      Output_Flood-, 
+      Spindle+, 
+      Spindle-, 
+      RS485_GND, 
+      RS485_A, 
+      RS485_B, 
+      Spin_Pwr+, 
+      Spin_Pwr-, 
+      Spin_Gnd, 
+      Spin_Speed, 
+      Spin_Direction, 
+      Spin_Enable, 
+      Output_DriveX-Step+, 
+      Output_DriveX-Step-, 
+      Output_DriveX-Dir+, 
+      Output_DriveX-Dir-, 
+      Output_DriveX-5V, 
+      Output_DriveX-Enable-, 
+      Output_DriveX-Alarm-, 
+      Output_DriveX-Ground, 
+      Output_DriveY-Step+, 
+      Output_DriveY-Step-, 
+      Output_DriveY-Dir+, 
+      Output_DriveY-Dir-, 
+      Output_DriveY-5V, 
+      Output_DriveY-Enable-, 
+      Output_DriveY-Alarm-, 
+      Output_DriveY-Ground, 
+      Output_DriveZ-Step+, 
+      Output_DriveZ-Step-, 
+      Output_DriveZ-Dir+, 
+      Output_DriveZ-Dir-, 
+      Output_DriveZ-5V, 
+      Output_DriveZ-Enable-, 
+      Output_DriveZ-Alarm-, 
+      Output_DriveZ-Ground, 
+      Output_DriveA-Step+, 
+      Output_DriveA-Step-, 
+      Output_DriveA-Dir+, 
+      Output_DriveA-Dir-, 
+      Output_DriveA-5V, 
+      Output_DriveA-Enable-, 
+      Output_DriveA-Alarm-, 
+      Output_DriveA-Ground, 
+      Output_DriveB-Step+, 
+      Output_DriveB-Step-, 
+      Output_DriveB-Dir+, 
+      Output_DriveB-Dir-, 
+      Output_DriveB-5V, 
+      Output_DriveB-Enable-, 
+      Output_DriveB-Alarm-, 
+      Output_DriveB-Ground
+    ]
+    show_pincount: false
+
+cables:
+  24V1:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [24V+, 24V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  48V1:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [48V+, 48V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  48V2:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [48V+, 48V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  48V3:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [48V+, 48V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  DrvConX:
+    wirecount: 6
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  DrvConY:
+    wirecount: 6
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  DrvConZ:
+    wirecount: 6
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MotConX:
+    wirecount: 4
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MotConY:
+    wirecount: 4
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MotConZ:
+    wirecount: 4
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LimitX:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LimitY:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LimitZ:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  Toolset:
+    wirecount: 4
+    color_code: IEC
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  ProbeSet:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  DoorSet:
+    wirecount: 2
+    colors: [GN, GN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  HaltWire:
+    wirecount: 2
+    colors: [YE, YE]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  HoldWire:
+    wirecount: 2
+    colors: [YE, YE]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  StartWire:
+    wirecount: 2
+    colors: [YE, YE]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MistWire:
+    wirecount: 2
+    colors: [BU, BK]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  SolenoidWire:
+    wirecount: 3
+    colors: [BK, VT, BG]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LightWire:
+    wirecount: 2
+    colors: [RD, BK]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+
+connections:
+  -
+    - 24V_Supply: [24V+, 24V-]
+    - 24V1: [1,2]
+    - FlexiHAL: [24V+, 24V-]
+  -
+    - 48V_Supply: [48V+, 48V-]
+    - 48V1: [1,2]
+    - DM542T_X: [Vdc, Gnd]
+  -
+    - 48V_Supply: [48V+, 48V-]
+    - 48V2: [1,2]
+    - DM542T_Y: [Vdc, Gnd]
+  -
+    - 48V_Supply: [48V+, 48V-]
+    - 48V3: [1,2]
+    - DM542T_Z: [Vdc, Gnd]
+  -
+    - FlexiHAL: [Output_DriveX-Step+, Output_DriveX-Step-, Output_DriveX-Dir+, Output_DriveX-Dir-, Output_DriveX-5V, Output_DriveX-Enable-]
+    - DrvConX: [1,2,3,4,5,6]
+    - DM542T_X: [PUL+, PUL-, DIR+, DIR-, ENA+, ENA-]
+  -
+    - FlexiHAL: [Output_DriveY-Step+, Output_DriveY-Step-, Output_DriveY-Dir+, Output_DriveY-Dir-, Output_DriveY-5V, Output_DriveY-Enable-]
+    - DrvConY: [1,2,3,4,5,6]
+    - DM542T_Y: [PUL+, PUL-, DIR+, DIR-, ENA+, ENA-]
+  -
+    - FlexiHAL: [Output_DriveZ-Step+, Output_DriveZ-Step-, Output_DriveZ-Dir+, Output_DriveZ-Dir-, Output_DriveZ-5V, Output_DriveZ-Enable-]
+    - DrvConZ: [1,2,3,4,5,6]
+    - DM542T_Z: [PUL+, PUL-, DIR+, DIR-, ENA+, ENA-]
+  -
+    - DM542T_X: [Drive_A+, Drive_A-, Drive_B+, Drive_B-]
+    - MotConX: [1,2,3,4]
+    - Motor_X: [1A, 1B, 2A, 2B]
+  -
+    - DM542T_Y: [Drive_A+, Drive_A-, Drive_B+, Drive_B-]
+    - MotConY: [1,2,3,4]
+    - Motor_Y: [1A, 1B, 2A, 2B]
+  -
+    - DM542T_Z: [Drive_A+, Drive_A-, Drive_B+, Drive_B-]
+    - MotConZ: [1,2,3,4]
+    - Motor_Z: [1A, 1B, 2A, 2B]
+  -
+    - FlexiHAL: [Limit_X_Ground, Limit_X_Signal, Limit_X_12V]
+    - LimitX: [1,2,3]
+    - PL08N_X: [Gnd, Signal, Vcc]
+  -
+    - FlexiHAL: [Limit_Y_Ground, Limit_Y_Signal, Limit_Y_12V]
+    - LimitY: [1,2,3]
+    - PL08N_Y: [Gnd, Signal, Vcc]
+  -
+    - FlexiHAL: [Limit_Z_Ground, Limit_Z_Signal, Limit_Z_12V]
+    - LimitZ: [1,2,3]
+    - PL08N_Z: [Gnd, Signal, Vcc]
+  -
+    - FlexiHAL: [Input_Tool_Ground, Input_Tool_Signal, Input_Halt_Ground, Input_Halt_Signal]
+    - Toolset: [1,2,3,4]
+    - Toolsetter: [Offset1, Offset2, Over1, Over2]
+  -
+    - FlexiHAL: [Input_Probe_Ground, Input_Probe_Signal, Input_Probe_12V]
+    - ProbeSet: [1,2,3]
+    - Probe: [Ground, Signal, Vcc]
+  -
+    - FlexiHAL: [Input_Door_Ground, Input_Door_Signal]
+    - DoorSet: [1,2]
+    - DoorSwitch: [N_C, COM]
+  -
+    - FlexiHAL: [Switch_RJ45(2)-Gnd, Switch_RJ45(3)-Start]
+    - StartWire: [1,2]
+    - Button_Start: [COM, N_O]
+  -
+    - FlexiHAL: [Switch_RJ45(2)-Gnd, Switch_RJ45(4)-Hold]
+    - HoldWire: [1,2]
+    - Button_Hold: [COM, N_O]
+  -
+    - FlexiHAL: [Switch_RJ45(2)-Gnd, Switch_RJ45(5)-Halt]
+    - HaltWire: [1,2]
+    - Button_Halt: [COM, N_O]
+  -
+    - FlexiHAL: [Output_Mist+, Output_Mist-]
+    - MistWire: [1,2]
+    - MistSolenoid: [Vcc, Gnd]
+  -
+    - FlexiHAL: [RS485_GND, RS485_A, RS485_B]
+    - SolenoidWire: [1,2,3]
+    - VFD: [Gnd, RS485_High, RS485_Low]
+  -
+    - FlexiHAL: [Output_Aux3+, Output_Aux3-]
+    - LightWire: [1,2]
+    - CaseLights: [Vcc, Gnd]

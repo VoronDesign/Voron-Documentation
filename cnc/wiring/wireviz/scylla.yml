@@ -1,0 +1,364 @@
+connectors:
+  24V_Supply:
+    pinlabels: [Line, Neutral, Earth, 24V+, 24V-]
+    show_pincount: false
+  48V_Supply:
+    pinlabels: [Line, Neutral, Earth, 48V+, 48V-]
+    show_pincount: false
+  Motor_X:
+    pinlabels: [1A, 1B, 2A, 2B]
+    show_pincount: false
+  Motor_Y:
+    pinlabels: [1A, 1B, 2A, 2B]
+    show_pincount: false
+  Motor_Z:
+    pinlabels: [1A, 1B, 2A, 2B]
+    show_pincount: false
+  PL08N_X:
+    pinlabels: [Gnd, Signal, Vcc]
+    show_pincount: false
+  PL08N_Y:
+    pinlabels: [Gnd, Signal, Vcc]
+    show_pincount: false
+  PL08N_Z:
+    pinlabels: [Gnd, Signal, Vcc]
+    show_pincount: false
+  Toolsetter:
+    pinlabels: [Offset1, Offset2]
+    show_pincount: false
+  Probe:
+    pinlabels: [Ground, Signal, Vcc]
+    show_pincount: false
+  DoorSwitch:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  Button_Halt:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  Button_Hold:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  Button_Start:
+    pinlabels: [N_C, COM, N_O]
+    show_pincount: false
+  MistSolenoid:
+    pinlabels: [Vcc, Gnd]
+    show_pincount: false
+  VFD:
+    pinlabels: [Gnd, RS485_High, RS485_Low]
+    show_pincount: false
+  CaseLights:
+    pinlabels: [Vcc, Gnd]
+    show_pincount: false
+  Scylla:
+    pinlabels: [
+      VMOS+, 
+      VMOS-, 
+      VMCU+,
+      VMCU-,
+      VMOT+,
+      VMOT-,
+      Limit_X_Min_Gnd, 
+      Limit_X_Min_Sig, 
+      Limit_X_Min_Pwr, 
+      Limit_Y_Min_Gnd, 
+      Limit_Y_Min_Sig, 
+      Limit_Y_Min_Pwr, 
+      Limit_Z_Min_Gnd, 
+      Limit_Z_Min_Sig, 
+      Limit_Z_Min_Pwr, 
+      Limit_A_Min_Gnd, 
+      Limit_A_Min_Sig, 
+      Limit_A_Min_Pwr, 
+      Limit_X_Max_Gnd, 
+      Limit_X_Max_Sig, 
+      Limit_X_Max_Pwr, 
+      Limit_Y_Max_Gnd, 
+      Limit_Y_Max_Sig, 
+      Limit_Y_Max_Pwr, 
+      Limit_Z_Max_Gnd, 
+      Limit_Z_Max_Sig, 
+      Limit_Z_Max_Pwr, 
+      Limit_A_Max_Gnd, 
+      Limit_A_Max_Sig, 
+      Limit_A_Max_Pwr,
+      Input_Probe_Gnd, 
+      Input_Probe_Sig, 
+      Input_Probe_Pwr, 
+      Input_Tool_Gnd, 
+      Input_Tool_Sig, 
+      Input_Tool_Pwr, 
+      Output_Aux0+, 
+      Output_Aux0-, 
+      Output_Aux1+, 
+      Output_Aux1-, 
+      Output_Aux2+, 
+      Output_Aux2-, 
+      Output_Mist+,
+      Output_Mist-,
+      Output_Cool+,
+      Output_Cool-
+      Relay_Delay_In,
+      Relay_Delay_Out,
+      PiCon_1,
+      PiCon_2,
+      PiCon_3,
+      PiCon_4,
+      PiCon_5,
+      PiCon_6,
+      PiCon_7,
+      PiCon_8,
+      UART_Gnd,
+      UART_TX,
+      UART_RX,
+      I2C_3.3V,
+      I2C_Gnd,
+      I2C_SCL,
+      I2C_SDA,
+      RS485_Gnd, 
+      RS485_A, 
+      RS485_B, 
+      CAN_Gnd,
+      CAN_L,
+      CAN_H,
+      Spindle_EN, 
+      Spindle_Dir, 
+      Spindle_Com, 
+      Spindle_AVR, 
+      Spindle_Speed, 
+      Spindle_Gnd, 
+      Output_DriveX-1A, 
+      Output_DriveX-1B, 
+      Output_DriveX-2A, 
+      Output_DriveX-2B, 
+      Output_DriveX-EN,
+      Output_DriveX-Step,
+      Output_DriveX-Dir,
+      Output_DriveY-1A, 
+      Output_DriveY-1B, 
+      Output_DriveY-2A, 
+      Output_DriveY-2B, 
+      Output_DriveY-EN,
+      Output_DriveY-Step,
+      Output_DriveY-Dir,
+      Output_DriveZ-1A, 
+      Output_DriveZ-1B, 
+      Output_DriveZ-2A, 
+      Output_DriveZ-2B, 
+      Output_DriveZ-EN,
+      Output_DriveZ-Step,
+      Output_DriveZ-Dir,
+      Output_DriveA-1A, 
+      Output_DriveA-1B, 
+      Output_DriveA-2A, 
+      Output_DriveA-2B, 
+      Output_DriveA-EN,
+      Output_DriveA-Step,
+      Output_DriveA-Dir
+    ]
+    show_pincount: false
+
+cables:
+  24V1:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [24V+, 24V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  24V2:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [24V+, 24V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  48V1:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [48V+, 48V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MotConX:
+    wirecount: 4
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MotConY:
+    wirecount: 4
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MotConZ:
+    wirecount: 4
+    color_code: IEC
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LimitX:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LimitY:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LimitZ:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  Toolset:
+    wirecount: 2
+    color_code: IEC
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  ProbeSet:
+    wirecount: 3
+    colors: [BU, BK, BN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  DoorSet:
+    wirecount: 2
+    colors: [GN, GN]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  HaltWire:
+    wirecount: 2
+    colors: [YE, YE]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  HoldWire:
+    wirecount: 2
+    colors: [YE, YE]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  StartWire:
+    wirecount: 2
+    colors: [YE, YE]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  MistWire:
+    wirecount: 2
+    colors: [BU, BK]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  SolenoidWire:
+    wirecount: 3
+    colors: [BK, VT, BG]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  LightWire:
+    wirecount: 2
+    colors: [RD, BK]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+
+connections:
+  -
+    - 24V_Supply: [24V+, 24V-]
+    - 24V1: [1,2]
+    - Scylla: [VMOS+, VMOS-]
+  -
+    - 24V_Supply: [24V+, 24V-]
+    - 24V2: [1,2]
+    - Scylla: [VMCU+, VMCU-]
+  -
+    - 48V_Supply: [48V+, 48V-]
+    - 48V1: [1,2]
+    - Scylla: [VMOT+, VMOT-]
+  -
+    - Scylla: [Output_DriveX-1A, Output_DriveX-1B, Output_DriveX-2A, Output_DriveX-2B]
+    - MotConX: [1,2,3,4]
+    - Motor_X: [1A, 1B, 2A, 2B]
+  -
+    - Scylla: [Output_DriveY-1A, Output_DriveY-1B, Output_DriveY-2A, Output_DriveY-2B]
+    - MotConY: [1,2,3,4]
+    - Motor_Y: [1A, 1B, 2A, 2B]
+  -
+    - Scylla: [Output_DriveZ-1A, Output_DriveZ-1B, Output_DriveZ-2A, Output_DriveZ-2B]
+    - MotConZ: [1,2,3,4]
+    - Motor_Z: [1A, 1B, 2A, 2B]
+  -
+    - Scylla: [Limit_X_Min_Gnd, Limit_X_Min_Sig, Limit_X_Min_Pwr]
+    - LimitX: [1,2,3]
+    - PL08N_X: [Gnd, Signal, Vcc]
+  -
+    - Scylla: [Limit_Y_Min_Gnd, Limit_Y_Min_Sig, Limit_Y_Min_Pwr]
+    - LimitY: [1,2,3]
+    - PL08N_Y: [Gnd, Signal, Vcc]
+  -
+    - Scylla: [Limit_Z_Min_Gnd, Limit_Z_Min_Sig, Limit_Z_Min_Pwr]
+    - LimitZ: [1,2,3]
+    - PL08N_Z: [Gnd, Signal, Vcc]
+  -
+    - Scylla: [Input_Tool_Gnd, Input_Tool_Sig]
+    - Toolset: [1,2]
+    - Toolsetter: [Offset1, Offset2]
+  -
+    - Scylla: [Input_Probe_Gnd, Input_Probe_Sig, Input_Probe_Pwr]
+    - ProbeSet: [1,2,3]
+    - Probe: [Ground, Signal, Vcc]
+  -
+    - Scylla: [Limit_A_Max_Gnd, Limit_A_Max_Sig]
+    - DoorSet: [1,2]
+    - DoorSwitch: [N_C, COM]
+  -
+    - Scylla: [Limit_Z_Max_Gnd, Limit_Z_Max_Sig]
+    - StartWire: [1,2]
+    - Button_Start: [COM, N_O]
+  -
+    - Scylla: [Limit_Y_Max_Gnd, Limit_Y_Max_Sig]
+    - HoldWire: [1,2]
+    - Button_Hold: [COM, N_O]
+  -
+    - Scylla: [Limit_X_Max_Gnd, Limit_X_Max_Sig]
+    - HaltWire: [1,2]
+    - Button_Halt: [COM, N_O]
+  -
+    - Scylla: [Output_Mist+, Output_Mist-]
+    - MistWire: [1,2]
+    - MistSolenoid: [Vcc, Gnd]
+  -
+    - Scylla: [RS485_Gnd, RS485_A, RS485_B]
+    - SolenoidWire: [1,2,3]
+    - VFD: [Gnd, RS485_High, RS485_Low]
+  -
+    - Scylla: [Output_Aux2+, Output_Aux2-]
+    - LightWire: [1,2]
+    - CaseLights: [Vcc, Gnd]
