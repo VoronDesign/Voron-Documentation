@@ -35,7 +35,7 @@ Once the inputs are verified as working, change registers $5 (endstops) or $14 (
 Once all of the inputs are cleared, run the command `$X` to reset the alarm state.  Querying the status again with `?` should indicate an Idle state and ready for movement.
 
 ## Motor Setup and Testing
-Choose the desired microsteps.  If using external drivers such as the DM542T set the jumpers on the drivers.  *(Note: Whenever the jumpers are changed, be sure to power down the drivers first.)*. Take the microsteps value and multiply by the number of full steps in the motor.  This is commonly 200 for bipolar motors.  Then divide that number by the mm per revolution of the ball screw.  For example: 20 microsteps x 200 full steps = 4000 microsteps per revolution / 4 mm per revolution = 1000 microsteps / mm.
+Choose the desired microsteps.  If using external drivers such as the DM542T set the jumpers on the drivers.  *(Note: Whenever the jumpers are changed, be sure to power down the drivers first.)*. Take the microsteps value and multiply by the number of full steps in the motor.  This is commonly 200 for bipolar motors.  Then divide that number by the mm per revolution of the ball screw.  For example: 20 microsteps x 200 full steps = 4000 microsteps per revolution / 4 mm per revolution = 1000 microsteps / mm. (note, for the BOM specified ballscrews, this value should be 800 in each axiss)
 
 Use that value and assign it for X, Y, and Z (respectively) as follows:
 
@@ -55,18 +55,21 @@ $132=85
 
 Manually move the worktable, X carriage, and Z carriage to the middle of their travels.  Starting with X, execute `G0 X10`.  The X carriage should move 10mm to the right (towards the electronics).  If the X axis moves the wrong direction, invert the direction bit in register `$3`.  If the X axis moves the wrong amount, double check the configured microsteps and total microsteps per revolution.  Once X is moving correctly do the same with Y and with Z.  Keep in mind that when worktable for Y is moving in the positive direction, the table will move closer to the front.
 
-Once all axis are moving the appropriate direction and quantity mmove to the homing setup.
+Once all axis are moving the appropriate direction and quantity move to the homing setup.
+
+## Motor Current Setup
+The default motor current settings may not be adequate to move all axis cleanly.  These are values that may work when using the BTT Scylla's onboard drivers and suggested stepper motors. `$150=16`, `$151=16`, `$152=16` *Need to verify*
 
 ## Homing Setup
 All endstops are adjustable and need to be checked before continuing.
 
-Measure the distance from the far left edge of the X carriage to the top of the bolts in the X ballscrew nut housing.  Then measure the distance from the X ballscrew mount to the gantry upright.  Subtract the first value from the second to determine clearance. Change the commands to relative mode with `G91`.  Move the X carriage close to the left side, then bring it closer by 0.5mm at a time until the X carriage is approximately 1mm larger than the calculated clearance number.  Once that is in place, adjust the X endstop to just trigger in that position and tighten.
+Measure the distance from the far right edge of the X carriage to the top of the bolts in the X ballscrew nut housing.  Then measure the distance from the X ballscrew mount to the gantry upright.  Subtract the first value from the second to determine clearance. Change the commands to relative mode with `G91`.  Move the X carriage close to the right side, then bring it closer by 0.5mm at a time until the X carriage is approximately 1mm larger than the calculated clearance number.  Once that is in place, adjust the X endstop to just trigger in that position and tighten.
 
 Carefully raise the Z carriage until the linear rail carriages are flush with the top of the linear rail.  Once in that position, adjust the Z endstop to just trigger in that position and tighten.
 
 Slighly loosen the Y endstop mount and slide it all the way to the back of the 3030 extrusion.  Mount a small endmill into the spindle and move Z down until it is about 5mm above the worktable.  Move the worktable in the Y axis until the center of the endmill is at or just in front of the edge of the worktable.  Slide the Y endstop into place until if just triggers in that position.  Move the worktable positive in Y to allow access to tighten the endstop.
 
-Move the worktable, X carriage, and Z carriage to be near the middle of their travels.  Change the endstop positions in the configuration by running `$23=3`.  This will configure grblHAL to search for the homing endstop in the negative direction for X and Y and the positive direction in Z.  Then enable homing with options by setting `$22=1` *Need to verify*
+Move the worktable, X carriage, and Z carriage to be near the middle of their travels.  Change the endstop positions in the configuration by running `$23=2`.  This will configure grblHAL to search for the homing endstop in the negative direction for Y and the positive direction for X and Z.  Then enable homing with options by setting `$22=1` *Need to verify*
 
 Once configured it will be ready to test.  Have a hand near the emergency stop button in case things go wrong.  Run the command `$H` to home the machine.  It should home Z first followed by X and Y simultaneously.  If any of the homing goes in the wrong direction, immediately stop the machine to prevent damage.  After restarting and clearing errors, change the bit value of `$23` for the given axis.
 
