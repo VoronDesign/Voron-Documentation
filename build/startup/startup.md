@@ -35,7 +35,7 @@ Please follow each step closely and once ready, click the "I am done, let's move
 
 ### Select your webinterface
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="mainsailos" onchange="hideoctowarning()">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="mainsailos" checked onchange="hideoctowarning()">
   <label class="form-check-label" for="mainsailos">
     Mainsail/Fluidd
   </label>
@@ -58,7 +58,7 @@ Please follow each step closely and once ready, click the "I am done, let's move
 ### Select your Probe
 
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="probeSelect" id="inductive">
+    <input class="form-check-input" type="radio" name="probeSelect" id="inductive" checked>
     <label class="form-check-label" for="inductive">
       Stock Inductive probe (TL-Q5MC2 or similar)
     </label>
