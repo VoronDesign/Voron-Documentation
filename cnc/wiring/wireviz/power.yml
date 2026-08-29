@@ -1,0 +1,277 @@
+connectors:
+  Power_Inlet:
+    type: IEC
+    pinlabels: [Line, Neutral, Earth]
+    show_pincount: false
+  Power_Switch:
+    pinlabels: [Line_In, Line_Out, Neutral_In, Neutral_Out]
+    show_pincount: false
+  5V_Supply:
+    pinlabels: [Line_In, Neutral_In, 5V+, 5V-]
+    show_pincount: false
+  Contactor:
+    pinlabels: [1L1, 2T1, 3L2, 4T2, 5L3, 6T3, A1, A2]
+    show_pincount: false
+  EStop_Button:
+    pinlabels: [NO1, NO2, NC1, NC2]
+    show_pincount: false
+  H100_VFD:
+    pinlabels: [Line, Neutral, Earth, U, V, W]
+    show_pincount: false
+  24V_Supply:
+    pinlabels: [Line, Neutral, Earth, 24V+, 24V-]
+    show_pincount: false
+  48V_Supply:
+    pinlabels: [Line, Neutral, Earth, 48V+1, 48V+2, 48V-1, 48V-2]
+    show_pincount: false
+  Power_Wagos:
+    type: Wago 5-slot (3x)
+    pinlabels: [L1, L2, L3, L4, L5, N1, N2, N3, N4, N5, G1, G2, G3, G4, G5]
+    show_pincount: false
+  Power_Main:
+    type: Wago 5-slot (2x)
+    pinlabels: [L1, L2, L3, L4, L5, N1, N2, N3, N4, N5]
+    show_pincount: false
+  24V_Distribution:
+    type: Wago 5-slot (2x)
+    pinlabels: [24V+1, 24V+2, 24V+3, 24V+4, 24V+5, 24V-1, 24V-2, 24V-3, 24V-4, 24V-5]
+    show_pincount: false
+  RaspberryPi:
+    pinlabels: [5V, Gnd]
+    show_pincount: false
+  Cooling_Fan:
+    pinlabels: [V+, V-]
+    show_pincount: false
+  DIN_Rail:
+    pinlabels: [Earth]
+    show_pincount: false
+  Electronics_Frame:
+    pinlabels: [Earth]
+    show_pincount: false
+  Spindle:
+    pinlabels: [Earth, U, V, W]
+    show_pincount: false
+
+cables:
+  P1:
+    wirecount: 2
+    colors: [BN, BU]
+    wirelabels: [Line, Neutral]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P2:
+    wirecount: 2
+    colors: [BN, BU]
+    wirelabels: [Line, Neutral]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P3:
+    wirecount: 2
+    colors: [BN, BU]
+    wirelabels: [Line, Neutral]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P5:
+    wirecount: 1
+    colors: [GN]
+    wirelabels: [Earth]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P6:
+    wirecount: 3
+    colors: [BN, BU, GN]
+    wirelabels: [Line, Neutral, Earth]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P7:
+    wirecount: 3
+    colors: [BN, BU, GN]
+    wirelabels: [Line, Neutral, Earth]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P8:
+    wirecount: 3
+    colors: [BN, BU, GN]
+    wirelabels: [Line, Neutral, Earth]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P10:
+    wirecount: 2
+    colors: [BN, BU]
+    wirelabels: [Line, Neutral]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  P11:
+    wirecount: 2
+    colors: [BN, BU]
+    wirelabels: [Line, Neutral]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  E1:
+    wirecount: 1
+    colors: [GN]
+    wirelabels: [Earth]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  E2:
+    wirecount: 1
+    colors: [GN]
+    wirelabels: [Earth]
+    gauge: 16 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  5V1:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [5V+, 5V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  24V1:
+    wirecount: 2
+    colors: [RD, BK]
+    wirelabels: [24V+, 24V-]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  ES1:
+    wirecount: 1
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  ES2:
+    wirecount: 1
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  ES3:
+    wirecount: 1
+    colors: [BU]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  NB1:
+    wirecount: 1
+    colors: [BK]
+    gauge: 20 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  Fan_Power:
+    wirecount: 2
+    colors: [RD, BK]
+    gauge: 24 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+  VFD_Spindle:
+    wirecount: 4
+    colors: [GN, GY, GY, GY]
+    gauge: 18 AWG
+    show_equiv: true
+    show_name: false
+    bgcolor: GY
+
+connections:
+  -
+    - Power_Inlet: [Line, Neutral]
+    - P1: [1,2]
+    - Power_Switch: [Line_In, Neutral_In]
+  -
+    - Power_Switch: [Line_Out, Neutral_Out]
+    - P10: [1,2]
+    - Power_Main: [L1, N1]
+  -
+    - Power_Main: [L2, N2]
+    - P2: [1, 2]
+    - Contactor: [1L1, 3L2]
+  - 
+    - Contactor: [2T1, 4T2]
+    - P3: [1, 2]
+    - Power_Wagos: [L1, N1]
+  -
+    - Power_Main: [L4, N4]
+    - P11: [1, 2]
+    - 5V_Supply: [Line_In, Neutral_In]
+  -
+    - Power_Inlet: [Earth]
+    - P5: [1]
+    - Power_Wagos: [G1]
+  -
+    - Power_Wagos: [L2, N2, G2]
+    - P6: [1,2,3]
+    - H100_VFD: [Line, Neutral, Earth]
+  -
+    - Power_Wagos: [L3, N3, G3]
+    - P7: [1,2,3]
+    - 24V_Supply: [Line, Neutral, Earth]
+  -
+    - Power_Wagos: [L4, N4, G4]
+    - P8: [1,2,3]
+    - 48V_Supply: [Line, Neutral, Earth]
+  -
+    - 5V_Supply: [5V+, 5V-]
+    - 5V1: [1,2]
+    - RaspberryPi: [5V, Gnd]
+  -
+    - Power_Main: [L3]
+    - ES1: [1]
+    - EStop_Button: [NC1]
+  -
+    - EStop_Button: [NC2]
+    - ES2: [1]
+    - Contactor: [A1]
+  -
+    - Power_Main: [N3]
+    - ES3: [1]
+    - Contactor: [A2]
+  -
+    - 48V_Supply: [48V-2]
+    - NB1: [1]
+    - 24V_Distribution: [24V-5]
+  -
+    - 24V_Supply: [24V+, 24V-]
+    - 24V1: [1, 2]
+    - 24V_Distribution: [24V+1, 24V-1]
+  -
+    - 24V_Distribution: [24V+2, 24V-2]
+    - Fan_Power: [1, 2]
+    - Cooling_Fan: [V+, V-]
+  -
+    - DIN_Rail: [Earth]
+    - E1: [1]
+    - Electronics_Frame: [Earth]
+  -
+    - Electronics_Frame: [Earth]
+    - E2: [1]
+    - Power_Wagos: [G5]
+  -
+    - H100_VFD: [Earth, U, V, W]
+    - VFD_Spindle: [1,2,3,4]
+    - Spindle: [Earth, U, V, W]
