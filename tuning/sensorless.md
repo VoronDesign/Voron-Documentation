@@ -114,10 +114,11 @@ You may also need to tweak the `diag_pin` property to be either `diag0_pin` or `
 3. **Change** the `endstop_pin` to `tmc2209_stepper_x:virtual_endstop`
 4. **Change** `homing_speed` to `80`
 5. **Change** `homing_retract_dist` to `0`
-6. Locate the `[tmc2209 stepper_x]` section (usually right below where you just edited)
-7. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
+6. **Add** `use_sensorless_homing: true` below `homing_retract_dist`
+7. Locate the `[tmc2209 stepper_x]` section (usually right below where you just edited)
+8. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
     Example: `diag_pin: ^PG6`
-8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
+9. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
 
 
 For those of you that took the Kalico route above, add these lines below your `run_current` property:
@@ -136,10 +137,11 @@ The first property sets the current to use when doing sensorless homing. The sec
 3. **Change** the `endstop_pin` to `tmc2209_stepper_y:virtual_endstop`
 4. **Change** `homing_speed` to `80`
 5. **Change** `homing_retract_dist` to `0`
-6. Locate the `[tmc2209 stepper_y]` section (usually right below where you just edited)
-7. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
+6. **Add** `use_sensorless_homing: true` below `homing_retract_dist`
+7. Locate the `[tmc2209 stepper_y]` section (usually right below where you just edited)
+8. **Add** `diag_pin` to match what you recorded from step 2, but add a ^ before it.
     Example: `diag_pin: ^PG9`
-8. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
+9. **Add** this below the `diag_pin` entry: `driver_SGTHRS: 255`
 
 
 For those of you that took the Kalico route above, add this line below your `run_current` property:
