@@ -552,10 +552,10 @@ Run this command for each of the motors:
 |:-------------------------------------------|:----------------------------------------------------------------|
 | STEPPER_BUZZ STEPPER=stepper_x           | The back left gantry motor will rotate clockwise first, then back counterclockwise   |
 | STEPPER_BUZZ STEPPER=stepper_y           | The back right gantry motor will rotate clockwise first, then back counterclockwise  |
-| STEPPER_BUZZ STEPPER=stepper_z           | the front left corner of the bed moves up, then back down                |
-| STEPPER_BUZZ STEPPER=stepper_z1          | the back left corner of the bed moves up, then back down                            |
-| STEPPER_BUZZ STEPPER=stepper_z2          | The back right corner of the bed moves up, then back down                           |
-| STEPPER_BUZZ STEPPER=stepper_z3          | The front right corner of the bed moves up, then back down                           |
+| STEPPER_BUZZ STEPPER=stepper_z           | the front left corner of the gantry moves up, then back down                |
+| STEPPER_BUZZ STEPPER=stepper_z1          | the back left corner of the gantry moves up, then back down                            |
+| STEPPER_BUZZ STEPPER=stepper_z2          | The back right corner of the gantry moves up, then back down                           |
+| STEPPER_BUZZ STEPPER=stepper_z3          | The front right corner of the gantry moves up, then back down                           |
 | STEPPER_BUZZ STEPPER=extruder            | The extruder moves.  Direction will be tested later for this motor                   |
 
 
