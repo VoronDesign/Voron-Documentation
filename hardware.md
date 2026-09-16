@@ -84,7 +84,7 @@ Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extr
 
 ## Clockwork2
 
-Clockwork is the successor the original extruder system for Afterburner, now adapted for Stealthburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA14 motor.  The Steatlhburner term is commonly (but incorrectly) used to refer to this extruder.
+Clockwork is the successor the original extruder system for Afterburner, now adapted for Stealthburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA14 motor.  The Stealthburner term is commonly (but incorrectly) used to refer to this extruder.
 
 ## Nightwatch
 

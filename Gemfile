@@ -33,3 +33,5 @@ gem "github-pages", group: :jekyll_plugins
 #gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # gem "webrick", "~> 1.8"
+
+gem "csv" # Ruby 3.4 dropped it; Jekyll 3.9 needs it
