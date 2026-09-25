@@ -475,7 +475,7 @@ Once there is a _tested_ process for stopping the printer in case of something g
 * If the bed moves upwards before moving to the right, you must reverse your z stepper directions in the config.
 * If the toolhead moves in an incorrect direction, stop it with emergency stop, take note of what direction it went, and move on to testing Y
 
-Next, test Y: run `G28 Y`.  The toolhead should move up slightly, and then towards the back of the printer until it hits the Y endstop.  
+Next, test Y: run `G28 Y`.  The bed should move down slightly, and then the toolhead should move towards the back of the printer until it hits the Y endstop.  
 
 {: .note}
 In a CoreXY configuration, both motors motors work together to move the printer in X or Y (think Etch A Sketch). As a result, testing X homing alone tells us very little.  We *must* test X and Y in order to determine what (if any) adjustments are needed
