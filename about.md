@@ -35,4 +35,4 @@ All it takes to receive a serial number after you have completed your build is t
 
 ---
 
-### Next: [Choosing a Printer / Extruder](./hardware.md)
+### Next: [Choosing a Printer / Toolhead](./hardware.md)

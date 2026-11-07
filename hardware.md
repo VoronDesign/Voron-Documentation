@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Choosing a Printer / Extruder"
+title: "Choosing a Printer / Toolhead"
 nav_order: 3
 ---
 
-# Choosing a Printer / Extruder
+# Choosing a Printer / Toolhead
 
-This is a guide to help people in selecting and building their first Voron printer and/or extruder.
+A guide to choosing your first Voron printer, and the carriage, toolhead and extruder that go with it.
 
 # Printer Models
 
@@ -54,23 +54,11 @@ The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of 
 
 ![](./images/VoronLegacy.jpg)
 
-# Extruders and Variants
+# Toolheads, Carriages and Extruders
 
-## Mobius (M4)
+## Toolheads
 
-Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame. It is highly optimized, uses dual gears, and is very effective for Bowden setups. It is driven by a full-size or a compact "pancake" NEMA17 motor.
-
-[M4 Introduction Video](https://www.youtube.com/watch?v=H2RBZYDZgTQ)
-
-![](./images/M4.jpg)
-
-## Jetpack
-
-Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden. It was designed as an interim solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superseded by the M4. It is driven by a compact "pancake" NEMA17 motor.
-
-![](./images/jetpack.jpg)
-
-## Stealthburner
+### Stealthburner
 
 Stealthburner is not specifically an extruder, but the collective name for the Voron direct-drive interchangeable toolhead system. The Stealthburner system has three interchangeable components: the extruder, the toolhead holding the hotend, and the cooling assembly. Each of those can be swapped without affecting the other components.
 
@@ -78,21 +66,62 @@ Stealthburner is not specifically an extruder, but the collective name for the V
 
 ![](./images/stealthburner.jpg)
 
-## Mini Stealthburner
+### Mini Stealthburner
 
 Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extruder. It is the successor to the Mini Afterburner toolhead.
 
-## Clockwork2
+### DownDraft
 
-Clockwork is the successor the original extruder system for Afterburner, now adapted for Stealthburner. It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA14 motor. The Stealthburner term is commonly (but incorrectly) used to refer to this extruder.
+DownDraft is a modular, adjustable performance toolhead for the Trident, V2, Switchwire and Legacy. It uses the Clockwork 2 mounting pattern, including compatible Tap mounts.
 
-## Nightwatch
+It accepts a wide range of common hotends and keeps toolhead height and nozzle position constant across all of them, so changing a hotend never requires a reprint. Orbiter v2 extruders mount directly. Other patterns need an adapter spacer.
 
-Nightwatch is the Clockwork2 repackaged for the smaller size needed by the Voron Zero printer. Nightwatch is available as a [standalone extruder](https://github.com/VoronDesign/Pocket-Watch/) for Bowden setups.
+Choose between two part-cooling variants:
 
-## Galileo
+- **Dual 4010 blowers:** slimmer and lighter, suitable for every filament.
+- **Dual 5015 blowers:** wider, with more airflow for fast or high-flow printing.
 
-Galileo is the newest extruder designed to fit on an Afterburner toolhead. It is based on the [Orbiter](https://www.thingiverse.com/thing:4223085) extruder and incorporates a planetary gear reduction to allow a smaller housing size and even smaller motor to be used in order to reduce weight.
+Both variants use a 2510 hotend fan and share extruder and PCB mounts. The logo lights with a single Neopixel or the Rainbow Barf LED.
+
+![DownDraft with 4010 (left) and 5015 (right) blowers](./images/downdraft.png)
+
+## Carriages
+
+### Chariot
+
+Chariot is the Voron X carriage. It sits 1.6 mm closer to the rail than earlier carriages, moving the toolhead's center of mass inward, and slides onto an MGN12 carriage from either side for a stiffer toolhead connection.
+
+Toolheads attach in the Stealthburner / Clockwork 2 / DownDraft style. Built-in mounts hold Beacon and Cartographer eddy current probes, BTT Eddy/Omron style probes, Klicky and PINDA. Builders who probe with the nozzle can omit the probe mount. Belt clips roll into the carriage and stay adjustable after assembly.
+
+![Chariot X carriage](./images/chariot.png){: style="display: block; margin: 0 auto;" }
+
+## Extruders
+
+### Mobius (M4)
+
+Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame. It is highly optimized, uses dual gears, and is very effective for Bowden setups. It is driven by a full-size or a compact "pancake" NEMA17 motor.
+
+[M4 Introduction Video](https://www.youtube.com/watch?v=H2RBZYDZgTQ)
+
+![](./images/M4.jpg)
+
+### Jetpack
+
+Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden. It was designed as an interim solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superseded by the M4. It is driven by a compact "pancake" NEMA17 motor.
+
+![](./images/jetpack.jpg)
+
+### Clockwork 2.5
+
+Clockwork is the successor to the original Afterburner extruder, adapted for Stealthburner. It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA14 motor. Version 2.5 adds a choice of Bowden collet or ECAS04 fitting, a gear inspection window, and an optional built-in filament sensor. People commonly, but incorrectly, call this extruder "Stealthburner."
+
+### Nightwatch
+
+Nightwatch is the Clockwork 2 repackaged for the smaller size needed by the Voron Zero printer. Nightwatch is available as a [standalone extruder](https://github.com/VoronDesign/Pocket-Watch/) for Bowden setups.
+
+### Galileo
+
+Galileo is an extruder for the Afterburner toolhead, the predecessor to Stealthburner. It is based on the [Orbiter](https://www.thingiverse.com/thing:4223085) extruder and adds a planetary gear reduction, which allows a smaller housing and a lighter motor.
 
 _Note: While not a Voron product, the Bondtech LGX is a drop-in fit on the Afterburner system._
 
