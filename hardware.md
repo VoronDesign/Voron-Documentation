@@ -10,13 +10,13 @@ This is a guide to help people in selecting and building their first Voron print
 
 # Printer Models
 
-There are currently five printers in the Voron lineup.  None is necessarily better than the others, just different.  All printers (except Legacy) are capable of being fully enclosed to print ABS but can just as easily print PLA, PETG, or even Nylon.  All printers in the Voron lineup are designed to use a Raspberry Pi linked to one or more motor controller board(s) to manage all of the printer functions and interface controls.
+There are currently five printers in the Voron lineup. None is necessarily better than the others, just different. All printers (except Legacy) are capable of being fully enclosed to print ABS but can just as easily print PLA, PETG, or even Nylon. All printers in the Voron lineup are designed to use a Raspberry Pi linked to one or more motor controller board(s) to manage all of the printer functions and interface controls.
 
 _Note: Pricing estimates are in US Dollars and do not include any necessary tools or other common building supplies. Costs vary widely depending on sourcing, part selection, and shipping costs._
 
 ## Voron Zero
 
-The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm^3 print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock Makerbeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design increases cost and the labor of tapping extrusions. The bed is also cantilevered, which restricts scaling further. This printer can be built for between \$400 - \$600. Current release is V0.2r1.
+The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm³ print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock MakerBeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design increases cost and the labor of tapping extrusions. The bed is also cantilevered, which restricts scaling further. This printer can be built for between \$400 - \$600. Current release is V0.2r1.
 
 [V0 Preview](https://www.youtube.com/watch?v=KR9YlTzWzQQ)
 
@@ -24,7 +24,7 @@ The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design 
 
 ## Voron Trident
 
-The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional CoreXY design with a fixed gantry and the 3-point bed moves along the Z axis. It is simpler to build compared to V2 and can be built for between \$1,000 - \$1,300. It encloses naturally so ABS or other temperature sensitive filaments can be printed easily. It uses linear rails for all axes, driven by belts on the X and Y axes and stepper motors with integrated leadscrews on the Z axis.  Standard sizes include a 250x250mm plate, a 300x300mm plate, or a 350x350mm plate. Z height is somewhat restrictive due to the limited options with integrated lead screw steppers, maxing out at 250mm without custom leadscrew motors.
+The [Voron Trident](https://vorondesign.com/voron_trident) is a traditional CoreXY design with a fixed gantry and the 3-point bed moves along the Z axis. It is simpler to build compared to V2 and can be built for between \$1,000 - \$1,300. It encloses naturally so ABS or other temperature sensitive filaments can be printed easily. It uses linear rails for all axes, driven by belts on the X and Y axes and stepper motors with integrated leadscrews on the Z axis. Standard sizes include a 250x250mm plate, a 300x300mm plate, or a 350x350mm plate. Z height is somewhat restrictive due to the limited options with integrated lead screw steppers, maxing out at 250mm without custom leadscrew motors.
 
 [Trident Homing Routine](https://www.youtube.com/watch?v=iwKfW8ggwE8)
 
@@ -40,7 +40,7 @@ The [Voron V2](https://vorondesign.com/voron2.4) is a modified CoreXY design wit
 
 ## Switchwire
 
-The [Switchwire](https://vorondesign.com/voron_switchwire) is Voron's take on a classic Mendel (aka "bedslinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the gantry by moving the X motor to the frame. The stiff 3030/3060 constructed frame is just large enough to cover the entire swing of the Prusa 250x210mm bed and allows for a natural enclosure.  If you don't have an existing Prusa printer to pull parts from, expect to spend between \$700 - \$900.
+The [Switchwire](https://vorondesign.com/voron_switchwire) is Voron's take on a classic Mendel (aka "bedslinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the gantry by moving the X motor to the frame. The stiff 3030/3060 constructed frame is just large enough to cover the entire swing of the Prusa 250x210mm bed and allows for a natural enclosure. If you don't have an existing Prusa printer to pull parts from, expect to spend between \$700 - \$900.
 
 [Switchwire Introduction Video](https://www.youtube.com/watch?v=jwPLl1v5ae4)
 
@@ -48,7 +48,7 @@ The [Switchwire](https://vorondesign.com/voron_switchwire) is Voron's take on a 
 
 ## Legacy
 
-The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LM8UU rods and bearings in the 230mm^3 size but retains the Afterburner toolhead.  It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LM8UU components but are expected to be between \$600 - \$800.
+The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of the Voron project and the RepRap project. It returns to the classic design using LM8UU rods and bearings in the 230mm³ size but retains the Afterburner toolhead. It is not designed to be enclosed. The electronics enclosure is very small, adding to the open-air vibe. Costs are variable depending on the builder's old stock of LM8UU components but are expected to be between \$600 - \$800.
 
 [Legacy Introduction Video](https://www.youtube.com/watch?v=NZqvRLa8ShE)
 
@@ -58,7 +58,7 @@ The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of 
 
 ## Mobius (M4)
 
-Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame.  It is highly optimized, uses dual gears, and is very effective for Bowden setups.  It is driven by a full-size or a compact "pancake" NEMA17 motor.
+Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame. It is highly optimized, uses dual gears, and is very effective for Bowden setups. It is driven by a full-size or a compact "pancake" NEMA17 motor.
 
 [M4 Introduction Video](https://www.youtube.com/watch?v=H2RBZYDZgTQ)
 
@@ -66,13 +66,13 @@ Mobius is the original Bowden extruder for Voron printers, designed to be mounte
 
 ## Jetpack
 
-Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  It was designed as an interim solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superseded by the M4.  It is driven by a compact "pancake" NEMA17 motor.
+Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden. It was designed as an interim solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superseded by the M4. It is driven by a compact "pancake" NEMA17 motor.
 
 ![](./images/jetpack.jpg)
 
 ## Stealthburner
 
-Stealthburner is not specifically an extruder, but the collective name for the Voron direct-drive interchangeable toolhead system.  The Stealthburner system has three interchangeable components: the extruder, the toolhead holding the hot end, and the cooling assembly.  Each of those can be swapped without affecting the other components.
+Stealthburner is not specifically an extruder, but the collective name for the Voron direct-drive interchangeable toolhead system. The Stealthburner system has three interchangeable components: the extruder, the toolhead holding the hotend, and the cooling assembly. Each of those can be swapped without affecting the other components.
 
 [Stealthburner Announcement Video](https://www.youtube.com/watch?v=lnMJBdUXuH4)
 
@@ -84,7 +84,7 @@ Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extr
 
 ## Clockwork2
 
-Clockwork is the successor the original extruder system for Afterburner, now adapted for Stealthburner.  It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA14 motor.  The Stealthburner term is commonly (but incorrectly) used to refer to this extruder.
+Clockwork is the successor the original extruder system for Afterburner, now adapted for Stealthburner. It is a repackaged BMG dual-gear extruder driven by a compact "pancake" NEMA14 motor. The Stealthburner term is commonly (but incorrectly) used to refer to this extruder.
 
 ## Nightwatch
 
@@ -92,7 +92,7 @@ Nightwatch is the Clockwork2 repackaged for the smaller size needed by the Voron
 
 ## Galileo
 
-Galileo is the newest extruder designed to fit on an Afterburner toolhead.  It is based on the [Orbiter](https://www.thingiverse.com/thing:4223085) extruder and incorporates a planetary gear reduction to allow a smaller housing size and even smaller motor to be used in order to reduce weight.
+Galileo is the newest extruder designed to fit on an Afterburner toolhead. It is based on the [Orbiter](https://www.thingiverse.com/thing:4223085) extruder and incorporates a planetary gear reduction to allow a smaller housing size and even smaller motor to be used in order to reduce weight.
 
 _Note: While not a Voron product, the Bondtech LGX is a drop-in fit on the Afterburner system._
 
