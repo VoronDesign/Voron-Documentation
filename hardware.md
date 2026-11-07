@@ -10,13 +10,13 @@ This is a guide to help people in selecting and building their first Voron print
 
 # Printer Models
 
-There are currently 5 printers in the Voron lineup.  One is not necessarily better than the other, just different.  All printers (except Legacy) are capable of being fully enclosed to print ABS but can just as easily print PLA, PETG, or even Nylon.  All printers in the Voron lineup are designed to use a Raspberry Pi linked to one or more motor controller board(s) to manage all of the printer functions and interface controls.
+There are currently five printers in the Voron lineup.  None is necessarily better than the others, just different.  All printers (except Legacy) are capable of being fully enclosed to print ABS but can just as easily print PLA, PETG, or even Nylon.  All printers in the Voron lineup are designed to use a Raspberry Pi linked to one or more motor controller board(s) to manage all of the printer functions and interface controls.
 
 _Note: Pricing estimates are in US Dollars and do not include any necessary tools or other common building supplies. Costs vary widely depending on sourcing, part selection, and shipping costs._
 
 ## Voron Zero
 
-The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm^3 print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock Makerbeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design will start to increase cost or labor involved with tapping. The bed is also cantilevered which will also restrict scaling. This printer can be built for between \$400 - \$600. Current release is V0.2r1.
+The [Voron Zero](https://vorondesign.com/voron0) is a traditional CoreXY design with the bed moving along the Z axis. It has a tiny 120mm^3 print area, built with 1515 extrusions. It encloses naturally so printing ABS is possible. Currently, all single mechanical parts for Trident and V2 can be printed on a Voron Zero bed. The design accounts for stock Makerbeam XL extrusion lengths (which come tapped) and standard MGN7 linear rail lengths, so scaling the design increases cost and the labor of tapping extrusions. The bed is also cantilevered, which restricts scaling further. This printer can be built for between \$400 - \$600. Current release is V0.2r1.
 
 [V0 Preview](https://www.youtube.com/watch?v=KR9YlTzWzQQ)
 
@@ -40,7 +40,7 @@ The [Voron V2](https://vorondesign.com/voron2.4) is a modified CoreXY design wit
 
 ## Switchwire
 
-The [Switchwire](https://vorondesign.com/voron_switchwire) is a Voron take on a classic Mendel (aka "bedslinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the gantry by moving the X motor to the frame. The stiff 3030/3060 constructed frame is just large enough to cover the entire swing of the Prusa 250x210mm bed and allows for a natural enclosure.  Without having an existing Prusa printer to pull parts from, cost is between \$700 - \$900
+The [Switchwire](https://vorondesign.com/voron_switchwire) is Voron's take on a classic Mendel (aka "bedslinger") design. It is a CoreXZ design so the print head is belt driven in both the X and Z axis eliminating the typical leadscrew Z drive allowing for very fast Z movement speeds and less weight on the gantry by moving the X motor to the frame. The stiff 3030/3060 constructed frame is just large enough to cover the entire swing of the Prusa 250x210mm bed and allows for a natural enclosure.  If you don't have an existing Prusa printer to pull parts from, expect to spend between \$700 - \$900.
 
 [Switchwire Introduction Video](https://www.youtube.com/watch?v=jwPLl1v5ae4)
 
@@ -58,7 +58,7 @@ The [Legacy](https://vorondesign.com/voron_legacy) is a tribute to the roots of 
 
 ## Mobius (M4)
 
-Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame.  Highly optimized, dual gear, and very effective for Bowden setups.  Driven by a full-size or a compact "pancake" NEMA17 motor.
+Mobius is the original Bowden extruder for Voron printers, designed to be mounted on the frame.  It is highly optimized, uses dual gears, and is very effective for Bowden setups.  It is driven by a full-size or a compact "pancake" NEMA17 motor.
 
 [M4 Introduction Video](https://www.youtube.com/watch?v=H2RBZYDZgTQ)
 
@@ -66,7 +66,7 @@ Mobius is the original Bowden extruder for Voron printers, designed to be mounte
 
 ## Jetpack
 
-Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  Was designed as an intermediary solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superseded by the M4.  It is driven by a compact "pancake" NEMA17 motor.
+Jetpack is a modified Mobius designed to be mounted on the X axis for a shorter Bowden.  It was designed as an interim solution to reduce the Bowden tube lengths before the introduction of Afterburner and has been superseded by the M4.  It is driven by a compact "pancake" NEMA17 motor.
 
 ![](./images/jetpack.jpg)
 
@@ -80,7 +80,7 @@ Stealthburner is not specifically an extruder, but the collective name for the V
 
 ## Mini Stealthburner
 
-Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extruder. it is the successor to the Mini Afterburner toolhead.
+Mini Stealthburner refers to the V0.2 toolhead with a built-in direct-drive extruder. It is the successor to the Mini Afterburner toolhead.
 
 ## Clockwork2
 
