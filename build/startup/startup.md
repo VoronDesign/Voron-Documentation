@@ -1106,7 +1106,7 @@ It will perform a PID calibration routine that will last about 5 minutes. Once i
 
 
 <!-- Z Offset -->
-<div class="defaulthide" id="initial" markdown="1">
+<div class="defaulthide" id="zoffset" markdown="1">
 ## Z Offset Adjustment
 
 ## Initial / Simple Process
