@@ -55,6 +55,11 @@ Choosing this route means you do not need to do any of the macro stuff as listed
 
 If you want to switch to Kalico, now is the time to do so. You can [follow this other guide](https://github.com/EricZimmerman/VoronTools/blob/main/Kalico.md) to make the switch! Switching will not make you change anything else about your configuration.
 
+To prepare your your config, perform the following checks:
+
+1. If you have `safe_z_home` with the parameter `z_hop` configured, you may want to uncomment this at least temporarily. Later you will issue multiple homing commands for a single axis and your bed would move by the confiured amount each time.
+2. Check your `stepper_x` and `stepper_y` section for the parameter `hold_current`. Having a different hold current can result in slight movement when the hold current gets activated and will make your sensing less reliable when starting to home with `hold_current` active. 
+
 Kalico example (from a v0.2, running a Manta 5p, and 2240 drivers):
 
 Note how the homing current can be specified without the need for macros, etc. For other examples of Kalico see [here](https://github.com/EricZimmerman/Voron24/blob/master/config/XY.cfg) and [here](https://github.com/EricZimmerman/PandorasBox/blob/main/config/XY.cfg).
@@ -501,6 +506,12 @@ driver_SGT: 1
 ```
 
 ## Now what?
+
+### Kalico details
+
+1. Did you temporarily comment the parameter `z_hop` in in your `safe_z_home` section out? Uncomment the parameter again.
+
+### Both versions
 
 Thats it! Once you find your StallGuard values for X and Y and update them in your `printer.cfg`, save and restart, then try homing each axis again. In some cases you will find that your values are not quite right.
 
