@@ -246,7 +246,7 @@ This is normal and just means the value is still too sensitive to home properly.
 
 Early on, I tend to jump down in jumps of 50. At some point you will get X to home all the way to the rail. 
 
-However, if you went TOO low, it might bump harder into the rail than it should. In this case, ADD half the value you last went down by and repeat steps 1 and 2. For non 2209 people, you would of course be increasing from -64, so adjust accordingly.
+However, if you went TOO low, it might not stop the first time it hits the rail, loose a step and bump into it again multiple times. You can hear this easily. Then you must ADD half the value you last went down by and repeat steps 1 and 2. For non 2209 people, you would of course be increasing from -64, so adjust accordingly.
 
 Eventually you will find the BIGGEST number that homes X successfully. Nice!
 
